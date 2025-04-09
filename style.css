@@ -164,8 +164,10 @@ a:hover {
 
 .banniere {
     display: block;
-    max-width: 100%;
-    height: auto;
+    max-width: 1200px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
     margin: 0 auto 2rem;
     box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
     border-radius: 8px;
