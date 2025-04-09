@@ -212,3 +212,146 @@ footer {
     text-align: center;
     padding: 2rem;
 }
+
+.patch-section {
+    margin: 2rem 0;
+}
+
+.patch-section h2 {
+    border-bottom: 2px solid #63b0c4;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+    color: #88c0a9;
+}
+
+.patch-section ul {
+    list-style-type: "❖ ";
+    padding-left: 1.5rem;
+}
+
+.image-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.image-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.image-list img.image {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.patch-titre {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 2px solid #63b0c4;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+    color: #88c0a9;
+    font-size: 1.8rem;
+}
+
+.image-h2 {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.image-texte {
+    flex: 1;
+}
+
+.classe-subsection {
+    margin-top: 2rem;
+}
+
+.classe-nom {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.4rem;
+    color: #a2cfcf;
+    margin-bottom: 0.5rem;
+    border-left: 4px solid #63b0c4;
+    padding-left: 0.5rem;
+}
+
+.image-h3 {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.patch-nav {
+    margin: 2rem 0;
+    text-align: center;
+    font-style: normal;
+}
+
+.patch-nav ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
+}
+
+.patch-nav li a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(136, 192, 169, 0.1);
+    color: #88c0a9;
+    border: 1px solid rgba(136, 192, 169, 0.3);
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    font-weight: bold;
+}
+
+.patch-nav li a:hover {
+    background: rgba(136, 192, 169, 0.2);
+    text-shadow: 0 0 5px #88c0a9;
+}
+
+.back-to-top {
+    text-align: right;
+    margin-top: 1.5rem;
+}
+
+.back-to-top a {
+    font-size: 0.9rem;
+    color: #88c0a9;
+    text-decoration: none;
+    padding: 0.3rem 0.6rem;
+    border: 1px solid rgba(136, 192, 169, 0.3);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.back-to-top a:hover {
+    background: rgba(136, 192, 169, 0.1);
+    text-shadow: 0 0 4px #88c0a9;
+}
+
+.rune {
+    display: inline-block;
+    animation: pulse-glow 2s infinite ease-in-out;
+    font-size: 1.2rem;
+    color: #63b0c4;
+    text-shadow: 0 0 6px rgba(99, 176, 196, 0.5);
+}
+
+@keyframes pulse-glow {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+}
+
