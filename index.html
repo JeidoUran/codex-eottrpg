@@ -1,33 +1,62 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patch Notes - Etrian Odyssey TTRPG</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Codex - Etrian Odyssey TTRPG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="fog"></div>
-    <div class="fog"></div>
-    <header>
-        <h1>Etrian Odyssey TTRPG</h1>
-        <p>Journal des Modifications</p>
-    </header>
+  <canvas id="particles"></canvas>
+  <div class="fog"></div>
+  <div class="fog"></div>
 
-    <main>
-        <section class="patch-list">
-            <article>
-                <h2><a href="notes/patch-1.html">Patch 1.0</a></h2>
-                <p>Mise à jour inaugurale de la campagne.</p>
-            </article>
-        </section>
-    </main>
+  <header class="codex-header">
+    <h1>Codex Etrian Odyssey TTRPG</h1>
+    <p class="sous-titre">Archives et mises à jour du monde vivant d’Etrian Odyssey</p>
+  </header>
 
-    <footer>
-        <p>© 2025 - Concocté par votre MJ préféré (et son fidèle acolyte ChatGPT !!!)</p>
-    </footer>
-    <canvas id="particles"></canvas>
-    <script src="particles.js"></script>
+  <nav class="nav-magique">
+    <a href="/notes/">Patch Notes</a>
+    <a href="/regles/">Règles</a>
+    <a href="/regles/classes/">Classes</a>
+    <a href="/univers/">Univers</a>
+    <a href="/ressources/">Ressources</a>
+  </nav>
+
+  <main class="accueil">
+    <section class="intro">
+      <p>
+        Bienvenue, voyageur ! Tu pénètres à présent dans le Codex du jeu de rôle Etrian Odyssey, une relique vivante compilant les lois du monde, 
+        les mémoires de ses héros, les refontes des forces cosmiques, et bien plus !
+      </p>
+    </section>
+
+    <section class="sections-liees">
+      <div class="carte-lien">
+        <h2><a href="/notes/">📜 Patch Notes</a></h2>
+        <p>Suivez les changements majeurs du monde au fil des sessions et des événements.</p>
+      </div>
+      <div class="carte-lien">
+        <h2><a href="/regles/">📘 Règles</a></h2>
+        <p>Le cœur du système, les mécaniques revisitées et les options uniques du jeu de rôle.</p>
+      </div>
+      <div class="carte-lien">
+        <h2><a href="/univers/">🌌 Univers</a></h2>
+        <p>Lieux, factions, panthéons et histoire — pour mieux comprendre ce que cache l’horizon.</p>
+      </div>
+      <div class="carte-lien">
+        <h2><a href="/ressources/">🧰 Ressources</a></h2>
+        <p>Fiches, aides de jeu, PDF téléchargeables et outils du joueur ou du MJ.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 - Codex EOTTRPG • Paix et muesli</p>
+  </footer>
+
+  <script src="particles.js"></script>
 </body>
 </html>

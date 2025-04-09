@@ -82,3 +82,74 @@ a:hover {
     pointer-events: none;
     z-index: 1;
 }
+
+.codex-header {
+    text-align: center;
+    padding: 3rem 1rem 1rem;
+    color: #d4af37;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+    position: relative;
+    z-index: 2;
+}
+
+.sous-titre {
+    font-size: 1.2rem;
+    color: #c0b28a;
+}
+
+.nav-magique {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    z-index: 2;
+    position: relative;
+}
+
+.nav-magique a {
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+.nav-magique a:hover {
+    text-shadow: 0 0 5px #d4af37;
+}
+
+.accueil {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    z-index: 2;
+    position: relative;
+}
+
+.intro {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1rem;
+    border-left: 3px solid #d4af37;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.sections-liees {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.carte-lien {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.carte-lien:hover {
+    transform: scale(1.03);
+    background: rgba(255, 255, 255, 0.08);
+}
