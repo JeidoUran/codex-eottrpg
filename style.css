@@ -3,21 +3,36 @@ html {
 }
 
 body {
-    background: radial-gradient(ellipse at top, #1a1a1a, #000);
-    color: #e0d8c3;
     font-family: 'Cinzel', serif;
-    margin: 0;
-    padding: 0;
+    background: #0e1a23;
+    color: #e8ddc5;
+    font-size: 18px;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
+body::after {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle, rgba(255,255,255,0.03) 20%, transparent 80%);
+    animation: rippleLight 12s infinite linear;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes rippleLight {
+    0%   { transform: translate(0, 0) scale(1); }
+    50%  { transform: translate(2%, -2%) scale(1.02); }
+    100% { transform: translate(0, 0) scale(1); }
+}
+
 header {
     text-align: center;
     padding: 3rem 1rem;
-    color: #d4af37;
-    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    color: #88c0a9;
+    text-shadow: 0 0 10px rgba(136, 192, 169, 0.4);
 }
 
 h1 {
@@ -26,58 +41,39 @@ h1 {
 }
 
 .patch-list article {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     padding: 1rem;
     margin: 1rem auto;
     max-width: 600px;
     border-radius: 8px;
     transition: background 0.3s;
+    position: relative;
+    overflow: hidden;
 }
 
 .patch-list article:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-a {
-    color: #d4af37;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.fog {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(closest-side, rgba(255, 255, 255, 0.03), transparent);
-    animation: fogMove 120s linear infinite;
-    pointer-events: none;
-    z-index: 0;
-}
-
-@keyframes fogMove {
-    0% { transform: translateX(0) translateY(0); }
-    100% { transform: translateX(-25%) translateY(-25%); }
-}
-
-.patch-list article {
-    position: relative;
-    overflow: hidden;
+    background: rgba(255, 255, 255, 0.06);
 }
 
 .patch-list article::before {
     content: "";
     position: absolute;
     inset: 0;
-    border: 2px solid rgba(212, 175, 55, 0.3);
+    border: 2px solid rgba(76, 118, 141, 0.3);
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 0 15px rgba(76, 118, 141, 0.3);
     pointer-events: none;
+}
+
+a {
+    color: #88c0a9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: 0 0 4px #88c0a9;
+    text-decoration: none;
 }
 
 #particles {
@@ -93,15 +89,15 @@ a:hover {
 .codex-header {
     text-align: center;
     padding: 3rem 1rem 1rem;
-    color: #d4af37;
-    text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+    color: #88c0a9;
+    text-shadow: 0 0 10px rgba(136, 192, 169, 0.4);
     position: relative;
     z-index: 2;
 }
 
 .sous-titre {
     font-size: 1.2rem;
-    color: #c0b28a;
+    color: #aac7b5;
 }
 
 .nav-magique {
@@ -109,21 +105,22 @@ a:hover {
     justify-content: center;
     gap: 1.5rem;
     padding: 1rem 0;
-    background: rgba(255, 255, 255, 0.05);
-    border-top: 1px solid rgba(255,255,255,0.1);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    background: rgba(60, 80, 70, 0.1);
+    border-top: 1px solid #4c768d;
+    border-bottom: 1px solid #4c768d;
     z-index: 2;
     position: relative;
 }
 
 .nav-magique a {
-    color: #d4af37;
+    color: #88c0a9;
     text-decoration: none;
     font-weight: bold;
     transition: all 0.3s;
 }
+
 .nav-magique a:hover {
-    text-shadow: 0 0 5px #d4af37;
+    text-shadow: 0 0 6px #88c0a9;
 }
 
 .accueil {
@@ -135,9 +132,9 @@ a:hover {
 }
 
 .intro {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.02);
     padding: 1rem;
-    border-left: 3px solid #d4af37;
+    border-left: 4px solid #4c768d;
     font-style: italic;
     margin-bottom: 2rem;
 }
@@ -149,8 +146,9 @@ a:hover {
 }
 
 .carte-lien {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-left: 4px solid #3e664e;
     padding: 1rem;
     border-radius: 8px;
     transition: transform 0.3s ease;
@@ -158,8 +156,8 @@ a:hover {
 
 .carte-lien:hover {
     transform: scale(1.03);
-    background: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+    background: rgba(136, 192, 169, 0.05);
+    box-shadow: 0 0 12px rgba(136, 192, 169, 0.1);
 }
 
 .banniere {
@@ -169,10 +167,13 @@ a:hover {
     object-fit: cover;
     object-position: center;
     margin: 0 auto 2rem;
-    box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+    box-shadow: 0 0 10px rgba(136, 192, 169, 0.2);
     border-radius: 8px;
 }
 
 footer {
     font-size: 14px;
+    color: #888;
+    text-align: center;
+    padding: 2rem;
 }
