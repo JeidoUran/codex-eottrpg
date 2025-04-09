@@ -162,6 +162,15 @@ a:hover {
     box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
 }
 
+.banniere {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 2rem;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+    border-radius: 8px;
+}
+
 footer {
     font-size: 14px;
 }
