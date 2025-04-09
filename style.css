@@ -151,15 +151,43 @@ a:hover {
 }
 
 .carte-lien {
+    position: relative;
     display: block;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-left: 4px solid #3e664e;
     padding: 1rem;
     border-radius: 8px;
     transition: transform 0.3s ease, background 0.3s ease;
     text-decoration: none;
     color: inherit;
+    overflow: hidden;
+}
+
+.carte-lien::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #63b0c4, transparent);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.carte-lien::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #63b0c4, transparent);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+.carte-lien:hover::before,
+.carte-lien:hover::after {
+    width: 100%;
+    left: 0;
 }
 
 .carte-lien:hover {
