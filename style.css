@@ -13,6 +13,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+footer {
+    font-size: 13px;
+}
+
 header {
     text-align: center;
     padding: 3rem 1rem;
@@ -159,4 +163,5 @@ a:hover {
 .carte-lien:hover {
     transform: scale(1.03);
     background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
 }
