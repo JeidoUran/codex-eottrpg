@@ -355,3 +355,30 @@ footer {
     50% { transform: scale(1.2); opacity: 0.7; }
 }
 
+.carte-lien.large {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .note-expliquee {
+    font-size: 0.9rem;
+    color: #aac7b5;
+    margin-top: 0.25rem;
+    opacity: 0.9;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  
+  .note-expliquee::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+    width: 1rem;
+    height: 1rem;
+    background-image: url("assets/images/notes-small.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
