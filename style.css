@@ -382,3 +382,21 @@ footer {
     background-size: contain;
     background-repeat: no-repeat;
   }
+
+  .patch-nouveau {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    color: #63b0c4;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+  }
+  
+  .carte-lien.large {
+    position: relative;
+  }
