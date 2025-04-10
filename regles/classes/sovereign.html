@@ -206,7 +206,7 @@
 </div>
   <header class="codex-header">
     <div class="header-top">
-        <h1><img src="../../assets/images/class-icons/sovereign.png" class="image class-icon"> Souverain</h1>
+      <h1><img src="../../assets/images/class-icons/sovereign.png" class="image class-icon"> Souverain</h1>
         <div class="header-links" style="text-align: center; margin-top: 1rem; margin-bottom: 2rem;">
             <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;">← Index des classes</a>
             <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
@@ -543,7 +543,9 @@
   
   <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut" >↑ Retour en haut</button>
 
-  <footer><p>© 2025 - Wizardofaz, Rashaza, Jeido, ChatGPT - Icons from Final Fantasy XIV Online</p></footer>
+  <footer>
+    <p>© 2025 - Wizardofaz, Rashaza, Jeido, ChatGPT - Icons from Final Fantasy XIV Online</p>
+</footer>
       <script>
         document.addEventListener("DOMContentLoaded", function () {
         const navContainer = document.querySelector('.class-nav');
@@ -620,7 +622,7 @@
       button.textContent = content.classList.contains("collapsed") ? "▲" : "▼";
     }
   </script>
-  <script>
+    <script>
     window.addEventListener('scroll', () => {
         document.getElementById('backToTop').classList.toggle('show', window.scrollY > 300);
     });
