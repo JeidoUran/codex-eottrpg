@@ -51,11 +51,11 @@
     .patch-list h3 {
       display: flex; align-items: center; justify-content: space-between; gap: 1rem;
     }
-    .patch-list h3 span {
-      font-weight: normal; font-size: 0.9em; margin-left: auto;
-    }
     .patch-list h3 img {
       margin-right: 0.1rem;
+    }
+    .patch-list h3 span {
+      font-weight: normal; font-size: 0.9em; margin-left: auto;
     }
     .intro-collapsible.click {
         position: relative;
@@ -165,6 +165,42 @@
         opacity: 0;
         pointer-events: none;
     }
+    .codex-header {
+        position: relative;
+        text-align: center;
+        padding-top: 2rem;
+    }
+
+    .header-top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .header-top h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .header-links {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .header-links a {
+        font-family: 'Cinzel', serif;
+        font-size: 0.95rem;
+        color: #e8ddc5;
+        text-decoration: none;
+    }
+
   </style>
 </head>
 <body>
@@ -205,7 +241,13 @@
   <a href="#boost-de-moral" class="sub-link">Boost de moral</a>
 </div>
   <header class="codex-header">
-    <h1><img src="../../assets/images/class-icons/sovereign.png" class="image class-icon"> Souverain</h1>
+    <div class="header-top">
+        <h1><img src="../../assets/images/class-icons/sovereign.png" class="image class-icon"> Souverain</h1>
+        <div class="header-links" style="text-align: center; margin-top: 1rem; margin-bottom: 2rem;">
+            <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;">← Index des classes</a>
+            <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
+        </div>
+    </div>
     <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
       <img src="../../assets/images/class-art/sovereign1.png" alt="Illustration Souverain" style="max-width: 300px; border-radius: 8px; box-shadow: 0 0 10px rgba(136,192,169,0.2);">
       <img src="../../assets/images/class-art/sovereign2.png" alt="Illustration Souverain" style="max-width: 300px; border-radius: 8px; box-shadow: 0 0 10px rgba(136,192,169,0.2);">
@@ -251,7 +293,7 @@
   <h3>
     <img src="../../assets/images/skills-icons/sovereign/noble-inspiration.png" class="image skill-icon">
     Inspiration noble
-    <span><img src="../../assets/images/passive-action.png" alt="Passif" class="image action-icon">Passif</span>
+    <span><img src="../../assets/images/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
   </h3>
     <p>Le Souverain dispose d'une réserve de dés d'inspiration utilisés pour activer ses aptitudes spéciales. Cette réserve commence à 4d4 et augmente avec le niveau. Il récupère jusqu'à la moitié de sa réserve maximale lors d'un repos court, et la totalité lors d’un repos long.</p>
   </article>
@@ -296,7 +338,7 @@
   <h3>
     <img src="../../assets/images/skills-icons/sovereign/negociate.png" class="image skill-icon">
     Négociation
-    <span><img src="../../assets/images/bonus-action.png" alt="Reaction" class="image action-icon">1 PA (Action Bonus)</span>
+    <span><img src="../../assets/images/bonus-action.png" alt="Bonus" class="image action-icon">1 PA (Action Bonus)</span>
   </h3>
     <p>En tant qu'action bonus, le Souverain peut choisir d'échanger les effets de tous les Ordres d'attaque et de garde actuellement actifs, en conservant leur valeur d'origine. La durée des deux est réinitialisée à 3 rounds. Cela passe à 4 lorsque la Maîtrise des ordres est acquise.</p>
   </article>
@@ -323,7 +365,7 @@
   <h3>
     <img src="../../assets/images/skills-icons/sovereign/reinforce.png" class="image skill-icon">
     Renforcement
-    <span><img src="../../assets/images/passive-action.png" alt="Passif" class="image action-icon">Passif</span>
+    <span><img src="../../assets/images/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
   </h3>
     <p>Lorsqu'un allié reçoit un bonus du Souverain, il récupère des points de vie égaux à la moitié de la valeur numérique du bonus, arrondie à l'entier supérieur. Renforcement s'applique lorsque les Ordres ou les Armes sont d'abord émis, indépendamment des effets récurrents.</p>
   </article>
@@ -332,7 +374,7 @@
   <h3>
     <img src="../../assets/images/skills-icons/sovereign/royal-lineage.png" class="image skill-icon">
     Lignée royale
-    <span><img src="../../assets/images/passive-action.png" alt="Passif" class="image action-icon">Passif</span>
+    <span><img src="../../assets/images/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
   </h3>
     <p>Chaque fois que le Souverain dépenserait un dé d'Inspiration, si le résultat obtenu au lancer est la valeur maximale, le dé n’est pas consommé.</p>
   </article>
@@ -341,7 +383,7 @@
   <h3>
     <img src="../../assets/images/skills-icons/sovereign/order-mastery.png" class="image skill-icon">
     Maîtrise des ordres
-    <span><img src="../../assets/images/passive-action.png" alt="Passif" class="image action-icon">Passif</span>
+    <span><img src="../../assets/images/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
   </h3>
     <p>Tous les ordres, sauf les Ordres de Liaison I et II, durent un tour supplémentaire.</p>
   </article>
@@ -350,7 +392,7 @@
   <h3>
     <img src="../../assets/images/skills-icons/sovereign/monarch-march.png" class="image skill-icon">
     Marche monarchique
-    <span><img src="../../assets/images/passive-action.png" alt="Passif" class="image action-icon">Passif</span>
+    <span><img src="../../assets/images/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
   </h3>
     <p>Le Souverain reste vigilant en marchant, accordant un bonus de +2 aux tests de perception passive contre les ennemis cachés en dehors du combat. Si le Souverain repère un ennemi caché au début du combat, tous ses alliés le remarquent également.</p>
   </article>
@@ -368,7 +410,7 @@
   <h3>
     <img src="../../assets/images/skills-icons/sovereign/in-unison.png" class="image skill-icon">
     À l'unisson !
-    <span><img src="../../assets/images/passive-action.png" alt="Passif" class="image action-icon">Passif</span>
+    <span><img src="../../assets/images/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
   </h3>
     <p>Le groupe du Souverain reçoit un point d'Union supplémentaire au début du premier round.</p>
   </article>
@@ -377,7 +419,7 @@
   <h3>
     <img src="../../assets/images/skills-icons/sovereign/noble-brand.png" class="image skill-icon">
     Marque noble
-    <span><img src="../../assets/images/passive-action.png" alt="Passif" class="image action-icon">Passif</span>
+    <span><img src="../../assets/images/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
   </h3>
     <p>La marque noble de la maison du Souverain apparaît sur le corps du Souverain. Pendant le repos court ou long, cette marque rassemble de l'énergie spirituelle et commence à briller faiblement ; la première aptitude utilisant des dés d'Inspiration après un repos court ou long obtient toujours le résultat maximal, et la lueur disparaît.</p>
   </article>
@@ -400,7 +442,7 @@
     <p>Après avoir terminé son parcours pour apprendre tous les fardeaux, responsabilités, forces et capacités d'un Souverain, le Souverain est enfin reconnu par la force mystérieuse qui protège sa noble maison, et obtient le droit de conférer la Chevalerie à un individu. En tant qu'action, le Souverain peut désigner une créature amicale et volontaire. Dans le prochain round de combat, cette créature agit en premier (ce qui prend le pas sur les autres effets qui font agir une créature en premier), inflige des dégâts supplémentaires de force égaux à 3d10 + modificateur de Charisme du Souverain (lancé à l'activation par le Souverain) lors de sa première instance de dégâts, est immunisée contre toutes les afflictions, et subit 1d12 + le modificateur de Constitution de cette créature de moins de dégâts lors de la première attaque reçue. Ses PA sont également fixés à 4 au début de son tour. La Chevalerie peut être accordée une fois par repos long.</p>
   </article>
       </div>
-    </div>
+      </div>
     </section>
     <h2 class="patch-titre" id="specialisations">
       <img src="../../assets/images/notes-big.png" class="image image-h2">
@@ -408,10 +450,14 @@
     </h2>
     
   <section class="patch-section">
+  <div class="toggle-section">
     <h2 class="patch-titre" id="magierkaiser">
       <img src="../../assets/images/subclass-icons/magierkaiser.png" class="image class-icon">
       Magierkaiser
+      <button class="toggle-button" onclick="toggleSection(this)">▼</button>
     </h2>
+    </div>
+    <div class="collapsible-content">
     <div class="patch-list">
       
         <article id="armes-de-feu-gel-foudre">
@@ -441,13 +487,18 @@
           <p>En tant qu'action, dissipez les Armes de feu, de gel ou de foudre d'une créature amicale et volontaire, puis ciblez une créature dans un rayon de 36 mètres. Cette créature subit des dégâts de 4d10 + modificateur de Charisme d'un type correspondant à l'élément de l’Arme dissipé.</p>
         </article>
     </div>
+    </div>
   </section>
 
   <section class="patch-section">
+  <div class="toggle-section">
     <h2 class="patch-titre" id="arztkaiser">
       <img src="../../assets/images/subclass-icons/arztkaiser.png" class="image class-icon">
       Arztkaiser
+      <button class="toggle-button" onclick="toggleSection(this)">▼</button>
     </h2>
+    </div>
+    <div class="collapsible-content">
     <div class="patch-list">
       
         <article id="ordre-de-protection">
@@ -477,20 +528,25 @@
           <p>Lancez 2 dés d'inspiration du Souverain et consommez-les. Tous les alliés gagnent des points de vie temporaires égaux à la valeur obtenue + le modificateur de Charisme du Souverain au début du round pendant 3 rounds. Les points de vie temporaires expirent au début du 4ème round s'ils n'ont pas été épuisés. Tant que les alliés ont des points de vie temporaires de l'Ordre de ralliement, ils peuvent choisir de dissiper ces points de vie temporaires pour relancer un jet d'attaque ou de dégâts et prendre le second résultat. Les cibles doivent être capables d'entendre et conscientes pour bénéficier de l'Ordre de ralliement.</p>
         </article>
     </div>
+    </div>
   </section>
 
   <section class="patch-section">
+  <div class="toggle-section">
     <h2 class="patch-titre" id="starkekaiser">
       <img src="../../assets/images/subclass-icons/starkekaiser.png" class="image class-icon">
       Starkekaiser
+      <button class="toggle-button" onclick="toggleSection(this)">▼</button>
     </h2>
+    </div>
+    <div class="collapsible-content">
     <div class="patch-list">
       
         <article id="ordres-feroces">
         <h3>
           <img src="../../assets/images/skills-icons/sovereign/fierce-orders.png" class="image skill-icon">
           Ordres féroces
-          <span><img src="../../assets/images/passive-action.png" alt="Passif" class="image action-icon">Passif</span>
+          <span><img src="../../assets/images/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
         </h3>
           <p>Lorsqu'un Ordre amène le Souverain à lancer des dés d'Inspiration, le Souverain peut choisir de consommer un dé d'Inspiration supplémentaire et de l'ajouter au total. Le Souverain ajoute 2 dés supplémentaires à sa réserve totale de dés d'Inspiration.</p>
         </article>
@@ -508,10 +564,11 @@
         <h3>
           <img src="../../assets/images/skills-icons/sovereign/morale-boost.png" class="image skill-icon">
           Boost de moral
-          <span><img src="../../assets/images/passive-action.png" alt="Passif" class="image action-icon">Passif</span>
+          <span><img src="../../assets/images/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
         </h3>
           <p>Lorsque l'Ordre d'attaque ou de garde est lancé, les créatures affectées bénéficient d'un bonus aux jets d'attaque égal au modificateur de Charisme du Souverain sur leur prochain jet d'attaque.</p>
         </article>
+    </div>
     </div>
   </section>
 
@@ -527,7 +584,7 @@
         const navContainer = document.querySelector('.class-nav');
         const navLinks = document.querySelectorAll('.class-nav a[href^="#"]');
         const sections = [...document.querySelectorAll("h2.patch-titre, article")];
-    
+
         let lastActive = null;
     
         const observer = new IntersectionObserver((entries) => {
@@ -535,7 +592,7 @@
             if (entry.isIntersecting) {
                 const id = entry.target.getAttribute("id");
                 const activeLink = [...navLinks].find(link => link.getAttribute("href") === `#${id}`);
-
+    
                 if (activeLink && activeLink !== lastActive) {
                 navLinks.forEach(link => link.classList.remove("active"));
                 activeLink.classList.add("active");
