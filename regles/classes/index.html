@@ -47,7 +47,6 @@
     #search-bar {
       padding: 0.5rem 1rem;
       font-size: 1.1rem;
-      font-size: 1rem;
       font-family: 'Cinzel', serif;
       border-radius: 8px;
       border: 1px solid #88c0a9;
@@ -73,12 +72,16 @@
 <body>
   <canvas id="particles"></canvas>
   <header class="codex-header">
+    <div class="header-top">
     <h1>📘 Index des Classes</h1>
+    <div class="header-links" style="text-align: center; margin-top: 1rem; margin-bottom: 2rem;">
+      <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
+    </div>
+  </div>
     <p class="sous-titre">Consultez les profils des classes jouables du JDR</p>
   </header>
   <main class="accueil">
     <div id="search-wrapper">
-      <a href="/" class="carte-lien return-link">← Retour au Codex</a>
       <input type="text" id="search-bar" placeholder="Rechercher une classe...">
     </div>
     
@@ -150,6 +153,7 @@
   <p>Tireur tactique à l’esprit affûté, le Pistolero adapte ses munitions aux besoins du champ de bataille, mêlant précision, stratégie et polyvalence.</p>
 </a> -->
   </main>
+  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut" >↑ Retour en haut</button>
   <footer>
     <p>© 2025 - Wizardofaz, Jeido, ChatGPT</p>
   </footer>
@@ -162,6 +166,11 @@
       cards.forEach(card => {
         card.style.display = card.dataset.nom.includes(val) ? "flex" : "none";
       });
+    });
+  </script>
+  <script>
+    window.addEventListener('scroll', () => {
+        document.getElementById('backToTop').classList.toggle('show', window.scrollY > 300);
     });
   </script>
 </body>

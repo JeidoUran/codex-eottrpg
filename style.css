@@ -11,7 +11,6 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
 body::after {
     content: "";
     position: fixed;
@@ -440,9 +439,10 @@ footer {
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 8px;
-    padding: 0.5rem;
+    padding: 1rem;
     transition: transform 0.3s ease, background 0.3s ease;
     font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
 }
 
 #backToTop:hover {
@@ -480,4 +480,43 @@ footer {
 }
 #backToTop.show {
     display: block;
+}
+
+.header-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header-top h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+.header-links {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.header-links a {
+    font-family: 'Cinzel', serif;
+    font-size: 0.95rem;
+    color: #e8ddc5;
+    text-decoration: none;
+}
+
+.codex-header {
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    margin-bottom: -2rem;
 }
