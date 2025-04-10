@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Index des Classes</title>
+  <link rel="icon" href="../../favicon.png" type="image/png">
+  <link rel="stylesheet" href="../../style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  <style>
+    .class-card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      margin: 1rem auto;
+      max-width: 1000px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      background: rgba(255,255,255,0.03);
+      transition: background 0.3s;
+    }
+    .class-card:hover {
+      background: rgba(255,255,255,0.06);
+    }
+    .class-icon {
+      height: 64px;
+      width: 64px;
+    }
+    .class-card h2 {
+      width: 200px;
+      min-width: 200px;
+    }
+    .class-card p {
+      margin-left: 1.5rem;
+    }
+    #search-bar {
+      display: block;
+      margin: 1rem auto 2rem;
+      padding: 0.5rem 1rem;
+      font-size: 1.1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      width: 90%;
+      max-width: 400px;
+      font-family: 'Cinzel', serif;
+      font-weight: bold;
+    }
+    #search-bar::placeholder {
+      font-family: 'Cinzel', serif;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="particles"></canvas>
+  <header class="codex-header">
+    <h1>📘 Index des Classes</h1>
+    <p class="sous-titre">Consultez les profils des classes jouables du Codex</p>
+  </header>
+  <div style="text-align: center; margin-top: 3rem;">
+    <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
+  </div>
+  <main class="accueil">
+    <input type="text" id="search-bar" placeholder="Rechercher une classe...">
+    
+<!-- Les cartes de classes sont déjà bien ordonnées selon l'ordre demandé -->
+
+<a href="sovereign.html" class="carte-lien class-card" data-nom="souverain">
+  <img src="../../assets/images/class-icons/sovereign.png" alt="Souverain" class="image class-icon">
+  <h2>Souverain</h2>
+  <p>Dirigeant charismatique, le Souverain guide ses alliés par la stratégie, l'inspiration et la puissance du verbe.</p>
+</a>
+<a href="hexer.html" class="carte-lien class-card" data-nom="envoûteur">
+  <img src="../../assets/images/class-icons/hexer.png" alt="Envoûteur" class="image class-icon">
+  <h2>Envoûteur</h2>
+  <p>Maître des malédictions et de l’art occulte, l’Envoûteur affaiblit l’esprit et le corps de ses ennemis à travers la puissance du son.</p>
+</a>
+<a href="imperial.html" class="carte-lien class-card" data-nom="impérial">
+  <img src="../../assets/images/class-icons/imperial.png" alt="Impérial" class="image class-icon">
+  <h2>Impérial</h2>
+  <p>Chevalier d’élite maniant une lame cinétique, l’Impérial écrase ses ennemis par des frappes surpuissantes au prix d’une maîtrise rigoureuse de son art.</p>
+</a>
+<a href="landsknecht.html" class="carte-lien class-card" data-nom="lansquenet">
+  <img src="../../assets/images/class-icons/landsknecht.png" alt="Lansquenet" class="image class-icon">
+  <h2>Lansquenet</h2>
+  <p>Guerrier polyvalent de la mêlée, le Lansquenet maîtrise l’art du combat offensif ou défensif, adaptant son style à l’arme qu’il brandit.</p>
+</a>
+<a href="war-magus.html" class="carte-lien class-card" data-nom="mage guerrier">
+  <img src="../../assets/images/class-icons/war-magus.png" alt="Mage guerrier" class="image class-icon">
+  <h2>Mage guerrier</h2>
+  <p>Chaman protecteur et guérisseur, le Mage Guerrier combine arts occultes et lame rituelle pour soutenir ses alliés et frapper au moment opportun.</p>
+</a>
+<a href="monk.html" class="carte-lien class-card" data-nom="moine">
+  <img src="../../assets/images/class-icons/monk.png" alt="Moine" class="image class-icon">
+  <h2>Moine</h2>
+  <p>Maître du Qi et du combat à mains nues, le Moine soigne ou frappe avec agilité, canalisant son énergie intérieure en mouvements précis et redoutables.</p>
+</a>
+<a href="necromancer.html" class="carte-lien class-card" data-nom="nécromancien">
+  <img src="../../assets/images/class-icons/necromancer.png" alt="Nécromancien" class="image class-icon">
+  <h2>Nécromancien</h2>
+  <p>Maître des esprits tourmentés, le Nécromancien invoque des spectres pour le protéger et canalise leur essence dans de sombres rituels.</p>
+</a>
+<a href="shogun.html" class="carte-lien class-card" data-nom="shogun">
+  <img src="../../assets/images/class-icons/shogun.png" alt="Shogun" class="image class-icon">
+  <h2>Shogun</h2>
+  <p>Stratège d’élite et meneur de front, le Shogun galvanise ses alliés tout en frappant l’ennemi avec une précision impitoyable.</p>
+</a>
+<a href="harbinger.html" class="carte-lien class-card" data-nom="héraut">
+  <img src="../../assets/images/class-icons/harbinger.png" alt="Héraut" class="image class-icon">
+  <h2>Héraut</h2>
+  <p>Manipulateur de miasme et maître des frappes opportunes, le Héraut affaiblit ses proies avant de les faucher dans un ballet spectral.</p>
+</a>
+<a href="dragoon.html" class="carte-lien class-card" data-nom="dragoon">
+  <img src="../../assets/images/class-icons/dragoon.png" alt="Dragoon" class="image class-icon">
+  <h2>Dragoon</h2>
+  <p>Sentinelle cuirassée, le Dragoon encaisse les coups pour ses alliés et élimine les menaces grâce à son bouclier massif et son canon dorsal.</p>
+</a>
+<a href="rover.html" class="carte-lien class-card" data-nom="vagabond">
+  <img src="../../assets/images/class-icons/rover.png" alt="Vagabond" class="image class-icon">
+  <h2>Vagabond</h2>
+  <p>Archer nomade et ami des bêtes, le Vagabond maîtrise les secrets du Labyrinthe et combat aux côtés d’un fidèle compagnon animal.</p>
+</a>
+<a href="troubadour.html" class="carte-lien class-card" data-nom="troubadour">
+  <img src="../../assets/images/class-icons/troubadour.png" alt="Troubadour" class="image class-icon">
+  <h2>Troubadour</h2>
+  <p>Artiste itinérant au pouvoir enchanteur, le Troubadour galvanise ses alliés par la musique, la poésie et la lumière de l’inspiration.</p>
+</a>
+<!-- <a href="gunner.html" class="carte-lien class-card" data-nom="pistolero">
+  <img src="../../assets/images/class-icons/gunner.png" alt="Pistolero" class="image class-icon">
+  <h2>Pistolero</h2>
+  <p>Tireur tactique à l’esprit affûté, le Pistolero adapte ses munitions aux besoins du champ de bataille, mêlant précision, stratégie et polyvalence.</p>
+</a> -->
+  </main>
+  <footer>
+    <p>© 2025 - Wizardofaz, Jeido, ChatGPT</p>
+  </footer>
+  <script src="../../particles.js"></script>
+  <script>
+    const searchInput = document.getElementById("search-bar");
+    const cards = document.querySelectorAll(".class-card");
+    searchInput.addEventListener("input", e => {
+      const val = e.target.value.toLowerCase();
+      cards.forEach(card => {
+        card.style.display = card.dataset.nom.includes(val) ? "flex" : "none";
+      });
+    });
+  </script>
+</body>
+</html>
