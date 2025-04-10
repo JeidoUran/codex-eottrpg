@@ -1,2 +1,456 @@
-<title>Souverain</title>
-<meta name="description" content="Dirigeant charismatique, le Souverain guide ses alliés par la stratégie, l'inspiration et la puissance du verbe.">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Souverain</title>
+  <meta name="description" content="Un noble serein avec une présence imposante. Les Souverains s'appuient sur leur charisme naturel et leur titre pour inspirer et diriger leurs alliés. Les Souverains considèrent comme leur devoir de commander ceux qui sont sous leur responsabilité ; que cela profite à eux-mêmes ou au Souverain dépend du souverain lui-même. Leur formation aux grâces sociales et à l'art de la guerre leur confère la capacité de penser de manière pratique dans les deux situations, bien que de nombreux Souverains soient naïfs quant aux véritables rouages du monde et s'appuient sur leur pratique et leur apprentissage plutôt que sur l'intuition. De plus, bien qu'ils soient talentueux pour diriger des alliés, ils sont moins capables de faire face aux menaces eux-mêmes.">
+  <link rel="icon" href="../../favicon.png" type="image/png">
+  <link rel="stylesheet" href="../../style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .patch-list article { max-width: 800px; margin: 1.5rem auto; }
+    .class-nav {
+      position: fixed; top: 50%; left: 1rem; transform: translateY(-50%);
+      background: rgba(0,0,0,0.4); padding: 1rem; border-radius: 12px;
+      font-family: 'Cinzel', serif; font-size: 0.9rem; z-index: 1000;
+    }
+    .class-nav a { display: block; color: #e8ddc5; margin-bottom: 0.5rem;
+      text-decoration: none; transition: color 0.3s; }
+    .class-nav a:hover { color: #57dada; }
+    .class-nav a::before { content: none !important; }
+    .class-nav a.section-link {
+      font-weight: bold; font-size: 1rem; margin-top: 0.8rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 0.3rem;
+    }
+    .class-nav a.sub-link {
+      font-size: 0.9rem; margin-left: 0.8rem; opacity: 0.85;
+    }
+    .patch-list h3 {
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    }
+    .patch-list h3 img {
+      margin-right: 0.5rem;
+    }
+    .patch-list h3 span {
+      font-weight: normal; font-size: 0.9em; margin-left: auto;
+    }
+    .intro-collapsible.click {
+        position: relative;
+        max-height: 100px;
+        overflow: hidden;
+        padding: 1.5rem;
+        background: rgba(232, 221, 197, 0.04);
+        margin: 2rem auto;
+        max-width: 900px;
+        border-left: 4px solid #88c0a9;
+        border-right: 4px solid #88c0a9;
+        border-radius: 8px;
+        transition: max-height 0.4s ease;
+    }
+
+    .intro-collapsible.click::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0; right: 0;
+        height: 70px;
+        background: linear-gradient(to bottom, rgba(14,14,14,0) 0%, rgba(14,14,14,0.95) 100%);
+        pointer-events: none;
+    }
+
+
+    .intro-collapsible.click.expanded {
+        max-height: 2000px;
+    }
+
+    .intro-collapsible.click.expanded::after {
+        display: none;
+    }
+
+    .toggle-intro {
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: none;
+        border: none;
+        color: #88c0a9;
+        font-family: 'Cinzel', serif;
+        font-size: 0.95rem;
+        cursor: pointer;
+        text-decoration: underline;
+        z-index: 1;
+        font-weight: bold;
+    }
+    .skill-icon {
+        border-radius: 8px;
+        box-shadow: 0 0 6px rgba(52, 223, 223, 0.418);
+    }
+    .class-icon {
+        border-radius: 8px;
+        box-shadow: 0 0 6px rgba(52, 223, 223, 0.418);
+    }   
+  </style>
+</head>
+<body>
+  <canvas id="particles"></canvas>
+  
+<div class="class-nav">
+  <a href="#details" class="section-link">Détails</a>
+  <a href="#aptitudes" class="section-link">Aptitudes</a>
+  <a href="#inspiration-noble" class="sub-link">Inspiration noble</a>
+  <a href="#ordre-d-attaque" class="sub-link">Ordre d'attaque</a>
+  <a href="#ordre-de-garde" class="sub-link">Ordre de garde</a>
+  <a href="#voile-royal" class="sub-link">Voile royal</a>
+  <a href="#titre-noble" class="sub-link">Titre noble</a>
+  <a href="#n-gociation" class="sub-link">Négociation</a>
+  <a href="#escrime-de-cour" class="sub-link">Escrime de cour</a>
+  <a href="#ordre-de-liaison-i" class="sub-link">Ordre de liaison I</a>
+  <a href="#renforcement" class="section-link">Renforcement</a>
+  <a href="#lign-e-royale" class="sub-link">Lignée royale</a>
+  <a href="#ma-trise-des-ordres" class="sub-link">Maîtrise des ordres</a>
+  <a href="#marche-monarchique" class="sub-link">Marche monarchique</a>
+  <a href="#autorisation" class="section-link">Autorisation</a>
+  <a href="#-l-unisson-" class="sub-link">À l'unisson !</a>
+  <a href="#marque-noble" class="sub-link">Marque noble</a>
+  <a href="#d-cret-final" class="sub-link">Décret final</a>
+  <a href="#chevalerie" class="section-link">Chevalerie</a>
+  <a href="#specialisations" class="section-link">Spécialisations</a>
+  <a href="#magierkaiser" class="section-link">Magierkaiser</a>
+  <a href="#armes-de-feu-gel-foudre" class="sub-link">Armes de feu/gel/foudre</a>
+  <a href="#ordre-de-liaison-ii" class="sub-link">Ordre de liaison II</a>
+  <a href="#-clat-royal" class="sub-link">Éclat royal</a>
+  <a href="#arztkaiser" class="section-link">Arztkaiser</a>
+  <a href="#ordre-de-protection" class="sub-link">Ordre de protection</a>
+  <a href="#ordre-de-prevention" class="sub-link">Ordre de prévention</a>
+  <a href="#ordre-de-ralliement" class="sub-link">Ordre de ralliement</a>
+  <a href="#starkekaiser" class="section-link">Starkekaiser</a>
+  <a href="#ordres-f-roces" class="sub-link">Ordres féroces</a>
+  <a href="#ex-nihilo" class="sub-link">Ex Nihilo</a>
+  <a href="#boost-de-moral" class="sub-link">Boost de moral</a>
+</div>
+  <header class="codex-header">
+    <h1><img src="../../assets/images/class-icons/sovereign.png" class="image class-icon"> Souverain</h1>
+    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+      <img src="../../assets/images/class-art/sovereign1.png" alt="Illustration Souverain" style="max-width: 300px; border-radius: 8px; box-shadow: 0 0 10px rgba(136,192,169,0.2);">
+      <img src="../../assets/images/class-art/sovereign2.png" alt="Illustration Souverain" style="max-width: 300px; border-radius: 8px; box-shadow: 0 0 10px rgba(136,192,169,0.2);">
+    </div>
+  </header>
+  <main class="accueil">
+    <section class="intro-collapsible click" id="intro">
+        <p>
+          Un noble serein avec une présence imposante. Les Souverains s'appuient sur leur charisme naturel et leur titre pour inspirer et diriger leurs alliés. Les Souverains considèrent comme leur devoir de commander ceux qui sont sous leur responsabilité ; que cela profite à eux-mêmes ou au Souverain dépend du souverain lui-même. Leur formation aux grâces sociales et à l'art de la guerre leur confère la capacité de penser de manière pratique dans les deux situations, bien que de nombreux Souverains soient naïfs quant aux véritables rouages du monde et s'appuient sur leur pratique et leur apprentissage plutôt que sur l'intuition. De plus, bien qu'ils soient talentueux pour diriger des alliés, ils sont moins capables de faire face aux menaces eux-mêmes.
+        </p>
+        <button class="toggle-intro" onclick="toggleIntro()">Afficher la suite</button>
+      </section>
+
+    <section class="patch-section" id="details">
+      <h2 class="patch-titre">
+        <img src="../../assets/images/notes-big.png" class="image image-h2">
+        Détails de la classe
+      </h2>
+      <ul class="image-list">
+        <li><div class="image-texte"><strong>Points de vie :</strong> 1d8 + mod. de Constitution par niveau</div></li>
+<li><div class="image-texte"><strong>Dés de vie :</strong> 1d8 par niveau de Souverain</div></li>
+<li><div class="image-texte"><strong>DD des jets de sauvegarde :</strong> 8 + bonus de maîtrise + mod. de Charisme</div></li>
+<li><div class="image-texte"><strong>Maîtrises :</strong> Rapières, Épées, Bâtons, Armes à feu ; Armures moyennes ; Boucliers</div></li>
+<li><div class="image-texte"><strong>Jets de sauvegarde :</strong> Sagesse, Charisme</div></li>
+<li><div class="image-texte"><strong>Compétences :</strong> Choisissez 3 parmi Arcane, Tromperie, Histoire, Intuition, Perception, Investigation, Médecine, Performance, Persuasion, Religion</div></li>
+<li><div class="image-texte"><strong>Équipement de départ :</strong> Une arme maîtrisée (ou deux si légères), un sac d'explorateur, un bouclier, un journal et un stylo à encre, une armure moyenne</div></li>
+      </ul>
+    </section>
+
+    <section class="patch-section" id="aptitudes">
+      <h2 class="patch-titre">
+        <img src="../../assets/images/notes-big.png" class="image image-h2">
+        Aptitudes de classe
+      </h2>
+      <div class="patch-list">
+        
+  <article id="inspiration-noble">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/noble-inspiration.png" class="image skill-icon">
+    Inspiration noble
+    <span>passif</span>
+  </h3>
+    <p>Le Souverain dispose d'une réserve de dés d'inspiration utilisés pour activer ses aptitudes spéciales. Cette réserve commence à 4d4 et augmente avec le niveau. Il récupère jusqu'à la moitié de sa réserve maximale lors d'un repos court, et la totalité lors d’un repos long.</p>
+  </article>
+
+  <article id="ordre-d-attaque">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/attack-order.png" class="image skill-icon">
+    Ordre d'attaque
+    <span>2 PA (Action)</span>
+  </h3>
+    <p>Le Souverain inspire ses alliés à mettre plus d'efforts dans leurs attaques. En tant qu'action, consommez un dé d’Inspiration du Souverain ; lancez-le. Chaque allié volontaire qui peut entendre l'Ordre, jusqu'à un nombre égal au modificateur de Charisme du Souverain (minimum 1), ajoute ce nombre à son Offense pendant 3 rounds.</p>
+  </article>
+
+  <article id="ordre-de-garde">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/guard-order.png" class="image skill-icon">
+    Ordre de garde
+    <span>2 PA (Action)</span>
+  </h3>
+    <p>Le Souverain donne un ordre défensif détaillé. En tant qu'action, consommez un dé d'inspiration ; lancez-le. Jusqu'à un nombre d'alliés égal à votre modificateur de Charisme (min. 1) réduit l'Offense de leurs ennemis de ce montant pendant 3 rounds.</p>
+  </article>
+
+  <article id="voile-royal">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/royal-veil.png" class="image skill-icon">
+    Voile royal
+    <span>1 PA (Réaction)</span>
+  </h3>
+    <p>Un comportement posé permet au Souverain de réconforter les autres. Lorsqu'un allié subit des dégâts d'une attaque, le Souverain peut utiliser sa réaction pour consommer 1 dé d'Inspiration, le lancer, ajouter son modificateur de Sagesse et restaurer autant de points de vie à la cible ; si la cible aurait perdu connaissance à cause des dégâts subis, elle reçoit quand même un niveau d’épuisement.</p>
+  </article>
+
+  <article id="titre-noble">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/noble-title.png" class="image skill-icon">
+    Titre noble
+    <span>Spécialisation</span>
+  </h3>
+    <p>Le Souverain choisit un titre à suivre. Choisissez un titre, et ce titre accordera des aptitudes supplémentaires à mesure que le Souverain gagne en niveau. Les Magierkaisers exploitent les faiblesses de l'ennemi en modifiant les éléments des armements des alliés, puis en suivant avec leurs puissantes attaques magiques. Les Artzkaisers adoptent une approche plus nourricière, soutenant le groupe en les protégeant et en guérissant leurs blessures. Les Starkekaisers renoncent à une approche concentrée, préférant diriger par la seule force de leur personnalité, ce qui renforce la puissance de leurs ordres existants.</p>
+  </article>
+
+  <article id="n-gociation">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/negociate.png" class="image skill-icon">
+    Négociation
+    <span>1 PA (Action Bonus)</span>
+  </h3>
+    <p>En tant qu'action bonus, le Souverain peut choisir d'échanger les effets de tous les Ordres d'attaque et de garde actuellement actifs, en conservant leur valeur d'origine. La durée des deux est réinitialisée à 3 rounds. Cela passe à 4 lorsque la Maîtrise des ordres est acquise.</p>
+  </article>
+
+  <article id="escrime-de-cour">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/court-fencing.png" class="image skill-icon">
+    Escrime de cour
+    <span>1 PA (Action Combo)</span>
+  </h3>
+    <p>Après avoir émis un Ordre, le Souverain peut utiliser une action combo pour adopter une posture de combat avec son arme de choix. Tant qu'il est dans cette posture, le Souverain peut attaquer une fois avec son arme équipée en tant qu'action libre. Cette attaque inflige des dégâts supplémentaires de force égaux à 1d6 + modificateur de Charisme.</p>
+  </article>
+
+  <article id="ordre-de-liaison-i">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/link-order1.png" class="image skill-icon">
+    Ordre de liaison I
+    <span>1 PA (Réaction)</span>
+  </h3>
+    <p>Lorsqu'une créature hostile dans un rayon de 30 mètres subit des dégâts de feu, de glace ou de foudre, le Souverain peut utiliser sa réaction pour infliger des dégâts de feu/glace/foudre égaux à 1d4 + son modificateur de Charisme à la cible en fonction de l'élément déclenchant la réaction.</p>
+  </article>
+
+  <article id="renforcement">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/reinforce.png" class="image skill-icon">
+    Renforcement
+    <span>passif</span>
+  </h3>
+    <p>Lorsqu'un allié reçoit un bonus du Souverain, il récupère des points de vie égaux à la moitié de la valeur numérique du bonus, arrondie à l'entier supérieur. Renforcement s'applique lorsque les Ordres ou les Armes sont d'abord émis, indépendamment des effets récurrents.</p>
+  </article>
+
+  <article id="lign-e-royale">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/royal-lineage.png" class="image skill-icon">
+    Lignée royale
+    <span>passif</span>
+  </h3>
+    <p>Chaque fois que le Souverain dépenserait un dé d'Inspiration, si le résultat obtenu au lancer est la valeur maximale, le dé n’est pas consommé.</p>
+  </article>
+
+  <article id="ma-trise-des-ordres">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/order-mastery.png" class="image skill-icon">
+    Maîtrise des ordres
+    <span>passif</span>
+  </h3>
+    <p>Tous les ordres, sauf les Ordres de Liaison I et II, durent un tour supplémentaire.</p>
+  </article>
+
+  <article id="marche-monarchique">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/monarch-march.png" class="image skill-icon">
+    Marche monarchique
+    <span>passif</span>
+  </h3>
+    <p>Le Souverain reste vigilant en marchant, accordant un bonus de +2 aux tests de perception passive contre les ennemis cachés en dehors du combat. Si le Souverain repère un ennemi caché au début du combat, tous ses alliés le remarquent également.</p>
+  </article>
+
+  <article id="autorisation">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/clearance.png" class="image skill-icon">
+    Autorisation
+    <span>2 PA (Action)</span>
+  </h3>
+    <p>En tant qu'action, annulez les effets de tous les bonus du Souverain sur les créatures amicales, ainsi que tous les malus temporaires infligés par les capacités ou les sorts des créatures hostiles ; tous les alliés affectés récupèrent des points de vie égaux à la valeur absolue de tous les bonus et malus. L'effet de guérison de l’Autorisation échoue si au moins un bonus du Souverain n'est pas annulé.</p>
+  </article>
+
+  <article id="-l-unisson-">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/in-unison.png" class="image skill-icon">
+    À l'unisson !
+    <span>passif</span>
+  </h3>
+    <p>Le groupe du Souverain reçoit un point d'Union supplémentaire au début du premier round.</p>
+  </article>
+
+  <article id="marque-noble">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/noble-brand.png" class="image skill-icon">
+    Marque noble
+    <span>passif</span>
+  </h3>
+    <p>La marque noble de la maison du Souverain apparaît sur le corps du Souverain. Pendant le repos court ou long, cette marque rassemble de l'énergie spirituelle et commence à briller faiblement ; la première aptitude utilisant des dés d'Inspiration après un repos court ou long obtient toujours le résultat maximal, et la lueur disparaît.</p>
+  </article>
+
+  <article id="d-cret-final">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/final-decree.png" class="image skill-icon">
+    Décret final
+    <span>2 PA (Action)</span>
+  </h3>
+    <p>En tant qu'action, dissipez tous les bonus sur le Souverain (au minimum 1) pour doubler les effets de tous les bonus appliqués par le Souverain jusqu'à la fin du round.</p>
+  </article>
+
+  <article id="chevalerie">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/knighthood.png" class="image skill-icon">
+    Chevalerie
+    <span>2 PA (Action)</span>
+  </h3>
+    <p>Après avoir terminé son parcours pour apprendre tous les fardeaux, responsabilités, forces et capacités d'un Souverain, le Souverain est enfin reconnu par la force mystérieuse qui protège sa noble maison, et obtient le droit de conférer la Chevalerie à un individu. En tant qu'action, le Souverain peut désigner une créature amicale et volontaire. Dans le prochain round de combat, cette créature agit en premier (ce qui prend le pas sur les autres effets qui font agir une créature en premier), inflige des dégâts supplémentaires de force égaux à 3d10 + modificateur de Charisme du Souverain (lancé à l'activation par le Souverain) lors de sa première instance de dégâts, est immunisée contre toutes les afflictions, et subit 1d12 + le modificateur de Constitution de cette créature de moins de dégâts lors de la première attaque reçue. Ses PA sont également fixés à 4 au début de son tour. La Chevalerie peut être accordée une fois par repos long.</p>
+  </article>
+      </div>
+    </section>
+    <h2 class="patch-titre">
+      <img src="../../assets/images/notes-big.png" class="image image-h2">
+        Spécialisations
+    </h2>
+    
+  <section class="patch-section" id="magierkaiser">
+    <h2 class="patch-titre">
+      <img src="../../assets/images/subclass-icons/magierkaiser.png" class="image class-icon">
+      Magierkaiser
+    </h2>
+    <div class="patch-list">
+      
+        <article id="armes-de-feu-gel-foudre">
+        <h3>
+          <img src="../../assets/images/skills-icons/sovereign/fire-arms.png" class="image skill-icon">
+          Armes de feu/gel/foudre
+          <span>2 PA (Action)</span>
+        </h3>
+          <p>En tant qu'action, choisissez le feu, la glace ou la foudre. Lancez un dé d'Inspiration du Souverain et consommez-le, puis ajoutez le modificateur de Charisme du Souverain. Jusqu'à 2 créatures amicales et volontaires augmentent leur niveau d'Offense de cette valeur lors de leur prochaine attaque, et leurs dégâts d’Offense deviennent l'élément spécifié pour cette attaque. Seul un élément d’Armes peut être actif sur une créature donnée à la fois. Les cibles doivent être capables d'entendre et être conscientes pour bénéficier des Armes de feu/gel/foudre. Les Armes de feu/gel/foudre disparaissent après 5 minutes si elles ne sont pas activées ou dissipées auparavant.</p>
+        </article>
+
+        <article id="ordre-de-liaison-ii">
+        <h3>
+          <img src="../../assets/images/skills-icons/sovereign/link-order2.png" class="image skill-icon">
+          Ordre de liaison II
+          <span>1 PA (Réaction)</span>
+        </h3>
+          <p>Lorsqu'une créature hostile dans un rayon de 30 mètres subit des dégâts de feu, de glace ou de foudre, le Souverain peut utiliser sa réaction pour infliger des dégâts de feu, de glace ou de foudre égaux à 2d4 + modificateur de Charisme à la cible, en fonction de l'élément déclenchant la réaction, ainsi qu'à deux créatures supplémentaires situées à moins de 3 mètres de la cible.</p>
+        </article>
+
+        <article id="-clat-royal">
+        <h3>
+          <img src="../../assets/images/skills-icons/sovereign/royal-radiance.png" class="image skill-icon">
+          Éclat royal
+          <span>2 PA (Action)</span>
+        </h3>
+          <p>En tant qu'action, dissipez les Armes de feu, de gel ou de foudre d'une créature amicale et volontaire, puis ciblez une créature dans un rayon de 36 mètres. Cette créature subit des dégâts de 4d10 + modificateur de Charisme d'un type correspondant à l'élément de l’Arme dissipé.</p>
+        </article>
+    </div>
+  </section>
+
+  <section class="patch-section" id="arztkaiser">
+    <h2 class="patch-titre">
+      <img src="../../assets/images/subclass-icons/arztkaiser.png" class="image class-icon">
+      Arztkaiser
+    </h2>
+    <div class="patch-list">
+      
+        <article id="ordre-de-protection">
+        <h3>
+          <img src="../../assets/images/skills-icons/sovereign/protect-order.png" class="image skill-icon">
+          Ordre de protection
+          <span>2 PA (Action)</span>
+        </h3>
+          <p>En tant qu'action, consommez 1 dé d'Inspiration et lancez-le, puis ajoutez le modificateur de Sagesse du Souverain au total. Chaque allié volontaire récupère autant de points de vie à la fin du round pendant 3 rounds. Le nombre de dés d'Inspiration lancés pour cette aptitude augmente à 2 au niveau 8, à 3 au niveau 13 et à 4 au niveau 18; cependant, l'Ordre de protection ne diminue que de 2 au maximum la réserve de dés d'Inspiration du Souverain. Les cibles doivent être capables d'entendre et être conscientes pour bénéficier de l'Ordre de protection.</p>
+        </article>
+
+        <article id="ordre-de-prevention">
+        <h3>
+          <img src="../../assets/images/skills-icons/sovereign/prevent-order.png" class="image skill-icon">
+          Ordre de prévention
+          <span>1 PA (Réaction)</span>
+        </h3>
+          <p>Lorsqu'un allié est sur le point d'être affecté par une affliction, le Souverain peut utiliser sa réaction pour consommer un dé d'Inspiration - pendant 3 rounds, chaque fois qu'une affliction doit être infligée à une créature amicale, cette affliction n'est pas infligée. Cet effet peut être activé un nombre maximum de fois égal au modificateur de Charisme du Souverain, avec un minimum d'une activation, par repos long. Les cibles doivent être capables d'entendre et être conscientes pour bénéficier de l'Ordre de prévention.</p>
+        </article>
+
+        <article id="ordre-de-ralliement">
+        <h3>
+          <img src="../../assets/images/skills-icons/sovereign/rally-order.png" class="image skill-icon">
+          Ordre de ralliement
+          <span>2 PA (Action)</span>
+        </h3>
+          <p>Lancez 2 dés d'inspiration du Souverain et consommez-les. Tous les alliés gagnent des points de vie temporaires égaux à la valeur obtenue + le modificateur de Charisme du Souverain au début du round pendant 3 rounds - les points de vie temporaires expirent au début du 4ème round s'ils n'ont pas été épuisés. Tant que les alliés ont des points de vie temporaires de l'Ordre de ralliement, ils peuvent choisir de dissiper ces points de vie temporaires pour relancer un jet d'attaque ou de dégâts et prendre le second résultat. Les cibles doivent être capables d'entendre et conscientes pour bénéficier de l'Ordre de ralliement.</p>
+        </article>
+    </div>
+  </section>
+
+  <section class="patch-section" id="starkekaiser">
+    <h2 class="patch-titre">
+      <img src="../../assets/images/subclass-icons/starkekaiser.png" class="image class-icon">
+      Starkekaiser
+    </h2>
+    <div class="patch-list">
+      
+        <article id="ordres-f-roces">
+        <h3>
+          <img src="../../assets/images/skills-icons/sovereign/fierce-orders.png" class="image skill-icon">
+          Ordres féroces
+          <span>passif</span>
+        </h3>
+          <p>Lorsqu'un Ordre amène le Souverain à lancer des dés d'Inspiration, le Souverain peut choisir de consommer un dé d'Inspiration supplémentaire et de l'ajouter au total. Le Souverain ajoute 2 dés supplémentaires à sa réserve totale de dés d'Inspiration.</p>
+        </article>
+
+        <article id="ex-nihilo">
+        <h3>
+          <img src="../../assets/images/skills-icons/sovereign/ex-nihilo.png" class="image skill-icon">
+          Ex Nihilo
+          <span>2 PA (Action)</span>
+        </h3>
+          <p>Effectuez un jet d'attaque avec l'arme actuellement équipée, en utilisant le Charisme comme modificateur, contre une cible située dans un rayon de 9 mètres, infligeant des dégâts de force égaux à 1d12 + modificateur de Charisme en cas de réussite. S'il y a des bonus ou des malus sur la cible, Ex Nihilo touche sans jet d'attaque, inflige des dégâts doublés et toutes les modifications sont annulées.</p>
+        </article>
+
+        <article id="boost-de-moral">
+        <h3>
+          <img src="../../assets/images/skills-icons/sovereign/morale-boost.png" class="image skill-icon">
+          Boost de moral
+          <span>passif</span>
+        </h3>
+          <p>Lorsque l'Ordre d'attaque ou de garde est lancé, les créatures affectées bénéficient d'un bonus aux jets d'attaque égal au modificateur de Charisme du Souverain sur leur prochain jet d'attaque.</p>
+        </article>
+    </div>
+  </section>
+
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;">← Index des classes</a>
+      <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
+    </div>
+  </main>
+
+  <footer><p>© 2025 - Wizardofaz, Rashaza, Jeido, ChatGPT - Icons from Final Fantasy XIV Online</p></footer>
+  <script>
+    function toggleIntro() {
+      const section = document.getElementById("intro");
+      section.classList.toggle("expanded");
+      const btn = section.querySelector("button");
+      btn.textContent = section.classList.contains("expanded") ? "Réduire" : "Afficher la suite";
+    }
+  </script>
+  <script src="../../particles.js"></script>
+</body>
+</html>
