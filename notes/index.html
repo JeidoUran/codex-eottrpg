@@ -61,19 +61,23 @@
       justify-content: center;
       gap: 1rem;
       flex-wrap: wrap;
-      margin: 0rem auto 2rem;
+      margin: -1.5rem auto 2rem;
     }
   </style>
 </head>
 <body>
   <canvas id="particles"></canvas>
   <header class="codex-header">
+    <div class="header-top">
     <h1><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-header"> Historique des Patch Notes</h1>
+    <div class="header-links" style="text-align: center; margin-top: 1rem; margin-bottom: 2rem;">
+      <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
+    </div>
+    </div>
     <p class="sous-titre">Consultez les modifications passées du Codex</p>
   </header>
   <main class="accueil">
     <div id="top-bar">
-      <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
       <button class="btn-lu" id="tout-lu">
         <img src="../assets/images/icon_checkbox.png" class="image mark-as-read-btn"> Tout marquer comme lu
       </button>
@@ -138,6 +142,7 @@
       <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
     </div>
   </main>
+  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut" >↑ Retour en haut</button>
   <footer>
     <p>© 2025 - Jeido, ChatGPT</p>
   </footer>
@@ -175,6 +180,11 @@
       document.querySelectorAll(".patch-nouveau").forEach(badge => badge.hidden = true);
       boutonLu.style.display = "none";
     });
+  </script>
+  <script>
+      window.addEventListener('scroll', () => {
+          document.getElementById('backToTop').classList.toggle('show', window.scrollY > 300);
+      });
   </script>
 </body>
 </html>
