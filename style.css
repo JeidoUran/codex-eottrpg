@@ -428,3 +428,51 @@ footer {
     height: 48px;
     vertical-align: middle;
 }
+
+#backToTop {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background: rgba(255, 255, 255, 0.04);
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 0.5rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+    font-family: 'Cinzel', serif;
+}
+
+#backToTop:hover {
+    transform: scale(1.03);
+    background: rgba(136, 192, 169, 0.05);
+    box-shadow: 0 0 12px rgba(136, 192, 169, 0.1);
+}
+#backToTop::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #63b0c4, transparent);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+#backToTop::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #63b0c4, transparent);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+#backToTop:hover::before,
+#backToTop:focus::before,
+#backToTop:hover::after,
+#backToTop:focus::after {
+    width: 100%;
+    left: 0;
+}

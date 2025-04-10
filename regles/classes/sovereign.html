@@ -169,6 +169,7 @@
         position: relative;
         text-align: center;
         padding-top: 2rem;
+        margin-bottom: -2rem;
     }
 
     .header-top {
@@ -184,6 +185,8 @@
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
+        margin-bottom: 1rem;
+        margin-top: 0.5rem;
     }
 
     .header-links {
@@ -258,7 +261,6 @@
         <p>Un noble serein avec une présence imposante. Les Souverains s'appuient sur leur charisme naturel et leur titre pour inspirer et diriger leurs alliés. Les Souverains considèrent comme leur devoir de commander ceux qui sont sous leur responsabilité ; que cela profite à eux-mêmes ou au Souverain dépend du souverain lui-même. Leur formation aux grâces sociales et à l'art de la guerre leur confère la capacité de penser de manière pratique dans les deux situations, bien que de nombreux Souverains soient naïfs quant aux véritables rouages du monde et s'appuient sur leur pratique et leur apprentissage plutôt que sur l'intuition. De plus, bien qu'ils soient talentueux pour diriger des alliés, ils sont moins capables de faire face aux menaces eux-mêmes.        </p>
         <button class="toggle-intro" onclick="toggleIntro()">Afficher la suite</button>
       </section>
-
     <section class="patch-section">
       <h2 class="patch-titre" id="details">
         <img src="../../assets/images/notes-big.png" class="image image-h2">
@@ -577,6 +579,8 @@
       <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
     </div>
   </main>
+  
+  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut" >↑ Retour en haut</button>
 
   <footer><p>© 2025 - Wizardofaz, Rashaza, Jeido, ChatGPT - Icons from Final Fantasy XIV Online</p></footer>
       <script>
@@ -654,6 +658,11 @@
       content.classList.toggle("collapsed");
       button.textContent = content.classList.contains("collapsed") ? "▲" : "▼";
     }
+  </script>
+  <script>
+    window.addEventListener('scroll', () => {
+        document.getElementById('backToTop').classList.toggle('show', window.scrollY > 300);
+    });
   </script>
   <script src="../../particles.js"></script>
 </body>
