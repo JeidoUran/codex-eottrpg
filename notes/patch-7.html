@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Patch 2.0 – Session 9</title>
+  <link rel="icon" href="../favicon.png" type="image/png">
+  <link rel="stylesheet" href="../style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+</head>
+<body>
+  <canvas id="particles"></canvas>
+  <header class="codex-header" id="top">
+    <h1>📜 Patch 2.0 – Session 9</h1>
+    <p class="sous-titre">Publié le 22 Janvier 2025</p>
+  </header>
+  <div style="text-align: center; margin-top: 2rem;">
+    <a href="/notes/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Index des patchs</a>
+    <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
+  </div>
+  <main class="accueil">
+    <section class="intro">
+      
+<nav class="patch-nav">
+  <ul>
+    <li><a href="#systeme"><span class="rune">✦</span> Système</a></li>
+    <li><a href="#classes"><span class="rune">✦</span> Classes</a></li>
+    <li><a href="#problemes-connus"><span class="rune">✦</span> Problèmes connus</a></li>
+  </ul>
+</nav>
+    </section>
+    
+<section class="patch-section" id="systeme">
+  <h2 class="patch-titre">
+    <img src="../assets/images/notes-big.png" class="image image-h2">
+    Système
+  </h2>
+  <ul class="image-list">
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Afin de fluidifier l'exploration du Labyrinthe, les joueurs peuvent désormais choisir de pénétrer dans le Labyrinthe à un étage choisi. Tout étage ignoré de cette manière dépensera 15 minutes de temps.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le système de jeu a été mis à jour de la version 3.3.1 à la version 4.1.2. Il s'agit d'une mise à jour majeure et il se peut donc que des problème soient apparus, notamment au niveau de la gestion des réactions. De plus, la plupart des modules majeurs utilisés sont encore en bêta, d'autres changements par la suite sont donc à prévoir.<div class="note-expliquee">L'interface de lancer de dés à été intégralement revue.</div><div class="note-expliquee">La quasi-totalité des aptitudes, objets, et équipements accessibles à ce stade ont été retravaillés pour être adaptés au système v4.</div><div class="note-expliquee">Les objets et aptitudes disposent maintenant d'"Activités". Celles-ci permettent de réaliser des tâches pré-déterminées aux effets variés.</div><div class="note-expliquee">Les jets de précision et de dégâts utilisent désormais le système d'Activités, ce qui modifie légèrement la manière de réaliser ces jets.</div><div class="note-expliquee">Avant : Utilisation de l'objet -> Jet de précision -> Cliquer dans le tchat pour lancer les dégâts.</div><div class="note-expliquee">Après : Utilisation de l'objet -> Sélectionner "Précision" -> Cliquer dans le tchat pour lancer la précision -> Cliquer dans le tchat pour lancer les dégâts.</div><div class="note-expliquee">Après (Arme polyvalente) : Utilisation de l'objet -> Sélectionner "Précision" -> Cliquer dans le tchat pour lancer la précision -> Utilisation de l'objet -> Sélectionner "Dégâts" -> Cliquer dans le tchat pour lancer les dégâts.</div><div class="note-expliquee">Ces modifications sont sujettes à changement. Adapter le système de précision que nous utilisons à la v4 fut très difficile et je continue à réflechir à des méthodes pour simplifier son utilisation.</div><div class="note-expliquee">L'action "Recharge" des Fusils est désormais une Activité et s'utilise depuis le Fusil directement (Sélectionner "Recharge").</div><div class="note-expliquee">Les jets de précision sont désormais correctement affichés avant les jets de dégâts dans le tchat.</div></div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Ajout d'une nouvelle interface de gestion de l'équipement, celle-ci s'ouvre automatiquement avec votre fiche de personnage et vous permet de glisser vos objets vers celle-ci pour les équiper. Elle est individuellement désactivable sur demande.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le volet d'actions à été mis à jour. Il affiche désormais plus d'informations et il est possible de définir des aptitudes et objets en favoris.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le nom des grenades a été modifié ("Grenade" -> "Grenade basique").</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les dégâts des grenades basiques ont été augmenté (1d4 + 2 -> 2d4 + 2).</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les zones d'effets de certains objets et aptitudes disparaissent désormais automatiquement.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le calcul complet de la valeur de précision est désormais indiqué dans la description des objets.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le nombre de degrés restants d'un effet est désormais affiché sur son icône en haut à droite de l'écran.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le nom des aptitudes générales a été uniformisé ("Aider" -> "Aider - 2 PA (Action)").</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'onglet "Actions" de la fiche de personnage a été renommé "Aptitudes".</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">La valeur d'Offense présente sur la fiche de personnage a été supprimée.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les cascades du B1F et B2F ne sont plus animées.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Un message indiquant à un personnage qu'il dispose d'un point d'Inspiration inutilisé est désormais affiché dans le tchat au début de chaque tour de combat.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Des messages de rappel sont désormais indiqués dans la fenêtre de lancer de dés lorsque des bonus et/ou malus sont présents sur un personnage ou leur cible.<div class="note-expliquee">De manière générale, les bonus d'Offense sont appliqués automatiquement. Les bonus de Précision sont à entrer manuellement dans la ligne "Bonus situationnel" pour l'instant.</div></div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les noms des 6 anneaux améliorant les jets de sauvegarde ont été modifié.<div class="note-expliquee">Avant : Anneau de Force, Dextérité, Constitution, Intelligence, Sagesse, Charisme.</div><div class="note-expliquee">Après : Anneau de Solidité, Adresse, Structure, Clairvoyance, Lucidité, Magnétisme.</div></div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les dégâts bonus de Poussée sanguine sont désormais lancés automatiquement une fois par tour.</div></li>
+  </ul>
+  <div class="back-to-top"><a href="#top">↑ Haut de page</a></div>
+</section>
+
+<section class="patch-section" id="classes">
+  <h2 class="patch-titre">
+    <img src="../assets/images/notes-big.png" class="image image-h2">
+    Classes
+  </h2>
+  <div class="classe-subsection">
+    <h3 class="classe-nom">
+      <img src="../assets/images/class-icons/sovereign.png" class="image image-h3">
+      Souverain
+    </h3>
+    <ul class="image-list">
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les dés d'Inspiration sont désormais correctement soustraits lors de l'utilisation d'aptitudes les consommant.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">La réserve de dés maximum du Souverain dépend désormais de l'aptitude Inspiration noble et augmente automatiquement avec le niveau. Seul le nombre maximum augmente automatiquement, le nombre de dés actuels doit être augmenté manuellement.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les bonus conférés par le Souverain sont désormais correctement appliqués.</div></li>
+    </ul>
+  </div>
+  <div class="classe-subsection">
+    <h3 class="classe-nom">
+      <img src="../assets/images/class-icons/landshark.png" class="image image-h3">
+      Lansquenet
+    </h3>
+    <ul class="image-list">
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Double frappe rappelle désormais au joueur qu'une attaque bonus est disponible lorsque le dé atteint sa valeur minimale.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le dé de Double frappe est désormais réduit au moment du jet de précision, au lieu du jet de dégâts.</div></li>
+    </ul>
+  </div>
+  <div class="classe-subsection">
+    <h3 class="classe-nom">
+      <img src="../assets/images/class-icons/shogun.png" class="image image-h3">
+      Shogun
+    </h3>
+    <ul class="image-list">
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'aptitude "Épée secondaire" est désormais activée avec une Activité, depuis l'arme équipée (Sélectionner "Précision (Action bonus)" au lieu de "Précision (Action)").</div></li>
+    </ul>
+  </div>
+  <div class="classe-subsection">
+    <h3 class="classe-nom">
+      <img src="../assets/images/class-icons/rover.png" class="image image-h3">
+      Vagabond
+    </h3>
+    <ul class="image-list">
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'effet de Tir de pistage s'applique désormais immédiatement et ne nécessite plus d'effectuer une attaque supplémentaire.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le compagnon animal a désormais accès aux aptitudes Esquiver, Foncer, Se cacher, Se désengager et Se tenir prêt.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les PA du Vagabond et de son compagnon animal sont désormais correctement partagés.</div></li>
+    </ul>
+  </div>
+  <div class="back-to-top"><a href="#top">↑ Haut de page</a></div>
+</section>
+
+<section class="patch-section" id="problemes-connus">
+  <h2 class="patch-titre">
+    <img src="../assets/images/notes-big.png" class="image image-h2">
+    Problèmes connus
+  </h2>
+  <ul class="image-list">
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Certaines réactions ne fonctionnent plus suite à la migration vers la v4. Elles seront graduellement restaurées à mesure que les modules dont elles dépendent se mettent à jour.<div class="note-expliquee">Les attaques d'opportunités fonctionnent, mais partiellement, et servent plutôt de rappel, une aptitude "Attaque d'opportunité" a donc été ajoutée.</div><div class="note-expliquee">Utilisation : Fenêtre d'attaque d'opportunité apparaît -> Sélectionner "Oui" -> Utiliser manuellement l'aptitude "Attaque d'opportunité" -> Cliquer dans le tchat pour lancer la précision -> Cliquer dans le tchat pour lancer les dégâts.</div></div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'aptitude Négociation du Souverain n'intervertis pas correctement les valeurs des bonus d'Ordre d'attaque et Ordre de garde.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le menu "Party Overview" ne fonctionne plus suite à la migration vers la v4 et a donc été temporairement retiré.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les bonus d'Offense n'apparaissent pas dans le calcul des dégâts dans la fenêtre de lancer de dés. Ils sont néanmoins correctement appliqués lors du lancer.</div></li>
+  </ul>
+  <div class="back-to-top"><a href="#top">↑ Haut de page</a></div>
+</section>
+  <div style="text-align: center; margin-top: 2rem;">
+    <a href="/notes/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Index des patchs</a>
+    <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
+  </div>
+  </main>
+  <footer>
+    <p>© 2025 - Jeido, ChatGPT</p>
+  </footer>
+  <script src="../particles.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Patch 2.3 – Session 12</title>
+  <link rel="icon" href="../favicon.png" type="image/png">
+  <link rel="stylesheet" href="../style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+</head>
+<body>
+  <canvas id="particles"></canvas>
+  <header class="codex-header" id="top">
+    <h1>📜 Patch 2.3 – Session 12</h1>
+    <p class="sous-titre">Publié le 18 Février 2025</p>
+  </header>
+  <div style="text-align: center; margin-top: 2rem;">
+    <a href="/notes/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Index des patchs</a>
+    <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
+  </div>
+  <main class="accueil">
+    <section class="intro">
+      
+<nav class="patch-nav">
+  <ul>
+    <li><a href="#systeme"><span class="rune">✦</span> Système</a></li>
+    <li><a href="#classes"><span class="rune">✦</span> Classes</a></li>
+    <li><a href="#problemes-resolus"><span class="rune">✦</span> Problèmes résolus</a></li>
+    <li><a href="#problemes-connus"><span class="rune">✦</span> Problèmes connus</a></li>
+    <li><a href="#mj"><span class="rune">✦</span> MJ</a></li>
+  </ul>
+</nav>
+    </section>
+    
+<section class="patch-section" id="systeme">
+  <h2 class="patch-titre">
+    <img src="../assets/images/notes-big.png" class="image image-h2">
+    Système
+  </h2>
+  <ul class="image-list">
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le système de fatigue a été modifié, pour se rapprocher de l'édition 2024 de D&D. Plus d'informations sont disponibles sur votre fiche de personnage, onglet Effets, en passant la souris sur la condition Épuisement.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les jets de précision et de dégâts utilisent désormais le système de jet d'attaque de D&D5e. Un immense merci au développeur Larkinabout pour ce changement.<div class="note-expliquee">Jusqu'à présent, il n'était pas possible de définir un dé de précision par type d'arme, et nous devions donc "tricher" en utilisant des méthodes compliquées et souvent peu efficace pour permettre les jets de précision.</div><div class="note-expliquee">Tout comme la mise à jour v4, il s'agit d'un changement majeur affectant toutes les aptitudes des joueurs ainsi que celles des monstres, il se peut donc que des problèmes et/ou oublis surviennent et je m'en excuse d'avance.</div><div class="note-expliquee">Grâce à ce changement, les activités "Précision" et "Dégâts" ont été regroupées en une seule activité "Attaque", réduisant ainsi le nombre de clics nécessaires pour réaliser une attaque. Cela change cependant légèrement la manière dont les armes polyvalentes s'utilisent à nouveau et je m'excuse pour la gêne occasionnée, ceci dit, il n'y aura normalement plus de changement à ce niveau.</div><div class="note-expliquee">La fenêtre de jet de dés de précision s'ouvre désormais automatiquement en réalisant une attaque. Le bouton dans le tchat reste disponible au cas où, mais il n'est plus nécessaire d'appuyer dessus.</div><div class="note-expliquee">La fenêtre de jet de dés de dégâts s'ouvre désormais automatiquement lorsqu'une attaque touche ou effleure. Le bouton dans le tchat reste disponible au cas où, mais il n'est plus nécessaire d'appuyer dessus.</div><div class="note-expliquee">Il est désormais possible d'effectuer un jet de précision avec avantage ou avec désavantage.</div><div class="note-expliquee">La plupart des bonus affectant la précision d'une créature sont désormais appliqués automatiquement, de la même manière que les bonus de dégâts.</div></div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Certains boutons redondants du volet d'action ont été supprimé.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les Ental entreposés dans le coffre de guilde sont désormais affichés à côté des Ental du groupe.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'affichage du bonus à l'initiative de la fiche de personnage a été retiré.</div></li>
+  </ul>
+  <div class="back-to-top"><a href="#top">↑ Haut de page</a></div>
+</section>
+
+<section class="patch-section" id="classes">
+  <h2 class="patch-titre">
+    <img src="../assets/images/notes-big.png" class="image image-h2">
+    Classes
+  </h2>
+  <div class="classe-subsection">
+    <h3 class="classe-nom">
+      <img src="../assets/images/class-icons/rover.png" class="image image-h3">
+      Vagabond
+    </h3>
+    <ul class="image-list">
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le bonus de précision de Tir de pistage est désormais automatiquement ajouté aux attaques du compagnon du Vagabond.</div></li>
+    </ul>
+  </div>
+  <div class="back-to-top"><a href="#top">↑ Haut de page</a></div>
+</section>
+
+<section class="patch-section" id="problemes-resolus">
+  <h2 class="patch-titre">
+    <img src="../assets/images/notes-big.png" class="image image-h2">
+    Problèmes résolus
+  </h2>
+  <ul class="image-list">
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les bonus de dégâts sont à nouveau affichés dans le calcul de la fenêtre de lancer de dés.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Il est à nouveau possible de sélectionner l'arme équipée dans la fenêtre d'attaque d'opportunité. L'aptitude du même nom reste cependant disponible pour des activations manuelles.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'aptitude "Charge téméraire" du Lansquenet ne se déclenche plus lorsqu'un allié le cible.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'aptitude "Souffle" des Sentinelles ne déclenche plus le dé de dégâts bonus de Poussée Sanguine.</div></li>
+  </ul>
+  <div class="back-to-top"><a href="#top">↑ Haut de page</a></div>
+</section>
+
+<section class="patch-section" id="problemes-connus">
+  <h2 class="patch-titre">
+    <img src="../assets/images/notes-big.png" class="image image-h2">
+    Problèmes connus
+  </h2>
+  <ul class="image-list">
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Une erreur de portée insuffisante peut survenir lors de l'utilisation d'une attaque d'opportunité. Elle est sans incidence et peut être ignorée.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Certaines bulles d'informations sont en anglais suite à l'intégration du manuel des joueurs (2024) de D&D au système de jeu. La version FoundryVTT de ce dernier ne dispose pas encore de traduction française.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les joueurs ne peuvent pas afficher la description des objets depuis l'écran d'achat d'un marchand.</div></li>
+  </ul>
+  <div class="back-to-top"><a href="#top">↑ Haut de page</a></div>
+</section>
+
+<section class="patch-section" id="mj">
+  <h2 class="patch-titre">
+    <img src="../assets/images/notes-big.png" class="image image-h2">
+    MJ
+  </h2>
+  <ul class="image-list">
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le résultat d'un jet de précision (touché/effleurement/raté/critique) est désormais indiqué sous celui-ci, et est pris en compte lors du calcul des dégats.<div class="note-expliquee">Cependant, il n'est pas calculé correctement en cas d'effleurement lors de l'utilisation d'actions affectant plusieurs cibles et doit être calculé manuellement.</div></div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">1 niveau de fatigue est désormais automatiquement appliqué à un personnage tombant inconscient.</div></li>
+  </ul>
+  <div class="back-to-top"><a href="#top">↑ Haut de page</a></div>
+</section>
+  <div style="text-align: center; margin-top: 2rem;">
+    <a href="/notes/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Index des patchs</a>
+    <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
+  </div>
+  </main>
+  <footer>
+    <p>© 2025 - Jeido, ChatGPT</p>
+  </footer>
+  <script src="../particles.js"></script>
+</body>
+</html>
