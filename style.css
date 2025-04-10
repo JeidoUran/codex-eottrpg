@@ -67,12 +67,12 @@ h1 {
 }
 
 a {
-    color: #dabc16;
+    color: #57dada;
     text-decoration: none;
 }
 
 a:hover {
-    text-shadow: 0 0 4px #dabc16;
+    text-shadow: 0 0 4px #8bd1e3;
     text-decoration: none;
 }
 
