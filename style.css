@@ -430,6 +430,7 @@ footer {
 }
 
 #backToTop {
+    display: none;
     position: fixed;
     bottom: 1.5rem;
     right: 1.5rem;
@@ -448,6 +449,7 @@ footer {
     transform: scale(1.03);
     background: rgba(136, 192, 169, 0.05);
     box-shadow: 0 0 12px rgba(136, 192, 169, 0.1);
+    cursor: pointer;
 }
 #backToTop::before {
     content: "";
@@ -475,4 +477,7 @@ footer {
 #backToTop:focus::after {
     width: 100%;
     left: 0;
+}
+#backToTop.show {
+    display: block;
 }
