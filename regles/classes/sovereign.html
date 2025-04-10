@@ -11,9 +11,20 @@
   <style>
     .patch-list article { max-width: 800px; margin: 1.5rem auto; }
     .class-nav {
-      position: fixed; top: 50%; left: 1rem; transform: translateY(-50%);
-      background: rgba(0,0,0,0.4); padding: 1rem; border-radius: 12px;
-      font-family: 'Cinzel', serif; font-size: 0.9rem; z-index: 1000;
+        position: fixed;
+        top: 50%;
+        left: 1rem;
+        transform: translateY(-50%);
+        background: rgba(0,0,0,0.4);
+        padding: 1rem;
+        border-radius: 12px;
+        font-family: 'Cinzel', serif;
+        font-size: 0.9rem;
+        z-index: 1000;
+        max-height: 90vh;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        scrollbar-color: #88c0a9 transparent;
     }
     .class-nav a { display: block; color: #e8ddc5; margin-bottom: 0.5rem;
       text-decoration: none; transition: color 0.3s; }
@@ -23,8 +34,19 @@
       font-weight: bold; font-size: 1rem; margin-top: 0.8rem;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 0.3rem;
     }
+    .class-nav a.active {
+        color: #57dada;
+        font-weight: bold;
+    }
     .class-nav a.sub-link {
       font-size: 0.9rem; margin-left: 0.8rem; opacity: 0.85;
+    }
+    .class-nav::-webkit-scrollbar {
+        width: 6px;
+    }
+    .class-nav::-webkit-scrollbar-thumb {
+        background-color: #88c0a9;
+        border-radius: 4px;
     }
     .patch-list h3 {
       display: flex; align-items: center; justify-content: space-between; gap: 1rem;
@@ -35,7 +57,7 @@
     .patch-list h3 span {
       font-weight: normal; font-size: 0.9em; margin-left: auto;
     }
-    .intro-collapsible.click {
+        .intro-collapsible.click {
         position: relative;
         max-height: 100px;
         overflow: hidden;
@@ -84,14 +106,10 @@
         z-index: 1;
         font-weight: bold;
     }
-    .skill-icon {
+    .skill-icon, .class-icon {
         border-radius: 8px;
         box-shadow: 0 0 6px rgba(52, 223, 223, 0.418);
     }
-    .class-icon {
-        border-radius: 8px;
-        box-shadow: 0 0 6px rgba(52, 223, 223, 0.418);
-    }   
   </style>
 </head>
 <body>
@@ -105,29 +123,29 @@
   <a href="#ordre-de-garde" class="sub-link">Ordre de garde</a>
   <a href="#voile-royal" class="sub-link">Voile royal</a>
   <a href="#titre-noble" class="sub-link">Titre noble</a>
-  <a href="#n-gociation" class="sub-link">Négociation</a>
+  <a href="#negociation" class="sub-link">Négociation</a>
   <a href="#escrime-de-cour" class="sub-link">Escrime de cour</a>
   <a href="#ordre-de-liaison-i" class="sub-link">Ordre de liaison I</a>
-  <a href="#renforcement" class="section-link">Renforcement</a>
-  <a href="#lign-e-royale" class="sub-link">Lignée royale</a>
-  <a href="#ma-trise-des-ordres" class="sub-link">Maîtrise des ordres</a>
+  <a href="#renforcement" class="sub-link">Renforcement</a>
+  <a href="#lignee-royale" class="sub-link">Lignée royale</a>
+  <a href="#maitrise-des-ordres" class="sub-link">Maîtrise des ordres</a>
   <a href="#marche-monarchique" class="sub-link">Marche monarchique</a>
-  <a href="#autorisation" class="section-link">Autorisation</a>
-  <a href="#-l-unisson-" class="sub-link">À l'unisson !</a>
+  <a href="#autorisation" class="sub-link">Autorisation</a>
+  <a href="#a-l-unisson" class="sub-link">À l'unisson !</a>
   <a href="#marque-noble" class="sub-link">Marque noble</a>
-  <a href="#d-cret-final" class="sub-link">Décret final</a>
-  <a href="#chevalerie" class="section-link">Chevalerie</a>
+  <a href="#decret-final" class="sub-link">Décret final</a>
+  <a href="#chevalerie" class="sub-link">Chevalerie</a>
   <a href="#specialisations" class="section-link">Spécialisations</a>
   <a href="#magierkaiser" class="section-link">Magierkaiser</a>
   <a href="#armes-de-feu-gel-foudre" class="sub-link">Armes de feu/gel/foudre</a>
   <a href="#ordre-de-liaison-ii" class="sub-link">Ordre de liaison II</a>
-  <a href="#-clat-royal" class="sub-link">Éclat royal</a>
+  <a href="#eclat-royal" class="sub-link">Éclat royal</a>
   <a href="#arztkaiser" class="section-link">Arztkaiser</a>
   <a href="#ordre-de-protection" class="sub-link">Ordre de protection</a>
   <a href="#ordre-de-prevention" class="sub-link">Ordre de prévention</a>
   <a href="#ordre-de-ralliement" class="sub-link">Ordre de ralliement</a>
   <a href="#starkekaiser" class="section-link">Starkekaiser</a>
-  <a href="#ordres-f-roces" class="sub-link">Ordres féroces</a>
+  <a href="#ordres-feroces" class="sub-link">Ordres féroces</a>
   <a href="#ex-nihilo" class="sub-link">Ex Nihilo</a>
   <a href="#boost-de-moral" class="sub-link">Boost de moral</a>
 </div>
@@ -140,9 +158,7 @@
   </header>
   <main class="accueil">
     <section class="intro-collapsible click" id="intro">
-        <p>
-          Un noble serein avec une présence imposante. Les Souverains s'appuient sur leur charisme naturel et leur titre pour inspirer et diriger leurs alliés. Les Souverains considèrent comme leur devoir de commander ceux qui sont sous leur responsabilité ; que cela profite à eux-mêmes ou au Souverain dépend du souverain lui-même. Leur formation aux grâces sociales et à l'art de la guerre leur confère la capacité de penser de manière pratique dans les deux situations, bien que de nombreux Souverains soient naïfs quant aux véritables rouages du monde et s'appuient sur leur pratique et leur apprentissage plutôt que sur l'intuition. De plus, bien qu'ils soient talentueux pour diriger des alliés, ils sont moins capables de faire face aux menaces eux-mêmes.
-        </p>
+        <p>Un noble serein avec une présence imposante. Les Souverains s'appuient sur leur charisme naturel et leur titre pour inspirer et diriger leurs alliés. Les Souverains considèrent comme leur devoir de commander ceux qui sont sous leur responsabilité ; que cela profite à eux-mêmes ou au Souverain dépend du souverain lui-même. Leur formation aux grâces sociales et à l'art de la guerre leur confère la capacité de penser de manière pratique dans les deux situations, bien que de nombreux Souverains soient naïfs quant aux véritables rouages du monde et s'appuient sur leur pratique et leur apprentissage plutôt que sur l'intuition. De plus, bien qu'ils soient talentueux pour diriger des alliés, ils sont moins capables de faire face aux menaces eux-mêmes.        </p>
         <button class="toggle-intro" onclick="toggleIntro()">Afficher la suite</button>
       </section>
 
@@ -214,7 +230,7 @@
     <p>Le Souverain choisit un titre à suivre. Choisissez un titre, et ce titre accordera des aptitudes supplémentaires à mesure que le Souverain gagne en niveau. Les Magierkaisers exploitent les faiblesses de l'ennemi en modifiant les éléments des armements des alliés, puis en suivant avec leurs puissantes attaques magiques. Les Artzkaisers adoptent une approche plus nourricière, soutenant le groupe en les protégeant et en guérissant leurs blessures. Les Starkekaisers renoncent à une approche concentrée, préférant diriger par la seule force de leur personnalité, ce qui renforce la puissance de leurs ordres existants.</p>
   </article>
 
-  <article id="n-gociation">
+  <article id="negociation">
   <h3>
     <img src="../../assets/images/skills-icons/sovereign/negociate.png" class="image skill-icon">
     Négociation
@@ -250,7 +266,7 @@
     <p>Lorsqu'un allié reçoit un bonus du Souverain, il récupère des points de vie égaux à la moitié de la valeur numérique du bonus, arrondie à l'entier supérieur. Renforcement s'applique lorsque les Ordres ou les Armes sont d'abord émis, indépendamment des effets récurrents.</p>
   </article>
 
-  <article id="lign-e-royale">
+  <article id="lignee-royale">
   <h3>
     <img src="../../assets/images/skills-icons/sovereign/royal-lineage.png" class="image skill-icon">
     Lignée royale
@@ -259,7 +275,7 @@
     <p>Chaque fois que le Souverain dépenserait un dé d'Inspiration, si le résultat obtenu au lancer est la valeur maximale, le dé n’est pas consommé.</p>
   </article>
 
-  <article id="ma-trise-des-ordres">
+  <article id="maitrise-des-ordres">
   <h3>
     <img src="../../assets/images/skills-icons/sovereign/order-mastery.png" class="image skill-icon">
     Maîtrise des ordres
@@ -286,7 +302,7 @@
     <p>En tant qu'action, annulez les effets de tous les bonus du Souverain sur les créatures amicales, ainsi que tous les malus temporaires infligés par les capacités ou les sorts des créatures hostiles ; tous les alliés affectés récupèrent des points de vie égaux à la valeur absolue de tous les bonus et malus. L'effet de guérison de l’Autorisation échoue si au moins un bonus du Souverain n'est pas annulé.</p>
   </article>
 
-  <article id="-l-unisson-">
+  <article id="a-l-unisson">
   <h3>
     <img src="../../assets/images/skills-icons/sovereign/in-unison.png" class="image skill-icon">
     À l'unisson !
@@ -304,7 +320,7 @@
     <p>La marque noble de la maison du Souverain apparaît sur le corps du Souverain. Pendant le repos court ou long, cette marque rassemble de l'énergie spirituelle et commence à briller faiblement ; la première aptitude utilisant des dés d'Inspiration après un repos court ou long obtient toujours le résultat maximal, et la lueur disparaît.</p>
   </article>
 
-  <article id="d-cret-final">
+  <article id="decret-final">
   <h3>
     <img src="../../assets/images/skills-icons/sovereign/final-decree.png" class="image skill-icon">
     Décret final
@@ -353,7 +369,7 @@
           <p>Lorsqu'une créature hostile dans un rayon de 30 mètres subit des dégâts de feu, de glace ou de foudre, le Souverain peut utiliser sa réaction pour infliger des dégâts de feu, de glace ou de foudre égaux à 2d4 + modificateur de Charisme à la cible, en fonction de l'élément déclenchant la réaction, ainsi qu'à deux créatures supplémentaires situées à moins de 3 mètres de la cible.</p>
         </article>
 
-        <article id="-clat-royal">
+        <article id="eclat-royal">
         <h3>
           <img src="../../assets/images/skills-icons/sovereign/royal-radiance.png" class="image skill-icon">
           Éclat royal
@@ -407,7 +423,7 @@
     </h2>
     <div class="patch-list">
       
-        <article id="ordres-f-roces">
+        <article id="ordres-feroces">
         <h3>
           <img src="../../assets/images/skills-icons/sovereign/fierce-orders.png" class="image skill-icon">
           Ordres féroces
@@ -443,7 +459,47 @@
   </main>
 
   <footer><p>© 2025 - Wizardofaz, Rashaza, Jeido, ChatGPT - Icons from Final Fantasy XIV Online</p></footer>
-  <script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const navContainer = document.querySelector('.class-nav');
+        const navLinks = document.querySelectorAll('.class-nav a[href^="#"]');
+        const sections = [...navLinks].map(link => document.querySelector(link.getAttribute("href"))).filter(Boolean);
+    
+        let lastActive = null;
+    
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute("id");
+                const activeLink = [...navLinks].find(link => link.getAttribute("href") === `#${id}`);
+    
+                if (activeLink && activeLink !== lastActive) {
+                navLinks.forEach(link => link.classList.remove("active"));
+                activeLink.classList.add("active");
+    
+                // Scroll l'élément actif dans le menu si partiellement masqué
+                const linkTop = activeLink.getBoundingClientRect().top;
+                const navTop = navContainer.getBoundingClientRect().top;
+                const linkBottom = linkTop + activeLink.offsetHeight;
+                const navBottom = navTop + navContainer.offsetHeight;
+    
+                if (linkTop < navTop || linkBottom > navBottom) {
+                    activeLink.scrollIntoView({ behavior: "smooth", block: "center" });
+                }
+    
+                lastActive = activeLink;
+                }
+            }
+            });
+        }, {
+            rootMargin: "-30% 0px -60% 0px",
+            threshold: 0.1
+        });
+    
+        sections.forEach(section => observer.observe(section));
+        });
+    </script>
+    <script>
     function toggleIntro() {
       const section = document.getElementById("intro");
       section.classList.toggle("expanded");
