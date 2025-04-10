@@ -11,13 +11,15 @@
 <body>
   <canvas id="particles"></canvas>
   <header class="codex-header" id="top">
+    <div class="header-top">
     <h1><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-header"> Patch 2.3 – Session 12</h1>
+    <div class="header-links" style="text-align: center; margin-top: 1rem; margin-bottom: 2rem;">
+      <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;">← Index des patchs</a>
+      <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
+    </div>
+    </div>
     <p class="sous-titre">Publié le 18 Février 2025</p>
   </header>
-  <div style="text-align: center; margin-top: 2rem;">
-    <a href="/notes/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Index des patchs</a>
-    <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
-  </div>
   <main class="accueil">
     <section class="intro">
       
@@ -44,8 +46,6 @@
     <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les Ental entreposés dans le coffre de guilde sont désormais affichés à côté des Ental du groupe.</div></li>
     <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'affichage du bonus à l'initiative de la fiche de personnage a été retiré.</div></li>
   </ul>
-  <div class="back-to-top"><a href="#top">↑ Haut de page</a></div>
-</section>
 
 <section class="patch-section" id="classes">
   <h2 class="patch-titre">
@@ -61,8 +61,6 @@
     <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le bonus de précision de Tir de pistage est désormais automatiquement ajouté aux attaques du compagnon du Vagabond.</div></li>
     </ul>
   </div>
-  <div class="back-to-top"><a href="#top">↑ Haut de page</a></div>
-</section>
 
 <section class="patch-section" id="problemes-resolus">
   <h2 class="patch-titre">
@@ -75,8 +73,6 @@
     <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'aptitude "Charge téméraire" du Lansquenet ne se déclenche plus lorsqu'un allié le cible.</div></li>
     <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'aptitude "Souffle" des Sentinelles ne déclenche plus le dé de dégâts bonus de Poussée Sanguine.</div></li>
   </ul>
-  <div class="back-to-top"><a href="#top">↑ Haut de page</a></div>
-</section>
 
 <section class="patch-section" id="problemes-connus">
   <h2 class="patch-titre">
@@ -88,8 +84,6 @@
     <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Certaines bulles d'informations sont en anglais suite à l'intégration du manuel des joueurs (2024) de D&D au système de jeu. La version FoundryVTT de ce dernier ne dispose pas encore de traduction française.</div></li>
     <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les joueurs ne peuvent pas afficher la description des objets depuis l'écran d'achat d'un marchand.</div></li>
   </ul>
-  <div class="back-to-top"><a href="#top">↑ Haut de page</a></div>
-</section>
 
 <section class="patch-section" id="mj">
   <h2 class="patch-titre">
@@ -100,16 +94,23 @@
     <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le résultat d'un jet de précision (touché/effleurement/raté/critique) est désormais indiqué sous celui-ci, et est pris en compte lors du calcul des dégats.<div class="note-expliquee">Cependant, il n'est pas calculé correctement en cas d'effleurement lors de l'utilisation d'actions affectant plusieurs cibles et doit être calculé manuellement.</div></div></li>
     <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">1 niveau de fatigue est désormais automatiquement appliqué à un personnage tombant inconscient.</div></li>
   </ul>
-  <div class="back-to-top"><a href="#top">↑ Haut de page</a></div>
-</section>
   <div style="text-align: center; margin-top: 2rem;">
     <a href="/notes/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Index des patchs</a>
     <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
   </div>
   </main>
+
+  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut" >↑ Retour en haut</button>
+
   <footer>
-    <p>© 2025 - Jeido, ChatGPT</p>
-  </footer>
+    <p>© 2025 - Wizardofaz, Rashaza, Jeido, ChatGPT - Icons from Final Fantasy XIV Online</p>
+</footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+        document.getElementById('backToTop').classList.toggle('show', window.scrollY > 300);
+    });
+  </script>
   <script src="../particles.js"></script>
 </body>
 </html>

@@ -11,13 +11,15 @@
 <body>
   <canvas id="particles"></canvas>
   <header class="codex-header" id="top">
-    <h1><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-header"> Patch 2.2 – Session 10</h1>
+    <div class="header-top">
+    <h1><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-header"> Patch 2.1 – Session 10</h1>
+    <div class="header-links" style="text-align: center; margin-top: 1rem; margin-bottom: 2rem;">
+      <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;">← Index des patchs</a>
+      <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
+    </div>
+    </div>
     <p class="sous-titre">Publié le 29 Janvier 2025</p>
   </header>
-  <div style="text-align: center; margin-top: 2rem;">
-    <a href="/notes/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Index des patchs</a>
-    <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
-  </div>
   <main class="accueil">
     <section class="intro">
       
@@ -46,8 +48,6 @@
     <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Il est désormais possible de rassembler des piles d'un même objet en une seule pile (Clic droit sur un objet -> Condenser).</div></li>
     <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les lancers de dés sont désormais enregistrés, à des fins statistiques. Ces statistiques sont accessibles dans les contrôles sur la gauche de l'écran, en cliquant sur le bouton en forme de D20, ou sur demande.</div></li>
   </ul>
-  <div class="back-to-top"><a href="#top">↑ Haut de page</a></div>
-</section>
 
 <section class="patch-section" id="classes">
   <h2 class="patch-titre">
@@ -72,8 +72,6 @@
     <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le compagnon du Vagabond est désormais correctement compté lors de l'activation du mode Groupe.</div></li>
     </ul>
   </div>
-  <div class="back-to-top"><a href="#top">↑ Haut de page</a></div>
-</section>
 
 <section class="patch-section" id="problemes-resolus">
   <h2 class="patch-titre">
@@ -89,8 +87,6 @@
     <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les torches ne comptent plus comme une arme pouvant déclencher des attaques d'opportunité.</div></li>
     <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Bien que la plupart des problèmes rencontrés lors de la session précédente aient été corrigés, il reste une possibilité que des problèmes imprévus surviennent, la mise à jour effectuée avant la dernière session étant colossale, il m'est impossible d'effectuer tous les tests nécessaires à un fonctionnement parfait. Je m'excuse donc par avance si nous rencontrons à nouveau des problèmes ce soir.</div></li>
   </ul>
-  <div class="back-to-top"><a href="#top">↑ Haut de page</a></div>
-</section>
 
 <section class="patch-section" id="problemes-connus">
   <h2 class="patch-titre">
@@ -100,16 +96,23 @@
   <ul class="image-list">
     <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Certains consommables affichent [object Object] à la place de leur catégorie.</div></li>
   </ul>
-  <div class="back-to-top"><a href="#top">↑ Haut de page</a></div>
-</section>
   <div style="text-align: center; margin-top: 2rem;">
     <a href="/notes/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Index des patchs</a>
     <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
   </div>
   </main>
+
+  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut" >↑ Retour en haut</button>
+
   <footer>
-    <p>© 2025 - Jeido, ChatGPT</p>
-  </footer>
+    <p>© 2025 - Wizardofaz, Rashaza, Jeido, ChatGPT - Icons from Final Fantasy XIV Online</p>
+</footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+        document.getElementById('backToTop').classList.toggle('show', window.scrollY > 300);
+    });
+  </script>
   <script src="../particles.js"></script>
 </body>
 </html>

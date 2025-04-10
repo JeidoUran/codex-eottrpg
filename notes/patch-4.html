@@ -11,24 +11,16 @@
 <body>
   <canvas id="particles"></canvas>
   <header class="codex-header" id="top">
+    <div class="header-top">
     <h1><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-header"> Patch 1.3 – Session 6</h1>
+    <div class="header-links" style="text-align: center; margin-top: 1rem; margin-bottom: 2rem;">
+      <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;">← Index des patchs</a>
+      <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
+    </div>
+    </div>
     <p class="sous-titre">Publié le 26 Novembre 2024</p>
   </header>
-  <div style="text-align: center; margin-top: 2rem;">
-    <a href="/notes/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Index des patchs</a>
-    <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
-  </div>
   <main class="accueil">
-    <section class="intro">
-      
-<nav class="patch-nav">
-  <ul>
-    <li><a href="#systeme"><span class="rune">✦</span> Système</a></li>
-    <li><a href="#classes"><span class="rune">✦</span> Classes</a></li>
-    <li><a href="#kanka"><span class="rune">✦</span> Kanka</a></li>
-  </ul>
-</nav>
-    </section>
     
 <section class="patch-section" id="systeme">
   <h2 class="patch-titre">
@@ -39,8 +31,6 @@
     <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le temps imparti pour répondre à une réaction a été réduit (30 sec -> 15 sec).</div></li>
     <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Certaines règles de combat ont été modifiées.<div class="note-expliquee">Désormais, lorsqu'un combat en cours est rejoint par des créatures, ces créatures jouent en dernier dans l'ordre d'initiative lors du premier tour, puis peuvent s'intercaler entre les créatures existantes pour les tours suivants.</div></div></li>
   </ul>
-  <div class="back-to-top"><a href="#top">↑ Haut de page</a></div>
-</section>
 
 <section class="patch-section" id="classes">
   <h2 class="patch-titre">
@@ -62,11 +52,9 @@
       Impérial
     </h3>
     <ul class="image-list">
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'aptitude <strong>Garde lourde</strong> inverse désormais correctement la position de l'utilisateur et de la cible.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'aptitude Garde lourde inverse désormais correctement la position de l'utilisateur et de la cible.</div></li>
     </ul>
   </div>
-  <div class="back-to-top"><a href="#top">↑ Haut de page</a></div>
-</section>
 
 <section class="patch-section" id="kanka">
   <h2 class="patch-titre">
@@ -77,16 +65,23 @@
     <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Refonte complète de la page Musique.</div></li>
     <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Des musiques ont été ajoutées.</div></li>
   </ul>
-  <div class="back-to-top"><a href="#top">↑ Haut de page</a></div>
-</section>
   <div style="text-align: center; margin-top: 2rem;">
     <a href="/notes/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Index des patchs</a>
     <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
   </div>
   </main>
+
+  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut" >↑ Retour en haut</button>
+
   <footer>
-    <p>© 2025 - Jeido, ChatGPT</p>
-  </footer>
+    <p>© 2025 - Wizardofaz, Rashaza, Jeido, ChatGPT - Icons from Final Fantasy XIV Online</p>
+</footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+        document.getElementById('backToTop').classList.toggle('show', window.scrollY > 300);
+    });
+  </script>
   <script src="../particles.js"></script>
 </body>
 </html>

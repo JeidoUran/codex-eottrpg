@@ -410,6 +410,7 @@ footer {
 .codex-silver-scroll-header {
     height: 1.2em;
     vertical-align: text-top;
+    margin-top: -0.3rem;
 }
 .codex-silver-scroll-patch {
     height: 1.2em;
@@ -519,4 +520,8 @@ footer {
     text-align: center;
     padding-top: 2rem;
     margin-bottom: -2rem;
+}
+
+.patch-nav a::before {
+    content: none !important; 
 }
