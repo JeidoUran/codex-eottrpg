@@ -400,3 +400,12 @@ footer {
   .carte-lien.large {
     position: relative;
   }
+
+  .codex-silver-scroll-header {
+    height: 1.2em;
+    vertical-align: text-top;
+  }
+  .codex-silver-scroll-patch {
+    height: 1.2em;
+    vertical-align: text-top;
+  }
