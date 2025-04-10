@@ -67,7 +67,7 @@ h1 {
 }
 
 a {
-    color: #88c0a9;
+    color: #dabc16;
     text-decoration: none;
 }
 
@@ -75,6 +75,13 @@ a:hover {
     text-shadow: 0 0 4px #88c0a9;
     text-decoration: none;
 }
+
+a:before {
+    font-family: "Font Awesome 6 Free"; /* Assure-toi que la famille est bien celle-ci */
+    content: "\f0c1"; /* Unicode pour l'icône 'link' */
+    font-weight: 900;
+    transform: translateY(0.1em);
+  }
 
 #particles {
     position: fixed;
