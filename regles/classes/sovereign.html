@@ -133,6 +133,38 @@
         vertical-align: middle;
         margin-bottom: 4px;
     }
+    .toggle-section {
+        display: block;
+        position: relative;
+        justify-content: space-between;
+    }
+    .toggle-button {
+        background: none;
+        border: none;
+        color: #88c0a9;
+        font-size: 1rem;
+        cursor: pointer;
+        font-family: 'Cinzel', serif;
+        margin-left: auto;
+        padding: 0 0.5rem;
+    }
+    
+    .toggle-section h2 {
+        display: flex;
+    }
+
+    .collapsible-content {
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+
+    .collapsed {
+        max-height: 0;
+        padding: 0 !important;
+        margin: 0 !important;
+        opacity: 0;
+        pointer-events: none;
+    }
   </style>
 </head>
 <body>
@@ -202,10 +234,14 @@
     </section>
 
     <section class="patch-section">
-      <h2 class="patch-titre" id="aptitudes">
-        <img src="../../assets/images/notes-big.png" class="image image-h2">
-        Aptitudes de classe
-      </h2>
+        <div class="toggle-section">
+            <h2 class="patch-titre" id="aptitudes">
+              <img src="../../assets/images/notes-big.png" class="image image-h2">
+              Aptitudes de classe
+              <button class="toggle-button" onclick="toggleSection(this)">▼</button>
+            </h2>
+          </div>
+    <div class="collapsible-content">
       <div class="aptitude-search-container">
         <input type="text" id="aptitude-search" placeholder="Rechercher une aptitude..." />
       </div>
@@ -364,6 +400,7 @@
     <p>Après avoir terminé son parcours pour apprendre tous les fardeaux, responsabilités, forces et capacités d'un Souverain, le Souverain est enfin reconnu par la force mystérieuse qui protège sa noble maison, et obtient le droit de conférer la Chevalerie à un individu. En tant qu'action, le Souverain peut désigner une créature amicale et volontaire. Dans le prochain round de combat, cette créature agit en premier (ce qui prend le pas sur les autres effets qui font agir une créature en premier), inflige des dégâts supplémentaires de force égaux à 3d10 + modificateur de Charisme du Souverain (lancé à l'activation par le Souverain) lors de sa première instance de dégâts, est immunisée contre toutes les afflictions, et subit 1d12 + le modificateur de Constitution de cette créature de moins de dégâts lors de la première attaque reçue. Ses PA sont également fixés à 4 au début de son tour. La Chevalerie peut être accordée une fois par repos long.</p>
   </article>
       </div>
+    </div>
     </section>
     <h2 class="patch-titre" id="specialisations">
       <img src="../../assets/images/notes-big.png" class="image image-h2">
@@ -437,7 +474,7 @@
           Ordre de ralliement
           <span><img src="../../assets/images/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
         </h3>
-          <p>Lancez 2 dés d'inspiration du Souverain et consommez-les. Tous les alliés gagnent des points de vie temporaires égaux à la valeur obtenue + le modificateur de Charisme du Souverain au début du round pendant 3 rounds - les points de vie temporaires expirent au début du 4ème round s'ils n'ont pas été épuisés. Tant que les alliés ont des points de vie temporaires de l'Ordre de ralliement, ils peuvent choisir de dissiper ces points de vie temporaires pour relancer un jet d'attaque ou de dégâts et prendre le second résultat. Les cibles doivent être capables d'entendre et conscientes pour bénéficier de l'Ordre de ralliement.</p>
+          <p>Lancez 2 dés d'inspiration du Souverain et consommez-les. Tous les alliés gagnent des points de vie temporaires égaux à la valeur obtenue + le modificateur de Charisme du Souverain au début du round pendant 3 rounds. Les points de vie temporaires expirent au début du 4ème round s'ils n'ont pas été épuisés. Tant que les alliés ont des points de vie temporaires de l'Ordre de ralliement, ils peuvent choisir de dissiper ces points de vie temporaires pour relancer un jet d'attaque ou de dégâts et prendre le second résultat. Les cibles doivent être capables d'entendre et conscientes pour bénéficier de l'Ordre de ralliement.</p>
         </article>
     </div>
   </section>
@@ -552,6 +589,13 @@
       section.classList.toggle("expanded");
       const btn = section.querySelector("button");
       btn.textContent = section.classList.contains("expanded") ? "Réduire" : "Afficher la suite";
+    }
+  </script>
+  <script>
+    function toggleSection(button) {
+      const content = button.closest("section").querySelector(".collapsible-content");
+      content.classList.toggle("collapsed");
+      button.textContent = content.classList.contains("collapsed") ? "▲" : "▼";
     }
   </script>
   <script src="../../particles.js"></script>
