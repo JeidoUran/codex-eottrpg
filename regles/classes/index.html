@@ -6,6 +6,7 @@
   <link rel="icon" href="../../favicon.png" type="image/png">
   <link rel="stylesheet" href="../../style.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     .class-card {
       display: flex;
@@ -33,9 +34,15 @@
     .class-card p {
       margin-left: 1.5rem;
     }
+    #search-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin: 0rem auto 2rem;
+      flex-wrap: wrap;
+    }
     #search-bar {
-      display: block;
-      margin: 1rem auto 2rem;
       padding: 0.5rem 1rem;
       font-size: 1.1rem;
       border-radius: 6px;
@@ -49,19 +56,27 @@
       font-family: 'Cinzel', serif;
       font-weight: bold;
     }
+    .accueil {
+      margin-top: 1rem;
+    }
+    .return-link {
+      display: inline-block;
+      max-width: 300px;
+      white-space: nowrap;
+    }
   </style>
 </head>
 <body>
   <canvas id="particles"></canvas>
   <header class="codex-header">
     <h1>📘 Index des Classes</h1>
-    <p class="sous-titre">Consultez les profils des classes jouables du Codex</p>
+    <p class="sous-titre">Consultez les profils des classes jouables du JDR</p>
   </header>
-  <div style="text-align: center; margin-top: 3rem;">
-    <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
-  </div>
   <main class="accueil">
-    <input type="text" id="search-bar" placeholder="Rechercher une classe...">
+    <div id="search-wrapper">
+      <a href="/" class="carte-lien return-link">← Retour au Codex</a>
+      <input type="text" id="search-bar" placeholder="Rechercher une classe...">
+    </div>
     
 <!-- Les cartes de classes sont déjà bien ordonnées selon l'ordre demandé -->
 

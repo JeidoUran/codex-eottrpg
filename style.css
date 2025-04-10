@@ -162,7 +162,7 @@ a:before {
     display: block;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 8px;
     transition: transform 0.3s ease, background 0.3s ease;
     text-decoration: none;
@@ -367,18 +367,18 @@ footer {
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
-  }
+}
 
-  .note-expliquee {
+.note-expliquee {
     font-size: 0.9rem;
     color: #aac7b5;
     margin-top: 0.25rem;
     opacity: 0.9;
     padding-left: 1.5rem;
     position: relative;
-  }
-  
-  .note-expliquee::before {
+}
+
+.note-expliquee::before {
     content: "";
     position: absolute;
     left: 0;
@@ -388,31 +388,31 @@ footer {
     background-image: url("assets/images/notes-small.png");
     background-size: contain;
     background-repeat: no-repeat;
-  }
+}
 
-  .patch-nouveau {
+.patch-nouveau {
     position: absolute;
     right: 1rem;
     top: 1rem;
     font-size: 1.5rem;
     color: #63b0c4;
     animation: pulse 1.5s infinite ease-in-out;
-  }
-  
-  @keyframes pulse {
+}
+
+@keyframes pulse {
     0%, 100% { transform: scale(1); opacity: 1; }
     50% { transform: scale(1.2); opacity: 0.7; }
-  }
-  
-  .carte-lien.large {
-    position: relative;
-  }
+}
 
-  .codex-silver-scroll-header {
+.carte-lien.large {
+    position: relative;
+}
+
+.codex-silver-scroll-header {
     height: 1.2em;
     vertical-align: text-top;
-  }
-  .codex-silver-scroll-patch {
+}
+.codex-silver-scroll-patch {
     height: 1.2em;
     vertical-align: text-top;
-  }
+}
