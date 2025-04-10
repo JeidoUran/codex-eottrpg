@@ -95,7 +95,7 @@
     <span class="patch-nouveau" hidden><img src="../assets/images/exclam_mark.png" class="image new-patch"></span>
   </a>
   <a href="patch-8.html" class="carte-lien large" data-patch="patch-8.html">
-    <h2><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-patch"> Patch 2.2 – Session 10</h2>
+    <h2><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-patch"> Patch 2.1 – Session 10</h2>
     <p>Publié le 29 Janvier 2025</p>
     <span class="patch-nouveau" hidden><img src="../assets/images/exclam_mark.png" class="image new-patch"></span>
   </a>
@@ -134,45 +134,47 @@
     <p>Publié le 15 Octobre 2024</p>
     <span class="patch-nouveau" hidden><img src="../assets/images/exclam_mark.png" class="image new-patch"></span>
   </a>
+    <div style="text-align: center; margin-top: 3rem;">
+      <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
+    </div>
+  </main>
+  <footer>
+    <p>© 2025 - Jeido, ChatGPT</p>
+  </footer>
+  <script src="../particles.js"></script>
+  <script>
+    const vues = JSON.parse(localStorage.getItem("patchesVus") || "[]");
+    const patches = Array.from(document.querySelectorAll(".carte-lien[data-patch]"));
+    let tousLus = true;
 
-  <div style="text-align: center; margin-top: 3rem;">
-    <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
-  </div>
-</main>
-<footer>
-  <p>© 2025 - Jeido, ChatGPT</p>
-</footer>
-<script src="../particles.js"></script>
-<script>
-  const vues = JSON.parse(localStorage.getItem("patchesVus") || "[]");
-  const patches = Array.from(document.querySelectorAll(".carte-lien[data-patch]"));
-  let tousLus = true;
-
-  patches.forEach(carte => {
-    const patch = carte.getAttribute("data-patch");
-    const badge = carte.querySelector(".patch-nouveau");
-    if (!vues.includes(patch)) {
-      badge.hidden = false;
-      tousLus = false;
-    }
-    carte.addEventListener("click", () => {
+    patches.forEach(carte => {
+      const patch = carte.getAttribute("data-patch");
+      const badge = carte.querySelector(".patch-nouveau");
       if (!vues.includes(patch)) {
-        vues.push(patch);
-        localStorage.setItem("patchesVus", JSON.stringify(vues));
+        badge.hidden = false;
+        tousLus = false;
       }
+      carte.addEventListener("click", () => {
+        if (!vues.includes(patch)) {
+          vues.push(patch);
+          localStorage.setItem("patchesVus", JSON.stringify(vues));
+        }
+      });
     });
-  });
 
-  const boutonLu = document.getElementById("tout-lu");
-  if (tousLus) {
-    boutonLu.style.display = "none";
-  }
-  boutonLu.addEventListener("click", () => {
-    const tous = patches.map(c => c.getAttribute("data-patch"));
-    localStorage.setItem("patchesVus", JSON.stringify(tous));
-    document.querySelectorAll(".patch-nouveau").forEach(badge => badge.hidden = true);
-    boutonLu.style.display = "none";
-  });
-</script>
+    const boutonLu = document.getElementById("tout-lu");
+    const zoneBouton = document.getElementById("zone-bouton-lu");
+
+    if (tousLus) {
+      boutonLu.style.display = "none";
+    }
+
+    boutonLu.addEventListener("click", () => {
+      const tous = patches.map(c => c.getAttribute("data-patch"));
+      localStorage.setItem("patchesVus", JSON.stringify(tous));
+      document.querySelectorAll(".patch-nouveau").forEach(badge => badge.hidden = true);
+      boutonLu.style.display = "none";
+    });
+  </script>
 </body>
 </html>
