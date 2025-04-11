@@ -1,163 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Souverain</title>
-  <meta name="description" content="Un noble serein avec une présence imposante. Les Souverains s'appuient sur leur charisme naturel et leur titre pour inspirer et diriger leurs alliés. Les Souverains considèrent comme leur devoir de commander ceux qui sont sous leur responsabilité ; que cela profite à eux-mêmes ou au Souverain dépend du souverain lui-même. Leur formation aux grâces sociales et à l'art de la guerre leur confère la capacité de penser de manière pratique dans les deux situations, bien que de nombreux Souverains soient naïfs quant aux véritables rouages du monde et s'appuient sur leur pratique et leur apprentissage plutôt que sur l'intuition. De plus, bien qu'ils soient talentueux pour diriger des alliés, ils sont moins capables de faire face aux menaces eux-mêmes.">
-  <link rel="icon" href="../../favicon.png" type="image/png">
-  <link rel="stylesheet" href="../../style.css?v=2">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
-    .patch-list article { max-width: 800px; margin: 1.5rem auto; }
-    .class-nav {
-        position: fixed;
-        top: 50%;
-        left: 1rem;
-        transform: translateY(-50%);
-        background: rgba(0,0,0,0.4);
-        padding: 1rem;
-        border-radius: 12px;
-        font-family: 'Cinzel', serif;
-        font-size: 0.9rem;
-        z-index: 1000;
-        max-height: 90vh;
-        overflow-y: auto;
-        scrollbar-width: thin;
-        scrollbar-color: #88c0a9 transparent;
-    }
-    .class-nav a { display: block; color: #e8ddc5; margin-bottom: 0.5rem;
-      text-decoration: none; transition: color 0.3s; }
-    .class-nav a:hover { color: #57dada; }
-    .class-nav a::before { content: none !important; }
-    .class-nav a.section-link {
-      font-weight: bold; font-size: 1rem; margin-top: 0.8rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 0.3rem;
-    }
-    .class-nav a.active {
-        color: #57dada;
-        font-weight: bold;
-    }
-    .class-nav a.sub-link {
-      font-size: 0.9rem; margin-left: 0.8rem; opacity: 0.85;
-    }
-    .class-nav::-webkit-scrollbar {
-        width: 6px;
-    }
-    .class-nav::-webkit-scrollbar-thumb {
-        background-color: #88c0a9;
-        border-radius: 4px;
-    }
-    .patch-list h3 {
-      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-    }
-    .patch-list h3 img {
-      margin-right: 0.1rem;
-    }
-    .patch-list h3 span {
-      font-weight: normal; font-size: 0.9em; margin-left: auto;
-    }
-    .intro-collapsible.click {
-        position: relative;
-        max-height: 100px;
-        overflow: hidden;
-        padding: 1.5rem;
-        background: rgba(232, 221, 197, 0.04);
-        margin: 2rem auto;
-        max-width: 900px;
-        border-left: 4px solid #88c0a9;
-        border-right: 4px solid #88c0a9;
-        border-radius: 8px;
-        transition: max-height 0.4s ease;
-    }
-
-    .intro-collapsible.click::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0; right: 0;
-        height: 70px;
-        background: linear-gradient(to bottom, rgba(14,14,14,0) 0%, rgba(14,14,14,0.95) 100%);
-        pointer-events: none;
-    }
-
-
-    .intro-collapsible.click.expanded {
-        max-height: 2000px;
-    }
-
-    .intro-collapsible.click.expanded::after {
-        display: none;
-    }
-
-    .toggle-intro {
-        display: block;
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: none;
-        border: none;
-        color: #88c0a9;
-        font-family: 'Cinzel', serif;
-        font-size: 0.95rem;
-        cursor: pointer;
-        text-decoration: underline;
-        z-index: 1;
-        font-weight: bold;
-    }
-    .skill-icon, .class-icon {
-        border-radius: 8px;
-        box-shadow: 0 0 6px rgba(52, 223, 223, 0.418);
-    }
-    .aptitude-search-container {
-        max-width: 800px;
-        margin: 1rem auto;
-        text-align: center;
-    }
-    #aptitude-search {
-        width: 95%;
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-        font-family: 'Cinzel', serif;
-        border-radius: 8px;
-        border: 1px solid #88c0a9;
-        background: rgba(0,0,0,0.3);
-        color: #e8ddc5;
-    }
-    #aptitude-search::placeholder {
-        color: #aaa;
-    }
-    .action-icon {
-        height: 1em;
-        vertical-align: middle;
-        margin-bottom: 4px;
-    }
-    .toggle-section {
-        display: block;
-        position: relative;
-        justify-content: space-between;
-    }
-    .toggle-button {
-        background: none;
-        border: none;
-        color: #88c0a9;
-        font-size: 1rem;
-        cursor: pointer;
-        font-family: 'Cinzel', serif;
-        margin-left: auto;
-        padding: 0 0.5rem;
-    }
-    
-    .toggle-section h2 {
-        display: flex;
-    }
-
-  </style>
-</head>
-<body>
-<canvas id="particles"></canvas>
-  
+   <head>
+      <meta charset="UTF-8">
+      <title>Souverain</title>
+      <meta name="description" content="Un noble serein avec une présence imposante. Les Souverains s'appuient sur leur charisme naturel et leur titre pour inspirer et diriger leurs alliés. Les Souverains considèrent comme leur devoir de commander ceux qui sont sous leur responsabilité ; que cela profite à eux-mêmes ou au Souverain dépend du souverain lui-même. Leur formation aux grâces sociales et à l'art de la guerre leur confère la capacité de penser de manière pratique dans les deux situations, bien que de nombreux Souverains soient naïfs quant aux véritables rouages du monde et s'appuient sur leur pratique et leur apprentissage plutôt que sur l'intuition. De plus, bien qu'ils soient talentueux pour diriger des alliés, ils sont moins capables de faire face aux menaces eux-mêmes.">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="../../favicon.png" type="image/png">
+      <link rel="stylesheet" href="../../style.css?v=2">
+      <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   </head>
+   <body>
+      <canvas id="particles"></canvas>
+      
 <div class="class-nav">
   <a href="#details" class="section-link">Détails</a>
   <a href="#aptitudes" class="section-link">Aptitudes</a>
@@ -193,60 +48,61 @@
   <a href="#boost-de-moral" class="sub-link">Boost de moral</a>
   <a href="#progression-table" class="section-link">Progression par niveau</a>
 </div>
-  <header class="codex-header">
-    <div class="header-top">
-      <h1><img src="../../assets/images/class-icons/sovereign.png" class="image class-icon"> Souverain</h1>
-        <div class="header-links" style="text-align: center; margin-top: 1rem; margin-bottom: 2rem;">
-            <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;">← Index des classes</a>
-            <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
-        </div>
-    </div>
-    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
-    
-      <div class="illustration-wrapper">
-      <img src="../../assets/images/class-art/sovereign1.png" alt="Illustration Souverain" class="illustration-classe">
-  </div>
+      <header class="codex-header">
+         <div class="header-top">
+            <div class="header-links">
+               <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;">← Index des classes</a>
+               <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
+            </div>
+            <h1><img src="../../assets/images/class-icons/sovereign.png" class="image class-icon"> Souverain</h1>
+         </div>
+         <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+            
+            <div class="illustration-wrapper">
+               <img src="../../assets/images/class-art/sovereign1.png" alt="Illustration Souverain" class="illustration-classe">
+            </div>
+            
 
-      <div class="illustration-wrapper">
-      <img src="../../assets/images/class-art/sovereign2.png" alt="Illustration Souverain" class="illustration-classe">
-  </div>
-  </div>
-  </header>
-  <main class="accueil">
-    <section class="intro-collapsible click" id="intro">
-        <p>Un noble serein avec une présence imposante. Les Souverains s'appuient sur leur charisme naturel et leur titre pour inspirer et diriger leurs alliés. Les Souverains considèrent comme leur devoir de commander ceux qui sont sous leur responsabilité ; que cela profite à eux-mêmes ou au Souverain dépend du souverain lui-même. Leur formation aux grâces sociales et à l'art de la guerre leur confère la capacité de penser de manière pratique dans les deux situations, bien que de nombreux Souverains soient naïfs quant aux véritables rouages du monde et s'appuient sur leur pratique et leur apprentissage plutôt que sur l'intuition. De plus, bien qu'ils soient talentueux pour diriger des alliés, ils sont moins capables de faire face aux menaces eux-mêmes.        </p>
-        <button class="toggle-intro" onclick="toggleIntro()">Afficher la suite</button>
-      </section>
-    <section class="patch-section">
-      <h2 class="patch-titre" id="details">
-        <img src="../../assets/images/notes-big.png" class="image image-h2">
-        Détails de la classe
-      </h2>
-      <ul class="image-list">
-        <li><div class="image-texte"><strong><img src="../../assets/images/class-details/health.png" class="image details-icon"> Points de vie :</strong> 1d8 + modificateur de Constitution par niveau</div></li>
+            <div class="illustration-wrapper">
+               <img src="../../assets/images/class-art/sovereign2.png" alt="Illustration Souverain" class="illustration-classe">
+            </div>
+            
+         </div>
+      </header>
+      <main class="accueil">
+         <section class="intro-collapsible click" id="intro">
+            <p>Un noble serein avec une présence imposante. Les Souverains s'appuient sur leur charisme naturel et leur titre pour inspirer et diriger leurs alliés. Les Souverains considèrent comme leur devoir de commander ceux qui sont sous leur responsabilité ; que cela profite à eux-mêmes ou au Souverain dépend du souverain lui-même. Leur formation aux grâces sociales et à l'art de la guerre leur confère la capacité de penser de manière pratique dans les deux situations, bien que de nombreux Souverains soient naïfs quant aux véritables rouages du monde et s'appuient sur leur pratique et leur apprentissage plutôt que sur l'intuition. De plus, bien qu'ils soient talentueux pour diriger des alliés, ils sont moins capables de faire face aux menaces eux-mêmes.        </p>
+            <button class="toggle-intro" onclick="toggleIntro()">Afficher la suite</button>
+         </section>
+         <section class="patch-section">
+            <h2 class="patch-titre" id="details">
+               <img src="../../assets/images/notes-big.png" class="image image-h2">
+               Détails de la classe
+            </h2>
+            <ul class="image-list">
+               <li><div class="image-texte"><strong><img src="../../assets/images/class-details/health.png" class="image details-icon"> Points de vie :</strong> 1d8 + modificateur de Constitution par niveau</div></li>
 <li><div class="image-texte"><strong><img src="../../assets/images/class-details/hit-dice.png" class="image details-icon"> Dés de vie :</strong> 1d8 par niveau de Souverain</div></li>
 <li><div class="image-texte"><strong><img src="../../assets/images/class-details/saving-throw-dc.png" class="image details-icon"> DD des jets de sauvegarde :</strong> 8 + bonus de maîtrise + modificateur de Charisme</div></li>
 <li><div class="image-texte"><strong><img src="../../assets/images/class-details/masteries.png" class="image details-icon"> Maîtrises :</strong> Rapières, Épées, Bâtons, Armes à feu ; Armures moyennes ; Boucliers</div></li>
 <li><div class="image-texte"><strong><img src="../../assets/images/class-details/saving-throw.png" class="image details-icon"> Jets de sauvegarde :</strong> Sagesse, Charisme</div></li>
 <li><div class="image-texte"><strong><img src="../../assets/images/class-details/skills.png" class="image details-icon"> Compétences :</strong> Choisissez 3 parmi Arcanes, Tromperie, Histoire, Intuition, Perception, Investigation, Médecine, Performance, Persuasion, Religion</div></li>
 <li><div class="image-texte"><strong><img src="../../assets/images/class-details/starting-equipment.png" class="image details-icon"> Équipement de départ :</strong> Une arme maîtrisée (ou deux si légères), un sac d'explorateur, un bouclier, un journal et un stylo à encre, une armure moyenne</div></li>
-      </ul>
-    </section>
-
-    <section class="patch-section">
-        <div class="toggle-section">
-            <h2 class="patch-titre" id="aptitudes">
-              <img src="../../assets/images/notes-big.png" class="image image-h2">
-              Aptitudes de classe
-              <button class="toggle-button" onclick="toggleSection(this)">▲</button>
-            </h2>
-          </div>
-    <div class="collapsible-content expanded">
-      <div class="aptitude-search-container">
-        <input type="text" id="aptitude-search" placeholder="Rechercher une aptitude..." />
-      </div>
-      <div class="patch-list">
-        
+            </ul>
+         </section>
+         <section class="patch-section">
+            <div class="toggle-section">
+               <h2 class="patch-titre" id="aptitudes">
+                  <img src="../../assets/images/notes-big.png" class="image image-h2">
+                  Aptitudes de classe
+                  <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+               </h2>
+            </div>
+            <div class="collapsible-content expanded">
+               <div class="aptitude-search-container">
+                  <input type="text" id="aptitude-search" placeholder="Rechercher une aptitude..." />
+               </div>
+               <div class="patch-list">
+                  
   <article id="inspiration-noble">
   <h3>
     <img src="../../assets/images/skills-icons/sovereign/noble-inspiration.png" class="image skill-icon">
@@ -399,14 +255,14 @@
   </h3>
     <p>Après avoir terminé son parcours pour apprendre tous les fardeaux, responsabilités, forces et capacités d'un Souverain, le Souverain est enfin reconnu par la force mystérieuse qui protège sa noble maison, et obtient le droit de conférer la Chevalerie à un individu. En tant qu'action, le Souverain peut désigner une créature amicale et volontaire. Dans le prochain round de combat, cette créature agit en premier (ce qui prend le pas sur les autres effets qui font agir une créature en premier), inflige des dégâts supplémentaires de force égaux à 3d10 + modificateur de Charisme du Souverain (lancé à l'activation par le Souverain) lors de sa première instance de dégâts, est immunisée contre toutes les afflictions, et subit 1d12 + le modificateur de Constitution de cette créature de moins de dégâts lors de la première attaque reçue. Ses PA sont également fixés à 4 au début de son tour. La Chevalerie peut être accordée une fois par repos long.</p>
   </article>
-      </div>
-      </div>
-    </section>
-    <h2 class="patch-titre" id="specialisations">
-      <img src="../../assets/images/notes-big.png" class="image image-h2">
-        Spécialisations
-    </h2>
-    
+               </div>
+            </div>
+         </section>
+         <h2 class="patch-titre" id="specialisations">
+            <img src="../../assets/images/notes-big.png" class="image image-h2">
+            Spécialisations
+         </h2>
+         
   <section class="patch-section">
   <div class="toggle-section">
     <h2 class="patch-titre" id="magierkaiser">
@@ -529,8 +385,7 @@
     </div>
     </div>
   </section>
-
-    <section class="patch-section">
+         <section class="patch-section">
   <h2 class="patch-titre" id="progression">
     <img src="../../assets/images/notes-big.png" class="image image-h2">
     Progression par niveau
@@ -570,116 +425,114 @@
     </table>
   </div>
 </section>
-
-    <div style="text-align: center; margin-top: 2rem;">
-      <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;">← Index des classes</a>
-      <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
-    </div>
-  </main>
-  
-  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut" >↑ Retour en haut</button>
-  <footer>
+         <div style="text-align: center; margin-top: 2rem;">
+            <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;">← Index des classes</a>
+            <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
+         </div>
+      </main>
+      <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut" >↑ Retour en haut</button>
+      <footer>
     <p>© 2025 - Wizardofaz, Rashaza, Jeido, ChatGPT - Icons from Final Fantasy XIV Online</p>
 </footer>
       <script>
-        document.addEventListener("DOMContentLoaded", function () {
-        const navContainer = document.querySelector('.class-nav');
-        const navLinks = document.querySelectorAll('.class-nav a[href^="#"]');
-        const sections = [...document.querySelectorAll("h2.patch-titre, article")];
-
-        let lastActive = null;
-    
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const id = entry.target.getAttribute("id");
-                const activeLink = [...navLinks].find(link => link.getAttribute("href") === `#${id}`);
-    
-                if (activeLink && activeLink !== lastActive) {
-                navLinks.forEach(link => link.classList.remove("active"));
-                activeLink.classList.add("active");
-    
-                // Scroll l'élément actif dans le menu si partiellement masqué
-                const linkTop = activeLink.getBoundingClientRect().top;
-                const navTop = navContainer.getBoundingClientRect().top;
-                const linkBottom = linkTop + activeLink.offsetHeight;
-                const navBottom = navTop + navContainer.offsetHeight;
-    
-                if (linkTop < navTop || linkBottom > navBottom) {
-                    activeLink.scrollIntoView({ behavior: "smooth", block: "center" });
-                }
-    
-                lastActive = activeLink;
-                }
-            }
-            });
-        }, {
-            rootMargin: "-30% 0px -60% 0px",
-            threshold: 0.1
-        });
-    
-        sections.forEach(section => observer.observe(section));
-        });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-        const searchInput = document.getElementById("aptitude-search");
-        const aptitudeArticles = document.querySelectorAll("article");
-      
-        searchInput.addEventListener("input", function () {
-          const value = searchInput.value.toLowerCase();
-      
-          aptitudeArticles.forEach(article => {
-            const title = article.querySelector("h3")?.textContent?.toLowerCase() || "";
-            const content = article.textContent?.toLowerCase() || "";
-      
-            if (title.includes(value) || content.includes(value)) {
-              article.style.display = "";
-            } else {
-              article.style.display = "none";
-            }
-          });
-        });
-      });
+         document.addEventListener("DOMContentLoaded", function () {
+         const navContainer = document.querySelector('.class-nav');
+         const navLinks = document.querySelectorAll('.class-nav a[href^="#"]');
+         const sections = [...document.querySelectorAll("h2.patch-titre, article")];
+         
+         let lastActive = null;
+         
+         const observer = new IntersectionObserver((entries) => {
+             entries.forEach(entry => {
+             if (entry.isIntersecting) {
+                 const id = entry.target.getAttribute("id");
+                 const activeLink = [...navLinks].find(link => link.getAttribute("href") === `#${id}`);
+         
+                 if (activeLink && activeLink !== lastActive) {
+                 navLinks.forEach(link => link.classList.remove("active"));
+                 activeLink.classList.add("active");
+         
+                 // Scroll l'élément actif dans le menu si partiellement masqué
+                 const linkTop = activeLink.getBoundingClientRect().top;
+                 const navTop = navContainer.getBoundingClientRect().top;
+                 const linkBottom = linkTop + activeLink.offsetHeight;
+                 const navBottom = navTop + navContainer.offsetHeight;
+         
+                 if (linkTop < navTop || linkBottom > navBottom) {
+                     activeLink.scrollIntoView({ behavior: "smooth", block: "center" });
+                 }
+         
+                 lastActive = activeLink;
+                 }
+             }
+             });
+         }, {
+             rootMargin: "-30% 0px -60% 0px",
+             threshold: 0.1
+         });
+         
+         sections.forEach(section => observer.observe(section));
+         });
       </script>
-    <script>
-    function toggleIntro() {
-      const section = document.getElementById("intro");
-      section.classList.toggle("expanded");
-      const btn = section.querySelector("button");
-      btn.textContent = section.classList.contains("expanded") ? "Réduire" : "Afficher la suite";
-    }
-  </script>
-  <script>
-    function toggleSection(button) {
-        const content = button.closest("section").querySelector(".collapsible-content");
-        const isOpen = content.classList.contains("expanded");
-
-        if (isOpen) {
-            content.classList.remove("expanded");
-            button.textContent = "▼";
-        } else {
-            content.classList.add("expanded");
-            button.textContent = "▲";
-        }
-    }
-  </script>
-    <script>
-    window.addEventListener('scroll', () => {
-        document.getElementById('backToTop').classList.toggle('show', window.scrollY > 300);
-    });
-  </script>
-  <script>
-    function toggleMobileNav() {
-      document.getElementById("mobileNav").classList.toggle("show");
-    }
-  </script>
-  <script src="../../particles.js"></script>
-  <div class="mobile-nav-toggle" onclick="toggleMobileNav()">☰</div>
-  <div class="mobile-nav-overlay" id="mobileNav">
-  <div class="mobile-nav-content">
-    <span class="mobile-nav-close" onclick="toggleMobileNav()">×</span>
-    <a href="#details" class="section-link" onclick="toggleMobileNav()">Détails</a>
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+         const searchInput = document.getElementById("aptitude-search");
+         const aptitudeArticles = document.querySelectorAll("article");
+         
+         searchInput.addEventListener("input", function () {
+           const value = searchInput.value.toLowerCase();
+         
+           aptitudeArticles.forEach(article => {
+             const title = article.querySelector("h3")?.textContent?.toLowerCase() || "";
+             const content = article.textContent?.toLowerCase() || "";
+         
+             if (title.includes(value) || content.includes(value)) {
+               article.style.display = "";
+             } else {
+               article.style.display = "none";
+             }
+           });
+         });
+         });
+      </script>
+      <script>
+         function toggleIntro() {
+           const section = document.getElementById("intro");
+           section.classList.toggle("expanded");
+           const btn = section.querySelector("button");
+           btn.textContent = section.classList.contains("expanded") ? "Réduire" : "Afficher la suite";
+         }
+      </script>
+      <script>
+         function toggleSection(button) {
+             const content = button.closest("section").querySelector(".collapsible-content");
+             const isOpen = content.classList.contains("expanded");
+         
+             if (isOpen) {
+                 content.classList.remove("expanded");
+                 button.textContent = "▼";
+             } else {
+                 content.classList.add("expanded");
+                 button.textContent = "▲";
+             }
+         }
+      </script>
+      <script>
+         window.addEventListener('scroll', () => {
+             document.getElementById('backToTop').classList.toggle('show', window.scrollY > 300);
+         });
+      </script>
+      <script>
+         function toggleMobileNav() {
+           document.getElementById("mobileNav").classList.toggle("show");
+         }
+      </script>
+      <script src="../../particles.js"></script>
+      <div class="mobile-nav-toggle" onclick="toggleMobileNav()">☰</div>
+      <div class="mobile-nav-overlay" id="mobileNav">
+         <div class="mobile-nav-content">
+            <span class="mobile-nav-close" onclick="toggleMobileNav()">×</span>
+            <a href="#details" class="section-link" onclick="toggleMobileNav()">Détails</a>
 <a href="#aptitudes" class="section-link" onclick="toggleMobileNav()">Aptitudes</a>
 <a href="#inspiration-noble" class="sub-link" onclick="toggleMobileNav()">Inspiration noble</a>
 <a href="#ordre-d-attaque" class="sub-link" onclick="toggleMobileNav()">Ordre d'attaque</a>
@@ -712,8 +565,7 @@
 <a href="#ex-nihilo" class="sub-link" onclick="toggleMobileNav()">Ex Nihilo</a>
 <a href="#boost-de-moral" class="sub-link" onclick="toggleMobileNav()">Boost de moral</a>
 <a href="#progression-table" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a>
-  </div>
-</div>
-
-</body>
+         </div>
+      </div>
+   </body>
 </html>
