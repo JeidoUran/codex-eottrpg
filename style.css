@@ -129,6 +129,10 @@ a:before {
     text-shadow: 0 0 6px #88c0a9;
 }
 
+.nav-magique a::before {
+    content: none !important; 
+} 
+
 .accueil {
     max-width: 800px;
     margin: 2rem auto;
