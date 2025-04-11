@@ -259,6 +259,24 @@ footer {
     margin-top: 2px;
 }
 
+.details-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.details-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.details-list img.image {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
 .patch-titre {
     display: flex;
     align-items: center;
@@ -433,6 +451,11 @@ footer {
     width: 48px;
     height: 48px;
     vertical-align: middle;
+}
+
+.details-icon {
+    vertical-align: top;
+    margin-top: 0.05rem;
 }
 
 #backToTop {
