@@ -576,6 +576,6 @@ footer {
 }
 
 .collapsible-content.expanded {
-    max-height: 2000px; /* assez grand pour couvrir n'importe quelle section */
+    max-height: 20000px; /* assez grand pour couvrir n'importe quelle section */
     opacity: 1;
 }
