@@ -6,7 +6,7 @@
       <meta name="description" content="Un sinistre maître des malédictions enchaîné dans des robes et des chaînes, l’Envoûteur exploite le pouvoir du son pour infliger misère et souffrance sous de nombreuses formes à leurs ennemis. Bien que légèrement blindés, ils excellent dans la défense d'eux-mêmes et de leurs alliés contre les ennemis mortels du Labyrinthe, et avec de l'entraînement, ils peuvent même apprendre à causer des dégâts avec leurs malédictions. Cependant, les malédictions comportent un risque; lorsque leurs malédictions échouent, les Envoûteurs sont laissés grands ouverts aux assauts ennemis à cause de leur fragilité. Par conséquent, les Envoûteurs recherchent des alliés puissants pour éliminer les menaces potentielles avant qu'elles ne puissent les toucher.">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="icon" href="../../favicon.png" type="image/png">
-      <link rel="stylesheet" href="../../style.css?v=2">
+      <link rel="stylesheet" href="../../style.css">
       <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
    </head>
@@ -50,7 +50,7 @@
 </div>
       <header class="codex-header">
          <div class="header-top">
-            <div class="header-links" style="text-align: center; margin-top: 1rem; margin-bottom: 2rem;">
+            <div class="header-links">
                <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;">← Index des classes</a>
                <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">← Retour au Codex</a>
             </div>
@@ -486,15 +486,17 @@
          });
       </script>
       <script>
-         function toggleMobileNav() {
-           document.getElementById("mobileNav").classList.toggle("show");
-         }
+        function toggleMobileNav(btn) {
+          const overlay = document.getElementById("mobileNav");
+          overlay.classList.toggle("show");
+          btn.classList.toggle("open");
+          btn.textContent = overlay.classList.contains("show") ? "✕" : "☰";
+        }
       </script>
       <script src="../../particles.js"></script>
-      <div class="mobile-nav-toggle" onclick="toggleMobileNav()">☰</div>
+      <button class="mobile-nav-toggle" onclick="toggleMobileNav(this)">☰</button>
       <div class="mobile-nav-overlay" id="mobileNav">
          <div class="mobile-nav-content">
-            <span class="mobile-nav-close" onclick="toggleMobileNav()">×</span>
             <a href="#details" class="section-link" onclick="toggleMobileNav()">Détails</a>
 <a href="#aptitudes" class="section-link" onclick="toggleMobileNav()">Aptitudes</a>
 <a href="#maledictions" class="sub-link" onclick="toggleMobileNav()">Malédictions</a>
