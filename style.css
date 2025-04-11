@@ -421,6 +421,7 @@ footer {
     width: 64px;
     height: 64px;
     vertical-align: text-top;
+    margin-top: -0.25rem;
 }
 
 .skill-icon {
