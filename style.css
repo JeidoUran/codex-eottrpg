@@ -189,6 +189,7 @@ a:before {
     height: 3px;
     background: linear-gradient(90deg, transparent, #63b0c4, transparent);
     transition: width 0.3s ease, left 0.3s ease;
+    transform: translateY(-0px);
 }
 .carte-lien:hover::before,
 .carte-lien:hover::after {
