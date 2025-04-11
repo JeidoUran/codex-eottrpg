@@ -626,19 +626,29 @@ footer {
 
 .header-top {
 	display: flex;
-	justify-content: center;
+	justify-content: center; /* centre le h1 */
 	align-items: center;
 	position: relative;
+	padding: 1rem 1rem; /* ajuste la hauteur globale */
 }
 
 .header-top h1 {
 	margin: 0;
 	font-size: 2.5rem;
-	display: inline-flex;
+	display: flex;
 	align-items: center;
 	gap: 0.5rem;
 	margin-bottom: 1rem;
 	margin-top: 0.5rem;
+}
+
+.header-links {
+	position: absolute;
+	right: 1rem;
+	top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+	gap: 1rem;
 }
 
 .header-links a {
@@ -715,6 +725,7 @@ footer {
 }
 
 .mobile-nav-toggle {
+    display: none;
 	position: fixed;
 	top: 1rem;
 	left: 1rem;
@@ -995,23 +1006,18 @@ footer {
 	}
 
 	.header-top {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 1rem;
-		padding: 1rem 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        padding-top: 4rem;
 	}
 
 	.header-links {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		width: 100%;
-		align-items: center;
-        margin-top: 0;
-        margin-bottom: 1.5rem;
-        text-align: center;
         position: static;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
 	}
 
 	.header-top h1 {
