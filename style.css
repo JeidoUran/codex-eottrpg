@@ -607,3 +607,60 @@ footer {
     max-height: 20000px; /* assez grand pour couvrir n'importe quelle section */
     opacity: 1;
 }
+
+.mobile-nav-toggle {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    font-size: 1.5rem;
+    background: rgba(0,0,0,0.5);
+    color: #e8ddc5;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    z-index: 2000;
+    font-family: 'Cinzel', serif;
+    cursor: pointer;
+  }
+  .mobile-nav-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.95);
+    z-index: 1999;
+    display: none;
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .mobile-nav-overlay.show {
+    display: flex;
+  }
+  .mobile-nav-content a {
+    font-family: 'Cinzel', serif;
+    color: #e8ddc5;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    display: block;
+  }
+  .mobile-nav-content a:hover {
+    color: #57dada;
+  }
+  .mobile-nav-close {
+    align-self: flex-end;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .class-nav {
+      display: none;
+    }
+    .mobile-nav-toggle {
+      display: block;
+    }
+  }
+  
+  
