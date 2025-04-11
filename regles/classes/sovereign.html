@@ -578,42 +578,6 @@
   </main>
   
   <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut" >↑ Retour en haut</button>
-  <button class="mobile-nav-toggle" onclick="toggleMobileNav()">Navigation</button>
-  <div class="mobile-nav-overlay" id="mobileNavOverlay">
-    <a href="#details" class="section-link" onclick="toggleMobileNav()">Détails</a>
-<a href="#aptitudes" class="section-link" onclick="toggleMobileNav()">Aptitudes</a>
-<a href="#inspiration-noble" class="sub-link" onclick="toggleMobileNav()">Inspiration noble</a>
-<a href="#ordre-d-attaque" class="sub-link" onclick="toggleMobileNav()">Ordre d'attaque</a>
-<a href="#ordre-de-garde" class="sub-link" onclick="toggleMobileNav()">Ordre de garde</a>
-<a href="#voile-royal" class="sub-link" onclick="toggleMobileNav()">Voile royal</a>
-<a href="#titre-noble" class="sub-link" onclick="toggleMobileNav()">Titre noble</a>
-<a href="#negociation" class="sub-link" onclick="toggleMobileNav()">Négociation</a>
-<a href="#escrime-de-cour" class="sub-link" onclick="toggleMobileNav()">Escrime de cour</a>
-<a href="#ordre-de-liaison-i" class="sub-link" onclick="toggleMobileNav()">Ordre de liaison I</a>
-<a href="#renforcement" class="sub-link" onclick="toggleMobileNav()">Renforcement</a>
-<a href="#lignee-royale" class="sub-link" onclick="toggleMobileNav()">Lignée royale</a>
-<a href="#maitrise-des-ordres" class="sub-link" onclick="toggleMobileNav()">Maîtrise des ordres</a>
-<a href="#marche-monarchique" class="sub-link" onclick="toggleMobileNav()">Marche monarchique</a>
-<a href="#autorisation" class="sub-link" onclick="toggleMobileNav()">Autorisation</a>
-<a href="#a-l-unisson" class="sub-link" onclick="toggleMobileNav()">À l'unisson !</a>
-<a href="#marque-noble" class="sub-link" onclick="toggleMobileNav()">Marque noble</a>
-<a href="#decret-final" class="sub-link" onclick="toggleMobileNav()">Décret final</a>
-<a href="#chevalerie" class="sub-link" onclick="toggleMobileNav()">Chevalerie</a>
-<a href="#specialisations" class="section-link" onclick="toggleMobileNav()">Spécialisations</a>
-<a href="#magierkaiser" class="section-link" onclick="toggleMobileNav()">Magierkaiser</a>
-<a href="#armes-de-feu-gel-foudre" class="sub-link" onclick="toggleMobileNav()">Armes de feu/gel/foudre</a>
-<a href="#ordre-de-liaison-ii" class="sub-link" onclick="toggleMobileNav()">Ordre de liaison II</a>
-<a href="#eclat-royal" class="sub-link" onclick="toggleMobileNav()">Éclat royal</a>
-<a href="#arztkaiser" class="section-link" onclick="toggleMobileNav()">Arztkaiser</a>
-<a href="#ordre-de-protection" class="sub-link" onclick="toggleMobileNav()">Ordre de protection</a>
-<a href="#ordre-de-prevention" class="sub-link" onclick="toggleMobileNav()">Ordre de prévention</a>
-<a href="#ordre-de-ralliement" class="sub-link" onclick="toggleMobileNav()">Ordre de ralliement</a>
-<a href="#starkekaiser" class="section-link" onclick="toggleMobileNav()">Starkekaiser</a>
-<a href="#ordres-feroces" class="sub-link" onclick="toggleMobileNav()">Ordres féroces</a>
-<a href="#ex-nihilo" class="sub-link" onclick="toggleMobileNav()">Ex Nihilo</a>
-<a href="#boost-de-moral" class="sub-link" onclick="toggleMobileNav()">Boost de moral</a>
-<a href="#progression-table" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a>
-  </div>
   <footer>
     <p>© 2025 - Wizardofaz, Rashaza, Jeido, ChatGPT - Icons from Final Fantasy XIV Online</p>
 </footer>
@@ -707,10 +671,17 @@
   </script>
   <script>
     function toggleMobileNav() {
-      const overlay = document.getElementById("mobileNavOverlay");
-      overlay.classList.toggle("active");
+      document.getElementById("mobileNav").classList.toggle("show");
     }
   </script>
   <script src="../../particles.js"></script>
+  <div class="mobile-nav-toggle" onclick="toggleMobileNav()">☰</div>
+  <div class="mobile-nav-overlay" id="mobileNav">
+  <div class="mobile-nav-content">
+    <span class="mobile-nav-close" onclick="toggleMobileNav()">×</span>
+    <a href="#details" class="section-link" onclick="toggleMobileNav()">Détails</a><a href="#aptitudes" class="section-link" onclick="toggleMobileNav()">Aptitudes</a><a href="#inspiration-noble" class="sub-link" onclick="toggleMobileNav()">Inspiration noble</a><a href="#ordre-d-attaque" class="sub-link" onclick="toggleMobileNav()">Ordre d'attaque</a><a href="#ordre-de-garde" class="sub-link" onclick="toggleMobileNav()">Ordre de garde</a><a href="#voile-royal" class="sub-link" onclick="toggleMobileNav()">Voile royal</a><a href="#titre-noble" class="sub-link" onclick="toggleMobileNav()">Titre noble</a><a href="#negociation" class="sub-link" onclick="toggleMobileNav()">Négociation</a><a href="#escrime-de-cour" class="sub-link" onclick="toggleMobileNav()">Escrime de cour</a><a href="#ordre-de-liaison-i" class="sub-link" onclick="toggleMobileNav()">Ordre de liaison I</a><a href="#renforcement" class="sub-link" onclick="toggleMobileNav()">Renforcement</a><a href="#lignee-royale" class="sub-link" onclick="toggleMobileNav()">Lignée royale</a><a href="#maitrise-des-ordres" class="sub-link" onclick="toggleMobileNav()">Maîtrise des ordres</a><a href="#marche-monarchique" class="sub-link" onclick="toggleMobileNav()">Marche monarchique</a><a href="#autorisation" class="sub-link" onclick="toggleMobileNav()">Autorisation</a><a href="#a-l-unisson" class="sub-link" onclick="toggleMobileNav()">À l'unisson !</a><a href="#marque-noble" class="sub-link" onclick="toggleMobileNav()">Marque noble</a><a href="#decret-final" class="sub-link" onclick="toggleMobileNav()">Décret final</a><a href="#chevalerie" class="sub-link" onclick="toggleMobileNav()">Chevalerie</a><a href="#specialisations" class="section-link" onclick="toggleMobileNav()">Spécialisations</a><a href="#magierkaiser" class="section-link" onclick="toggleMobileNav()">Magierkaiser</a><a href="#armes-de-feu-gel-foudre" class="sub-link" onclick="toggleMobileNav()">Armes de feu/gel/foudre</a><a href="#ordre-de-liaison-ii" class="sub-link" onclick="toggleMobileNav()">Ordre de liaison II</a><a href="#eclat-royal" class="sub-link" onclick="toggleMobileNav()">Éclat royal</a><a href="#arztkaiser" class="section-link" onclick="toggleMobileNav()">Arztkaiser</a><a href="#ordre-de-protection" class="sub-link" onclick="toggleMobileNav()">Ordre de protection</a><a href="#ordre-de-prevention" class="sub-link" onclick="toggleMobileNav()">Ordre de prévention</a><a href="#ordre-de-ralliement" class="sub-link" onclick="toggleMobileNav()">Ordre de ralliement</a><a href="#starkekaiser" class="section-link" onclick="toggleMobileNav()">Starkekaiser</a><a href="#ordres-feroces" class="sub-link" onclick="toggleMobileNav()">Ordres féroces</a><a href="#ex-nihilo" class="sub-link" onclick="toggleMobileNav()">Ex Nihilo</a><a href="#boost-de-moral" class="sub-link" onclick="toggleMobileNav()">Boost de moral</a><a href="#progression-table" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a>
+  </div>
+</div>
+
 </body>
 </html>
