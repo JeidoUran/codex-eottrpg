@@ -153,22 +153,10 @@
         display: flex;
     }
 
-    .collapsible-content {
-        overflow: hidden;
-        transition: max-height 0.4s ease;
-    }
-
-    .collapsed {
-        max-height: 0;
-        padding: 0 !important;
-        margin: 0 !important;
-        opacity: 0;
-        pointer-events: none;
-    }
   </style>
 </head>
 <body>
-  <canvas id="particles"></canvas>
+<canvas id="particles"></canvas>
   
 <div class="class-nav">
   <a href="#details" class="section-link">Détails</a>
@@ -214,9 +202,15 @@
         </div>
     </div>
     <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
-      <img src="../../assets/images/class-art/sovereign1.png" alt="Illustration Souverain" style="max-width: 300px; border-radius: 8px; box-shadow: 0 0 10px rgba(136,192,169,0.2);">
-      <img src="../../assets/images/class-art/sovereign2.png" alt="Illustration Souverain" style="max-width: 300px; border-radius: 8px; box-shadow: 0 0 10px rgba(136,192,169,0.2);">
-    </div>
+    
+      <div class="illustration-wrapper">
+      <img src="../../assets/images/class-art/sovereign1.png" alt="Illustration Souverain" class="illustration-classe">
+  </div>
+
+      <div class="illustration-wrapper">
+      <img src="../../assets/images/class-art/sovereign2.png" alt="Illustration Souverain" class="illustration-classe">
+  </div>
+  </div>
   </header>
   <main class="accueil">
     <section class="intro-collapsible click" id="intro">
@@ -244,10 +238,10 @@
             <h2 class="patch-titre" id="aptitudes">
               <img src="../../assets/images/notes-big.png" class="image image-h2">
               Aptitudes de classe
-              <button class="toggle-button" onclick="toggleSection(this)">▼</button>
+              <button class="toggle-button" onclick="toggleSection(this)">▲</button>
             </h2>
           </div>
-    <div class="collapsible-content">
+    <div class="collapsible-content expanded">
       <div class="aptitude-search-container">
         <input type="text" id="aptitude-search" placeholder="Rechercher une aptitude..." />
       </div>
@@ -418,10 +412,10 @@
     <h2 class="patch-titre" id="magierkaiser">
       <img src="../../assets/images/subclass-icons/magierkaiser.png" class="image class-icon">
       Magierkaiser
-      <button class="toggle-button" onclick="toggleSection(this)">▼</button>
+      <button class="toggle-button" onclick="toggleSection(this)">▲</button>
     </h2>
     </div>
-    <div class="collapsible-content">
+    <div class="collapsible-content expanded">
     <div class="patch-list">
       
         <article id="armes-de-feu-gel-foudre">
@@ -459,10 +453,10 @@
     <h2 class="patch-titre" id="arztkaiser">
       <img src="../../assets/images/subclass-icons/arztkaiser.png" class="image class-icon">
       Arztkaiser
-      <button class="toggle-button" onclick="toggleSection(this)">▼</button>
+      <button class="toggle-button" onclick="toggleSection(this)">▲</button>
     </h2>
     </div>
-    <div class="collapsible-content">
+    <div class="collapsible-content expanded">
     <div class="patch-list">
       
         <article id="ordre-de-protection">
@@ -500,10 +494,10 @@
     <h2 class="patch-titre" id="starkekaiser">
       <img src="../../assets/images/subclass-icons/starkekaiser.png" class="image class-icon">
       Starkekaiser
-      <button class="toggle-button" onclick="toggleSection(this)">▼</button>
+      <button class="toggle-button" onclick="toggleSection(this)">▲</button>
     </h2>
     </div>
-    <div class="collapsible-content">
+    <div class="collapsible-content expanded">
     <div class="patch-list">
       
         <article id="ordres-feroces">
@@ -659,9 +653,16 @@
   </script>
   <script>
     function toggleSection(button) {
-      const content = button.closest("section").querySelector(".collapsible-content");
-      content.classList.toggle("collapsed");
-      button.textContent = content.classList.contains("collapsed") ? "▲" : "▼";
+        const content = button.closest("section").querySelector(".collapsible-content");
+        const isOpen = content.classList.contains("expanded");
+
+        if (isOpen) {
+            content.classList.remove("expanded");
+            button.textContent = "▼";
+        } else {
+            content.classList.add("expanded");
+            button.textContent = "▲";
+        }
     }
   </script>
     <script>
