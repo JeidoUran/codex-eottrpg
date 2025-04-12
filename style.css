@@ -175,6 +175,14 @@ a:before {
 	position: relative;
 }
 
+.accueil-music {
+	max-width: 900px;
+	margin: 2rem auto;
+	padding: 1rem;
+	z-index: 2;
+	position: relative;
+}
+
 .intro {
 	background: rgba(255, 255, 255, 0.02);
 	padding: 1rem;
@@ -1145,7 +1153,7 @@ footer {
     color: #aac7b5;
     min-width: 40px;
     text-align: left;
-    position:absolute;
+    position: absolute;
   }
 
   #totalTimeDisplay {
@@ -1194,8 +1202,14 @@ footer {
     padding: 0;
     margin: 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.4s ease;
   }
-  
+
+  #playlist.visible {
+    opacity: 1;
+  }  
+
   #playlist li {
     display: flex;
     align-items: center;
@@ -1210,7 +1224,6 @@ footer {
     background: rgba(136, 192, 169, 0.15);
     box-shadow: 0 0 10px #63b0c4;
     text-shadow: 0 0 6px #63b0c4;
-    border-left: 4px solid #63b0c4;
   }  
 
   .playlist-cover {
@@ -1226,6 +1239,7 @@ footer {
     flex-direction: column;
     color: #e8ddc5;
     font-family: 'Cinzel', serif;
+    text-align: left;
   }
 
   .playlist-info span {
@@ -1259,7 +1273,7 @@ footer {
   }
   
   #volumeSlider {
-    width: 10%;
+    width: 15%;
     height: 6px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
@@ -1304,6 +1318,9 @@ footer {
   
   .controls button:hover {
     transform: scale(1.2);
+    border-color: rgba(136, 192, 169, 0.5);
+    color: #88c0a9;
+    text-shadow: 0 0 10px rgba(99, 176, 196, 0.25);
   }
   
   .music-player {
@@ -1314,7 +1331,114 @@ footer {
 	margin-bottom: 2rem;
 	text-align: center;
 	/* centrage du texte */
-	max-width: 700px;
+	max-width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.playlist-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 0.95rem;
+    flex-wrap: wrap;
+  }
+  
+  .tab-button {
+    font-family: 'Cinzel', serif;
+    font-size: 0.95rem;
+    padding: 0.5rem 1.2rem;
+    color: #e8ddc5;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 4px rgba(136, 192, 169, 0.25);
+  }
+  
+  .tab-button:hover {
+    background-color: rgba(136, 192, 169, 0.08);
+    box-shadow: 0 0 6px rgba(136, 192, 169, 0.15);
+    text-shadow: 0 0 6px rgba(136, 192, 169, 0.3);
+  }
+  
+  .tab-button.active {
+    background-color: rgba(136, 192, 169, 0.15);
+    border-color: rgba(136, 192, 169, 0.5);
+    color: #88c0a9;
+    box-shadow: 0 0 10px rgba(99, 176, 196, 0.25);
+  }
+  
+  .volume-container span {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #aac7b5;
+    text-align: right;
+    font-weight: normal;
+	font-size: 0.9em;
+	margin-left: auto;
+    
+  }
+
+  .playlist-tabs-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  
+
+  .playlist-tabs-container {
+    overflow-x: auto;
+    flex: 1;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .playlist-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    width: max-content;
+  }
+  
+  
+  
+  .playlist-tabs::-webkit-scrollbar {
+    display: none; /* cache la scrollbar pour un look clean */
+  }
+  
+.scroll-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.4rem; /* même hauteur que les tab-buttons */
+  width: 2.4rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e8ddc5;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 4px rgba(136, 192, 169, 0.25);
+}
+
+.scroll-btn:hover {
+  background-color: rgba(136, 192, 169, 0.08);
+  box-shadow: 0 0 6px rgba(136, 192, 169, 0.15);
+  text-shadow: 0 0 6px rgba(136, 192, 169, 0.3);
+  transform: scale(1.05);
+}
+
+.scroll-btn:active {
+  transform: scale(0.95);
+  box-shadow: inset 0 0 6px rgba(136, 192, 169, 0.3);
 }
