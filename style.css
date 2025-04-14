@@ -51,6 +51,11 @@ h1 {
 	margin-bottom: 0.5rem;
 }
 
+main.accueil {
+	position: relative;
+	z-index: 1;
+  }  
+
 .patch-list h3 {
 	display: flex;
 	align-items: center;
@@ -679,26 +684,46 @@ footer {
 }
 
 .table-container {
-	max-width: 1000px;
-	margin: 2rem auto;
+	width: 60vw;
+	max-width: none;
 	overflow-x: auto;
-}
-
-.table-container table {
+	margin-left: 50%;
+	transform: translateX(-50%);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 0.75rem;
+	margin-top: 2rem;
+	box-shadow: 0 0 15px rgba(173, 216, 230, 0.15); /* léger halo */
+	background: radial-gradient(circle at center, rgba(255, 255, 255, 0.01), transparent);
+  }
+  
+  .progression-table {
 	width: 100%;
 	border-collapse: collapse;
 	font-family: 'Cinzel', serif;
-	color: #e8ddc5;
-	background: rgba(0, 0, 0, 0.2);
-	border: 1px solid #88c0a9;
-}
-
-.table-container th,
-.table-container td {
-	border: 1px solid rgba(136, 192, 169, 0.4);
-	padding: 0.6rem;
+	color: #d8e9f0;
+	background-color: rgba(0, 0, 0, 0.25);
+  }
+  
+  .progression-table th,
+  .progression-table td {
 	text-align: center;
-}
+	padding: 0.75rem 1.25rem;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	backdrop-filter: blur(2px);
+	transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .progression-table th {
+	background: rgba(255, 255, 255, 0.05);
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #ffdca9;
+  }
+  
+  .progression-table tbody tr:hover {
+	background-color: rgba(255, 255, 255, 0.05);
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  }
 
 .table-container thead {
 	background-color: rgba(136, 192, 169, 0.15);
