@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Codex - Etrian Odyssey TTRPG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
+  </head>
+<body>
+  <canvas id="particles"></canvas>
+
+  <header class="codex-header">
+    <div class="header-top">
+      <h1><i class="fas fa-scroll"></i> Crédits du Codex</h1>
+      <div class="header-links">
+        <a href="/" class="carte-lien">← Retour au Codex</a>
+      </div>
+    </div>
+    <p class="sous-titre">Sources, outils, et remerciements</p>
+  </header>
+  <main class="accueil">
+    <div class="patch-list">
+    <article>
+      <h2><i class="fa-solid fa-gamepad"></i> Jeu</h2>
+      <ul>
+        <li>Donjons et Dragons 5ème édition par Wizards of the Coast.</li>
+        <li>Création des règles et classes par Wizardofaz.</li>
+        <li>Traduction des règles, classes et ajout de règles additionelles par Rashaza et Jeido.</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2><i class="fa-solid fa-palette"></i> Illustrations et Visuels</h2>
+      <ul>
+        <li>Illustrations officielles d'<strong>Etrian Odyssey</strong> © ATLUS. © SEGA.</li>
+        <li>De nombreuses icônes issues de <strong>Final Fantasy XIV Online</strong> © SQUARE ENIX.</li>
+        <li>Des glyphes issus de <strong><a href="https://fontawesome.com/" target="_blank">Font Awesome</a></strong>.</li>
+        <li>Carte du monde dessinnée avec <strong><a href="https://inkarnate.com/" target="_blank">Inkarnate</a></strong>.</li>
+        <li>Divers assets issus de <strong>RPG Maker</strong> et certains de ses DLCs.</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2><i class="fa-solid fa-music"></i> Musiques utilisées</h2>
+      <ul>
+        <li>OST officielles composées par <strong>Yuzo Koshiro</strong>.</li>
+        <li>Arrangements complémentaires par <strong>Noriyuki Kamikura</strong>.</li>
+        <li>Hébergées via S3 pour usage personnel de la campagne.</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2><i class="fa-solid fa-toolbox"></i> Outils</h2>
+      <ul>
+        <li><strong>Foundry VTT</strong> – pour sa flexibilité et son interface soignée.</li>
+        <li><strong>Node.js</strong> + <code>Marked</code> – conversion des fiches de classe et patch notes du format Markdown vers l'HTML.</li>
+        <li><strong>JSMediaTags</strong> – lecture des couvertures, noms et compositeurs des musiques du lecteur.</li>
+        <li><strong>Visual Studio Code</strong> – la forge du Codex.</li>
+        <li><strong>ChatGPT</strong> – le scribe spectral (coucou 👋).</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2><i class="fas fa-scroll"></i> Typographie et Style</h2>
+      <ul>
+        <li><strong>Cinzel</strong> (Google Fonts) – le charme des grimoires anciens.</li>
+        <li>Interface inspirée d'<em>Etrian Odyssey III</em>.</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2><i class="fa-solid fa-heart"></i> Remerciements</h2>
+      <ul>
+        <li>À nos fantastiques joueurs :</li>
+        <ul>
+          <li>Tailos</li>
+          <li>Flo</li>
+          <li>Greg</li>
+          <li>Edenai</li>
+          <li>Strico</li>
+          <!-- etc. -->
+        </ul>
+        <li>À Rashaza, pour son accompagnement précieux en tant que co-MJ (et pour me supporter !).</li>
+        <li>À Wizardofaz, grâce à qui ce projet a pu démarrer.</li>
+        <li>À la communauté de <strong>Foundry VTT</strong> pour son soutien sans faille et ses ressources.</li>
+        <li>À celles et ceux qui ont nourri ce monde d’idées, de près ou de loin.</li>
+      </ul>
+    </article>
+
+    <div class="easter-egg">
+      <div class="rune" id="rune">ᚠ</div>
+      <p id="secretMessage" style="display:none;"><img src="../assets/images/secret/ultra-ratjam.gif"></p>
+    </article>
+  </main>
+</div>
+  <footer>
+    <p>© 2025 – Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+  </footer>
+
+  <script src="../particles.js"></script>
+  <script>
+    document.getElementById('rune').addEventListener('click', () => {
+      const msg = document.getElementById('secretMessage');
+      msg.style.display = msg.style.display === 'block' ? 'none' : 'block';
+    });
+  </script>
+</body>
+</html>

@@ -1442,3 +1442,7 @@ footer {
   transform: scale(0.95);
   box-shadow: inset 0 0 6px rgba(136, 192, 169, 0.3);
 }
+
+.fa-gamepad {
+	vertical-align: middle;
+  }
