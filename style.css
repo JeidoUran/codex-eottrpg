@@ -173,11 +173,12 @@ a:before {
 }
 
 .accueil {
-	max-width: 800px;
+	max-width: 825px;
 	margin: 2rem auto;
 	padding: 1rem;
 	z-index: 2;
 	position: relative;
+	margin-top: 1rem;
 }
 
 .accueil-music {
@@ -279,6 +280,14 @@ footer {
 	display: block;
 	width: 100%;
 	max-width: 900px;
+	margin: 1rem auto;
+	position: relative;
+}
+
+.carte-lien.large.patch {
+	display: block;
+	width: 100%;
+	max-width: 680px;
 	margin: 1rem auto;
 	position: relative;
 }
@@ -1538,7 +1547,7 @@ footer {
   }
   .class-card h2 {
 	width: 200px;
-	min-width: 200px;
+	min-width: 225px;
   }
   .class-card p {
 	margin-left: 1.5rem;
@@ -1566,9 +1575,7 @@ footer {
   #search-bar::placeholder {
 	font-family: 'Cinzel', serif;
   }
-  .accueil {
-	margin-top: 1rem;
-  }
+
   .return-link {
 	display: inline-block;
 	max-width: 300px;
