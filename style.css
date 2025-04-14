@@ -206,14 +206,16 @@ a:before {
 .carte-lien {
 	position: relative;
 	display: block;
-	background: rgba(255, 255, 255, 0.04);
-	border: 1px solid rgba(255, 255, 255, 0.08);
-	padding: 0.5rem;
-	border-radius: 8px;
-	transition: transform 0.3s ease, background 0.3s ease;
 	text-decoration: none;
 	color: inherit;
 	overflow: hidden;
+	max-width: none;
+	width: max-content;
+	background: rgba(20, 20, 30, 0.9);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	border-radius: 8px;
+	padding: 0.5rem 1rem;
+	transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .carte-lien::after {
@@ -247,7 +249,7 @@ a:before {
 
 .carte-lien:hover {
 	transform: scale(1.03);
-	background: rgba(136, 192, 169, 0.05);
+	background: rgba(40, 40, 60, 0.95);
 	box-shadow: 0 0 12px rgba(136, 192, 169, 0.1);
 }
 
@@ -579,24 +581,27 @@ footer {
 #backToTop {
 	display: none;
 	position: fixed;
-	bottom: 1.5rem;
-	right: 1.5rem;
-	background: rgba(255, 255, 255, 0.04);
+	bottom: 3.5rem;
+	right: 1rem;
 	text-decoration: none;
-	color: inherit;
+	color: #88c0a9;
 	overflow: hidden;
-	border: 1px solid rgba(255, 255, 255, 0.08);
-	border-radius: 8px;
-	padding: 1rem;
-	transition: transform 0.3s ease, background 0.3s ease;
 	font-family: 'Cinzel', serif;
-	font-size: 0.9rem;
+	font-size: 18px;
+	background: rgba(20, 20, 30, 0.9);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	border-radius: 8px;
+	padding: 0.5rem 1rem;
+	transition: transform 0.3s ease, background 0.3s ease;
+	min-width: 221.917px; /* ajustable pour matcher la largeur du bouton Codex */
 }
 
 #backToTop:hover {
 	transform: scale(1.03);
-	background: rgba(136, 192, 169, 0.05);
+	background: rgba(40, 40, 60, 0.95);
 	box-shadow: 0 0 12px rgba(136, 192, 169, 0.1);
+	text-shadow: 0 0 4px #8bd1e3;
+    text-decoration: none;
 	cursor: pointer;
 }
 
@@ -663,8 +668,7 @@ footer {
 
 .header-links a {
 	font-family: 'Cinzel', serif;
-	font-size: 0.95rem;
-	color: #e8ddc5;
+	color: #88c0a9;
 	text-decoration: none;
 }
 
@@ -1020,14 +1024,6 @@ footer {
         align-items: center;
         gap: 0.5rem;
         padding-top: 4rem;
-	}
-
-	.header-links {
-        position: static;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-        margin-top: 0.5rem;
 	}
 
 	.header-top h1 {
@@ -1445,4 +1441,30 @@ footer {
 
 .fa-gamepad {
 	vertical-align: middle;
+  }
+
+  .fixed-header-links {
+	position: fixed;
+	right: 1rem;
+	top: 3.5rem; /* ← à ajuster au pixel près */
+	z-index: 1000;
+	display: flex;
+	gap: 1rem;
+  }
+  
+  
+  .fixed-header-links .carte-lien {
+	max-width: none;
+	width: max-content;
+	background: rgba(20, 20, 30, 0.9);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	border-radius: 8px;
+	padding: 0.5rem 1rem;
+	transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .fixed-header-links .carte-lien:hover {
+	transform: scale(1.03);
+	background: rgba(40, 40, 60, 0.95);
+	box-shadow: 0 0 12px rgba(136, 192, 169, 0.1);
   }
