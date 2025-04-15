@@ -3,10 +3,11 @@ html {
 }
 
 body {
-	font-family: 'Cinzel', serif;
+	font-family: 'Sorts Mill Goudy', serif;
 	background: #0e1a23;
 	color: #e8ddc5;
-	font-size: 18px;
+	font-weight: 400;
+	font-size: 20px;
 	line-height: 1.6;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -39,12 +40,17 @@ body::after {
 	}
 }
 
-header {
-	text-align: center;
-	padding: 3rem 1rem;
-	color: #88c0a9;
-	text-shadow: 0 0 10px rgba(136, 192, 169, 0.4);
+h1, h2, h3, h4, h5, h6,
+.patch-titre,
+.classe-nom,
+.codex-header h1,
+.nav-magique a,
+.button, .btn-lu,
+.fixed-header-links,
+#backToTop {
+  font-family: 'Cinzel', serif;
 }
+
 
 h1 {
 	font-size: 3rem;
@@ -507,12 +513,13 @@ footer {
 }
 
 .note-expliquee {
-	font-size: 0.9rem;
+	font-size: 1rem;
 	color: #aac7b5;
 	margin-top: 0.25rem;
 	opacity: 0.9;
 	padding-left: 1.5rem;
 	position: relative;
+	font-style: italic;
 }
 
 .note-expliquee::before {
@@ -657,7 +664,7 @@ footer {
 	justify-content: center; /* centre le h1 */
 	align-items: center;
 	position: relative;
-	padding: 1rem 1rem; /* ajuste la hauteur globale */
+	padding: 1rem 1rem 0.5rem; /* ajuste la hauteur globale */
 }
 
 .header-top h1 {
@@ -1496,6 +1503,7 @@ footer {
   }
 
   .fixed-header-links {
+	font-size: 18px;
 	position: fixed;
 	right: 1rem;
 	top: 3.5rem; /* ← à ajuster au pixel près */
