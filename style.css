@@ -1,9 +1,24 @@
+@font-face {
+	font-family: 'Cinzel-Regular';
+	src: url('assets/fonts/Cinzel-Regular.otf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+  @font-face {
+	font-family: 'GoudyStM';
+	src: url('assets/fonts/GoudyStM.otf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+
 html {
 	font-size: 18px;
 }
 
 body {
-	font-family: 'Sorts Mill Goudy', serif;
+	font-family: 'GoudyStM', Georgia, 'Times New Roman', serif;
 	background: #0e1a23;
 	color: #e8ddc5;
 	font-weight: 400;
@@ -48,7 +63,7 @@ h1, h2, h3, h4, h5, h6,
 .button, .btn-lu,
 .fixed-header-links,
 #backToTop {
-  font-family: 'Cinzel', serif;
+	font-family: 'Cinzel-Regular', 'Trajan Pro', 'Copperplate', 'Georgia', serif;
 }
 
 
@@ -571,13 +586,6 @@ footer {
 .codex-silver-scroll-patch {
 	height: 1.2em;
 	vertical-align: text-top;
-}
-
-.class-icon {
-	width: 64px;
-	height: 64px;
-	vertical-align: text-top;
-	margin-top: -0.25rem;
 }
 
 .skill-icon {
@@ -1548,6 +1556,7 @@ footer {
 	width: 64px;
 	border-radius: 8px;
 	box-shadow: 0 0 6px rgba(52, 223, 223, 0.418);
+	vertical-align: text-top;
   }
   .class-card h2 {
 	width: 200px;
