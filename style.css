@@ -607,7 +607,7 @@ footer {
 	background: rgba(20, 20, 30, 0.9);
 	border: 1px solid rgba(255, 255, 255, 0.15);
 	border-radius: 8px;
-	padding: 0.5rem 1rem;
+	padding: 0.6rem 1rem;
 	transition: transform 0.3s ease, background 0.3s ease;
 	min-width: 221.917px; /* ajustable pour matcher la largeur du bouton Codex */
 }
