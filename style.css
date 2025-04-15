@@ -141,7 +141,6 @@ a:before {
 	color: #88c0a9;
 	text-shadow: 0 0 10px rgba(136, 192, 169, 0.4);
 	position: relative;
-	z-index: 2;
 }
 
 .sous-titre {
