@@ -1613,3 +1613,6 @@ footer {
 	height: 24px;
   }
   
+.carte-lien.large.patch {
+	max-width: 700px;
+}
