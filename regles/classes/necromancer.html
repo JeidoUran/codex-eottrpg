@@ -1,2 +1,1119 @@
-<title>Nécromancien</title>
-<meta name="description" content="Maître des esprits tourmentés, le Nécromancien invoque des spectres pour le protéger et canalise leur essence dans de sombres rituels.">
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Nécromancien</title>
+    <meta name="description" content="Maître des esprits tourmentés, le Nécromancien invoque des spectres pour le protéger et canalise leur essence dans de sombres rituels.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../favicon.png" type="image/png">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <canvas id="particles"></canvas> 
+<div class="class-nav">
+  <a href="#details" class="section-link">Détails</a>
+  <a href="#aptitudes" class="section-link">Aptitudes</a>
+  <a href="#necromancie" class="sub-link">Nécromancie</a>
+  <a href="#lanceur-de-sorts" class="sub-link">Lanceur de sorts</a>
+  <a href="#transfert-de-fardeau" class="sub-link">Transfert de fardeau</a>
+  <a href="#pacte-de-necromancie" class="sub-link">Pacte de nécromancie</a>
+  <a href="#reincarnation" class="sub-link">Réincarnation</a>
+  <a href="#sens-des-esprits" class="sub-link">Sens des esprits</a>
+  <a href="#consultation" class="sub-link">Consultation</a>
+  <a href="#pacte-supplementaire" class="sub-link">Pacte supplémentaire</a>
+  <a href="#liens-inextricables" class="sub-link">Liens inextricables</a>
+  <a href="#energie-negative" class="sub-link">Énergie négative</a>
+  <a href="#specialisations" class="section-link">Spécialisations</a>
+  <a href="#pacte-de-l-evoqueur" class="section-link">Pacte de l'Évoqueur</a>
+  <a href="#reanimation" class="sub-link">Réanimation</a>
+  <a href="#attachement-persistant" class="sub-link">Attachement persistant</a>
+  <a href="#camouflage-de-spectre" class="sub-link">Camouflage de spectre</a>
+  <a href="#pacte-du-courtier" class="section-link">Pacte du Courtier</a>
+  <a href="#leurre-des-enfers" class="sub-link">Leurre des Enfers</a>
+  <a href="#haine-persistante" class="sub-link">Haine persistante</a>
+  <a href="#courtage-d-esprit" class="sub-link">Courtage d'esprit</a>
+  <a href="#sorts-mineurs" class="section-link">Sorts mineurs</a>
+  <a href="#appat-de-spectre" class="sub-link">Appât de spectre</a>
+  <a href="#cri-de-spectre" class="sub-link">Cri de spectre</a>
+  <a href="#bonbon-d-ame" class="sub-link">Bonbon d'âme</a>
+  <a href="#spectre-messager" class="sub-link">Spectre messager</a>
+  <a href="#toucher-necrotique" class="sub-link">Toucher nécrotique</a>
+  <a href="#trone-de-crane" class="sub-link">Trône de crâne</a>
+  <a href="#sorts-de-premier-niveau" class="section-link">Sorts de premier niveau</a>
+  <a href="#bouclier-feroce" class="sub-link">Bouclier féroce</a>
+  <a href="#bombe-de-glace" class="sub-link">Bombe de glace</a>
+  <a href="#bombe-de-feu" class="sub-link">Bombe de feu</a>
+  <a href="#bombe-de-foudre" class="sub-link">Bombe de foudre</a>
+  <a href="#echange-de-vie" class="sub-link">Échange de vie</a>
+  <a href="#parade-noire" class="sub-link">Parade noire</a>
+  <a href="#griffes-fantomatiques" class="sub-link">Griffes fantomatiques</a>
+  <a href="#sorts-de-second-niveau" class="section-link">Sorts de second niveau</a>
+  <a href="#commerce-equitable" class="sub-link">Commerce équitable</a>
+  <a href="#portes-de-l-enfer" class="sub-link">Portes de l'Enfer</a>
+  <a href="#bombe-empoisonnee" class="sub-link">Bombe empoisonnée</a>
+  <a href="#tombe" class="sub-link">Tombe</a>
+  <a href="#echange-d-ame" class="sub-link">Échange d'âme</a>
+  <a href="#souffle-de-feu-malfaisant" class="sub-link">Souffle de feu malfaisant</a>
+  <a href="#sorts-de-troisieme-niveau" class="section-link">Sorts de troisième niveau</a>
+  <a href="#danse-de-spectre" class="sub-link">Danse de spectre</a>
+  <a href="#vice-de-la-pierre-tombale" class="sub-link">Vice de la pierre tombale</a>
+  <a href="#explosion-de-spectre" class="sub-link">Explosion de spectre</a>
+  <a href="#poudre-de-zombie" class="sub-link">Poudre de zombie</a>
+  <a href="#phalange-de-spectres" class="sub-link">Phalange de spectres</a>
+  <a href="#progression-table" class="section-link">Progression par niveau</a>
+</div> <header class="codex-header">
+      <div class="header-top">
+        <h1>
+          <img src="../../assets/images/class-icons/necromancer.png" class="image class-icon"> Nécromancien
+        </h1>
+        <div class="fixed-header-links">
+          <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Index des classes</a>
+          <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Retour au Codex</a>
+        </div>
+      </div>
+      <div>
+      <div class="illustration-wrapper double">
+      
+          <img src="../../assets/images/class-art/necromancer1.png" alt="Illustration Nécromancien" class="illustration-classe">
+        
+
+          <img src="../../assets/images/class-art/necromancer2.png" alt="Illustration Nécromancien" class="illustration-classe">
+         
+        </div>
+        </div>
+    </header>
+    <main class="accueil">
+      <section class="intro-collapsible click" id="intro">
+        <p>Un mage puissant ayant la capacité d'invoquer les esprits des morts et de les manipuler à ses propres fins. Lorsque les Nécromanciens apprennent leur métier, ils concluent des pactes avec trois esprits agités - des esprits qui ont laissé des choses très importantes inachevées pour eux de leur vivant. En échange de pouvoir travailler pour leurs propres objectifs, les esprits acceptent de servir le Nécromancien en tant que spectres pendant la durée de vie du Nécromancien. Les spectres protègent le fragile Nécromancien des lignes de front, mais si un ennemi se rapproche, le Nécromancien a très peu de protection contre les coups. Par conséquent, le Nécromancien cherche des alliés puissants pour servir de rempart entre lui et ses cibles - et en échange, le Nécromancien peut effectuer des rituels sombres pour obtenir un pouvoir immense en sacrifiant les spectres. </p>
+        <button class="toggle-intro" onclick="toggleIntro()">Afficher la suite</button>
+      </section>
+      <section class="patch-section">
+        <h2 class="patch-titre" id="details">
+          <img src="../../assets/images/notes-big.png" class="image image-h2"> Détails de la classe
+        </h2>
+        <ul class="image-list"> <li><div class="image-texte"><strong><img src="../../assets/images/class-details/health.png" class="image details-icon"> Points de vie :</strong> 1d6 + modificateur de Constitution par niveau de Nécromancien</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/hit-dice.png" class="image details-icon"> Dés de vie :</strong> 1d6 par niveau de Nécromancien</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/saving-throw-dc.png" class="image details-icon"> DD des jets de sauvegarde :</strong> 8 + bonus de maîtrise + modificateur de Charisme</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/spell-accuracy.png" class="image details-icon"> Précision des sorts :</strong> 1d8 + bonus de maîtrise + modificateur d’Intelligence</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/spellcasting-mod.png" class="image details-icon"> Modificateur d'attaque magique :</strong> Bonus de maîtrise + modificateur d'Intelligence</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/masteries.png" class="image details-icon"> Maîtrises :</strong> Cercueils, Bâtons, Armes à feu</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/saving-throw.png" class="image details-icon"> Jets de sauvegarde :</strong> Intelligence, Sagesse</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/skills.png" class="image details-icon"> Compétences :</strong> Choisissez 3 parmi Arcane, Histoire, Perspicacité, Investigation, Nature, Performance, Perception, Persuasion, Tromperie ou Religion</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/starting-equipment.png" class="image details-icon"> Équipement de départ :</strong> Une arme maîtrisée, 3 esprits contractés et invoqués, un sac d'explorateur, un morceau de craie rituelle, un journal à moitié rempli et un stylo à encre</div></li> </ul>
+      </section>
+      <section class="patch-section">
+          <div class="aptitude-search-container">
+            <input type="text" id="aptitude-search" placeholder="Rechercher une aptitude ou un sort..." />
+          </div>
+        <div class="toggle-section">
+          <h2 class="patch-titre" id="aptitudes">
+            <img src="../../assets/images/notes-big.png" class="image image-h2"> Aptitudes de classe <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+          </h2>
+        </div>
+        <div class="collapsible-content expanded">
+          <div class="patch-list"> 
+  <article id="necromancie">
+  <h3>
+    <img src="../../assets/images/skills-icons/necromancer/necromancy.png" class="image skill-icon">
+    Nécromancie
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>Les spectres du Nécromancien augmentent en force et en points de vie avec le niveau du Nécromancien, tel que dicté par le tableau des niveaux. Le Nécromancien peut dépenser une action et un emplacement de sort de n'importe quel niveau pour canaliser l'esprit et les invoquer dans un espace à moins de 1.5 mètres. Seuls 3 spectres peuvent être actifs à la fois. De plus, le Nécromancien peut parler naturellement avec ses spectres et les diriger vers un endroit à moins de 9 mètres de chaque spectre sans utiliser d'action en combat. Les spectres sont bannis après avoir pris un long repos et doivent être ressuscités. Le dé de précision des spectres est de 1d6, et leur modificateur d'attaque est le modificateur d'attaque des sorts du Nécromancien. Ils ajoutent le modificateur d’Intelligence du Nécromancien aux jets de dégâts sur leurs attaques.</p>
+  </article>
+
+  <article id="lanceur-de-sorts">
+  <h3>
+    <img src="../../assets/images/skills-icons/necromancer/spellcasting.png" class="image skill-icon">
+    Lanceur de sorts
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>Le Nécromancien apprend des sorts en montant de niveau. Le modificateur de capacité pour ces sorts est l'Intelligence. La DD du jet de sauvegarde contre les sorts est égale à 8 + Bonus de maîtrise + Modificateur d'Intelligence. Le Nécromancien commence avec 4 emplacements de sorts, qui augmentent avec le niveau du Nécromancien comme dicté dans le tableau des niveaux. Tous les emplacements de sorts utilisés sont récupérés à la fin d'un long repos.</p>
+  </article>
+
+  <article id="transfert-de-fardeau">
+  <h3>
+    <img src="../../assets/images/skills-icons/necromancer/burden-shift.png" class="image skill-icon">
+    Transfert de fardeau
+    <span><img src="../../assets/images/action-costs/reaction.png" alt="Reaction" class="image action-icon">1 PA (Réaction)</span>
+  </h3>
+    <p>Lorsque le Nécromancien ou une créature alliée et volontaire à moins de 15 mètres serait affecté par une affliction, à l'exception de agrippé, inconscient ou épuisé, le Nécromancien peut au lieu de cela dépenser sa réaction pour choisir 2 spectres ; ces spectres subissent l’affliction à la place de la cible initiale. Le Transfert de fardeau peut être activé un nombre de fois égal au modificateur de Sagesse du Nécromancien par repos long.</p>
+  </article>
+
+  <article id="pacte-de-necromancie">
+  <h3>
+    <img src="../../assets/images/skills-icons/necromancer/necromancy-pact.png" class="image skill-icon">
+    Pacte de nécromancie
+    <span><img src="../../assets/images/action-costs/specialisation.png" alt="Specialisation" class="image action-icon">Spécialisation</span>
+  </h3>
+    <p>Choisissez un pacte. Ce pacte accorde des aptitudes supplémentaires au fur et à mesure que le Nécromancien monte de niveau.</p>
+  </article>
+
+  <article id="reincarnation">
+  <h3>
+    <img src="../../assets/images/skills-icons/necromancer/reincarnation.png" class="image skill-icon">
+    Réincarnation
+    <span><img src="../../assets/images/action-costs/combo-action.png" alt="Combo" class="image action-icon">1 PA (Action Combo)</span>
+  </h3>
+    <p>Lorsqu'un spectre est sacrifié pour effectuer un sort de Nécromancien, il peut utiliser son action combo pour consommer un emplacement de sort de niveau 1 et invoquer un autre spectre.</p>
+  </article>
+
+  <article id="sens-des-esprits">
+  <h3>
+    <img src="../../assets/images/skills-icons/necromancer/spiritsense.png" class="image skill-icon">
+    Sens des esprits
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>Ayant affaire aux forces de la mort, le Nécromancien comprend intuitivement quels endroits sont remplis d'énergie négative et peut percevoir le bourdonnement surnaturel résultant d'une mort prématurée. Le Nécromancien peut sentir qu'une mort particulièrement violente s'est produite au cours de la dernière semaine dès qu'il entre dans un rayon de 30 mètres de l'incident, et une enquête plus approfondie lui permet de faire un test d'Intelligence (Religion ou Investigation) avec un DD de 15 pour déterminer la cause exacte, l'heure et le lieu. Le DD peut être ajustée si la cause est particulièrement difficile à déterminer ou si elle ne laisse absolument aucune trace.</p>
+  </article>
+
+  <article id="consultation">
+  <h3>
+    <img src="../../assets/images/skills-icons/necromancer/consultation.png" class="image skill-icon">
+    Consultation
+    <span><img src="../../assets/images/action-costs/bonus-action.png" alt="Bonus" class="image action-icon">1 PA (Action Bonus)</span>
+  </h3>
+    <p>Le lien créé par un Nécromancien et ses spectres combiné à la sagesse des défunts permet au Nécromancien d'avoir une meilleure vision d'une action particulière. Pendant un repos court ou long, le Nécromancien peut lancer 2d20 ; ces résultats peuvent remplacer tout jet de d20 sur un test de compétence ou un jet de sauvegarde effectué par le Nécromancien jusqu'à son prochain long repos, mais chaque résultat ne peut être utilisé qu'une seule fois. Il peut également utiliser son action bonus pour forcer un ennemi à prendre l'un de ces résultats lors de son prochain jet de compétence ou de sauvegarde.</p>
+  </article>
+
+  <article id="pacte-supplementaire">
+  <h3>
+    <img src="../../assets/images/skills-icons/necromancer/additional-pact.png" class="image skill-icon">
+    Pacte supplémentaire
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>Le Nécromancien peut désormais avoir 4 spectres actifs à la fois.</p>
+  </article>
+
+  <article id="liens-inextricables">
+  <h3>
+    <img src="../../assets/images/skills-icons/necromancer/ties-that-bind.png" class="image skill-icon">
+    Liens inextricables
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>Lorsqu'un spectre meurt sans être sacrifié pour un sort de Nécromancien, le Nécromancien récupère un emplacement de sort de niveau 1. Il ne peut utiliser cet effet qu'un nombre de fois par repos long égal à son modificateur de Sagesse.</p>
+  </article>
+
+  <article id="energie-negative">
+  <h3>
+    <img src="../../assets/images/skills-icons/necromancer/negative-energy.png" class="image skill-icon">
+    Énergie négative
+    <span><img src="../../assets/images/action-costs/heavy-action.png" alt="Heavy" class="image action-icon">3 PA (Action Complexe)</span>
+  </h3>
+    <p>En tant qu'action complexe, le Nécromancien exploite l'énergie chaotique générée par le bannissement répété des spectres pour infliger des dégâts nécrotiques à une cible à moins de 60 mètres en fonction du nombre de spectres sacrifiés ou tués depuis le début de la rencontre. L'Énergie négative peut être utilisée une fois par repos long. Il n'y a ni jet d'attaque ni jet de sauvegarde pour cette compétence. <li style="list-style: none;"><strong>1 spectre :</strong> 1d6 + modificateur d'Intelligence <li style="list-style: none;"><strong>2 spectres :</strong> 2d6 + modificateur d'Intelligence <li style="list-style: none;"><strong>3 spectres :</strong> 3d6 + modificateur d'Intelligence <li style="list-style: none;"><strong>4 spectres :</strong> 4d6 + modificateur d'Intelligence <li style="list-style: none;"><strong>5 spectres :</strong> 6d6 + modificateur d'Intelligence <li style="list-style: none;"><strong>6 spectres :</strong> 8d6 + modificateur d'Intelligence <li style="list-style: none;"><strong>7 spectres :</strong> 10d6 + modificateur d'Intelligence <li style="list-style: none;"><strong>8+ spectres :</strong> 12d6 + 10 + modificateur d'Intelligence</p>
+  </article> </div>
+        </div>
+      </section>
+      <h2 class="patch-titre" id="specialisations">
+        <img src="../../assets/images/notes-big.png" class="image image-h2"> Spécialisations
+      </h2>
+    
+  <section class="patch-section">
+  <div class="toggle-section">
+    <h2 class="patch-titre" id="pacte-de-l-evoqueur">
+      <img src="../../assets/images/subclass-icons/necromancer/evoker.png" class="image class-icon">
+      Pacte de l'Évoqueur
+      <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+    </h2>
+    </div>
+    <div class="collapsible-content expanded">
+    <div class="patch-list">
+      
+        <article id="reanimation">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/reanimation.png" class="image skill-icon">
+          Réanimation
+          <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+        </h3>
+          <p>Chaque fois qu'un monstre ou un membre du groupe (sauf les spectres) meurt au cours d'une rencontre, le Nécromancien peut immédiatement dépenser un emplacement de sort pour invoquer un Spectre sur une case adjacente de la créature sans utiliser d'action.</p>
+        </article>
+
+        <article id="attachement-persistant">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/lingering-attachment.png" class="image skill-icon">
+          Attachement persistant
+          <span><img src="../../assets/images/action-costs/reaction.png" alt="Reaction" class="image action-icon">1 PA (Réaction)</span>
+        </h3>
+          <p>Lorsqu'un allié est sur le point de subir des dégâts, le Bouclier féroce peut être lancé en réaction un nombre de fois égal au modificateur de Sagesse du Nécromancien par repos court ou long. Le Bouclier féroce n'a pas besoin d'être un sort appris par le Nécromancien pour utiliser cette aptitude.</p>
+        </article>
+
+        <article id="camouflage-de-spectre">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/wraith-cloaking.png" class="image skill-icon">
+          Camouflage de spectre
+          <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+        </h3>
+          <p>Les spectres gagnent 10 points de vie maximum. Sous les effets du Bouclier féroce ou de la Phalange de spectres, les spectres gagnent une résistance aux dégâts de feu, de glace et de foudre.</p>
+        </article>
+    </div>
+    </div>
+  </section>
+
+  <section class="patch-section">
+  <div class="toggle-section">
+    <h2 class="patch-titre" id="pacte-du-courtier">
+      <img src="../../assets/images/subclass-icons/necromancer/broker.png" class="image class-icon">
+      Pacte du Courtier
+      <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+    </h2>
+    </div>
+    <div class="collapsible-content expanded">
+    <div class="patch-list">
+      
+        <article id="leurre-des-enfers">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/hell-lure.png" class="image skill-icon">
+          Leurre des Enfers
+          <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+        </h3>
+          <p>Lorsque le Nécromancien subit des dégâts d'un ennemi, un spectre apparaît avec un nombre de points de vie égal aux points de vie perdus, si le Nécromancien pourrait normalement invoquer un autre spectre.</p>
+        </article>
+
+        <article id="haine-persistante">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/lingering-hatred.png" class="image skill-icon">
+          Haine persistante
+          <span><img src="../../assets/images/action-costs/reaction.png" alt="Reaction" class="image action-icon">1 PA (Réaction)</span>
+        </h3>
+          <p>Lorsqu'un spectre subit des dégâts qui le tueraient, le Nécromancien peut utiliser sa réaction pour lancer n'importe quel sort de Bombe, même ceux qu'il n'a pas appris, en utilisant ce spectre. Cette aptitude peut être utilisée un nombre de fois égal à la moitié du modificateur d'Intelligence du Nécromancien par repos court ou long.</p>
+        </article>
+
+        <article id="courtage-d-esprit">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/spirit-broker.png" class="image skill-icon">
+          Courtage d'esprit
+          <span><img src="../../assets/images/action-costs/combo-action.png" alt="Combo" class="image action-icon">1 PA (Action Combo)</span>
+        </h3>
+          <p>Lorsqu'un spectre est sacrifié pour lancer un sort de dégâts, le Nécromancien peut utiliser son action combo pour augmenter les dégâts de ce sort de 1d12 + modificateur d'Intelligence en dégâts nécrotiques.</p>
+        </article>
+    </div>
+    </div>
+  </section>
+    
+    <section class="patch-section">
+      <div class="toggle-section">
+        <h2 class="patch-titre" id="sorts-mineurs">
+          <img src="../../assets/images/action-costs/cantrip.png" class="image image-h2">
+          Sorts mineurs
+          <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+        </h2>
+    </div>
+    <div class="collapsible-content expanded">
+      <div class="patch-list">
+        
+        <article id="appat-de-spectre">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/spells/wraith-lure.png" class="image skill-icon">
+          Appât de spectre
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p><div class="spell-data-icons">
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/cast-time.png" title="Temps d'incantation" class="spell-info-icon cast-time"> 1 action</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/range.png" title="Portée" class="spell-info-icon"> 60 mètres</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/component.png" title="Composants" class="spell-info-icon components"> V, S, M (un spectre)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/duration.png" title="Durée" class="spell-info-icon"> Jusqu'à la mort de la cible</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/save.png" title="Type de jet de sauvegarde ou attaque" class="spell-info-icon"> Aucun</div>
+      </div> Une fois par tour, force un spectre invoqué par le Nécromancien à attaquer la cible. Lors des tours suivants lors desquels l'Appât de spectre est actif, cette attaque devient une action libre. L'Appât de spectre peut être annulé en tant qu'action libre à tout moment (sauf pendant une autre action), ou en le lançant à nouveau sur une cible différente. Si la cible meurt, l'Appât de spectre se termine. Ce sort est automatiquement appris au niveau 1.</p>
+        </article>
+
+        <article id="cri-de-spectre">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/spells/wraith-cry.png" class="image skill-icon">
+          Cri de spectre
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p><div class="spell-data-icons">
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/cast-time.png" title="Temps d'incantation" class="spell-info-icon cast-time"> 1 action</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/range.png" title="Portée" class="spell-info-icon"> Spectre (toutes les créatures dans un rayon de 3 mètres)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/component.png" title="Composants" class="spell-info-icon components"> V, S, M (un spectre)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/duration.png" title="Durée" class="spell-info-icon"> 3 rounds</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/save.png" title="Type de jet de sauvegarde ou attaque" class="spell-info-icon"> Sagesse</div>
+      </div> Sacrifiez un spectre que le Nécromancien peut voir pour cibler toutes les créatures situées dans un rayon de 3 mètres autour du spectre sacrifié. Ces créatures doivent réussir un jet de sauvegarde de Sagesse ou perdre 2 de Défense pendant 3 rounds, ou jusqu'à ce qu'elles soient touchées.</p>
+        </article>
+
+        <article id="bonbon-d-ame">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/spells/soul-candy.png" class="image skill-icon">
+          Bonbon d'âme
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p><div class="spell-data-icons">
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/cast-time.png" title="Temps d'incantation" class="spell-info-icon cast-time"> 1 action</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/range.png" title="Portée" class="spell-info-icon"> Spectre (créatures dans un rayon de 30 mètres)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/component.png" title="Composants" class="spell-info-icon components"> V, S, M (un spectre)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/duration.png" title="Durée" class="spell-info-icon"> 3 rounds</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/save.png" title="Type de jet de sauvegarde ou attaque" class="spell-info-icon"> Aucun</div>
+      </div> Sacrifiez un spectre pour cibler un nombre quelconque de créatures volontaires situées dans un rayon de 30 mètres du spectre sacrifié. Les créatures choisies peuvent réduire la première instance de dégâts de feu/glace/foudre infligés par le modificateur de Sagesse du Nécromancien pendant 3 rounds. Ce montant augmente à 1d6 + modificateur d'Intelligence au niveau 8, et à 2d6 + modificateur d’Intelligence au niveau 15.</p>
+        </article>
+
+        <article id="spectre-messager">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/spells/wraith-messenger.png" class="image skill-icon">
+          Spectre messager
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p><div class="spell-data-icons">
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/cast-time.png" title="Temps d'incantation" class="spell-info-icon cast-time"> 1 action</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/range.png" title="Portée" class="spell-info-icon"> 3 km</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/component.png" title="Composants" class="spell-info-icon components"> V, S, M (un spectre)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/duration.png" title="Durée" class="spell-info-icon"> Jusqu'au retour du spectre</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/save.png" title="Type de jet de sauvegarde ou attaque" class="spell-info-icon"> Aucun</div>
+      </div> Spécifiez un endroit que le Nécromancien peut décrire, ainsi qu'une description d'une personne. Un spectre se rend à cet endroit, se déplaçant de 48 km par jour. Le Spectre livre un message et retourne au Nécromancien. Le Nécromancien peut annuler le sort à tout moment, mais le spectre disparaît si le sort est annulé avant que le spectre ne délivre le message, et doit être invoqué à nouveau.</p>
+        </article>
+
+        <article id="toucher-necrotique">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/spells/necrotic-touch.png" class="image skill-icon">
+          Toucher nécrotique
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p><div class="spell-data-icons">
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/cast-time.png" title="Temps d'incantation" class="spell-info-icon cast-time"> 1 action</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/range.png" title="Portée" class="spell-info-icon"> Toucher</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/component.png" title="Composants" class="spell-info-icon components"> S</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/duration.png" title="Durée" class="spell-info-icon"> Instantanée</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/save.png" title="Type de jet de sauvegarde ou attaque" class="spell-info-icon"> Attaque de sort au corps à corps</div>
+      </div> Le Nécromancien effectue une attaque de sort au corps à corps contre une seule créature qu'il peut toucher. En cas de réussite, le Nécromancien inflige 1d8 + modificateur d'Intelligence en dégâts nécrotiques. Ce montant augmente à 2d6 + modificateur d'Intelligence au niveau 6, à 2d8 + modificateur d'Intelligence au niveau 11, et à 3d6 + modificateur d'Intelligence au niveau 16. Pendant 3 rounds, lorsqu'elle se soigne, la cible subit la moitié des dégâts qu'elle aurait guéris avant l'application de l'effet.</p>
+        </article>
+
+        <article id="trone-de-crane">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/spells/skull-throne.png" class="image skill-icon">
+          Trône de crâne
+          <span><img src="../../assets/images/action-costs/bonus-action.png" alt="Bonus" class="image action-icon">1 PA (Action Bonus)</span>
+        </h3>
+          <p><div class="spell-data-icons">
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/cast-time.png" title="Temps d'incantation" class="spell-info-icon cast-time"> 1 action bonus</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/range.png" title="Portée" class="spell-info-icon"> 9 mètres</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/component.png" title="Composants" class="spell-info-icon components"> S, M (un spectre)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/duration.png" title="Durée" class="spell-info-icon"> Instantanée</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/save.png" title="Type de jet de sauvegarde ou attaque" class="spell-info-icon"> Aucun</div>
+      </div> En tant qu'action bonus, le Nécromancien ordonne à un spectre situé à moins de 1.5 mètres de lui de le transporter. Pendant qu'il est transporté de cette manière, le déplacement du Nécromancien devient de 9 mètres, et il ignore les terrains difficiles ou les dégâts qu'il subirait en traversant un terrain dangereux. Le spectre ne peut pas agir pendant qu'il transporte le Nécromancien ; ils occupent le même espace, et si le spectre meurt pendant qu'il le transporte, le Nécromancien retrouve son déplacement normal. Le Nécromancien peut également ordonner aux spectres situés à moins de 9 mètres de transporter un allié volontaire qui se trouve à moins de 1.5 mètres du spectre.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="patch-section">
+      <div class="toggle-section">
+        <h2 class="patch-titre" id="sorts-de-premier-niveau">
+          <img src="../../assets/images/action-costs/spell-slot1.png" class="image image-h2">
+          Sorts de premier niveau
+          <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+        </h2>
+    </div>
+    <div class="collapsible-content expanded">
+      <div class="patch-list">
+        
+        <article id="bouclier-feroce">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/spells/fierce-shield.png" class="image skill-icon">
+          Bouclier féroce
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p><div class="spell-data-icons">
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/cast-time.png" title="Temps d'incantation" class="spell-info-icon cast-time"> 1 action</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/range.png" title="Portée" class="spell-info-icon"> Spectre (rayon de 18 mètres)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/component.png" title="Composants" class="spell-info-icon components"> V, S, M (un spectre)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/duration.png" title="Durée" class="spell-info-icon"> 1 round</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/save.png" title="Type de jet de sauvegarde ou attaque" class="spell-info-icon"> Aucun</div>
+      </div> Le Nécromancien choisit un spectre, puis sélectionne un certain nombre de créatures situées dans un rayon de 18 mètres autour de ce spectre, jusqu'à son modificateur de Sagesse. Le spectre prend tous les dégâts pour ces créatures pendant la durée du sort ou jusqu'à ce que le spectre meure - si un ennemi réduirait un spectre à 0 points de vie, tout dégât excédentaire est infligé à la cible initiale. Si plusieurs de ces créatures devaient être endommagées par une attaque en même temps, le Nécromancien doit choisir l'une de ces créatures à protéger.</p>
+        </article>
+
+        <article id="bombe-de-glace">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/spells/ice-bomb.png" class="image skill-icon">
+          Bombe de glace
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p><div class="spell-data-icons">
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/cast-time.png" title="Temps d'incantation" class="spell-info-icon cast-time"> 1 action</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/range.png" title="Portée" class="spell-info-icon"> Spectre (rayon de 4.5 mètres)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/component.png" title="Composants" class="spell-info-icon components"> V, S, M (un spectre)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/duration.png" title="Durée" class="spell-info-icon"> Instantanée</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/save.png" title="Type de jet de sauvegarde ou attaque" class="spell-info-icon"> Dextérité</div>
+      </div> Sacrifiez un spectre ; toutes les créatures situées dans un rayon de 4.5 mètres autour du spectre doivent effectuer un jet de sauvegarde de Dextérité. En cas d'échec de ce jet, elles subissent 1d10 + modificateur d'Intelligence en dégâts de glace. En cas de réussite à la sauvegarde de Dextérité, la créature subit la moitié des dégâts.</p>
+        </article>
+
+        <article id="bombe-de-feu">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/spells/fire-bomb.png" class="image skill-icon">
+          Bombe de feu
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p><div class="spell-data-icons">
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/cast-time.png" title="Temps d'incantation" class="spell-info-icon cast-time"> 1 action</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/range.png" title="Portée" class="spell-info-icon"> Spectre (rayon de 4.5 mètres)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/component.png" title="Composants" class="spell-info-icon components"> V, S, M (un spectre)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/duration.png" title="Durée" class="spell-info-icon"> Instantanée</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/save.png" title="Type de jet de sauvegarde ou attaque" class="spell-info-icon"> Dextérité</div>
+      </div> Sacrifiez un spectre ; toutes les créatures situées dans un rayon de 4.5 mètres autour du spectre doivent effectuer un jet de sauvegarde de Dextérité. En cas d'échec de ce jet, elles subissent 1d10 + modificateur d'Intelligence en dégâts de feu. En cas de réussite à la sauvegarde de Dextérité, la créature subit la moitié des dégâts.</p>
+        </article>
+
+        <article id="bombe-de-foudre">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/spells/lightning-bomb.png" class="image skill-icon">
+          Bombe de foudre
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p><div class="spell-data-icons">
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/cast-time.png" title="Temps d'incantation" class="spell-info-icon cast-time"> 1 action</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/range.png" title="Portée" class="spell-info-icon"> Spectre (rayon de 4.5 mètres)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/component.png" title="Composants" class="spell-info-icon components"> V, S, M (un spectre)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/duration.png" title="Durée" class="spell-info-icon"> Instantanée</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/save.png" title="Type de jet de sauvegarde ou attaque" class="spell-info-icon"> Dextérité</div>
+      </div> Sacrifiez un spectre ; toutes les créatures situées dans un rayon de 4.5 mètres autour du spectre doivent effectuer un jet de sauvegarde de Dextérité. En cas d'échec de ce jet, elles subissent 1d10 + modificateur d'Intelligence en dégâts de foudre. En cas de réussite à la sauvegarde de Dextérité, la créature subit la moitié des dégâts.</p>
+        </article>
+
+        <article id="echange-de-vie">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/spells/life-exchange.png" class="image skill-icon">
+          Échange de vie
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p><div class="spell-data-icons">
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/cast-time.png" title="Temps d'incantation" class="spell-info-icon cast-time"> 1 action</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/range.png" title="Portée" class="spell-info-icon"> 36 mètres</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/component.png" title="Composants" class="spell-info-icon components"> V, S, M (un spectre)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/duration.png" title="Durée" class="spell-info-icon"> Instantanée</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/save.png" title="Type de jet de sauvegarde ou attaque" class="spell-info-icon"> Aucun</div>
+      </div> Sacrifiez un spectre. Jusqu'à 4 cibles situées dans un rayon de 36 mètres regagnent des points de vie égaux aux points de vie de ce spectre plus le modificateur de Sagesse du Nécromancien.</p>
+        </article>
+
+        <article id="parade-noire">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/spells/black-parade.png" class="image skill-icon">
+          Parade noire
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p><div class="spell-data-icons">
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/cast-time.png" title="Temps d'incantation" class="spell-info-icon cast-time"> 1 action</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/range.png" title="Portée" class="spell-info-icon"> 36 mètres</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/component.png" title="Composants" class="spell-info-icon components"> V, S, M (un spectre)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/duration.png" title="Durée" class="spell-info-icon"> 1 round</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/save.png" title="Type de jet de sauvegarde ou attaque" class="spell-info-icon"> Aucune</div>
+      </div> Choisissez une cible située dans un rayon de 36 mètres. Cette cible doit réussir un jet de sauvegarde de Force ou être saisie par tous les spectres adjacents. Si aucun spectre n'est adjacent, le sort échoue. En cas de réussite, la cible subit un malus de -2 aux jets et jets de sauvegarde de Force jusqu'à la fin de son prochain tour.</p>
+        </article>
+
+        <article id="griffes-fantomatiques">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/spells/ghastly-claws.png" class="image skill-icon">
+          Griffes fantomatiques
+          <span><img src="../../assets/images/action-costs/combo-action.png" alt="Combo" class="image action-icon">1 PA (Action Combo)</span>
+        </h3>
+          <p><div class="spell-data-icons">
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/cast-time.png" title="Temps d'incantation" class="spell-info-icon cast-time"> 1 action combo</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/range.png" title="Portée" class="spell-info-icon"> 36 mètres</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/component.png" title="Composants" class="spell-info-icon components"> V, S, M (un spectre)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/duration.png" title="Durée" class="spell-info-icon"> Instantanée</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/save.png" title="Type de jet de sauvegarde ou attaque" class="spell-info-icon"> Aucune</div>
+      </div> Les spectres attaquent en tandem avec le Nécromancien. Lors de tout jet d'attaque, le Nécromancien peut lancer les Griffes fantomatiques en tant qu'action combo, donnant un bonus de +1 au jet d'attaque et augmentant l'Offense du Nécromancien de 1d4 jusqu'à la fin de son tour. Les Griffes fantomatiques échouent si au moins un spectre n'est pas adjacent à la cible du jet d'attaque.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="patch-section">
+      <div class="toggle-section">
+        <h2 class="patch-titre" id="sorts-de-second-niveau">
+          <img src="../../assets/images/action-costs/spell-slot2.png" class="image image-h2">
+          Sorts de second niveau
+          <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+        </h2>
+    </div>
+    <div class="collapsible-content expanded">
+      <div class="patch-list">
+        
+        <article id="commerce-equitable">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/spells/fair-trade.png" class="image skill-icon">
+          Commerce équitable
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p><div class="spell-data-icons">
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/cast-time.png" title="Temps d'incantation" class="spell-info-icon cast-time"> 1 action</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/range.png" title="Portée" class="spell-info-icon"> 36 mètres</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/component.png" title="Composants" class="spell-info-icon components"> V, S, M (un spectre)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/duration.png" title="Durée" class="spell-info-icon"> Instantanée</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/save.png" title="Type de jet de sauvegarde ou attaque" class="spell-info-icon"> Attaque de sort à distance</div>
+      </div> Sacrifiez un spectre et effectuez une attaque de sort à distance contre une cible ; en cas de réussite, la cible subit des dégâts de force égaux à 1d10 + les points de vie de ce spectre au moment du sacrifice + modificateur d'Intelligence.</p>
+        </article>
+
+        <article id="portes-de-l-enfer">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/spells/gates-of-hell.png" class="image skill-icon">
+          Portes de l'Enfer
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p><div class="spell-data-icons">
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/cast-time.png" title="Temps d'incantation" class="spell-info-icon cast-time"> 1 action</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/range.png" title="Portée" class="spell-info-icon"> 36 mètres</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/component.png" title="Composants" class="spell-info-icon components"> V, S, M (un spectre)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/duration.png" title="Durée" class="spell-info-icon"> Instantanée</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/save.png" title="Type de jet de sauvegarde ou attaque" class="spell-info-icon"> Attaque de sort à distance</div>
+      </div> Sacrifiez un spectre et effectuez une attaque de sort à distance contre une cible ; en cas de réussite, la cible subit 2d8 + modificateur d'Intelligence en dégâts de feu. De plus, un spectre est immédiatement invoqué sans dépenser d'emplacement de sort et possède un nombre de points de vie égal aux dégâts infligés.</p>
+        </article>
+
+        <article id="bombe-empoisonnee">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/spells/poison-bomb.png" class="image skill-icon">
+          Bombe empoisonnée
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p><div class="spell-data-icons">
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/cast-time.png" title="Temps d'incantation" class="spell-info-icon cast-time"> 1 action</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/range.png" title="Portée" class="spell-info-icon"> Spectre (rayon de 4.5 mètres)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/component.png" title="Composants" class="spell-info-icon components"> V, S, M (un spectre)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/duration.png" title="Durée" class="spell-info-icon"> Instantanée</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/save.png" title="Type de jet de sauvegarde ou attaque" class="spell-info-icon"> Constitution</div>
+      </div> Sacrifiez un spectre ; toutes les créatures situées dans un rayon de 4.5 mètres autour du spectre doivent effectuer un jet de sauvegarde de Constitution ou subir 2d8 + modificateur d'Intelligence en dégâts de poison et être empoisonnées pendant 3 rounds, subissant 1d12 de dégâts de poison à chaque tour où elles continuent d'être empoisonnées. En cas de réussite à la sauvegarde de Constitution, la créature n'est pas empoisonnée, mais subit tout de même les dégâts initiaux.</p>
+        </article>
+
+        <article id="tombe">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/spells/grave.png" class="image skill-icon">
+          Tombe
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p><div class="spell-data-icons">
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/cast-time.png" title="Temps d'incantation" class="spell-info-icon cast-time"> 1 action</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/range.png" title="Portée" class="spell-info-icon"> 18 mètres</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/component.png" title="Composants" class="spell-info-icon components"> V, S, M (un spectre)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/duration.png" title="Durée" class="spell-info-icon"> 1 round</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/save.png" title="Type de jet de sauvegarde ou attaque" class="spell-info-icon"> Aucun</div>
+      </div> Ciblez une créature dans un rayon de 18 mètres. Jusqu'à la fin du prochain tour du Nécromancien, chaque fois qu'une créature attaque la cible avec une attaque au corps à corps ou à distance, tous les spectres actuellement invoqués peuvent se déplacer vers un espace inoccupé situé à moins de 1.5 mètres de l'attaquant. Chaque spectre peut alors contre-attaquer cette créature avec une attaque au corps à corps non-armée. Le Nécromancien décide si ces deux effets se produisent.</p>
+        </article>
+
+        <article id="echange-d-ame">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/spells/soul-trade.png" class="image skill-icon">
+          Échange d'âme
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p><div class="spell-data-icons">
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/cast-time.png" title="Temps d'incantation" class="spell-info-icon cast-time"> 1 action</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/range.png" title="Portée" class="spell-info-icon"> 36 mètres</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/component.png" title="Composants" class="spell-info-icon components"> V, S, M (un spectre)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/duration.png" title="Durée" class="spell-info-icon"> Instantanée</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/save.png" title="Type de jet de sauvegarde ou attaque" class="spell-info-icon"> Aucun</div>
+      </div> Sacrifiez un spectre. Jusqu'à 4 cibles situées dans un rayon de 36 mètres récupèrent le double de la somme des points de vie du spectre sacrifié + le modificateur de Sagesse du Nécromancien.</p>
+        </article>
+
+        <article id="souffle-de-feu-malfaisant">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/spells/banefire-breath.png" class="image skill-icon">
+          Souffle de feu malfaisant
+          <span><img src="../../assets/images/action-costs/heavy-action.png" alt="Heavy" class="image action-icon">3 PA (Action Complexe)</span>
+        </h3>
+          <p><div class="spell-data-icons">
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/cast-time.png" title="Temps d'incantation" class="spell-info-icon cast-time"> 1 action complexe</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/range.png" title="Portée" class="spell-info-icon"> Soi-même (cône de 9 mètres)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/component.png" title="Composants" class="spell-info-icon components"> V, S</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/duration.png" title="Durée" class="spell-info-icon"> Instantanée</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/save.png" title="Type de jet de sauvegarde ou attaque" class="spell-info-icon"> Dextérité</div>
+      </div> Toutes les créatures situées dans un cône de 9 mètres doivent effectuer un jet de sauvegarde de Dextérité. En cas d'échec de ce jet, elles subissent 2d10 + modificateur d'Intelligence en dégâts de feu et les créatures attaquant les cibles touchées gagnent une Offense égale au modificateur d’Intelligence du Nécromancien tout en infligeant des dégâts de feu, de glace ou de foudre pendant 3 rounds. En cas de réussite à la sauvegarde de Dextérité, la créature ne subit pas de malus et subit la moitié des dégâts.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="patch-section">
+      <div class="toggle-section">
+        <h2 class="patch-titre" id="sorts-de-troisieme-niveau">
+          <img src="../../assets/images/action-costs/spell-slot3.png" class="image image-h2">
+          Sorts de troisième niveau
+          <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+        </h2>
+    </div>
+    <div class="collapsible-content expanded">
+      <div class="patch-list">
+        
+        <article id="danse-de-spectre">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/spells/wraith-dance.png" class="image skill-icon">
+          Danse de spectre
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p><div class="spell-data-icons">
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/cast-time.png" title="Temps d'incantation" class="spell-info-icon cast-time"> 1 action</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/range.png" title="Portée" class="spell-info-icon"> 18 mètres</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/component.png" title="Composants" class="spell-info-icon components"> V, S, M (un spectre)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/duration.png" title="Durée" class="spell-info-icon"> Instantanée</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/save.png" title="Type de jet de sauvegarde ou attaque" class="spell-info-icon"> Aucun</div>
+      </div> Chaque spectre actuellement invoqué effectue 3 attaques au corps à corps contre une seule créature cible.</p>
+        </article>
+
+        <article id="vice-de-la-pierre-tombale">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/spells/tombstone-vice.png" class="image skill-icon">
+          Vice de la pierre tombale
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p><div class="spell-data-icons">
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/cast-time.png" title="Temps d'incantation" class="spell-info-icon cast-time"> 1 action</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/range.png" title="Portée" class="spell-info-icon"> 18 mètres (rayon de 3 mètres)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/component.png" title="Composants" class="spell-info-icon components"> V, S, M (3 spectres)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/duration.png" title="Durée" class="spell-info-icon"> 3 rounds</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/save.png" title="Type de jet de sauvegarde ou attaque" class="spell-info-icon"> Sagesse</div>
+      </div> Sacrifiez 3 spectres pour choisir un point situé dans un rayon de 18 mètres. Toutes les créatures situées dans un rayon de 3 mètres autour de ce point doivent réussir un jet de sauvegarde de Sagesse ou être pétrifiées pendant 3 rounds. En cas de réussite du jet de sauvegarde, la vitesse de déplacement de cette créature tombe à 0 jusqu'à la fin du prochain tour du Nécromancien.</p>
+        </article>
+
+        <article id="explosion-de-spectre">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/spells/wraith-explosion.png" class="image skill-icon">
+          Explosion de spectre
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p><div class="spell-data-icons">
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/cast-time.png" title="Temps d'incantation" class="spell-info-icon cast-time"> 1 action</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/range.png" title="Portée" class="spell-info-icon"> 30 mètres (rayon de 4.5 mètres)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/component.png" title="Composants" class="spell-info-icon components"> V, S, M (un spectre)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/duration.png" title="Durée" class="spell-info-icon"> 3 rounds</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/save.png" title="Type de jet de sauvegarde ou attaque" class="spell-info-icon"> Dextérité</div>
+      </div> Sacrifiez tous les spectres pour cibler un point situé dans un rayon de 30 mètres. Toutes les créatures situées dans un rayon de 4.5 mètres autour de ce point doivent effectuer un jet de sauvegarde de Dextérité. Elles subissent 2d8 + modificateur d'Intelligence en dégâts de feu par spectre sacrifié en cas d'échec du jet de sauvegarde, et la moitié de cette quantité en cas de réussite.</p>
+        </article>
+
+        <article id="poudre-de-zombie">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/spells/zombie-powder.png" class="image skill-icon">
+          Poudre de zombie
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p><div class="spell-data-icons">
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/cast-time.png" title="Temps d'incantation" class="spell-info-icon cast-time"> 1 action</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/range.png" title="Portée" class="spell-info-icon"> 30 mètres</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/component.png" title="Composants" class="spell-info-icon components"> V, S</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/duration.png" title="Durée" class="spell-info-icon"> Instantanée</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/save.png" title="Type de jet de sauvegarde ou attaque" class="spell-info-icon"> Attaque de sort à distance</div>
+      </div> Effectuez une attaque de sort à distance contre un ennemi. En cas de réussite, la cible subit 6d8 + le modificateur d'Intelligence en dégâts nécrotiques. Si le jet d'attaque est de 8 et que la cible a moins de 25 % de ses points de vie maximum, la cible est instantanément tuée à moins d'être immunisée contre la mort instantanée, et un spectre est invoqué avec le même nombre de points de vie que la cible au moment de sa mort, jusqu'à un maximum de 100 points de vie.</p>
+        </article>
+
+        <article id="phalange-de-spectres">
+        <h3>
+          <img src="../../assets/images/skills-icons/necromancer/spells/wraith-phalanx.png" class="image skill-icon">
+          Phalange de spectres
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p><div class="spell-data-icons">
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/cast-time.png" title="Temps d'incantation" class="spell-info-icon cast-time"> 1 action</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/range.png" title="Portée" class="spell-info-icon"> Spectre (rayon de 18 mètres)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/component.png" title="Composants" class="spell-info-icon components"> V, S, M (2 spectres ou +)</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/duration.png" title="Durée" class="spell-info-icon"> 3 rounds</div>
+        <div class="spell-info-block"><img src="../../assets/images/spell-details/save.png" title="Type de jet de sauvegarde ou attaque" class="spell-info-icon"> Aucun</div>
+      </div> Tous les spectres actuellement invoqués absorbent tous les dégâts pour un nombre quelconque de cibles situées dans un rayon de 18 mètres autour de l'un des spectres, jusqu'à la fin du prochain tour du Nécromancien ou jusqu'à ce qu'il n'y ait plus de spectres survivants. Si plusieurs de ces créatures devaient subir des dégâts lors d'une attaque simultanée, le Nécromancien peut assigner un spectre pour protéger un allié par spectre.</p>
+        </article>
+      </div>
+    </section>
+    <section class="patch-section">
+  <h2 class="patch-titre" id="progression">
+    <img src="../../assets/images/notes-big.png" class="image image-h2">
+    Progression par niveau
+  </h2>
+  <div class="table-container">
+    <table class="progression-table very-large" id="progression-table">
+      <thead>
+    <tr>
+      <th>Niveau</th>
+      <th>Bonus de maîtrise</th>
+      <th>Sorts mineurs</th>
+      <th>Sorts connus</th>
+      <th>Sorts niv.1</th>
+      <th>Sorts niv.2</th>
+      <th>Sorts niv.3</th>
+      <th>PV des Spectres</th>
+      <th>Dégâts des Spectres</th>
+      <th>Aptitudes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>+2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>4</td>
+      <td>—</td>
+      <td>-</td>
+      <td>3</td>
+      <td>1d4</td>
+      <td>Nécromancie, Lanceur de sorts</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>+2</td>
+      <td>2</td>
+      <td>3</td>
+      <td>5</td>
+      <td>—</td>
+      <td>-</td>
+      <td>4</td>
+      <td>1d4</td>
+      <td>Transfert de fardeau</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>+2</td>
+      <td>3</td>
+      <td>3</td>
+      <td>5</td>
+      <td>—</td>
+      <td>-</td>
+      <td>5</td>
+      <td>1d4</td>
+      <td>Pacte de nécromancie, Aptitude de Pacte</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>+2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>6</td>
+      <td>—</td>
+      <td>-</td>
+      <td>6</td>
+      <td>1d4</td>
+      <td>Amélioration de caractéristiques, Défense +1</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>+3</td>
+      <td>3</td>
+      <td>5</td>
+      <td>6</td>
+      <td>3</td>
+      <td>-</td>
+      <td>7</td>
+      <td>1d6</td>
+      <td>Réincarnation</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>+3</td>
+      <td>3</td>
+      <td>6</td>
+      <td>6</td>
+      <td>3</td>
+      <td>-</td>
+      <td>8</td>
+      <td>1d6</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>+3</td>
+      <td>3</td>
+      <td>6</td>
+      <td>6</td>
+      <td>4</td>
+      <td>-</td>
+      <td>9</td>
+      <td>1d6</td>
+      <td>Sens des esprits</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>+3</td>
+      <td>3</td>
+      <td>6</td>
+      <td>6</td>
+      <td>4</td>
+      <td>-</td>
+      <td>10</td>
+      <td>1d6</td>
+      <td>Amélioration de caractéristiques, Défense +1</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>+4</td>
+      <td>3</td>
+      <td>7</td>
+      <td>6</td>
+      <td>4</td>
+      <td>-</td>
+      <td>11</td>
+      <td>1d6</td>
+      <td>Aptitude de Pacte</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>+4</td>
+      <td>4</td>
+      <td>7</td>
+      <td>6</td>
+      <td>5</td>
+      <td>-</td>
+      <td>12</td>
+      <td>1d8</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>+4</td>
+      <td>4</td>
+      <td>7</td>
+      <td>6</td>
+      <td>5</td>
+      <td>-</td>
+      <td>13</td>
+      <td>1d8</td>
+      <td>Consultation</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>+4</td>
+      <td>4</td>
+      <td>7</td>
+      <td>6</td>
+      <td>5</td>
+      <td>-</td>
+      <td>14</td>
+      <td>1d8</td>
+      <td>Amélioration de caractéristiques, Défense +1</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>+5</td>
+      <td>4</td>
+      <td>8</td>
+      <td>6</td>
+      <td>5</td>
+      <td>2</td>
+      <td>15</td>
+      <td>1d8</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>+5</td>
+      <td>4</td>
+      <td>8</td>
+      <td>6</td>
+      <td>5</td>
+      <td>2</td>
+      <td>16</td>
+      <td>1d8</td>
+      <td>Aptitude de Pacte</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>+5</td>
+      <td>4</td>
+      <td>9</td>
+      <td>6</td>
+      <td>5</td>
+      <td>3</td>
+      <td>17</td>
+      <td>1d10</td>
+      <td>Pacte supplémentaire</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>+5</td>
+      <td>4</td>
+      <td>9</td>
+      <td>6</td>
+      <td>5</td>
+      <td>3</td>
+      <td>18</td>
+      <td>1d10</td>
+      <td>Amélioration de caractéristiques, Défense +1</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>+6</td>
+      <td>4</td>
+      <td>10</td>
+      <td>6</td>
+      <td>5</td>
+      <td>3</td>
+      <td>19</td>
+      <td>1d10</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>+6</td>
+      <td>4</td>
+      <td>10</td>
+      <td>6</td>
+      <td>5</td>
+      <td>4</td>
+      <td>20</td>
+      <td>1d10</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>+6</td>
+      <td>4</td>
+      <td>10</td>
+      <td>6</td>
+      <td>5</td>
+      <td>4</td>
+      <td>21</td>
+      <td>1d10</td>
+      <td>Liens inextricables</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>+6</td>
+      <td>4</td>
+      <td>10</td>
+      <td>6</td>
+      <td>5</td>
+      <td>4</td>
+      <td>22</td>
+      <td>1d12</td>
+      <td>Énergie négative</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</section>
+    </main>
+    <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button> <footer>
+    <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+</footer> <script>
+      document.addEventListener("DOMContentLoaded", function() {
+            const navContainer = document.querySelector('.class-nav');
+            const navLinks = document.querySelectorAll('.class-nav a[href^="#"]');
+            const sections = [...document.querySelectorAll("h2.patch-titre, article")];
+            let lastActive = null;
+            const observer = new IntersectionObserver((entries) => {
+                  entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                          const id = entry.target.getAttribute("id");
+                          const activeLink = [...navLinks].find(link => link.getAttribute("href") === `#${id}`);
+         
+                 if (activeLink && activeLink !== lastActive) {
+                 navLinks.forEach(link => link.classList.remove("active"));
+                 activeLink.classList.add("active");
+         
+                 // Scroll l'élément actif dans le menu si partiellement masqué
+                 const linkTop = activeLink.getBoundingClientRect().top;
+                 const navTop = navContainer.getBoundingClientRect().top;
+                 const linkBottom = linkTop + activeLink.offsetHeight;
+                 const navBottom = navTop + navContainer.offsetHeight;
+         
+                 if (linkTop < navTop || linkBottom > navBottom) {
+                     activeLink.scrollIntoView({ behavior: "smooth", block: "center" });
+                 }
+         
+                 lastActive = activeLink;
+                 }
+             }
+             });
+         }, {
+             rootMargin: "-30% 0px -60% 0px",
+             threshold: 0.1
+         });
+         
+         sections.forEach(section => observer.observe(section));
+         });
+      
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const searchInput = document.getElementById("aptitude-search");
+        const aptitudeArticles = document.querySelectorAll("article");
+        searchInput.addEventListener("input", function() {
+          const value = searchInput.value.toLowerCase();
+          aptitudeArticles.forEach(article => {
+            const title = article.querySelector("h3")?.textContent?.toLowerCase() || "";
+            const content = article.textContent?.toLowerCase() || "";
+            if (title.includes(value) || content.includes(value)) {
+              article.style.display = "";
+            } else {
+              article.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
+    <script>
+      function toggleIntro() {
+        const section = document.getElementById("intro");
+        section.classList.toggle("expanded");
+        const btn = section.querySelector("button");
+        btn.textContent = section.classList.contains("expanded") ? "Réduire" : "Afficher la suite";
+      }
+    </script>
+    <script>
+      function toggleSection(button) {
+        const content = button.closest("section").querySelector(".collapsible-content");
+        const isOpen = content.classList.contains("expanded");
+        if (isOpen) {
+          content.classList.remove("expanded");
+          button.textContent = "▼";
+        } else {
+          content.classList.add("expanded");
+          button.textContent = "▲";
+        }
+      }
+    </script>
+    <script>
+      window.addEventListener('scroll', () => {
+        document.getElementById('backToTop').classList.toggle('show', window.scrollY > 300);
+      });
+    </script>
+    <script>
+      function toggleMobileNav(btn) {
+        const overlay = document.getElementById("mobileNav");
+        overlay.classList.toggle("show");
+        btn.classList.toggle("open");
+        btn.textContent = overlay.classList.contains("show") ? "✕" : "☰";
+      }
+    </script>
+    <script src="../../particles.js"></script>
+    <button class="mobile-nav-toggle" onclick="toggleMobileNav(this)">☰</button>
+    <div class="mobile-nav-overlay" id="mobileNav">
+      <div class="mobile-nav-content">  <a href="#details" class="section-link" onclick="toggleMobileNav()">Détails</a>
+ <a href="#aptitudes" class="section-link" onclick="toggleMobileNav()">Aptitudes</a>
+ <a href="#necromancie" class="sub-link" onclick="toggleMobileNav()">Nécromancie</a>
+ <a href="#lanceur-de-sorts" class="sub-link" onclick="toggleMobileNav()">Lanceur de sorts</a>
+ <a href="#transfert-de-fardeau" class="sub-link" onclick="toggleMobileNav()">Transfert de fardeau</a>
+ <a href="#pacte-de-necromancie" class="sub-link" onclick="toggleMobileNav()">Pacte de nécromancie</a>
+ <a href="#reincarnation" class="sub-link" onclick="toggleMobileNav()">Réincarnation</a>
+ <a href="#sens-des-esprits" class="sub-link" onclick="toggleMobileNav()">Sens des esprits</a>
+ <a href="#consultation" class="sub-link" onclick="toggleMobileNav()">Consultation</a>
+ <a href="#pacte-supplementaire" class="sub-link" onclick="toggleMobileNav()">Pacte supplémentaire</a>
+ <a href="#liens-inextricables" class="sub-link" onclick="toggleMobileNav()">Liens inextricables</a>
+ <a href="#energie-negative" class="sub-link" onclick="toggleMobileNav()">Énergie négative</a>
+ <a href="#specialisations" class="section-link" onclick="toggleMobileNav()">Spécialisations</a>
+ <a href="#pacte-de-l-evoqueur" class="section-link" onclick="toggleMobileNav()">Pacte de l'Évoqueur</a>
+ <a href="#reanimation" class="sub-link" onclick="toggleMobileNav()">Réanimation</a>
+ <a href="#attachement-persistant" class="sub-link" onclick="toggleMobileNav()">Attachement persistant</a>
+ <a href="#camouflage-de-spectre" class="sub-link" onclick="toggleMobileNav()">Camouflage de spectre</a>
+ <a href="#pacte-du-courtier" class="section-link" onclick="toggleMobileNav()">Pacte du Courtier</a>
+ <a href="#leurre-des-enfers" class="sub-link" onclick="toggleMobileNav()">Leurre des Enfers</a>
+ <a href="#haine-persistante" class="sub-link" onclick="toggleMobileNav()">Haine persistante</a>
+ <a href="#courtage-d-esprit" class="sub-link" onclick="toggleMobileNav()">Courtage d'esprit</a>
+ <a href="#sorts-mineurs" class="section-link" onclick="toggleMobileNav()">Sorts mineurs</a>
+ <a href="#appat-de-spectre" class="sub-link" onclick="toggleMobileNav()">Appât de spectre</a>
+ <a href="#cri-de-spectre" class="sub-link" onclick="toggleMobileNav()">Cri de spectre</a>
+ <a href="#bonbon-d-ame" class="sub-link" onclick="toggleMobileNav()">Bonbon d'âme</a>
+ <a href="#spectre-messager" class="sub-link" onclick="toggleMobileNav()">Spectre messager</a>
+ <a href="#toucher-necrotique" class="sub-link" onclick="toggleMobileNav()">Toucher nécrotique</a>
+ <a href="#trone-de-crane" class="sub-link" onclick="toggleMobileNav()">Trône de crâne</a>
+ <a href="#sorts-de-premier-niveau" class="section-link" onclick="toggleMobileNav()">Sorts de premier niveau</a>
+ <a href="#bouclier-feroce" class="sub-link" onclick="toggleMobileNav()">Bouclier féroce</a>
+ <a href="#bombe-de-glace" class="sub-link" onclick="toggleMobileNav()">Bombe de glace</a>
+ <a href="#bombe-de-feu" class="sub-link" onclick="toggleMobileNav()">Bombe de feu</a>
+ <a href="#bombe-de-foudre" class="sub-link" onclick="toggleMobileNav()">Bombe de foudre</a>
+ <a href="#echange-de-vie" class="sub-link" onclick="toggleMobileNav()">Échange de vie</a>
+ <a href="#parade-noire" class="sub-link" onclick="toggleMobileNav()">Parade noire</a>
+ <a href="#griffes-fantomatiques" class="sub-link" onclick="toggleMobileNav()">Griffes fantomatiques</a>
+ <a href="#sorts-de-second-niveau" class="section-link" onclick="toggleMobileNav()">Sorts de second niveau</a>
+ <a href="#commerce-equitable" class="sub-link" onclick="toggleMobileNav()">Commerce équitable</a>
+ <a href="#portes-de-l-enfer" class="sub-link" onclick="toggleMobileNav()">Portes de l'Enfer</a>
+ <a href="#bombe-empoisonnee" class="sub-link" onclick="toggleMobileNav()">Bombe empoisonnée</a>
+ <a href="#tombe" class="sub-link" onclick="toggleMobileNav()">Tombe</a>
+ <a href="#echange-d-ame" class="sub-link" onclick="toggleMobileNav()">Échange d'âme</a>
+ <a href="#souffle-de-feu-malfaisant" class="sub-link" onclick="toggleMobileNav()">Souffle de feu malfaisant</a>
+ <a href="#sorts-de-troisieme-niveau" class="section-link" onclick="toggleMobileNav()">Sorts de troisième niveau</a>
+ <a href="#danse-de-spectre" class="sub-link" onclick="toggleMobileNav()">Danse de spectre</a>
+ <a href="#vice-de-la-pierre-tombale" class="sub-link" onclick="toggleMobileNav()">Vice de la pierre tombale</a>
+ <a href="#explosion-de-spectre" class="sub-link" onclick="toggleMobileNav()">Explosion de spectre</a>
+ <a href="#poudre-de-zombie" class="sub-link" onclick="toggleMobileNav()">Poudre de zombie</a>
+ <a href="#phalange-de-spectres" class="sub-link" onclick="toggleMobileNav()">Phalange de spectres</a>
+ <a href="#progression-table" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
+    </div>
+  </body>
+</html>

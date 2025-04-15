@@ -724,8 +724,13 @@ footer {
 	font-family: 'Cinzel-Regular', 'Trajan Pro', 'Copperplate', 'Georgia', serif;
 	color: #d8e9f0;
 	background-color: rgba(0, 0, 0, 0.25);
+	font-size: 17px;
   }
   
+  .progression-table.very-large {
+	font-size: 14px;
+  }
+
   .progression-table th,
   .progression-table td {
 	text-align: center;
@@ -1580,14 +1585,14 @@ footer {
 	flex-wrap: wrap;
 	gap: 0.5rem;
 	margin: 0.5rem 0;
-	color: #bdbdbd
+	color: #aaaaaa
   }
   
   .spell-info-block {
 	display: flex;
 	align-items: center;
 	gap: 0.4rem;
-	font-size: 16px;
+	font-size: 18px;
   }
   
   .spell-info-icon {
