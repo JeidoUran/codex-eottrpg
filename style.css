@@ -292,14 +292,6 @@ footer {
 	position: relative;
 }
 
-.note-expliquee {
-	font-size: 0.9rem;
-	color: #aac7b5;
-	margin-top: 0.25rem;
-	font-style: italic;
-	opacity: 0.8;
-}
-
 .patch-nouveau {
 	position: absolute;
 	right: 1rem;
