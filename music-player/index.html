@@ -297,10 +297,10 @@
       playBtn.addEventListener('click', () => {
         if (audio.paused) {
           audio.play();
-          playBtn.innerHTML = ' < i class = "fas fa-pause" > < /i>';
+          playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
         } else {
           audio.pause();
-          playBtn.innerHTML = ' < i class = "fas fa-play" > < /i>';
+          playBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
         }
       });
       const prevBtn = document.getElementById('prevBtn');
