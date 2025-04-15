@@ -1625,7 +1625,3 @@ footer {
 	align-items: center;
 	vertical-align: middle;
 }
-
-.carte-lien.large.patch {
-	max-width: 700px;
-}
