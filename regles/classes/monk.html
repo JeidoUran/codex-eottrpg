@@ -1,2 +1,513 @@
-<title>Moine</title>
-<meta name="description" content="Maître du Qi et du combat à mains nues, le Moine soigne ou frappe avec agilité, canalisant son énergie intérieure en mouvements précis et redoutables.">
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Moine</title>
+    <meta name="description" content="Maître du Qi et du combat à mains nues, le Moine soigne ou frappe avec agilité, canalisant son énergie intérieure en mouvements précis et redoutables.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../favicon.png" type="image/png">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <canvas id="particles"></canvas> 
+<div class="class-nav">
+  <a href="#details" class="section-link">Détails</a>
+  <a href="#aptitudes" class="section-link">Aptitudes</a>
+  <a href="#defense-sans-armure" class="sub-link">Défense sans armure</a>
+  <a href="#maitrise-du-qi" class="sub-link">Maîtrise du Qi</a>
+  <a href="#guerison-du-qi" class="sub-link">Guérison du Qi</a>
+  <a href="#maitrise-du-poing" class="sub-link">Maîtrise du poing</a>
+  <a href="#rupture" class="sub-link">Rupture</a>
+  <a href="#contre" class="sub-link">Contre</a>
+  <a href="#style-d-arts-martiaux" class="sub-link">Style d'arts martiaux</a>
+  <a href="#recompense-ascetique" class="sub-link">Récompense ascétique</a>
+  <a href="#rafraichissement" class="sub-link">Rafraîchissement</a>
+  <a href="#charge-de-qi" class="sub-link">Charge de Qi</a>
+  <a href="#guerison-en-ligne" class="sub-link">Guérison en ligne</a>
+  <a href="#kikouken" class="sub-link">Kikouken</a>
+  <a href="#represailles" class="sub-link">Représailles</a>
+  <a href="#chakra-eveille" class="sub-link">Chakra éveillé</a>
+  <a href="#guerison-de-groupe" class="sub-link">Guérison de groupe</a>
+  <a href="#retour-du-sang" class="sub-link">Retour du sang</a>
+  <a href="#marche-du-feu" class="sub-link">Marche du feu</a>
+  <a href="#septieme-porte" class="sub-link">Septième porte</a>
+  <a href="#specialisations" class="section-link">Spécialisations</a>
+  <a href="#style-du-taureau" class="sub-link">Style du Taureau</a>
+  <a href="#poing-du-tonnerre" class="sub-link">Poing du Tonnerre</a>
+  <a href="#surmenage" class="sub-link">Surmenage</a>
+  <a href="#poing-des-tenebres" class="sub-link">Poing des ténèbres</a>
+  <a href="#style-du-dragon" class="sub-link">Style du Dragon</a>
+  <a href="#double-coup" class="sub-link">Double coup</a>
+  <a href="#dechainement" class="sub-link">Déchaînement</a>
+  <a href="#poing-de-la-fournaise" class="sub-link">Poing de la fournaise</a>
+  <a href="#progression-table" class="section-link">Progression par niveau</a>
+</div> <header class="codex-header">
+      <div class="header-top">
+        <h1>
+          <img src="../../assets/images/class-icons/monk.png" class="image class-icon"> Moine
+        </h1>
+        <div class="fixed-header-links">
+          <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Index des classes</a>
+          <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Retour au Codex</a>
+        </div>
+      </div>
+      <div>
+      <div class="illustration-wrapper double">
+      
+          <img src="../../assets/images/class-art/monk1.png" alt="Illustration Moine" class="illustration-classe">
+        
+
+          <img src="../../assets/images/class-art/monk2.png" alt="Illustration Moine" class="illustration-classe">
+         
+        </div>
+        </div>
+    </header>
+    <main class="accueil">
+      <section class="intro-collapsible click" id="intro">
+        <p>Un artiste martial formé dans la manipulation du Qi pour soigner ses alliés ou infliger des dégâts immenses. Les moines se consacrent au combat corps à corps, appliquant des coups renforcés par le Qi directement à travers leurs poings. Ils sont agiles et acrobatiques, préférant esquiver ou dévier plutôt que de porter une armure, et peuvent même apprendre à contrer les coups portés contre eux en utilisant le Qi. L'évasion agile, la manipulation du Qi et les puissants coups à mains nues font d'eux des alliés précieux. Cependant, les moines risquent leur vie en combattant sans armure sur les lignes de front, étant moins durables que d'autres combattants, et doivent donc être prudents de ne pas se surexposer malgré leur impressionnante capacité au combat. </p>
+        <button class="toggle-intro" onclick="toggleIntro()">Afficher la suite</button>
+      </section>
+      <section class="patch-section">
+        <h2 class="patch-titre" id="details">
+          <img src="../../assets/images/notes-big.png" class="image image-h2"> Détails de la classe
+        </h2>
+        <ul class="image-list"> <li><div class="image-texte"><strong><img src="../../assets/images/class-details/health.png" class="image details-icon"> Points de vie :</strong> 1d8 + modificateur de Constitution par niveau de Moine</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/hit-dice.png" class="image details-icon"> Dés de vie :</strong> 1d8 par niveau de Moine</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/saving-throw-dc.png" class="image details-icon"> DD des jets de sauvegarde :</strong> 8 + bonus de maîtrise + modificateur de Sagesse</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/masteries.png" class="image details-icon"> Maîtrises :</strong> Aucune</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/saving-throw.png" class="image details-icon"> Jets de sauvegarde :</strong> Dextérité, Sagesse</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/skills.png" class="image details-icon"> Compétences :</strong> Choisissez 3 parmi Acrobaties, Athlétisme, Histoire, Nature, Dressage, Intuition, Médecine, Religion, Adresse et Discrétion</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/starting-equipment.png" class="image details-icon"> Équipement de départ :</strong> Un sac d'explorateur, un livre sur les bases de l'anatomie et du Qi, un journal vide et un stylo</div></li> </ul>
+      </section>
+      <section class="patch-section">
+        <div class="toggle-section">
+          <h2 class="patch-titre" id="aptitudes">
+            <img src="../../assets/images/notes-big.png" class="image image-h2"> Aptitudes de classe <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+          </h2>
+        </div>
+        <div class="collapsible-content expanded">
+          <div class="aptitude-search-container">
+            <input type="text" id="aptitude-search" placeholder="Rechercher une aptitude..." />
+          </div>
+          <div class="patch-list"> 
+  <article id="defense-sans-armure">
+  <h3>
+    <img src="../../assets/images/skills-icons/monk/unarmored-defense.png" class="image skill-icon">
+    Défense sans armure
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>Le Mage guerrier apprend à créer et à manier une lame de guerre. Combinez un bâton et une épée courte ; la lame de guerre conserve les propriétés des deux, mais elle devient une arme à deux mains. Lorsqu'il attaque avec une lame de guerre, vous pouvez choisir entre des dégâts perforants ou contondants, mais le dé de précision est choisi parmi les deux composants lors de la création de l'arme.</p>
+  </article>
+
+  <article id="maitrise-du-qi">
+  <h3>
+    <img src="../../assets/images/skills-icons/monk/qi-mastery.png" class="image skill-icon">
+    Maîtrise du Qi
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>Le Moine gagne une réserve de 3 Qi, qui augmente avec le niveau de Moine. Ce Qi peut être dépensé pour octroyer divers effets. Jusqu'à la moitié du Qi maximum (arrondi à l'inférieur) est récupéré lors d'un repos court, et tout le Qi dépensé est récupéré lors d'un repos long.</p>
+  </article>
+
+  <article id="guerison-du-qi">
+  <h3>
+    <img src="../../assets/images/skills-icons/monk/qi-healing.png" class="image skill-icon">
+    Guérison du Qi
+    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+  </h3>
+    <p>En tant qu'action, dépensez 1 Qi pour guérir une créature ciblée dans un rayon de 18 mètres pour 1d8 + modificateur de Sagesse points de vie. Chaque point de Qi supplémentaire dépensé augmente les points de vie restaurés de 1d8, jusqu'à 4 points de Qi.</p>
+  </article>
+
+  <article id="maitrise-du-poing">
+  <h3>
+    <img src="../../assets/images/skills-icons/monk/fist-mastery.png" class="image skill-icon">
+    Maîtrise du poing
+    <span><img src="../../assets/images/action-costs/combo-action.png" alt="Combo" class="image action-icon">1 PA (Action Combo)</span>
+  </h3>
+    <p>Après avoir attaqué, le Moine peut utiliser une action combo pour effectuer une deuxième attaque à mains nues ou utiliser Guérison du Qi. De plus, le dé de dégâts pour les attaques à mains nues augmente avec le niveau du Moine, et le Moine peut utiliser la Dextérité comme modificateur de caractéristique pour les attaques à mains nues.</p>
+  </article>
+
+  <article id="rupture">
+  <h3>
+    <img src="../../assets/images/skills-icons/monk/unbind.png" class="image skill-icon">
+    Rupture
+    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+  </h3>
+    <p>En tant qu'action, dépensez 1 Qi pour supprimer un lien d'un nombre de créatures dans un rayon de 18 mètres allant jusqu'au modificateur de Sagesse du Moine. Le nombre maximum de liens supprimés augmente de 1 pour chaque Qi supplémentaire dépensé, jusqu'à 3 Qi (toutes les cibles doivent être dans un rayon de 18 mètres).</p>
+  </article>
+
+  <article id="contre">
+  <h3>
+    <img src="../../assets/images/skills-icons/monk/counter.png" class="image skill-icon">
+    Contre
+    <span><img src="../../assets/images/action-costs/reaction.png" alt="Reaction" class="image action-icon">1 PA (Réaction)</span>
+  </h3>
+    <p>Lorsqu'il s’apprête à subir des dégâts contondants, tranchants ou perforants, le Moine peut dépenser sa réaction et 2 Qi ; lancez le dé d'arts martiaux du Moine et réduisez les dégâts par le résultat. Si la cible est à moins de 1.5 mètres, le Moine peut effectuer une seule attaque au corps à corps dans le cadre de cette réaction.</p>
+  </article>
+
+  <article id="style-d-arts-martiaux">
+  <h3>
+    <img src="../../assets/images/skills-icons/monk/martial-arts-style.png" class="image skill-icon">
+    Style d'arts martiaux
+    <span><img src="../../assets/images/action-costs/specialisation.png" alt="Specialisation" class="image action-icon">Spécialisation</span>
+  </h3>
+    <p>Choisissez un style. Le Moine acquerra des aptitudes supplémentaires de ce style en augmentant de niveau.</p>
+  </article>
+
+  <article id="recompense-ascetique">
+  <h3>
+    <img src="../../assets/images/skills-icons/monk/ascetic-reward.png" class="image skill-icon">
+    Récompense ascétique
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>Lorsque le Moine réussit une attaque en utilisant l'action combo de Maîtrise du poing ou utilise Guérison du Qi avec celle-ci, il peut regagner 1 PA.</p>
+  </article>
+
+  <article id="rafraichissement">
+  <h3>
+    <img src="../../assets/images/skills-icons/monk/refresh.png" class="image skill-icon">
+    Rafraîchissement
+    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+  </h3>
+    <p>En tant qu'action, dépensez 2 Qi pour mettre fin à une affliction sur un nombre de créatures dans un rayon de 18 mètres allant jusqu'au modificateur de Sagesse du Moine, à l’exception des liens ou de l’épuisement. Le nombre d’afflictions guéries augmente de 1 pour chaque Qi supplémentaire dépensé.</p>
+  </article>
+
+  <article id="charge-de-qi">
+  <h3>
+    <img src="../../assets/images/skills-icons/monk/qi-charge.png" class="image skill-icon">
+    Charge de Qi
+    <span><img src="../../assets/images/action-costs/bonus-action.png" alt="Bonus" class="image action-icon">1 PA (Action Bonus)</span>
+  </h3>
+    <p>En ciblant les points vitaux, le Moine inverse le flux de Qi dans le corps d'un ennemi, l’absorbant à chaque fois qu'il réussit une attaque. En tant qu'action bonus, le Moine peut faire en sorte que la première attaque à mains nues qu'il effectue contre une créature hostile restaure du Qi égal à son bonus de maîtrise en cas de réussite ou d’effleurement, jusqu'à la fin de son prochain tour.</p>
+  </article>
+
+  <article id="guerison-en-ligne">
+  <h3>
+    <img src="../../assets/images/skills-icons/monk/line-heal.png" class="image skill-icon">
+    Guérison en ligne
+    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+  </h3>
+    <p>En tant qu'action, dépensez 7 Qi pour restaurer 5d8 + modificateur de Sagesse points de vie à 3 créatures cibles dans un rayon de 18 mètres. Cette guérison augmente de 1d8 par point de Qi supplémentaire dépensé, jusqu'à 11 Qi.</p>
+  </article>
+
+  <article id="kikouken">
+  <h3>
+    <img src="../../assets/images/skills-icons/monk/kikouken.png" class="image skill-icon">
+    Kikouken
+    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+  </h3>
+    <p>En tant qu'action, dépensez 2 Qi pour effectuer une attaque au corps à corps à mains nues sur un ennemi. Si elle touche, cette attaque inflige des dégâts contondants supplémentaires de 1d6, et la cible doit réussir un jet de sauvegarde de Constitution ou être paralysée pendant 3 rounds.</p>
+  </article>
+
+  <article id="represailles">
+  <h3>
+    <img src="../../assets/images/skills-icons/monk/retaliate.png" class="image skill-icon">
+    Représailles
+    <span><img src="../../assets/images/action-costs/reaction.png" alt="Reaction" class="image action-icon">1 PA (Réaction)</span>
+  </h3>
+    <p>En tant que réaction, le Moine peut dépenser 3 Qi pour réduire de moitié une instance de dégâts de feu, de glace ou de foudre qui lui est infligée, et, si la créature attaquante est à moins de 1.5 mètres du Moine, il peut effectuer une attaque au corps à corps qui inflige des dégâts contondants supplémentaires de 1d12 en cas de touche.</p>
+  </article>
+
+  <article id="chakra-eveille">
+  <h3>
+    <img src="../../assets/images/skills-icons/monk/waking-chakra.png" class="image skill-icon">
+    Chakra éveillé
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>Le Moine a l'avantage sur tous les jets pour échapper aux afflictions dont il souffre actuellement. Lorsque le Moine récupère naturellement d'une affliction infligée par un ennemi, il récupère 3 Qi.</p>
+  </article>
+
+  <article id="guerison-de-groupe">
+  <h3>
+    <img src="../../assets/images/skills-icons/monk/party-heal.png" class="image skill-icon">
+    Guérison de groupe
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>En tant qu'action complexe, dépensez 10 Qi pour restaurer 8d10 + modificateur de Sagesse points de vie à un nombre quelconque de créatures cibles dans un rayon de 18 mètres. Cette guérison augmente de 1d10 par point de Qi supplémentaire dépensé, jusqu'à 14 Qi.</p>
+  </article>
+
+  <article id="retour-du-sang">
+  <h3>
+    <img src="../../assets/images/skills-icons/monk/blood-return.png" class="image skill-icon">
+    Retour du sang
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>Une fois par combat, lorsqu'une créature alliée dans un rayon de 60 mètres tombe à 0 points de vie, le Moine récupère 5 points de Qi.</p>
+  </article>
+
+  <article id="marche-du-feu">
+  <h3>
+    <img src="../../assets/images/skills-icons/monk/fire-walk.png" class="image skill-icon">
+    Marche du feu
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>Le Moine n'est pas affecté par les terrains difficiles, ni blessé par les terrains dangereux. S'ils ont déjà obtenu cet effet d'une aptitude différente, ils peuvent au lieu de cela gagner une résistance aux dégâts de feu et augmenter leur vitesse de 3 mètres.</p>
+  </article>
+
+  <article id="septieme-porte">
+  <h3>
+    <img src="../../assets/images/skills-icons/monk/seventh-gate.png" class="image skill-icon">
+    Septième porte
+    <span><img src="../../assets/images/action-costs/heavy-action.png" alt="Heavy" class="image action-icon">3 PA (Action Complexe)</span>
+  </h3>
+    <p>En tant qu'action complexe, aucun Qi n'est consommé jusqu'à la fin du prochain tour du Moine, leur PA de départ est de 4 pour le reste du combat, et leur guérison et leur dégâts sont augmentés de moitié. La Septième porte ne peut être utilisée qu'une fois par long repos, et le Moine gagne un niveau d'épuisement à la fin d'un combat où la Septième porte a été utilisée.</p>
+  </article> </div>
+        </div>
+      </section>
+      <h2 class="patch-titre" id="specialisations">
+        <img src="../../assets/images/notes-big.png" class="image image-h2"> Spécialisations
+      </h2>
+    
+  <section class="patch-section">
+  <div class="toggle-section">
+    <h2 class="patch-titre" id="style-du-taureau">
+      <img src="../../assets/images/subclass-icons/monk/bull.png" class="image class-icon">
+      Style du Taureau
+      <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+    </h2>
+    </div>
+    <div class="collapsible-content expanded">
+    <div class="patch-list">
+      
+        <article id="poing-du-tonnerre">
+        <h3>
+          <img src="../../assets/images/skills-icons/monk/thunder-fist.png" class="image skill-icon">
+          Poing du Tonnerre
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p>En tant qu'action, le Moine peut dépenser 2 Qi pour effectuer une attaque à mains nues contre une seule cible ; si il touche, le Moine gagne 1d8 d'Offense pour cette attaque, et son Offense devient des dégâts de foudre. Si la cible ne tombe pas à 0 points de vie après les dégâts infligés, le Moine perd des points de vie égaux à son modificateur de Constitution (minimum 1).</p>
+        </article>
+
+        <article id="surmenage">
+        <h3>
+          <img src="../../assets/images/skills-icons/monk/overexertion.png" class="image skill-icon">
+          Surmenage
+          <span><img src="../../assets/images/action-costs/bonus-action.png" alt="Bonus" class="image action-icon">1 PA (Action Bonus)</span>
+        </h3>
+          <p>Passivement, le Moine augmente son Offense d'un montant égal aux points de vie qu'il a perdus depuis le début du dernier tour, jusqu'à deux fois son modificateur de Constitution. Une fois que l'Offense est appliquée, elle est réinitialisée à 0. Ils peuvent utiliser le Surmenage comme action bonus pour stimuler leurs muscles avec du Qi, subissant des dégâts égaux à leur modificateur de Constitution.</p>
+        </article>
+
+        <article id="poing-des-tenebres">
+        <h3>
+          <img src="../../assets/images/skills-icons/monk/darkness-fist.png" class="image skill-icon">
+          Poing des ténèbres
+          <span><img src="../../assets/images/action-costs/heavy-action.png" alt="Heavy" class="image action-icon">3 PA (Action Complexe)</span>
+        </h3>
+          <p>En tant qu'action complexe, le Moine peut consommer 6 Qi pour cibler un cube de 4.5 mètres devant lui. Chaque cible spécifiée dans ce cube doit réussir un jet de sauvegarde de Dextérité ou subir des dégâts de 2d10 + modificateur de Force ou de Dextérité et être maudite pendant 3 rounds ; en cas de succès au jet de sauvegarde, elles subissent la moitié des dégâts et ne sont pas maudites. L'Offense s'applique deux fois au Poing des Ténèbres, mais l'Offense du Moine devient 0 après l'avoir utilisé.</p>
+        </article>
+    </div>
+    </div>
+  </section>
+
+  <section class="patch-section">
+  <div class="toggle-section">
+    <h2 class="patch-titre" id="style-du-dragon">
+      <img src="../../assets/images/subclass-icons/monk/dragon.png" class="image class-icon">
+      Style du Dragon
+      <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+    </h2>
+    </div>
+    <div class="collapsible-content expanded">
+    <div class="patch-list">
+      
+        <article id="double-coup">
+        <h3>
+          <img src="../../assets/images/skills-icons/monk/double-punch.png" class="image skill-icon">
+          Double coup
+          <span><img src="../../assets/images/action-costs/bonus-action.png" alt="Bonus" class="image action-icon">1 PA (Action Bonus)</span>
+        </h3>
+          <p>Le Moine peut dépenser une action bonus pour se replier dans une posture de frappe rapide ; la prochaine fois qu'il attaque, il peut effectuer une attaque à mains nues supplémentaire dans le cadre de la même action. Si il n'est pas utilisé d'ici la fin du prochain tour du Moine, l'effet expire.</p>
+        </article>
+
+        <article id="dechainement">
+        <h3>
+          <img src="../../assets/images/skills-icons/monk/lash-out.png" class="image skill-icon">
+          Déchaînement
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p>En tant qu'action, le Moine peut effectuer un nombre d'attaques à mains nues égal au nombre de fois où il a attaqué lors du dernier tour. Le Déchaînement ne peut pas être utilisé à nouveau avant la fin du prochain tour du Moine lorsqu'il est activé.</p>
+        </article>
+
+        <article id="poing-de-la-fournaise">
+        <h3>
+          <img src="../../assets/images/skills-icons/monk/breakfire-fist.png" class="image skill-icon">
+          Poing de la fournaise
+          <span><img src="../../assets/images/action-costs/heavy-action.png" alt="Heavy" class="image action-icon">3 PA (Action Complexe)</span>
+        </h3>
+          <p>En tant qu'action complexe, le Moine peut dépenser 5 Qi pour effectuer 3 attaques à mains nues contre une seule cible. Toute Offense sur ces attaques inflige des dégâts de feu. Le nombre de coups augmente de un par Qi supplémentaire dépensé, jusqu'à 7 Qi. Les attaques au-delà de la première n'ajoutent pas la Force ou la Dextérité du Moine.</p>
+        </article>
+    </div>
+    </div>
+  </section>
+    
+    <section class="patch-section">
+  <h2 class="patch-titre" id="progression-table">
+    <img src="../../assets/images/notes-big.png" class="image image-h2">
+    Progression par niveau
+  </h2>
+<div class="table-container">
+  <table class="progression-table" id="progression-table">
+    <thead>
+      <tr>
+      <th>Niveau</th>
+      <th>Bonus de maîtrise</th>
+      <th>Réserve de Qi</th>
+      <th>Dégâts aux poings</th>
+      <th>Aptitudes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>+2</td><td>3</td><td>1d4</td><td>Défense sans armure, Maîtrise du Qi, Guérison du Qi, Maîtrise du poing</td></tr>
+    <tr><td>2</td><td>+2</td><td>4</td><td>1d4</td><td>Déliement, Contre</td></tr>
+    <tr><td>3</td><td>+2</td><td>5</td><td>1d4</td><td>Style d'arts martiaux, Aptitude de Style</td></tr>
+    <tr><td>4</td><td>+2</td><td>7</td><td>1d4</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+    <tr><td>5</td><td>+3</td><td>8</td><td>1d6</td><td>Récompense ascétique</td></tr>
+    <tr><td>6</td><td>+3</td><td>9</td><td>1d6</td><td>Rafraîchissement</td></tr>
+    <tr><td>7</td><td>+3</td><td>10</td><td>1d6</td><td>Charge de Qi</td></tr>
+    <tr><td>8</td><td>+3</td><td>12</td><td>1d6</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+    <tr><td>9</td><td>+4</td><td>13</td><td>1d6</td><td>Guérison en ligne</td></tr>
+    <tr><td>10</td><td>+4</td><td>14</td><td>1d8</td><td>Aptitude de Style</td></tr>
+    <tr><td>11</td><td>+4</td><td>15</td><td>1d8</td><td>Kikouken</td></tr>
+    <tr><td>12</td><td>+4</td><td>17</td><td>1d8</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+    <tr><td>13</td><td>+5</td><td>18</td><td>1d8</td><td>Représailles</td></tr>
+    <tr><td>14</td><td>+5</td><td>19</td><td>1d8</td><td>Chakra éveillé</td></tr>
+    <tr><td>15</td><td>+5</td><td>20</td><td>1d10</td><td>Aptitude de Style</td></tr>
+    <tr><td>16</td><td>+5</td><td>22</td><td>1d10</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+    <tr><td>17</td><td>+6</td><td>23</td><td>1d10</td><td>Guérison de groupe</td></tr>
+    <tr><td>18</td><td>+6</td><td>24</td><td>1d10</td><td>Marche du feu</td></tr>
+    <tr><td>19</td><td>+6</td><td>25</td><td>1d10</td><td>Retour du sang</td></tr>
+    <tr><td>20</td><td>+6</td><td>27</td><td>1d10</td><td>Septième porte</td></tr>
+  </tbody>
+</table>
+</div>
+</section>
+    </main>
+    <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button> <footer>
+    <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+</footer> <script>
+      document.addEventListener("DOMContentLoaded", function() {
+            const navContainer = document.querySelector('.class-nav');
+            const navLinks = document.querySelectorAll('.class-nav a[href^="#"]');
+            const sections = [...document.querySelectorAll("h2.patch-titre, article")];
+            let lastActive = null;
+            const observer = new IntersectionObserver((entries) => {
+                  entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                          const id = entry.target.getAttribute("id");
+                          const activeLink = [...navLinks].find(link => link.getAttribute("href") === `#${id}`);
+         
+                 if (activeLink && activeLink !== lastActive) {
+                 navLinks.forEach(link => link.classList.remove("active"));
+                 activeLink.classList.add("active");
+         
+                 // Scroll l'élément actif dans le menu si partiellement masqué
+                 const linkTop = activeLink.getBoundingClientRect().top;
+                 const navTop = navContainer.getBoundingClientRect().top;
+                 const linkBottom = linkTop + activeLink.offsetHeight;
+                 const navBottom = navTop + navContainer.offsetHeight;
+         
+                 if (linkTop < navTop || linkBottom > navBottom) {
+                     activeLink.scrollIntoView({ behavior: "smooth", block: "center" });
+                 }
+         
+                 lastActive = activeLink;
+                 }
+             }
+             });
+         }, {
+             rootMargin: "-30% 0px -60% 0px",
+             threshold: 0.1
+         });
+         
+         sections.forEach(section => observer.observe(section));
+         });
+      
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const searchInput = document.getElementById("aptitude-search");
+        const aptitudeArticles = document.querySelectorAll("article");
+        searchInput.addEventListener("input", function() {
+          const value = searchInput.value.toLowerCase();
+          aptitudeArticles.forEach(article => {
+            const title = article.querySelector("h3")?.textContent?.toLowerCase() || "";
+            const content = article.textContent?.toLowerCase() || "";
+            if (title.includes(value) || content.includes(value)) {
+              article.style.display = "";
+            } else {
+              article.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
+    <script>
+      function toggleIntro() {
+        const section = document.getElementById("intro");
+        section.classList.toggle("expanded");
+        const btn = section.querySelector("button");
+        btn.textContent = section.classList.contains("expanded") ? "Réduire" : "Afficher la suite";
+      }
+    </script>
+    <script>
+      function toggleSection(button) {
+        const content = button.closest("section").querySelector(".collapsible-content");
+        const isOpen = content.classList.contains("expanded");
+        if (isOpen) {
+          content.classList.remove("expanded");
+          button.textContent = "▼";
+        } else {
+          content.classList.add("expanded");
+          button.textContent = "▲";
+        }
+      }
+    </script>
+    <script>
+      window.addEventListener('scroll', () => {
+        document.getElementById('backToTop').classList.toggle('show', window.scrollY > 300);
+      });
+    </script>
+    <script>
+      function toggleMobileNav(btn) {
+        const overlay = document.getElementById("mobileNav");
+        overlay.classList.toggle("show");
+        btn.classList.toggle("open");
+        btn.textContent = overlay.classList.contains("show") ? "✕" : "☰";
+      }
+    </script>
+    <script src="../../particles.js"></script>
+    <button class="mobile-nav-toggle" onclick="toggleMobileNav(this)">☰</button>
+    <div class="mobile-nav-overlay" id="mobileNav">
+      <div class="mobile-nav-content">  <a href="#details" class="section-link" onclick="toggleMobileNav()">Détails</a>
+ <a href="#aptitudes" class="section-link" onclick="toggleMobileNav()">Aptitudes</a>
+ <a href="#defense-sans-armure" class="sub-link" onclick="toggleMobileNav()">Défense sans armure</a>
+ <a href="#maitrise-du-qi" class="sub-link" onclick="toggleMobileNav()">Maîtrise du Qi</a>
+ <a href="#guerison-du-qi" class="sub-link" onclick="toggleMobileNav()">Guérison du Qi</a>
+ <a href="#maitrise-du-poing" class="sub-link" onclick="toggleMobileNav()">Maîtrise du poing</a>
+ <a href="#rupture" class="sub-link" onclick="toggleMobileNav()">Rupture</a>
+ <a href="#contre" class="sub-link" onclick="toggleMobileNav()">Contre</a>
+ <a href="#style-d-arts-martiaux" class="sub-link" onclick="toggleMobileNav()">Style d'arts martiaux</a>
+ <a href="#recompense-ascetique" class="sub-link" onclick="toggleMobileNav()">Récompense ascétique</a>
+ <a href="#rafraichissement" class="sub-link" onclick="toggleMobileNav()">Rafraîchissement</a>
+ <a href="#charge-de-qi" class="sub-link" onclick="toggleMobileNav()">Charge de Qi</a>
+ <a href="#guerison-en-ligne" class="sub-link" onclick="toggleMobileNav()">Guérison en ligne</a>
+ <a href="#kikouken" class="sub-link" onclick="toggleMobileNav()">Kikouken</a>
+ <a href="#represailles" class="sub-link" onclick="toggleMobileNav()">Représailles</a>
+ <a href="#chakra-eveille" class="sub-link" onclick="toggleMobileNav()">Chakra éveillé</a>
+ <a href="#guerison-de-groupe" class="sub-link" onclick="toggleMobileNav()">Guérison de groupe</a>
+ <a href="#retour-du-sang" class="sub-link" onclick="toggleMobileNav()">Retour du sang</a>
+ <a href="#marche-du-feu" class="sub-link" onclick="toggleMobileNav()">Marche du feu</a>
+ <a href="#septieme-porte" class="sub-link" onclick="toggleMobileNav()">Septième porte</a>
+ <a href="#specialisations" class="section-link" onclick="toggleMobileNav()">Spécialisations</a>
+ <a href="#style-du-taureau" class="sub-link" onclick="toggleMobileNav()">Style du Taureau</a>
+ <a href="#poing-du-tonnerre" class="sub-link" onclick="toggleMobileNav()">Poing du Tonnerre</a>
+ <a href="#surmenage" class="sub-link" onclick="toggleMobileNav()">Surmenage</a>
+ <a href="#poing-des-tenebres" class="sub-link" onclick="toggleMobileNav()">Poing des ténèbres</a>
+ <a href="#style-du-dragon" class="sub-link" onclick="toggleMobileNav()">Style du Dragon</a>
+ <a href="#double-coup" class="sub-link" onclick="toggleMobileNav()">Double coup</a>
+ <a href="#dechainement" class="sub-link" onclick="toggleMobileNav()">Déchaînement</a>
+ <a href="#poing-de-la-fournaise" class="sub-link" onclick="toggleMobileNav()">Poing de la fournaise</a>
+ <a href="#progression-table" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
+    </div>
+  </body>
+</html>
