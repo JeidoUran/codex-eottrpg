@@ -426,7 +426,7 @@ footer {
 }
 
 .patch-nav {
-	margin: 2rem 0;
+	margin: 1rem 0;
 	text-align: center;
 	font-style: normal;
 }
@@ -479,7 +479,6 @@ footer {
 
 .rune {
 	display: inline-block;
-	animation: pulse-glow 2s infinite ease-in-out;
 	font-size: 1.2rem;
 	color: #63b0c4;
 	text-shadow: 0 0 6px rgba(99, 176, 196, 0.5);
@@ -584,6 +583,12 @@ footer {
 .details-icon {
 	vertical-align: top;
 	margin-top: 0.05rem;
+}
+
+.patchnotes-icon {
+	width: 64px;
+	height: 64px;
+	vertical-align: middle;
 }
 
 #backToTop {
@@ -1605,6 +1610,14 @@ footer {
 	height: 24px;
   }
   
+  .patch-nav-image {
+	width: 28px;
+	height: 28px;
+	display: inline-flex;
+	align-items: center;
+	vertical-align: middle;
+}
+
 .carte-lien.large.patch {
 	max-width: 700px;
 }
