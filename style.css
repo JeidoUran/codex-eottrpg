@@ -663,7 +663,7 @@ footer {
 	justify-content: center; /* centre le h1 */
 	align-items: center;
 	position: relative;
-	padding: 1rem 1rem 0.5rem; /* ajuste la hauteur globale */
+	padding: 1rem 1rem 0.5rem;
 }
 
 .header-top h1 {
@@ -672,7 +672,7 @@ footer {
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
-	margin-bottom: 1rem;
+	margin-bottom: 0.25rem;
 	margin-top: 0.5rem;
 }
 
