@@ -123,20 +123,21 @@ main.accueil {
 a {
 	color: #57dada;
 	text-decoration: none;
+	transition: all 0.3s ease;
 }
 
 a:hover {
 	text-shadow: 0 0 4px #8bd1e3;
 	text-decoration: none;
+	transition: all 0.3s ease;
 }
 
 a:before {
 	font-family: "Font Awesome 6 Free";
-	/* Assure-toi que la famille est bien celle-ci */
 	content: "\f0c1";
-	/* Unicode pour l'icône 'link' */
 	font-weight: 900;
 	transform: translateY(0.1em);
+	font-size: 16px;
 }
 
 #particles {
