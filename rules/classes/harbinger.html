@@ -1,2 +1,618 @@
-<title>Héraut</title>
-<meta name="description" content="Manipulateur de miasme et maître des frappes opportunes, le Héraut affaiblit ses proies avant de les faucher dans un ballet spectral.">
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Héraut</title>
+    <meta name="description" content="Sentinelle cuirassée, le Dragoon encaisse les coups pour ses alliés et élimine les menaces grâce à son bouclier massif et son canon dorsal.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../favicon.png" type="image/png">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <canvas id="particles"></canvas> 
+<div class="class-nav">
+  <a href="#details" class="section-link">Détails</a>
+  <a href="#aptitudes" class="section-link">Aptitudes</a>
+  <a href="#armure-de-miasme" class="sub-link">Armure de miasme</a>
+  <a href="#jugement" class="sub-link">Jugement</a>
+  <a href="#voie-du-faucheur" class="sub-link">Voie du Faucheur</a>
+  <a href="#moisson-maudite" class="sub-link">Moisson maudite</a>
+  <a href="#lame-noire" class="sub-link">Lame noire</a>
+  <a href="#expiation" class="sub-link">Expiation</a>
+  <a href="#clarte" class="sub-link">Clarté</a>
+  <a href="#miasme-fletrissant" class="sub-link">Miasme flétrissant</a>
+  <a href="#moisson-toxique" class="sub-link">Moisson toxique</a>
+  <a href="#miasme-contraignant" class="sub-link">Miasme contraignant</a>
+  <a href="#rideau-de-miasme" class="sub-link">Rideau de miasme</a>
+  <a href="#moisson-fatale" class="sub-link">Moisson fatale</a>
+  <a href="#voile-infini" class="sub-link">Voile infini</a>
+  <a href="#armure-endurante" class="sub-link">Armure endurante</a>
+  <a href="#torrent-de-miasme" class="sub-link">Torrent de miasme</a>
+  <a href="#specialisations" class="section-link">Spécialisations</a>
+  <a href="#porteur-de-mort" class="section-link">Porteur de Mort</a>
+  <a href="#moisson-du-chaos" class="sub-link">Moisson du chaos</a>
+  <a href="#moisson-frigide" class="sub-link">Moisson frigide</a>
+  <a href="#voile-temporel" class="sub-link">Voile temporel</a>
+  <a href="#garde-de-la-mort" class="section-link">Garde de la Mort</a>
+  <a href="#miasme-erodant" class="sub-link">Miasme érodant</a>
+  <a href="#gardien" class="sub-link">Gardien</a>
+  <a href="#absorption-d-ame" class="sub-link">Absorption d'âme</a>
+  <a href="#moisson-ephemere" class="sub-link">Moisson éphémère</a>
+  <a href="#voile-de-la-mort" class="section-link">Voile de la Mort</a>
+  <a href="#manteau-de-miasme" class="sub-link">Manteau de miasme</a>
+  <a href="#miasme-aveuglant" class="sub-link">Miasme aveuglant</a>
+  <a href="#faucheuse" class="sub-link">Faucheuse</a>
+  <a href="#progression-table" class="section-link">Progression par niveau</a>
+</div> <header class="codex-header">
+      <div class="header-top">
+        <h1>
+          <img src="../../assets/images/class-icons/harbinger.png" class="image class-icon"> Héraut
+        </h1>
+        <div class="fixed-header-links">
+          <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Index des classes</a>
+          <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Retour au Codex</a>
+        </div>
+      </div>
+      <div>
+      <div class="illustration-wrapper double">
+      
+          <img src="../../assets/images/class-art/harbinger1.png" alt="Illustration Héraut" class="illustration-classe">
+        
+
+          <img src="../../assets/images/class-art/harbinger2.png" alt="Illustration Héraut" class="illustration-classe">
+         
+        </div>
+        </div>
+    </header>
+    <main class="accueil">
+      <section class="intro-collapsible click" id="intro">
+        <p>Un guerrier mystérieux formé dans l'art de manipuler le Miasme. Les Hérauts ne cherchent pas à forcer leur chemin à travers l'opposition, mais plutôt à l'affaiblir et à frapper de manière opportuniste pour infliger des dégâts maximum. Ils peuvent également affaiblir les ennemis pour aider les alliés à les abattre, voire utiliser le miasme pour surprendre discrètement des cibles et se faufiler autour d'obstacles. Les faux sont leur arme de prédilection, bien qu'ils puissent aussi manier des épées. Bien puissants, les Hérauts comptent sur l'exploitation des ennemis contrôlés ; s'ils ne peuvent pas exploiter correctement le moment de faiblesse d'un ennemi, ils restent ouverts et plus faibles que d'autres alliés causant des dégâts. </p>
+        <button class="toggle-intro" onclick="toggleIntro()">Afficher la suite</button>
+      </section>
+      <section class="patch-section">
+        <h2 class="patch-titre" id="details">
+          <img src="../../assets/images/notes-big.png" class="image image-h2"> Détails de la classe
+        </h2>
+        <ul class="image-list"> <li><div class="image-texte"><strong><img src="../../assets/images/class-details/health.png" class="image details-icon"> Points de vie :</strong> 1d8 + modificateur de Constitution par niveau de Héraut</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/hit-dice.png" class="image details-icon"> Dés de vie :</strong> 1d8 par niveau de Héraut</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/saving-throw-dc.png" class="image details-icon"> DD des jets de sauvegarde :</strong> 8 + bonus de maîtrise + modificateur d'Intelligence</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/masteries.png" class="image details-icon"> Maîtrises :</strong> Faux, Épées, Couteaux de lancer ; Armures légères</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/saving-throw.png" class="image details-icon"> Jets de sauvegarde :</strong> Dextérité, Intelligence</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/skills.png" class="image details-icon"> Compétences :</strong> Choisissez 3 parmi Athlétisme, Acrobaties, Arcane, Tromperie, Perception, Investigation, Performance, Escamotage, Survie et Discrétion</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/starting-equipment.png" class="image details-icon"> Équipement de départ :</strong> Une arme maîtrisée (ou deux si légères), un sac d'explorateur, 10 couteaux de lancer, une armure légère</div></li> </ul>
+      </section>
+      <section class="patch-section">
+          <div class="aptitude-search-container">
+            <input type="text" id="aptitude-search" placeholder="Rechercher une aptitude ou un sort..." />
+          </div>
+        <div class="toggle-section">
+          <h2 class="patch-titre" id="aptitudes">
+            <img src="../../assets/images/notes-big.png" class="image image-h2"> Aptitudes de classe <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+          </h2>
+        </div>
+        <div class="collapsible-content expanded">
+          <div class="patch-list"> 
+  <article id="armure-de-miasme">
+  <h3>
+    <img src="../../assets/images/skills-icons/harbinger/miasma-armor.png" class="image skill-icon">
+    Armure de miasme
+    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+  </h3>
+    <p>Au début du combat, le Héraut peut activer l'Armure de miasme en tant qu'action libre pendant 3 rounds. En état d'Armure de miasme, le Héraut gagne un bonus de +1 d'Offense, et sa vitesse de déplacement augmente de 3 mètres. L'Armure de miasme peut être dissipée à tout moment pendant le tour du Héraut sans utiliser d'action. Le Héraut peut activer l'Armure de miasme pendant 3 rounds en tant qu'action, ou ajouter 3 rounds à sa durée.</p>
+  </article>
+
+  <article id="jugement">
+  <h3>
+    <img src="../../assets/images/skills-icons/harbinger/judgement.png" class="image skill-icon">
+    Jugement
+    <span><img src="../../assets/images/action-costs/reaction.png" alt="Reaction" class="image action-icon">1 PA (Réaction)</span>
+  </h3>
+    <p>Lorsque le Héraut est touché ou effleuré par une attaque au corps à corps, il peut utiliser sa réaction pour tenter d'endormir de force la créature qui l'a touché. Cette créature doit réussir un jet de sauvegarde de Sagesse ou être endormie pendant 1 round.</p>
+  </article>
+
+  <article id="voie-du-faucheur">
+  <h3>
+    <img src="../../assets/images/skills-icons/harbinger/reaper-path.png" class="image skill-icon">
+    Voie du Faucheur
+    <span><img src="../../assets/images/action-costs/specialisation.png" alt="Specialisation" class="image action-icon">Spécialisation</span>
+  </h3>
+    <p>Choisissez une Voie. Le Héraut gagnera des aptitudes supplémentaires de cette Voie au fur et à mesure de leur montée en niveau.</p>
+  </article>
+
+  <article id="moisson-maudite">
+  <h3>
+    <img src="../../assets/images/skills-icons/harbinger/cursed-reap.png" class="image skill-icon">
+    Moisson maudite
+    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+  </h3>
+    <p>Effectuez une attaque au corps à corps contre toutes les créatures hostiles à portée. Si le Héraut est en état d'Armure de miasme, les créatures touchées doivent réussir un jet de sauvegarde de Sagesse ou être maudites pendant 2 rounds.</p>
+  </article>
+
+  <article id="lame-noire">
+  <h3>
+    <img src="../../assets/images/skills-icons/harbinger/black-blade.png" class="image skill-icon">
+    Lame noire
+    <span><img src="../../assets/images/action-costs/combo-action.png" alt="Combo" class="image action-icon">1 PA (Action Combo)</span>
+  </h3>
+    <p>Tant que l'état d'Armure de miasme est actif, le Héraut peut utiliser son action combo pour gagner 2 d’Offense lorsqu'il touche un ennemi affecté par une affliction avec une attaque ; ce bonus a un maximum de 10 et prend fin lorsque le combat se termine. Si plusieurs ennemis doivent être touchés par des attaques dans une seule action, comme avec une Moisson, le Héraut peut augmenter son Offense de 2 pour chaque cible touchée.</p>
+  </article>
+
+  <article id="expiation">
+  <h3>
+    <img src="../../assets/images/skills-icons/harbinger/atonement.png" class="image skill-icon">
+    Expiation
+    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+  </h3>
+    <p>En tant qu'action, dissipez l'Armure de miasme pour cibler jusqu'à 4 créatures amicales et volontaires dans un rayon de 30 mètres. Ces créatures récupèrent 2d6 + modificateur d'Intelligence points de vie, et les effets de confusion, de cécité, de paralysie, de poison, de malédiction, de charme, de sommeil ou de pétrification disparaissent sur elles. Ce soin augmente à 4d6 + modificateur d'Intelligence au niveau 11 et 6d6 + modificateur d'Intelligence au niveau 16. L'Expiation peut être utilisée un nombre de fois par long repos égal au modificateur d'Intelligence du Héraut.</p>
+  </article>
+
+  <article id="clarte">
+  <h3>
+    <img src="../../assets/images/skills-icons/harbinger/clarity.png" class="image skill-icon">
+    Clarté
+    <span><img src="../../assets/images/action-costs/bonus-action.png" alt="Bonus" class="image action-icon">1 PA (Action Bonus)</span>
+  </h3>
+    <p>En tant qu'action bonus, le Héraut peut dissiper l'Armure de miasme pour ajouter un bonus de +2 aux jets d'attaque qu'il effectue jusqu'au début de son prochain tour.</p>
+  </article>
+
+  <article id="miasme-fletrissant">
+  <h3>
+    <img src="../../assets/images/skills-icons/harbinger/wilting-miasma.png" class="image skill-icon">
+    Miasme flétrissant
+    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+  </h3>
+    <p>En tant qu'action, choisissez un point dans un rayon de 12 mètres. Les créatures dans un rayon de 3 mètres de ce point font des jets de sauvegarde avec un malus de -3 contre les effets qui les rendraient empoisonnées, maudites, paralysées, confuses, charmées, pétrifiées, endormies ou aveugles pendant 3 rounds. Le Miasme flétrissant ne se cumule pas avec lui-même.</p>
+  </article>
+
+  <article id="moisson-toxique">
+  <h3>
+    <img src="../../assets/images/skills-icons/harbinger/toxic-reap.png" class="image skill-icon">
+    Moisson toxique
+    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+  </h3>
+    <p>Effectuez une attaque au corps à corps contre toutes les créatures hostiles à portée. Si le Héraut est en état d'Armure de miasme, les créatures touchées doivent réussir un jet de sauvegarde de Constitution ou subir 1d10 de dégâts de poison et être empoisonnées pour des dégâts supplémentaires de 1d10 chaque tour pendant 3 rounds.</p>
+  </article>
+
+  <article id="miasme-contraignant">
+  <h3>
+    <img src="../../assets/images/skills-icons/harbinger/binding-miasma.png" class="image skill-icon">
+    Miasme contraignant
+    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+  </h3>
+    <p>En tant qu'action, choisissez un point dans un rayon de 12 mètres. Les créatures dans un rayon de 3 mètres de ce point font des jets de sauvegarde avec un malus de -3 contre les effets qui les rendraient liées à la tête, aux jambes ou aux bras pendant 3 rounds. Elles reçoivent également un malus de -2 aux jets pour guérir de ces effets.</p>
+  </article>
+
+  <article id="rideau-de-miasme">
+  <h3>
+    <img src="../../assets/images/skills-icons/harbinger/miasma-curtain.png" class="image skill-icon">
+    Rideau de miasme
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>Expérimenté dans les déguisements fantaisistes, le Héraut est exceptionnel pour tromper les autres avec son apparence. Il peut même utiliser son miasme pour aider à produire un déguisement convaincant - tous les jets pour vous déguiser ou tromper quelqu'un avec un costume bénéficient d'un avantage.</p>
+  </article>
+
+  <article id="moisson-fatale">
+  <h3>
+    <img src="../../assets/images/skills-icons/harbinger/fatal-reap.png" class="image skill-icon">
+    Moisson fatale
+    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+  </h3>
+    <p>Effectuez une attaque au corps à corps contre toutes les créatures hostiles à portée. Gagnez 5d8 d'Offense contre les cibles endormies.</p>
+  </article>
+
+  <article id="voile-infini">
+  <h3>
+    <img src="../../assets/images/skills-icons/harbinger/endless-shroud.png" class="image skill-icon">
+    Voile infini
+    <span><img src="../../assets/images/action-costs/combo-action.png" alt="Combo" class="image action-icon">1 PA (Action Combo)</span>
+  </h3>
+    <p>Lorsque le Shogun réussit un jet de sauvegarde contre la mort, il peut compter cette réussite comme deux.</p>
+  </article>
+
+  <article id="armure-endurante">
+  <h3>
+    <img src="../../assets/images/skills-icons/harbinger/enduring-armor.png" class="image skill-icon">
+    Armure endurante
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>Lorsque l'Armure de miasme serait dissipée par une action ou une action bonus, le Héraut peut fixer sa durée à 2 tours au lieu de cela. L'Armure endurante peut être activée un nombre de fois égal au modificateur de Sagesse du Héraut.</p>
+  </article>
+
+  <article id="torrent-de-miasme">
+  <h3>
+    <img src="../../assets/images/skills-icons/harbinger/miasma-torrent.png" class="image skill-icon">
+    Torrent de miasme
+    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+  </h3>
+    <p>En tant qu'action, le Héraut libère un flot répressif d'obscurité. Jusqu'à la fin du prochain round, la durée de l'Armure de miasme du Héraut ne diminue pas et elle ne peut pas être dissipée, le Héraut inflige 5d12 de dégâts supplémentaires lors de sa prochaine attaque (du même type que l'attaque), et toutes les créatures hostiles dans un rayon de 6 mètres perdent 6 mètres de vitesse de déplacement. Le Torrent de Miasme peut être utilisé une fois par long repos.</p>
+  </article> </div>
+        </div>
+      </section>
+      <h2 class="patch-titre" id="specialisations">
+        <img src="../../assets/images/notes-big.png" class="image image-h2"> Spécialisations
+      </h2>
+    
+  <section class="patch-section">
+  <div class="toggle-section">
+    <h2 class="patch-titre" id="porteur-de-mort">
+      <img src="../../assets/images/subclass-icons/harbinger/deathbringer.png" class="image class-icon">
+      Porteur de Mort
+      <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+    </h2>
+    </div>
+    <div class="collapsible-content expanded">
+    <div class="patch-list">
+      
+        <article id="moisson-du-chaos">
+        <h3>
+          <img src="../../assets/images/skills-icons/harbinger/chaos-reap.png" class="image skill-icon">
+          Moisson du chaos
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p>En tant qu'action, le Héraut peut effectuer une attaque au corps à corps contre un nombre quelconque de créatures à portée d'arme de mêlée, en effectuant un jet d'attaque séparé pour chaque cible. Si le Héraut est en Armure de miasme, les cibles touchées doivent réussir un jet de sauvegarde de Constitution ou être confuses pendant 2 rounds.</p>
+        </article>
+
+        <article id="moisson-frigide">
+        <h3>
+          <img src="../../assets/images/skills-icons/harbinger/frigid-reap.png" class="image skill-icon">
+          Moisson frigide
+          <span><img src="../../assets/images/action-costs/combo-action.png" alt="Combo" class="image action-icon">1 PA (Action Combo)</span>
+        </h3>
+          <p>En frappant une cible avec une attaque, si cette cible souffre d'une affliction autre qu'un lien, agrippé, à terre, inconscient ou épuisé, et que le Héraut est en Armure de miasme, le Héraut peut dépenser son action combo pour infliger 4d10 de dégâts de glace à toutes les cibles à portée de mêlée.</p>
+        </article>
+
+        <article id="voile-temporel">
+        <h3>
+          <img src="../../assets/images/skills-icons/harbinger/temporal-shroud.png" class="image skill-icon">
+          Voile temporel
+          <span><img src="../../assets/images/action-costs/heavy-action.png" alt="Heavy" class="image action-icon">3 PA (Action Complexe)</span>
+        </h3>
+          <p>En tant qu'action complexe, le Héraut peut dissiper son Armure de Miasme pour devenir invisible jusqu'à la fin du round. À la fin du round, le Héraut peut se déplacer jusqu'à 18 mètres et effectuer une attaque au corps à corps contre une cible, puis l'invisibilité prend fin. S'il touche, la cible subit 6d10 + modificateur de Dextérité de dégâts tranchants. Le Voile temporel est automatiquement un coup critique s'il est effectué sur une cible souffrant d'une affliction. Il peut être utilisé un nombre de fois par long repos égal au modificateur d'Intelligence du Héraut (minimum 1).</p>
+        </article>
+    </div>
+    </div>
+  </section>
+
+  <section class="patch-section">
+  <div class="toggle-section">
+    <h2 class="patch-titre" id="garde-de-la-mort">
+      <img src="../../assets/images/subclass-icons/harbinger/deathguard.png" class="image class-icon">
+      Garde de la Mort
+      <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+    </h2>
+    </div>
+    <div class="collapsible-content expanded">
+    <div class="patch-list">
+      
+        <article id="miasme-erodant">
+        <h3>
+          <img src="../../assets/images/skills-icons/harbinger/eroding-miasma.png" class="image skill-icon">
+          Miasme érodant
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p>En tant qu'action, choisissez un point dans un rayon de 12 mètres. Pendant 3 rounds, les créatures dans un rayon de 3 mètres de ce point gagnent cet effet : en attaquant cette cible, les créatures gagnent une Offense égale au modificateur de Sagesse du Héraut (minimum 1). L’aptitude Gardien est également apprise au niveau 2.</p>
+        </article>
+
+        <article id="gardien">
+        <h3>
+          <img src="../../assets/images/skills-icons/harbinger/guardian.png" class="image skill-icon">
+          Gardien
+          <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+        </h3>
+          <p>Le Garde de la Mort peut remplacer toutes les mentions d'Intelligence dans les aptitudes de classe du Héraut par Sagesse s'il le souhaite.</p>
+        </article>
+
+        <article id="absorption-d-ame">
+        <h3>
+          <img src="../../assets/images/skills-icons/harbinger/soul-absorb.png" class="image skill-icon">
+          Absorption d'âme
+          <span><img src="../../assets/images/action-costs/combo-action.png" alt="Combo" class="image action-icon">1 PA (Action Combo)</span>
+        </h3>
+          <p>Lors de l'utilisation d'une aptitude qui causerait un malus, le Héraut peut immédiatement utiliser son action combo pour soigner jusqu'à 4 cibles dans un rayon de 18 mètres pour 4d8 + modificateur de Sagesse points de vie. L'Absorption d'âme peut être utilisée un nombre de fois par long repos égal au modificateur de Sagesse du Héraut (minimum 1).</p>
+        </article>
+
+        <article id="moisson-ephemere">
+        <h3>
+          <img src="../../assets/images/skills-icons/harbinger/ephemeral-reap.png" class="image skill-icon">
+          Moisson éphémère
+          <span><img src="../../assets/images/action-costs/heavy-action.png" alt="Heavy" class="image action-icon">3 PA (Action Complexe)</span>
+        </h3>
+          <p>En tant qu'action complexe, retirez tous les malus d'une cible à portée de mêlée, puis effectuez une attaque au corps à corps contre cette cible pour chaque malus purgé. La Moisson éphémère inflige 3d10 + modificateur de Dextérité de dégâts tranchants sur un coup. La Moisson éphémère échoue si l'ennemi n'a pas au moins un malus.</p>
+        </article>
+    </div>
+    </div>
+  </section>
+
+  <section class="patch-section">
+  <div class="toggle-section">
+    <h2 class="patch-titre" id="voile-de-la-mort">
+      <img src="../../assets/images/subclass-icons/harbinger/deathcloak.png" class="image class-icon">
+      Voile de la Mort
+      <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+    </h2>
+    </div>
+    <div class="collapsible-content expanded">
+    <div class="patch-list">
+      
+        <article id="manteau-de-miasme">
+        <h3>
+          <img src="../../assets/images/skills-icons/harbinger/miasma-cloak.png" class="image skill-icon">
+          Manteau de miasme
+          <span><img src="../../assets/images/action-costs/combo-action.png" alt="Combo" class="image action-icon">1 PA (Action Combo)</span>
+        </h3>
+          <p>Tant que l'Armure de miasme est active, le Héraut acquiert la capacité de se cacher en tant qu'action bonus. En attaquant un ennemi contre lequel il est caché, le Héraut peut cibler une vulnérabilité en tant qu'action combo ; leur Offense augmente de 2d6 pour cette attaque.</p>
+        </article>
+
+        <article id="miasme-aveuglant">
+        <h3>
+          <img src="../../assets/images/skills-icons/harbinger/blinding-miasma.png" class="image skill-icon">
+          Miasme aveuglant
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p>Lorsque le Shogun donne un Ordre ou applique la Justice rapide ou le Grand guerrier, il peut utiliser son action combo pour pousser un cri de renforcement ; lancez 2d8 + modificateur de Charisme. Les créatures amicales et volontaires dans un rayon de 18 mètres actuellement sous les effets du Grand guerrier, de la Justice rapide ou d'un Ordre du Shogun gagnent ce montant de points de vie temporaires, et peuvent dépenser tous les points de vie temporaires sur n'importe quel jet de dégâts pour infliger des dégâts bonus égaux au montant dépensé. L'Effort unifié peut être utilisé jusqu'à 2 fois par long repos.</p>
+        </article>
+
+        <article id="faucheuse">
+        <h3>
+          <img src="../../assets/images/skills-icons/harbinger/grim-reaper.png" class="image skill-icon">
+          Faucheuse
+          <span><img src="../../assets/images/action-costs/bonus-action.png" alt="Bonus" class="image action-icon">1 PA (Action Bonus)</span>
+        </h3>
+          <p>Lorsque le Héraut est en état d'Armure de miasme, il peut activer Faucheuse en tant qu'action bonus. Pendant 4 rounds, si le Héraut est caché d'une cible lorsqu'il réussit une attaque ou l'effleure, il peut forcer cette cible à effectuer également un jet de sauvegarde de Constitution. En cas d'échec, cette créature subit 2d6 de dégâts nécrotiques et subit un échec de jet de sauvegarde contre la mort - si cela devait les amener à atteindre 3 échecs de jet de sauvegarde contre la mort, ils périssent instantanément. En cas de réussite, ils ne subissent pas d'échec de jet de sauvegarde contre la mort, et subissent la moitié des dégâts.</p>
+        </article>
+    </div>
+    </div>
+  </section>
+    
+    <section class="patch-section">
+  <h2 class="patch-titre" id="progression">
+    <img src="../../assets/images/notes-big.png" class="image image-h2">
+    Progression par niveau
+  </h2>
+  <div class="table-container">
+    <table class="progression-table" id="progression-table">
+      <thead>
+        <tr>
+          <th>Niveau</th>
+          <th>Bonus de maîtrise</th>
+          <th>Aptitudes</th>
+        </tr>
+      </thead>
+      <tbody>
+    <tr>
+      <td>1</td>
+      <td>+2</td>
+      <td>Armure de miasme</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>+2</td>
+      <td>Jugement, Voie du Faucheur, Aptitude de Voie</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>+2</td>
+      <td>Moisson maudite</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>+2</td>
+      <td>Amélioration de caractéristiques, Défense +1</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>+3</td>
+      <td>Lame noire</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>+3</td>
+      <td>Expiation</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>+3</td>
+      <td>Clarté</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>+3</td>
+      <td>Amélioration de caractéristiques, Défense +1</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>+4</td>
+      <td>Aptitude de Voie</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>+4</td>
+      <td>Miasme flétrissant</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>+4</td>
+      <td>Moisson toxique</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>+4</td>
+      <td>Amélioration de caractéristiques, Défense +1</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>+5</td>
+      <td>Miasme contraignant</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>+5</td>
+      <td>Rideau de miasme</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>+5</td>
+      <td>Moisson fatale</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>+5</td>
+      <td>Amélioration de caractéristiques, Défense +1</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>+6</td>
+      <td>Aptitude de Voie</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>+6</td>
+      <td>Voile infini</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>+6</td>
+      <td>Armure endurante</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>+6</td>
+      <td>Torrent de miasme</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</section>
+    </main>
+    <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button> <footer>
+    <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+</footer> <script>
+      document.addEventListener("DOMContentLoaded", function() {
+            const navContainer = document.querySelector('.class-nav');
+            const navLinks = document.querySelectorAll('.class-nav a[href^="#"]');
+            const sections = [...document.querySelectorAll("h2.patch-titre, article")];
+            let lastActive = null;
+            const observer = new IntersectionObserver((entries) => {
+                  entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                          const id = entry.target.getAttribute("id");
+                          const activeLink = [...navLinks].find(link => link.getAttribute("href") === `#${id}`);
+         
+                 if (activeLink && activeLink !== lastActive) {
+                 navLinks.forEach(link => link.classList.remove("active"));
+                 activeLink.classList.add("active");
+         
+                 // Scroll l'élément actif dans le menu si partiellement masqué
+                 const linkTop = activeLink.getBoundingClientRect().top;
+                 const navTop = navContainer.getBoundingClientRect().top;
+                 const linkBottom = linkTop + activeLink.offsetHeight;
+                 const navBottom = navTop + navContainer.offsetHeight;
+         
+                 if (linkTop < navTop || linkBottom > navBottom) {
+                     activeLink.scrollIntoView({ behavior: "smooth", block: "center" });
+                 }
+         
+                 lastActive = activeLink;
+                 }
+             }
+             });
+         }, {
+             rootMargin: "-30% 0px -60% 0px",
+             threshold: 0.1
+         });
+         
+         sections.forEach(section => observer.observe(section));
+         });
+      
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const searchInput = document.getElementById("aptitude-search");
+        const aptitudeArticles = document.querySelectorAll("article");
+        searchInput.addEventListener("input", function() {
+          const value = searchInput.value.toLowerCase();
+          aptitudeArticles.forEach(article => {
+            const title = article.querySelector("h3")?.textContent?.toLowerCase() || "";
+            const content = article.textContent?.toLowerCase() || "";
+            if (title.includes(value) || content.includes(value)) {
+              article.style.display = "";
+            } else {
+              article.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
+    <script>
+      function toggleIntro() {
+        const section = document.getElementById("intro");
+        section.classList.toggle("expanded");
+        const btn = section.querySelector("button");
+        btn.textContent = section.classList.contains("expanded") ? "Réduire" : "Afficher la suite";
+      }
+    </script>
+    <script>
+      function toggleSection(button) {
+        const content = button.closest("section").querySelector(".collapsible-content");
+        const isOpen = content.classList.contains("expanded");
+        if (isOpen) {
+          content.classList.remove("expanded");
+          button.textContent = "▼";
+        } else {
+          content.classList.add("expanded");
+          button.textContent = "▲";
+        }
+      }
+    </script>
+    <script>
+      window.addEventListener('scroll', () => {
+        document.getElementById('backToTop').classList.toggle('show', window.scrollY > 300);
+      });
+    </script>
+    <script>
+      function toggleMobileNav(btn) {
+        const overlay = document.getElementById("mobileNav");
+        overlay.classList.toggle("show");
+        btn.classList.toggle("open");
+        btn.textContent = overlay.classList.contains("show") ? "✕" : "☰";
+      }
+    </script>
+    <script src="../../particles.js"></script>
+    <button class="mobile-nav-toggle" onclick="toggleMobileNav(this)">☰</button>
+    <div class="mobile-nav-overlay" id="mobileNav">
+      <div class="mobile-nav-content">  <a href="#details" class="section-link" onclick="toggleMobileNav()">Détails</a>
+ <a href="#aptitudes" class="section-link" onclick="toggleMobileNav()">Aptitudes</a>
+ <a href="#armure-de-miasme" class="sub-link" onclick="toggleMobileNav()">Armure de miasme</a>
+ <a href="#jugement" class="sub-link" onclick="toggleMobileNav()">Jugement</a>
+ <a href="#voie-du-faucheur" class="sub-link" onclick="toggleMobileNav()">Voie du Faucheur</a>
+ <a href="#moisson-maudite" class="sub-link" onclick="toggleMobileNav()">Moisson maudite</a>
+ <a href="#lame-noire" class="sub-link" onclick="toggleMobileNav()">Lame noire</a>
+ <a href="#expiation" class="sub-link" onclick="toggleMobileNav()">Expiation</a>
+ <a href="#clarte" class="sub-link" onclick="toggleMobileNav()">Clarté</a>
+ <a href="#miasme-fletrissant" class="sub-link" onclick="toggleMobileNav()">Miasme flétrissant</a>
+ <a href="#moisson-toxique" class="sub-link" onclick="toggleMobileNav()">Moisson toxique</a>
+ <a href="#miasme-contraignant" class="sub-link" onclick="toggleMobileNav()">Miasme contraignant</a>
+ <a href="#rideau-de-miasme" class="sub-link" onclick="toggleMobileNav()">Rideau de miasme</a>
+ <a href="#moisson-fatale" class="sub-link" onclick="toggleMobileNav()">Moisson fatale</a>
+ <a href="#voile-infini" class="sub-link" onclick="toggleMobileNav()">Voile infini</a>
+ <a href="#armure-endurante" class="sub-link" onclick="toggleMobileNav()">Armure endurante</a>
+ <a href="#torrent-de-miasme" class="sub-link" onclick="toggleMobileNav()">Torrent de miasme</a>
+ <a href="#specialisations" class="section-link" onclick="toggleMobileNav()">Spécialisations</a>
+ <a href="#porteur-de-mort" class="section-link" onclick="toggleMobileNav()">Porteur de Mort</a>
+ <a href="#moisson-du-chaos" class="sub-link" onclick="toggleMobileNav()">Moisson du chaos</a>
+ <a href="#moisson-frigide" class="sub-link" onclick="toggleMobileNav()">Moisson frigide</a>
+ <a href="#voile-temporel" class="sub-link" onclick="toggleMobileNav()">Voile temporel</a>
+ <a href="#garde-de-la-mort" class="section-link" onclick="toggleMobileNav()">Garde de la Mort</a>
+ <a href="#miasme-erodant" class="sub-link" onclick="toggleMobileNav()">Miasme érodant</a>
+ <a href="#gardien" class="sub-link" onclick="toggleMobileNav()">Gardien</a>
+ <a href="#absorption-d-ame" class="sub-link" onclick="toggleMobileNav()">Absorption d'âme</a>
+ <a href="#moisson-ephemere" class="sub-link" onclick="toggleMobileNav()">Moisson éphémère</a>
+ <a href="#voile-de-la-mort" class="section-link" onclick="toggleMobileNav()">Voile de la Mort</a>
+ <a href="#manteau-de-miasme" class="sub-link" onclick="toggleMobileNav()">Manteau de miasme</a>
+ <a href="#miasme-aveuglant" class="sub-link" onclick="toggleMobileNav()">Miasme aveuglant</a>
+ <a href="#faucheuse" class="sub-link" onclick="toggleMobileNav()">Faucheuse</a>
+ <a href="#progression-table" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
+    </div>
+  </body>
+</html>
