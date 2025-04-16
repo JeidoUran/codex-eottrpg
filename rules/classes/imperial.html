@@ -39,7 +39,7 @@
   <a href="#ecran-thermique" class="sub-link">Écran thermique</a>
   <a href="#reserve-elementaire" class="sub-link">Réserve élémentaire</a>
   <a href="#tranchant-tempere" class="sub-link">Tranchant tempéré</a>
-  <a href="#progression-table" class="section-link">Progression par niveau</a>
+  <a href="#tab-general" class="section-link">Progression par niveau</a>
 </div> <header class="codex-header">
       <div class="header-top">
         <h1>
@@ -325,15 +325,16 @@
     <img src="../../assets/images/notes-big.png" class="image image-h2">
     Progression par niveau
   </h2>
-  <div class="table-container">
-    <table class="progression-table" id="progression-table">
-      <thead>
-        <tr>
-          <th>Niveau</th>
-          <th>Bonus de maîtrise</th>
-          <th>Aptitudes</th>
-        </tr>
-      </thead>
+
+  <div class="class-table-tabs-wrapper">
+    <button class="tab-button active" onclick="switchTab(event, 'imperial-general')">Impérial</button>
+    <button class="tab-button" onclick="switchTab(event, 'imperial-destruction')">Serment de Destruction</button>
+    <button class="tab-button" onclick="switchTab(event, 'imperial-protection')">Serment de Protection</button>
+  </div>
+
+  <div class="table-container tab-content" id="tab-general">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Bonus de maîtrise</th><th>Aptitudes</th></tr></thead>
       <tbody>
         <tr><td>1</td><td>+2</td><td>Maîtrise de la lame cinétique, Assaut cinétique</td></tr>
         <tr><td>2</td><td>+2</td><td>Tranchant acéré, Garde lourde</td></tr>
@@ -358,7 +359,41 @@
       </tbody>
     </table>
   </div>
+
+  <div class="table-container tab-content" id="tab-imperial-destruction" style="display:none;">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Aptitude Serment de Destruction</th></tr></thead>
+      <tbody>
+        <tr><td>3</td><td>Inter-refroidisseur</td></tr>
+        <tr><td>10</td><td>Dissipateur de chaleur</td></tr>
+        <tr><td>17</td><td>Effet large</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-container tab-content" id="tab-imperial-protection" style="display:none;">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Aptitude Serment de Protection</th></tr></thead>
+      <tbody>
+        <tr><td>3</td><td>Écran thermique</td></tr>
+        <tr><td>10</td><td>Réserve élémentaire</td></tr>
+        <tr><td>17</td><td>Tranchant tempéré</td></tr>
+      </tbody>
+    </table>
+  </div>
 </section>
+
+<script>
+function switchTab(event, tabId) {
+  const tabs = document.querySelectorAll('.tab-button');
+  const contents = document.querySelectorAll('.tab-content');
+  tabs.forEach(t => t.classList.remove('active'));
+  contents.forEach(c => c.style.display = 'none');
+  event.target.classList.add('active');
+  document.getElementById(`tab-${tabId}`).style.display = '';
+}
+</script>
+
     </main>
     <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button> <footer>
     <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
@@ -483,7 +518,7 @@
  <a href="#ecran-thermique" class="sub-link" onclick="toggleMobileNav()">Écran thermique</a>
  <a href="#reserve-elementaire" class="sub-link" onclick="toggleMobileNav()">Réserve élémentaire</a>
  <a href="#tranchant-tempere" class="sub-link" onclick="toggleMobileNav()">Tranchant tempéré</a>
- <a href="#progression-table" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
+ <a href="#tab-general" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
     </div>
   </body>
 </html>

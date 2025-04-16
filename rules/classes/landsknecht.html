@@ -44,7 +44,7 @@
   <a href="#brise-offense" class="sub-link">Brise-offense</a>
   <a href="#brise-garde" class="sub-link">Brise-garde</a>
   <a href="#fracassement-total" class="sub-link">Fracassement total</a>
-  <a href="#progression-table" class="section-link">Progression par niveau</a>
+  <a href="#tab-general" class="section-link">Progression par niveau</a>
 </div> <header class="codex-header">
       <div class="header-top">
         <h1>
@@ -375,13 +375,21 @@
     </div>
   </section>
     
-    <section class="patch-section">
+    
+<section class="patch-section">
   <h2 class="patch-titre" id="progression">
     <img src="../../assets/images/notes-big.png" class="image image-h2">
     Progression par niveau
   </h2>
-  <div class="table-container">
-    <table class="progression-table" id="progression-table">
+  <div class="class-table-tabs-wrapper">
+    <button class="tab-button active" onclick="switchTab(event, 'general')">Lansquenet</button>
+    <button class="tab-button" onclick="switchTab(event, 'epes')">Maître des Épées</button>
+    <button class="tab-button" onclick="switchTab(event, 'haches')">Maître des Haches</button>
+    <button class="tab-button" onclick="switchTab(event, 'boucliers')">Maître des Boucliers</button>
+  </div>
+
+  <div class="table-container tab-content" id="tab-general">
+    <table class="progression-table">
       <thead>
         <tr>
           <th>Niveau</th>
@@ -391,30 +399,84 @@
         </tr>
       </thead>
       <tbody>
-        <tr><td>1</td><td>+2</td><td>2</td><td>Tranchant furieux</td></tr>
-        <tr><td>2</td><td>+2</td><td>2</td><td>Charge téméraire, Double frappe</td></tr>
-        <tr><td>3</td><td>+2</td><td>2</td><td>Spécialité d'arme, Aptitude de Spécialité</td></tr>
-        <tr><td>4</td><td>+2</td><td>2</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-        <tr><td>5</td><td>+3</td><td>2</td><td>Avant-garde</td></tr>
-        <tr><td>6</td><td>+3</td><td>2</td><td>Œil pour les profits</td></tr>
-        <tr><td>7</td><td>+3</td><td>2</td><td>Aptitude de Spécialité</td></tr>
-        <tr><td>8</td><td>+3</td><td>2</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-        <tr><td>9</td><td>+4</td><td>2</td><td>Redoublement</td></tr>
-        <tr><td>10</td><td>+4</td><td>3</td><td>Déliement</td></tr>
-        <tr><td>11</td><td>+4</td><td>3</td><td>Aptitude de Spécialité</td></tr>
-        <tr><td>12</td><td>+4</td><td>3</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-        <tr><td>13</td><td>+5</td><td>3</td><td>Maître d'armes</td></tr>
-        <tr><td>14</td><td>+5</td><td>3</td><td>Initiative</td></tr>
-        <tr><td>15</td><td>+5</td><td>3</td><td>Cri de guerre</td></tr>
-        <tr><td>16</td><td>+5</td><td>3</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-        <tr><td>17</td><td>+6</td><td>3</td><td>Passage en force</td></tr>
-        <tr><td>18</td><td>+6</td><td>4</td><td>Revitalisation</td></tr>
-        <tr><td>19</td><td>+6</td><td>4</td><td>Aptitude de Spécialité</td></tr>
-        <tr><td>20</td><td>+6</td><td>4</td><td>Charge totale</td></tr>
+<tr><td>Niveau</td><td>Bonus de maîtrise</td><td>Dé de Double frappe</td><td>Aptitudes</td></tr>
+<tr><td>1</td><td>+2</td><td>2</td><td>Tranchant furieux</td></tr>
+<tr><td>2</td><td>+2</td><td>2</td><td>Charge téméraire, Double frappe</td></tr>
+<tr><td>3</td><td>+2</td><td>2</td><td>Spécialité d'arme, Aptitude de Spécialité</td></tr>
+<tr><td>4</td><td>+2</td><td>2</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+<tr><td>5</td><td>+3</td><td>2</td><td>Avant-garde</td></tr>
+<tr><td>6</td><td>+3</td><td>2</td><td>Œil pour les profits</td></tr>
+<tr><td>7</td><td>+3</td><td>2</td><td>Aptitude de Spécialité</td></tr>
+<tr><td>8</td><td>+3</td><td>2</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+<tr><td>9</td><td>+4</td><td>2</td><td>Redoublement</td></tr>
+<tr><td>10</td><td>+4</td><td>3</td><td>Déliement</td></tr>
+<tr><td>11</td><td>+4</td><td>3</td><td>Aptitude de Spécialité</td></tr>
+<tr><td>12</td><td>+4</td><td>3</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+<tr><td>13</td><td>+5</td><td>3</td><td>Maître d'armes</td></tr>
+<tr><td>14</td><td>+5</td><td>3</td><td>Initiative</td></tr>
+<tr><td>15</td><td>+5</td><td>3</td><td>Cri de guerre</td></tr>
+<tr><td>16</td><td>+5</td><td>3</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+<tr><td>17</td><td>+6</td><td>3</td><td>Passage en force</td></tr>
+<tr><td>18</td><td>+6</td><td>4</td><td>Revitalisation</td></tr>
+<tr><td>19</td><td>+6</td><td>4</td><td>Aptitude de Spécialité</td></tr>
+<tr><td>20</td><td>+6</td><td>4</td><td>Charge totale</td></tr>
+
       </tbody>
     </table>
   </div>
+
+  <div class="table-container tab-content" id="tab-epes" style="display:none;">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Aptitude</th></tr></thead>
+      <tbody>
+<tr><td>3</td><td>Maîtrise de l'épée</td></tr>
+<tr><td>7</td><td>Tornade</td></tr>
+<tr><td>11</td><td>Frappe du faucon</td></tr>
+<tr><td>19</td><td>Ouragan</td></tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-container tab-content" id="tab-haches" style="display:none;">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Aptitude</th></tr></thead>
+      <tbody>
+<tr><td>3</td><td>Maîtrise de la hache</td></tr>
+<tr><td>7</td><td>Hache boomerang</td></tr>
+<tr><td>11</td><td>Brise-crâne</td></tr>
+<tr><td>19</td><td>Frappe lourde</td></tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-container tab-content" id="tab-boucliers" style="display:none;">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Aptitude</th></tr></thead>
+      <tbody>
+<tr><td>3</td><td>Maîtrise du bouclier</td></tr>
+<tr><td>7</td><td>Brise-offense</td></tr>
+<tr><td>11</td><td>Brise-garde</td></tr>
+<tr><td>19</td><td>Fracassement total</td></tr>
+
+      </tbody>
+    </table>
+  </div>
+
 </section>
+
+<script>
+function switchTab(event, tabId) {
+  const tabs = document.querySelectorAll('.tab-button');
+  const contents = document.querySelectorAll('.tab-content');
+  tabs.forEach(t => t.classList.remove('active'));
+  contents.forEach(c => c.style.display = 'none');
+  event.target.classList.add('active');
+  document.getElementById(`tab-${tabId}`).style.display = '';
+}
+</script>
+
     </main>
     <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button> <footer>
     <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
@@ -544,7 +606,7 @@
  <a href="#brise-offense" class="sub-link" onclick="toggleMobileNav()">Brise-offense</a>
  <a href="#brise-garde" class="sub-link" onclick="toggleMobileNav()">Brise-garde</a>
  <a href="#fracassement-total" class="sub-link" onclick="toggleMobileNav()">Fracassement total</a>
- <a href="#progression-table" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
+ <a href="#tab-general" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
     </div>
   </body>
 </html>

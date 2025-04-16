@@ -41,7 +41,7 @@
   <a href="#double-coup" class="sub-link">Double coup</a>
   <a href="#dechainement" class="sub-link">Déchaînement</a>
   <a href="#poing-de-la-fournaise" class="sub-link">Poing de la fournaise</a>
-  <a href="#progression-table" class="section-link">Progression par niveau</a>
+  <a href="#tab-general" class="section-link">Progression par niveau</a>
 </div> <header class="codex-header">
       <div class="header-top">
         <h1>
@@ -340,47 +340,89 @@
     </div>
   </section>
     
-    <section class="patch-section">
-  <h2 class="patch-titre" id="progression-table">
+    
+<section class="patch-section">
+  <h2 class="patch-titre" id="progression">
     <img src="../../assets/images/notes-big.png" class="image image-h2">
     Progression par niveau
   </h2>
-<div class="table-container">
-  <table class="progression-table" id="progression-table">
-    <thead>
-      <tr>
-      <th>Niveau</th>
-      <th>Bonus de maîtrise</th>
-      <th>Réserve de Qi</th>
-      <th>Dégâts aux poings</th>
-      <th>Aptitudes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>1</td><td>+2</td><td>3</td><td>1d4</td><td>Défense sans armure, Maîtrise du Qi, Guérison du Qi, Maîtrise du poing</td></tr>
-    <tr><td>2</td><td>+2</td><td>4</td><td>1d4</td><td>Déliement, Contre</td></tr>
-    <tr><td>3</td><td>+2</td><td>5</td><td>1d4</td><td>Style d'arts martiaux, Aptitude de Style</td></tr>
-    <tr><td>4</td><td>+2</td><td>7</td><td>1d4</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-    <tr><td>5</td><td>+3</td><td>8</td><td>1d6</td><td>Récompense ascétique</td></tr>
-    <tr><td>6</td><td>+3</td><td>9</td><td>1d6</td><td>Rafraîchissement</td></tr>
-    <tr><td>7</td><td>+3</td><td>10</td><td>1d6</td><td>Charge de Qi</td></tr>
-    <tr><td>8</td><td>+3</td><td>12</td><td>1d6</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-    <tr><td>9</td><td>+4</td><td>13</td><td>1d6</td><td>Guérison en ligne</td></tr>
-    <tr><td>10</td><td>+4</td><td>14</td><td>1d8</td><td>Aptitude de Style</td></tr>
-    <tr><td>11</td><td>+4</td><td>15</td><td>1d8</td><td>Kikouken</td></tr>
-    <tr><td>12</td><td>+4</td><td>17</td><td>1d8</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-    <tr><td>13</td><td>+5</td><td>18</td><td>1d8</td><td>Représailles</td></tr>
-    <tr><td>14</td><td>+5</td><td>19</td><td>1d8</td><td>Chakra éveillé</td></tr>
-    <tr><td>15</td><td>+5</td><td>20</td><td>1d10</td><td>Aptitude de Style</td></tr>
-    <tr><td>16</td><td>+5</td><td>22</td><td>1d10</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-    <tr><td>17</td><td>+6</td><td>23</td><td>1d10</td><td>Guérison de groupe</td></tr>
-    <tr><td>18</td><td>+6</td><td>24</td><td>1d10</td><td>Marche du feu</td></tr>
-    <tr><td>19</td><td>+6</td><td>25</td><td>1d10</td><td>Retour du sang</td></tr>
-    <tr><td>20</td><td>+6</td><td>27</td><td>1d10</td><td>Septième porte</td></tr>
-  </tbody>
-</table>
-</div>
+  <div class="class-table-tabs-wrapper">
+    <button class="tab-button active" onclick="switchTab(event, 'general')">Moine</button>
+    <button class="tab-button" onclick="switchTab(event, 'taureau')">Style du Taureau</button>
+    <button class="tab-button" onclick="switchTab(event, 'dragon')">Style du Dragon</button>
+  </div>
+
+  <div class="table-container tab-content" id="tab-general">
+    <table class="progression-table">
+      <thead>
+        <tr>
+          <th>Niveau</th>
+          <th>Bonus de maîtrise</th>
+          <th>Réserve de Qi</th>
+          <th>Dégâts aux poings</th>
+          <th>Aptitudes</th>
+        </tr>
+      </thead>
+      <tbody>
+<tr><td>1</td><td>+2</td><td>3</td><td>1d4</td><td>Défense sans armure, Maîtrise du Qi, Guérison du Qi, Maîtrise du poing</td></tr>
+<tr><td>2</td><td>+2</td><td>4</td><td>1d4</td><td>Déliement, Contre</td></tr>
+<tr><td>3</td><td>+2</td><td>5</td><td>1d4</td><td>Style d'arts martiaux, Aptitude de Style</td></tr>
+<tr><td>4</td><td>+2</td><td>7</td><td>1d4</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+<tr><td>5</td><td>+3</td><td>8</td><td>1d6</td><td>Récompense ascétique</td></tr>
+<tr><td>6</td><td>+3</td><td>9</td><td>1d6</td><td>Rafraîchissement</td></tr>
+<tr><td>7</td><td>+3</td><td>10</td><td>1d6</td><td>Charge de Qi</td></tr>
+<tr><td>8</td><td>+3</td><td>12</td><td>1d6</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+<tr><td>9</td><td>+4</td><td>13</td><td>1d6</td><td>Guérison en ligne</td></tr>
+<tr><td>10</td><td>+4</td><td>14</td><td>1d8</td><td>Aptitude de Style</td></tr>
+<tr><td>11</td><td>+4</td><td>15</td><td>1d8</td><td>Kikouken</td></tr>
+<tr><td>12</td><td>+4</td><td>17</td><td>1d8</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+<tr><td>13</td><td>+5</td><td>18</td><td>1d8</td><td>Représailles</td></tr>
+<tr><td>14</td><td>+5</td><td>19</td><td>1d8</td><td>Chakra éveillé</td></tr>
+<tr><td>15</td><td>+5</td><td>20</td><td>1d10</td><td>Aptitude de Style</td></tr>
+<tr><td>16</td><td>+5</td><td>22</td><td>1d10</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+<tr><td>17</td><td>+6</td><td>23</td><td>1d10</td><td>Guérison de groupe</td></tr>
+<tr><td>18</td><td>+6</td><td>24</td><td>1d10</td><td>Marche du feu</td></tr>
+<tr><td>19</td><td>+6</td><td>25</td><td>1d10</td><td>Retour du sang</td></tr>
+<tr><td>20</td><td>+6</td><td>27</td><td>1d10</td><td>Septième porte</td></tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-container tab-content" id="tab-taureau" style="display:none;">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Aptitude (Taureau)</th></tr></thead>
+      <tbody>
+<tr><td>3</td><td>Poing du tonnerre</td></tr>
+<tr><td>10</td><td>Surmenage</td></tr>
+<tr><td>15</td><td>Poing des ténèbres</td></tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-container tab-content" id="tab-dragon" style="display:none;">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Aptitude (Dragon)</th></tr></thead>
+      <tbody>
+<tr><td>3</td><td>Double coup</td></tr>
+<tr><td>10</td><td>Déchaînement</td></tr>
+<tr><td>15</td><td>Poing de la fournaise</td></tr>
+
+      </tbody>
+    </table>
+  </div>
 </section>
+<script>
+  function switchTab(event, tabId) {
+    const tabs = document.querySelectorAll('.tab-button');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(t => t.classList.remove('active'));
+    contents.forEach(c => c.style.display = 'none');
+    event.target.classList.add('active');
+    document.getElementById(`tab-${tabId}`).style.display = '';
+  }
+  </script>
     </main>
     <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button> <footer>
     <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
@@ -507,7 +549,7 @@
  <a href="#double-coup" class="sub-link" onclick="toggleMobileNav()">Double coup</a>
  <a href="#dechainement" class="sub-link" onclick="toggleMobileNav()">Déchaînement</a>
  <a href="#poing-de-la-fournaise" class="sub-link" onclick="toggleMobileNav()">Poing de la fournaise</a>
- <a href="#progression-table" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
+ <a href="#tab-general" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
     </div>
   </body>
 </html>

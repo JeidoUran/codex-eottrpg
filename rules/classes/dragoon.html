@@ -39,7 +39,7 @@
   <a href="#expertise-en-defense" class="sub-link">Expertise en défense</a>
   <a href="#contre-garde" class="sub-link">Contre-garde</a>
   <a href="#force-du-dragon" class="sub-link">Force du dragon</a>
-  <a href="#progression-table" class="section-link">Progression par niveau</a>
+  <a href="#tab-general" class="section-link">Progression par niveau</a>
 </div> <header class="codex-header">
       <div class="header-top">
         <h1>
@@ -325,15 +325,15 @@
     <img src="../../assets/images/notes-big.png" class="image image-h2">
     Progression par niveau
   </h2>
-  <div class="table-container">
-    <table class="progression-table" id="progression-table">
-      <thead>
-        <tr>
-          <th>Niveau</th>
-          <th>Bonus de maîtrise</th>
-          <th>Aptitudes</th>
-        </tr>
-      </thead>
+  <div class="class-table-tabs-wrapper">
+    <button class="tab-button active" onclick="switchTab(event, 'general')">Dragoon</button>
+    <button class="tab-button" onclick="switchTab(event, 'canon')">Porteur de Canon</button>
+    <button class="tab-button" onclick="switchTab(event, 'bouclier')">Porteur de Bouclier</button>
+  </div>
+
+  <div class="table-container tab-content" id="tab-general">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Bonus de maîtrise</th><th>Aptitudes</th></tr></thead>
       <tbody>
         <tr><td>1</td><td>+2</td><td>Garde de ligne, Corps à corps</td></tr>
         <tr><td>2</td><td>+2</td><td>Bunker leurre, Garde curative</td></tr>
@@ -358,7 +358,41 @@
       </tbody>
     </table>
   </div>
+
+  <div class="table-container tab-content" id="tab-canon" style="display:none;">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Aptitude Porteur de Canon</th></tr></thead>
+      <tbody>
+        <tr><td>3</td><td>Maîtrise du canon</td></tr>
+        <tr><td>9</td><td>Préparation d'artillerie</td></tr>
+        <tr><td>17</td><td>Canon Buster</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-container tab-content" id="tab-bouclier" style="display:none;">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Aptitude Porteur de Bouclier</th></tr></thead>
+      <tbody>
+        <tr><td>3</td><td>Expertise en défense</td></tr>
+        <tr><td>9</td><td>Contre-garde</td></tr>
+        <tr><td>17</td><td>Force du Dragon</td></tr>
+      </tbody>
+    </table>
+  </div>
 </section>
+
+<script>
+function switchTab(event, tabId) {
+  const tabs = document.querySelectorAll('.tab-button');
+  const contents = document.querySelectorAll('.tab-content');
+  tabs.forEach(t => t.classList.remove('active'));
+  contents.forEach(c => c.style.display = 'none');
+  event.target.classList.add('active');
+  document.getElementById(`tab-${tabId}`).style.display = '';
+}
+</script>
+
     </main>
     <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button> <footer>
     <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
@@ -483,7 +517,7 @@
  <a href="#expertise-en-defense" class="sub-link" onclick="toggleMobileNav()">Expertise en défense</a>
  <a href="#contre-garde" class="sub-link" onclick="toggleMobileNav()">Contre-garde</a>
  <a href="#force-du-dragon" class="sub-link" onclick="toggleMobileNav()">Force du dragon</a>
- <a href="#progression-table" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
+ <a href="#tab-general" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
     </div>
   </body>
 </html>

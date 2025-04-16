@@ -43,7 +43,7 @@
   <a href="#manteau-de-miasme" class="sub-link">Manteau de miasme</a>
   <a href="#miasme-aveuglant" class="sub-link">Miasme aveuglant</a>
   <a href="#faucheuse" class="sub-link">Faucheuse</a>
-  <a href="#progression-table" class="section-link">Progression par niveau</a>
+  <a href="#tab-general" class="section-link">Progression par niveau</a>
 </div> <header class="codex-header">
       <div class="header-top">
         <h1>
@@ -370,120 +370,86 @@
     <img src="../../assets/images/notes-big.png" class="image image-h2">
     Progression par niveau
   </h2>
-  <div class="table-container">
-    <table class="progression-table" id="progression-table">
-      <thead>
-        <tr>
-          <th>Niveau</th>
-          <th>Bonus de maîtrise</th>
-          <th>Aptitudes</th>
-        </tr>
-      </thead>
+  <div class="class-table-tabs-wrapper">
+    <button class="tab-button active" onclick="switchTab(event, 'general')">Héraut</button>
+    <button class="tab-button" onclick="switchTab(event, 'mort')">Porteur de Mort</button>
+    <button class="tab-button" onclick="switchTab(event, 'garde')">Garde de la Mort</button>
+    <button class="tab-button" onclick="switchTab(event, 'voile')">Voile de la Mort</button>
+  </div>
+
+  <div class="table-container tab-content" id="tab-general">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Bonus de maîtrise</th><th>Aptitudes</th></tr></thead>
       <tbody>
-    <tr>
-      <td>1</td>
-      <td>+2</td>
-      <td>Armure de miasme</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>+2</td>
-      <td>Jugement, Voie du Faucheur, Aptitude de Voie</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>+2</td>
-      <td>Moisson maudite</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>+2</td>
-      <td>Amélioration de caractéristiques, Défense +1</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>+3</td>
-      <td>Lame noire</td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>+3</td>
-      <td>Expiation</td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>+3</td>
-      <td>Clarté</td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>+3</td>
-      <td>Amélioration de caractéristiques, Défense +1</td>
-    </tr>
-    <tr>
-      <td>9</td>
-      <td>+4</td>
-      <td>Aptitude de Voie</td>
-    </tr>
-    <tr>
-      <td>10</td>
-      <td>+4</td>
-      <td>Miasme flétrissant</td>
-    </tr>
-    <tr>
-      <td>11</td>
-      <td>+4</td>
-      <td>Moisson toxique</td>
-    </tr>
-    <tr>
-      <td>12</td>
-      <td>+4</td>
-      <td>Amélioration de caractéristiques, Défense +1</td>
-    </tr>
-    <tr>
-      <td>13</td>
-      <td>+5</td>
-      <td>Miasme contraignant</td>
-    </tr>
-    <tr>
-      <td>14</td>
-      <td>+5</td>
-      <td>Rideau de miasme</td>
-    </tr>
-    <tr>
-      <td>15</td>
-      <td>+5</td>
-      <td>Moisson fatale</td>
-    </tr>
-    <tr>
-      <td>16</td>
-      <td>+5</td>
-      <td>Amélioration de caractéristiques, Défense +1</td>
-    </tr>
-    <tr>
-      <td>17</td>
-      <td>+6</td>
-      <td>Aptitude de Voie</td>
-    </tr>
-    <tr>
-      <td>18</td>
-      <td>+6</td>
-      <td>Voile infini</td>
-    </tr>
-    <tr>
-      <td>19</td>
-      <td>+6</td>
-      <td>Armure endurante</td>
-    </tr>
-    <tr>
-      <td>20</td>
-      <td>+6</td>
-      <td>Torrent de miasme</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+        <tr><td>1</td><td>+2</td><td>Armure de miasme</td></tr>
+        <tr><td>2</td><td>+2</td><td>Jugement, Voie du Faucheur, Aptitude de Voie</td></tr>
+        <tr><td>3</td><td>+2</td><td>Moisson maudite</td></tr>
+        <tr><td>4</td><td>+2</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+        <tr><td>5</td><td>+3</td><td>Lame noire</td></tr>
+        <tr><td>6</td><td>+3</td><td>Expiation</td></tr>
+        <tr><td>7</td><td>+3</td><td>Clarté</td></tr>
+        <tr><td>8</td><td>+3</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+        <tr><td>9</td><td>+4</td><td>Aptitude de Voie</td></tr>
+        <tr><td>10</td><td>+4</td><td>Miasme flétrissant</td></tr>
+        <tr><td>11</td><td>+4</td><td>Moisson toxique</td></tr>
+        <tr><td>12</td><td>+4</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+        <tr><td>13</td><td>+5</td><td>Miasme contraignant</td></tr>
+        <tr><td>14</td><td>+5</td><td>Rideau de miasme</td></tr>
+        <tr><td>15</td><td>+5</td><td>Moisson fatale</td></tr>
+        <tr><td>16</td><td>+5</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+        <tr><td>17</td><td>+6</td><td>Aptitude de Voie</td></tr>
+        <tr><td>18</td><td>+6</td><td>Voile infini</td></tr>
+        <tr><td>19</td><td>+6</td><td>Armure endurante</td></tr>
+        <tr><td>20</td><td>+6</td><td>Torrent de miasme</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-container tab-content" id="tab-mort" style="display:none;">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Aptitude Porteur de Mort</th></tr></thead>
+      <tbody>
+        <tr><td>2</td><td>Moisson du chaos</td></tr>
+        <tr><td>9</td><td>Moisson frigide</td></tr>
+        <tr><td>17</td><td>Voile temporel</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-container tab-content" id="tab-garde" style="display:none;">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Aptitude Garde de la Mort</th></tr></thead>
+      <tbody>
+        <tr><td>2</td><td>Miasme érodant, Gardien</td></tr>
+        <tr><td>9</td><td>Absorption d'âme</td></tr>
+        <tr><td>17</td><td>Moisson éphémère</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-container tab-content" id="tab-voile" style="display:none;">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Aptitude Voile de la Mort</th></tr></thead>
+      <tbody>
+        <tr><td>2</td><td>Manteau de miasme</td></tr>
+        <tr><td>9</td><td>Miasme aveuglant</td></tr>
+        <tr><td>17</td><td>Faucheuse</td></tr>
+      </tbody>
+    </table>
+  </div>
 </section>
+
+<script>
+function switchTab(event, tabId) {
+  const tabs = document.querySelectorAll('.tab-button');
+  const contents = document.querySelectorAll('.tab-content');
+  tabs.forEach(t => t.classList.remove('active'));
+  contents.forEach(c => c.style.display = 'none');
+  event.target.classList.add('active');
+  document.getElementById(`tab-${tabId}`).style.display = '';
+}
+</script>
+
     </main>
     <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button> <footer>
     <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
@@ -612,7 +578,7 @@
  <a href="#manteau-de-miasme" class="sub-link" onclick="toggleMobileNav()">Manteau de miasme</a>
  <a href="#miasme-aveuglant" class="sub-link" onclick="toggleMobileNav()">Miasme aveuglant</a>
  <a href="#faucheuse" class="sub-link" onclick="toggleMobileNav()">Faucheuse</a>
- <a href="#progression-table" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
+ <a href="#tab-general" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
     </div>
   </body>
 </html>

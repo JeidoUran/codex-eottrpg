@@ -40,7 +40,7 @@
   <a href="#commande-garde" class="sub-link">Commande : Garde</a>
   <a href="#tir-du-chasseur" class="sub-link">Tir du chasseur</a>
   <a href="#lechage-medicinal" class="sub-link">Léchage médicinal</a>
-  <a href="#progression-table" class="section-link">Progression par niveau</a>
+  <a href="#tab-general" class="section-link">Progression par niveau</a>
 </div> <header class="codex-header">
       <div class="header-top">
         <h1>
@@ -336,17 +336,20 @@
     <img src="../../assets/images/notes-big.png" class="image image-h2">
     Progression par niveau
   </h2>
-
-  <div class="playlist-tabs-wrapper" style="margin-bottom: 1rem;">
-    <button class="tab-button active" data-tab="tab-principal">Vagabond</button>
-    <button class="tab-button" data-tab="tab-faucon">Faucon</button>
-    <button class="tab-button" data-tab="tab-loup">Loup</button>
+  <div class="class-table-tabs-wrapper">
+    <button class="tab-button active" onclick="switchTab(event, 'general')">Vagabond</button>
+    <button class="tab-button" onclick="switchTab(event, 'hawk')">Faucon</button>
+    <button class="tab-button" onclick="switchTab(event, 'hound')">Loup</button>
   </div>
 
-  <div class="table-container" id="progression-table">
-    <table class="progression-table tab-content" id="tab-principal">
+  <div class="table-container tab-content" id="tab-general">
+    <table class="progression-table">
       <thead>
-        <tr><th>Niveau</th><th>Bonus de maîtrise</th><th>Aptitudes</th></tr>
+        <tr>
+          <th>Niveau</th>
+          <th>Bonus de maîtrise</th>
+          <th>Aptitudes</th>
+        </tr>
       </thead>
       <tbody>
         <tr><td>1</td><td>+2</td><td>Compagnon animal</td></tr>
@@ -371,8 +374,9 @@
         <tr><td>20</td><td>+6</td><td>Âme bestiale</td></tr>
       </tbody>
     </table>
-
-    <table class="progression-table tab-content" id="tab-faucon" style="display:none;">
+    </div>
+    <div class="table-container tab-content" id="tab-hawk" style="display:none;">
+    <table class="progression-table">
       <thead>
         <tr><th>Niveau</th><th>Aptitudes du Faucon</th></tr>
       </thead>
@@ -384,8 +388,9 @@
         <tr><td>15</td><td>Plongeon</td></tr>
       </tbody>
     </table>
-
-    <table class="progression-table tab-content" id="tab-loup" style="display:none;">
+    </div>
+    <div class="table-container tab-content" id="tab-hound" style="display:none;">
+    <table class="progression-table">
       <thead>
         <tr><th>Niveau</th><th>Aptitudes du Loup</th></tr>
       </thead>
@@ -401,22 +406,15 @@
 </section>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const buttons = document.querySelectorAll(".tab-button");
-    const tabs = document.querySelectorAll(".tab-content");
-
-    buttons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        buttons.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        const target = btn.getAttribute("data-tab");
-        tabs.forEach(t => {
-          t.style.display = (t.id === target) ? "table" : "none";
-        });
-      });
-    });
-  });
-</script>
+  function switchTab(event, tabId) {
+    const tabs = document.querySelectorAll('.tab-button');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(t => t.classList.remove('active'));
+    contents.forEach(c => c.style.display = 'none');
+    event.target.classList.add('active');
+    document.getElementById(`tab-${tabId}`).style.display = '';
+  }
+  </script>
 
     </main>
     <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button> <footer>
@@ -543,7 +541,7 @@
  <a href="#commande-garde" class="sub-link" onclick="toggleMobileNav()">Commande : Garde</a>
  <a href="#tir-du-chasseur" class="sub-link" onclick="toggleMobileNav()">Tir du chasseur</a>
  <a href="#lechage-medicinal" class="sub-link" onclick="toggleMobileNav()">Léchage médicinal</a>
- <a href="#progression-table" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
+ <a href="#tab-general" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
     </div>
   </body>
 </html>

@@ -41,7 +41,7 @@
   <a href="#peau-de-pierre" class="sub-link">Peau de pierre</a>
   <a href="#puissance-de-guerre" class="sub-link">Puissance de guerre</a>
   <a href="#maitrise-des-lois-de-la-guerre" class="sub-link">Maîtrise des lois de la guerre</a>
-  <a href="#progression-table" class="section-link">Progression par niveau</a>
+  <a href="#tab-general" class="section-link">Progression par niveau</a>
 </div> <header class="codex-header">
       <div class="header-top">
         <h1>
@@ -340,13 +340,20 @@
     </div>
   </section>
     
-    <section class="patch-section">
-  <h2 class="patch-titre" id="progression-table">
+    
+<section class="patch-section">
+  <h2 class="patch-titre" id="progression">
     <img src="../../assets/images/notes-big.png" class="image image-h2">
     Progression par niveau
   </h2>
-  <div class="table-container">
-    <table class="progression-table" id="progression-table">
+  <div class="class-table-tabs-wrapper">
+    <button class="tab-button active" onclick="switchTab(event, 'general')">Mage guerrier</button>
+    <button class="tab-button" onclick="switchTab(event, 'lames')">Conclave des Lames de Guerre</button>
+    <button class="tab-button" onclick="switchTab(event, 'savoir')">Conclave du Savoir de la Guerre</button>
+  </div>
+
+  <div class="table-container tab-content" id="tab-general">
+    <table class="progression-table">
       <thead>
         <tr>
           <th>Niveau</th>
@@ -381,7 +388,43 @@
       </tbody>
     </table>
   </div>
+
+  <div class="table-container tab-content" id="tab-lames" style="display:none;">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Aptitude Lames de Guerre</th></tr></thead>
+      <tbody>
+    <tr><td>3</td><td>Tranche-garde</td></tr>
+<tr><td>9</td><td>Lame véritable</td></tr>
+<tr><td>15</td><td>Lame néfaste</td></tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-container tab-content" id="tab-savoir" style="display:none;">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Aptitude Savoir de la Guerre</th></tr></thead>
+      <tbody>
+    <tr><td>3</td><td>Peau de pierre</td></tr>
+<tr><td>9</td><td>Puissance de guerre</td></tr>
+<tr><td>15</td><td>Maîtrise des lois de la guerre</td></tr>
+
+      </tbody>
+    </table>
+  </div>
+
 </section>
+
+<script>
+function switchTab(event, tabId) {
+  const tabs = document.querySelectorAll('.tab-button');
+  const contents = document.querySelectorAll('.tab-content');
+  tabs.forEach(t => t.classList.remove('active'));
+  contents.forEach(c => c.style.display = 'none');
+  event.target.classList.add('active');
+  document.getElementById(`tab-${tabId}`).style.display = '';
+}
+</script>
 
     </main>
     <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button> <footer>
@@ -509,7 +552,7 @@
  <a href="#peau-de-pierre" class="sub-link" onclick="toggleMobileNav()">Peau de pierre</a>
  <a href="#puissance-de-guerre" class="sub-link" onclick="toggleMobileNav()">Puissance de guerre</a>
  <a href="#maitrise-des-lois-de-la-guerre" class="sub-link" onclick="toggleMobileNav()">Maîtrise des lois de la guerre</a>
- <a href="#progression-table" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
+ <a href="#tab-general" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
     </div>
   </body>
 </html>

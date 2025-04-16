@@ -61,7 +61,7 @@
   <a href="#mot-de-protection" class="sub-link">Mot de protection</a>
   <a href="#mot-de-suicide" class="sub-link">Mot de suicide</a>
   <a href="#malediction-de-vengeance" class="sub-link">Malédiction de vengeance</a>
-  <a href="#progression-table" class="section-link">Progression par niveau</a>
+  <a href="#tab-general" class="section-link">Progression par niveau</a>
 </div> <header class="codex-header">
       <div class="header-top">
         <h1>
@@ -694,51 +694,103 @@
         </article>
       </div>
     </section>
-    <section class="patch-section">
-    <h2 class="patch-titre" id="progression">
-      <img src="../../assets/images/notes-big.png" class="image image-h2">
-      Progression par niveau
-    </h2>
-    <div class="table-container">
-      <table class="progression-table" id="progression-table">
-        <thead>
-          <tr>
-            <th>Niveau</th>
-            <th>Bonus de maîtrise</th>
-            <th>Sorts mineurs</th>
-            <th>Sorts connus</th>
-            <th>Sorts niv. 1</th>
-            <th>Sorts niv. 2</th>
-            <th>Sorts niv. 3</th>
-            <th>Aptitudes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>1</td><td>+2</td><td>2</td><td>1</td><td>3</td><td>—</td><td>—</td><td>Malédictions</td></tr>
-          <tr><td>2</td><td>+2</td><td>3</td><td>2</td><td>3</td><td>—</td><td>—</td><td>Vengeance</td></tr>
-          <tr><td>3</td><td>+2</td><td>3</td><td>2</td><td>4</td><td>—</td><td>—</td><td>Dévouement aux malédictions, Aptitude de Dévouement</td></tr>
-          <tr><td>4</td><td>+2</td><td>3</td><td>3</td><td>4</td><td>—</td><td>—</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-          <tr><td>5</td><td>+3</td><td>3</td><td>4</td><td>4</td><td>2</td><td>—</td><td>Parole pressée</td></tr>
-          <tr><td>6</td><td>+3</td><td>3</td><td>5</td><td>4</td><td>2</td><td>—</td><td>—</td></tr>
-          <tr><td>7</td><td>+3</td><td>3</td><td>5</td><td>4</td><td>3</td><td>—</td><td>Corps enchaîné (Passif)</td></tr>
-          <tr><td>8</td><td>+3</td><td>3</td><td>5</td><td>4</td><td>3</td><td>—</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-          <tr><td>9</td><td>+4</td><td>3</td><td>6</td><td>4</td><td>3</td><td>—</td><td>Aptitude de Dévouement</td></tr>
-          <tr><td>10</td><td>+4</td><td>4</td><td>6</td><td>4</td><td>4</td><td>—</td><td>—</td></tr>
-          <tr><td>11</td><td>+4</td><td>4</td><td>7</td><td>4</td><td>4</td><td>—</td><td>—</td></tr>
-          <tr><td>12</td><td>+4</td><td>4</td><td>7</td><td>4</td><td>4</td><td>—</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-          <tr><td>13</td><td>+5</td><td>4</td><td>8</td><td>4</td><td>4</td><td>2</td><td>—</td></tr>
-          <tr><td>14</td><td>+5</td><td>4</td><td>8</td><td>4</td><td>4</td><td>2</td><td>Aptitude de Dévouement</td></tr>
-          <tr><td>15</td><td>+5</td><td>4</td><td>8</td><td>4</td><td>4</td><td>3</td><td>Arts interdits</td></tr>
-          <tr><td>16</td><td>+5</td><td>4</td><td>8</td><td>4</td><td>4</td><td>3</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-          <tr><td>17</td><td>+6</td><td>4</td><td>9</td><td>4</td><td>4</td><td>3</td><td>—</td></tr>
-          <tr><td>18</td><td>+6</td><td>4</td><td>9</td><td>4</td><td>4</td><td>4</td><td>—</td></tr>
-          <tr><td>19</td><td>+6</td><td>4</td><td>9</td><td>4</td><td>4</td><td>4</td><td>Malaise</td></tr>
-          <tr><td>20</td><td>+6</td><td>4</td><td>9</td><td>4</td><td>4</td><td>4</td><td>Stigmates</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-  
+    
+<section class="patch-section">
+  <h2 class="patch-titre" id="progression">
+    <img src="../../assets/images/notes-big.png" class="image image-h2">
+    Progression par niveau
+  </h2>
+  <div class="class-table-tabs-wrapper">
+    <button class="tab-button active" onclick="switchTab(event, 'general')">Envoûteur</button>
+    <button class="tab-button" onclick="switchTab(event, 'controle')">Contrôle</button>
+    <button class="tab-button" onclick="switchTab(event, 'restreinte')">Restreinte</button>
+    <button class="tab-button" onclick="switchTab(event, 'vengeance')">Vengeance</button>
+  </div>
+
+  <div class="table-container tab-content" id="tab-general">
+    <table class="progression-table">
+      <thead>
+        <tr>
+          <th>Niveau</th>
+          <th>Bonus de maîtrise</th>
+          <th>Sorts mineurs</th>
+          <th>Sorts connus</th>
+          <th>Sorts niv. 1</th>
+          <th>Sorts niv. 2</th>
+          <th>Sorts niv. 3</th>
+          <th>Aptitudes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>+2</td><td>2</td><td>1</td><td>3</td><td>—</td><td>—</td><td>Malédictions</td></tr>
+        <tr><td>2</td><td>+2</td><td>3</td><td>2</td><td>3</td><td>—</td><td>—</td><td>Vengeance</td></tr>
+        <tr><td>3</td><td>+2</td><td>3</td><td>2</td><td>4</td><td>—</td><td>—</td><td>Dévouement aux malédictions, Aptitude de Dévouement</td></tr>
+        <tr><td>4</td><td>+2</td><td>3</td><td>3</td><td>4</td><td>—</td><td>—</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+        <tr><td>5</td><td>+3</td><td>3</td><td>4</td><td>4</td><td>2</td><td>—</td><td>Parole pressée</td></tr>
+        <tr><td>6</td><td>+3</td><td>3</td><td>5</td><td>4</td><td>2</td><td>—</td><td>—</td></tr>
+        <tr><td>7</td><td>+3</td><td>3</td><td>5</td><td>4</td><td>3</td><td>—</td><td>Corps enchaîné (Passif)</td></tr>
+        <tr><td>8</td><td>+3</td><td>3</td><td>5</td><td>4</td><td>3</td><td>—</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+        <tr><td>9</td><td>+4</td><td>3</td><td>6</td><td>4</td><td>3</td><td>—</td><td>Aptitude de Dévouement</td></tr>
+        <tr><td>10</td><td>+4</td><td>4</td><td>6</td><td>4</td><td>4</td><td>—</td><td>—</td></tr>
+        <tr><td>11</td><td>+4</td><td>4</td><td>7</td><td>4</td><td>4</td><td>—</td><td>—</td></tr>
+        <tr><td>12</td><td>+4</td><td>4</td><td>7</td><td>4</td><td>4</td><td>—</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+        <tr><td>13</td><td>+5</td><td>4</td><td>8</td><td>4</td><td>4</td><td>2</td><td>—</td></tr>
+        <tr><td>14</td><td>+5</td><td>4</td><td>8</td><td>4</td><td>4</td><td>2</td><td>Aptitude de Dévouement</td></tr>
+        <tr><td>15</td><td>+5</td><td>4</td><td>8</td><td>4</td><td>4</td><td>3</td><td>Arts interdits</td></tr>
+        <tr><td>16</td><td>+5</td><td>4</td><td>8</td><td>4</td><td>4</td><td>3</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+        <tr><td>17</td><td>+6</td><td>4</td><td>9</td><td>4</td><td>4</td><td>3</td><td>—</td></tr>
+        <tr><td>18</td><td>+6</td><td>4</td><td>9</td><td>4</td><td>4</td><td>4</td><td>—</td></tr>
+        <tr><td>19</td><td>+6</td><td>4</td><td>9</td><td>4</td><td>4</td><td>4</td><td>Malaise</td></tr>
+        <tr><td>20</td><td>+6</td><td>4</td><td>9</td><td>4</td><td>4</td><td>4</td><td>Stigmates</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-container tab-content" id="tab-controle" style="display:none;">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Aptitude Contrôle</th></tr></thead>
+      <tbody>
+        <tr><td>3</td><td>Paranoïa</td></tr>
+        <tr><td>9</td><td>Œil flétrissant</td></tr>
+        <tr><td>14</td><td>Domination</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-container tab-content" id="tab-restreinte" style="display:none;">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Aptitude Restreinte</th></tr></thead>
+      <tbody>
+        <tr><td>3</td><td>Malédiction de récidive</td></tr>
+        <tr><td>9</td><td>Méchanceté façonnée</td></tr>
+        <tr><td>14</td><td>Malédiction étendue</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-container tab-content" id="tab-vengeance" style="display:none;">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Aptitude Vengeance</th></tr></thead>
+      <tbody>
+        <tr><td>3</td><td>Griffe animée</td></tr>
+        <tr><td>9</td><td>Anathème</td></tr>
+        <tr><td>14</td><td>Symbiose vitale</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<script>
+function switchTab(event, tabId) {
+  const tabs = document.querySelectorAll('.tab-button');
+  const contents = document.querySelectorAll('.tab-content');
+  tabs.forEach(t => t.classList.remove('active'));
+  contents.forEach(c => c.style.display = 'none');
+  event.target.classList.add('active');
+  document.getElementById(`tab-${tabId}`).style.display = '';
+}
+</script>
+
     </main>
     <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button> <footer>
     <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
@@ -885,7 +937,7 @@
  <a href="#mot-de-protection" class="sub-link" onclick="toggleMobileNav()">Mot de protection</a>
  <a href="#mot-de-suicide" class="sub-link" onclick="toggleMobileNav()">Mot de suicide</a>
  <a href="#malediction-de-vengeance" class="sub-link" onclick="toggleMobileNav()">Malédiction de vengeance</a>
- <a href="#progression-table" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
+ <a href="#tab-general" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
     </div>
   </body>
 </html>

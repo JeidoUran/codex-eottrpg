@@ -61,7 +61,7 @@
   <a href="#explosion-de-spectre" class="sub-link">Explosion de spectre</a>
   <a href="#poudre-de-zombie" class="sub-link">Poudre de zombie</a>
   <a href="#phalange-de-spectres" class="sub-link">Phalange de spectres</a>
-  <a href="#progression-table" class="section-link">Progression par niveau</a>
+  <a href="#tab-general" class="section-link">Progression par niveau</a>
 </div> <header class="codex-header">
       <div class="header-top">
         <h1>
@@ -706,267 +706,78 @@
     <img src="../../assets/images/notes-big.png" class="image image-h2">
     Progression par niveau
   </h2>
-  <div class="table-container">
-    <table class="progression-table very-large" id="progression-table">
+  <div class="class-table-tabs-wrapper">
+    <button class="tab-button active" onclick="switchTab(event, 'necromancien')">Nécromancien</button>
+    <button class="tab-button" onclick="switchTab(event, 'pacte-evoqueur')">Pacte de l'Évoqueur</button>
+    <button class="tab-button" onclick="switchTab(event, 'pacte-courtier')">Pacte du Courtier</button>
+  </div>
+
+  <div class="table-container tab-content" id="tab-general">
+    <table class="progression-table very-large">
       <thead>
-    <tr>
-      <th>Niveau</th>
-      <th>Bonus de maîtrise</th>
-      <th>Sorts mineurs</th>
-      <th>Sorts connus</th>
-      <th>Sorts niv.1</th>
-      <th>Sorts niv.2</th>
-      <th>Sorts niv.3</th>
-      <th>PV des Spectres</th>
-      <th>Dégâts des Spectres</th>
-      <th>Aptitudes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>+2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>4</td>
-      <td>—</td>
-      <td>-</td>
-      <td>3</td>
-      <td>1d4</td>
-      <td>Nécromancie, Lanceur de sorts</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>+2</td>
-      <td>2</td>
-      <td>3</td>
-      <td>5</td>
-      <td>—</td>
-      <td>-</td>
-      <td>4</td>
-      <td>1d4</td>
-      <td>Transfert de fardeau</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>+2</td>
-      <td>3</td>
-      <td>3</td>
-      <td>5</td>
-      <td>—</td>
-      <td>-</td>
-      <td>5</td>
-      <td>1d4</td>
-      <td>Pacte de nécromancie, Aptitude de Pacte</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>+2</td>
-      <td>3</td>
-      <td>4</td>
-      <td>6</td>
-      <td>—</td>
-      <td>-</td>
-      <td>6</td>
-      <td>1d4</td>
-      <td>Amélioration de caractéristiques, Défense +1</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>+3</td>
-      <td>3</td>
-      <td>5</td>
-      <td>6</td>
-      <td>3</td>
-      <td>-</td>
-      <td>7</td>
-      <td>1d6</td>
-      <td>Réincarnation</td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>+3</td>
-      <td>3</td>
-      <td>6</td>
-      <td>6</td>
-      <td>3</td>
-      <td>-</td>
-      <td>8</td>
-      <td>1d6</td>
-      <td>—</td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>+3</td>
-      <td>3</td>
-      <td>6</td>
-      <td>6</td>
-      <td>4</td>
-      <td>-</td>
-      <td>9</td>
-      <td>1d6</td>
-      <td>Sens des esprits</td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>+3</td>
-      <td>3</td>
-      <td>6</td>
-      <td>6</td>
-      <td>4</td>
-      <td>-</td>
-      <td>10</td>
-      <td>1d6</td>
-      <td>Amélioration de caractéristiques, Défense +1</td>
-    </tr>
-    <tr>
-      <td>9</td>
-      <td>+4</td>
-      <td>3</td>
-      <td>7</td>
-      <td>6</td>
-      <td>4</td>
-      <td>-</td>
-      <td>11</td>
-      <td>1d6</td>
-      <td>Aptitude de Pacte</td>
-    </tr>
-    <tr>
-      <td>10</td>
-      <td>+4</td>
-      <td>4</td>
-      <td>7</td>
-      <td>6</td>
-      <td>5</td>
-      <td>-</td>
-      <td>12</td>
-      <td>1d8</td>
-      <td>—</td>
-    </tr>
-    <tr>
-      <td>11</td>
-      <td>+4</td>
-      <td>4</td>
-      <td>7</td>
-      <td>6</td>
-      <td>5</td>
-      <td>-</td>
-      <td>13</td>
-      <td>1d8</td>
-      <td>Consultation</td>
-    </tr>
-    <tr>
-      <td>12</td>
-      <td>+4</td>
-      <td>4</td>
-      <td>7</td>
-      <td>6</td>
-      <td>5</td>
-      <td>-</td>
-      <td>14</td>
-      <td>1d8</td>
-      <td>Amélioration de caractéristiques, Défense +1</td>
-    </tr>
-    <tr>
-      <td>13</td>
-      <td>+5</td>
-      <td>4</td>
-      <td>8</td>
-      <td>6</td>
-      <td>5</td>
-      <td>2</td>
-      <td>15</td>
-      <td>1d8</td>
-      <td>—</td>
-    </tr>
-    <tr>
-      <td>14</td>
-      <td>+5</td>
-      <td>4</td>
-      <td>8</td>
-      <td>6</td>
-      <td>5</td>
-      <td>2</td>
-      <td>16</td>
-      <td>1d8</td>
-      <td>Aptitude de Pacte</td>
-    </tr>
-    <tr>
-      <td>15</td>
-      <td>+5</td>
-      <td>4</td>
-      <td>9</td>
-      <td>6</td>
-      <td>5</td>
-      <td>3</td>
-      <td>17</td>
-      <td>1d10</td>
-      <td>Pacte supplémentaire</td>
-    </tr>
-    <tr>
-      <td>16</td>
-      <td>+5</td>
-      <td>4</td>
-      <td>9</td>
-      <td>6</td>
-      <td>5</td>
-      <td>3</td>
-      <td>18</td>
-      <td>1d10</td>
-      <td>Amélioration de caractéristiques, Défense +1</td>
-    </tr>
-    <tr>
-      <td>17</td>
-      <td>+6</td>
-      <td>4</td>
-      <td>10</td>
-      <td>6</td>
-      <td>5</td>
-      <td>3</td>
-      <td>19</td>
-      <td>1d10</td>
-      <td>—</td>
-    </tr>
-    <tr>
-      <td>18</td>
-      <td>+6</td>
-      <td>4</td>
-      <td>10</td>
-      <td>6</td>
-      <td>5</td>
-      <td>4</td>
-      <td>20</td>
-      <td>1d10</td>
-      <td>—</td>
-    </tr>
-    <tr>
-      <td>19</td>
-      <td>+6</td>
-      <td>4</td>
-      <td>10</td>
-      <td>6</td>
-      <td>5</td>
-      <td>4</td>
-      <td>21</td>
-      <td>1d10</td>
-      <td>Liens inextricables</td>
-    </tr>
-    <tr>
-      <td>20</td>
-      <td>+6</td>
-      <td>4</td>
-      <td>10</td>
-      <td>6</td>
-      <td>5</td>
-      <td>4</td>
-      <td>22</td>
-      <td>1d12</td>
-      <td>Énergie négative</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+        <tr>
+          <th>Niveau</th><th>Bonus de maîtrise</th><th>Sorts mineurs</th><th>Sorts connus</th><th>Sorts niv.1</th><th>Sorts niv.2</th><th>Sorts niv.3</th><th>PV des Spectres</th><th>Dégâts des Spectres</th><th>Aptitudes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>+2</td><td>2</td><td>2</td><td>4</td><td>—</td><td>-</td><td>3</td><td>1d4</td><td>Nécromancie, Lanceur de sorts</td></tr>
+        <tr><td>2</td><td>+2</td><td>2</td><td>3</td><td>5</td><td>—</td><td>-</td><td>4</td><td>1d4</td><td>Transfert de fardeau</td></tr>
+        <tr><td>3</td><td>+2</td><td>3</td><td>3</td><td>5</td><td>—</td><td>-</td><td>5</td><td>1d4</td><td>Pacte de nécromancie, Aptitude de Pacte</td></tr>
+        <tr><td>4</td><td>+2</td><td>3</td><td>4</td><td>6</td><td>—</td><td>-</td><td>6</td><td>1d4</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+        <tr><td>5</td><td>+3</td><td>3</td><td>5</td><td>6</td><td>3</td><td>-</td><td>7</td><td>1d6</td><td>Réincarnation</td></tr>
+        <tr><td>6</td><td>+3</td><td>3</td><td>6</td><td>6</td><td>3</td><td>-</td><td>8</td><td>1d6</td><td>—</td></tr>
+        <tr><td>7</td><td>+3</td><td>3</td><td>6</td><td>6</td><td>4</td><td>-</td><td>9</td><td>1d6</td><td>Sens des esprits</td></tr>
+        <tr><td>8</td><td>+3</td><td>3</td><td>6</td><td>6</td><td>4</td><td>-</td><td>10</td><td>1d6</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+        <tr><td>9</td><td>+4</td><td>3</td><td>7</td><td>6</td><td>4</td><td>-</td><td>11</td><td>1d6</td><td>Aptitude de Pacte</td></tr>
+        <tr><td>10</td><td>+4</td><td>4</td><td>7</td><td>6</td><td>5</td><td>-</td><td>12</td><td>1d8</td><td>—</td></tr>
+        <tr><td>11</td><td>+4</td><td>4</td><td>7</td><td>6</td><td>5</td><td>-</td><td>13</td><td>1d8</td><td>Consultation</td></tr>
+        <tr><td>12</td><td>+4</td><td>4</td><td>7</td><td>6</td><td>5</td><td>-</td><td>14</td><td>1d8</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+        <tr><td>13</td><td>+5</td><td>4</td><td>8</td><td>6</td><td>5</td><td>2</td><td>15</td><td>1d8</td><td>—</td></tr>
+        <tr><td>14</td><td>+5</td><td>4</td><td>8</td><td>6</td><td>5</td><td>2</td><td>16</td><td>1d8</td><td>Aptitude de Pacte</td></tr>
+        <tr><td>15</td><td>+5</td><td>4</td><td>9</td><td>6</td><td>5</td><td>3</td><td>17</td><td>1d10</td><td>Pacte supplémentaire</td></tr>
+        <tr><td>16</td><td>+5</td><td>4</td><td>9</td><td>6</td><td>5</td><td>3</td><td>18</td><td>1d10</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+        <tr><td>17</td><td>+6</td><td>4</td><td>10</td><td>6</td><td>5</td><td>3</td><td>19</td><td>1d10</td><td>—</td></tr>
+        <tr><td>18</td><td>+6</td><td>4</td><td>10</td><td>6</td><td>5</td><td>4</td><td>20</td><td>1d10</td><td>—</td></tr>
+        <tr><td>19</td><td>+6</td><td>4</td><td>10</td><td>6</td><td>5</td><td>4</td><td>21</td><td>1d10</td><td>Liens inextricables</td></tr>
+        <tr><td>20</td><td>+6</td><td>4</td><td>10</td><td>6</td><td>5</td><td>4</td><td>22</td><td>1d12</td><td>Énergie négative</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-container tab-content" id="tab-pacte-evoqueur" style="display:none;">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Aptitude du Pacte de l'Évoqueur</th></tr></thead>
+      <tbody>
+        <tr><td>3</td><td>Réanimation</td></tr>
+        <tr><td>9</td><td>Attachement persistant</td></tr>
+        <tr><td>14</td><td>Camouflage de Spectre</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-container tab-content" id="tab-pacte-courtier" style="display:none;">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Aptitude du Pacte du Courtier</th></tr></thead>
+      <tbody>
+        <tr><td>3</td><td>Leurre des Enfers</td></tr>
+        <tr><td>9</td><td>Haine persistante</td></tr>
+        <tr><td>14</td><td>Courtage d'esprit</td></tr>
+      </tbody>
+    </table>
+  </div>
 </section>
+
+<script>
+function switchTab(event, tabId) {
+  const tabs = document.querySelectorAll('.tab-button');
+  const contents = document.querySelectorAll('.tab-content');
+  tabs.forEach(t => t.classList.remove('active'));
+  contents.forEach(c => c.style.display = 'none');
+  event.target.classList.add('active');
+  document.getElementById(`tab-${tabId}`).style.display = '';
+}
+</script>
+
     </main>
     <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button> <footer>
     <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
@@ -1113,7 +924,7 @@
  <a href="#explosion-de-spectre" class="sub-link" onclick="toggleMobileNav()">Explosion de spectre</a>
  <a href="#poudre-de-zombie" class="sub-link" onclick="toggleMobileNav()">Poudre de zombie</a>
  <a href="#phalange-de-spectres" class="sub-link" onclick="toggleMobileNav()">Phalange de spectres</a>
- <a href="#progression-table" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
+ <a href="#tab-general" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
     </div>
   </body>
 </html>
