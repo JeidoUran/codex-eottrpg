@@ -1190,7 +1190,7 @@ footer {
 	margin: 2rem auto;
 	color: #e8ddc5;
 	box-shadow: 0 0 15px rgba(99, 176, 196, 0.2);
-	font-family: 'Cinzel-Regular', 'Trajan Pro', 'Copperplate', 'Georgia', serif;
+	font-family: 'GoudyStM', Georgia, 'Times New Roman', serif;
 }
 
 #playPauseBtn {
@@ -1261,6 +1261,7 @@ footer {
 	font-size: 1rem;
 	color: #88c0a9;
 	text-align: left;
+	font-family: 'GoudyStM', Georgia, 'Times New Roman', serif;
 }
 
 .now-playing p {
