@@ -1,2 +1,549 @@
-<title>Vagabond</title>
-<meta name="description" content="Archer nomade et ami des bêtes, le Vagabond maîtrise les secrets du Labyrinthe et combat aux côtés d’un fidèle compagnon animal.">
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Vagabond</title>
+    <meta name="description" content="Archer nomade et ami des bêtes, le Vagabond maîtrise les secrets du Labyrinthe et combat aux côtés d’un fidèle compagnon animal.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../favicon.png" type="image/png">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <canvas id="particles"></canvas> 
+<div class="class-nav">
+  <a href="#details" class="section-link">Détails</a>
+  <a href="#aptitudes" class="section-link">Aptitudes</a>
+  <a href="#compagnon-animal" class="sub-link">Compagnon animal</a>
+  <a href="#tir-de-pistage" class="sub-link">Tir de pistage</a>
+  <a href="#achevement" class="sub-link">Achèvement</a>
+  <a href="#sifflet-pour-compagnon" class="sub-link">Sifflet pour compagnon</a>
+  <a href="#fleche-ciblee" class="sub-link">Flèche ciblée</a>
+  <a href="#patrouille-animale" class="sub-link">Patrouille animale</a>
+  <a href="#brossage" class="sub-link">Brossage</a>
+  <a href="#il-aiguise" class="sub-link">Œil aiguisé</a>
+  <a href="#fleche-elementaire" class="sub-link">Flèche élémentaire</a>
+  <a href="#pas-prudent" class="sub-link">Pas prudent</a>
+  <a href="#chasseur-de-gros-gibier" class="sub-link">Chasseur de gros gibier</a>
+  <a href="#tir-etourdissant" class="sub-link">Tir étourdissant</a>
+  <a href="#ame-bestiale" class="sub-link">Âme bestiale</a>
+  <a href="#specialisations" class="section-link">Spécialisations</a>
+  <a href="#faucon" class="section-link">Faucon</a>
+  <a href="#vol-agile" class="sub-link">Vol agile</a>
+  <a href="#bousculade-d-ailes" class="sub-link">Bousculade d'ailes</a>
+  <a href="#bec-glace" class="sub-link">Bec glacé</a>
+  <a href="#serres-aeriennes" class="sub-link">Serres aériennes</a>
+  <a href="#plongeon" class="sub-link">Plongeon</a>
+  <a href="#loup" class="section-link">Loup</a>
+  <a href="#ouie-et-odorat-aiguises" class="sub-link">Ouïe et odorat aiguisés</a>
+  <a href="#commande-aide" class="sub-link">Commande : Aide</a>
+  <a href="#commande-garde" class="sub-link">Commande : Garde</a>
+  <a href="#tir-du-chasseur" class="sub-link">Tir du chasseur</a>
+  <a href="#lechage-medicinal" class="sub-link">Léchage médicinal</a>
+  <a href="#progression-table" class="section-link">Progression par niveau</a>
+</div> <header class="codex-header">
+      <div class="header-top">
+        <h1>
+          <img src="../../assets/images/class-icons/rover.png" class="image class-icon"> Vagabond
+        </h1>
+        <div class="fixed-header-links">
+          <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Index des classes</a>
+          <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Retour au Codex</a>
+        </div>
+      </div>
+      <div>
+      <div class="illustration-wrapper double">
+      
+          <img src="../../assets/images/class-art/rover1.png" alt="Illustration Vagabond" class="illustration-classe">
+        
+
+          <img src="../../assets/images/class-art/rover2.png" alt="Illustration Vagabond" class="illustration-classe">
+         
+        </div>
+        </div>
+    </header>
+    <main class="accueil">
+      <section class="intro-collapsible click" id="intro">
+        <p>Maîtres de l'arc et des terres sauvages, les Vagabonds fournissent une assistance unique à leurs alliés grâce à leur connaissance du terrain du Labyrinthe et des bêtes qui y résident. Les Vagabonds font appel aux capacités d'un partenaire animal pour se battre à leur place et attaquent avec un arc comme arme de choix. Ils proviennent d'un milieu qui leur a laissé une connaissance intime des créatures et des monstres, ou un intérêt pour eux, comme une structure sociale tribale en étroite association avec les animaux ou un mode de vie nomade. </p>
+        <button class="toggle-intro" onclick="toggleIntro()">Afficher la suite</button>
+      </section>
+      <section class="patch-section">
+        <h2 class="patch-titre" id="details">
+          <img src="../../assets/images/notes-big.png" class="image image-h2"> Détails de la classe
+        </h2>
+        <ul class="image-list"> <li><div class="image-texte"><strong><img src="../../assets/images/class-details/health.png" class="image details-icon"> Points de vie :</strong> 1d6 + modificateur de Constitution par niveau de Vagabond</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/hit-dice.png" class="image details-icon"> Dés de vie :</strong> 1d6 par niveau de Vagabond</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/saving-throw-dc.png" class="image details-icon"> DD des jets de sauvegarde :</strong> 8 + bonus de maîtrise + modificateur de Dextérité</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/masteries.png" class="image details-icon"> Maîtrises :</strong> Arcs, Armes à feu ; Armures légères</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/saving-throw.png" class="image details-icon"> Jets de sauvegarde :</strong> Dextérité, Constitution</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/skills.png" class="image details-icon"> Compétences :</strong> Choisissez 3 parmi Acrobatie, Investigation, Nature, Dressage, Médecine, Intuition, Survie, Discrétion, Performance et Perception</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/starting-equipment.png" class="image details-icon"> Équipement de départ :</strong> Une arme maîtrisée, une armure légère, a) un gant de fauconnerie et 5 friandises pour oiseaux ou b) un collier, une laisse et 5 friandises pour loup, un couteau de survie, un sac d'explorateur</div></li> </ul>
+      </section>
+      <section class="patch-section">
+          <div class="aptitude-search-container">
+            <input type="text" id="aptitude-search" placeholder="Rechercher une aptitude ou un sort..." />
+          </div>
+        <div class="toggle-section">
+          <h2 class="patch-titre" id="aptitudes">
+            <img src="../../assets/images/notes-big.png" class="image image-h2"> Aptitudes de classe <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+          </h2>
+        </div>
+        <div class="collapsible-content expanded">
+          <div class="patch-list"> 
+  <article id="compagnon-animal">
+  <h3>
+    <img src="../../assets/images/skills-icons/rover/animal-companion.png" class="image skill-icon">
+    Compagnon animal
+    <span><img src="../../assets/images/action-costs/specialisation.png" alt="Specialisation" class="image action-icon">Spécialisation</span>
+  </h3>
+    <p>Les Vagabonds sont accompagnés en permanence par un compagnon animal. Choisissez un loup ou un faucon ; cet animal accompagne le Vagabond au début de leur aventure. Les capacités du compagnon sont déterminées par son tableau à la fin de la présentation du Vagabond, et son niveau est égal à celui du Vagabond. Ses statistiques, y compris les points de vie maximum, sont les mêmes que celles du Vagabond, bien qu'il ait sa propre réserve de points de vie et subisse des dégâts séparément du Vagabond. Son modificateur de caractéristique pour les attaques est la Dextérité. Le compagnon animal partage l'initiative avec le Vagabond, partage les PA du Vagabond et obéit aux commandes du Vagabond autant qu'il le peut. Si le compagnon animal meurt, le Vagabond peut passer 8 heures dans la nature à la recherche et à l'apprivoisement d'un compagnon animal du même type.</p>
+  </article>
+
+  <article id="tir-de-pistage">
+  <h3>
+    <img src="../../assets/images/skills-icons/rover/tracking-shot.png" class="image skill-icon">
+    Tir de pistage
+    <span><img src="../../assets/images/action-costs/bonus-action.png" alt="Bonus" class="image action-icon">1 PA (Action Bonus)</span>
+  </h3>
+    <p>En imbibant leurs munitions avec un traceur puissant, le Vagabond aide son partenaire à suivre un ennemi. Si la prochaine attaque du Vagabond touche ou effleure une créature, le compagnon du Vagabond gagne un bonus de +2 en précision contre cette cible jusqu'à la fin du prochain tour du Vagabond.</p>
+  </article>
+
+  <article id="achevement">
+  <h3>
+    <img src="../../assets/images/skills-icons/rover/finishing-shot.png" class="image skill-icon">
+    Achèvement
+    <span><img src="../../assets/images/action-costs/reaction.png" alt="Reaction" class="image action-icon">1 PA (Réaction)</span>
+  </h3>
+    <p>Lorsqu'une créature amicale à moins de 30 mètres touche une autre créature avec une attaque, et que cette attaque laisse la cible ensanglantée, le Vagabond peut utiliser sa réaction pour attaquer la créature touchée.</p>
+  </article>
+
+  <article id="sifflet-pour-compagnon">
+  <h3>
+    <img src="../../assets/images/skills-icons/rover/hound-hawk-whistle.png" class="image skill-icon">
+    Sifflet pour compagnon
+    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+  </h3>
+    <p>Avec un sifflet strident, le Vagabond active une manœuvre d'équipe en tant qu’action. Le Vagabond peut immédiatement utiliser une action bonus ou une action combo (sous réserve que les conditions soient remplies), et son compagnon animal effectue une action. Le Sifflet pour compagnon peut être utilisé un nombre de fois par repos long égal au modificateur de Sagesse du Vagabond (minimum 1).</p>
+  </article>
+
+  <article id="fleche-ciblee">
+  <h3>
+    <img src="../../assets/images/skills-icons/rover/target-arrow.png" class="image skill-icon">
+    Flèche ciblée
+    <span><img src="../../assets/images/action-costs/combo-action.png" alt="Combo" class="image action-icon">1 PA (Action Combo)</span>
+  </h3>
+    <p>Lorsque le Vagabond touche une créature avec une attaque, il peut soustraire 1 de Défense à cette créature pendant 3 rounds avec une action combo.</p>
+  </article>
+
+  <article id="patrouille-animale">
+  <h3>
+    <img src="../../assets/images/skills-icons/rover/animal-patrol.png" class="image skill-icon">
+    Patrouille animale
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>Le compagnon animal du Vagabond reste alerte au danger même lorsqu'il dort ou qu'il est occupé par une autre activité pendant un long ou repos court. Ni le Vagabond ni son compagnon animal ne peuvent être surpris au début du combat tant que l'un d'eux peut à la fois voir et entendre normalement.</p>
+  </article>
+
+  <article id="brossage">
+  <h3>
+    <img src="../../assets/images/skills-icons/rover/brushing.png" class="image skill-icon">
+    Brossage
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>À la fin de chaque tour de combat, le compagnon animal du Vagabond récupère un montant de points de vie pouvant aller jusqu'à son modificateur de Constitution.</p>
+  </article>
+
+  <article id="il-aiguise">
+  <h3>
+    <img src="../../assets/images/skills-icons/rover/keen-eye.png" class="image skill-icon">
+    Œil aiguisé
+    <span><img src="../../assets/images/action-costs/bonus-action.png" alt="Bonus" class="image action-icon">1 PA (Action Bonus)</span>
+  </h3>
+    <p>Le Vagabond a l'avantage sur les tests d'Intelligence (Nature) pour identifier et se rappeler d'informations sur la flore. De plus, il peut utiliser une action bonus pour identifier jusqu'à une faiblesse et une résistance d'une créature qu'il peut voir.</p>
+  </article>
+
+  <article id="fleche-elementaire">
+  <h3>
+    <img src="../../assets/images/skills-icons/rover/burning-lightning-freezing-arrow.png" class="image skill-icon">
+    Flèche élémentaire
+    <span><img src="../../assets/images/action-costs/bonus-action.png" alt="Bonus" class="image action-icon">1 PA (Action Bonus)</span>
+  </h3>
+    <p>Le Vagabond peut dépenser une action bonus pour désigner le feu, la foudre ou la glace. Pendant 4 rounds, le type de dégât de toutes les attaques d'arme du Vagabond passe à cet élément.</p>
+  </article>
+
+  <article id="pas-prudent">
+  <h3>
+    <img src="../../assets/images/skills-icons/rover/careful-footwork.png" class="image skill-icon">
+    Pas prudent
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>Le terrain difficile n'entrave pas le mouvement du Vagabond ou de son compagnon animal. Le Vagabond et son compagnon animal ne perdent pas la moitié de leur mouvement en se relevant de la position couchée et subissent la moitié des dégâts d'une chute. Si les dégâts finaux causés par la chute sont inférieurs à 10, ils sont annulés.</p>
+  </article>
+
+  <article id="chasseur-de-gros-gibier">
+  <h3>
+    <img src="../../assets/images/skills-icons/rover/big-game-hunter.png" class="image skill-icon">
+    Chasseur de gros gibier
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>Le Vagabond et son compagnon animal connaissent l'emplacement des créatures de taille grande ou supérieure dans un rayon de 30 mètres, même lorsque cette créature est invisible. Le Vagabond et son compagnon animal peuvent ajouter une valeur égale à leur modificateur de Sagesse à tous les jets de sauvegarde contre les effets causés par des créatures de taille grande ou supérieure.</p>
+  </article>
+
+  <article id="tir-etourdissant">
+  <h3>
+    <img src="../../assets/images/skills-icons/rover/stun-shot.png" class="image skill-icon">
+    Tir étourdissant
+    <span><img src="../../assets/images/action-costs/combo-action.png" alt="Combo" class="image action-icon">1 PA (Action Combo)</span>
+  </h3>
+    <p>Lorsque le Vagabond réussit un coup critique sur une créature, il peut utiliser une action combo pour ordonner à son compagnon animal de se déplacer jusqu'à 4.5 mètres et d'attaquer la créature touchée si elle est à portée. La cible effectue un jet de sauvegarde de Constitution ; en cas d'échec, elle subit 1d6 de dégâts (perforants si le loup a attaqué, et tranchants si le faucon a attaqué) et est étourdie jusqu'à la fin de son prochain tour.</p>
+  </article>
+
+  <article id="ame-bestiale">
+  <h3>
+    <img src="../../assets/images/skills-icons/rover/beast-soul.png" class="image skill-icon">
+    Âme bestiale
+    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+  </h3>
+    <p>Au vingtième niveau, le Vagabond et son compagnon animal ont forgé un lien si fort qu'ils peuvent temporairement partager une âme. Le Vagabond peut utiliser une action pour activer Âme bestiale pendant 4 rounds. Le Vagabond prend une forme demi-bestiale du même type que son compagnon animal, acquérant toutes les caractéristiques et capacités de son compagnon animal ainsi que ses caractéristiques et capacités habituelles de Vagabond. Ses points de vie sont égaux à la somme des deux créatures, et le Sifflet pour compagnon permet au Vagabond d'effectuer une action complète tout en étant actif. Lorsqu'Âme bestiale cesse, le compagnon animal apparaît dans un espace adjacent au Vagabond, et les points de vie des deux créatures sont réduits de moitié par rapport à la valeur actuelle de la forme combinée. Si ce nombre est supérieur à leurs points de vie maximum, ils gagnent des points de vie temporaires égaux à l'excédent. Si des afflictions ont affecté la forme combinée, le Vagabond peut choisir lui-même ou son compagnon animal pour continuer à souffrir de cette condition ; tout bonus ou malus continue d'affecter les deux.</p>
+  </article> </div>
+        </div>
+      </section>
+      <h2 class="patch-titre" id="specialisations">
+        <img src="../../assets/images/notes-big.png" class="image image-h2"> Spécialisations
+      </h2>
+    
+  <section class="patch-section">
+  <div class="toggle-section">
+    <h2 class="patch-titre" id="faucon">
+      <img src="../../assets/images/subclass-icons/rover/hawk.png" class="image class-icon">
+      Faucon
+      <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+    </h2>
+    </div>
+    <div class="collapsible-content expanded">
+    <div class="patch-list">
+      
+        <article id="vol-agile">
+        <h3>
+          <img src="../../assets/images/skills-icons/rover/nimble-flight.png" class="image skill-icon">
+          Vol agile
+          <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+        </h3>
+          <p>Le faucon a une vitesse de vol de 9 mètres.</p>
+        </article>
+
+        <article id="bousculade-d-ailes">
+        <h3>
+          <img src="../../assets/images/skills-icons/rover/wing-thrash.png" class="image skill-icon">
+          Bousculade d'ailes
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p>Le faucon peut utiliser son action pour effectuer des jets d'attaque contre deux ennemis différents dans un rayon de 1.5 mètres, infligeant ses dégâts d'attaque normaux en cas de réussite.</p>
+        </article>
+
+        <article id="bec-glace">
+        <h3>
+          <img src="../../assets/images/skills-icons/rover/ice-peck.png" class="image skill-icon">
+          Bec glacé
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p>Le faucon peut utiliser son action pour effectuer un jet d'attaque contre une créature dans un rayon de 1.5 mètres. En cas de réussite, il inflige 2d8 + modificateur de Dextérité de dégâts de glace.</p>
+        </article>
+
+        <article id="serres-aeriennes">
+        <h3>
+          <img src="../../assets/images/skills-icons/rover/aerial-talons.png" class="image skill-icon">
+          Serres aériennes
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p>En tant qu'action, le faucon peut effectuer un jet d'attaque contre une créature dans un rayon de 1.5 mètres. En cas de réussite, l'attaque inflige 3d6 + modificateur de Dextérité de dégâts tranchants et la cible doit réussir un jet de sauvegarde de dextérité ou être aveuglée pendant un tour.</p>
+        </article>
+
+        <article id="plongeon">
+        <h3>
+          <img src="../../assets/images/skills-icons/rover/sky-dive.png" class="image skill-icon">
+          Plongeon
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p>En tant qu'action, le faucon peut plonger droit vers le sol puis effectuer un jet d'attaque contre une créature dans un rayon de 1.5 mètres, infligeant ses dégâts d'attaque normaux en cas de réussite. Pour chaque tranche de 9 mètres plongée pendant cette action, l'attaque gagne 1d12 en Offense. Le faucon ne peut pas se déplacer le même tour après avoir utilisé Plongeon.</p>
+        </article>
+    </div>
+    </div>
+  </section>
+
+  <section class="patch-section">
+  <div class="toggle-section">
+    <h2 class="patch-titre" id="loup">
+      <img src="../../assets/images/subclass-icons/rover/hound.png" class="image class-icon">
+      Loup
+      <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+    </h2>
+    </div>
+    <div class="collapsible-content expanded">
+    <div class="patch-list">
+      
+        <article id="ouie-et-odorat-aiguises">
+        <h3>
+          <img src="../../assets/images/skills-icons/rover/keen-hearing-and-smell.png" class="image skill-icon">
+          Ouïe et odorat aiguisés
+          <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+        </h3>
+          <p>Le loup a l'avantage sur les tests nécessitant l'utilisation de l'ouïe ou de l'odorat.</p>
+        </article>
+
+        <article id="commande-aide">
+        <h3>
+          <img src="../../assets/images/skills-icons/rover/aid-command.png" class="image skill-icon">
+          Commande : Aide
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p>Le loup peut utiliser son action pour appliquer des léchouilles guérisseuses à une créature dans un rayon de 1.5 mètres. Cette créature récupère 2d8 + modificateur de Sagesse points de vie. Cette guérison augmente de 1d8 tous les deux niveaux de loup après avoir appris la Commande d'aide. La cible récupère également de la paralysie, des malédictions, du poison, de la cécité et de la confusion. L’Aide peut être utilisée un nombre de fois par repos long égal au modificateur de Sagesse du Vagabond (minimum 1).</p>
+        </article>
+
+        <article id="commande-garde">
+        <h3>
+          <img src="../../assets/images/skills-icons/rover/guard-command.png" class="image skill-icon">
+          Commande : Garde
+          <span><img src="../../assets/images/action-costs/reaction.png" alt="Reaction" class="image action-icon">1 PA (Réaction)</span>
+        </h3>
+          <p>Lorsqu'une créature située à 3 mètres ou moins est touchée par une attaque, le loup peut utiliser sa réaction pour bondir devant elle et encaisser le coup. Il subit alors la moitié des dégâts à la place de la créature. Après avoir encaissé les dégâts, le loup peut restaurer 4d8 + modificateur de Sagesse points de vie à lui-même et à la créature protégée. Le loup ne peut guérir de cette manière que 3 fois entre deux repos longs. Au-delà de cette limite, ni lui ni la créature protégée ne bénéficient des effets de soin de cette aptitude.</p>
+        </article>
+
+        <article id="tir-du-chasseur">
+        <h3>
+          <img src="../../assets/images/skills-icons/rover/hunter-shot.png" class="image skill-icon">
+          Tir du chasseur
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p>En tant qu'action, le loup peut cibler une créature se trouvant dans un rayon de 1.5 mètres. Cette créature doit réussir un jet de Force ou subir des dégâts contondants de 2d8 + Dextérité et être liée aux bras pour 3 tours. En cas de réussite, elle subit la moitié des dégâts et n'est pas liée.</p>
+        </article>
+
+        <article id="lechage-medicinal">
+        <h3>
+          <img src="../../assets/images/skills-icons/rover/medicinal-lick.png" class="image skill-icon">
+          Léchage médicinal
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p>Le Loup peut utiliser son action pour projeter une vague de guérison en forme de langue géante. Jusqu'à 6 créatures choisies par le loup dans un rayon de 9 mètres récupèrent 8d8 + modificateur de Sagesse points de vie, et récupèrent de la paralysie, des malédictions, de la peur, de la confusion, de l’aveuglement et du poison. Le Léchage médicinal peut être utilisé un nombre de fois par repos long égal au modificateur de Sagesse du Vagabond (minimum 1).</p>
+        </article>
+    </div>
+    </div>
+  </section>
+    
+    
+<section class="patch-section">
+  <h2 class="patch-titre" id="progression">
+    <img src="../../assets/images/notes-big.png" class="image image-h2">
+    Progression par niveau
+  </h2>
+
+  <div class="playlist-tabs-wrapper" style="margin-bottom: 1rem;">
+    <button class="tab-button active" data-tab="tab-principal">Vagabond</button>
+    <button class="tab-button" data-tab="tab-faucon">Faucon</button>
+    <button class="tab-button" data-tab="tab-loup">Loup</button>
+  </div>
+
+  <div class="table-container" id="progression-table">
+    <table class="progression-table tab-content" id="tab-principal">
+      <thead>
+        <tr><th>Niveau</th><th>Bonus de maîtrise</th><th>Aptitudes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>+2</td><td>Compagnon animal</td></tr>
+        <tr><td>2</td><td>+2</td><td>Tir de pistage, Achèvement</td></tr>
+        <tr><td>3</td><td>+2</td><td>—</td></tr>
+        <tr><td>4</td><td>+2</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+        <tr><td>5</td><td>+3</td><td>Sifflet pour compagnon</td></tr>
+        <tr><td>6</td><td>+3</td><td>Flèche ciblée</td></tr>
+        <tr><td>7</td><td>+3</td><td>—</td></tr>
+        <tr><td>8</td><td>+3</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+        <tr><td>9</td><td>+4</td><td>Patrouille animale</td></tr>
+        <tr><td>10</td><td>+4</td><td>Brossage</td></tr>
+        <tr><td>11</td><td>+4</td><td>—</td></tr>
+        <tr><td>12</td><td>+4</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+        <tr><td>13</td><td>+5</td><td>Œil aiguisé</td></tr>
+        <tr><td>14</td><td>+5</td><td>Flèche élémentaire</td></tr>
+        <tr><td>15</td><td>+5</td><td>—</td></tr>
+        <tr><td>16</td><td>+5</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+        <tr><td>17</td><td>+6</td><td>Pas prudent</td></tr>
+        <tr><td>18</td><td>+6</td><td>Chasseur de gros gibier</td></tr>
+        <tr><td>19</td><td>+6</td><td>Tir étourdissant</td></tr>
+        <tr><td>20</td><td>+6</td><td>Âme bestiale</td></tr>
+      </tbody>
+    </table>
+
+    <table class="progression-table tab-content" id="tab-faucon" style="display:none;">
+      <thead>
+        <tr><th>Niveau</th><th>Aptitudes du Faucon</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>3</td><td>Vol agile</td></tr>
+        <tr><td>5</td><td>Bousculade d'ailes</td></tr>
+        <tr><td>7</td><td>Bec glacé</td></tr>
+        <tr><td>10</td><td>Serres aériennes</td></tr>
+        <tr><td>15</td><td>Plongeon</td></tr>
+      </tbody>
+    </table>
+
+    <table class="progression-table tab-content" id="tab-loup" style="display:none;">
+      <thead>
+        <tr><th>Niveau</th><th>Aptitudes du Loup</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>3</td><td>Ouïe et odorat aiguisés</td></tr>
+        <tr><td>5</td><td>Commande : Aide</td></tr>
+        <tr><td>7</td><td>Commande : Garde</td></tr>
+        <tr><td>10</td><td>Tir du chasseur</td></tr>
+        <tr><td>15</td><td>Léchage médicinal</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".tab-button");
+    const tabs = document.querySelectorAll(".tab-content");
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        buttons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        const target = btn.getAttribute("data-tab");
+        tabs.forEach(t => {
+          t.style.display = (t.id === target) ? "table" : "none";
+        });
+      });
+    });
+  });
+</script>
+
+    </main>
+    <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button> <footer>
+    <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+</footer> <script>
+      document.addEventListener("DOMContentLoaded", function() {
+            const navContainer = document.querySelector('.class-nav');
+            const navLinks = document.querySelectorAll('.class-nav a[href^="#"]');
+            const sections = [...document.querySelectorAll("h2.patch-titre, article")];
+            let lastActive = null;
+            const observer = new IntersectionObserver((entries) => {
+                  entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                          const id = entry.target.getAttribute("id");
+                          const activeLink = [...navLinks].find(link => link.getAttribute("href") === `#${id}`);
+         
+                 if (activeLink && activeLink !== lastActive) {
+                 navLinks.forEach(link => link.classList.remove("active"));
+                 activeLink.classList.add("active");
+         
+                 // Scroll l'élément actif dans le menu si partiellement masqué
+                 const linkTop = activeLink.getBoundingClientRect().top;
+                 const navTop = navContainer.getBoundingClientRect().top;
+                 const linkBottom = linkTop + activeLink.offsetHeight;
+                 const navBottom = navTop + navContainer.offsetHeight;
+         
+                 if (linkTop < navTop || linkBottom > navBottom) {
+                     activeLink.scrollIntoView({ behavior: "smooth", block: "center" });
+                 }
+         
+                 lastActive = activeLink;
+                 }
+             }
+             });
+         }, {
+             rootMargin: "-30% 0px -60% 0px",
+             threshold: 0.1
+         });
+         
+         sections.forEach(section => observer.observe(section));
+         });
+      
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const searchInput = document.getElementById("aptitude-search");
+        const aptitudeArticles = document.querySelectorAll("article");
+        searchInput.addEventListener("input", function() {
+          const value = searchInput.value.toLowerCase();
+          aptitudeArticles.forEach(article => {
+            const title = article.querySelector("h3")?.textContent?.toLowerCase() || "";
+            const content = article.textContent?.toLowerCase() || "";
+            if (title.includes(value) || content.includes(value)) {
+              article.style.display = "";
+            } else {
+              article.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
+    <script>
+      function toggleIntro() {
+        const section = document.getElementById("intro");
+        section.classList.toggle("expanded");
+        const btn = section.querySelector("button");
+        btn.textContent = section.classList.contains("expanded") ? "Réduire" : "Afficher la suite";
+      }
+    </script>
+    <script>
+      function toggleSection(button) {
+        const content = button.closest("section").querySelector(".collapsible-content");
+        const isOpen = content.classList.contains("expanded");
+        if (isOpen) {
+          content.classList.remove("expanded");
+          button.textContent = "▼";
+        } else {
+          content.classList.add("expanded");
+          button.textContent = "▲";
+        }
+      }
+    </script>
+    <script>
+      window.addEventListener('scroll', () => {
+        document.getElementById('backToTop').classList.toggle('show', window.scrollY > 300);
+      });
+    </script>
+    <script>
+      function toggleMobileNav(btn) {
+        const overlay = document.getElementById("mobileNav");
+        overlay.classList.toggle("show");
+        btn.classList.toggle("open");
+        btn.textContent = overlay.classList.contains("show") ? "✕" : "☰";
+      }
+    </script>
+    <script src="../../particles.js"></script>
+    <button class="mobile-nav-toggle" onclick="toggleMobileNav(this)">☰</button>
+    <div class="mobile-nav-overlay" id="mobileNav">
+      <div class="mobile-nav-content">  <a href="#details" class="section-link" onclick="toggleMobileNav()">Détails</a>
+ <a href="#aptitudes" class="section-link" onclick="toggleMobileNav()">Aptitudes</a>
+ <a href="#compagnon-animal" class="sub-link" onclick="toggleMobileNav()">Compagnon animal</a>
+ <a href="#tir-de-pistage" class="sub-link" onclick="toggleMobileNav()">Tir de pistage</a>
+ <a href="#achevement" class="sub-link" onclick="toggleMobileNav()">Achèvement</a>
+ <a href="#sifflet-pour-compagnon" class="sub-link" onclick="toggleMobileNav()">Sifflet pour compagnon</a>
+ <a href="#fleche-ciblee" class="sub-link" onclick="toggleMobileNav()">Flèche ciblée</a>
+ <a href="#patrouille-animale" class="sub-link" onclick="toggleMobileNav()">Patrouille animale</a>
+ <a href="#brossage" class="sub-link" onclick="toggleMobileNav()">Brossage</a>
+ <a href="#il-aiguise" class="sub-link" onclick="toggleMobileNav()">Œil aiguisé</a>
+ <a href="#fleche-elementaire" class="sub-link" onclick="toggleMobileNav()">Flèche élémentaire</a>
+ <a href="#pas-prudent" class="sub-link" onclick="toggleMobileNav()">Pas prudent</a>
+ <a href="#chasseur-de-gros-gibier" class="sub-link" onclick="toggleMobileNav()">Chasseur de gros gibier</a>
+ <a href="#tir-etourdissant" class="sub-link" onclick="toggleMobileNav()">Tir étourdissant</a>
+ <a href="#ame-bestiale" class="sub-link" onclick="toggleMobileNav()">Âme bestiale</a>
+ <a href="#specialisations" class="section-link" onclick="toggleMobileNav()">Spécialisations</a>
+ <a href="#faucon" class="section-link" onclick="toggleMobileNav()">Faucon</a>
+ <a href="#vol-agile" class="sub-link" onclick="toggleMobileNav()">Vol agile</a>
+ <a href="#bousculade-d-ailes" class="sub-link" onclick="toggleMobileNav()">Bousculade d'ailes</a>
+ <a href="#bec-glace" class="sub-link" onclick="toggleMobileNav()">Bec glacé</a>
+ <a href="#serres-aeriennes" class="sub-link" onclick="toggleMobileNav()">Serres aériennes</a>
+ <a href="#plongeon" class="sub-link" onclick="toggleMobileNav()">Plongeon</a>
+ <a href="#loup" class="section-link" onclick="toggleMobileNav()">Loup</a>
+ <a href="#ouie-et-odorat-aiguises" class="sub-link" onclick="toggleMobileNav()">Ouïe et odorat aiguisés</a>
+ <a href="#commande-aide" class="sub-link" onclick="toggleMobileNav()">Commande : Aide</a>
+ <a href="#commande-garde" class="sub-link" onclick="toggleMobileNav()">Commande : Garde</a>
+ <a href="#tir-du-chasseur" class="sub-link" onclick="toggleMobileNav()">Tir du chasseur</a>
+ <a href="#lechage-medicinal" class="sub-link" onclick="toggleMobileNav()">Léchage médicinal</a>
+ <a href="#progression-table" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
+    </div>
+  </body>
+</html>
