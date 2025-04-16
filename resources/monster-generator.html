@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <title>Générateur de Monstre – Codex</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <canvas id="particles"></canvas>
+    <header class="codex-header">
+      <div class="header-top">
+        <h1>Générateur de Monstre</h1>
+        <div class="fixed-header-links">
+          <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">
+            <i class="fa-solid fa-arrow-left"></i> Retour au Codex </a>
+        </div>
+      </div>
+      <p class="sous-titre">Générateur de Monstres & Rencontres</p>
+    </header>
+    <main class="accueil">
+      <div class="tabs-wrapper">
+        <button class="tab-button active" onclick="switchTab('normal')">Rencontre normale</button>
+        <button class="tab-button" onclick="switchTab('foe')">FOE</button>
+        <button class="tab-button" onclick="switchTab('boss')">Boss</button>
+      </div>
+      <div id="normal" class="tab-content">
+        <div class="ligne-formulaire">
+        <label for="niveau-normal">Niveau du groupe :</label>
+        <select id="niveau-normal">
+          <option value="1">Niveau 1</option>
+          <option value="2">Niveau 2</option>
+          <option value="3">Niveau 3</option>
+          <option value="4">Niveau 4</option>
+          <option value="5">Niveau 5</option>
+          <option value="6">Niveau 6</option>
+          <option value="7">Niveau 7</option>
+          <option value="8">Niveau 8</option>
+          <option value="9">Niveau 9</option>
+          <option value="10">Niveau 10</option>
+          <option value="11">Niveau 11</option>
+          <option value="12">Niveau 12</option>
+          <option value="13">Niveau 13</option>
+          <option value="14">Niveau 14</option>
+          <option value="15">Niveau 15</option>
+          <option value="16">Niveau 16</option>
+          <option value="17">Niveau 17</option>
+          <option value="18">Niveau 18</option>
+          <option value="19">Niveau 19</option>
+          <option value="20">Niveau 20</option>
+        </select>
+          </div>
+    
+        <div class="ligne-formulaire">
+        <label for="quantite-normal">Nombre d'ennemis :</label>
+        <select id="quantite-normal">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+    </div>
+    <div class="ligne-formulaire">
+        <button class="btn-lu centered-button" onclick="generer('normal')">Générer</button>
+    </div>
+        <div class="result" id="result-normal"></div>
+        <div class="nom-monstre-container">
+            <label for="nom-monstre">Nom du monstre :</label>
+            <input type="text" id="nom-monstre" placeholder="Nom personnalisé" style="margin-bottom: 1rem; padding: 0.3rem;">
+          <button class="btn-lu centered-button" onclick="exporterFoundry('normal')">
+              <i class="fa-solid fa-download"></i> Exporter vers FoundryVTT
+            </button>
+            </div>
+        </div>
+      <div id="boss" class="tab-content" style="display:none">
+        <div class="ligne-formulaire">
+        <label for="niveau-boss">Niveau du groupe :</label>
+        <select id="niveau-boss">
+          <option value="1">Niveau 1</option>
+          <option value="2">Niveau 2</option>
+          <option value="3">Niveau 3</option>
+          <option value="4">Niveau 4</option>
+          <option value="5">Niveau 5</option>
+          <option value="6">Niveau 6</option>
+          <option value="7">Niveau 7</option>
+          <option value="8">Niveau 8</option>
+          <option value="9">Niveau 9</option>
+          <option value="10">Niveau 10</option>
+          <option value="11">Niveau 11</option>
+          <option value="12">Niveau 12</option>
+          <option value="13">Niveau 13</option>
+          <option value="14">Niveau 14</option>
+          <option value="15">Niveau 15</option>
+          <option value="16">Niveau 16</option>
+          <option value="17">Niveau 17</option>
+          <option value="18">Niveau 18</option>
+          <option value="19">Niveau 19</option>
+          <option value="20">Niveau 20</option>
+        </select>
+    </div>
+    <div class="ligne-formulaire">
+        <label for="quantite-boss">Nombre de Boss :</label>
+        <select id="quantite-boss">
+          <option value="1">1</option>
+        </select>
+    </div>
+    <div class="ligne-formulaire">
+        <button class="btn-lu centered-button" onclick="generer('boss')">Générer</button>
+    </div>
+        <div class="result" id="result-boss"></div>
+        <div class="nom-monstre-container">
+            <label for="nom-monstre">Nom du monstre :</label>
+            <input type="text" id="nom-monstre" placeholder="Nom personnalisé" style="margin-bottom: 1rem; padding: 0.3rem;">
+          <button class="btn-lu centered-button" onclick="exporterFoundry('boss')">
+              <i class="fa-solid fa-download"></i> Exporter vers FoundryVTT
+            </button>
+            </div>
+        </div>
+      <div id="foe" class="tab-content" style="display:none">
+        <div class="ligne-formulaire">
+        <label for="niveau-foe">Niveau du groupe :</label>
+        <select id="niveau-foe">
+          <option value="1">Niveau 1</option>
+          <option value="2">Niveau 2</option>
+          <option value="3">Niveau 3</option>
+          <option value="4">Niveau 4</option>
+          <option value="5">Niveau 5</option>
+          <option value="6">Niveau 6</option>
+          <option value="7">Niveau 7</option>
+          <option value="8">Niveau 8</option>
+          <option value="9">Niveau 9</option>
+          <option value="10">Niveau 10</option>
+          <option value="11">Niveau 11</option>
+          <option value="12">Niveau 12</option>
+          <option value="13">Niveau 13</option>
+          <option value="14">Niveau 14</option>
+          <option value="15">Niveau 15</option>
+          <option value="16">Niveau 16</option>
+          <option value="17">Niveau 17</option>
+          <option value="18">Niveau 18</option>
+          <option value="19">Niveau 19</option>
+          <option value="20">Niveau 20</option>
+        </select>
+    </div>
+    <div class="ligne-formulaire">
+        <label for="quantite-foe">Nombre de FOE :</label>
+        <select id="quantite-foe">
+          <option value="1">1</option>
+        </select>
+    </div>
+    <div class="ligne-formulaire">
+        <button class="btn-lu centered-button" onclick="generer('foe')">Générer</button>
+    </div>
+        <div class="result" id="result-foe"></div>
+        <div>
+          <p class="note-expliquee">Les FOE sont des ennemis optionnels servant principalement d'obstacles. Les joueurs ne sont pas censés tous les affronter sur un étage donné, mais peuvent être motivés par leurs récompenses uniques.</p>
+        </div>
+        <div class="nom-monstre-container">
+          <label for="nom-monstre">Nom du monstre :</label>
+          <input type="text" id="nom-monstre" placeholder="Nom personnalisé" style="margin-bottom: 1rem; padding: 0.3rem;">
+        <button class="btn-lu centered-button" onclick="exporterFoundry('foe')">
+            <i class="fa-solid fa-download"></i> Exporter vers FoundryVTT
+          </button>
+          </div>
+      </div>
+    </main>
+    <script>
+      const tables = {
+        normal: {
+          1: {
+            def: 6,
+            pv: 100,
+            xp: 600
+          },
+          2: {
+            def: 7,
+            pv: 140,
+            xp: 1200
+          },
+          3: {
+            def: 8,
+            pv: 175,
+            xp: 1800
+          },
+          4: {
+            def: 9,
+            pv: 200,
+            xp: 2000
+          },
+          5: {
+            def: 9,
+            pv: 225,
+            xp: 2250
+          },
+          6: {
+            def: 10,
+            pv: 250,
+            xp: 2600
+          },
+          7: {
+            def: 10,
+            pv: 275,
+            xp: 3000
+          },
+          8: {
+            def: 11,
+            pv: 300,
+            xp: 3400
+          },
+          9: {
+            def: 11,
+            pv: 325,
+            xp: 3800
+          },
+          10: {
+            def: 12,
+            pv: 350,
+            xp: 4200
+          },
+          11: {
+            def: 12,
+            pv: 375,
+            xp: 4600
+          },
+          12: {
+            def: 13,
+            pv: 400,
+            xp: 5000
+          },
+          13: {
+            def: 13,
+            pv: 425,
+            xp: 5500
+          },
+          14: {
+            def: 14,
+            pv: 450,
+            xp: 6000
+          },
+          15: {
+            def: 14,
+            pv: 475,
+            xp: 6600
+          },
+          16: {
+            def: 15,
+            pv: 500,
+            xp: 7200
+          },
+          17: {
+            def: 15,
+            pv: 525,
+            xp: 7800
+          },
+          18: {
+            def: 16,
+            pv: 550,
+            xp: 8400
+          },
+          19: {
+            def: 16,
+            pv: 575,
+            xp: 9000
+          },
+          20: {
+            def: 17,
+            pv: 600,
+            xp: 9600
+          }
+        },
+        foe: {
+          1: {
+            def: 8,
+            pv: 60,
+            xp: 200
+          },
+          2: {
+            def: 9,
+            pv: 70,
+            xp: 400
+          },
+          3: {
+            def: 10,
+            pv: 85,
+            xp: 600
+          },
+          4: {
+            def: 11,
+            pv: 90,
+            xp: 700
+          },
+          5: {
+            def: 11,
+            pv: 95,
+            xp: 800
+          },
+          6: {
+            def: 12,
+            pv: 105,
+            xp: 900
+          },
+          7: {
+            def: 12,
+            pv: 115,
+            xp: 1000
+          },
+          8: {
+            def: 13,
+            pv: 125,
+            xp: 1100
+          },
+          9: {
+            def: 13,
+            pv: 135,
+            xp: 1200
+          },
+          10: {
+            def: 14,
+            pv: 145,
+            xp: 1300
+          },
+          11: {
+            def: 14,
+            pv: 155,
+            xp: 1400
+          },
+          12: {
+            def: 15,
+            pv: 165,
+            xp: 1500
+          },
+          13: {
+            def: 15,
+            pv: 175,
+            xp: 1600
+          },
+          14: {
+            def: 16,
+            pv: 185,
+            xp: 1700
+          },
+          15: {
+            def: 16,
+            pv: 195,
+            xp: 1800
+          },
+          16: {
+            def: 17,
+            pv: 205,
+            xp: 1900
+          },
+          17: {
+            def: 17,
+            pv: 215,
+            xp: 2000
+          },
+          18: {
+            def: 18,
+            pv: 225,
+            xp: 2100
+          },
+          19: {
+            def: 18,
+            pv: 235,
+            xp: 2200
+          },
+          20: {
+            def: 19,
+            pv: 245,
+            xp: 2300
+          }
+        },
+        boss: {
+          1: {
+            def: 9,
+            pv: 80,
+            xp: 600
+          },
+          2: {
+            def: 10,
+            pv: 100,
+            xp: 1000
+          },
+          3: {
+            def: 12,
+            pv: 120,
+            xp: 1300
+          },
+          4: {
+            def: 13,
+            pv: 135,
+            xp: 1500
+          },
+          5: {
+            def: 13,
+            pv: 150,
+            xp: 1700
+          },
+          6: {
+            def: 14,
+            pv: 165,
+            xp: 2000
+          },
+          7: {
+            def: 14,
+            pv: 180,
+            xp: 2300
+          },
+          8: {
+            def: 15,
+            pv: 195,
+            xp: 2600
+          },
+          9: {
+            def: 15,
+            pv: 210,
+            xp: 2900
+          },
+          10: {
+            def: 16,
+            pv: 225,
+            xp: 3200
+          },
+          11: {
+            def: 16,
+            pv: 240,
+            xp: 3500
+          },
+          12: {
+            def: 17,
+            pv: 255,
+            xp: 3800
+          },
+          13: {
+            def: 17,
+            pv: 270,
+            xp: 4100
+          },
+          14: {
+            def: 18,
+            pv: 285,
+            xp: 4400
+          },
+          15: {
+            def: 18,
+            pv: 300,
+            xp: 4700
+          },
+          16: {
+            def: 19,
+            pv: 315,
+            xp: 5000
+          },
+          17: {
+            def: 19,
+            pv: 330,
+            xp: 5300
+          },
+          18: {
+            def: 20,
+            pv: 345,
+            xp: 5600
+          },
+          19: {
+            def: 20,
+            pv: 360,
+            xp: 5900
+          },
+          20: {
+            def: 21,
+            pv: 375,
+            xp: 6200
+          }
+        }
+      };
+
+      function switchTab(tab) {
+        document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(div => div.style.display = 'none');
+        document.querySelector(`#${tab}`).style.display = 'block';
+        document.querySelector(`[onclick*="${tab}"]`).classList.add('active');
+      }
+
+      function generer(type) {
+        const niveau = document.getElementById(`niveau-${type}`).value;
+        const quantite = parseInt(document.getElementById(`quantite-${type}`).value);
+        const stats = tables[type][niveau];
+        const pv = Math.round(stats.pv / quantite);
+        const xp = Math.round(stats.xp / quantite);
+        const html = `
+          
+										<h2>${quantite} × ${type.toUpperCase()} (groupe niveau ${niveau})</h2>
+										<p>
+											<strong>Défense :</strong> ${stats.def}
+										</p>
+										<p>
+											<strong>Points de Vie par ${type === 'boss' ? 'Boss' : 'ennemi'} :</strong> ${pv}
+										</p>
+										<p>
+											<strong>XP par unité :</strong> ${xp}
+										</p>
+										<p>
+											<em>XP totale : ${xp * quantite}</em>
+										</p>
+        `;
+        document.getElementById(`result-${type}`).innerHTML = html;
+        const result = document.getElementById(`result-${type}`);
+        result.innerHTML = html;
+        result.classList.add('show');
+      }
+
+      function exporterFoundry(type) {
+        const niveau = document.getElementById(`niveau-${type}`).value;
+        const quantite = parseInt(document.getElementById(`quantite-${type}`).value);
+        const stats = tables[type][niveau];
+        const pv = Math.round(stats.pv / quantite);
+        const nom = document.getElementById('nom-monstre').value || `Monstre ${type}`;
+        const actor = {
+          name: nom,
+          type: "npc",
+          img: "icons/svg/mystery-man.svg",
+          system: {
+            attributes: {
+              hp: {
+                value: pv,
+                max: pv
+              },
+              ac: {
+                value: stats.def
+              },
+              xp: {
+                value: stats.xp
+              }
+            },
+            details: {
+              type: {
+                value: type
+              },
+              cr: 1
+            }
+          },
+          token: {
+            name: nom
+          },
+          flags: {},
+          effects: [],
+          folder: null,
+          items: []
+        };
+        const blob = new Blob([JSON.stringify(actor, null, 2)], {
+          type: "application/json"
+        });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = nom.toLowerCase().replace(/\s+/g, '_') + ".json";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+      }
+    </script>
+    <footer>
+      <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+    </footer>
+    <script src="../particles.js"></script>
+  </body>
+</html>
