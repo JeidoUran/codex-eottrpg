@@ -962,7 +962,7 @@ footer {
 
 .nom-monstre-container {
 	max-width: 800px;
-	margin: 5rem auto;
+	margin: 5rem auto 2rem;
 }
 
 #nom-monstre {
