@@ -369,7 +369,7 @@ footer {
 	justify-content: center;
 	gap: 1rem;
 	flex-wrap: wrap;
-	margin: -1.5rem auto 2rem;
+	margin: -1.5rem auto 3rem;
 }
 
 .patch-section {
@@ -1770,3 +1770,23 @@ select {
 	vertical-align: middle;
 	margin: 0 0.3rem 0.35rem;
   }
+
+  .effet-bloc {
+	border-left: 2px solid rgba(255, 255, 255, 0.05);
+	padding-left: 0.75em;
+	margin-bottom: 1.2em;
+  }
+  
+  .effet-bloc h4 {
+	font-family: "Cinzel-Regular", serif;
+	font-size: 0.95rem;
+	color: #f9e4b7;
+	margin: 0 0 0.4em;
+	display: block;
+  }
+  
+  .effet-bloc p {
+	margin: 0;
+	line-height: 1.6;
+  }
+  

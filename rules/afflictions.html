@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<title>Afflictions | Codex - Etrian Odyssey TTRPG</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../favicon.png" rel="icon" type="image/png"/>
+<link href="../style.css" rel="stylesheet"/>
+</head>
+<body>
+<canvas id="particles"></canvas>
+<header class="codex-header">
+<img alt="Bannière" class="banniere" src="../assets/images/banniere.png"/>
+<h1>Afflictions &amp; États</h1>
+<p class="sous-titre">Archives et mises à jour du monde d’Etrian Odyssey</p>
+</header>
+<nav class="nav-magique">
+<a href="/">Accueil</a>
+<a href="../notes/">Patch Notes</a>
+<a href="../rules/">Règles</a>
+<a href="../lore/">Univers</a>
+<a href="../music-player.html">Musiques</a>
+<a href="../resources/">Ressources</a>
+<a href="../credits.html">Crédits</a>
+</nav>
+
+<main class="patch-list accueil">
+  <section class="intro"><p>Voici la liste des afflictions pouvant affecter vos personnages pendant leur aventure.</p></section>
+<article id="prone">
+<h3>
+<img class="image skill-icon" src="../assets/images/afflictions-icons/prone.png"/>
+    À terre
+    <span><img alt="Affliction" class="image action-icon" src="../assets/images/action-costs/affliction.png"/>Affliction</span>
+</h3>
+<p>Tant que vous avez l'affliction À terre, vous êtes sujet aux effets suivants.</p>
+<div class="effet-bloc"><h4>Déplacement restreint</h4><p>Vos seules options de déplacements sont de ramper ou de dépenser un montant de déplacement égal à la moitié de votre vitesse (arrondi à l'inférieur) pour vous redresser et mettre fin à l'état. Si votre vitesse est égale à 0, vous ne pouvez pas vous redresser.</p></div>
+<div class="effet-bloc"><h4>Attaques affectées</h4><p>Vous avez désavantage sur vos jets d'attaque. Un jet d'attaque contre vous a l'avantage si l'attaquant est à 1.5 mètre de vous. Sinon, ce jet d'attaque a désavantage.</p></div>
+</article>
+<article id="grappled">
+<h3>
+<img class="image skill-icon" src="../assets/images/afflictions-icons/grappled.png"/>
+    Agrippé
+    <span><img alt="Affliction" class="image action-icon" src="../assets/images/action-costs/affliction.png"/>Affliction</span>
+</h3>
+<p>Tant que vous avez l'affliction Agrippé, vous êtes sujet aux effets suivants.</p>
+<div class="effet-bloc"><h4>Vitesse nulle</h4><p>Votre vitesse est réduite à 0 et ne peut plus augmenter.</p></div>
+<div class="effet-bloc"><h4>Attaques affectées</h4><p>Vous avez désavantage aux jets d'attaque contre toute cible qui n'est pas la créature vous agrippant.</p></div>
+<div class="effet-bloc"><h4>Déplaçable</h4><p>La créature qui vous agrippe peut vous traîner ou vous porter lorsqu'elle se déplace, mais chaque 1.5 mètre de déplacement lui coûte 1.5 mètre de plus, sauf si vous êtes de taille Minuscule, ou de deux tailles de moins que la créature.</p></div>
+</article>
+<article id="deafened">
+<h3>
+<img class="image skill-icon" src="../assets/images/afflictions-icons/deafened.png"/>
+    Assourdi
+    <span><img alt="Affliction" class="image action-icon" src="../assets/images/action-costs/affliction.png"/>Affliction</span>
+</h3>
+<p>Tant que vous avez l'affliction Assourdi, vous êtes sujet aux effets suivants.</p>
+<div class="effet-bloc"><h4>N'entends rien</h4><p>Vous n'entendez rien et échouez automatiquement tout test de caractéristique impliquant l'ouïe.</p></div>
+</article>
+<article id="blinded">
+<h3>
+<img class="image skill-icon" src="../assets/images/afflictions-icons/blinded.png"/>
+    Aveuglé
+    <span><img alt="Affliction" class="image action-icon" src="../assets/images/action-costs/affliction.png"/>Affliction</span>
+</h3>
+<p>Tant que vous avez l'affliction Aveuglé, vous êtes sujet aux effets suivants.</p>
+<div class="effet-bloc"><h4>Ne peut voir</h4><p>Vous ne voyez rien et échouez automatiquement tout test qui requiert votre vision.</p></div>
+<div class="effet-bloc"><h4>Attaques affectées</h4><p>Les jets d'attaque contre vous ont l'avantage, tandis que les vôtres ont désavantage.</p></div>
+</article>
+<article id="arm-bind">
+<h3>
+<img class="image skill-icon" src="../assets/images/afflictions-icons/arm-bind.png"/>
+    Bras liés
+    <span><img alt="Affliction" class="image action-icon" src="../assets/images/action-costs/affliction.png"/>Affliction</span>
+</h3>
+<p>Tant que vous avez l'affliction Bras liés, vous êtes sujet aux effets suivants.</p>
+<div class="effet-bloc"><h4>Incapacité gestuelle</h4><p>Vous ne pouvez pas utiliser d’attaques ou de capacités nécessitant l’usage de vos bras.</p></div>
+<div class="effet-bloc"><h4>Sorts restreints</h4><p>Vous ne pouvez pas lancer de sorts nécessitant des composantes somatiques.</p></div>
+<div class="effet-bloc"><h4>Jets de sauvegarde affectés</h4><p>Vous subissez un malus de -4 aux jets de caractéristique et aux jets de sauvegarde basés sur la Force.</p></div>
+</article>
+<article id="charmed">
+<h3>
+<img class="image skill-icon" src="../assets/images/afflictions-icons/charmed.png"/>
+    Charmé
+    <span><img alt="Affliction" class="image action-icon" src="../assets/images/action-costs/affliction.png"/>Affliction</span>
+</h3>
+<p>Tant que vous avez l'affliction Charmé, vous êtes sujet aux effets suivants.</p>
+<div class="effet-bloc"><h4>Ne peut blesser le charmeur</h4><p>Vous ne pouvez pas attaquer le charmeur ou le cibler avec des aptitudes causant des dégâts ou des effets magiques.</p></div>
+<div class="effet-bloc"><h4>Avantage social</h4><p>Le charmeur à l'avantage sur tous les tests pour intéragir avec vous socialement.</p></div>
+</article>
+<article id="confused">
+<h3>
+<img class="image skill-icon" src="../assets/images/afflictions-icons/confused.png"/>
+    Confus
+    <span><img alt="Affliction" class="image action-icon" src="../assets/images/action-costs/affliction.png"/>Affliction</span>
+</h3>
+<p>Tant que vous avez l'affliction Confus, vous êtes sujet aux effets suivants.</p>
+<div class="effet-bloc"><h4>Comportement erratique</h4><p>Au début de chacun de vos tours, vous devez lancer 1d4 pour déterminer votre comportement.</p></div>
+<div class="effet-bloc"><h4>Attaque incontrôlée</h4><p>Sur un résultat de 1 ou 2, vous devez utiliser votre action pour vous déplacer vers la créature la plus proche dans un rayon de 4,5 mètres, puis effectuer une seule attaque contre elle. S’il n’y a aucune autre créature à portée, vous devez effectuer cette attaque contre vous-même.</p></div>
+<div class="effet-bloc"><h4>Contrôle partiel</h4><p>Sur un résultat de 3 ou 4, vous agissez normalement pendant ce tour.</p></div>
+<div class="effet-bloc"><h4>Actions limitées</h4><p>Vous ne pouvez pas effectuer d'actions bonus, d'actions combos ou de réactions.</p></div>
+</article>
+<article id="frightened">
+<h3>
+<img class="image skill-icon" src="../assets/images/afflictions-icons/frightened.png"/>
+    Effrayé
+    <span><img alt="Affliction" class="image action-icon" src="../assets/images/action-costs/affliction.png"/>Affliction</span>
+</h3>
+<p>Tant que vous avez l'affliction Effrayé, vous êtes sujet aux effets suivants.</p>
+<div class="effet-bloc"><h4>Tests de caractéristique et attaques affectés</h4><p>Vous avez désavantage sur vos tests de caractéristiques et jets d'attaque tant que la source de votre peur est dans votre ligne de vue.</p></div>
+<div class="effet-bloc"><h4>Ne peut approcher</h4><p>Vous ne pouvez pas vous rapprocher de la source de votre peur de votre plein gré.</p></div>
+</article>
+<article id="poisoned">
+<h3>
+<img class="image skill-icon" src="../assets/images/afflictions-icons/poisoned.png"/>
+    Empoisonné
+    <span><img alt="Affliction" class="image action-icon" src="../assets/images/action-costs/affliction.png"/>Affliction</span>
+</h3>
+<p>Tant que vous avez l'affliction Empoisonné, vous êtes sujet aux effets suivants.</p>
+<div class="effet-bloc"><h4>Dégâts progressifs</h4><p>Au début de chacun de vos tours, vous subissez un montant de dégâts déterminé par la source du poison.</p></div>
+</article>
+<article id="asleep">
+<h3>
+<img class="image skill-icon" src="../assets/images/afflictions-icons/asleep.png"/>
+    Endormi
+    <span><img alt="Affliction" class="image action-icon" src="../assets/images/action-costs/affliction.png"/>Affliction</span>
+</h3>
+<p>Tant que vous avez l'affliction Endormi, vous êtes sujet aux effets suivants.</p>
+<div class="effet-bloc"><h4>Sommeil magique</h4><p>Vous êtes plongé dans un sommeil anormal et irrésistible.</p></div>
+<div class="effet-bloc"><h4>Neutralisé</h4><p>Vous êtes neutralisé.</p></div>
+<div class="effet-bloc"><h4>Vitesse nulle</h4><p>Votre vitesse est réduite à 0 et ne peut plus augmenter.</p></div>
+<div class="effet-bloc"><h4>Attaques affectées</h4><p>Les jets d'attaque contre vous ont l'avantage.</p></div>
+<div class="effet-bloc"><h4>Jets de sauvegarde affectés</h4><p>Vous échouez automatiquement aux jets de sauvegarde de Force et de Dextérité.</p></div>
+<div class="effet-bloc"><h4>Coup critique automatique</h4><p>La première attaque qui vous touche est automatiquement un coup critique et vous réveille immédiatement.</p></div>
+</article>
+<article id="binded">
+<h3>
+<img class="image skill-icon" src="../assets/images/afflictions-icons/binded.png"/>
+    Entravé
+    <span><img alt="Affliction" class="image action-icon" src="../assets/images/action-costs/affliction.png"/>Affliction</span>
+</h3>
+<p>Tant que vous avez l'affliction Entravé, vous êtes sujet aux effets suivants.</p>
+<div class="effet-bloc"><h4>Vitesse nulle</h4><p>Votre vitesse est réduite à 0 et ne peut plus augmenter.</p></div>
+<div class="effet-bloc"><h4>Attaques affectées</h4><p>Les jets d'attaque contre vous ont l'avantage, et vos jets d'attaque ont désavantage.</p></div>
+<div class="effet-bloc"><h4>Jets de sauvegarde affectés</h4><p>Vous avez désavantage sur les jets de sauvegarde de Dextérité.</p></div>
+</article>
+<article id="exhausted">
+<h3>
+<img class="image skill-icon" src="../assets/images/afflictions-icons/exhausted.png"/>
+    Épuisement
+    <span><img alt="Affliction" class="image action-icon" src="../assets/images/action-costs/affliction.png"/>État</span>
+</h3>
+<p>Lorsque vous êtes affecté par l'état Épuisement, vous subissez les effets suivants :</p>
+<div class="etat-contenu">
+<div class="effet-bloc">
+<h4>Niveaux d’Épuisement</h4>
+<p>Cette condition est cumulative. Chaque fois que vous la recevez, vous gagnez 1 niveau d’Épuisement. Vous mourrez si votre niveau d’Épuisement atteint 6.</p>
+</div>
+<div class="effet-bloc">
+<h4>Tests de d20 affectés</h4>
+<p>Lorsque vous effectuez un test de d20, le jet est réduit de 2 × votre niveau d’Épuisement.</p>
+</div>
+<div class="effet-bloc">
+<h4>Jets de précision affectés</h4>
+<p>Lorsque vous effectuez un jet de précision, le jet est réduit de 1 × votre niveau d’Épuisement.</p>
+</div>
+<div class="effet-bloc">
+<h4>Vitesse réduite</h4>
+<p>Votre vitesse est réduite d’un nombre de mètres égal à 1,5 × votre niveau d’Épuisement.</p>
+</div>
+<div class="effet-bloc">
+<h4>Suppression des niveaux d’Épuisement</h4>
+<p>Terminer un long repos réduit votre niveau d’Épuisement de 1. Lorsque votre niveau d’Épuisement atteint 0, la condition prend fin.</p>
+</div>
+</div>
+</article>
+<article id="stunned">
+<h3>
+<img class="image skill-icon" src="../assets/images/afflictions-icons/stunned.png"/>
+    Étourdi
+    <span><img alt="Affliction" class="image action-icon" src="../assets/images/action-costs/affliction.png"/>Affliction</span>
+</h3>
+<p>Tant que vous avez l'affliction Étourdi, vous êtes sujet aux effets suivants.</p>
+<div class="effet-bloc"><h4>Neutralisé</h4><p>Vous êtes neutralisé.</p></div>
+<div class="effet-bloc"><h4>Attaques affectées</h4><p>Les jets d'attaque contre vous ont l'avantage.</p></div>
+<div class="effet-bloc"><h4>Jets de sauvegarde affectés</h4><p>Vous échouez automatiquement aux jets de sauvegarde de Force et Dextérité.</p></div>
+</article>
+<article id="unconscious">
+<h3>
+<img class="image skill-icon" src="../assets/images/afflictions-icons/unconscious.png"/>
+    Inconscient
+    <span><img alt="Affliction" class="image action-icon" src="../assets/images/action-costs/affliction.png"/>Affliction</span>
+</h3>
+<p>Tant que vous avez l'affliction Inconscient, vous êtes sujet aux effets suivants.</p>
+<div class="effet-bloc"><h4>Inerte</h4><p>Vous êtes affectés par les états neutralisé et à terre, et vous lâchez ce que vous tenez. Lorsque cet état prend fin, vous êtes toujours À terre.</p></div>
+<div class="effet-bloc"><h4>Vitesse nulle</h4><p>Votre vitesse est réduite à 0 et ne peut plus augmenter.</p></div>
+<div class="effet-bloc"><h4>Attaques affectées</h4><p>Les jets d'attaque contre vous ont l'avantage.</p></div>
+<div class="effet-bloc"><h4>Jets de sauvegarde affectés</h4><p>Vous échouez automatiquement aux jets de sauvegarde de Force et Dextérité.</p></div>
+<div class="effet-bloc"><h4>Coups critique automatiques</h4><p>Tout jet d'attaque contre vous qui vous atteint est un coup critique si l'attaquant est à 1.5 mètre de vous ou moins.</p></div>
+</article>
+<article id="invisible">
+<h3>
+<img class="image skill-icon" src="../assets/images/afflictions-icons/invisible.png"/>
+    Invisible
+    <span><img alt="Affliction" class="image action-icon" src="../assets/images/action-costs/affliction.png"/>État</span>
+</h3>
+<p>Tant que vous avez l'état Invisible, vous êtes sujet aux effets suivants.</p>
+<div class="effet-bloc"><h4>Surprise</h4><p>Si vous êtes Invisible au moment de l'initiative, vous agissez en premier.</p></div>
+<div class="effet-bloc"><h4>Caché</h4><p>Vous n'êtes affectés par aucun effet qui requiert que la cible soit visible, sauf si l'utilisateur de cet effet peut vous voir. Tout équipement que vous portez sur vous ou dans vos mains est également caché.</p></div>
+<div class="effet-bloc"><h4>Attaques affectées</h4><p>Les jets d'attaque contre vous ont désavantage, et vos jets d'attaque ont l'avantage. Si une créature peut vous voir, cet effet ne s'applique pas contre elle.</p></div>
+</article>
+<article id="leg-bind">
+<h3>
+<img class="image skill-icon" src="../assets/images/afflictions-icons/leg-bind.png"/>
+    Jambes liées
+    <span><img alt="Affliction" class="image action-icon" src="../assets/images/action-costs/affliction.png"/>Affliction</span>
+</h3>
+<p>Tant que vous avez l'affliction Jambes liées, vous êtes sujet aux effets suivants.</p>
+<div class="effet-bloc"><h4>Incapacité motrice</h4><p>Vous ne pouvez pas utiliser d’attaques ou de capacités nécessitant l’usage de vos jambes.</p></div>
+<div class="effet-bloc"><h4>Vitesse nulle</h4><p>Votre vitesse est réduite à 0. Vous perdez également la capacité de voler.</p></div>
+<div class="effet-bloc"><h4>Jets de sauvegarde affectés</h4><p>Vous échouez automatiquement aux tests de caractéristique et aux jets de sauvegarde de Dextérité nécessitant l’usage de vos jambes.</p></div>
+</article>
+<article id="cursed">
+<h3>
+<img class="image skill-icon" src="../assets/images/afflictions-icons/cursed.png"/>
+    Maudit
+    <span><img alt="Affliction" class="image action-icon" src="../assets/images/action-costs/affliction.png"/>Affliction</span>
+</h3>
+<p>Tant que vous avez l'affliction Maudit, vous êtes sujet aux effets suivants.</p>
+<div class="effet-bloc"><h4>Dégâts réduits</h4><p>Lorsque vous infligez des dégâts avec une attaque, le plus grand nombre obtenu sur les dés de dégâts est retiré du total.</p></div>
+<div class="effet-bloc"><h4>Retour de fléau</h4><p>Les dégâts ainsi retirés vous sont infligés comme des dégâts du même type.</p></div>
+</article>
+<article id="incapacitated">
+<h3>
+<img class="image skill-icon" src="../assets/images/afflictions-icons/incapacitated.png"/>
+    Neutralisé
+    <span><img alt="Affliction" class="image action-icon" src="../assets/images/action-costs/affliction.png"/>Affliction</span>
+</h3>
+<p>Tant que vous avez l'affliction Neutralisé, vous êtes sujet aux effets suivants.</p>
+<div class="effet-bloc"><h4>Inactif</h4><p>Vous ne pouvez pas effectuer d'action, d'action bonus, d'action combo, d'action complexe, ou de réaction.</p></div>
+<div class="effet-bloc"><h4>Pas de concentration</h4><p>Votre concentration est brisée.</p></div>
+<div class="effet-bloc"><h4>Sans voix</h4><p>Vous ne pouvez pas parler.</p></div>
+<div class="effet-bloc"><h4>Surpris</h4><p>Si vous êtes Neutralisé au moment de l'initiative, vous êtes considéré comme étant pris par surprise.</p></div>
+</article>
+<article id="paralysed">
+<h3>
+<img class="image skill-icon" src="../assets/images/afflictions-icons/paralysed.png"/>
+    Paralysé
+    <span><img alt="Affliction" class="image action-icon" src="../assets/images/action-costs/affliction.png"/>Affliction</span>
+</h3>
+<p>Tant que vous avez l'affliction Paralysé, vous êtes sujet aux effets suivants.</p>
+<div class="effet-bloc"><h4>Vitesse affectée</h4><p>Votre vitesse est réduite de moitié.</p></div>
+<div class="effet-bloc"><h4>Actions limitées</h4><p>Vous ne pouvez pas effectuer d'actions bonus, d'actions combo, ou de réactions.</p></div>
+</article>
+<article id="petrified">
+<h3>
+<img class="image skill-icon" src="../assets/images/afflictions-icons/petrified.png"/>
+    Pétrifié
+    <span><img alt="Affliction" class="image action-icon" src="../assets/images/action-costs/affliction.png"/>Affliction</span>
+</h3>
+<p>Tant que vous avez l'affliction Pétrifié, vous êtes sujet aux effets suivants.</p>
+<div class="effet-bloc"><h4>Transformé en substance inanimée</h4><p>Vous êtes transformé, ainsi que tout objet non-magique que vous portez sur vous et dans vos mains, en une substance inanimée solide (habituellement de la pierre). Votre poids est multiplié par 10, et vous ne vieillissez plus.</p></div>
+<div class="effet-bloc"><h4>Neutralisé</h4><p>Vous êtes neutralisé.</p></div>
+<div class="effet-bloc"><h4>Vitesse nulle</h4><p>Votre vitesse est réduite à 0 et ne peut plus augmenter.</p></div>
+<div class="effet-bloc"><h4>Attaques affectées</h4><p>Les jets d'attaque contre vous ont l'avantage.</p></div>
+<div class="effet-bloc"><h4>Jets de sauvegarde affectés</h4><p>Vous échouez automatiquement aux jets de sauvegarde de Force et Dextérité.</p></div>
+<div class="effet-bloc"><h4>Résistant</h4><p>Vous gagnez une résistance à tous les types de dégâts.</p></div>
+<div class="effet-bloc"><h4>Immunité au poison</h4><p>Vous êtes immunisé à l'état empoisonné.</p></div>
+</article>
+<article id="head-bind">
+<h3>
+<img class="image skill-icon" src="../assets/images/afflictions-icons/head-bind.png"/>
+    Tête liée
+    <span><img alt="Affliction" class="image action-icon" src="../assets/images/action-costs/affliction.png"/>Affliction</span>
+</h3>
+<p>Tant que vous avez l'affliction Tête liée, vous êtes sujet aux effets suivants.</p>
+<div class="effet-bloc"><h4>Incapacité verbale</h4><p>Vous ne pouvez pas utiliser d’attaques ou de capacités nécessitant l’usage de votre bouche ou de votre tête.</p></div>
+<div class="effet-bloc"><h4>Sorts restreints</h4><p>Vous ne pouvez pas lancer de sorts nécessitant des composantes verbales.</p></div>
+<div class="effet-bloc"><h4>Jets de sauvegarde affectés</h4><p>Vous subissez un malus de -4 aux jets de caractéristique et aux jets de sauvegarde basés sur l’Intelligence ou la Sagesse.</p></div>
+</article>
+</main>
+<footer>
+<p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+</footer>
+<script src="../particles.js"></script>
+</body>
+</html>
