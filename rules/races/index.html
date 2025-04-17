@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Index des Races</title>
+    <link rel="icon" href="../../favicon.png" type="image/png">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <canvas id="particles"></canvas>
+    <header class="codex-header">
+      <div class="header-top">
+        <h1><img src="../../assets/images/green-book.png" class="image codex-image-header"> Index des Races</h1>
+      </div>
+      <p class="sous-titre">Consultez les différentes races jouables du JDR</p>
+      <div class="fixed-header-links">
+        <a href="/" class="carte-lien"><i class="fa-solid fa-arrow-left"></i> Retour au Codex</a>
+      </div>
+    </header>
+    <main class="accueil">
+      <!--<div id="search-wrapper">
+        <input type="text" id="search-bar" placeholder="Rechercher une race...">
+      </div>-->
+      
+      <a href="brouni.html" class="carte-lien class-card" data-nom="brouni" data-description="petits humanoïdes dynamiques, guidés par l’ambition et le succès social.">
+        <img src="../../assets/images/race-icons/brouni.png" alt="Brouni" class="image class-icon">
+        <h2>Brouni</h2>
+        <p>Petits humanoïdes dynamiques, guidés par l’ambition et le succès social.</p>
+      </a>
+
+      <a href="celestrian.html" class="carte-lien class-card" data-nom="célestrien" data-description="humanoïdes érudits liés à la magie, dévoués à l’étude des mystères du monde.">
+        <img src="../../assets/images/race-icons/celestrian.png" alt="Célestrien" class="image class-icon">
+        <h2>Célestrien</h2>
+        <p>Humanoïdes érudits liés à la magie, dévoués à l’étude des mystères du monde.</p>
+      </a>
+
+      <a href="earthlain.html" class="carte-lien class-card" data-nom="earthlain" data-description="humanoïdes aux traits variés, portés par l’ambition, la curiosité et la coopération.">
+        <img src="../../assets/images/race-icons/earthlain.png" alt="Earthlain" class="image class-icon">
+        <h2>Earthlain</h2>
+        <p>Humanoïdes aux traits variés, portés par l’ambition, la curiosité et la coopération.</p>
+      </a>
+
+      <a href="sentinel.html" class="carte-lien class-card" data-nom="sentinelle" data-description="géants aux traits animaux, pacifiques et soudés, vivant en harmonie avec la nature.">
+        <img src="../../assets/images/race-icons/sentinel.png" alt="Sentinelle" class="image class-icon">
+        <h2>Sentinelle</h2>
+        <p>Géants aux traits animaux, pacifiques et soudés, vivant en harmonie avec la nature.</p>
+      </a>
+
+      <a href="therian.html" class="carte-lien class-card" data-nom="thérian" data-description="guerriers féodaux mêlant traits animaux et humains, mus par la force et l’honneur.">
+        <img src="../../assets/images/race-icons/therian.png" alt="Thérian" class="image class-icon">
+        <h2>Thérian</h2>
+        <p>Guerriers féodaux mêlant traits animaux et humains, mus par la force et l’honneur.</p>
+      </a>
+
+      <a href="vessel.html" class="carte-lien class-card" data-nom="vaisseau" data-description="protecteurs silencieux liés à la nature, jadis créés pour combattre les ombres.">
+        <img src="../../assets/images/race-icons/vessel.png" alt="Vaisseau" class="image class-icon">
+        <h2>Vaisseau</h2>
+        <p>Protecteurs silencieux liés à la nature, jadis créés pour combattre les Ombres.</p>
+      </a>
+    </main>
+    <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button>
+    <footer>
+    <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+</footer>
+    <script src="../../particles.js"></script>
+    <!--<script>
+      const searchInput = document.getElementById("search-bar");
+      const cards = document.querySelectorAll(".class-card");
+      searchInput.addEventListener("input", e => {
+        const val = e.target.value.toLowerCase();
+        cards.forEach(card => {
+          if (card.dataset.nom.includes(val) || card.dataset.description.includes(val)) {
+            card.style.removeProperty("display");
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+
+      window.addEventListener('scroll', () => {
+        document.getElementById('backToTop').classList.toggle('show', window.scrollY > 300);
+      });
+    </script>-->
+  </body>
+</html>

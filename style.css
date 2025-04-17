@@ -761,6 +761,18 @@ footer {
 	background-color: rgba(136, 192, 169, 0.15);
 }
 
+.illustration-wrapper.single {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	gap: 1rem;
+	flex-wrap: wrap;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(136, 192, 169, 0.2);
+	background: rgba(255, 255, 255, 0.02);
+	overflow: hidden;
+	width: 400px;
+}
 
 .illustration-wrapper.double {
 	display: flex;
@@ -773,6 +785,13 @@ footer {
 	background: rgba(255, 255, 255, 0.02);
 	overflow: hidden;
 	width: 760px;
+}
+
+.illustration-wrapper.single img.illustration-race {
+	height: 350px;
+	/* ou ajuste à la taille souhaitée */
+	width: auto;
+	object-fit: contain;
 }
 
 .illustration-wrapper.double img.illustration-classe {
