@@ -16,6 +16,7 @@ exports.handler = async function(event, context) {
     const data = await response.json();
 
     const outputPath = path.join(__dirname, "../../data/oktar.json");
+    data._codexLastUpdate = new Date().toISOString();
     fs.writeFileSync(outputPath, JSON.stringify(data, null, 2));
 
     return {
