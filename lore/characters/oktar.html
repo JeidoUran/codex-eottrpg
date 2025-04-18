@@ -81,7 +81,10 @@
 
       // Met à jour la date de dernière mise à jour
       const now = new Date();
-      const formatted = now.toLocaleDateString("fr-FR");
+      const formatted = updated.toLocaleString("fr-FR", {
+        dateStyle: "short",
+        timeStyle: "short"
+      });
       document.getElementById("last-updated").textContent = `Dernière mise à jour : ${formatted}`;
     })
     .catch((error) => {
