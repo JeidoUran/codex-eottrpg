@@ -1,5 +1,5 @@
 {
-  "requestId": "entity_1745013953909_vliw7tc",
+  "requestId": "entity_1745015872594_8uh9m91",
   "clientId": "foundry-skQfvcSugPyn5XvR",
   "uuid": "Actor.DLc3BG2Qq87T57tk",
   "data": [
@@ -12865,8 +12865,8 @@
         "lastModifiedBy": "skQfvcSugPyn5XvR",
         "compendiumSource": null,
         "duplicateSource": null
-      }
+      },
+      "_codexLastUpdate": "2025-04-18T22:37:52.657Z"
     }
-  ],
-  "_codexLastUpdate": "2025-04-18T22:05:53.993Z"
+  ]
 }
