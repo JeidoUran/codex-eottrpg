@@ -36,11 +36,6 @@
           <strong>Classe :</strong> Impérial<br>
           <strong>Joueur :</strong> Tailos
         </div>
-      </li>
-      <li><img src="../../assets/images/notes-medium.png" class="image">
-        <div class="image-texte" id="oktar-stats">
-          <em>Chargement des données en cours...</em>
-        </div>
       </li>      
       <li><img src="../../assets/images/notes-medium.png" class="image">
         <div class="image-texte">
@@ -51,6 +46,18 @@
       </li>
     </ul>
   </article>
+  <article class="stats">
+    <h3>Caractéristiques</h3>
+    <ul>
+      <li><strong>Force :</strong> <span id="str-score">—</span></li>
+      <li><strong>Dextérité :</strong> <span id="dex-score">—</span></li>
+      <li><strong>Constitution :</strong> <span id="con-score">—</span></li>
+      <li><strong>Intelligence :</strong> <span id="int-score">—</span></li>
+      <li><strong>Sagesse :</strong> <span id="wis-score">—</span></li>
+      <li><strong>Charisme :</strong> <span id="cha-score">—</span></li>
+    </ul>
+  </article>
+  <p id="last-updated" class="timestamp">Chargement...</p>  
 </main>
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
   <img id="lightbox-img" src="" alt="Portrait" />
@@ -60,30 +67,29 @@
 </footer>
 <script>
   fetch("../../data/oktar.json")
-    .then(response => response.json())
-    .then(data => {
-      const stats = document.getElementById("oktar-stats");
-      const hp = data.system?.attributes?.hp;
-      const abilities = data.system?.abilities;
-  
-      if (!hp || !abilities) {
-        stats.innerHTML = "<em>Données d’Oktar incomplètes ou incompatibles.</em>";
-        return;
-      }
-  
-      stats.innerHTML = `
-        <strong>PV :</strong> ${hp.value} / ${hp.max}<br>
-        <strong>Force :</strong> ${abilities.str.value}<br>
-        <strong>Dextérité :</strong> ${abilities.dex.value}<br>
-        <strong>Sagesse :</strong> ${abilities.wis.value}<br>
-        <strong>Défense :</strong> ${data.system.attributes.ac.value}
-      `;
+    .then((res) => res.json())
+    .then((json) => {
+      const data = json.data[0];
+      const abilities = data.system.abilities;
+
+      document.getElementById("str-score").textContent = abilities.str.value;
+      document.getElementById("dex-score").textContent = abilities.dex.value;
+      document.getElementById("con-score").textContent = abilities.con.value;
+      document.getElementById("int-score").textContent = abilities.int.value;
+      document.getElementById("wis-score").textContent = abilities.wis.value;
+      document.getElementById("cha-score").textContent = abilities.cha.value;
+
+      // Met à jour la date de dernière mise à jour
+      const now = new Date();
+      const formatted = now.toLocaleDateString("fr-FR");
+      document.getElementById("last-updated").textContent = `Dernière mise à jour : ${formatted}`;
     })
-    .catch(err => {
-      console.error("Erreur de chargement JSON :", err);
-      document.getElementById("oktar-stats").innerHTML = "<em>Données indisponibles (hors ligne ?).</em>";
+    .catch((error) => {
+      console.error("Erreur lors du chargement des données Oktar:", error);
+      document.getElementById("last-updated").textContent =
+        "Données indisponibles. Chargement du snapshot.";
     });
-  </script>  
+</script>
 <script>
   function openLightbox(src) {
     const lightbox = document.getElementById("lightbox");
