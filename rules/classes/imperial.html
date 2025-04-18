@@ -327,12 +327,12 @@
   </h2>
 
   <div class="class-table-tabs-wrapper">
-    <button class="tab-button active" onclick="switchTab(event, 'imperial-general')">Impérial</button>
+    <button class="tab-button active" onclick="switchTab(event, 'general')">Impérial</button>
     <button class="tab-button" onclick="switchTab(event, 'imperial-destruction')">Serment de Destruction</button>
     <button class="tab-button" onclick="switchTab(event, 'imperial-protection')">Serment de Protection</button>
   </div>
 
-  <div class="table-container tab-content" id="tab-general">
+  <div class="table-container tab-content active" id="tab-general">
     <table class="progression-table">
       <thead><tr><th>Niveau</th><th>Bonus de maîtrise</th><th>Aptitudes</th></tr></thead>
       <tbody>
@@ -362,7 +362,7 @@
 
   <div class="table-container tab-content" id="tab-imperial-destruction" style="display:none;">
     <table class="progression-table">
-      <thead><tr><th>Niveau</th><th>Aptitude Serment de Destruction</th></tr></thead>
+      <thead><tr><th>Niveau</th><th>Aptitudes du Serment de Destruction</th></tr></thead>
       <tbody>
         <tr><td>3</td><td>Inter-refroidisseur</td></tr>
         <tr><td>10</td><td>Dissipateur de chaleur</td></tr>
@@ -373,7 +373,7 @@
 
   <div class="table-container tab-content" id="tab-imperial-protection" style="display:none;">
     <table class="progression-table">
-      <thead><tr><th>Niveau</th><th>Aptitude Serment de Protection</th></tr></thead>
+      <thead><tr><th>Niveau</th><th>Aptitudes du Serment de Protection</th></tr></thead>
       <tbody>
         <tr><td>3</td><td>Écran thermique</td></tr>
         <tr><td>10</td><td>Réserve élémentaire</td></tr>
@@ -384,14 +384,21 @@
 </section>
 
 <script>
-function switchTab(event, tabId) {
-  const tabs = document.querySelectorAll('.tab-button');
-  const contents = document.querySelectorAll('.tab-content');
-  tabs.forEach(t => t.classList.remove('active'));
-  contents.forEach(c => c.style.display = 'none');
-  event.target.classList.add('active');
-  document.getElementById(`tab-${tabId}`).style.display = '';
-}
+    function switchTab(event, tabId) {
+      const tabs = document.querySelectorAll('.tab-button');
+      const contents = document.querySelectorAll('.tab-content');
+      tabs.forEach(t => t.classList.remove('active'));
+      contents.forEach(c => {
+        c.classList.remove('active');
+        c.style.display = 'none';
+      });
+
+      event.target.classList.add('active');
+      const target = document.getElementById(`tab-${tabId}`);
+      target.style.display = 'block';
+      void target.offsetWidth; // forcer repaint
+      target.classList.add('active');
+    }
 </script>
 
     </main>

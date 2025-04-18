@@ -707,12 +707,12 @@
     Progression par niveau
   </h2>
   <div class="class-table-tabs-wrapper">
-    <button class="tab-button active" onclick="switchTab(event, 'necromancien')">Nécromancien</button>
+    <button class="tab-button active" onclick="switchTab(event, 'general')">Nécromancien</button>
     <button class="tab-button" onclick="switchTab(event, 'pacte-evoqueur')">Pacte de l'Évoqueur</button>
     <button class="tab-button" onclick="switchTab(event, 'pacte-courtier')">Pacte du Courtier</button>
   </div>
 
-  <div class="table-container tab-content" id="tab-general">
+  <div class="table-container tab-content active" id="tab-general">
     <table class="progression-table very-large">
       <thead>
         <tr>
@@ -746,7 +746,7 @@
 
   <div class="table-container tab-content" id="tab-pacte-evoqueur" style="display:none;">
     <table class="progression-table">
-      <thead><tr><th>Niveau</th><th>Aptitude du Pacte de l'Évoqueur</th></tr></thead>
+      <thead><tr><th>Niveau</th><th>Aptitudes du Pacte de l'Évoqueur</th></tr></thead>
       <tbody>
         <tr><td>3</td><td>Réanimation</td></tr>
         <tr><td>9</td><td>Attachement persistant</td></tr>
@@ -757,7 +757,7 @@
 
   <div class="table-container tab-content" id="tab-pacte-courtier" style="display:none;">
     <table class="progression-table">
-      <thead><tr><th>Niveau</th><th>Aptitude du Pacte du Courtier</th></tr></thead>
+      <thead><tr><th>Niveau</th><th>Aptitudes du Pacte du Courtier</th></tr></thead>
       <tbody>
         <tr><td>3</td><td>Leurre des Enfers</td></tr>
         <tr><td>9</td><td>Haine persistante</td></tr>
@@ -768,14 +768,21 @@
 </section>
 
 <script>
-function switchTab(event, tabId) {
-  const tabs = document.querySelectorAll('.tab-button');
-  const contents = document.querySelectorAll('.tab-content');
-  tabs.forEach(t => t.classList.remove('active'));
-  contents.forEach(c => c.style.display = 'none');
-  event.target.classList.add('active');
-  document.getElementById(`tab-${tabId}`).style.display = '';
-}
+    function switchTab(event, tabId) {
+      const tabs = document.querySelectorAll('.tab-button');
+      const contents = document.querySelectorAll('.tab-content');
+      tabs.forEach(t => t.classList.remove('active'));
+      contents.forEach(c => {
+        c.classList.remove('active');
+        c.style.display = 'none';
+      });
+
+      event.target.classList.add('active');
+      const target = document.getElementById(`tab-${tabId}`);
+      target.style.display = 'block';
+      void target.offsetWidth; // forcer repaint
+      target.classList.add('active');
+    }
 </script>
 
     </main>

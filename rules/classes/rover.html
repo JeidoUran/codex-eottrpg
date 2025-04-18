@@ -342,7 +342,7 @@
     <button class="tab-button" onclick="switchTab(event, 'hound')">Loup</button>
   </div>
 
-  <div class="table-container tab-content" id="tab-general">
+  <div class="table-container tab-content active" id="tab-general">
     <table class="progression-table">
       <thead>
         <tr>
@@ -406,14 +406,21 @@
 </section>
 
 <script>
-  function switchTab(event, tabId) {
-    const tabs = document.querySelectorAll('.tab-button');
-    const contents = document.querySelectorAll('.tab-content');
-    tabs.forEach(t => t.classList.remove('active'));
-    contents.forEach(c => c.style.display = 'none');
-    event.target.classList.add('active');
-    document.getElementById(`tab-${tabId}`).style.display = '';
-  }
+    function switchTab(event, tabId) {
+      const tabs = document.querySelectorAll('.tab-button');
+      const contents = document.querySelectorAll('.tab-content');
+      tabs.forEach(t => t.classList.remove('active'));
+      contents.forEach(c => {
+        c.classList.remove('active');
+        c.style.display = 'none';
+      });
+
+      event.target.classList.add('active');
+      const target = document.getElementById(`tab-${tabId}`);
+      target.style.display = 'block';
+      void target.offsetWidth; // forcer repaint
+      target.classList.add('active');
+    }
   </script>
 
     </main>

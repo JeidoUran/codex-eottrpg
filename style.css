@@ -1695,7 +1695,15 @@ audio {
 	box-shadow: 0 0 12px rgba(136, 192, 169, 0.05);
 	margin-bottom: 2rem;
 	text-align: center;
+	opacity: 0;
+	transition: opacity 0.4s ease;
+	display: none;
 }
+
+.tab-content.active {
+	display: block;
+	opacity: 1;
+  }
 
 select {
 	font-family: 'Cinzel-Regular', 'Trajan Pro', 'Copperplate', 'Georgia', serif;

@@ -382,13 +382,13 @@
   </h2>
 
   <div class="class-table-tabs-wrapper">
-    <button class="tab-button active" onclick="switchTab(event, 'souverain-general')">Souverain</button>
+    <button class="tab-button active" onclick="switchTab(event, 'general')">Souverain</button>
     <button class="tab-button" onclick="switchTab(event, 'souverain-magierkaiser')">Magierkaiser</button>
     <button class="tab-button" onclick="switchTab(event, 'souverain-arztkaiser')">Arztkaiser</button>
     <button class="tab-button" onclick="switchTab(event, 'souverain-starkekaiser')">Starkekaiser</button>
   </div>
 
-  <div class="table-container tab-content" id="tab-general">
+  <div class="table-container tab-content active" id="tab-general">
     <table class="progression-table">
       <thead>
         <tr>
@@ -425,7 +425,7 @@
 
   <div class="table-container tab-content" id="tab-souverain-magierkaiser" style="display:none;">
     <table class="progression-table">
-      <thead><tr><th>Niveau</th><th>Aptitude Magierkaiser</th></tr></thead>
+      <thead><tr><th>Niveau</th><th>Aptitudes du Magierkaiser</th></tr></thead>
       <tbody>
         <tr><td>3</td><td>Arme de feu, Arme de gel, Arme de foudre</td></tr>
         <tr><td>9</td><td>Ordre de liaison II</td></tr>
@@ -436,7 +436,7 @@
 
   <div class="table-container tab-content" id="tab-souverain-arztkaiser" style="display:none;">
     <table class="progression-table">
-      <thead><tr><th>Niveau</th><th>Aptitude Arztkaiser</th></tr></thead>
+      <thead><tr><th>Niveau</th><th>Aptitudes de l'Arztkaiser</th></tr></thead>
       <tbody>
         <tr><td>3</td><td>Ordre de protection</td></tr>
         <tr><td>9</td><td>Ordre de prévention</td></tr>
@@ -447,7 +447,7 @@
 
   <div class="table-container tab-content" id="tab-souverain-starkekaiser" style="display:none;">
     <table class="progression-table">
-      <thead><tr><th>Niveau</th><th>Aptitude Starkekaiser</th></tr></thead>
+      <thead><tr><th>Niveau</th><th>Aptitudes du Starkekaiser</th></tr></thead>
       <tbody>
         <tr><td>3</td><td>Ordres féroces</td></tr>
         <tr><td>9</td><td>Ex Nihilo</td></tr>
@@ -458,14 +458,21 @@
 </section>
 
 <script>
-function switchTab(event, tabId) {
-  const tabs = document.querySelectorAll('.tab-button');
-  const contents = document.querySelectorAll('.tab-content');
-  tabs.forEach(t => t.classList.remove('active'));
-  contents.forEach(c => c.style.display = 'none');
-  event.target.classList.add('active');
-  document.getElementById('tab-' + tabId).style.display = '';
-}
+    function switchTab(event, tabId) {
+      const tabs = document.querySelectorAll('.tab-button');
+      const contents = document.querySelectorAll('.tab-content');
+      tabs.forEach(t => t.classList.remove('active'));
+      contents.forEach(c => {
+        c.classList.remove('active');
+        c.style.display = 'none';
+      });
+
+      event.target.classList.add('active');
+      const target = document.getElementById(`tab-${tabId}`);
+      target.style.display = 'block';
+      void target.offsetWidth; // forcer repaint
+      target.classList.add('active');
+    }
 </script>
 
     </main>

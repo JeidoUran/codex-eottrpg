@@ -379,7 +379,7 @@
   </div>
 
   <!-- Onglet Général -->
-  <div class="table-container tab-content" id="tab-general">
+  <div class="table-container tab-content active" id="tab-general">
     <table class="progression-table">
       <thead>
         <tr>
@@ -416,7 +416,7 @@
   <!-- Onglet Commandement -->
   <div class="table-container tab-content" id="tab-commandement" style="display:none;">
     <table class="progression-table">
-      <thead><tr><th>Niveau</th><th>Aptitude de l'École du Commandement</th></tr></thead>
+      <thead><tr><th>Niveau</th><th>Aptitudes de l'École du Commandement</th></tr></thead>
       <tbody>
         <tr><td>3</td><td>Ordre : Endurer</td></tr>
         <tr><td>9</td><td>Positionnement tactique</td></tr>
@@ -428,7 +428,7 @@
   <!-- Onglet Offense -->
   <div class="table-container tab-content" id="tab-offense" style="display:none;">
     <table class="progression-table">
-      <thead><tr><th>Niveau</th><th>Aptitude de l'École de l'Offense</th></tr></thead>
+      <thead><tr><th>Niveau</th><th>Aptitudes de l'École de l'Offense</th></tr></thead>
       <tbody>
         <tr><td>3</td><td>Hirondelles jumelles</td></tr>
         <tr><td>9</td><td>Démon sans pareille</td></tr>
@@ -440,7 +440,7 @@
   <!-- Onglet Seigneur de Guerre -->
   <div class="table-container tab-content" id="tab-seigneur" style="display:none;">
     <table class="progression-table">
-      <thead><tr><th>Niveau</th><th>Aptitude de l'École du Seigneur de Guerre</th></tr></thead>
+      <thead><tr><th>Niveau</th><th>Aptitudes de l'École du Seigneur de Guerre</th></tr></thead>
       <tbody>
         <tr><td>3</td><td>Justice rapide</td></tr>
         <tr><td>9</td><td>Effort unifié</td></tr>
@@ -451,12 +451,21 @@
 </section>
 
 <script>
-function switchTab(event, tabId) {
-  document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.tab-content').forEach(t => t.style.display = 'none');
-  event.target.classList.add('active');
-  document.getElementById(`tab-${tabId}`).style.display = '';
-}
+    function switchTab(event, tabId) {
+      const tabs = document.querySelectorAll('.tab-button');
+      const contents = document.querySelectorAll('.tab-content');
+      tabs.forEach(t => t.classList.remove('active'));
+      contents.forEach(c => {
+        c.classList.remove('active');
+        c.style.display = 'none';
+      });
+
+      event.target.classList.add('active');
+      const target = document.getElementById(`tab-${tabId}`);
+      target.style.display = 'block';
+      void target.offsetWidth; // forcer repaint
+      target.classList.add('active');
+    }
 </script>
 
     </main>

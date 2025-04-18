@@ -377,7 +377,7 @@
     <button class="tab-button" onclick="switchTab(event, 'voile')">Voile de la Mort</button>
   </div>
 
-  <div class="table-container tab-content" id="tab-general">
+  <div class="table-container tab-content active" id="tab-general">
     <table class="progression-table">
       <thead><tr><th>Niveau</th><th>Bonus de maîtrise</th><th>Aptitudes</th></tr></thead>
       <tbody>
@@ -407,7 +407,7 @@
 
   <div class="table-container tab-content" id="tab-mort" style="display:none;">
     <table class="progression-table">
-      <thead><tr><th>Niveau</th><th>Aptitude Porteur de Mort</th></tr></thead>
+      <thead><tr><th>Niveau</th><th>Aptitudes du Porteur de Mort</th></tr></thead>
       <tbody>
         <tr><td>2</td><td>Moisson du chaos</td></tr>
         <tr><td>9</td><td>Moisson frigide</td></tr>
@@ -418,7 +418,7 @@
 
   <div class="table-container tab-content" id="tab-garde" style="display:none;">
     <table class="progression-table">
-      <thead><tr><th>Niveau</th><th>Aptitude Garde de la Mort</th></tr></thead>
+      <thead><tr><th>Niveau</th><th>Aptitudes du Garde de la Mort</th></tr></thead>
       <tbody>
         <tr><td>2</td><td>Miasme érodant, Gardien</td></tr>
         <tr><td>9</td><td>Absorption d'âme</td></tr>
@@ -429,7 +429,7 @@
 
   <div class="table-container tab-content" id="tab-voile" style="display:none;">
     <table class="progression-table">
-      <thead><tr><th>Niveau</th><th>Aptitude Voile de la Mort</th></tr></thead>
+      <thead><tr><th>Niveau</th><th>Aptitudes du Voile de la Mort</th></tr></thead>
       <tbody>
         <tr><td>2</td><td>Manteau de miasme</td></tr>
         <tr><td>9</td><td>Miasme aveuglant</td></tr>
@@ -440,14 +440,21 @@
 </section>
 
 <script>
-function switchTab(event, tabId) {
-  const tabs = document.querySelectorAll('.tab-button');
-  const contents = document.querySelectorAll('.tab-content');
-  tabs.forEach(t => t.classList.remove('active'));
-  contents.forEach(c => c.style.display = 'none');
-  event.target.classList.add('active');
-  document.getElementById(`tab-${tabId}`).style.display = '';
-}
+    function switchTab(event, tabId) {
+      const tabs = document.querySelectorAll('.tab-button');
+      const contents = document.querySelectorAll('.tab-content');
+      tabs.forEach(t => t.classList.remove('active'));
+      contents.forEach(c => {
+        c.classList.remove('active');
+        c.style.display = 'none';
+      });
+
+      event.target.classList.add('active');
+      const target = document.getElementById(`tab-${tabId}`);
+      target.style.display = 'block';
+      void target.offsetWidth; // forcer repaint
+      target.classList.add('active');
+    }
 </script>
 
     </main>
