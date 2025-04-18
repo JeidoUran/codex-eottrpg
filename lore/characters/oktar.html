@@ -49,15 +49,14 @@
   <article class="stats">
     <h3>Caractéristiques</h3>
     <ul>
-      <li><strong>Force :</strong> <span id="str-score">—</span></li>
-      <li><strong>Dextérité :</strong> <span id="dex-score">—</span></li>
-      <li><strong>Constitution :</strong> <span id="con-score">—</span></li>
-      <li><strong>Intelligence :</strong> <span id="int-score">—</span></li>
-      <li><strong>Sagesse :</strong> <span id="wis-score">—</span></li>
-      <li><strong>Charisme :</strong> <span id="cha-score">—</span></li>
+      <li><img src="../../assets/images/notes-medium.png" class="image">
+        <div class="image-texte" id="oktar-stats">
+          <em>Chargement des données d'Oktar...</em>
+        </div>
+      </li>
     </ul>
   </article>
-  <p id="last-updated" class="timestamp">Chargement...</p>  
+  <p id="last-updated" class="timestamp">Chargement...</p>
 </main>
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
   <img id="lightbox-img" src="" alt="Portrait" />
@@ -66,32 +65,40 @@
   <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
 </footer>
 <script>
-  fetch("../../data/oktar.json")
-    .then((res) => res.json())
-    .then((json) => {
+  const oktarUrl = "https://s3.codex.eottrpg.memiroa.com/data/oktar.json";
+  
+  fetch(oktarUrl)
+    .then(res => res.json())
+    .then(json => {
       const data = json.data[0];
       const abilities = data.system.abilities;
-
-      document.getElementById("str-score").textContent = abilities.str.value;
-      document.getElementById("dex-score").textContent = abilities.dex.value;
-      document.getElementById("con-score").textContent = abilities.con.value;
-      document.getElementById("int-score").textContent = abilities.int.value;
-      document.getElementById("wis-score").textContent = abilities.wis.value;
-      document.getElementById("cha-score").textContent = abilities.cha.value;
-
-      // Met à jour la date de dernière mise à jour
+      const stats = document.getElementById("oktar-stats");
+  
+      stats.innerHTML = `
+        <strong>PV :</strong> ${data.system.attributes.hp.value} / ${data.system.attributes.hp.max}<br>
+        <strong>Défense :</strong> ${data.system.attributes.ac.value}<br>
+        <strong>Force :</strong> ${abilities.str.value}<br>
+        <strong>Dextérité :</strong> ${abilities.dex.value}<br>
+        <strong>Constitution :</strong> ${abilities.con.value}<br>
+        <strong>Intelligence :</strong> ${abilities.int.value}<br>
+        <strong>Sagesse :</strong> ${abilities.wis.value}<br>
+        <strong>Charisme :</strong> ${abilities.cha.value}
+      `;
+  
       const updated = new Date(data._codexLastUpdate);
-      const formatted = updated.toLocaleString("fr-FR", {
-        dateStyle: "short",
-        timeStyle: "short"
-      });
-      document.getElementById("last-updated").textContent = `Dernière mise à jour : ${formatted}`;    })
-    .catch((error) => {
-      console.error("Erreur lors du chargement des données Oktar:", error);
       document.getElementById("last-updated").textContent =
-        "Données indisponibles. Chargement du snapshot.";
+        "Dernière mise à jour : " + updated.toLocaleString("fr-FR", {
+          dateStyle: "short",
+          timeStyle: "short"
+        });
+    })
+    .catch(err => {
+      console.error("Erreur lors du chargement des données Oktar :", err);
+      document.getElementById("oktar-stats").innerHTML =
+        "<em>Données indisponibles. Le fichier JSON n'a pas été trouvé ou le serveur est hors ligne.</em>";
+      document.getElementById("last-updated").textContent = "";
     });
-</script>
+  </script>  
 <script>
   function openLightbox(src) {
     const lightbox = document.getElementById("lightbox");

@@ -1,6 +1,11 @@
-const fetch = require("node-fetch");
-const fs = require("fs");
-const path = require("path");
+const AWS = require('aws-sdk');
+const fetch = require('node-fetch');
+
+const s3 = new AWS.S3({
+  accessKeyId: process.env.AWS_KEY,
+  secretAccessKey: process.env.AWS_SECRET,
+  region: "eu-west-3" // ex: "eu-west-3" ou "us-east-1"
+});
 
 exports.handler = async function(event, context) {
   const UUID = "Actor.DLc3BG2Qq87T57tk";
@@ -14,14 +19,19 @@ exports.handler = async function(event, context) {
       headers: { Authorization: API_KEY }
     });
     const data = await response.json();
+    data._codexLastUpdate = new Date().toISOString();
 
-    const outputPath = path.join(__dirname, "../../data/oktar.json");
-    data.data[0]._codexLastUpdate = new Date().toISOString();
-    fs.writeFileSync(outputPath, JSON.stringify(data, null, 2));
+    await s3.putObject({
+      Bucket: "ton-nom-de-bucket",
+      Key: "data/oktar.json",
+      Body: JSON.stringify(data, null, 2),
+      ContentType: "application/json",
+      ACL: "public-read"
+    }).promise();
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ status: "ok", message: "Données mises à jour" })
+      body: JSON.stringify({ status: "ok", message: "Upload vers S3 terminé" })
     };
   } catch (err) {
     return {
