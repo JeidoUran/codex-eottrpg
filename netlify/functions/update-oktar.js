@@ -4,7 +4,9 @@ const fetch = require('node-fetch');
 const s3 = new AWS.S3({
   accessKeyId: process.env.AWS_KEY,
   secretAccessKey: process.env.AWS_SECRET,
-  region: "eu-west-3" // ex: "eu-west-3" ou "us-east-1"
+  endpoint: "https://7b06c15b089dd9c20f2ce962e6f2fe83.r2.cloudflarestorage.com",
+  region: "auto",
+  signatureVersion: "v4"
 });
 
 exports.handler = async function(event, context) {
