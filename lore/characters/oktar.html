@@ -80,13 +80,12 @@
       document.getElementById("cha-score").textContent = abilities.cha.value;
 
       // Met à jour la date de dernière mise à jour
-      const now = new Date();
-      const formatted = now.toLocaleString("fr-FR", {
+      const updated = new Date(data._codexLastUpdate);
+      const formatted = updated.toLocaleString("fr-FR", {
         dateStyle: "short",
         timeStyle: "short"
       });
-      document.getElementById("last-updated").textContent = `Dernière mise à jour : ${formatted}`;
-    })
+      document.getElementById("last-updated").textContent = `Dernière mise à jour : ${formatted}`;    })
     .catch((error) => {
       console.error("Erreur lors du chargement des données Oktar:", error);
       document.getElementById("last-updated").textContent =
