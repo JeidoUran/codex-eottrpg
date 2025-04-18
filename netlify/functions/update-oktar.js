@@ -24,7 +24,7 @@ exports.handler = async function(event, context) {
     data._codexLastUpdate = new Date().toISOString();
 
     await s3.putObject({
-      Bucket: "ton-nom-de-bucket",
+      Bucket: "codex-eottrpg",
       Key: "data/oktar.json",
       Body: JSON.stringify(data, null, 2),
       ContentType: "application/json",
