@@ -21,7 +21,7 @@ exports.handler = async function(event, context) {
       headers: { Authorization: API_KEY }
     });
     const data = await response.json();
-    data._codexLastUpdate = new Date().toISOString();
+    data.data[0]._codexLastUpdate = new Date().toISOString();
 
     await s3.putObject({
       Bucket: "codex-eottrpg",
