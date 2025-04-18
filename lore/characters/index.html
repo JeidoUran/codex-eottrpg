@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Personnages | Codex - Etrian Odyssey TTRPG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../../favicon.png" type="image/png">
+  <link rel="stylesheet" href="../../style.css">
+
+</head>
+<body>
+  <canvas id="particles"></canvas>
+
+  <header class="codex-header">
+    <img src="../../assets/images/banniere.png" alt="Bannière" class="banniere">
+    <h1>Personnages</h1>
+    <p class="sous-titre">Archives et mises à jour du monde d’Etrian Odyssey</p>
+  </header>
+
+  <nav class="nav-magique">
+    <a href="/">Accueil</a>
+    <a href="../../notes/">Patch Notes</a>
+    <a href="../../rules/">Règles</a>
+    <a href="../../lore/">Univers</a>
+    <a href="../../music-player.html">Musiques</a>
+    <a href="../../resources/">Ressources</a>
+    <a href="../../credits.html">Crédits</a>
+  </nav>
+
+  <main class="accueil">
+    <section class="intro">
+      <p>Retrouvez ici les héros et figures importantes de l’univers du Codex, joueurs et non-joueurs confondus.</p>
+    </section>
+    <div class="class-table-tabs-wrapper">
+      <button class="tab-button active" onclick="switchTab(event, 'pj')">🎲 Personnages Joueurs</button>
+      <button class="tab-button" onclick="switchTab(event, 'pnj')">🧑‍💼 Personnages Non-Joueurs</button>
+    </div>
+
+    <section id="tab-pj" class="tab-content active">
+      <a class="carte-lien large chara" href="feril.html" class="carte-lien">
+        <h2>🌿 Féril</h2>
+        <p>Brouni Souverain — meneur né, apaisant et déterminé.</p>
+      </a>
+      <a class="carte-lien large chara" href="elsa.html" class="carte-lien">
+        <h2>🦊 Elsa</h2>
+        <p>Thérian Lansquenet — féroce, agile, et protectrice de sa meute.</p>
+      </a>
+      <a class="carte-lien large chara" href="ithil.html" class="carte-lien">
+        <h2>🌙 Ithil</h2>
+        <p>Célestrien Vagabond — érudit mystérieux en quête de savoir ancien.</p>
+      </a>
+      <a class="carte-lien large chara" href="oktar.html" class="carte-lien">
+        <h2>🛡️ Oktar</h2>
+        <p>Sentinelle Impérial — force tranquille au cœur d’acier.</p>
+      </a>
+      <a class="carte-lien large chara" href="kay.html" class="carte-lien">
+        <h2>⚙️ Kay</h2>
+        <p>Vaisseau Shogun — calcul, stratégie et fierté technologique.</p>
+      </a>
+    </section>
+
+    <section id="tab-pnj" class="tab-content">
+      <a href="#" class="carte-lien large chara">
+        <h2>Kujura</h2>
+        <p></p>
+      </a>
+      <a href="#" class="carte-lien large chara">
+        <h2>Marcos</h2>
+        <p></p>
+      </a>
+      <a href="#" class="carte-lien large chara">
+        <h2>Aman</h2>
+        <p></p>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+  </footer>
+
+  <script>
+    function switchTab(event, tabId) {
+      const tabs = document.querySelectorAll('.tab-button');
+      const contents = document.querySelectorAll('.tab-content');
+      tabs.forEach(t => t.classList.remove('active'));
+      contents.forEach(c => {
+        c.classList.remove('active');
+        c.style.display = 'none';
+      });
+
+      event.target.classList.add('active');
+      const target = document.getElementById(`tab-${tabId}`);
+      target.style.display = 'block';
+      void target.offsetWidth; // forcer repaint
+      target.classList.add('active');
+    }
+  </script>
+  <script src="../../particles.js"></script>
+</body>
+</html>

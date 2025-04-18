@@ -316,6 +316,14 @@ footer {
 	position: relative;
 }
 
+.carte-lien.large.chara {
+	display: block;
+	width: 100%;
+	max-width: 680px;
+	margin: 1rem auto;
+	position: relative;
+}
+
 .patch-nouveau {
 	position: absolute;
 	right: 1rem;
