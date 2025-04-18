@@ -38,6 +38,11 @@
         </div>
       </li>
       <li><img src="../../assets/images/notes-medium.png" class="image">
+        <div class="image-texte" id="oktar-stats">
+          <em>Chargement des données en cours...</em>
+        </div>
+      </li>      
+      <li><img src="../../assets/images/notes-medium.png" class="image">
         <div class="image-texte">
           <strong>Biographie :</strong><br>
           Oktar est un loup-sentinelle marqué par la guerre, l’amitié et la perte. Né dans un orphelinat à Batavia, il se construit à travers les railleries bienveillantes d’un ami félin, compagnon d’armes et frère d’âme. Ensemble, ils forment un duo de mercenaires redoutés, forgés dans les flammes du conflit et la camaraderie profonde. Oktar, guerrier du front aux élans impétueux, tranche le mal à la racine au cœur même des batailles.<br><br>
@@ -53,6 +58,32 @@
 <footer>
   <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
 </footer>
+<script>
+  fetch("../../data/oktar.json")
+    .then(response => response.json())
+    .then(data => {
+      const stats = document.getElementById("oktar-stats");
+      const hp = data.system?.attributes?.hp;
+      const abilities = data.system?.abilities;
+  
+      if (!hp || !abilities) {
+        stats.innerHTML = "<em>Données d’Oktar incomplètes ou incompatibles.</em>";
+        return;
+      }
+  
+      stats.innerHTML = `
+        <strong>PV :</strong> ${hp.value} / ${hp.max}<br>
+        <strong>Force :</strong> ${abilities.str.value}<br>
+        <strong>Dextérité :</strong> ${abilities.dex.value}<br>
+        <strong>Sagesse :</strong> ${abilities.wis.value}<br>
+        <strong>Défense :</strong> ${data.system.attributes.ac.value}
+      `;
+    })
+    .catch(err => {
+      console.error("Erreur de chargement JSON :", err);
+      document.getElementById("oktar-stats").innerHTML = "<em>Données indisponibles (hors ligne ?).</em>";
+    });
+  </script>  
 <script>
   function openLightbox(src) {
     const lightbox = document.getElementById("lightbox");
