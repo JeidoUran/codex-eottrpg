@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 const s3 = new AWS.S3({
   accessKeyId: process.env.AWS_KEY,
   secretAccessKey: process.env.AWS_SECRET,
-  endpoint: "https://7b06c15b089dd9c20f2ce962e6f2fe83.r2.cloudflarestorage.com",
+  endpoint: "https://s3.eottrpg.memiroa.com",
   region: "auto",
   signatureVersion: "v4"
 });
