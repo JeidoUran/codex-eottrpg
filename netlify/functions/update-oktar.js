@@ -14,7 +14,7 @@ exports.handler = async function(event, context) {
   const CLIENT_ID = "foundry-skQfvcSugPyn5XvR"; // remplace-moi
   const API_KEY = "codex-relay";
 
-  const url = `http://api.codex.memiroa.com/get?clientId=${CLIENT_ID}&uuid=${UUID}&selected=true&actor=true`;
+  const url = `http://api.codex.memiroa.com/get?clientId=${CLIENT_ID}&uuid=${UUID}`;
 
   try {
     const response = await fetch(url, {
