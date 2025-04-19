@@ -58,6 +58,13 @@
     </ul>
   </article>
   <p id="last-updated" class="timestamp">Chargement...</p>
+  <article class="stats">
+    <h3>Équipement & Inventaire</h3>
+    <div class="inventory" id="oktar-inventory">
+      <em>Chargement de l'inventaire...</em>
+    </div>
+  </article>
+  <p id="last-updated" class="timestamp">Chargement...</p>
 </main>
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
   <img id="lightbox-img" src="" alt="Portrait" />
@@ -74,6 +81,99 @@
       const data = json.data;
       const abilities = data.system.abilities;
       const stats = document.getElementById("oktar-stats");
+      const inventoryDiv = document.getElementById("oktar-inventory");
+      const allItems = data.items || [];
+      const sortOrder = [
+          "etr",
+          "shield",
+          "tiara",
+          "clothhat",
+          "helmet",
+          "heavyhelmet",
+          "clothing",
+          "light",
+          "medium",
+          "heavy",
+          "gloves",
+          "universalboots",
+          "lightboots",
+          "mediumboots",
+          "heavyboots",
+          "amulets",
+          "rings",
+          "essense",
+          "potion",
+          "thrown",
+          "grenade",
+          "ammo",
+          "poison",
+          "wand",
+          "rod",
+          "scroll",
+          "food",
+          "material",
+          "resource",
+          "treasure",
+          "gem",
+          "gear",
+          "art",
+          "furniture",
+          "etrian",
+          "trinket",
+          "key",
+
+        ];
+
+        // Fonction de tri
+        const sortByType = (a, b) => {
+          const aType = a.system?.type?.value ?? "";
+          const bType = b.system?.type?.value ?? "";
+          const indexA = sortOrder.indexOf(aType);
+          const indexB = sortOrder.indexOf(bType);
+          return indexA - indexB;
+        };
+
+        // Types autorisés à afficher
+        const allowedTypes = new Set(sortOrder);
+
+        const renderItem = item => {
+        // Extrait le chemin après le dossier "data/assets/"
+        const match = item.img.match(/data\/assets\/(.+)/);
+        const relativePath = match ? match[1] : "placeholder.png"; // fallback si le chemin est étrange
+        const iconPath = `../../assets/images/foundry-icons/${relativePath}`;
+          return `
+            <div class="item">
+              <img src="${iconPath}" alt="${item.name}">
+              <div class="tooltip">${item.name}</div>
+            </div>
+          `;
+        };
+        console.log("Types d’objets détectés :", [...new Set(allItems.map(item => item.system?.type))]);
+
+        const equippedItems = allItems
+          .filter(item => item.system?.equipped === true && allowedTypes.has(item.system?.type?.value))
+          .sort(sortByType);
+
+        const inventoryItems = allItems
+          .filter(item => item.system?.equipped !== true && allowedTypes.has(item.system?.type?.value))
+          .sort(sortByType);
+
+      let html = `
+          <div class="inventory-section">
+            <strong>Équipé :</strong>
+            <div class="inventory equipped-inventory">
+              ${equippedItems.length > 0 ? equippedItems.map(renderItem).join("") : "<em>Aucun objet équipé.</em>"}
+            </div>
+          </div>
+          <div class="inventory-section">
+            <strong>Sac :</strong>
+            <div class="inventory bag-inventory">
+              ${inventoryItems.length > 0 ? inventoryItems.map(renderItem).join("") : "<em>Inventaire vide.</em>"}
+            </div>
+          </div>
+        `;
+
+      inventoryDiv.innerHTML = html;
 
       if (!data.system || !data.system.attributes || !data.system.abilities) {
         stats.innerHTML = "<em>Données d'Oktar incomplètes.</em>";
