@@ -41,14 +41,14 @@
       <em>Chargement de l'inventaire...</em>
     </div>
   </article>
-    <p id="last-updated" class="timestamp">Chargement...</p>
+    <p class="last-updated timestamp">Chargement...</p>
 </div>
 <main class="fiche-lore">
   <article class="article-credits">
     <h2><i class="fa-solid fa-shield-halved"></i> Oktar</h2>
     <ul class="image-list">
         <div class="image-texte">
-          <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Race :</strong> Sentinelle</li>
+          <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Race :</strong>Sentinelle</li>
           <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Classe :</strong> Impérial</li>
             <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Joueur :</strong> Tailos</li>
         </div>
@@ -63,8 +63,21 @@
       </li>
     </ul>
   </article>
-</div>
 </main>
+<div class="fiche-skills">
+</article>
+<article class="article-credits">
+  <h2>Aptitudes</h2>
+  <div class="inventory" id="oktar-features">
+    <em>Chargement des aptitudes...</em>
+  </div>
+</article>
+
+    <p class="last-updated timestamp">Chargement...</p>
+</div>
+</div>
+
+
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
   <img id="lightbox-img" src="" alt="Portrait" />
 </div>
@@ -132,9 +145,6 @@
           return indexA - indexB;
         };
 
-/*         // Types autorisés à afficher
-        const allowedTypes = new Set(sortOrder); */
-
         const renderItem = item => {
           const match = item.img.match(/data\/assets\/(.+)/);
           const relativePath = match ? match[1] : "placeholder.png";
@@ -151,7 +161,36 @@
           `;
         };
 
-        console.log("Types d’objets détectés :", [...new Set(allItems.map(item => item.system?.type))]);
+        const renderAbility = item => {
+          const match = item.img.match(/data\/assets\/(.+)/);
+          const relativePath = match ? match[1] : "placeholder.png";
+          const iconPath = `../../assets/images/foundry-icons/${relativePath}`;
+          const name = item.name;
+          const level = item.system?.level ? ` (Niv. ${item.system.level})` : "";
+
+          let cssClass = "skill-generic";
+          if (item.system?.type.value === "race") cssClass = "skill-race";
+          else if (item.system?.type.value === "class") cssClass = "skill-class";
+
+          return `
+            <div class="item">
+              <img src="${iconPath}" alt="${name}" class="${cssClass}">
+              <div class="tooltip">${name}${level}</div>
+            </div>
+          `;
+        };
+
+        const featuresDiv = document.getElementById("oktar-features");
+        const features = data.items?.filter(item =>
+          (item.type === "feat" || item.type === "classFeature") &&
+          item.img && item.name
+        ) || [];
+
+        featuresDiv.innerHTML = `
+          <div class="inventory">
+            ${features.map(renderAbility).join("")}
+          </div>
+        `;
 
         const equippedItems = allItems
           .filter(item => item.system?.equipped === true && allowedTypes.includes(item.type))
@@ -163,13 +202,13 @@
 
       let html = `
           <div class="inventory-section">
-            <strong>Équipé :</strong>
+            <li class="character-stats" style="display: flex; align-items: flex-start; gap: 0.75rem; list-style: none;"><img src="../../assets/images/notes-medium.png" class="image" style="width: 24px; height: 24px; flex-shrink: 0; margin-top: 2px;"><strong>Équipé :</strong></li>
             <div class="inventory equipped-inventory">
               ${equippedItems.length > 0 ? equippedItems.map(renderItem).join("") : "<em>Aucun objet équipé.</em>"}
             </div>
           </div>
           <div class="inventory-section">
-            <strong>Sac :</strong>
+            <li class="character-stats" style="display: flex; align-items: flex-start; gap: 0.75rem; list-style: none;"><img src="../../assets/images/notes-medium.png" class="image" style="width: 24px; height: 24px; flex-shrink: 0; margin-top: 2px;"><strong>Sac :</strong></li>
             <div class="inventory bag-inventory">
               ${inventoryItems.length > 0 ? inventoryItems.map(renderItem).join("") : "<em>Inventaire vide.</em>"}
             </div>
@@ -192,20 +231,21 @@
         <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Sagesse :</strong> ${abilities.wis.value ?? "?"}</li>
         <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Charisme :</strong> ${abilities.cha.value ?? "?"}</li>
       `;
-  
+
       const updated = new Date(json._codexLastUpdate);
-      document.getElementById("last-updated").textContent =
-        "Dernière mise à jour : " + updated.toLocaleString("fr-FR", {
+      document.querySelectorAll(".last-updated").forEach(el => {
+        el.textContent = "Dernière mise à jour : " + updated.toLocaleString("fr-FR", {
           dateStyle: "short",
           timeStyle: "short"
         });
-    })
-    .catch(err => {
-      console.error("Erreur lors du chargement des données Oktar :", err);
-      document.getElementById("oktar-stats").innerHTML =
-        "<em>Données indisponibles. Le fichier JSON n'a pas été trouvé ou le serveur est hors ligne.</em>";
-      document.getElementById("last-updated").textContent = "";
-    });
+      });
+      }) // 👈 fermeture du .then
+      .catch(err => {
+        console.error("Erreur lors du chargement des données Oktar :", err);
+        document.getElementById("oktar-stats").innerHTML =
+          "<em>Données indisponibles. Le fichier JSON n'a pas été trouvé ou le serveur est hors ligne.</em>";
+        document.querySelectorAll(".last-updated").forEach(el => el.textContent = "");
+      });
   </script>  
 <script>
   function openLightbox(src) {
