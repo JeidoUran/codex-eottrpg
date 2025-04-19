@@ -115,7 +115,6 @@ main.accueil {
 	content: "";
 	position: absolute;
 	inset: 0;
-	border: 2px solid rgba(76, 118, 141, 0.3);
 	border-radius: 8px;
 	box-shadow: 0 0 15px rgba(76, 118, 141, 0.3);
 	pointer-events: none;
@@ -133,7 +132,7 @@ a:hover {
 	transition: all 0.3s ease;
 }
 
-a:before {
+.patch-section a:before {
 	font-family: "Font Awesome 6 Free";
 	content: "\f0c1";
 	font-weight: 900;
@@ -376,7 +375,7 @@ footer {
 	justify-content: center;
 	gap: 1rem;
 	flex-wrap: wrap;
-	margin: -1.5rem auto 3rem;
+	margin: -0.5rem auto 2rem
 }
 
 .patch-section {
@@ -2051,21 +2050,35 @@ select {
 	font-size: 0.9rem;
 }
 
-.skill-icon {
+.feature-icon {
 	border: 2px solid transparent;
 	border-radius: 8px;
 	padding: 2px;
   }
   
-  .skill-race {
+  .feature-race {
 	border: 2px solid #FFFC66;
   }
   
-  .skill-class {
+  .feature-class {
 	border: 2px solid #5F9DFE
   }
   
-  .skill-generic {
+  .feature-generic {
 	border: 2px solid #D14848;
   }
   
+  .purple-bg {
+	background: radial-gradient(circle at center, #303950 0%, #1d2233 80%);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+
+  body.purple-bg::after {
+	background: none !important;
+  }
+
+  .disabled-icon {
+	cursor: not-allowed;
+  }

@@ -7,7 +7,7 @@
   <link rel="icon" href="../../favicon.png" type="image/png">
   <link rel="stylesheet" href="../../style.css">
 </head>
-<body>
+<body class="purple-bg">
 <canvas id="particles"></canvas>
 
 <header class="codex-header">
@@ -160,25 +160,64 @@
             </div>
           `;
         };
-
+        
         const renderAbility = item => {
-          const match = item.img.match(/data\/assets\/(.+)/);
-          const relativePath = match ? match[1] : "placeholder.png";
-          const iconPath = `../../assets/images/foundry-icons/${relativePath}`;
-          const name = item.name;
-          const level = item.system?.level ? ` (Niv. ${item.system.level})` : "";
+        const baseClassPage = "imperial";
+        const baseRacePage = "sentinel";
+        const match = item.img.match(/data\/assets\/(.+)/);
+        const relativePath = match ? match[1] : "placeholder.png";
+        const iconPath = `../../assets/images/foundry-icons/${relativePath}`;
+        const name = item.name;
+        const level = item.system?.level ? ` (Niv. ${item.system.level})` : "";
+        const cleanName = item.name.split(" - ")[0].split(" (")[0];
+        const slug = cleanName
+          .toLowerCase()
+          .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/(^-|-$)/g, "");
 
-          let cssClass = "skill-generic";
-          if (item.system?.type.value === "race") cssClass = "skill-race";
-          else if (item.system?.type.value === "class") cssClass = "skill-class";
+          let origin = item.system?.requirements?.split(" ")[0]
+          ?.toLowerCase()
+          ?.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+          ?? null;
 
-          return `
-            <div class="item">
-              <img src="${iconPath}" alt="${name}" class="${cssClass}">
-              <div class="tooltip">${name}${level}</div>
-            </div>
-          `;
-        };
+        let link = "#";
+        let isLinkValid = false;
+        if (origin && slug) {
+          if (item.system?.type?.value === "race") {
+            link = `../../rules/races/${baseRacePage}.html#${slug}`;
+            isLinkValid = true;
+          } else if (item.system?.type?.value === "class") {
+            link = `../../rules/classes/${baseClassPage}.html#${slug}`;
+            isLinkValid = true;
+          } else if (item.system?.type?.value === "oppatk") {
+            link = `../../rules/generic-features.html#${slug}`;
+            isLinkValid = true;
+          } else if (!item.system?.type?.value) {
+            link = `../../rules/generic-features.html#${slug}`;
+            isLinkValid = true;
+          }
+        }
+
+
+        let cssClass = "feature-generic";
+        if (item.system?.type?.value === "race") cssClass = "feature-race";
+        else if (item.system?.type?.value === "class") cssClass = "feature-class";
+
+        return `
+        <div class="item">
+          ${isLinkValid
+            ? `<a href="${link}" title="${name}${level}" target="_blank">
+                <img src="${iconPath}" alt="${name}" class="${cssClass}">
+              </a>`
+            : `<div class="disabled-icon" title="${name}${level}">
+                <img src="${iconPath}" alt="${name}" class="${cssClass}">
+              </div>`
+          }
+          <div class="tooltip">${name}${level}</div>
+        </div>
+      `;
+      };
 
         const featuresDiv = document.getElementById("oktar-features");
         const features = data.items?.filter(item =>
