@@ -21,7 +21,11 @@ exports.handler = async function(event, context) {
       headers: { Authorization: API_KEY }
     });
     const data = await response.json();
-    data.data[0]._codexLastUpdate = new Date().toISOString();
+    if (Array.isArray(data.data) && data.data.length > 0) {
+      data.data[0]._codexLastUpdate = new Date().toISOString();
+    } else {
+      throw new Error("Structure inattendue : data[0] manquant.");
+    }
 
     await s3.putObject({
       Bucket: "codex-eottrpg",
