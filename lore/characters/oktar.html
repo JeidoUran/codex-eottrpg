@@ -71,22 +71,27 @@
   fetch(oktarUrl)
     .then(res => res.json())
     .then(json => {
-      const data = json.data[0];
+      const data = json.data;
       const abilities = data.system.abilities;
       const stats = document.getElementById("oktar-stats");
-  
+
+      if (!data.system || !data.system.attributes || !data.system.abilities) {
+        stats.innerHTML = "<em>Données d'Oktar incomplètes.</em>";
+        return;
+      }
+
       stats.innerHTML = `
-        <strong>PV :</strong> ${data.system.attributes.hp.value} / ${data.system.attributes.hp.max}<br>
-        <strong>Défense :</strong> ${data.system.attributes.ac.value}<br>
-        <strong>Force :</strong> ${abilities.str.value}<br>
-        <strong>Dextérité :</strong> ${abilities.dex.value}<br>
-        <strong>Constitution :</strong> ${abilities.con.value}<br>
-        <strong>Intelligence :</strong> ${abilities.int.value}<br>
-        <strong>Sagesse :</strong> ${abilities.wis.value}<br>
-        <strong>Charisme :</strong> ${abilities.cha.value}
+        <strong>PV :</strong> ${data.system.attributes.hp.value ?? "?"} / ${data.system.attributes.hp.max ?? "?"}<br>
+        <strong>Défense :</strong> ${data.system.attributes.ac.value ?? "?"}<br>
+        <strong>Force :</strong> ${abilities.str.value ?? "?"}<br>
+        <strong>Dextérité :</strong> ${abilities.dex.value ?? "?"}<br>
+        <strong>Constitution :</strong> ${abilities.con.value ?? "?"}<br>
+        <strong>Intelligence :</strong> ${abilities.int.value ?? "?"}<br>
+        <strong>Sagesse :</strong> ${abilities.wis.value ?? "?"}<br>
+        <strong>Charisme :</strong> ${abilities.cha.value ?? "?"}
       `;
   
-      const updated = new Date(data._codexLastUpdate);
+      const updated = new Date(json._codexLastUpdate);
       document.getElementById("last-updated").textContent =
         "Dernière mise à jour : " + updated.toLocaleString("fr-FR", {
           dateStyle: "short",
