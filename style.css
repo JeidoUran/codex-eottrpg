@@ -2101,6 +2101,17 @@ select {
 	background: none !important;
   }
 
+  .red-bg {
+	background: radial-gradient(circle at center, #3a1b1b 0%, #1f0e0e 70%);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+
+  body.red-bg::after {
+	background: none !important;
+  }
+
   .disabled-icon {
 	cursor: not-allowed;
   }
