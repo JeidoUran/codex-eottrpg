@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Kay | Codex - Etrian Odyssey TTRPG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../../favicon.png" type="image/png">
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="blue-bg">
+<canvas id="particles"></canvas>
+
+<header class="codex-header">
+  <img src="../../assets/images/portraits/kay.png" class="portrait-header" onclick="openLightbox(this.src)">
+  <h1>Kay</h1>
+  <p class="sous-titre">Générale des pions</p>
+</header>
+
+<nav class="nav-magique">
+  <a href="/">Accueil</a>
+  <a href="../../notes/">Patch Notes</a>
+  <a href="../../rules/">Règles</a>
+  <a href="../../lore/">Univers</a>
+  <a href="../../music-player.html">Musiques</a>
+  <a href="../../resources/">Ressources</a>
+  <a href="../../credits.html">Crédits</a>
+</nav>
+<div class="fiche-personnage">
+<div class="fiche-stats">
+  <article class="article-credits">
+    <h2>Caractéristiques</h2>
+    <ul class="image-list">
+        <div class="image-texte" id="kay-stats">
+          <em>Chargement des données de Kay...</em>
+        </div>
+    </ul>
+  </article>
+  <article class="article-credits">
+    <h2>Inventaire</h2>
+    <div class="inventory" id="kay-inventory">
+      <em>Chargement de l'inventaire...</em>
+    </div>
+  </article>
+    <p class="last-updated timestamp">Chargement...</p>
+</div>
+<main class="fiche-lore">
+  <article class="article-credits">
+    <h2><i class="fa-solid fa-shield-halved"></i> Kay</h2>
+    <ul class="image-list">
+        <div class="image-texte">
+          <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Race :</strong>Vaisseau</li>
+          <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Classe :</strong> Shogun</li><br>
+        </div>
+     
+      <li><img src="../../assets/images/notes-medium.png" class="image">
+        <div class="image-texte">
+          <strong>Biographie :</strong><br>
+          Kay est un mystère à la dérive, un vaisseau au nom de guerre, sans souvenir de son origine mais animée par un sens inné de la stratégie. Au sein de l’orphelinat, elle ne brillait ni par sa force brute ni par son exubérance — mais par sa précision, son sang-froid, et un sens du jeu hors du commun. Les échecs devinrent son royaume, et la pièce qu’elle incarna naturellement fut la Reine : libre, imprévisible, décisive.<br><br>
+          À sa majorité, elle intégra une école militaire où elle mit en œuvre ses talents sur le terrain. D’abord perçue comme un pion de plus dans la machinerie martiale, elle sut s’imposer, à la parole comme au poing, jusqu’à prendre la tête de son unité. Pour elle, un général digne de ce nom ne sacrifie pas ses soldats : il les mène, en première ligne.<br><br>
+          Sous son calme se cache une flamme tactique redoutable. Kay n’élève jamais la voix sans raison, mais lorsque l’ordre tombe, il est implacable. Elle commande comme elle joue : avec lucidité, audace… et un brin de cruauté pour ceux qui ignorent la règle du jeu.<br><br>
+          Revenue à l’orphelinat après plusieurs campagnes simulées, Kay retrouve ses compagnons d’enfance — mais le jeu a changé. Et cette fois, le plateau est vivant.
+        </div>
+      </li>
+    </ul>
+  </article>
+</main>
+<div class="fiche-skills">
+</article>
+<article class="article-credits">
+  <h2>Aptitudes</h2>
+  <div class="inventory" id="kay-features">
+    <em>Chargement des aptitudes...</em>
+  </div>
+</article>
+
+    <p class="last-updated timestamp">Chargement...</p>
+</div>
+</div>
+
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Portrait" />
+</div>
+<footer>
+  <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+</footer>
+<script>
+  const kayUrl = "https://s3.codex.eottrpg.memiroa.com/data/kay.json";
+  
+  fetch(kayUrl)
+    .then(res => res.json())
+    .then(json => {
+      const data = json.data;
+      const abilities = data.system.abilities;
+      const stats = document.getElementById("kay-stats");
+      const inventoryDiv = document.getElementById("kay-inventory");
+      const allItems = data.items || [];
+      const allowedTypes = ["container", "consumable", "equipment", "tool", "weapon", "loot"];
+      const sortOrder = [
+          "etr",
+          "shield",
+          "tiara",
+          "clothhat",
+          "helmet",
+          "heavyhelmet",
+          "clothing",
+          "light",
+          "medium",
+          "heavy",
+          "gloves",
+          "universalboots",
+          "lightboots",
+          "mediumboots",
+          "heavyboots",
+          "amulets",
+          "rings",
+          "essense",
+          "potion",
+          "thrown",
+          "grenade",
+          "ammo",
+          "poison",
+          "wand",
+          "rod",
+          "scroll",
+          "food",
+          "material",
+          "resource",
+          "treasure",
+          "gem",
+          "gear",
+          "art",
+          "furniture",
+          "etrian",
+          "trinket",
+          "key"
+        ];
+
+        // Fonction de tri
+        const sortByType = (a, b) => {
+          const aType = a.system?.type?.value ?? "";
+          const bType = b.system?.type?.value ?? "";
+          const indexA = sortOrder.indexOf(aType);
+          const indexB = sortOrder.indexOf(bType);
+          return indexA - indexB;
+        };
+
+        const renderItem = item => {
+          const match = item.img.match(/data\/assets\/(.+)/);
+          const relativePath = match ? match[1] : "placeholder.png";
+          const iconPath = `../../assets/images/foundry-icons/${relativePath}`;
+          const quantity = item.system?.quantity;
+          const rarity = item.system?.rarity ?? "common"; // fallback si manquant
+
+          return `
+            <div class="item rarity-${rarity}">
+              <img src="${iconPath}" alt="${item.name}">
+              ${quantity > 1 ? `<span class="quantity">${quantity}</span>` : ""}
+              <div class="tooltip">${item.name}</div>
+            </div>
+          `;
+        };
+        
+        const renderAbility = item => {
+        const baseClassPage = "shogun";
+        const baseRacePage = "vessel";
+        const match = item.img.match(/data\/assets\/(.+)/);
+        const relativePath = match ? match[1] : "placeholder.png";
+        const iconPath = `../../assets/images/foundry-icons/${relativePath}`;
+        const name = item.name;
+        const level = item.system?.level ? ` (Niv. ${item.system.level})` : "";
+        const cleanName = item.name.split(" - ")[0].split(" (")[0];
+        const slug = cleanName
+          .toLowerCase()
+          .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/(^-|-$)/g, "");
+
+          let origin = item.system?.requirements?.split(" ")[0]
+          ?.toLowerCase()
+          ?.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+          ?? null;
+
+        let link = "#";
+        let isLinkValid = false;
+        if (origin && slug) {
+          if (item.system?.type?.value === "race") {
+            link = `../../rules/races/${baseRacePage}.html#${slug}`;
+            isLinkValid = true;
+          } else if (item.system?.type?.value === "class") {
+            link = `../../rules/classes/${baseClassPage}.html#${slug}`;
+            isLinkValid = true;
+          } else if (item.system?.type?.value === "oppatk") {
+            link = `../../rules/generic-features.html#${slug}`;
+            isLinkValid = true;
+          } else if (!item.system?.type?.value) {
+            link = `../../rules/generic-features.html#${slug}`;
+            isLinkValid = true;
+          }
+        }
+
+
+        let cssClass = "feature-generic";
+        if (item.system?.type?.value === "race") cssClass = "feature-race";
+        else if (item.system?.type?.value === "class") cssClass = "feature-class";
+
+        return `
+        <div class="item">
+          ${isLinkValid
+            ? `<a href="${link}" title="${name}${level}" target="_blank">
+                <img src="${iconPath}" alt="${name}" class="${cssClass}">
+              </a>`
+            : `<div class="disabled-icon" title="${name}${level}">
+                <img src="${iconPath}" alt="${name}" class="${cssClass}">
+              </div>`
+          }
+          <div class="tooltip">${name}${level}</div>
+        </div>
+      `;
+      };
+
+        const featuresDiv = document.getElementById("kay-features");
+        const features = data.items?.filter(item =>
+          (item.type === "feat" || item.type === "classFeature") &&
+          item.img && item.name
+        ) || [];
+
+        featuresDiv.innerHTML = `
+          <div class="inventory">
+            ${features.map(renderAbility).join("")}
+          </div>
+        `;
+
+        const equippedItems = allItems
+          .filter(item => item.system?.equipped === true && allowedTypes.includes(item.type))
+          .sort(sortByType);
+
+        const inventoryItems = allItems
+          .filter(item => item.system?.equipped !== true && allowedTypes.includes(item.type))
+          .sort(sortByType);
+
+      let html = `
+          <div class="inventory-section">
+            <li class="character-stats" style="display: flex; align-items: flex-start; gap: 0.75rem; list-style: none;"><img src="../../assets/images/notes-medium.png" class="image" style="width: 24px; height: 24px; flex-shrink: 0; margin-top: 2px;"><strong>Équipé :</strong></li>
+            <div class="inventory equipped-inventory">
+              ${equippedItems.length > 0 ? equippedItems.map(renderItem).join("") : "<em>Aucun objet équipé.</em>"}
+            </div>
+          </div>
+          <div class="inventory-section">
+            <li class="character-stats" style="display: flex; align-items: flex-start; gap: 0.75rem; list-style: none;"><img src="../../assets/images/notes-medium.png" class="image" style="width: 24px; height: 24px; flex-shrink: 0; margin-top: 2px;"><strong>Sac :</strong></li>
+            <div class="inventory bag-inventory">
+              ${inventoryItems.length > 0 ? inventoryItems.map(renderItem).join("") : "<em>Inventaire vide.</em>"}
+            </div>
+          </div>
+        `;
+
+      inventoryDiv.innerHTML = html;
+
+      if (!data.system || !data.system.attributes || !data.system.abilities) {
+        stats.innerHTML = "<em>Données de Kay incomplètes.</em>";
+        return;
+      }
+
+      stats.innerHTML = `
+        <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>PV :</strong> ${data.system.attributes.hp.value ?? "?"}</li>
+        <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Force :</strong> ${abilities.str.value ?? "?"}</li>
+        <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Dextérité :</strong> ${abilities.dex.value ?? "?"}</li>
+        <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Constitution :</strong> ${abilities.con.value ?? "?"}</li>
+        <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Intelligence :</strong> ${abilities.int.value ?? "?"}</li>
+        <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Sagesse :</strong> ${abilities.wis.value ?? "?"}</li>
+        <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Charisme :</strong> ${abilities.cha.value ?? "?"}</li>
+      `;
+
+      const updated = new Date(json._codexLastUpdate);
+      document.querySelectorAll(".last-updated").forEach(el => {
+        el.textContent = "Dernière mise à jour : " + updated.toLocaleString("fr-FR", {
+          dateStyle: "short",
+          timeStyle: "short"
+        });
+      });
+      }) // 👈 fermeture du .then
+      .catch(err => {
+        console.error("Erreur lors du chargement des données Kay :", err);
+        document.getElementById("kay-stats").innerHTML =
+          "<em>Données indisponibles. Le fichier JSON n'a pas été trouvé ou le serveur est hors ligne.</em>";
+        document.querySelectorAll(".last-updated").forEach(el => el.textContent = "");
+      });
+  </script>  
+<script>
+  function openLightbox(src) {
+    const lightbox = document.getElementById("lightbox");
+    const img = document.getElementById("lightbox-img");
+    img.src = src;
+    lightbox.style.display = "flex";
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+</script>
+<script src="../../particles.js"></script>
+</body>
+</html>

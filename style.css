@@ -2079,6 +2079,17 @@ select {
 	background: none !important;
   }
 
+  .blue-bg {
+	background: radial-gradient(circle at center, #1e3552 0%, #152130 70%);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+
+  body.blue-bg::after {
+	background: none !important;
+  }
+
   .disabled-icon {
 	cursor: not-allowed;
   }
