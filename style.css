@@ -100,12 +100,11 @@ main.accueil {
 	background: rgba(255, 255, 255, 0.03);
 	border: 1px solid rgba(255, 255, 255, 0.08);
 	padding: 1rem;
-	margin: 1rem auto;
-	max-width: 600px;
+	max-width: 800px;
+	margin: 1.5rem auto;
 	border-radius: 8px;
 	transition: background 0.3s;
 	position: relative;
-	overflow: hidden;
 }
 
 .patch-list article:hover {
@@ -1040,11 +1039,6 @@ footer {
 	margin-top: 1rem;
 }
 
-.patch-list article {
-	max-width: 800px;
-	margin: 1.5rem auto;
-}
-
 .class-nav {
 	position: fixed;
 	top: 50%;
@@ -1879,7 +1873,7 @@ select {
 	color: white;
 	padding: 2px 6px;
 	border-radius: 4px;
-	font-size: 0.75rem;
+	font-size: 0.85rem;
 	white-space: nowrap;
 	display: none;
 	pointer-events: none;
@@ -1894,3 +1888,102 @@ select {
 	margin-bottom: 1rem;
   }
   
+  .item .quantity {
+	position: absolute;
+	bottom: 2px;
+	right: 4px;
+	background-color: rgba(0, 0, 0, 0.75);
+	color: #fff;
+	padding: 0 4px;
+	font-size: 0.7rem;
+	border-radius: 4px;
+	font-family: monospace;
+	pointer-events: none;
+  }
+  
+  .item.rarity-common img {
+	border: 2px solid #aaa;
+  }
+  
+  .item.rarity-uncommon img {
+	border: 2px solid #3cb371;
+  }
+  
+  .item.rarity-rare img {
+	border: 2px solid #1e90ff;
+  }
+  
+  .item.rarity-epic img {
+	border: 2px solid #9932cc;
+  }
+  
+  .item.rarity-legendary img {
+	border: 2px solid #ffa500;
+  }
+  
+  .item.rarity-artifact img {
+	border: 2px solid #ff4500;
+	box-shadow: 0 0 12px rgba(255, 69, 0, 0.6);
+  }
+  
+  .fiche-personnage {
+	display: flex;
+	align-items: flex-start;
+	gap: 2rem;
+	padding: 2rem;
+	margin: 0 auto;
+  }
+  
+  .fiche-lore {
+	display: flex;
+	align-items: flex-start;
+	gap: 2rem;
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	padding: 1rem;
+	max-width: 800px;
+	margin: 1.5rem auto;
+	border-radius: 8px;
+	transition: background 0.3s;
+  }
+
+  .fiche-lore:hover {
+	background: rgba(255, 255, 255, 0.06);
+  }
+
+  .fiche-personnage .patch-list {
+	flex: 1;
+	margin-left: 2rem;
+  }
+  
+  .fiche-stats {
+	background: rgba(255, 255, 255, 0.03);
+	padding: 1rem;
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	display: flex;
+	flex: 0 0 100%;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	position: absolute;
+	width: 300px;
+	margin: 1.5rem auto;
+	border-radius: 8px;
+	transition: background 0.3s;
+  }
+  
+  .fiche-stats:hover {
+	background: rgba(255, 255, 255, 0.06);
+  }
+
+  @media (max-width: 900px) {
+	.fiche-personnage {
+	  flex-direction: column;
+	  padding: 0 1rem;
+	}
+	}
+
+	.image-list .character-stats {
+		margin-bottom: 0.25rem;
+	}
