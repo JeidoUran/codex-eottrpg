@@ -86,7 +86,9 @@
 <script>
   const oktarUrl = "https://s3.codex.eottrpg.memiroa.com/data/oktar.json";
   
-  fetch(oktarUrl)
+  const url = new URL(oktarUrl);
+  url.searchParams.set("nocache", Date.now());
+  fetch(url)
     .then(res => res.json())
     .then(json => {
       const data = json.data;
