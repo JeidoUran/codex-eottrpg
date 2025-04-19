@@ -18,7 +18,7 @@ exports.handler = async function(event, context) {
 
   try {
     const response = await fetch(url, {
-      headers: { Authorization: API_KEY }
+      headers: { "x-api-key": API_KEY }
     });
     const data = await response.json();
     if (Array.isArray(data.data) && data.data.length > 0) {
