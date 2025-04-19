@@ -2090,6 +2090,17 @@ select {
 	background: none !important;
   }
 
+  .green-bg {
+	background: radial-gradient(circle at center, #1b3a28 0%, #102416 70%);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+
+  body.green-bg::after {
+	background: none !important;
+  }
+
   .disabled-icon {
 	cursor: not-allowed;
   }
