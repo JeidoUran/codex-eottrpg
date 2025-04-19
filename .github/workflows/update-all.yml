@@ -1,4 +1,4 @@
-name: 🔄 MAJ Oktar (Netlify Function)
+name: 🔄 MAJ All Players (Netlify Function)
 
 on:
   schedule:
@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Appel de la fonction Netlify
         run: |
-          curl -sS https://codex.eottrpg.memiroa.com/.netlify/functions/update-oktar
+          curl -sS https://codex.eottrpg.memiroa.com/.netlify/functions/update-all

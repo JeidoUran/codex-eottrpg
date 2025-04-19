@@ -9,9 +9,9 @@ const s3 = new AWS.S3({
   signatureVersion: "v4"
 });
 
-exports.handler = async function(event, context) {
-  const CLIENT_ID = "foundry-skQfvcSugPyn5XvR";
-  const UUID = "Actor.DLc3BG2Qq87T57tk";
+exports.handler = async function() {
+  const CLIENT_ID = "foundry-skQfvcSugPyn5XvR"; // à remplacer si nécessaire
+  const UUID = "Actor.Lz8WJHrRMXJ9Tcfx";
   const API_KEY = "codex-relay";
 
   const url = `http://api.codex.memiroa.com/get?clientId=${CLIENT_ID}&uuid=${UUID}`;
@@ -25,7 +25,7 @@ exports.handler = async function(event, context) {
 
     await s3.putObject({
       Bucket: "codex-eottrpg",
-      Key: "data/oktar.json",
+      Key: "data/feril.json",
       Body: JSON.stringify(data, null, 2),
       ContentType: "application/json",
       ACL: "public-read"
