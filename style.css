@@ -1301,7 +1301,7 @@ audio {
 	margin: 0;
 	border-top: 1px solid rgba(255, 255, 255, 0.1);
 	opacity: 0;
-	transition: opacity 0.4s ease;
+	transition: opacity 0.3s ease;
 }
 
 #playlist.visible {
@@ -2109,6 +2109,18 @@ select {
   }
 
   body.red-bg::after {
+	background: none !important;
+  }
+
+  .dark-green-bg {
+	background: radial-gradient(circle at center, #11282b 0%, #051012 75%);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+  
+
+  body.dark-green-bg::after {
 	background: none !important;
   }
 
