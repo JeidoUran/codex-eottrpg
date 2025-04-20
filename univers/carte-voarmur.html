@@ -151,7 +151,7 @@ lieux.forEach(lieu => {
   const li = document.createElement("li");
   li.textContent = lieu.name;
   li.addEventListener("click", () => {
-    map.flyTo(lieu.coords, -1.25, {
+    map.flyTo(lieu.coords, 0, {
       animate: true,
       duration: 1.2
     });
