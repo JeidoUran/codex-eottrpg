@@ -2069,7 +2069,7 @@ select {
   }
   
   .purple-bg {
-	background: radial-gradient(circle at center, #303950 0%, #1d2233 80%);
+	background: radial-gradient(circle at center, #303950 0%, #0f121b 80%);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -2080,7 +2080,7 @@ select {
   }
 
   .blue-bg {
-	background: radial-gradient(circle at center, #1e3552 0%, #152130 70%);
+	background: radial-gradient(circle at center, #1e3552 0%, #0e1720 70%);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -2091,7 +2091,7 @@ select {
   }
 
   .green-bg {
-	background: radial-gradient(circle at center, #1b3a28 0%, #102416 70%);
+	background: radial-gradient(circle at center, #22422d 0%, #09150e 75%);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -2102,7 +2102,7 @@ select {
   }
 
   .red-bg {
-	background: radial-gradient(circle at center, #3a1b1b 0%, #1f0e0e 70%);
+	background: radial-gradient(circle at center, #441212 0%, #180707 75%);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
