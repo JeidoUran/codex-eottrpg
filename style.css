@@ -75,7 +75,7 @@ h6,
 
 h1 {
 	font-size: 3rem;
-	margin-bottom: 0.5rem;
+	margin-bottom: -0.5rem;
 }
 
 main.accueil {
@@ -196,10 +196,8 @@ a:hover {
 .accueil {
 	max-width: 850px;
 	margin: 2rem auto;
-	padding: 1rem;
 	z-index: 2;
 	position: relative;
-	margin-top: 1rem;
 }
 
 .accueil-music {
