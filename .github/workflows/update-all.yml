@@ -1,4 +1,4 @@
-name: 🔄 MAJ All Players (Netlify Function)
+name: 🔄 Codex | Update All Players (Netlify Function)
 
 on:
   schedule:
