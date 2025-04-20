@@ -30,6 +30,18 @@
   <article class="article-credits">
     <h2>Caractéristiques</h2>
     <ul class="image-list">
+      <div class="stat-block">
+        <li class="level-block">
+          <div class="tooltip-wrapper">
+            <img id="inspiration-icon" src="../../assets/images/inspiration-icons/inspiration-off.png" alt="Inspiration" class="inspiration-off">
+            <div class="tooltip">Inspiration</div>
+          </div>
+         <h3>Niveau : <span id="level-value">?</span></h3></li>
+        <div class="xp-bar-container">
+          <div class="xp-bar-oktar" id="xp-bar-oktar" style="width: 0%"></div>
+        </div>
+        <small class="xp-text" id="xp-text">? / ?</small>
+      </div> 
         <div class="image-texte" id="oktar-stats">
           <em>Chargement des données d'Oktar...</em>
         </div>
@@ -95,6 +107,11 @@
       const abilities = data.system.abilities;
       const stats = document.getElementById("oktar-stats");
       const inventoryDiv = document.getElementById("oktar-inventory");
+      const xp = data.system.details.xp?.value || 0;
+      const levelTable = [
+        0, 300, 900, 2700, 6500, 14000, 23000, 34000, 48000, 64000,
+        85000, 100000, 120000, 140000, 165000, 195000, 225000, 265000, 305000
+      ];
       const allItems = data.items || [];
       const allowedTypes = ["container", "consumable", "equipment", "tool", "weapon", "loot"];
       const sortOrder = [
@@ -262,6 +279,38 @@
         stats.innerHTML = "<em>Données d'Oktar incomplètes.</em>";
         return;
       }
+      
+      let level = 1;
+      for (let i = 1; i < levelTable.length; i++) {
+        if (xp < levelTable[i]) {
+          level = i;
+          break;
+        }
+      }
+
+      const hasInspiration = data.system?.attributes?.inspiration;
+      const inspirationImg = document.getElementById("inspiration-icon");
+      const inspirationTooltip = inspirationImg.nextElementSibling;
+
+      if (hasInspiration) {
+        inspirationImg.src = "../../assets/images/inspiration-icons/inspiration-on.png";
+        inspirationImg.className = "inspiration-icon inspiration-glow";
+        inspirationTooltip.textContent = "Inspiration";
+      } else {
+        inspirationImg.src = "../../assets/images/inspiration-icons/inspiration-off.png";
+        inspirationImg.className = "inspiration-icon inspiration-off";
+        inspirationTooltip.textContent = "Pas d'inspiration";
+      }
+
+      // Mise à jour du niveau
+      document.getElementById("level-value").textContent = level;
+
+      // Mise à jour de la barre
+      const xpMin = levelTable[level - 1];
+      const xpMax = levelTable[level];
+      const ratio = (xp - xpMin) / (xpMax - xpMin);
+      document.getElementById("xp-bar-oktar").style.width = `${Math.round(ratio * 100)}%`;
+      document.getElementById("xp-text").textContent = `${xp} / ${xpMax}`;
 
       stats.innerHTML = `
         <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>PV :</strong> ${data.system.attributes.hp.value ?? "?"}</li>
