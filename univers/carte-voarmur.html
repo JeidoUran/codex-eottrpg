@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Carte de Voarmur et environs | Codex - Etrian Odyssey TTRPG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../favicon.png" type="image/png">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""></script>
+</head>
+<body>
+<canvas id="particles"></canvas>
+
+<header class="codex-header">
+  <img src="../assets/images/banniere.png" alt="Bannière" class="banniere">
+  <h1>Carte de Voarmur et environs</h1>
+  <p class="sous-titre">Région explorée par les Égarés</p>
+</header>
+
+<nav class="nav-magique">
+  <a href="/">Accueil</a>
+  <a href="../notes/">Patch Notes</a>
+  <a href="../regles/">Règles</a>
+  <a href="../univers/">Univers</a>
+  <a href="../musique.html">Musiques</a>
+  <a href="../ressources/">Ressources</a>
+  <a href="../credits.html">Crédits</a>
+</nav>
+
+<div class="main-wrapper">
+  <div id="carte-sidebar" class="carte-sidebar">
+    <h2>Lieux</h2>
+    <ul id="lieux-list"></ul>
+  </div>
+<div id="map" class="map-with-sidebar"></div>
+</div>
+
+<div class="backToTop-static-button">
+  <button id="backToTop-static" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut">
+    <i class="fa-solid fa-arrow-up"></i> Retour en haut
+  </button>
+</div>
+
+<script src="../particles.js"></script>
+<script>
+  const bounds = [[0,0], [4096, 3524]];
+  const maxBounds = [[-50, -50], [4146, 3574]];
+  
+  const map = L.map('map', {
+    crs: L.CRS.Simple,
+    zoomControl: true,
+    inertia: true,
+    center: [ 1816.215, 1742.337 ],
+    noWrap: true,
+    maxBounds: maxBounds,
+    maxBoundsViscosity: 0.5,
+    dragging: true,
+    tap: false,
+    attributionControl: false,
+    zoom: -1,
+    zoomSnap: 0.25,
+    minZoom: -2,
+    maxZoom: 0.25
+  });
+
+  const image = L.imageOverlay('../assets/images/maps/carte-voarmur.png', bounds).addTo(map);
+  map.fitBounds(bounds);
+  map.setView([1706.904, 1742.337], -1.25); // <-- Position et zoom initiaux
+
+  const lieux = [
+  {
+    name: "Voarmur",
+    coords: [1706.904, 1742.337],
+    url: "/univers/regions/voarmur.html",
+    description: "La cité océane, partiellement engloutie depuis un ancien séisme, demeure le point de départ des Égarés."
+  },
+  {
+    name: "Ougarit",
+    coords: [2147.849, 576],
+    url: "/univers/regions/ougarit.html",
+    description: "Ville portuaire ancienne, Ougarit s’impose comme un carrefour marchand et culturel à l’ouest de Voarmur."
+  },
+  {
+    name: "Labyrinthe d’Yggdrasil",
+    coords: [1816.215, 1742.337],
+    url: "/univers/regions/labyrinthe.html",
+    description: "Un réseau mystique et changeant, témoin d’épreuves oubliées et de secrets enfouis sous les racines."
+  },
+  {
+    name: "Damavand",
+    coords: [3606.684, 2126],
+    url: "/univers/regions/damavand.html",
+    description: "Cité draconique bâtie sur les reliques d’un pouvoir ancien, jadis bénie par un dragon scellé."
+  },
+  {
+    name: "Saba",
+    coords: [3623.078, 774.989],
+    url: "/univers/regions/saba.html",
+    description: "Forteresse côtière recluse, craintive des remous océaniques, retranchée du monde depuis le Désastre."
+  },
+  {
+    name: "Batavia",
+    coords: [1547.894, 2794.299],
+    url: "/univers/regions/batavia.html",
+    description: "Carrefour commercial disputé, autrefois rival de Voarmur dans les échanges avec l’extérieur."
+  },
+  {
+    name: "Ééa",
+    coords: [3183.115, 1053.589],
+    url: "/univers/regions/eea.html",
+    description: "Ville nordique baignée de mystères, dirigée par la reine Circé et célèbre pour son chocolat enchanté."
+  },
+  {
+    name: "Ayutthaya",
+    coords: [3091.247, 2572.454],
+    url: "/univers/regions/ayutthaya.html",
+    description: "Ancien royaume prospère aux traditions navales, port majeur et escale prisée des grands voyageurs."
+  }
+];
+
+lieux.forEach(lieu => {
+  const marker = L.divIcon({
+    className: "custom-marker",
+    iconSize: [16, 16]
+  });
+
+  L.marker(lieu.coords, { icon: marker })
+    .addTo(map)
+    .bindTooltip(lieu.name, {
+      className: "codex-tooltip",
+      direction: "top"
+    })
+    .bindPopup(`
+      <div class="popup-codex">
+        <h3>${lieu.name}</h3>
+        <p>${lieu.description}</p>
+        <a href="${lieu.url}"><i class="fa-solid fa-arrow-right"></i> Page dédiée</a>
+      </div>
+    `);
+});
+
+const sidebar = document.getElementById("lieux-list");
+
+lieux.forEach(lieu => {
+  const li = document.createElement("li");
+  li.textContent = lieu.name;
+  li.addEventListener("click", () => {
+    map.flyTo(lieu.coords, -1.25, {
+      animate: true,
+      duration: 1.2
+    });
+  });
+  sidebar.appendChild(li);
+});
+
+  map.on("popupopen", function(e) {
+  const wrapper = e.popup._container.querySelector(".leaflet-popup-content-wrapper");
+  if (wrapper) {
+    wrapper.classList.add("codex-popup-wrapper");
+  }
+});
+</script>
+</body>
+</html>
