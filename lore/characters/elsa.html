@@ -127,6 +127,7 @@
       const abilities = data.system.abilities;
       const stats = document.getElementById("elsa-stats");
       const inventoryDiv = document.getElementById("elsa-inventory");
+      const gold = json.data.system.currency?.gp ?? 0;
       const xp = data.system.details.xp?.value || 0;
       const levelTable = [
         0, 300, 900, 2700, 6500, 14000, 23000, 34000, 48000, 64000,
@@ -287,6 +288,10 @@
           </div>
           <div class="inventory-section">
             <li class="character-stats" style="display: flex; align-items: flex-start; gap: 0.75rem; list-style: none;"><img src="../../assets/images/notes-medium.png" class="image" style="width: 24px; height: 24px; flex-shrink: 0; margin-top: 2px;"><strong>Sac :</strong></li>
+            <ul class="image-list">
+            <li class="ental-block">
+            <img id="ental-icon" src="../../assets/images/ental.webp" class="ental-glow">
+            <strong><span id="gold-value">…</span> en</strong></li></ul>
             <div class="inventory bag-inventory">
               ${inventoryItems.length > 0 ? inventoryItems.map(renderItem).join("") : "<em>Inventaire vide.</em>"}
             </div>
@@ -321,6 +326,8 @@
         inspirationImg.className = "inspiration-icon inspiration-off";
         inspirationTooltip.textContent = "Pas d'inspiration";
       }
+
+      document.getElementById("gold-value").textContent = gold.toLocaleString("fr-FR");
 
       // Mise à jour du niveau
       document.getElementById("level-value").textContent = level;
