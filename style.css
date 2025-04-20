@@ -2342,3 +2342,10 @@ select {
 	flex: 1;
   }
   
+  .ental-glow {
+	width: 32px;
+	height: 32px;
+	filter: drop-shadow(0 0 3px rgba(255, 255, 150, 0.7));
+	transition: filter 0.3s ease;
+	margin-right: -0.3rem;
+  }
