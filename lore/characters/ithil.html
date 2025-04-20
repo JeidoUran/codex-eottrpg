@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="../../favicon.png" type="image/png">
   <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body class="red-bg">
 <canvas id="particles"></canvas>
@@ -25,6 +27,11 @@
   <a href="../../resources/">Ressources</a>
   <a href="../../credits.html">Crédits</a>
 </nav>
+
+<div class="header-links-center">
+  <a href="../../lore/characters/" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Index des personnages</a>
+</div>
+
 <div class="fiche-personnage">
 <div class="fiche-stats">
   <article class="article-credits">
@@ -55,9 +62,11 @@
   </article>
     <p class="last-updated timestamp">Chargement...</p>
 </div>
+
+<div class="fiche-centrale">
 <main class="fiche-lore">
   <article class="article-credits">
-    <h2><i class="fa-solid fa-shield-halved"></i> Ithil</h2>
+    <h2><i class="fa-solid fa-scroll"></i> Ithil</h2>
     <ul class="image-list">
         <div class="image-texte">
           <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Race :</strong>Célestrien</li>
@@ -77,6 +86,15 @@
     </ul>
   </article>
 </main>
+
+<div class="backToTop-static-button">
+  <button id="backToTop-static" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut">
+    <i class="fa-solid fa-arrow-up"></i> Retour en haut
+  </button>
+  </div>
+
+</div>
+
 <div class="fiche-skills">
 </article>
 <article class="article-credits">
