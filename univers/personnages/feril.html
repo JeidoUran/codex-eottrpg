@@ -2,34 +2,34 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Ithil | Codex - Etrian Odyssey TTRPG</title>
+  <title>Féril | Codex - Etrian Odyssey TTRPG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="../../favicon.png" type="image/png">
   <link rel="stylesheet" href="../../style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
-<body class="red-bg">
+<body class="green-bg">
 <canvas id="particles"></canvas>
 
 <header class="codex-header">
-  <img src="../../assets/images/portraits/ithil.png" class="portrait-header" onclick="openLightbox(this.src)">
-  <h1>Ithil</h1>
-  <p class="sous-titre">Émissaire des défunts</p>
+  <img src="../../assets/images/portraits/feril.png" class="portrait-header" onclick="openLightbox(this.src)">
+  <h1>Féril Waffenhalter</h1>
+  <p class="sous-titre">Destructeur d'échiquiers</p>
 </header>
 
 <nav class="nav-magique">
   <a href="/">Accueil</a>
   <a href="../../notes/">Patch Notes</a>
-  <a href="../../rules/">Règles</a>
-  <a href="../../lore/">Univers</a>
-  <a href="../../music-player.html">Musiques</a>
-  <a href="../../resources/">Ressources</a>
-  <a href="../../credits.html">Crédits</a>
+  <a href="../../regles/">Règles</a>
+  <a href="../../univers/">Univers</a>
+  <a href="../../musique">Musiques</a>
+  <a href="../../ressources/">Ressources</a>
+  <a href="../../credits">Crédits</a>
 </nav>
 
 <div class="header-links-center">
-  <a href="../../lore/characters/" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Index des personnages</a>
+  <a href="../../univers/personnages/" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Index des personnages</a>
 </div>
 
 <div class="fiche-personnage">
@@ -45,18 +45,18 @@
           </div>
          <h3>Niveau : <span id="level-value">?</span></h3></li>
         <div class="xp-bar-container">
-          <div class="xp-bar-ithil" id="xp-bar-ithil" style="width: 0%"></div>
+          <div class="xp-bar-feril" id="xp-bar-feril" style="width: 0%"></div>
         </div>
         <small class="xp-text" id="xp-text">? / ?</small>
-      </div>      
-        <div class="image-texte" id="ithil-stats">
-          <em>Chargement des données d'Ithil...</em>
+      </div> 
+        <div class="image-texte" id="feril-stats">
+          <em>Chargement des données de Féril...</em>
         </div>
     </ul>
   </article>
   <article class="article-credits">
     <h2>Inventaire</h2>
-    <div class="inventory" id="ithil-inventory">
+    <div class="inventory" id="feril-inventory">
       <em>Chargement de l'inventaire...</em>
     </div>
   </article>
@@ -66,21 +66,20 @@
 <div class="fiche-centrale">
 <main class="fiche-lore">
   <article class="article-credits">
-    <h2><i class="fa-solid fa-scroll"></i> Ithil</h2>
+    <h2><i class="fa-solid fa-scroll"></i> Féril</h2>
     <ul class="image-list">
         <div class="image-texte">
-          <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Race :</strong>Célestrien</li>
-          <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Classe :</strong> Vagabond</li><br>
+          <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Race :</strong>Brouni</li>
+          <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Classe :</strong> Souverain</li><br>
         </div>
      
       <li><img src="../../assets/images/notes-medium.png" class="image">
         <div class="image-texte">
           <strong>Biographie :</strong><br>
-          Elle entre toujours la première, seule, sans un mot. Ce que les autres fuient, Ithil s’y rend comme on s’assoit à table : en connaisseuse résignée. La mort, les chairs éclatées, les silences lourds de malédictions… ce ne sont pas des obstacles, ce sont ses compagnons d’enquête.<br><br>
-          On murmure qu’elle parle avec les morts. Mais ce qu’on oublie, c’est que les morts parlent rarement de choses agréables.<br><br>
-          Autrefois soldate, aujourd’hui médium désabusée, elle loue ses dons à la garde, remontant les traces de sang et les regrets jusqu’aux pires coins de la ville. Quand elle lève la main, ce n’est pas pour combattre : c’est pour appeler ce qu’il reste d’une âme, et interroger ce qui n’a pas su partir en paix. Et quand elle claque des doigts, c’est pour libérer ce qui n’aurait jamais dû rester.<br><br>
-          Ithil ne pleure plus. Elle n’espère plus. Elle compte les morts comme d’autres comptent leurs primes, sachant qu’aucun d’eux ne viendra la remercier. Mais parfois, dans la nuit, elle regarde la lune comme on cherche un point fixe au bord du gouffre, et elle murmure à l’ombre :<br>
-          “Demain, je les reverrai tous. J’ai fait cette promesse… alors j’y retournerai.”
+          Il est venu me défier un soir sans lune, l’armure encore poussiéreuse, les cheveux en bataille comme les idées. Un Brouni à la voix franche, à la démarche décidée. Ce genre de petit être qu’on sous-estime trop souvent — et qui finit par soulever des montagnes.<br><br>
+          Je n’avais jamais vu un dragoon aussi... brouillon. Il s’installa à la table d’échecs comme on entre sur un champ de bataille : sans plan, sans recul, mais avec toute la fougue d’un premier assaut. Ses pièces volaient, ses décisions étaient aussi brutales qu’impulsives. Une tempête dans un gobelet d’eau. Et pourtant, quelque chose m’obligeait à rester en alerte. Cette imprévisibilité… elle peut devenir dangereuse.<br><br>
+          Il n’a pas gagné. Mais il n’a pas perdu non plus. Il a fait échec avec son roi. Un coup interdit, mais terriblement révélateur : il n’accepte pas les règles si elles s’opposent à sa volonté. Je n’ai pas eu le cœur de le corriger. Il riait déjà, convaincu d’avoir gagné. Peut-être l’avait-il fait, d’une certaine manière.<br><br>
+          Je voulais lui parler après. Lui expliquer qu’un vrai chef apprend aussi à perdre. Mais il avait déjà quitté la pièce — et, je le crains, bien plus que cela. Ce n’est pas un soldat comme les autres. Et c’est pour ça que je me souviendrai de lui.
         </div>
       </li>
     </ul>
@@ -99,7 +98,7 @@
 </article>
 <article class="article-credits">
   <h2>Aptitudes</h2>
-  <div class="inventory" id="ithil-features">
+  <div class="inventory" id="feril-features">
     <em>Chargement des aptitudes...</em>
   </div>
 </article>
@@ -116,17 +115,17 @@
   <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
 </footer>
 <script>
-  const ithilUrl = "https://s3.codex.eottrpg.memiroa.com/data/ithil.json";
+  const ferilUrl = "https://s3.codex.eottrpg.memiroa.com/data/feril.json";
   
-  const url = new URL(ithilUrl);
+  const url = new URL(ferilUrl);
   url.searchParams.set("nocache", Date.now());
   fetch(url)
     .then(res => res.json())
     .then(json => {
       const data = json.data;
       const abilities = data.system.abilities;
-      const stats = document.getElementById("ithil-stats");
-      const inventoryDiv = document.getElementById("ithil-inventory");
+      const stats = document.getElementById("feril-stats");
+      const inventoryDiv = document.getElementById("feril-inventory");
       const gold = json.data.system.currency?.gp ?? 0;
       const xp = data.system.details.xp?.value || 0;
       const levelTable = [
@@ -202,8 +201,8 @@
         };
         
         const renderAbility = item => {
-        const baseClassPage = "rover";
-        const baseRacePage = "celestrian";
+        const baseClassPage = "souverain";
+        const baseRacePage = "brouni";
         const match = item.img.match(/data\/assets\/(.+)/);
         const relativePath = match ? match[1] : "placeholder.png";
         const iconPath = `../../assets/images/foundry-icons/${relativePath}`;
@@ -225,16 +224,16 @@
         let isLinkValid = false;
         if (origin && slug) {
           if (item.system?.type?.value === "race") {
-            link = `../../rules/races/${baseRacePage}.html#${slug}`;
+            link = `../../regles/races/${baseRacePage}.html#${slug}`;
             isLinkValid = true;
           } else if (item.system?.type?.value === "class") {
-            link = `../../rules/classes/${baseClassPage}.html#${slug}`;
+            link = `../../regles/classes/${baseClassPage}.html#${slug}`;
             isLinkValid = true;
           } else if (item.system?.type?.value === "oppatk") {
-            link = `../../rules/generic-features.html#${slug}`;
+            link = `../../regles/generic-features.html#${slug}`;
             isLinkValid = true;
           } else if (!item.system?.type?.value) {
-            link = `../../rules/generic-features.html#${slug}`;
+            link = `../../regles/generic-features.html#${slug}`;
             isLinkValid = true;
           }
         }
@@ -259,7 +258,7 @@
       `;
       };
 
-        const featuresDiv = document.getElementById("ithil-features");
+        const featuresDiv = document.getElementById("feril-features");
         const features = data.items?.filter(item =>
           (item.type === "feat" || item.type === "classFeature") &&
           item.img && item.name
@@ -301,7 +300,7 @@
       inventoryDiv.innerHTML = html;
 
       if (!data.system || !data.system.attributes || !data.system.abilities) {
-        stats.innerHTML = "<em>Données d'Ithil incomplètes.</em>";
+        stats.innerHTML = "<em>Données de Féril incomplètes.</em>";
         return;
       }
       
@@ -336,7 +335,7 @@
       const xpMin = levelTable[level - 1];
       const xpMax = levelTable[level];
       const ratio = (xp - xpMin) / (xpMax - xpMin);
-      document.getElementById("xp-bar-ithil").style.width = `${Math.round(ratio * 100)}%`;
+      document.getElementById("xp-bar-feril").style.width = `${Math.round(ratio * 100)}%`;
       document.getElementById("xp-text").textContent = `${xp} / ${xpMax}`;
 
       stats.innerHTML = `
@@ -358,8 +357,8 @@
       });
       }) // 👈 fermeture du .then
       .catch(err => {
-        console.error("Erreur lors du chargement des données Ithil :", err);
-        document.getElementById("ithil-stats").innerHTML =
+        console.error("Erreur lors du chargement des données Féril :", err);
+        document.getElementById("feril-stats").innerHTML =
           "<em>Données indisponibles. Le fichier JSON n'a pas été trouvé ou le serveur est hors ligne.</em>";
         document.querySelectorAll(".last-updated").forEach(el => el.textContent = "");
       });

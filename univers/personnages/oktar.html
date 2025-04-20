@@ -2,34 +2,34 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Elsa | Codex - Etrian Odyssey TTRPG</title>
+  <title>Oktar | Codex - Etrian Odyssey TTRPG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="../../favicon.png" type="image/png">
   <link rel="stylesheet" href="../../style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
-<body class="dark-green-bg">
+<body class="purple-bg">
 <canvas id="particles"></canvas>
 
 <header class="codex-header">
-  <img src="../../assets/images/portraits/elsa.png" class="portrait-header" onclick="openLightbox(this.src)">
-  <h1>Elsa Horkheimer</h1>
-  <p class="sous-titre">Fugitive aux larmes d'or</p>
+  <img src="../../assets/images/portraits/oktar.png" class="portrait-header" onclick="openLightbox(this.src)">
+  <h1>Oktar</h1>
+  <p class="sous-titre">Fléau des tyrans</p>
 </header>
 
 <nav class="nav-magique">
   <a href="/">Accueil</a>
   <a href="../../notes/">Patch Notes</a>
-  <a href="../../rules/">Règles</a>
-  <a href="../../lore/">Univers</a>
-  <a href="../../music-player.html">Musiques</a>
-  <a href="../../resources/">Ressources</a>
-  <a href="../../credits.html">Crédits</a>
+  <a href="../../regles/">Règles</a>
+  <a href="../../univers/">Univers</a>
+  <a href="../../musique">Musiques</a>
+  <a href="../../ressources/">Ressources</a>
+  <a href="../../credits">Crédits</a>
 </nav>
 
 <div class="header-links-center">
-  <a href="../../lore/characters/" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Index des personnages</a>
+  <a href="../../univers/personnages/" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Index des personnages</a>
 </div>
 
 <div class="fiche-personnage">
@@ -45,18 +45,18 @@
           </div>
          <h3>Niveau : <span id="level-value">?</span></h3></li>
         <div class="xp-bar-container">
-          <div class="xp-bar-elsa" id="xp-bar-elsa" style="width: 0%"></div>
+          <div class="xp-bar-oktar" id="xp-bar-oktar" style="width: 0%"></div>
         </div>
         <small class="xp-text" id="xp-text">? / ?</small>
-      </div>  
-        <div class="image-texte" id="elsa-stats">
-          <em>Chargement des données d'Elsa...</em>
+      </div> 
+        <div class="image-texte" id="oktar-stats">
+          <em>Chargement des données d'Oktar...</em>
         </div>
     </ul>
   </article>
   <article class="article-credits">
     <h2>Inventaire</h2>
-    <div class="inventory" id="elsa-inventory">
+    <div class="inventory" id="oktar-inventory">
       <em>Chargement de l'inventaire...</em>
     </div>
   </article>
@@ -66,23 +66,21 @@
 <div class="fiche-centrale">
 <main class="fiche-lore">
   <article class="article-credits">
-    <h2><i class="fa-solid fa-scroll"></i> Elsa</h2>
+    <h2><i class="fa-solid fa-scroll"></i> Oktar</h2>
     <ul class="image-list">
         <div class="image-texte">
-          <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Race :</strong>Thérian</li>
-          <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Classe :</strong> Lansquenet</li><br>
+          <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Race :</strong>Sentinelle</li>
+          <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Classe :</strong> Impérial</li><br>
         </div>
      
       <li><img src="../../assets/images/notes-medium.png" class="image">
         <div class="image-texte">
           <strong>Biographie :</strong><br>
-          Elle n’aurait jamais dû se trouver là. Pas sur ce chemin rocailleux, encerclée par la montagne d’un côté et un ravin de l’autre. Pas au milieu d’une compagnie qui n’existait plus qu’en souvenirs, criblée de flèches avant même d’avoir eu le temps de lever les boucliers.<br><br>
-          Et pourtant, Elsa courait. Fière Thérianne au regard droit, elle courait pour sa vie, sa hache glissant dans son dos comme un rappel ironique de son inutilité face à la pluie de mort tombée du ciel.<br><br>
-          Qu’était-elle venue chercher dans cette galère ? L’honneur ? La gloire ? Le confort d’une bannière ? Elle avait eu tout cela. L’or, les contrats, le regard approbateur des nobles… et pourtant, la voilà, jetant au sol sa bourse bien remplie pour alléger sa fuite. Quitte à perdre son statut, autant garder la vie.<br><br>
-          Elle ne pouvait plus revenir en arrière. Trop de témoins, trop d’attentes, trop d’orgueil pour affronter le regard d’un seigneur trahi. Alors elle marcha. Elle marcha loin des terres enneigées qu’elle chérissait, loin des armées, loin de l’humiliation.<br><br>
-          Et quelque part, au fond de son esprit, une idée s’imposa : retourner là où tout avait recommencé. L’orphelinat. Là où elle s’était éveillée, sans souvenirs, comme une page blanche. Peut-être n’était-il pas trop tard pour choisir une autre voie — une voie sans bannière, mais pas sans combat.
-          </div>
-        </li>
+          Oktar est un loup-sentinelle marqué par la guerre, l’amitié et la perte. Comme les autres membres de son groupe, il s’est réveillé il y a sept ans dans un orphelinat de Batavia, sans aucun souvenir de sa vie antérieure. On ne sait pas exactement quand il a rencontré celui qu’il considère comme son frère d’âme, un félin bavard et provocateur, mais leur lien s’est forgé dans l’adversité et les affrontements partagés.<br><br>
+          Ensemble, ils deviennent mercenaires et tracent leur route à travers le continent. Oktar, impulsif mais loyal, tranche le mal à la racine sans détour. Jusqu’au jour où, revenu victorieux après avoir éliminé un baron corrompu, il retrouve son compagnon inerte. Ce choc le laisse brisé. On le retrouve plus tard à Voarmur, de nouveau arrêté après un débordement.<br><br>
+          C’est là qu’il l’aperçoit, dans la foule : son ancien compagnon, ou une illusion, entrant dans le Labyrinthe. Cette vision ranime quelque chose en lui. Libéré, il revient à l’orphelinat de Batavia pour proposer à son groupe d’y aller ensemble. Et cette fois, ils y vont unis.
+        </div>
+      </li>
     </ul>
   </article>
 </main>
@@ -99,7 +97,7 @@
 </article>
 <article class="article-credits">
   <h2>Aptitudes</h2>
-  <div class="inventory" id="elsa-features">
+  <div class="inventory" id="oktar-features">
     <em>Chargement des aptitudes...</em>
   </div>
 </article>
@@ -108,7 +106,6 @@
 </div>
 </div>
 
-
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
   <img id="lightbox-img" src="" alt="Portrait" />
 </div>
@@ -116,17 +113,17 @@
   <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
 </footer>
 <script>
-  const ithilUrl = "https://s3.codex.eottrpg.memiroa.com/data/elsa.json";
+  const oktarUrl = "https://s3.codex.eottrpg.memiroa.com/data/oktar.json";
   
-  const url = new URL(ithilUrl);
+  const url = new URL(oktarUrl);
   url.searchParams.set("nocache", Date.now());
   fetch(url)
     .then(res => res.json())
     .then(json => {
       const data = json.data;
       const abilities = data.system.abilities;
-      const stats = document.getElementById("elsa-stats");
-      const inventoryDiv = document.getElementById("elsa-inventory");
+      const stats = document.getElementById("oktar-stats");
+      const inventoryDiv = document.getElementById("oktar-inventory");
       const gold = json.data.system.currency?.gp ?? 0;
       const xp = data.system.details.xp?.value || 0;
       const levelTable = [
@@ -202,8 +199,8 @@
         };
         
         const renderAbility = item => {
-        const baseClassPage = "landsknecht";
-        const baseRacePage = "therian";
+        const baseClassPage = "imperial";
+        const baseRacePage = "sentinelle";
         const match = item.img.match(/data\/assets\/(.+)/);
         const relativePath = match ? match[1] : "placeholder.png";
         const iconPath = `../../assets/images/foundry-icons/${relativePath}`;
@@ -225,16 +222,16 @@
         let isLinkValid = false;
         if (origin && slug) {
           if (item.system?.type?.value === "race") {
-            link = `../../rules/races/${baseRacePage}.html#${slug}`;
+            link = `../../regles/races/${baseRacePage}.html#${slug}`;
             isLinkValid = true;
           } else if (item.system?.type?.value === "class") {
-            link = `../../rules/classes/${baseClassPage}.html#${slug}`;
+            link = `../../regles/classes/${baseClassPage}.html#${slug}`;
             isLinkValid = true;
           } else if (item.system?.type?.value === "oppatk") {
-            link = `../../rules/generic-features.html#${slug}`;
+            link = `../../regles/generic-features.html#${slug}`;
             isLinkValid = true;
           } else if (!item.system?.type?.value) {
-            link = `../../rules/generic-features.html#${slug}`;
+            link = `../../regles/generic-features.html#${slug}`;
             isLinkValid = true;
           }
         }
@@ -259,7 +256,7 @@
       `;
       };
 
-        const featuresDiv = document.getElementById("elsa-features");
+        const featuresDiv = document.getElementById("oktar-features");
         const features = data.items?.filter(item =>
           (item.type === "feat" || item.type === "classFeature") &&
           item.img && item.name
@@ -301,7 +298,7 @@
       inventoryDiv.innerHTML = html;
 
       if (!data.system || !data.system.attributes || !data.system.abilities) {
-        stats.innerHTML = "<em>Données d'Elsa incomplètes.</em>";
+        stats.innerHTML = "<em>Données d'Oktar incomplètes.</em>";
         return;
       }
       
@@ -336,7 +333,7 @@
       const xpMin = levelTable[level - 1];
       const xpMax = levelTable[level];
       const ratio = (xp - xpMin) / (xpMax - xpMin);
-      document.getElementById("xp-bar-elsa").style.width = `${Math.round(ratio * 100)}%`;
+      document.getElementById("xp-bar-oktar").style.width = `${Math.round(ratio * 100)}%`;
       document.getElementById("xp-text").textContent = `${xp} / ${xpMax}`;
 
       stats.innerHTML = `
@@ -358,8 +355,8 @@
       });
       }) // 👈 fermeture du .then
       .catch(err => {
-        console.error("Erreur lors du chargement des données Elsa :", err);
-        document.getElementById("elsa-stats").innerHTML =
+        console.error("Erreur lors du chargement des données Oktar :", err);
+        document.getElementById("oktar-stats").innerHTML =
           "<em>Données indisponibles. Le fichier JSON n'a pas été trouvé ou le serveur est hors ligne.</em>";
         document.querySelectorAll(".last-updated").forEach(el => el.textContent = "");
       });
