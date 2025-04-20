@@ -288,7 +288,10 @@
             <li class="character-stats" style="display: flex; align-items: flex-start; gap: 0.75rem; list-style: none;"><img src="../../assets/images/notes-medium.png" class="image" style="width: 24px; height: 24px; flex-shrink: 0; margin-top: 2px;"><strong>Sac :</strong></li>
             <ul class="image-list">
             <li class="ental-block">
+            <div class="tooltip-wrapper">
             <img id="ental-icon" src="../../assets/images/ental.webp" class="ental-glow">
+            <div class="tooltip">Entals possédés</div>
+            </div>
             <strong><span id="gold-value">…</span> en</strong></li></ul>
             <div class="inventory bag-inventory">
               ${inventoryItems.length > 0 ? inventoryItems.map(renderItem).join("") : "<em>Inventaire vide.</em>"}
