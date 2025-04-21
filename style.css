@@ -374,8 +374,8 @@ footer {
 	font-size: 1rem;
 	font-family: 'Cinzel-Regular', 'Trajan Pro', 'Copperplate', 'Georgia', serif;
 	color: #e8ddc5;
-	background-color: rgba(255, 255, 255, 0.05);
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	background-color: rgba(20, 20, 30, 0.9);
+	border: 1px solid rgba(255, 255, 255, 0.15);
 	border-radius: 8px;
 	cursor: pointer;
 	transition: all 0.3s;
@@ -396,7 +396,7 @@ footer {
 	justify-content: center;
 	gap: 1rem;
 	flex-wrap: wrap;
-	margin: 0 auto 2rem
+	margin: 0.25rem auto 2rem
 }
 
 .patch-section {
@@ -729,6 +729,7 @@ footer {
 	font-family: 'Cinzel-Regular', 'Trajan Pro', 'Copperplate', 'Georgia', serif;
 	color: #88c0a9;
 	text-decoration: none;
+	font-size: 18px;
 }
 
 .table-container {
@@ -2333,6 +2334,7 @@ select {
 	font-family: 'Cinzel-Regular', 'Trajan Pro', 'Copperplate', 'Georgia', serif;
 	color: #88c0a9;
 	text-decoration: none;
+	font-size: 18px;
 }
 
 .fiche-centrale {
@@ -2591,3 +2593,12 @@ box-shadow: 0 0 10px rgba(136, 192, 169, 0.2);
 	box-shadow: 0 0 20px rgba(136, 192, 169, 0.5);
   }
   
+  .fiche-pnj {
+	display: flex;
+	align-items: flex-start;
+	gap: 2rem;
+	padding: 2rem;
+	margin: 0 auto;
+	max-width: 1600px;
+	justify-content: center;
+  }
