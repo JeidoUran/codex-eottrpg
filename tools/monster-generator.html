@@ -21,12 +21,12 @@
       <p class="sous-titre">Générateur de Monstres & Rencontres</p>
     </header>
     <main class="accueil">
-      <div class="tabs-wrapper">
-        <button class="tab-button active" onclick="switchTab('normal')">Rencontre normale</button>
-        <button class="tab-button" onclick="switchTab('foe')">FOE</button>
-        <button class="tab-button" onclick="switchTab('boss')">Boss</button>
+      <div class="class-table-tabs-wrapper">
+        <button class="tab-button active" onclick="switchTab(event, 'normal')">Rencontre normale</button>
+        <button class="tab-button" onclick="switchTab(event, 'foe')">FOE</button>
+        <button class="tab-button" onclick="switchTab(event, 'boss')">Boss</button>
       </div>
-      <div id="normal" class="tab-content">
+      <div id="tab-normal" class="tab-content active">
         <div class="ligne-formulaire">
         <label for="niveau-normal">Niveau du groupe :</label>
         <select id="niveau-normal">
@@ -76,7 +76,7 @@
             </button>
             </div>
         </div>
-      <div id="boss" class="tab-content" style="display:none">
+      <div id="tab-boss" class="tab-content" style="display:none">
         <div class="ligne-formulaire">
         <label for="niveau-boss">Niveau du groupe :</label>
         <select id="niveau-boss">
@@ -120,7 +120,7 @@
             </button>
             </div>
         </div>
-      <div id="foe" class="tab-content" style="display:none">
+      <div id="tab-foe" class="tab-content" style="display:none">
         <div class="ligne-formulaire">
         <label for="niveau-foe">Niveau du groupe :</label>
         <select id="niveau-foe">
@@ -478,12 +478,21 @@
         }
       };
 
-      function switchTab(tab) {
-        document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-        document.querySelectorAll('.tab-content').forEach(div => div.style.display = 'none');
-        document.querySelector(`#${tab}`).style.display = 'block';
-        document.querySelector(`[onclick*="${tab}"]`).classList.add('active');
-      }
+      function switchTab(event, tabId) {
+      const tabs = document.querySelectorAll('.tab-button');
+      const contents = document.querySelectorAll('.tab-content');
+      tabs.forEach(t => t.classList.remove('active'));
+      contents.forEach(c => {
+        c.classList.remove('active');
+        c.style.display = 'none';
+      });
+
+      event.target.classList.add('active');
+      const target = document.getElementById(`tab-${tabId}`);
+      target.style.display = 'block';
+      void target.offsetWidth; // forcer repaint
+      target.classList.add('active');
+    }
 
       function generer(type) {
         const niveau = document.getElementById(`niveau-${type}`).value;
