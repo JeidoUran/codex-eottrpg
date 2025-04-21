@@ -825,6 +825,14 @@ footer {
 	cursor: pointer;
 }
 
+.illustration-wrapper img.illustration-character {
+	height: 245px;
+	/* ou ajuste à la taille souhaitée */
+	width: auto;
+	object-fit: contain;
+	cursor: pointer;
+}
+
 
 .collapsible-content {
 	overflow: hidden;
@@ -1891,7 +1899,7 @@ select {
 	color: white;
 	padding: 2px 6px;
 	border-radius: 4px;
-	font-size: 0.85rem;
+	font-size: 0.95rem;
 	white-space: nowrap;
 	display: none;
 	pointer-events: none;
@@ -2053,7 +2061,7 @@ select {
 	color: white;
 	padding: 2px 6px;
 	border-radius: 4px;
-	font-size: 0.85rem;
+	font-size: 0.95rem;
 	white-space: nowrap;
 	display: none;
 	pointer-events: none;

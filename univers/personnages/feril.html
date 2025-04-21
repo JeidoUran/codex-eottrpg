@@ -13,7 +13,9 @@
 <canvas id="particles"></canvas>
 
 <header class="codex-header">
-  <img src="../../assets/images/portraits/feril.png" class="portrait-header" onclick="openLightbox(this.src)">
+  <div class="illustration-wrapper">
+  <img src="../../assets/images/portraits/feril.png" class="illustration-character" onclick="openLightbox(this.src)">
+  </div>
   <h1>Féril Waffenhalter</h1>
   <p class="sous-titre">Destructeur d'échiquiers</p>
 </header>
@@ -230,10 +232,10 @@
             link = `../../regles/classes/${baseClassPage}.html#${slug}`;
             isLinkValid = true;
           } else if (item.system?.type?.value === "oppatk") {
-            link = `../../regles/generic-features.html#${slug}`;
+            link = `../../regles/aptitudes-generales.html#${slug}`;
             isLinkValid = true;
           } else if (!item.system?.type?.value) {
-            link = `../../regles/generic-features.html#${slug}`;
+            link = `../../regles/aptitudes-generales.html#${slug}`;
             isLinkValid = true;
           }
         }
