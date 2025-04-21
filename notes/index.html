@@ -92,9 +92,12 @@
     <span class="patch-nouveau" hidden><img src="../assets/images/exclam_mark.png" class="image new-patch"></span>
   </a> <div style="text-align: center; margin-top: 3rem;"></div>
     </main>
-    <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button> <footer>
+    <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button>
+    
+    <footer>
     <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
-</footer> <script src="../scripts/particles.js"></script>
+</footer>
+
     <script>
       const vues = JSON.parse(localStorage.getItem("patchesVus") || "[]");
       const patches = Array.from(document.querySelectorAll(".carte-lien[data-patch]"));
@@ -125,10 +128,7 @@
         boutonLu.style.display = "none";
       });
     </script>
-    <script>
-      window.addEventListener('scroll', () => {
-        document.getElementById('backToTop').classList.toggle('show', window.scrollY > 300);
-      });
-    </script>
+    <script src="../scripts/particles.js"></script>
+    <script src="../scripts/backToTop.js"></script>
   </body>
 </html>

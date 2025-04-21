@@ -89,7 +89,7 @@
       </section>
       <section class="patch-section">
           <div class="aptitude-search-container">
-            <input type="text" id="aptitude-search" placeholder="Rechercher une aptitude ou un sort..." />
+            <input type="text" id="search-bar" placeholder="Rechercher une aptitude ou un sort..." />
           </div>
         <div class="toggle-section">
           <h2 class="patch-titre" id="aptitudes">
@@ -439,50 +439,13 @@
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
       <img id="lightbox-img" src="" alt="Portrait" />
     </div>
-    <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button> <footer>
+    <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button>
+    <footer>
     <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
-</footer> <script>
-      document.addEventListener("DOMContentLoaded", function() {
-            const navContainer = document.querySelector('.class-nav');
-            const navLinks = document.querySelectorAll('.class-nav a[href^="#"]');
-            const sections = [...document.querySelectorAll("h2.patch-titre, article")];
-            let lastActive = null;
-            const observer = new IntersectionObserver((entries) => {
-                  entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                          const id = entry.target.getAttribute("id");
-                          const activeLink = [...navLinks].find(link => link.getAttribute("href") === `#${id}`);
-         
-                 if (activeLink && activeLink !== lastActive) {
-                 navLinks.forEach(link => link.classList.remove("active"));
-                 activeLink.classList.add("active");
-         
-                 // Scroll l'élément actif dans le menu si partiellement masqué
-                 const linkTop = activeLink.getBoundingClientRect().top;
-                 const navTop = navContainer.getBoundingClientRect().top;
-                 const linkBottom = linkTop + activeLink.offsetHeight;
-                 const navBottom = navTop + navContainer.offsetHeight;
-         
-                 if (linkTop < navTop || linkBottom > navBottom) {
-                     activeLink.scrollIntoView({ behavior: "smooth", block: "center" });
-                 }
-         
-                 lastActive = activeLink;
-                 }
-             }
-             });
-         }, {
-             rootMargin: "-30% 0px -60% 0px",
-             threshold: 0.1
-         });
-         
-         sections.forEach(section => observer.observe(section));
-         });
-      
-    </script>
+</footer>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
-        const searchInput = document.getElementById("aptitude-search");
+        const searchInput = document.getElementById("search-bar");
         const aptitudeArticles = document.querySelectorAll("article");
         searchInput.addEventListener("input", function() {
           const value = searchInput.value.toLowerCase();
@@ -499,32 +462,6 @@
       });
     </script>
     <script>
-      function toggleIntro() {
-        const section = document.getElementById("intro");
-        section.classList.toggle("expanded");
-        const btn = section.querySelector("button");
-        btn.textContent = section.classList.contains("expanded") ? "Réduire" : "Afficher la suite";
-      }
-    </script>
-    <script>
-      function toggleSection(button) {
-        const content = button.closest("section").querySelector(".collapsible-content");
-        const isOpen = content.classList.contains("expanded");
-        if (isOpen) {
-          content.classList.remove("expanded");
-          button.textContent = "▼";
-        } else {
-          content.classList.add("expanded");
-          button.textContent = "▲";
-        }
-      }
-    </script>
-    <script>
-      window.addEventListener('scroll', () => {
-        document.getElementById('backToTop').classList.toggle('show', window.scrollY > 300);
-      });
-    </script>
-    <script>
       function toggleMobileNav(btn) {
         const overlay = document.getElementById("mobileNav");
         overlay.classList.toggle("show");
@@ -532,19 +469,12 @@
         btn.textContent = overlay.classList.contains("show") ? "✕" : "☰";
       }
     </script>
-        <script>
-      function openLightbox(src) {
-        const lightbox = document.getElementById("lightbox");
-        const img = document.getElementById("lightbox-img");
-        img.src = src;
-        lightbox.style.display = "flex";
-      }
-    
-      function closeLightbox() {
-        document.getElementById("lightbox").style.display = "none";
-      }
-    </script>
+    <script src="../../scripts/toggleable-intro.js"></script>
+    <script src="../../scripts/nav-sidebar.js"></script>
+    <script src="../../scripts/toggleable-section.js"></script>
+    <script src="../../scripts/lightbox.js"></script>
     <script src="../../scripts/particles.js"></script>
+    <script src=""../../scripts/backToTop.js"></script>
     <button class="mobile-nav-toggle" onclick="toggleMobileNav(this)">☰</button>
     <div class="mobile-nav-overlay" id="mobileNav">
       <div class="mobile-nav-content">  <a href="#details" class="section-link" onclick="toggleMobileNav()">Détails</a>

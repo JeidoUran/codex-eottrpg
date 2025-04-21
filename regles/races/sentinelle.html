@@ -14,7 +14,7 @@
     <header class="codex-header">
         <div class="illustration-wrapper">
           
-        <img src="../../assets/images/race-art/sentinel.png" alt="Illustration Sentinelle" class="illustration-race">
+        <img src="../../assets/images/race-art/sentinel.png" alt="Illustration Sentinelle" class="illustration-race" onclick="openLightbox(this.src)">
          
         </div>
         <h1>
@@ -81,35 +81,15 @@
       </section>
     </main>
     <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button>
+    
     <footer>
     <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
 </footer>
-    <script>
-      function toggleIntro() {
-        const section = document.getElementById("intro");
-        section.classList.toggle("expanded");
-        const btn = section.querySelector("button");
-        btn.textContent = section.classList.contains("expanded") ? "Réduire" : "Afficher la suite";
-      }
-    </script>
-    <script>
-      function toggleSection(button) {
-        const content = button.closest("section").querySelector(".collapsible-content");
-        const isOpen = content.classList.contains("expanded");
-        if (isOpen) {
-          content.classList.remove("expanded");
-          button.textContent = "▼";
-        } else {
-          content.classList.add("expanded");
-          button.textContent = "▲";
-        }
-      }
-    </script>
-    <script>
-      window.addEventListener('scroll', () => {
-        document.getElementById('backToTop').classList.toggle('show', window.scrollY > 300);
-      });
-    </script>
+
+    <script src=""../../scripts/backToTop.js"></script>
+    <script src="../../scripts/toggleable-intro.js></script>
+    <script src="../../scripts/toggleable-section.js></script>
+    <script src="../../scripts/lightbox.js"></script>
     <script src="../../scripts/particles.js"></script>
   </body>
 </html>

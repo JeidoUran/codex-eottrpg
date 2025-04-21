@@ -28,7 +28,7 @@
 
     <main class="accueil">
     <div id="search-wrapper">
-      <input type="text" id="search-bar" placeholder="Rechercher une classe...">
+      <input type="text" id="search-bar" placeholder="Rechercher une classe..." style="max-width: 400px;">
     </div>
       
         <a href="souverain.html" class="carte-lien class-card" data-nom="souverain" data-description="dirigeant charismatique, le souverain guide ses alliés par la stratégie, l'inspiration et la puissance du verbe.">
@@ -128,10 +128,7 @@
           }
         });
       });
-
-      window.addEventListener('scroll', () => {
-        document.getElementById('backToTop').classList.toggle('show', window.scrollY > 300);
-      });
     </script>
+    <script src="../../scripts/backToTop.js"></script>
   </body>
 </html>

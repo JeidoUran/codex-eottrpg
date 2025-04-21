@@ -993,7 +993,7 @@ footer {
 	text-align: center;
 }
 
-#aptitude-search {
+#search-bar {
 	width: 95%;
 	padding: 0.5rem 1rem;
 	font-size: 1rem;
@@ -1649,18 +1649,6 @@ audio {
 	gap: 1rem;
 	margin: 0rem auto 2rem;
 	flex-wrap: wrap;
-}
-
-#search-bar {
-	padding: 0.5rem 1rem;
-	font-size: 1.1rem;
-	font-family: 'Cinzel-Regular', 'Trajan Pro', 'Copperplate', 'Georgia', serif;
-	border-radius: 8px;
-	border: 1px solid #88c0a9;
-	background: rgba(0, 0, 0, 0.3);
-	color: #e8ddc5;
-	width: 90%;
-	max-width: 400px;
 }
 
 #search-bar::placeholder {

@@ -7,6 +7,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../favicon.png" rel="icon" type="image/png"/>
 <link href="../style.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 <canvas id="particles"></canvas>
@@ -279,9 +280,13 @@
 <div class="effet-bloc"><h4>Jets de sauvegarde affectés</h4><p>Vous subissez un malus de -4 aux jets de caractéristique et aux jets de sauvegarde basés sur l’Intelligence ou la Sagesse.</p></div>
 </article>
 </main>
+
+<button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button>
+
 <footer>
 <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
 </footer>
 <script src="../scripts/particles.js"></script>
+<script src="../scripts/backToTop.js"></script>
 </body>
 </html>
