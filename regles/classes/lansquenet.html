@@ -46,26 +46,34 @@
   <a href="#fracassement-total" class="sub-link">Fracassement total</a>
   <a href="#tab-general" class="section-link">Progression par niveau</a>
 </div> <header class="codex-header">
-      <div class="header-top">
+      <div class="illustration-wrapper double">
+      
+          <img src="../../assets/images/class-art/landsknecht1.png" alt="Illustration Lansquenet" class="illustration-classe" onclick="openLightbox(this.src)">
+        
+
+          <img src="../../assets/images/class-art/landsknecht2.png" alt="Illustration Lansquenet" class="illustration-classe" onclick="openLightbox(this.src)">
+         
+        </div>
         <h1>
           <img src="../../assets/images/class-icons/lansquenet.png" class="image class-icon"> Lansquenet
         </h1>
+        <p class="sous-titre">Archives et mises à jour du monde d’Etrian Odyssey</p>
         <div class="fixed-header-links">
           <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Index des classes</a>
           <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Retour au Codex</a>
         </div>
-      </div>
-      <div>
-      <div class="illustration-wrapper double">
-      
-          <img src="../../assets/images/class-art/landsknecht1.png" alt="Illustration Lansquenet" class="illustration-classe">
-        
-
-          <img src="../../assets/images/class-art/landsknecht2.png" alt="Illustration Lansquenet" class="illustration-classe">
-         
-        </div>
-        </div>
     </header>
+
+    <nav class="nav-magique">
+      <a href="/">Accueil</a>
+      <a href="../../notes/">Patch Notes</a>
+      <a href="../../regles/">Règles</a>
+      <a href="../../univers/">Univers</a>
+      <a href="../../musique">Musiques</a>
+      <a href="../../ressources/">Ressources</a>
+      <a href="../../credits">Crédits</a>
+    </nav>
+
     <main class="accueil">
       <section class="intro-collapsible click" id="intro">
         <p>Une puissance au corps à corps avec la défense pour encaisser les coups. Les Lansquenets se consacrent à combattre en première ligne, assénant des coups puissants et faisant face courageusement au danger, leurs armes levées haut. Ils peuvent porter une armure lourde et des boucliers, mais avec de l'entraînement, ils peuvent apprendre à se déplacer avec la grâce d'un guerrier portant un équipement beaucoup plus léger. Chaque Lansquenet décide finalement du chemin à suivre, affinant ainsi le simple fait de fracasser les choses à un art de l'escrime - ou en exploitant la puissance destructrice brutale d'une hache. Renonçant à ces deux voies, un Lansquenet peut même découvrir que sa force réside dans la conviction de défendre ses alliés en perfectionnant sa capacité à manier un bouclier. Dans tous les cas, le Lansquenet utilise son arme de choix à un effet inégalé et constitue un ajout précieux à une équipe dans de nombreuses situations. </p>
@@ -481,6 +489,9 @@
 </script>
 
     </main>
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <img id="lightbox-img" src="" alt="Portrait" />
+    </div>
     <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button> <footer>
     <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
 </footer> <script>
@@ -572,6 +583,18 @@
         overlay.classList.toggle("show");
         btn.classList.toggle("open");
         btn.textContent = overlay.classList.contains("show") ? "✕" : "☰";
+      }
+    </script>
+        <script>
+      function openLightbox(src) {
+        const lightbox = document.getElementById("lightbox");
+        const img = document.getElementById("lightbox-img");
+        img.src = src;
+        lightbox.style.display = "flex";
+      }
+    
+      function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
       }
     </script>
     <script src="../../particles.js"></script>

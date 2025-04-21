@@ -11,14 +11,24 @@
   <body>
     <canvas id="particles"></canvas>
     <header class="codex-header">
-      <div class="header-top">
+      <img src="../../assets/images/banniere.png" alt="Bannière" class="banniere">
         <h1><img src="../../assets/images/green-book.png" class="image codex-image-header"> Index des Classes</h1>
       </div>
-      <p class="sous-titre">Consultez les profils des classes jouables du JDR</p>
+      <p class="sous-titre">Archives et mises à jour du monde d’Etrian Odyssey</p>
       <div class="fixed-header-links">
       <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Retour au Codex</a>
-    </div>
     </header>
+
+    <nav class="nav-magique">
+      <a href="/">Accueil</a>
+      <a href="../../notes/">Patch Notes</a>
+      <a href="../../regles/">Règles</a>
+      <a href="../../univers/">Univers</a>
+      <a href="../../musique">Musiques</a>
+      <a href="../../ressources/">Ressources</a>
+      <a href="../../credits">Crédits</a>
+    </nav>
+
     <main class="accueil">
     <div id="search-wrapper">
       <input type="text" id="search-bar" placeholder="Rechercher une classe...">
@@ -95,6 +105,13 @@
           <h2>Troubadour</h2>
           <p>Artiste itinérant au pouvoir enchanteur, le Troubadour galvanise ses alliés par la musique, la poésie et la lumière de l’inspiration.</p>
         </a>
+
+      <!-- Carte Pistolero masquée car marquée comme WIP -->
+      <!-- <a href="pistolero.html" class="carte-lien class-card" data-nom="pistolero" data-description="wip tireur tactique à l’esprit affûté, le pistolero adapte ses munitions aux besoins du champ de bataille, mêlant précision, stratégie et polyvalence.">
+          <img src="../../assets/images/class-icons/pistolero.png" alt="Pistolero" class="image class-icon">
+          <h2>Pistolero</h2>
+          <p>WIP Tireur tactique à l’esprit affûté, le Pistolero adapte ses munitions aux besoins du champ de bataille, mêlant précision, stratégie et polyvalence.</p>
+      </a> -->
     </main>
     <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button>
     <footer>

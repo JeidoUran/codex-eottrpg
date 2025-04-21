@@ -63,26 +63,34 @@
   <a href="#phalange-de-spectres" class="sub-link">Phalange de spectres</a>
   <a href="#tab-general" class="section-link">Progression par niveau</a>
 </div> <header class="codex-header">
-      <div class="header-top">
+      <div class="illustration-wrapper double">
+      
+          <img src="../../assets/images/class-art/necromancer1.png" alt="Illustration Nécromancien" class="illustration-classe" onclick="openLightbox(this.src)">
+        
+
+          <img src="../../assets/images/class-art/necromancer2.png" alt="Illustration Nécromancien" class="illustration-classe" onclick="openLightbox(this.src)">
+         
+        </div>
         <h1>
           <img src="../../assets/images/class-icons/necromancien.png" class="image class-icon"> Nécromancien
         </h1>
+        <p class="sous-titre">Archives et mises à jour du monde d’Etrian Odyssey</p>
         <div class="fixed-header-links">
           <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Index des classes</a>
           <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Retour au Codex</a>
         </div>
-      </div>
-      <div>
-      <div class="illustration-wrapper double">
-      
-          <img src="../../assets/images/class-art/necromancer1.png" alt="Illustration Nécromancien" class="illustration-classe">
-        
-
-          <img src="../../assets/images/class-art/necromancer2.png" alt="Illustration Nécromancien" class="illustration-classe">
-         
-        </div>
-        </div>
     </header>
+
+    <nav class="nav-magique">
+      <a href="/">Accueil</a>
+      <a href="../../notes/">Patch Notes</a>
+      <a href="../../regles/">Règles</a>
+      <a href="../../univers/">Univers</a>
+      <a href="../../musique">Musiques</a>
+      <a href="../../ressources/">Ressources</a>
+      <a href="../../credits">Crédits</a>
+    </nav>
+
     <main class="accueil">
       <section class="intro-collapsible click" id="intro">
         <p>Un mage puissant ayant la capacité d'invoquer les esprits des morts et de les manipuler à ses propres fins. Lorsque les Nécromanciens apprennent leur métier, ils concluent des pactes avec trois esprits agités - des esprits qui ont laissé des choses très importantes inachevées pour eux de leur vivant. En échange de pouvoir travailler pour leurs propres objectifs, les esprits acceptent de servir le Nécromancien en tant que spectres pendant la durée de vie du Nécromancien. Les spectres protègent le fragile Nécromancien des lignes de front, mais si un ennemi se rapproche, le Nécromancien a très peu de protection contre les coups. Par conséquent, le Nécromancien cherche des alliés puissants pour servir de rempart entre lui et ses cibles - et en échange, le Nécromancien peut effectuer des rituels sombres pour obtenir un pouvoir immense en sacrifiant les spectres. </p>
@@ -786,6 +794,9 @@
 </script>
 
     </main>
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <img id="lightbox-img" src="" alt="Portrait" />
+    </div>
     <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button> <footer>
     <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
 </footer> <script>
@@ -877,6 +888,18 @@
         overlay.classList.toggle("show");
         btn.classList.toggle("open");
         btn.textContent = overlay.classList.contains("show") ? "✕" : "☰";
+      }
+    </script>
+        <script>
+      function openLightbox(src) {
+        const lightbox = document.getElementById("lightbox");
+        const img = document.getElementById("lightbox-img");
+        img.src = src;
+        lightbox.style.display = "flex";
+      }
+    
+      function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
       }
     </script>
     <script src="../../particles.js"></script>

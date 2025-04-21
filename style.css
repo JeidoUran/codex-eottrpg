@@ -610,7 +610,6 @@ footer {
 .codex-image-header {
 	height: 1.2em;
 	vertical-align: text-top;
-	margin-top: -0.35rem;
 }
 
 .codex-silver-scroll-patch {
@@ -801,30 +800,32 @@ footer {
 }
 
 .illustration-wrapper.double {
-	display: flex;
-	justify-content: center;
-	align-items: flex-end;
-	gap: 1rem;
-	flex-wrap: wrap;
 	border-radius: 8px;
 	box-shadow: 0 0 10px rgba(136, 192, 169, 0.2);
 	background: rgba(255, 255, 255, 0.02);
 	overflow: hidden;
-	width: 760px;
+	width: 444.45px;
+	display: flex;
+	flex-direction: row;
+    justify-content: center;
+	margin: 0 auto 2rem;
+	height: 250px;
 }
 
 .illustration-wrapper.single img.illustration-race {
-	height: 350px;
+	height: auto;
 	/* ou ajuste à la taille souhaitée */
 	width: auto;
 	object-fit: contain;
+	cursor: pointer;
 }
 
 .illustration-wrapper.double img.illustration-classe {
-	height: 350px;
+	height: auto;
 	/* ou ajuste à la taille souhaitée */
 	width: auto;
 	object-fit: contain;
+	cursor: pointer;
 }
 
 
