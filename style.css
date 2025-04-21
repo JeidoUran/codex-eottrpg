@@ -2602,3 +2602,7 @@ box-shadow: 0 0 10px rgba(136, 192, 169, 0.2);
 	max-width: 1600px;
 	justify-content: center;
   }
+
+.image-list .description {
+	margin-top: 1.75rem;
+  }
