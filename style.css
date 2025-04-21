@@ -2393,7 +2393,7 @@ select {
   .popup-codex h3 {
 	font-family: 'Cinzel-Regular', serif;
 	font-size: 1.1rem;
-	color: #ffdca9;
+	color: #88c0a9;
 	margin-top: 0;
 	margin-bottom: 0.5rem;
   }
@@ -2453,7 +2453,7 @@ box-shadow: 0 0 10px rgba(136, 192, 169, 0.2);
   #carte-sidebar h2 {
 	margin-top: 0;
 	font-size: 1.1rem;
-	color: #ffdca9;
+	color: #88c0a9;
   }
   
   #carte-sidebar ul {
@@ -2546,3 +2546,47 @@ box-shadow: 0 0 10px rgba(136, 192, 169, 0.2);
 	background-color: #88c0a9;
 	border-radius: 4px;
 }
+
+.carte-large {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-image: url("/assets/images/maps/carte-voarmur-thumb.png");
+	background-size: cover;
+	background-position: center;
+	border-radius: 12px;
+	text-align: center;
+	color: #fff;
+	padding: 2rem 2rem;
+	grid-column: span 2; /* sur deux colonnes */
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 0 15px rgba(0,0,0,0.3);
+	transition: transform 0.2s ease;
+	border: 1px solid #4c768d;
+  }
+  
+  .carte-lien.carte-large::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 1;
+	width: auto;
+	height: auto;
+  }  
+  
+  .carte-large-contenu {
+	position: relative;
+	z-index: 2;
+  }
+  
+  .carte-large:hover {
+	background-image: url("/assets/images/maps/carte-voarmur-thumb.png");
+	background-size: cover;
+	background-position: center;
+	transform: scale(1.01);
+	box-shadow: 0 0 20px rgba(136, 192, 169, 0.5);
+  }
+  
