@@ -2607,7 +2607,19 @@ box-shadow: 0 0 10px rgba(136, 192, 169, 0.2);
 	margin-top: 1.75rem;
   }
 
-  .tutorial-image {
+  .patchnotes-icon.tutorial-image {
 	width: auto;
 	height: 90px;
+  }
+
+  .tutorial-image {
+	display: flex;
+	width: auto;
+	height: auto;
+	margin : 2rem auto;
+	max-width: 800px;
+  }
+
+  .intro.note-expliquee::before {
+	background-image: none;
   }
