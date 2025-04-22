@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Équipements | Codex</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<canvas id="particles"></canvas>
+
+<header class="codex-header">
+  <img src="../assets/images/banniere.png" alt="Bannière" class="banniere">
+  <h1>Équipements</h1>
+  <p class="sous-titre">L’archive vivante des Égarés</p>
+</header>
+
+<nav class="nav-magique">
+    <a href="/">Accueil</a>
+    <a href="/../notes/">Patch Notes</a>
+    <a href="/../regles/">Règles</a>
+    <a href="/../univers/">Univers</a>
+    <a href="../musique">Musiques</a>
+    <a href="/../ressources/">Ressources</a>
+    <a href="../credits">Crédits</a>
+  </nav>
+
+<main>
+<div class="patch-list">
+  <article class="article-credits">
+    <h2><i class="fa-solid fa-sword"></i> Système de Précision</h2>
+    <p>
+      Les armes utilisent désormais un <strong>dé de Précision</strong> spécifique qui remplace le jet d’attaque traditionnel (d20). 
+      Lors d'une attaque, lancez ce dé, ajoutez votre modificateur (Force ou Dextérité selon l’arme), ainsi que votre bonus de maîtrise si vous êtes formé à cette arme.
+    </p>
+    <p>
+      Les armes à distance utilisent généralement la Dextérité, tandis que les armes de mêlée utilisent la Force.
+    </p>
+  </article>
+
+  <article class="article-credits">
+    <h2><i class="fa-solid fa-shield-halved"></i> Armures</h2>
+    <p>
+      Le score de Défense (anciennement CA) est fixe selon le type d’armure. <br>
+      <strong>Important :</strong> le modificateur de Dextérité <em>ne s’ajoute plus</em> à la Défense.
+    </p>
+    <div class="mini-table-container">
+    <table class="mini-table">
+      <thead>
+        <tr>
+          <th>Type d’armure</th>
+          <th>Défense</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Lourde</td><td>10</td></tr>
+        <tr><td>Moyenne</td><td>9</td></tr>
+        <tr><td>Légère</td><td>8</td></tr>
+        <tr><td>Non armuré</td><td>7</td></tr>
+        <tr><td>Bouclier (bonus)</td><td>+1</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </article>
+
+  <article class="article-credits">
+    <h2><i class="fa-solid fa-hammer-war"></i> Armes</h2>
+    <div class="mini-table-container">
+    <table class="mini-table">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Précision</th>
+          <th>Dégâts</th>
+          <th>Propriétés</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Épée longue</td><td>1d8</td><td>1d8 tranchants</td><td>Polyvalente (1d10)</td></tr>
+        <tr><td>Épée courte</td><td>2d4</td><td>1d6 perforants</td><td>Finesse, légère</td></tr>
+        <tr><td>Bâton</td><td>1d8</td><td>1d6 contondants</td><td>—</td></tr>
+        <tr><td>Fusil</td><td>2d4</td><td>1d8 perforants</td><td>Rechargement 4, à distance (15/36m)</td></tr>
+        <tr><td>Hache de guerre</td><td>1d8</td><td>1d8 contondants</td><td>Polyvalente (1d10)</td></tr>
+        <tr><td>Grande épée</td><td>1d6</td><td>2d6 tranchants</td><td>À deux mains, lourde</td></tr>
+        <tr><td>Grande hache</td><td>1d6</td><td>1d12 contondants</td><td>À deux mains, lourde</td></tr>
+        <tr><td>Lame cinétique</td><td>1d6</td><td>1d12 tranchants</td><td>À deux mains, lourde</td></tr>
+        <tr><td>Cercueil</td><td>1d6</td><td>1d10 contondants</td><td>À deux mains, lourde</td></tr>
+        <tr><td>Katana</td><td>2d4</td><td>1d6 tranchants</td><td>Légère, polyvalente (1d10)</td></tr>
+        <tr><td>Faux</td><td>1d8</td><td>1d12 tranchants</td><td>À deux mains, portée, finesse</td></tr>
+        <tr><td>Dague</td><td>2d4</td><td>1d4 perforants</td><td>Légère, finesse, lancée (9/18m)</td></tr>
+        <tr><td>Mini-canon</td><td>1d6</td><td>1d12 contondants</td><td>À deux mains, monté, à distance (12/24m)</td></tr>
+        <tr><td>Arc long</td><td>1d8</td><td>1d8 perforants</td><td>À deux mains, à distance (15/30m)</td></tr>
+        <tr><td>Rapière</td><td>2d4</td><td>1d8 perforants</td><td>Finesse</td></tr>
+        <tr><td>Poing</td><td>2d4</td><td>Mod. de Force</td><td>—</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </article>
+</div>
+</main>
+
+<script src="../scripts/particles.js"></script>
+</body>
+</html>
