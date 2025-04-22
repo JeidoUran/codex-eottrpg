@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Administration disponibilités | Codex - Etrian Odyssey TTRPG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .dispo-table-container {
+        max-width: auto;
+        overflow-x: auto;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 0.75rem;
+        box-shadow: 0 0 15px rgba(173, 216, 230, 0.15);
+        /* léger halo */
+        background: radial-gradient(circle at center, rgba(255, 255, 255, 0.01), transparent);
+        width: fit-content;
+        margin: 2rem auto;
+    }
+
+    .dispo-table {
+        border-collapse: collapse;
+        color: #d8e9f0;
+        background-color: rgba(0, 0, 0, 0.25);
+        font-size: 16px;
+        width: fit-content;
+    }
+
+    .dispo-table th,
+    .dispo-table td {
+        text-align: center;
+        padding: 0.5rem 0.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(2px);
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .dispo-table th {
+        background: rgba(255, 255, 255, 0.05);
+        font-weight: bold;
+        color: #ffdca9;
+    }
+
+    .dispo-table tbody tr:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+
+    .dispo-table-container thead {
+        background-color: rgba(136, 192, 169, 0.15);
+    }
+
+    .note-cell {
+      max-width: 300px;
+      text-align: left;
+      font-style: italic;
+      font-size: 16px;
+      color: #e8ddc5;
+    }
+
+    .oui {
+      color: #88c0a9;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<canvas id="particles"></canvas>
+
+<header class="codex-header">
+  <img src="../assets/images/banniere.png" alt="Bannière" class="banniere">
+  <h1>Tableau d'administration des disponibilités</h1>
+  <p class="sous-titre">L’archive vivante des Égarés</p>
+</header>
+
+<nav class="nav-magique">
+    <a href="/">Accueil</a>
+    <a href="../notes/">Patch Notes</a>
+    <a href="../regles/">Règles</a>
+    <a href="../univers/">Univers</a>
+    <a href="../musique">Musiques</a>
+    <a href="../ressources/">Ressources</a>
+    <a href="../credits">Crédits</a>
+  </nav>
+
+<main>    
+  <div id="dispos-resultats" class="dispo-table-container">Chargement des données...</div>
+
+  <div class="dispo-actions" style="text-align:center;">
+    <h2>🗓️ Définir la période d’affichage</h2>
+    <label for="dateDebutAdmin">Début :</label>
+    <input type="date" id="dateDebutAdmin">
+    <label for="dateFinAdmin">Fin :</label>
+    <input type="date" id="dateFinAdmin">
+    <button class="animated-button small" onclick="enregistrerPeriode()"><i class="fa-solid fa-floppy-disk"></i> Enregistrer</button>
+    <div id="confirmationMessage" style="margin-top:1rem;"></div>
+
+  </div>  
+
+  <hr style="margin: 2rem 0; opacity: 0.2;">
+
+  <div class="dispo-actions" style="text-align:center;">
+      <h3>🧹 Réinitialiser les réponses</h3>
+      <button class="animated-button" onclick="flushDispos()"><i class="fa-solid fa-trash"></i> Vider les données actuelles</button>
+      <div id="flush-message" style="margin-top:1rem;"></div>
+  </div>
+
+</main>
+
+<script>
+    async function enregistrerPeriode() {
+        const start = document.getElementById("dateDebutAdmin").value;
+        const end = document.getElementById("dateFinAdmin").value;
+
+        if (!start || !end) {
+        alert("Remplis les deux dates !");
+        return;
+        }
+
+        const startDate = new Date(start);
+        const endDate = new Date(end);
+        const diff = Math.floor((endDate - startDate) / (1000 * 60 * 60 * 24)) + 1;
+
+        if (diff < 1) {
+        alert("La date de fin doit être après (ou égale à) la date de début.");
+        return;
+        }
+
+
+    const res = await fetch("/.netlify/functions/manage-dispos", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+        meta: {
+            startDate: start,
+            nbJours: diff
+        }
+        })
+    });
+
+    const msg = document.getElementById("confirmationMessage");
+    if (res.ok) {
+        msg.innerHTML = "✅ Période mise à jour dans <code>dispos.json</code>.";
+        msg.style.color = "#88c0a9";
+    } else {
+        msg.textContent = "❌ Erreur lors de l’envoi.";
+        msg.style.color = "#cc4444";
+    }
+    }
+
+    async function flushDispos() {
+        if (!confirm("⚠️ Cela va effacer toutes les réponses actuelles. Continuer ?")) return;
+
+        const res = await fetch("/.netlify/functions/manage-dispos", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ flush: true })
+        });
+
+        const msg = document.getElementById("flush-message");
+        if (res.ok) {
+            msg.textContent = "✅ Réponses réinitialisées.";
+            msg.style.color = "#88c0a9";
+            chargerDispos(); // recharge les résultats
+        } else {
+            msg.textContent = "❌ Erreur lors de la réinitialisation.";
+            msg.style.color = "#cc4444";
+        }
+    }
+
+    async function chargerDispos() {
+        const res = await fetch("/.netlify/functions/read-dispos");
+        const data = await res.json();
+
+        const reponses = data.reponses || [];
+        const meta = data.meta || {};
+
+        const allPseudos = Array.from(new Set(reponses.map(entry => entry.pseudo))).sort();
+        const startDate = new Date(meta.startDate);
+        const nbJours = parseInt(meta.nbJours, 10) || 30;
+
+        const allDates = [];
+        for (let i = 0; i < nbJours; i++) {
+            const date = new Date(startDate);
+            date.setDate(startDate.getDate() + i);
+            allDates.push(date.toISOString().split("T")[0]);
+        }
+
+        const dispoParDate = {};
+        allDates.forEach(date => {
+            dispoParDate[date] = reponses.filter(entry => entry.dates.includes(date)).length;
+        });
+
+        let html = '<table class="dispo-table">';
+        html += '<thead><tr><th>Joueur</th>';
+
+        allDates.forEach(date => {
+            const d = new Date(date);
+            html += `<th><span class="jour-semaine">${d.toLocaleDateString("fr-FR", { weekday: 'short' })}</span><br>
+                <span class="jour">${d.getDate()}</span><br>
+                <span class="mois">${d.toLocaleDateString("fr-FR", { month: 'short' })}</span></th>`;
+        });
+
+        html += '<th>Note</th></tr></thead><tbody>';
+
+        // ✅ Ligne “Tous dispo”
+        html += `<tr><td><strong>✅</strong></td>`;
+        allDates.forEach(date => {
+            const total = dispoParDate[date];
+            const attendu = allPseudos.length;
+            const ok = total === attendu;
+            html += `<td style="background:${ok ? '#223322' : '#331919'}; color:${ok ? '#88c0a9' : '#aa5555'};">${ok ? '✔️' : '❌'}</td>`;
+        });
+        html += `<td></td></tr>`;
+
+        // Réponses individuelles
+        reponses.forEach(entry => {
+            html += `<tr><td>${entry.pseudo}</td>`;
+            allDates.forEach(date => {
+            html += `<td>${entry.dates.includes(date) ? '<span class="oui">✔️</span>' : ''}</td>`;
+            });
+            html += `<td class="note-cell">${entry.note || ''}</td></tr>`;
+        });
+
+        html += '</tbody></table>';
+        document.getElementById("dispos-resultats").innerHTML = html;
+    }
+
+  chargerDispos();
+</script>
+
+<script src="../scripts/particles.js"></script>
+</body>
+</html>

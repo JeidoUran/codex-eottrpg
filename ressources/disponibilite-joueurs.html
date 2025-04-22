@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Tableau des disponibilités | Codex - Etrian Odyssey TTRPG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../style.css">
+
+</head>
+<body>
+<canvas id="particles"></canvas>
+
+<header class="codex-header">
+  <img src="../assets/images/banniere.png" alt="Bannière" class="banniere">
+  <h1>Tableau des disponibilités</h1>
+  <p class="sous-titre">L’archive vivante des Égarés</p>
+</header>
+
+<nav class="nav-magique">
+    <a href="/">Accueil</a>
+    <a href="../notes/">Patch Notes</a>
+    <a href="../regles/">Règles</a>
+    <a href="../univers/">Univers</a>
+    <a href="../musique">Musiques</a>
+    <a href="../ressources/">Ressources</a>
+    <a href="../credits">Crédits</a>
+  </nav>
+
+<main class="accueil dispo-joueurs">
+    <section class="intro">
+        <p>Indiquez les jours où vous pourrez être présent pour une session.</p>
+    </section>
+<div class="dispo-wrapper">
+  <div class="dispo-actions">
+    <label for="note">Horaire de démarrage des sessions : 21h30</label><br>
+  </div>
+
+  <div class="dispo-grid" id="dateGrid">
+    <!-- Jours insérés dynamiquement -->
+  </div>
+
+  <div class="dispo-actions">
+    <label for="pseudo">Pseudo :</label><br>
+    <input type="text" id="pseudo" placeholder="Pseudo" /><br>
+    <label for="note">Notes :</label><br>
+    <input type="text" id="note" placeholder="Notes" /><br>
+  </div>
+
+  <div class="dispo-actions">
+    <button class="animated-button" onclick="envoyerDispos()"><i class="fa-solid fa-cloud-arrow-up"></i> Envoyer mes disponibilités</button>
+  <div id="message-confirmation" style="text-align: center; margin-top: 1rem; font-size: 1rem;"></div>
+
+  </div>
+</div>
+</main>
+<script>
+    const dateGrid = document.getElementById("dateGrid");
+
+    async function chargerMetaEtGenerer() {
+      try {
+        const res = await fetch("/.netlify/functions/read-dispos");
+        const data = await res.json();
+        const meta = data.meta;
+
+        if (!meta || !meta.startDate || !meta.nbJours) {
+          dateGrid.innerHTML = "<p style='text-align:center;'>⚠️ Aucune plage de dates définie. Contactez le MJ.</p>";
+          return;
+        }
+
+        genererGrilleDates(meta.startDate, meta.nbJours);
+      } catch (e) {
+        console.error("Erreur chargement meta :", e);
+        dateGrid.innerHTML = "<p style='text-align:center;'>❌ Impossible de charger les dates disponibles.</p>";
+      }
+    }
+
+    function genererGrilleDates(start, jours) {
+      dateGrid.innerHTML = "";
+      const startDate = new Date(start);
+
+      for (let i = 0; i < jours; i++) {
+        const date = new Date(startDate);
+        date.setDate(startDate.getDate() + i);
+        const id = date.toISOString().split('T')[0];
+
+        const btn = document.createElement("div");
+        btn.classList.add("dispo-date");
+        btn.dataset.date = id;
+        btn.innerHTML = `
+          <span class="jour-semaine">${date.toLocaleDateString("fr-FR", { weekday: 'short' })}</span><br>
+          <span class="jour">${date.getDate()}</span><br>
+          <span class="mois">${date.toLocaleDateString("fr-FR", { month: 'short' })}</span>
+        `;
+        btn.addEventListener("click", () => btn.classList.toggle("selected"));
+        dateGrid.appendChild(btn);
+      }
+    }
+
+    // Charger dès que la page est prête
+    window.addEventListener("DOMContentLoaded", chargerMetaEtGenerer);
+
+
+
+    function envoyerDispos() {
+    const pseudo = document.getElementById("pseudo").value.trim();
+    const note = document.getElementById("note").value.trim();
+    const dates = [...document.querySelectorAll(".dispo-date.selected")].map(d => d.dataset.date);
+
+    const messageZone = document.getElementById("message-confirmation");
+
+    if (!pseudo) {
+      messageZone.textContent = "⚠️ Entre ton nom avant d’envoyer.";
+      messageZone.style.color = "#cc8888";
+      return;
+    }
+
+    if (dates.length === 0) {
+      messageZone.textContent = "⚠️ Sélectionne au moins une date.";
+      messageZone.style.color = "#cc8888";
+      return;
+    }
+
+    fetch("/.netlify/functions/manage-dispos", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ pseudo, dates, note })
+    })
+      .then(res => res.json())
+      .then(() => {
+        messageZone.textContent = "✅ Tes disponibilités ont bien été enregistrées. Merci !";
+        messageZone.style.color = "#88c0a9";
+      })
+      .catch(() => {
+        messageZone.textContent = "❌ Erreur lors de l’envoi. Réessaie plus tard.";
+        messageZone.style.color = "#cc4444";
+      });
+  }
+
+</script>
+
+<script src="../scripts/particles.js"></script>
+</body>
+</html>
