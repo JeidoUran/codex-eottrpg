@@ -11,6 +11,14 @@
 <body>
   <canvas id="particles"></canvas>
 
+  <nav class="patch-nav">
+       <a href="#bonus-malus-vs-afflictions-etats">Bonus & Malus vs. Afflictions & États</a>
+       <a href="#points-d-action">Points d’Action (PA)</a>
+       <a href="#actions-et-reactions">Actions et Réactions</a>
+       <a href="#portee">Portée</a>
+       <a href="#ligne-de-vue">Ligne de vue</a>
+  </nav>
+
   <header class="codex-header">
     <img src="../assets/images/banniere.png" alt="Bannière" class="banniere">
     <h1>Glossaire</h1>
@@ -30,7 +38,7 @@
   <main class="accueil">
     <div class="patch-list">
 
-    <article class="effet-bloc">
+    <article class="effet-bloc" id="bonus-malus-vs-afflictions-etats">
       <h4>Bonus & Malus vs. Afflictions & États</h4>
       <p>
         Un <strong>bonus</strong> ou un <strong>malus</strong> est une modification numérique simple d’une ou plusieurs caractéristiques (par exemple, +1d4 en Offense, -2 en Vitesse). Ces effets sont immédiats, quantifiables et n’ont pas d’impact supplémentaire.
@@ -40,7 +48,7 @@
       </p>
     </article>
 
-    <article class="effet-bloc">
+    <article class="effet-bloc" id="points-d-action">
       <h4>Points d’Action (PA)</h4>
       <p>
         Les Points d’Action (<img src="/assets/images/action-costs/action-point.png" class="inline-icon"> PA) sont la ressource principale pour effectuer des actions en combat. Chaque personnage en regagne <strong>3 au début de son tour</strong>, jusqu’à un maximum de 4. Les PA non utilisés sont conservés entre les tours.
@@ -50,15 +58,11 @@
       </p>
     </article>
 
-    <article class="effet-bloc">
-      <h4>Action standard / Action bonus / Réaction</h4>
+    <article class="effet-bloc" id="actions-et-reactions">
+      <h4>Actions et Réactions</h4>
       <p>
         Une <strong>action standard</strong> (<img src="/assets/images/action-costs/action.png" class="inline-icon">) est l’action principale d’un tour. Une <strong>action bonus</strong> (<img src="/assets/images/action-costs/bonus-action.png" class="inline-icon">) peut être utilisée si une capacité ou un effet l’autorise. Une <strong>réaction</strong> (<img src="/assets/images/action-costs/reaction.png" class="inline-icon">)  se déclenche en dehors de son tour, en réponse à une condition spécifique (ex : subir une attaque, voir un ennemi se déplacer...).
       </p>
-    </article>    
-
-    <article class="effet-bloc">
-      <h4>Actions Combo & Actions Complexes</h4>
       <p>
         Une <strong>action combo</strong> (<img src="/assets/images/action-costs/combo-action.png" class="inline-icon">) est une action spéciale qui ne peut être utilisée que <strong>juste après une action spécifique</strong> dans le même tour. Elle coûte 1 PA et crée un enchaînement unique.
       </p>
@@ -67,14 +71,14 @@
       </p>
     </article>    
 
-    <article class="effet-bloc">
+    <article class="effet-bloc" id="portee">
       <h4>Portée</h4>
       <p>
         La <strong>portée</strong> d’une attaque ou d’un effet correspond à la distance maximale à laquelle elle peut atteindre une cible. Les portées peuvent être en cases (ex : 3 cases) ou définies par des mots-clés (contact, ligne droite, en ligne de vue…).
       </p>
     </article>
     
-    <article class="effet-bloc">
+    <article class="effet-bloc" id="ligne-de-vue">
       <h4>Ligne de vue</h4>
       <p>
         Un personnage a la <strong>ligne de vue</strong> sur une cible s’il peut tracer une ligne droite jusqu’à elle sans obstacle majeur. Certains effets exigent une ligne de vue directe pour être utilisés, tandis que d'autres peuvent la contourner (ex : zone, rebond, etc.).
@@ -88,6 +92,45 @@
     <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
   </footer>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+          const navContainer = document.querySelector('.patch-nav');
+          const navLinks = document.querySelectorAll('.patch-nav a[href^="#"]');
+          const sections = [...document.querySelectorAll(".effet-bloc")];
+
+          let lastActive = null;
+          const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const id = entry.target.getAttribute("id");
+              const activeLink = [...navLinks].find(link => link.getAttribute("href") === `#${id}`);
+              if (activeLink && activeLink !== lastActive) {
+                navLinks.forEach(link => link.classList.remove("active"));
+                activeLink.classList.add("active");
+  
+                // Scroll l'élément actif dans le menu si partiellement masqué
+                const linkTop = activeLink.getBoundingClientRect().top;
+                const navTop = navContainer.getBoundingClientRect().top;
+                const linkBottom = linkTop + activeLink.offsetHeight;
+                const navBottom = navTop + navContainer.offsetHeight;
+  
+                if (linkTop < navTop || linkBottom > navBottom) {
+                  activeLink.scrollIntoView({ behavior: "smooth", block: "center" });
+                }
+  
+                lastActive = activeLink;
+              }
+            }
+          });
+        }, {
+          rootMargin: "-20% 0px -30% 0px",
+          threshold: 0.1
+        });
+  
+       
+       sections.forEach(section => observer.observe(section));
+       });
+  </script>
   <script src="../scripts/particles.js"></script>
 </body>
 </html>
