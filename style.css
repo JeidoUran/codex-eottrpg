@@ -122,24 +122,18 @@ main.accueil {
 }
 
 a {
-	color: #57dada;
+	color: #3ae7e7;
 	text-decoration: none;
 	transition: all 0.3s ease;
 }
 
 a:hover {
-	text-shadow: 0 0 4px #8bd1e3;
+	text-shadow: 0 0 4px #98e4f7;
 	text-decoration: none;
 	transition: all 0.3s ease;
 }
 
-.patch-section a:before {
-	font-family: "Font Awesome 6 Free";
-	content: "\f0c1";
-	font-weight: 900;
-	transform: translateY(0.1em);
-	font-size: 16px;
-}
+
 
 #particles {
 	position: fixed;
