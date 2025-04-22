@@ -2606,3 +2606,8 @@ box-shadow: 0 0 10px rgba(136, 192, 169, 0.2);
 .image-list .description {
 	margin-top: 1.75rem;
   }
+
+  .tutorial-image {
+	width: auto;
+	height: 90px;
+  }
