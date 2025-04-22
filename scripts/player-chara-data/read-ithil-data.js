@@ -1,4 +1,4 @@
-const ithilUrl = "https://s3.codex.eottrpg.memiroa.com/data/ithil.json";
+const ithilUrl = "https://s3.codex.eottrpg.memiroa.com/data/characters/ithil.json";
   
 const url = new URL(ithilUrl);
 url.searchParams.set("nocache", Date.now());

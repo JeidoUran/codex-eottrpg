@@ -1,4 +1,4 @@
-const kayUrl = "https://s3.codex.eottrpg.memiroa.com/data/kay.json";
+const kayUrl = "https://s3.codex.eottrpg.memiroa.com/data/characters/kay.json";
   
 const url = new URL(kayUrl);
 url.searchParams.set("nocache", Date.now());

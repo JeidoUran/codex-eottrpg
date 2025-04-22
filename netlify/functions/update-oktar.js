@@ -25,7 +25,7 @@ exports.handler = async function(event, context) {
 
     await s3.putObject({
       Bucket: "codex-eottrpg",
-      Key: "data/oktar.json",
+      Key: "data/characters/oktar.json",
       Body: JSON.stringify(data, null, 2),
       ContentType: "application/json",
       ACL: "public-read"

@@ -1,4 +1,4 @@
-const oktarUrl = "https://s3.codex.eottrpg.memiroa.com/data/oktar.json";
+const oktarUrl = "https://s3.codex.eottrpg.memiroa.com/data/characters/oktar.json";
   
 const url = new URL(oktarUrl);
 url.searchParams.set("nocache", Date.now());

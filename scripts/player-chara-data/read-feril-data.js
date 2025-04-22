@@ -1,4 +1,4 @@
-const ferilUrl = "https://s3.codex.eottrpg.memiroa.com/data/feril.json";
+const ferilUrl = "https://s3.codex.eottrpg.memiroa.com/data/characters/feril.json";
   
 const url = new URL(ferilUrl);
 url.searchParams.set("nocache", Date.now());

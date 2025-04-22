@@ -1,4 +1,4 @@
-const elsaUrl = "https://s3.codex.eottrpg.memiroa.com/data/elsa.json";
+const elsaUrl = "https://s3.codex.eottrpg.memiroa.com/data/characters/elsa.json";
   
 const url = new URL(elsaUrl);
 url.searchParams.set("nocache", Date.now());

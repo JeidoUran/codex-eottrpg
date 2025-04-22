@@ -25,7 +25,7 @@ exports.handler = async function() {
 
     await s3.putObject({
       Bucket: "codex-eottrpg",
-      Key: "data/feril.json",
+      Key: "data/characters/feril.json",
       Body: JSON.stringify(data, null, 2),
       ContentType: "application/json",
       ACL: "public-read"
