@@ -18,7 +18,7 @@ const map = L.map('map', {
   maxZoom: 0.25
 });
 
-const image = L.imageOverlay('../assets/images/maps/carte-voarmur.png', bounds).addTo(map);
+const image = L.imageOverlay('../../assets/images/maps/carte-voarmur.png', bounds).addTo(map);
 map.fitBounds(bounds);
 map.setView([1706.904, 1742.337], -1.25); // <-- Position et zoom initiaux
 
@@ -39,7 +39,7 @@ const lieux = [
   name: "Labyrinthe d’Yggdrasil",
   coords: [1816.215, 1742.337],
   url: "/univers/regions/labyrinthe.html",
-  description: "Un réseau mystique et changeant, témoin d’épreuves oubliées et de secrets enfouis sous les racines."
+  description: "Un dédale ancien découvert sous Voarmur après le Désastre. Était-il là depuis toujours… ou est-il né du cataclysme ? Nul ne le sait."
 },
 {
   name: "Damavand",
