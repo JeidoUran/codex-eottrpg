@@ -4,7 +4,7 @@ const fetch = (...args) => import("node-fetch").then(({default: f}) => f(...args
 const s3 = new AWS.S3({
   accessKeyId: process.env.AWS_KEY,
   secretAccessKey: process.env.AWS_SECRET,
-  endpoint: "https://7b06c15b089dd9c20f2ce962e6f2fe83.r2.cloudflarestorage.com",
+  endpoint: process.env.S3_ENDPOINT,
   region: "auto",
   signatureVersion: "v4"
 });
