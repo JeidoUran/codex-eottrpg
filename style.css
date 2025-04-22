@@ -2617,3 +2617,53 @@ box-shadow: 0 0 10px rgba(136, 192, 169, 0.2);
   .intro.note-expliquee::before {
 	background-image: none;
   }
+
+  .mini-index {
+	list-style: none;
+  }
+
+  .mini-table-container {
+	max-width: auto;
+	overflow-x: auto;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 0.75rem;
+	margin-top: 2rem;
+	box-shadow: 0 0 15px rgba(173, 216, 230, 0.15);
+	/* léger halo */
+	background: radial-gradient(circle at center, rgba(255, 255, 255, 0.01), transparent);
+	width: fit-content;
+	margin: 0 auto;
+}
+
+.mini-table {
+	border-collapse: collapse;
+	color: #d8e9f0;
+	background-color: rgba(0, 0, 0, 0.25);
+	font-size: 18px;
+	width: fit-content;
+}
+
+.mini-table th,
+.mini-table td {
+	text-align: center;
+	padding: 0.75rem 0.75rem;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	backdrop-filter: blur(2px);
+	transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.mini-table th {
+	background: rgba(255, 255, 255, 0.05);
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #ffdca9;
+}
+
+.mini-table tbody tr:hover {
+	background-color: rgba(255, 255, 255, 0.05);
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.mini-table-container thead {
+	background-color: rgba(136, 192, 169, 0.15);
+}

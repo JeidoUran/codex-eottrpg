@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Codex - Etrian Odyssey TTRPG</title>
+  <title>Accueil | Codex - Etrian Odyssey TTRPG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
@@ -13,8 +13,8 @@
 
   <header class="codex-header">
     <img src="assets/images/banniere.png" alt="Bannière" class="banniere">
-    <h1>Codex du JDR Etrian Odyssey</h1>
-    <p class="sous-titre">Archives et mises à jour du monde d’Etrian Odyssey</p>
+    <h1>Bienvenue dans le Codex</h1>
+    <p class="sous-titre">L’archive vivante des Égarés</p>
   </header>
 
   <nav class="nav-magique">
@@ -27,31 +27,42 @@
     <a href="credits">Crédits</a>
   </nav>
 
-  <main class="accueil">
-    <section class="intro">
-      <p>
-        Bienvenue, explorateur !
-      </p>
-    </section>
-
-    <section class="sections-liees">
-      <a href="/notes/" class="carte-lien">
-        <h2>📜 Patch Notes</h2>
-        <p>Suivez les changements majeurs du monde au fil des sessions.</p>
-      </a>
-      <a href="/regles/" class="carte-lien">
-        <h2>📘 Règles</h2>
-        <p>Le cœur du système, les mécaniques revisitées et les options uniques du jeu de rôle.</p>
-      </a>
-      <a href="/univers/" class="carte-lien">
-        <h2>🌌 Univers</h2>
-        <p>Lieux, factions, personnages et histoire — pour mieux comprendre ce que cache l’horizon.</p>
-      </a>
-      <a href="/ressources/" class="carte-lien">
-        <h2>🧰 Ressources</h2>
-        <p>Fiches, aides de jeu, PDF téléchargeables et outils du joueur ou du MJ.</p>
-      </a>
-    </section>
+  <main>
+    <div class="patch-list">
+    <article class="article-credits">
+      <h2><i class="fa-solid fa-sparkles"></i> À la une</h2>
+      <ul class="image-list">
+        <li class="character-stats">
+          <img src="/assets/images/notes-medium.png" class="image">
+          <div class="image-texte">
+            <strong>🛠️ Nouveau système de craft :</strong> Le système d’artisanat a été entièrement refondu. Découvrez le <a href="/ressources/tutoriels.html#artisanat">tutoriel ici</a>.
+          </div>
+        </li>
+        <li class="character-stats">
+          <img src="/assets/images/notes-medium.png" class="image">
+          <div class="image-texte">
+            <strong>📘 Glossaire enrichi :</strong> Distinction bonus/afflictions, PA, actions complexes… tout est dans la <a href="/ressources/glossaire.html">nouvelle section</a>.
+          </div>
+        </li>
+        <li class="character-stats">
+          <img src="/assets/images/notes-medium.png" class="image">
+          <div class="image-texte">
+            <strong>🗺️ Carte interactive disponible :</strong> La région de Voarmur est consultable sur une carte interactive <a href="/univers/carte-voarmur.html">par ici</a>.
+          </div>
+        </li>
+      </ul>
+    </article>
+  
+    <article class="article-credits">
+      <h2><i class="fa-solid fa-book-open"></i> Explorer le Codex</h2>
+      <div class="sections-liees mini-index">
+        <a class="carte-lien" href="/notes/">📜 Patch Notes</a>
+        <a class="carte-lien" href="/regles/">📘 Règles</a>
+        <a class="carte-lien" href="/univers/">🌌 Univers</a>
+        <a class="carte-lien" href="/ressources/">🧰 Ressources</a>
+      </div>
+    </article>
+  </div>
   </main>
 
   <footer>
