@@ -1,5 +1,5 @@
 const AWS = require('aws-sdk');
-const fetch = (...args) => import("node-fetch").then(({default: f}) => f(...args));
+const fetch = (...args) => import("node-fetch").then(({ default: f }) => f(...args));
 
 const s3 = new AWS.S3({
   accessKeyId: process.env.AWS_KEY,
@@ -9,8 +9,8 @@ const s3 = new AWS.S3({
   signatureVersion: "v4"
 });
 
-exports.handler = async function() {
-  const CLIENT_ID = process.env.FOUNDRY_CLIENT_ID; // à remplacer si nécessaire
+exports.handler = async function () {
+  const CLIENT_ID = process.env.FOUNDRY_CLIENT_ID;
   const UUID = "Actor.UiPuXFCTj7ThvUH6";
   const API_KEY = process.env.FOUNDRY_API_KEY;
 
@@ -20,7 +20,25 @@ exports.handler = async function() {
     const response = await fetch(url, {
       headers: { "x-api-key": API_KEY }
     });
+
     const data = await response.json();
+
+    // 🔒 Sécurité : si l'API retourne une erreur, on ne touche pas au fichier
+    if (data.error && data.tip) {
+      console.error("Erreur API Foundry :", data.error);
+      console.error("Astuce :", data.tip);
+
+      return {
+        statusCode: 500,
+        body: JSON.stringify({
+          error: "API error: JSON not uploaded",
+          message: data.error,
+          tip: data.tip
+        })
+      };
+    }
+
+    // Sinon, upload classique
     data._codexLastUpdate = new Date().toISOString();
 
     await s3.putObject({
@@ -36,9 +54,10 @@ exports.handler = async function() {
       body: JSON.stringify({ status: "ok", message: "Upload vers S3 terminé" })
     };
   } catch (err) {
+    console.error("Erreur inattendue :", err);
     return {
       statusCode: 500,
-      body: JSON.stringify({ status: "error", message: err.message })
+      body: JSON.stringify({ error: "Exception during update", detail: err.message })
     };
   }
 };

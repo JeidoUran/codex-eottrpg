@@ -20,7 +20,25 @@ exports.handler = async function() {
     const response = await fetch(url, {
       headers: { "x-api-key": API_KEY }
     });
+
     const data = await response.json();
+
+    // 🔒 Sécurité : si l'API retourne une erreur, on ne touche pas au fichier
+    if (data.error && data.tip) {
+      console.error("Erreur API Foundry :", data.error);
+      console.error("Astuce :", data.tip);
+
+      return {
+        statusCode: 500,
+        body: JSON.stringify({
+          error: "API error: JSON not uploaded",
+          message: data.error,
+          tip: data.tip
+        })
+      };
+    }
+
+    // Sinon, upload classique
     data._codexLastUpdate = new Date().toISOString();
 
     await s3.putObject({
@@ -36,9 +54,10 @@ exports.handler = async function() {
       body: JSON.stringify({ status: "ok", message: "Upload vers S3 terminé" })
     };
   } catch (err) {
+    console.error("Erreur inattendue :", err);
     return {
       statusCode: 500,
-      body: JSON.stringify({ status: "error", message: err.message })
+      body: JSON.stringify({ error: "Exception during update", detail: err.message })
     };
   }
 };
