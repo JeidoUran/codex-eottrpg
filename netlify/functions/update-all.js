@@ -1,3 +1,4 @@
+
 const updateOktar = require("./update-oktar.js");
 const updateFeril = require("./update-feril.js");
 const updateElsa = require("./update-elsa.js");
@@ -21,13 +22,22 @@ exports.handler = async function(event, context) {
       if (result.status === "fulfilled") {
         return { name, status: "ok" };
       } else {
-        return { name, status: "error", reason: result.reason?.message || "Unknown error" };
+        return {
+          name,
+          status: "error",
+          reason: result.reason?.message || "Unknown error"
+        };
       }
     });
 
+    const hasError = results.some(r => r.status === "rejected");
+
     return {
-      statusCode: 200,
-      body: JSON.stringify({ status: "done", summary })
+      statusCode: hasError ? 207 : 200,
+      body: JSON.stringify({
+        status: hasError ? "partial-failure" : "done",
+        summary
+      })
     };
   } catch (err) {
     return {
