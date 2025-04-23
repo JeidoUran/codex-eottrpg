@@ -9,12 +9,30 @@ const updateChest = require("./update-chest.js");
 exports.handler = async function(event, context) {
   try {
     const results = await Promise.allSettled([
-      updateOktar.handler(),
-      updateFeril.handler(),
-      updateElsa.handler(),
-      updateIthil.handler(),
-      updateKay.handler(),
-      updateChest.handler(),
+      updateOktar.handler().then(res => {
+        if (res.statusCode >= 400) throw new Error(`(${res.statusCode}) ${res.body}`);
+        return res;
+      }),
+      updateFeril.handler().then(res => {
+        if (res.statusCode >= 400) throw new Error(`(${res.statusCode}) ${res.body}`);
+        return res;
+      }),
+      updateElsa.handler().then(res => {
+        if (res.statusCode >= 400) throw new Error(`(${res.statusCode}) ${res.body}`);
+        return res;
+      }),
+      updateIthil.handler().then(res => {
+        if (res.statusCode >= 400) throw new Error(`(${res.statusCode}) ${res.body}`);
+        return res;
+      }),
+      updateKay.handler().then(res => {
+        if (res.statusCode >= 400) throw new Error(`(${res.statusCode}) ${res.body}`);
+        return res;
+      }),
+      updateChest.handler().then(res => {
+        if (res.statusCode >= 400) throw new Error(`(${res.statusCode}) ${res.body}`);
+        return res;
+      }),
     ]);
 
     const summary = results.map((result, i) => {
