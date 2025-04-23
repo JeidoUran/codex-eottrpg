@@ -10,9 +10,9 @@ const s3 = new AWS.S3({
 });
 
 exports.handler = async function() {
-  const CLIENT_ID = "foundry-skQfvcSugPyn5XvR"; // à remplacer si nécessaire
+  const CLIENT_ID = process.env.FOUNDRY_CLIENT_ID; // à remplacer si nécessaire
   const UUID = "Actor.SYPKttIrkHC7A0Df";
-  const API_KEY = "codex-relay";
+  const API_KEY = process.env.FOUNDRY_API_KEY;
 
   const url = `http://api.codex.memiroa.com/get?clientId=${CLIENT_ID}&uuid=${UUID}`;
 
