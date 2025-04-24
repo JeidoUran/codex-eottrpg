@@ -13,6 +13,7 @@ exports.handler = async function(event, context) {
   const CLIENT_ID = process.env.FOUNDRY_CLIENT_ID;
   const UUID = "Actor.DLc3BG2Qq87T57tk";
   const API_KEY = process.env.FOUNDRY_API_KEY;
+  const BUCKET_NAME = process.env.S3_BUCKET_NAME;
 
   const url = `http://api.codex.memiroa.com/get?clientId=${CLIENT_ID}&uuid=${UUID}`;
 
@@ -42,7 +43,7 @@ exports.handler = async function(event, context) {
     data._codexLastUpdate = new Date().toISOString();
 
     await s3.putObject({
-      Bucket: "codex-eottrpg",
+      Bucket: BUCKET_NAME,
       Key: "data/characters/oktar.json",
       Body: JSON.stringify(data, null, 2),
       ContentType: "application/json",

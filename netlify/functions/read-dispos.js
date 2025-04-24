@@ -9,7 +9,7 @@ const s3 = new AWS.S3({
   signatureVersion: 'v4'
 });
 
-const BUCKET_NAME = 'codex-eottrpg'; // adapte si besoin
+const BUCKET_NAME = process.env.S3_BUCKET_NAME; // adapte si besoin
 const FILE_KEY = 'data/dispos/dispos.json';
 
 exports.handler = async () => {
