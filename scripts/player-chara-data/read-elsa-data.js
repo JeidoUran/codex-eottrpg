@@ -225,7 +225,7 @@ fetch(url)
     document.getElementById("xp-text").textContent = `${xp} / ${xpMax}`;
 
     stats.innerHTML = `
-      <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>PV :</strong> ${data.system.attributes.hp.value ?? "?"}</li>
+      <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>PV :</strong> ${data.system.attributes.hp.value ?? "?"} / ${data.system.attributes.hp.max ?? "?"}</li>
       <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Force :</strong> ${abilities.str.value ?? "?"}</li>
       <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Dextérité :</strong> ${abilities.dex.value ?? "?"}</li>
       <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Constitution :</strong> ${abilities.con.value ?? "?"}</li>
