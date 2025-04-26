@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Patch 2.6 – Session 15 | Codex - Etrian Odyssey TTRPG</title>
+  <link rel="icon" href="../favicon.png" type="image/png">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <canvas id="particles"></canvas>
+
+  
+<nav class="patch-nav">
+ <a href="#systeme" class="section-link">Système</a>
+    <a href="#petites-notes" class="section-link">Petites notes...</a>
+    <a href="#races" class="section-link">Races</a>
+    <a href="#classes" class="section-link">Classes</a>
+    <a href="#codex" class="section-link">Codex</a>
+    <a href="#problemes-resolus" class="section-link">Problèmes résolus</a>
+    <a href="#problemes-connus" class="section-link">Problèmes connus</a>
+    <a href="#mj" class="section-link">MJ</a>
+  </nav>
+
+  <header class="codex-header" id="top">
+    <img src="../assets/images/banniere.png" alt="Bannière" class="banniere">
+    <h1><img src="../assets/images/silver-scroll.png" class="image codex-image-header"> Patch 2.6 – Session 15</h1>
+    <p class="sous-titre">Publié le 30 Avril 2025</p>
+    <div class="fixed-header-links">
+      <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Index des patchs</a>
+    </div>
+  </header>
+
+  <nav class="nav-magique">
+    <a href="/">Accueil</a>
+    <a href="../notes/">Patch Notes</a>
+    <a href="../regles/">Règles</a>
+    <a href="../univers/">Univers</a>
+    <a href="../musique">Musiques</a>
+    <a href="../ressources/">Ressources</a>
+    <a href="../credits">Crédits</a>
+  </nav>
+
+<main class="accueil">
+    
+<section class="patch-section" id="systeme">
+  <h2 class="patch-titre">
+    <img src="../assets/images/notes-big.png" class="image image-h2">
+    Système
+  </h2>
+  <ul class="image-list">
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le système de ressources de D&D5e a été abandonné. Les PA et autres ressources telles que les dés d'Inspiration du Souverain ont été converti en aptitudes avec charges à la place.<div class="note-expliquee"><img src="../assets/images/notes/patch-13/new-ap.png" class="patchnotes-icon tutorial-image lightbox-image" onclick="openLightbox(this.src)"> <img src="../assets/images/notes/patch-13/new-ap-2.png" class="patchnotes-icon tutorial-image lightbox-image" onclick="openLightbox(this.src)"> (Cliquez sur les images pour les agrandir)</div><div class="note-expliquee">Ce changement provient du fait que le système de ressources est considéré obsolète depuis un certain temps, et sera possiblement abandonné à la prochaine mise à jour majeure du système de jeu.</div><div class="note-expliquee">Normalement, ce changement n'aura aucune incidence du côté des joueurs car l'utilisation de ce nouveau système se fait exactement de la même façon qu'avant.</div><div class="note-expliquee">Cependant, il se peut tout de même que des problèmes surviennent si une ou plusieurs aptitudes n'ont pas été converties au nouveau système par oubli ou autre.</div><div class="note-expliquee">Le bloc "Ressources" de la fiche de personnage a été masqué.</div><div class="note-expliquee">Lors de l'utilisation d'une aptitude ou d'un objet, sur l'écran de consommation des ressources, le nom de la ressource consommée (par exemple, "Points d'Action (Passif)") est désormais affiché au lieu de son nom interne (par exemple, "resources.primary.value").</div></div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L’interface "Baldur’s Gate 3" a été mise à jour.<div class="note-expliquee">Les info-bulles des éléments placés dans l'interface utilisent désormais le style D&D5e.</div><div class="note-expliquee">L'éditeur de thème est disponible.</div></div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les entals d'Eris ne sont plus comptabilisés dans le total du groupe.</div></li>
+  </ul></section>
+
+<section class="patch-section" id="petites-notes">
+  <h2 class="patch-titre">
+    <img src="../assets/images/notes-big.png" class="image image-h2">
+    Petites notes...
+  </h2>
+  <ul class="image-list">
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Je vais temporairement sortir de la persona "patch notes sérieux" pour vous parler un peu de la technique derrière Foundry VTT. Si cet aspect ne vous intéresse pas, vous pouvez cliquer <a href="#races">ici</a> pour poursuivre votre lecture des notes. <strong>Deux mises à jour majeures sont à venir sur Foundry.</strong> D'un côté, le logiciel Foundry VTT lui-même passe à sa v13, et de l'autre, le système de jeu D&D5e passe à sa v5. Il s'agit dans les deux cas de mises à jour critiques, qui, dans le cas de la v13 de Foundry par exemple, va profondément altérer l'interface de jeu. Je ne sais pour l'instant pas quels sont les changements proposés par la v5 de D&D5e. L'écosystème que nous avons bâti autour de ces deux systèmes est à l'heure actuelle robuste. Nous utilisons presque 170 modules, ce qui, dans la communauté Foundry, est considéré comme un chiffre très élevé. Pourtant, hormis les quelques erreurs occasionnelles, le système tourne bien, et surtout, tous les cas de figures et règles spéciales sont représentées dans le jeu, grâce à ceux-ci. Évidemment, nous dépendons plus de certains que d'autres, là où certains sont seulement là pour améliorer l'ergonomie générales, d'autres changent complètement le fonctionnement des règles d'origine. Et évidemment, une mise à jour de cette envergure va inévitablement entraîner des incompatibilités, certaines temporaires, d'autres malheureusement permanentes, en cas d'abandon des modules par leurs auteurs. Je tenais à vous rassurer en vous indiquant que <strong>le projet ne passera à la v13/v5 que lorsque tous les modules dont nous dépendons seront compatibles avec</strong>. Bien que je sois excité à l'idée de réaliser ces mises à jour, la priorité du projet, d'un point de vue technique, est et restera toujours la fluidité du système côté joueurs. Ceci dit, je vois aussi cela comme une occasion de faire un ménage dans les modules les moins utilisés, ou ceux qui seront remplacés par des fonctionnalités natives, afin d'alléger la charge sur le système. Comme je l'avais fait avec la v12/v4, je réaliserais régulièrement des tests sur une copie du projet destinée à la v13/v5 pour vérifier la stabilité générale. Lorsque le projet original sera prêt à y migrer et y migrera, vous en serez évidemment informés dans les notes de mise à jour. Et en parlant de ça, j'ai effectué les premiers tests sur la version de test de la v13. A l'heure où j'écris ces lignes, il s'agit de la dernière version de test, et la sortie officielle de la v13 est imminente. Évidemment, il y'a énormément d'erreurs et de modules qui ne fonctionnent pas, tout simplement car ils ne sont pas encore compatibles, mais je souhaitais tout de même vous présenter un aperçu de la nouvelles interface, avant de repartir sur les notes. Merci à ceux qui auront lu jusqu'ici !<div class="note-expliquee"><img src="../assets/images/notes/patch-13/foundry-v-13.png" class="patchnotes-icon tutorial-image lightbox-image" onclick="openLightbox(this.src)"> <img src="../assets/images/notes/patch-13/foundry-v-13-2.png" class="patchnotes-icon tutorial-image lightbox-image" onclick="openLightbox(this.src)"> <img src="../assets/images/notes/patch-13/foundry-v-13-3.png" class="patchnotes-icon tutorial-image lightbox-image" onclick="openLightbox(this.src)"> <img src="../assets/images/notes/patch-13/foundry-v-13-4.png" class="patchnotes-icon tutorial-image lightbox-image" onclick="openLightbox(this.src)"><br> (Cliquez sur les images pour les agrandir)</div></div></li>
+  </ul></section>
+
+<section class="patch-section" id="races">
+  <h2 class="patch-titre">
+    <img src="../assets/images/notes-big.png" class="image image-h2">
+    Races
+  </h2>
+  <div class="classe-subsection">
+    <h3 class="classe-nom">
+      <img src="../assets/images/race-icons/vaisseau.png" class="image image-h3">
+      Vaisseau
+    </h3>
+    <ul class="image-list">
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'aptitude "Étreinte de la nature" consomme désormais correctement une utilisation par long repos.</div></li>
+    </ul>
+  </div>
+
+<section class="patch-section" id="classes">
+  <h2 class="patch-titre">
+    <img src="../assets/images/notes-big.png" class="image image-h2">
+    Classes
+  </h2>
+  <div class="classe-subsection">
+    <h3 class="classe-nom">
+      <img src="../assets/images/class-icons/lansquenet.png" class="image image-h3">
+      Lansquenet
+    </h3>
+    <ul class="image-list">
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'aptitude "Tranchant furieux" consomme correctement 1 PA à l'activation.</div></li>
+    </ul>
+  </div>
+  <div class="classe-subsection">
+    <h3 class="classe-nom">
+      <img src="../assets/images/class-icons/shogun.png" class="image image-h3">
+      Shogun
+    </h3>
+    <ul class="image-list">
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'aptitude "Hirondelles jumelles" fonctionne à nouveau comme prévu.</div></li>
+    </ul>
+  </div>
+
+<section class="patch-section" id="codex">
+  <h2 class="patch-titre">
+    <img src="../assets/images/notes-big.png" class="image image-h2">
+    Codex
+  </h2>
+  <ul class="image-list">
+  </ul></section>
+
+<section class="patch-section" id="problemes-resolus">
+  <h2 class="patch-titre">
+    <img src="../assets/images/notes-big.png" class="image image-h2">
+    Problèmes résolus
+  </h2>
+  <ul class="image-list">
+  </ul></section>
+
+<section class="patch-section" id="problemes-connus">
+  <h2 class="patch-titre">
+    <img src="../assets/images/notes-big.png" class="image image-h2">
+    Problèmes connus
+  </h2>
+  <ul class="image-list">
+  </ul></section>
+
+<section class="patch-section" id="mj">
+  <h2 class="patch-titre">
+    <img src="../assets/images/notes-big.png" class="image image-h2">
+    MJ
+  </h2>
+  <ul class="image-list">
+  </ul></section>
+  </main>
+
+  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button>
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Portrait" />
+  </div>
+
+  <footer>
+    <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+</footer>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+        const navContainer = document.querySelector('.patch-nav');
+        const navLinks = document.querySelectorAll('.patch-nav a[href^="#"]');
+        const sections = [...document.querySelectorAll(".patch-section")];
+
+        let lastActive = null;
+        const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+            const activeLink = [...navLinks].find(link => link.getAttribute("href") === `#${id}`);
+            if (activeLink && activeLink !== lastActive) {
+              navLinks.forEach(link => link.classList.remove("active"));
+              activeLink.classList.add("active");
+
+              // Scroll l'élément actif dans le menu si partiellement masqué
+              const linkTop = activeLink.getBoundingClientRect().top;
+              const navTop = navContainer.getBoundingClientRect().top;
+              const linkBottom = linkTop + activeLink.offsetHeight;
+              const navBottom = navTop + navContainer.offsetHeight;
+
+              if (linkTop < navTop || linkBottom > navBottom) {
+                activeLink.scrollIntoView({ behavior: "smooth", block: "center" });
+              }
+
+              lastActive = activeLink;
+            }
+          }
+        });
+      }, {
+        rootMargin: "-20% 0px -30% 0px",
+        threshold: 0.1
+      });
+
+     
+     sections.forEach(section => observer.observe(section));
+     });
+</script>
+  <script src="../scripts/backToTop.js"></script>
+  <script src="../scripts/particles.js"></script>
+  <script src="../scripts/lightbox.js"></script>
+</body>
+</html>
