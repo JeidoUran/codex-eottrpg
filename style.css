@@ -398,7 +398,7 @@ footer {
 }
 
 .patch-section h2 {
-	border-bottom: 2px solid #63b0c4;
+	border-bottom: 2px solid #88c0a9;
 	padding-bottom: 0.3rem;
 	margin-bottom: 1rem;
 	color: #88c0a9;
@@ -2557,6 +2557,8 @@ box-shadow: 0 0 10px rgba(136, 192, 169, 0.2);
 	width: auto;
 	height: 90px;
 	margin : 0;
+	display: initial;
+	border: 2px solid #88c0a9;
   }
 
   .tutorial-image {
@@ -2829,4 +2831,8 @@ box-shadow: 0 0 10px rgba(136, 192, 169, 0.2);
 	font-size: 0.75rem;
 	opacity: 0.9;
 	text-transform: lowercase;
+  }
+
+  .lightbox-image {
+	cursor: pointer;
   }
