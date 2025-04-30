@@ -6,6 +6,10 @@ fetch(url)
   .then(res => res.json())
   .then(json => {
     const data = json.data;
+    const classId = data.system.details.originalClass;
+    const classItem = data.items.find(item => item.type === "class" && item._id === classId);
+    const hd = classItem.system.hd;
+    const classLevels = classItem.system.levels;
     const abilities = data.system.abilities;
     const stats = document.getElementById("oktar-stats");
     const inventoryDiv = document.getElementById("oktar-inventory");
@@ -226,6 +230,7 @@ fetch(url)
 
     stats.innerHTML = `
       <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>PV :</strong> ${data.system.attributes.hp.value ?? "?"} / ${data.system.attributes.hp.max ?? "?"}</li>
+      <li class="character-stats spaced"><img src="../../assets/images/notes-medium.png" class="image"><strong>Dés de vie :</strong> ${classLevels - hd.spent ?? "?"}${hd.denomination ?? "d?"} / ${classLevels ?? "?"}${hd.denomination ?? "d?"}</li>
       <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Force :</strong> ${abilities.str.value ?? "?"}</li>
       <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Dextérité :</strong> ${abilities.dex.value ?? "?"}</li>
       <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Constitution :</strong> ${abilities.con.value ?? "?"}</li>

@@ -2853,3 +2853,7 @@ box-shadow: 0 0 10px rgba(136, 192, 169, 0.2);
   .lightbox-image {
 	cursor: pointer;
   }
+
+.image-list .character-stats.spaced {
+	margin-bottom: 1.1em;
+  }
