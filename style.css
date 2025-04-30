@@ -2405,7 +2405,7 @@ box-shadow: 0 0 10px rgba(136, 192, 169, 0.2);
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	position: absolute;
-	width: 235px;
+	width: 200px;
 	margin: 1.5rem auto;
 	border-radius: 8px;
 	transition: background 0.3s;
