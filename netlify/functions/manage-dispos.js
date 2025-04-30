@@ -1,5 +1,31 @@
-
 const AWS = require('aws-sdk');
+const { writeFileSync, readFileSync, existsSync, mkdirSync } = require("fs");
+const path = require("path");
+
+const TMP_DIR = path.join(__dirname, "tmp");
+const RATE_LIMIT_FILE = path.join(TMP_DIR, "dispo-rate-limit.json");
+
+function ensureTmpDir() {
+  if (!existsSync(TMP_DIR)) {
+    mkdirSync(TMP_DIR, { recursive: true });
+  }
+}
+
+function loadRateLimitDb() {
+  ensureTmpDir();
+  if (!existsSync(RATE_LIMIT_FILE)) return {};
+  try {
+    return JSON.parse(readFileSync(RATE_LIMIT_FILE, "utf-8"));
+  } catch {
+    return {};
+  }
+}
+
+function saveRateLimitDb(db) {
+  ensureTmpDir();
+  writeFileSync(RATE_LIMIT_FILE, JSON.stringify(db));
+}
+
 
 const s3 = new AWS.S3({
   accessKeyId: process.env.AWS_KEY,
@@ -17,6 +43,23 @@ exports.handler = async (event) => {
   try {
     const body = JSON.parse(event.body);
     const now = new Date().toISOString();
+
+    // 🛡️ Anti-spam par IP
+    const ip = event.headers["x-forwarded-for"]?.split(",")[0] || "unknown";
+    const db = loadRateLimitDb();
+    const timestampNow = Date.now();
+    const lastSubmit = db[ip] || 0;
+    const MIN_DELAY = 30 * 1000;
+
+    if (timestampNow - lastSubmit < MIN_DELAY) {
+      return {
+        statusCode: 429,
+        body: JSON.stringify({ error: "Trop de soumissions. Réessaie dans quelques secondes." })
+      };
+    }
+
+    db[ip] = timestampNow;
+    saveRateLimitDb(db);
 
     // FLUSH LOGIC
     if (body.flush === true) {
