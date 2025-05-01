@@ -51,7 +51,7 @@
   <div class="dispo-actions">
     <button class="animated-button" onclick="envoyerDispos()"><i class="fa-solid fa-cloud-arrow-up"></i> Envoyer mes disponibilités</button>
   <div id="message-confirmation" style="text-align: center; margin-top: 1rem; font-size: 1rem;"></div>
-
+  <div style="text-align: center; margin-top: 1rem; font-size: 1rem;">Pour modifier vos disponibilités, renvoyez le formulaire en utilisant <strong>exactement</strong> le même pseudo.</div>
   </div>
 </div>
 </main>
@@ -111,7 +111,7 @@
     const messageZone = document.getElementById("message-confirmation");
 
     if (!pseudo) {
-      messageZone.textContent = "⚠️ Entre ton nom avant d’envoyer.";
+      messageZone.textContent = "⚠️ Entre ton pseudo avant d’envoyer.";
       messageZone.style.color = "#cc8888";
       return;
     }
@@ -139,7 +139,6 @@
   }
 
 </script>
-
 <script src="../scripts/particles.js"></script>
 </body>
 </html>
