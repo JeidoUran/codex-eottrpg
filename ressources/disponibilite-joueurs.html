@@ -111,13 +111,13 @@
     const messageZone = document.getElementById("message-confirmation");
 
     if (!pseudo) {
-      messageZone.textContent = "⚠️ Entre ton pseudo avant d’envoyer.";
+      messageZone.textContent = "⚠️ Entrez votre pseudo avant d’envoyer.";
       messageZone.style.color = "#cc8888";
       return;
     }
 
     if (dates.length === 0) {
-      messageZone.textContent = "⚠️ Sélectionne au moins une date.";
+      messageZone.textContent = "⚠️ Sélectionnez au moins une date.";
       messageZone.style.color = "#cc8888";
       return;
     }
@@ -129,11 +129,11 @@
     })
       .then(res => res.json())
       .then(() => {
-        messageZone.textContent = "✅ Tes disponibilités ont bien été enregistrées. Merci !";
+        messageZone.textContent = "✅ Disponibilités enregistrées. Merci !";
         messageZone.style.color = "#88c0a9";
       })
       .catch(() => {
-        messageZone.textContent = "❌ Erreur lors de l’envoi. Réessaie plus tard.";
+        messageZone.textContent = "❌ Erreur lors de l’envoi. Réessayez plus tard ou contactez le MJ.";
         messageZone.style.color = "#cc4444";
       });
   }
