@@ -97,17 +97,17 @@ exports.handler = async (event) => {
       };
     }
 
+    let existingData = { meta: {}, reponses: [] };
+    try {
+      const s3obj = await s3.getObject({ Bucket: BUCKET_NAME, Key: FILE_KEY }).promise();
+      existingData = JSON.parse(s3obj.Body.toString('utf-8'));
+    } catch (e) {
+      console.log("Pas de fichier, création nouvelle structure.");
+    }
+
     // ENREGISTREMENT DISPOS
     if (body.pseudo && body.dates) {
       const { pseudo, dates, note } = body;
-
-      let existingData = { meta: {}, reponses: [] };
-      try {
-        const s3obj = await s3.getObject({ Bucket: BUCKET_NAME, Key: FILE_KEY }).promise();
-        existingData = JSON.parse(s3obj.Body.toString('utf-8'));
-      } catch (e) {
-        console.log("Pas de fichier, création nouvelle structure.");
-      }
 
       const cleaned = existingData.reponses.filter(r => r.pseudo.toLowerCase() !== pseudo.toLowerCase());
       cleaned.push({ pseudo, dates, note, submittedAt: now });
@@ -126,6 +126,25 @@ exports.handler = async (event) => {
       };
     }
 
+    if (body.meta) {
+      existingData.meta = {
+        ...existingData.meta,
+        ...body.meta
+      };
+
+      await s3.putObject({
+        Bucket: BUCKET_NAME,
+        Key: FILE_KEY,
+        Body: JSON.stringify(existingData, null, 2),
+        ContentType: 'application/json'
+      }).promise();
+
+      return {
+        statusCode: 200,
+        body: JSON.stringify({ message: 'Période mise à jour.' })
+      };
+    }
+    
     // Aucun cas déclenché
     return {
       statusCode: 400,
