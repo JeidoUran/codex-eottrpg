@@ -15,14 +15,42 @@ exports.handler = async function(event, context) {
   const API_KEY = process.env.FOUNDRY_API_KEY;
   const BUCKET_NAME = process.env.S3_BUCKET_NAME;
 
-  const url = `http://api.codex.memiroa.com/get?clientId=${CLIENT_ID}&uuid=${UUID}`;
+  const url = `https://api.codex.memiroa.com/get?clientId=${CLIENT_ID}&uuid=${UUID}`;
+  const fetch_armor_url = `https://api.codex.memiroa.com/execute-js?clientId=${CLIENT_ID}`;
 
+  const response = await fetch(url, {
+    headers: { "x-api-key": API_KEY }
+  });
+  const data = await response.json();
+
+  const body = {
+    script: `const uuid = "${UUID}";
+    const document = await fromUuid(uuid);
+    if (!document) return null;
+
+    const actor = document instanceof Actor ? document : document.actor;
+    if (!actor) return null;
+
+    await actor.prepareData();
+
+    const ac = actor.system.attributes.ac;
+    return ac?.value ?? null;`
+  };
+
+  let armorClass = null;
   try {
-    const response = await fetch(url, {
-      headers: { "x-api-key": API_KEY }
+    const res = await fetch(fetch_armor_url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body)
     });
 
-    const data = await response.json();
+    const json = await res.json();
+    armorClass = json.result ?? null;
+
+  // Ajout de l'armure aux données
+  data.armorClass = armorClass;
+
 
     // 🔒 Sécurité : si l'API retourne une erreur, on ne touche pas au fichier
     if (data.error && data.tip) {

@@ -15,7 +15,7 @@ exports.handler = async function() {
   const API_KEY = process.env.FOUNDRY_API_KEY;
   const BUCKET_NAME = process.env.S3_BUCKET_NAME;
 
-  const url = `http://api.codex.memiroa.com/get?clientId=${CLIENT_ID}&uuid=${UUID}`;
+  const url = `https://api.codex.memiroa.com/get?clientId=${CLIENT_ID}&uuid=${UUID}`;
 
   try {
     const response = await fetch(url, {
