@@ -230,6 +230,7 @@ fetch(url)
 
     stats.innerHTML = `
       <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>PV :</strong> ${data.system.attributes.hp.value ?? "?"} / ${data.system.attributes.hp.max ?? "?"}</li>
+      <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Défense :</strong> ${json.armorClass ?? "?"}</li>
       <li class="character-stats spaced"><img src="../../assets/images/notes-medium.png" class="image"><strong>Dés de vie :</strong> ${classLevels - hd.spent ?? "?"}${hd.denomination ?? "d?"} / ${classLevels ?? "?"}${hd.denomination ?? "d?"}</li>
       <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Force :</strong> ${abilities.str.value ?? "?"}</li>
       <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Dextérité :</strong> ${abilities.dex.value ?? "?"}</li>
