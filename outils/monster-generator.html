@@ -6,7 +6,9 @@
     <link rel="icon" href="../favicon.png" type="image/png">
     <title>Générateur de Monstre | Codex - Etrian Odyssey TTRPG</title>
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <canvas id="particles"></canvas>
@@ -14,7 +16,8 @@
       <div class="header-top">
         <h1>Générateur de Monstre</h1>
         <div class="fixed-header-links">
-          <a href="/" class="carte-lien" style="display: inline-block; max-width: 300px;">
+          <a href="/" class="carte-lien"
+            style="display: inline-block; max-width: 300px;">
             <i class="fa-solid fa-arrow-left"></i> Retour au Codex </a>
         </div>
       </div>
@@ -22,150 +25,165 @@
     </header>
     <main class="accueil">
       <div class="class-table-tabs-wrapper">
-        <button class="tab-button active" onclick="switchTab(event, 'normal')">Rencontre normale</button>
-        <button class="tab-button" onclick="switchTab(event, 'foe')">FOE</button>
-        <button class="tab-button" onclick="switchTab(event, 'boss')">Boss</button>
+        <button class="tab-button active"
+          onclick="switchTab(event, 'normal')">Rencontre normale</button>
+        <button class="tab-button"
+          onclick="switchTab(event, 'foe')">FOE</button>
+        <button class="tab-button"
+          onclick="switchTab(event, 'boss')">Boss</button>
       </div>
       <div id="tab-normal" class="tab-content active">
         <div class="ligne-formulaire">
-        <label for="niveau-normal">Niveau du groupe :</label>
-        <select id="niveau-normal">
-          <option value="1">Niveau 1</option>
-          <option value="2">Niveau 2</option>
-          <option value="3">Niveau 3</option>
-          <option value="4">Niveau 4</option>
-          <option value="5">Niveau 5</option>
-          <option value="6">Niveau 6</option>
-          <option value="7">Niveau 7</option>
-          <option value="8">Niveau 8</option>
-          <option value="9">Niveau 9</option>
-          <option value="10">Niveau 10</option>
-          <option value="11">Niveau 11</option>
-          <option value="12">Niveau 12</option>
-          <option value="13">Niveau 13</option>
-          <option value="14">Niveau 14</option>
-          <option value="15">Niveau 15</option>
-          <option value="16">Niveau 16</option>
-          <option value="17">Niveau 17</option>
-          <option value="18">Niveau 18</option>
-          <option value="19">Niveau 19</option>
-          <option value="20">Niveau 20</option>
-        </select>
-          </div>
-    
+          <label for="niveau-normal">Niveau du groupe :</label>
+          <select id="niveau-normal">
+            <option value="1">Niveau 1</option>
+            <option value="2">Niveau 2</option>
+            <option value="3">Niveau 3</option>
+            <option value="4">Niveau 4</option>
+            <option value="5">Niveau 5</option>
+            <option value="6">Niveau 6</option>
+            <option value="7">Niveau 7</option>
+            <option value="8">Niveau 8</option>
+            <option value="9">Niveau 9</option>
+            <option value="10">Niveau 10</option>
+            <option value="11">Niveau 11</option>
+            <option value="12">Niveau 12</option>
+            <option value="13">Niveau 13</option>
+            <option value="14">Niveau 14</option>
+            <option value="15">Niveau 15</option>
+            <option value="16">Niveau 16</option>
+            <option value="17">Niveau 17</option>
+            <option value="18">Niveau 18</option>
+            <option value="19">Niveau 19</option>
+            <option value="20">Niveau 20</option>
+          </select>
+        </div>
+
         <div class="ligne-formulaire">
-        <label for="quantite-normal">Nombre d'ennemis :</label>
-        <select id="quantite-normal">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-        </select>
-    </div>
-    <div class="ligne-formulaire">
-        <button class="btn-lu centered-button" onclick="generer('normal')">Générer</button>
-    </div>
+          <label for="quantite-normal">Nombre d'ennemis :</label>
+          <select id="quantite-normal">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+        <div class="ligne-formulaire">
+          <button class="btn-lu centered-button"
+            onclick="generer('normal')">Générer</button>
+        </div>
         <div class="result" id="result-normal"></div>
         <div class="nom-monstre-container">
-            <label for="nom-monstre">Nom du monstre :</label>
-            <input type="text" id="nom-monstre" placeholder="Nom personnalisé" style="margin-bottom: 1rem; padding: 0.3rem;">
-          <button class="btn-lu centered-button" onclick="exporterFoundry('normal')">
-              <i class="fa-solid fa-download"></i> Exporter vers FoundryVTT
-            </button>
-            </div>
+          <label for="nom-monstre">Nom du monstre :</label>
+          <input type="text" id="nom-monstre" placeholder="Nom personnalisé"
+            style="margin-bottom: 1rem; padding: 0.3rem;">
+          <button class="btn-lu centered-button"
+            onclick="exporterFoundry('normal')">
+            <i class="fa-solid fa-download"></i> Exporter vers FoundryVTT
+          </button>
         </div>
+      </div>
       <div id="tab-boss" class="tab-content" style="display:none">
         <div class="ligne-formulaire">
-        <label for="niveau-boss">Niveau du groupe :</label>
-        <select id="niveau-boss">
-          <option value="1">Niveau 1</option>
-          <option value="2">Niveau 2</option>
-          <option value="3">Niveau 3</option>
-          <option value="4">Niveau 4</option>
-          <option value="5">Niveau 5</option>
-          <option value="6">Niveau 6</option>
-          <option value="7">Niveau 7</option>
-          <option value="8">Niveau 8</option>
-          <option value="9">Niveau 9</option>
-          <option value="10">Niveau 10</option>
-          <option value="11">Niveau 11</option>
-          <option value="12">Niveau 12</option>
-          <option value="13">Niveau 13</option>
-          <option value="14">Niveau 14</option>
-          <option value="15">Niveau 15</option>
-          <option value="16">Niveau 16</option>
-          <option value="17">Niveau 17</option>
-          <option value="18">Niveau 18</option>
-          <option value="19">Niveau 19</option>
-          <option value="20">Niveau 20</option>
-        </select>
-    </div>
-    <div class="ligne-formulaire">
-        <label for="quantite-boss">Nombre de Boss :</label>
-        <select id="quantite-boss">
-          <option value="1">1</option>
-        </select>
-    </div>
-    <div class="ligne-formulaire">
-        <button class="btn-lu centered-button" onclick="generer('boss')">Générer</button>
-    </div>
+          <label for="niveau-boss">Niveau du groupe :</label>
+          <select id="niveau-boss">
+            <option value="1">Niveau 1</option>
+            <option value="2">Niveau 2</option>
+            <option value="3">Niveau 3</option>
+            <option value="4">Niveau 4</option>
+            <option value="5">Niveau 5</option>
+            <option value="6">Niveau 6</option>
+            <option value="7">Niveau 7</option>
+            <option value="8">Niveau 8</option>
+            <option value="9">Niveau 9</option>
+            <option value="10">Niveau 10</option>
+            <option value="11">Niveau 11</option>
+            <option value="12">Niveau 12</option>
+            <option value="13">Niveau 13</option>
+            <option value="14">Niveau 14</option>
+            <option value="15">Niveau 15</option>
+            <option value="16">Niveau 16</option>
+            <option value="17">Niveau 17</option>
+            <option value="18">Niveau 18</option>
+            <option value="19">Niveau 19</option>
+            <option value="20">Niveau 20</option>
+          </select>
+        </div>
+        <div class="ligne-formulaire">
+          <label for="quantite-boss">Nombre de Boss :</label>
+          <select id="quantite-boss">
+            <option value="1">1</option>
+          </select>
+        </div>
+        <div class="ligne-formulaire">
+          <button class="btn-lu centered-button"
+            onclick="generer('boss')">Générer</button>
+        </div>
         <div class="result" id="result-boss"></div>
         <div class="nom-monstre-container">
-            <label for="nom-monstre">Nom du monstre :</label>
-            <input type="text" id="nom-monstre" placeholder="Nom personnalisé" style="margin-bottom: 1rem; padding: 0.3rem;">
-          <button class="btn-lu centered-button" onclick="exporterFoundry('boss')">
-              <i class="fa-solid fa-download"></i> Exporter vers FoundryVTT
-            </button>
-            </div>
+          <label for="nom-monstre">Nom du monstre :</label>
+          <input type="text" id="nom-monstre" placeholder="Nom personnalisé"
+            style="margin-bottom: 1rem; padding: 0.3rem;">
+          <button class="btn-lu centered-button"
+            onclick="exporterFoundry('boss')">
+            <i class="fa-solid fa-download"></i> Exporter vers FoundryVTT
+          </button>
         </div>
+      </div>
       <div id="tab-foe" class="tab-content" style="display:none">
         <div class="ligne-formulaire">
-        <label for="niveau-foe">Niveau du groupe :</label>
-        <select id="niveau-foe">
-          <option value="1">Niveau 1</option>
-          <option value="2">Niveau 2</option>
-          <option value="3">Niveau 3</option>
-          <option value="4">Niveau 4</option>
-          <option value="5">Niveau 5</option>
-          <option value="6">Niveau 6</option>
-          <option value="7">Niveau 7</option>
-          <option value="8">Niveau 8</option>
-          <option value="9">Niveau 9</option>
-          <option value="10">Niveau 10</option>
-          <option value="11">Niveau 11</option>
-          <option value="12">Niveau 12</option>
-          <option value="13">Niveau 13</option>
-          <option value="14">Niveau 14</option>
-          <option value="15">Niveau 15</option>
-          <option value="16">Niveau 16</option>
-          <option value="17">Niveau 17</option>
-          <option value="18">Niveau 18</option>
-          <option value="19">Niveau 19</option>
-          <option value="20">Niveau 20</option>
-        </select>
-    </div>
-    <div class="ligne-formulaire">
-        <label for="quantite-foe">Nombre de FOE :</label>
-        <select id="quantite-foe">
-          <option value="1">1</option>
-        </select>
-    </div>
-    <div class="ligne-formulaire">
-        <button class="btn-lu centered-button" onclick="generer('foe')">Générer</button>
-    </div>
+          <label for="niveau-foe">Niveau du groupe :</label>
+          <select id="niveau-foe">
+            <option value="1">Niveau 1</option>
+            <option value="2">Niveau 2</option>
+            <option value="3">Niveau 3</option>
+            <option value="4">Niveau 4</option>
+            <option value="5">Niveau 5</option>
+            <option value="6">Niveau 6</option>
+            <option value="7">Niveau 7</option>
+            <option value="8">Niveau 8</option>
+            <option value="9">Niveau 9</option>
+            <option value="10">Niveau 10</option>
+            <option value="11">Niveau 11</option>
+            <option value="12">Niveau 12</option>
+            <option value="13">Niveau 13</option>
+            <option value="14">Niveau 14</option>
+            <option value="15">Niveau 15</option>
+            <option value="16">Niveau 16</option>
+            <option value="17">Niveau 17</option>
+            <option value="18">Niveau 18</option>
+            <option value="19">Niveau 19</option>
+            <option value="20">Niveau 20</option>
+          </select>
+        </div>
+        <div class="ligne-formulaire">
+          <label for="quantite-foe">Nombre de FOE :</label>
+          <select id="quantite-foe">
+            <option value="1">1</option>
+          </select>
+        </div>
+        <div class="ligne-formulaire">
+          <button class="btn-lu centered-button"
+            onclick="generer('foe')">Générer</button>
+        </div>
         <div class="result" id="result-foe"></div>
         <div>
-          <p class="note-expliquee">Les FOE sont des ennemis optionnels servant principalement d'obstacles. Les joueurs ne sont pas censés tous les affronter sur un étage donné, mais peuvent être motivés par leurs récompenses uniques.</p>
+          <p class="note-expliquee">Les FOE sont des ennemis optionnels servant
+            principalement d'obstacles. Les joueurs ne sont pas censés tous les
+            affronter sur un étage donné, mais peuvent être motivés par leurs
+            récompenses uniques.</p>
         </div>
         <div class="nom-monstre-container">
           <label for="nom-monstre">Nom du monstre :</label>
-          <input type="text" id="nom-monstre" placeholder="Nom personnalisé" style="margin-bottom: 1rem; padding: 0.3rem;">
-        <button class="btn-lu centered-button" onclick="exporterFoundry('foe')">
+          <input type="text" id="nom-monstre" placeholder="Nom personnalisé"
+            style="margin-bottom: 1rem; padding: 0.3rem;">
+          <button class="btn-lu centered-button"
+            onclick="exporterFoundry('foe')">
             <i class="fa-solid fa-download"></i> Exporter vers FoundryVTT
           </button>
-          </div>
+        </div>
       </div>
     </main>
     <script>
