@@ -57,10 +57,10 @@ exports.handler = async (event) => {
           error: "Trop de soumissions. Réessaie dans quelques secondes.",
         }),
       };
-    } */
+    }
 
     db[ip] = timestampNow;
-    saveRateLimitDb(db);
+    saveRateLimitDb(db); */
 
     // FLUSH LOGIC
     if (body.flush === true) {
