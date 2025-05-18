@@ -1,13 +1,15 @@
 const kayUrl = "https://s3.codex.eottrpg.memiroa.com/data/characters/kay.json";
-  
+
 const url = new URL(kayUrl);
 url.searchParams.set("nocache", Date.now());
 fetch(url)
-  .then(res => res.json())
-  .then(json => {
+  .then((res) => res.json())
+  .then((json) => {
     const data = json.data;
     const classId = data.system.details.originalClass;
-    const classItem = data.items.find(item => item.type === "class" && item._id === classId);
+    const classItem = data.items.find(
+      (item) => item.type === "class" && item._id === classId
+    );
     const hd = classItem.system.hd;
     const classLevels = classItem.system.levels;
     const abilities = data.system.abilities;
@@ -16,78 +18,85 @@ fetch(url)
     const gold = json.data.system.currency?.gp ?? 0;
     const xp = data.system.details.xp?.value || 0;
     const levelTable = [
-      0, 300, 900, 2700, 6500, 14000, 23000, 34000, 48000, 64000,
-      85000, 100000, 120000, 140000, 165000, 195000, 225000, 265000, 305000
+      0, 300, 900, 2700, 6500, 14000, 23000, 34000, 48000, 64000, 85000, 100000,
+      120000, 140000, 165000, 195000, 225000, 265000, 305000,
     ];
     const allItems = data.items || [];
-    const allowedTypes = ["container", "consumable", "equipment", "tool", "weapon", "loot"];
+    const allowedTypes = [
+      "container",
+      "consumable",
+      "equipment",
+      "tool",
+      "weapon",
+      "loot",
+    ];
     const sortOrder = [
-        "etr",
-        "shield",
-        "tiara",
-        "clothhat",
-        "helmet",
-        "heavyhelmet",
-        "clothing",
-        "light",
-        "medium",
-        "heavy",
-        "gloves",
-        "universalboots",
-        "lightboots",
-        "mediumboots",
-        "heavyboots",
-        "amulets",
-        "rings",
-        "essense",
-        "potion",
-        "thrown",
-        "grenade",
-        "ammo",
-        "poison",
-        "wand",
-        "rod",
-        "scroll",
-        "food",
-        "material",
-        "resource",
-        "treasure",
-        "gem",
-        "gear",
-        "art",
-        "furniture",
-        "etrian",
-        "trinket",
-        "",
-        "key"
-      ];
+      "etr",
+      "shield",
+      "tiara",
+      "clothhat",
+      "helmet",
+      "heavyhelmet",
+      "clothing",
+      "light",
+      "medium",
+      "heavy",
+      "gloves",
+      "universalboots",
+      "lightboots",
+      "mediumboots",
+      "heavyboots",
+      "amulets",
+      "rings",
+      "essense",
+      "potion",
+      "thrown",
+      "grenade",
+      "ammo",
+      "poison",
+      "wand",
+      "rod",
+      "scroll",
+      "food",
+      "material",
+      "resource",
+      "treasure",
+      "gem",
+      "gear",
+      "art",
+      "furniture",
+      "etrian",
+      "trinket",
+      "",
+      "key",
+    ];
 
-      // Fonction de tri
-      const sortByType = (a, b) => {
-        const aType = a.system?.type?.value ?? "";
-        const bType = b.system?.type?.value ?? "";
-        const indexA = sortOrder.indexOf(aType);
-        const indexB = sortOrder.indexOf(bType);
-        return indexA - indexB;
-      };
+    // Fonction de tri
+    const sortByType = (a, b) => {
+      const aType = a.system?.type?.value ?? "";
+      const bType = b.system?.type?.value ?? "";
+      const indexA = sortOrder.indexOf(aType);
+      const indexB = sortOrder.indexOf(bType);
+      return indexA - indexB;
+    };
 
-      const renderItem = item => {
-        const match = item.img.match(/data\/assets\/(.+)/);
-        const relativePath = match ? match[1] : "placeholder.png";
-        const iconPath = `../../assets/images/foundry-icons/${relativePath}`;
-        const quantity = item.system?.quantity;
-        const rarity = item.system?.rarity ?? "common"; // fallback si manquant
+    const renderItem = (item) => {
+      const match = item.img.match(/data\/assets\/(.+)/);
+      const relativePath = match ? match[1] : "placeholder.png";
+      const iconPath = `../../assets/images/foundry-icons/${relativePath}`;
+      const quantity = item.system?.quantity;
+      const rarity = item.system?.rarity ?? "common"; // fallback si manquant
 
-        return `
+      return `
           <div class="item rarity-${rarity}">
             <img src="${iconPath}" alt="${item.name}">
             ${quantity > 1 ? `<span class="quantity">${quantity}</span>` : ""}
             <div class="tooltip">${item.name}</div>
           </div>
         `;
-      };
-      
-      const renderAbility = item => {
+    };
+
+    const renderAbility = (item) => {
       const baseClassPage = "shogun";
       const baseRacePage = "vaisseau";
       const match = item.img.match(/data\/assets\/(.+)/);
@@ -98,14 +107,17 @@ fetch(url)
       const cleanName = item.name.split(" - ")[0].split(" (")[0];
       const slug = cleanName
         .toLowerCase()
-        .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
         .replace(/[^a-z0-9]+/g, "-")
         .replace(/(^-|-$)/g, "");
 
-        let origin = item.system?.requirements?.split(" ")[0]
-        ?.toLowerCase()
-        ?.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-        ?? null;
+      let origin =
+        item.system?.requirements
+          ?.split(" ")[0]
+          ?.toLowerCase()
+          ?.normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "") ?? null;
 
       let link = "#";
       let isLinkValid = false;
@@ -125,18 +137,18 @@ fetch(url)
         }
       }
 
-
       let cssClass = "feature-generic";
       if (item.system?.type?.value === "race") cssClass = "feature-race";
       else if (item.system?.type?.value === "class") cssClass = "feature-class";
 
       return `
       <div class="item">
-        ${isLinkValid
-          ? `<a href="${link}" title="${name}${level}" target="_blank">
+        ${
+          isLinkValid
+            ? `<a href="${link}" title="${name}${level}" target="_blank">
               <img src="${iconPath}" alt="${name}" class="${cssClass}">
             </a>`
-          : `<div class="disabled-icon" title="${name}${level}">
+            : `<div class="disabled-icon" title="${name}${level}">
               <img src="${iconPath}" alt="${name}" class="${cssClass}">
             </div>`
         }
@@ -145,25 +157,34 @@ fetch(url)
     `;
     };
 
-      const featuresDiv = document.getElementById("kay-features");
-      const features = data.items?.filter(item =>
-        (item.type === "feat" || item.type === "classFeature") &&
-        item.img && item.name
+    const featuresDiv = document.getElementById("kay-features");
+    const features =
+      data.items?.filter(
+        (item) =>
+          (item.type === "feat" || item.type === "classFeature") &&
+          item.img &&
+          item.name
       ) || [];
 
-      featuresDiv.innerHTML = `
+    featuresDiv.innerHTML = `
         <div class="inventory">
           ${features.map(renderAbility).join("")}
         </div>
       `;
 
-      const equippedItems = allItems
-        .filter(item => item.system?.equipped === true && allowedTypes.includes(item.type))
-        .sort(sortByType);
+    const equippedItems = allItems
+      .filter(
+        (item) =>
+          item.system?.equipped === true && allowedTypes.includes(item.type)
+      )
+      .sort(sortByType);
 
-      const inventoryItems = allItems
-        .filter(item => item.system?.equipped !== true && allowedTypes.includes(item.type))
-        .sort(sortByType);
+    const inventoryItems = allItems
+      .filter(
+        (item) =>
+          item.system?.equipped !== true && allowedTypes.includes(item.type)
+      )
+      .sort(sortByType);
 
     let html = `
         <div class="inventory-section">
@@ -207,16 +228,19 @@ fetch(url)
     const inspirationTooltip = inspirationImg.nextElementSibling;
 
     if (hasInspiration) {
-      inspirationImg.src = "../../assets/images/inspiration-icons/inspiration-on.png";
+      inspirationImg.src =
+        "../../assets/images/inspiration-icons/inspiration-on.png";
       inspirationImg.className = "inspiration-icon inspiration-glow";
       inspirationTooltip.textContent = "Inspiration";
     } else {
-      inspirationImg.src = "../../assets/images/inspiration-icons/inspiration-off.png";
+      inspirationImg.src =
+        "../../assets/images/inspiration-icons/inspiration-off.png";
       inspirationImg.className = "inspiration-icon inspiration-off";
       inspirationTooltip.textContent = "Pas d'inspiration";
     }
 
-    document.getElementById("gold-value").textContent = gold.toLocaleString("fr-FR");
+    document.getElementById("gold-value").textContent =
+      gold.toLocaleString("fr-FR");
 
     // Mise à jour du niveau
     document.getElementById("level-value").textContent = level;
@@ -225,7 +249,8 @@ fetch(url)
     const xpMin = levelTable[level - 1];
     const xpMax = levelTable[level];
     const ratio = (xp - xpMin) / (xpMax - xpMin);
-    document.getElementById("xp-bar-kay").style.width = `${Math.round(ratio * 100)}%`;
+    document.getElementById("xp-bar-kay").style.width =
+      `${Math.round(ratio * 100)}%`;
     document.getElementById("xp-text").textContent = `${xp} / ${xpMax}`;
 
     stats.innerHTML = `
@@ -241,16 +266,20 @@ fetch(url)
     `;
 
     const updated = new Date(json._codexLastUpdate);
-    document.querySelectorAll(".last-updated").forEach(el => {
-      el.textContent = "Dernière mise à jour : " + updated.toLocaleString("fr-FR", {
-        dateStyle: "short",
-        timeStyle: "short"
-      });
+    document.querySelectorAll(".last-updated").forEach((el) => {
+      el.textContent =
+        "Dernière mise à jour : " +
+        updated.toLocaleString("fr-FR", {
+          dateStyle: "short",
+          timeStyle: "short",
+        });
     });
-    }) // 👈 fermeture du .then
-    .catch(err => {
-      console.error("Erreur lors du chargement des données Kay :", err);
-      document.getElementById("kay-stats").innerHTML =
-        "<em>Données indisponibles. Le fichier JSON n'a pas été trouvé ou le serveur est hors ligne.</em>";
-      document.querySelectorAll(".last-updated").forEach(el => el.textContent = "");
-    });
+  }) // 👈 fermeture du .then
+  .catch((err) => {
+    console.error("Erreur lors du chargement des données Kay :", err);
+    document.getElementById("kay-stats").innerHTML =
+      "<em>Données indisponibles. Le fichier JSON n'a pas été trouvé ou le serveur est hors ligne.</em>";
+    document
+      .querySelectorAll(".last-updated")
+      .forEach((el) => (el.textContent = ""));
+  });

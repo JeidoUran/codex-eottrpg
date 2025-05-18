@@ -1,4 +1,4 @@
-const AWS = require('aws-sdk');
+const AWS = require("aws-sdk");
 const { writeFileSync, readFileSync, existsSync, mkdirSync } = require("fs");
 const path = require("path");
 
@@ -26,18 +26,17 @@ function saveRateLimitDb(db) {
   writeFileSync(RATE_LIMIT_FILE, JSON.stringify(db));
 }
 
-
 const s3 = new AWS.S3({
   accessKeyId: process.env.AWS_KEY,
   secretAccessKey: process.env.AWS_SECRET,
-  region: 'auto',
+  region: "auto",
   endpoint: process.env.S3_ENDPOINT,
   s3ForcePathStyle: true,
-  signatureVersion: 'v4'
+  signatureVersion: "v4",
 });
 
 const BUCKET_NAME = process.env.S3_BUCKET_NAME;
-const FILE_KEY = 'data/dispos/dispos.json';
+const FILE_KEY = "data/dispos/dispos.json";
 
 exports.handler = async (event) => {
   try {
@@ -54,7 +53,9 @@ exports.handler = async (event) => {
     if (timestampNow - lastSubmit < MIN_DELAY) {
       return {
         statusCode: 429,
-        body: JSON.stringify({ error: "Trop de soumissions. Réessaie dans quelques secondes." })
+        body: JSON.stringify({
+          error: "Trop de soumissions. Réessaie dans quelques secondes.",
+        }),
       };
     }
 
@@ -66,16 +67,20 @@ exports.handler = async (event) => {
       let existingData = { meta: {}, reponses: [] };
 
       try {
-        const data = await s3.getObject({ Bucket: BUCKET_NAME, Key: FILE_KEY }).promise();
-        const parsed = JSON.parse(data.Body.toString('utf-8'));
+        const data = await s3
+          .getObject({ Bucket: BUCKET_NAME, Key: FILE_KEY })
+          .promise();
+        const parsed = JSON.parse(data.Body.toString("utf-8"));
         const archiveName = `dispos-${now.slice(0, 7)}.json`;
 
-        await s3.putObject({
-          Bucket: BUCKET_NAME,
-          Key: archiveName,
-          Body: JSON.stringify(parsed, null, 2),
-          ContentType: 'application/json'
-        }).promise();
+        await s3
+          .putObject({
+            Bucket: BUCKET_NAME,
+            Key: archiveName,
+            Body: JSON.stringify(parsed, null, 2),
+            ContentType: "application/json",
+          })
+          .promise();
 
         if (parsed.meta) {
           existingData.meta = parsed.meta;
@@ -84,23 +89,27 @@ exports.handler = async (event) => {
         console.log("Aucune donnée à archiver.");
       }
 
-      await s3.putObject({
-        Bucket: BUCKET_NAME,
-        Key: FILE_KEY,
-        Body: JSON.stringify(existingData, null, 2),
-        ContentType: 'application/json'
-      }).promise();
+      await s3
+        .putObject({
+          Bucket: BUCKET_NAME,
+          Key: FILE_KEY,
+          Body: JSON.stringify(existingData, null, 2),
+          ContentType: "application/json",
+        })
+        .promise();
 
       return {
         statusCode: 200,
-        body: JSON.stringify({ message: "Réinitialisation + archivage OK." })
+        body: JSON.stringify({ message: "Réinitialisation + archivage OK." }),
       };
     }
 
     let existingData = { meta: {}, reponses: [] };
     try {
-      const s3obj = await s3.getObject({ Bucket: BUCKET_NAME, Key: FILE_KEY }).promise();
-      existingData = JSON.parse(s3obj.Body.toString('utf-8'));
+      const s3obj = await s3
+        .getObject({ Bucket: BUCKET_NAME, Key: FILE_KEY })
+        .promise();
+      existingData = JSON.parse(s3obj.Body.toString("utf-8"));
     } catch (e) {
       console.log("Pas de fichier, création nouvelle structure.");
     }
@@ -109,53 +118,61 @@ exports.handler = async (event) => {
     if (body.pseudo && body.dates) {
       const { pseudo, dates, note } = body;
 
-      const cleaned = existingData.reponses.filter(r => r.pseudo.toLowerCase() !== pseudo.toLowerCase());
+      const cleaned = existingData.reponses.filter(
+        (r) => r.pseudo.toLowerCase() !== pseudo.toLowerCase()
+      );
       cleaned.push({ pseudo, dates, note, submittedAt: now });
       existingData.reponses = cleaned;
 
-      await s3.putObject({
-        Bucket: BUCKET_NAME,
-        Key: FILE_KEY,
-        Body: JSON.stringify(existingData, null, 2),
-        ContentType: 'application/json'
-      }).promise();
+      await s3
+        .putObject({
+          Bucket: BUCKET_NAME,
+          Key: FILE_KEY,
+          Body: JSON.stringify(existingData, null, 2),
+          ContentType: "application/json",
+        })
+        .promise();
 
       return {
         statusCode: 200,
-        body: JSON.stringify({ status: "ok", message: "Disponibilités enregistrées." })
+        body: JSON.stringify({
+          status: "ok",
+          message: "Disponibilités enregistrées.",
+        }),
       };
     }
 
     if (body.meta) {
       existingData.meta = {
         ...existingData.meta,
-        ...body.meta
+        ...body.meta,
       };
 
-      await s3.putObject({
-        Bucket: BUCKET_NAME,
-        Key: FILE_KEY,
-        Body: JSON.stringify(existingData, null, 2),
-        ContentType: 'application/json'
-      }).promise();
+      await s3
+        .putObject({
+          Bucket: BUCKET_NAME,
+          Key: FILE_KEY,
+          Body: JSON.stringify(existingData, null, 2),
+          ContentType: "application/json",
+        })
+        .promise();
 
       return {
         statusCode: 200,
-        body: JSON.stringify({ message: 'Période mise à jour.' })
+        body: JSON.stringify({ message: "Période mise à jour." }),
       };
     }
-    
+
     // Aucun cas déclenché
     return {
       statusCode: 400,
-      body: JSON.stringify({ error: "Requête non reconnue." })
+      body: JSON.stringify({ error: "Requête non reconnue." }),
     };
-
   } catch (err) {
     console.error("Erreur serveur :", err);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: "Erreur serveur", detail: err.message })
+      body: JSON.stringify({ error: "Erreur serveur", detail: err.message }),
     };
   }
 };

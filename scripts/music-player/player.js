@@ -1,102 +1,129 @@
-const audio = document.getElementById('audio');
+const audio = document.getElementById("audio");
 const playlistData = {
-  sys: [{
-    src: "https://s3.codex.eottrpg.memiroa.com/audio/sys/eo3-title.mp3",
-    fallbackCover: "cover-sys.jpg",
-    context: "L'écran titre"
-  }],
-  charamake: [{
-    src: "https://s3.codex.eottrpg.memiroa.com/audio/guild/eo1u-guild.mp3",
-    fallbackCover: "cover-sys.jpg",
-    context: "La création de personnage"
-  }, {
-    src: "https://s3.codex.eottrpg.memiroa.com/audio/guild/eo2u-guild.mp3",
-    fallbackCover: "cover-sys.jpg",
-    context: "La création de personnage"
-  }, {
-    src: "https://s3.codex.eottrpg.memiroa.com/audio/guild/eo3-guild-arrange.mp3",
-    fallbackCover: "cover-sys.jpg",
-    context: "La création de personnage"
-  }, {
-    src: "https://s3.codex.eottrpg.memiroa.com/audio/guild/eo4-guild.mp3",
-    fallbackCover: "cover-sys.jpg",
-    context: "La création de personnage"
-  }, {
-    src: "https://s3.codex.eottrpg.memiroa.com/audio/guild/eo5-guild.mp3",
-    fallbackCover: "cover-sys.jpg",
-    context: "La création de personnage"
-  }, {
-    src: "https://s3.codex.eottrpg.memiroa.com/audio/guild/eon-guild.mp3",
-    fallbackCover: "cover-sys.jpg",
-    context: "La création de personnage"
-  }],
-  city: [{
-    src: "https://s3.codex.eottrpg.memiroa.com/audio/city/eo3-city-day-concert.mp3",
-    fallbackCover: "cover-explore.jpg",
-    context: "Voarmur - Jour"
-  }, {
-    src: "https://s3.codex.eottrpg.memiroa.com/audio/city/eo3-city-night-remix.mp3",
-    fallbackCover: "cover-explore.jpg",
-    context: "Voarmur - Nuit"
-  }, {
-    src: "https://s3.codex.eottrpg.memiroa.com/audio/guild/eo3-guild-arrange.mp3",
-    fallbackCover: "cover-sys.jpg",
-    context: "Voarmur - Guilde des Aventuriers"
-  }, {
-    src: "https://s3.codex.eottrpg.memiroa.com/audio/city/eo2u-palace.mp3",
-    fallbackCover: "cover-sys.jpg",
-    context: "Voarmur - Palais du Sénat"
-  }],
-  events: [{
-    src: "https://s3.codex.eottrpg.memiroa.com/audio/city/eo1u-house.mp3",
-    fallbackCover: "cover-explore.jpg",
-    context: "Préparations au Refuge des Vents Errants"
-  }],
-  labyrinth: [{
-    src: "https://s3.codex.eottrpg.memiroa.com/audio/dungeon/eo3-dungeon1-remix.mp3",
-    fallbackCover: "cover-explore.jpg",
-    context: "La 1ère Strate - Le Bois de la Cascade"
-  }],
-  battle: [{
-    src: "https://s3.codex.eottrpg.memiroa.com/audio/battle/first/eo1u-battle-first.mp3",
-    fallbackCover: "cover-explore.jpg",
-    context: "Combat contre des monstres"
-  }, {
-    src: "https://s3.codex.eottrpg.memiroa.com/audio/battle/first/eo2u-battle-first.mp3",
-    fallbackCover: "cover-explore.jpg",
-    context: "Combat contre des monstres"
-  }, {
-    src: "https://s3.codex.eottrpg.memiroa.com/audio/battle/first/eo3-battle-first-remix.mp3",
-    fallbackCover: "cover-explore.jpg",
-    context: "Combat contre des monstres"
-  }, {
-    src: "https://s3.codex.eottrpg.memiroa.com/audio/battle/first/eo4-battle-first.mp3",
-    fallbackCover: "cover-explore.jpg",
-    context: "Combat contre des monstres"
-  }, {
-    src: "https://s3.codex.eottrpg.memiroa.com/audio/battle/first/eo5-battle-first.mp3",
-    fallbackCover: "cover-explore.jpg",
-    context: "Combat contre des monstres"
-  }, {
-    src: "https://s3.codex.eottrpg.memiroa.com/audio/battle/first/eon-battle-first.mp3",
-    fallbackCover: "cover-explore.jpg",
-    context: "Combat contre des monstres"
-  }],
+  sys: [
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/sys/eo3-title.mp3",
+      fallbackCover: "cover-sys.jpg",
+      context: "L'écran titre",
+    },
+  ],
+  charamake: [
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/guild/eo1u-guild.mp3",
+      fallbackCover: "cover-sys.jpg",
+      context: "La création de personnage",
+    },
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/guild/eo2u-guild.mp3",
+      fallbackCover: "cover-sys.jpg",
+      context: "La création de personnage",
+    },
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/guild/eo3-guild-arrange.mp3",
+      fallbackCover: "cover-sys.jpg",
+      context: "La création de personnage",
+    },
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/guild/eo4-guild.mp3",
+      fallbackCover: "cover-sys.jpg",
+      context: "La création de personnage",
+    },
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/guild/eo5-guild.mp3",
+      fallbackCover: "cover-sys.jpg",
+      context: "La création de personnage",
+    },
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/guild/eon-guild.mp3",
+      fallbackCover: "cover-sys.jpg",
+      context: "La création de personnage",
+    },
+  ],
+  city: [
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/city/eo3-city-day-concert.mp3",
+      fallbackCover: "cover-explore.jpg",
+      context: "Voarmur - Jour",
+    },
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/city/eo3-city-night-remix.mp3",
+      fallbackCover: "cover-explore.jpg",
+      context: "Voarmur - Nuit",
+    },
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/guild/eo3-guild-arrange.mp3",
+      fallbackCover: "cover-sys.jpg",
+      context: "Voarmur - Guilde des Aventuriers",
+    },
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/city/eo2u-palace.mp3",
+      fallbackCover: "cover-sys.jpg",
+      context: "Voarmur - Palais du Sénat",
+    },
+  ],
+  events: [
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/city/eo1u-house.mp3",
+      fallbackCover: "cover-explore.jpg",
+      context: "Préparations au Refuge des Vents Errants",
+    },
+  ],
+  labyrinth: [
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/dungeon/eo3-dungeon1-remix.mp3",
+      fallbackCover: "cover-explore.jpg",
+      context: "La 1ère Strate - Le Bois de la Cascade",
+    },
+  ],
+  battle: [
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/battle/first/eo1u-battle-first.mp3",
+      fallbackCover: "cover-explore.jpg",
+      context: "Combat contre des monstres",
+    },
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/battle/first/eo2u-battle-first.mp3",
+      fallbackCover: "cover-explore.jpg",
+      context: "Combat contre des monstres",
+    },
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/battle/first/eo3-battle-first-remix.mp3",
+      fallbackCover: "cover-explore.jpg",
+      context: "Combat contre des monstres",
+    },
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/battle/first/eo4-battle-first.mp3",
+      fallbackCover: "cover-explore.jpg",
+      context: "Combat contre des monstres",
+    },
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/battle/first/eo5-battle-first.mp3",
+      fallbackCover: "cover-explore.jpg",
+      context: "Combat contre des monstres",
+    },
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/battle/first/eon-battle-first.mp3",
+      fallbackCover: "cover-explore.jpg",
+      context: "Combat contre des monstres",
+    },
+  ],
   foe: [],
-  boss: [{
-    src: "https://s3.codex.eottrpg.memiroa.com/audio/battle/boss/eo2u-battle-boss.mp3",
-    fallbackCover: "cover-explore.jpg",
-    context: "Combat contre le Grand lynx α"
-  }]
+  boss: [
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/battle/boss/eo2u-battle-boss.mp3",
+      fallbackCover: "cover-explore.jpg",
+      context: "Combat contre le Grand lynx α",
+    },
+  ],
 };
 let trackElements = [];
 let currentTrackIndex = 0;
-let currentPlaylist = 'sys';
-const playlist = document.getElementById('playlist');
+let currentPlaylist = "sys";
+const playlist = document.getElementById("playlist");
 // Remplir la playlist dynamiquement
 function loadPlaylist(playlistKey) {
   const tracks = playlistData[playlistKey];
-  playlist.classList.remove('visible');
+  playlist.classList.remove("visible");
   setTimeout(() => {
     playlist.innerHTML = "";
     trackElements = [];
@@ -107,18 +134,17 @@ function loadPlaylist(playlistKey) {
       return;
     }
     const tagReaders = tracks.map((track, index) => {
-        return new Promise((resolve) => {
+      return new Promise((resolve) => {
         window.jsmediatags.read(track.src, {
-          onSuccess: function(tag) {
+          onSuccess: function (tag) {
             const title = tag.tags.title || `Piste ${index + 1}`;
             const artist = tag.tags.artist || "Artiste inconnu";
             let imageUrl = track.fallbackCover;
             if (tag.tags.picture) {
-              const {
-                data,
-                format
-              } = tag.tags.picture;
-              const base64String = data.map(byte => String.fromCharCode(byte)).join('');
+              const { data, format } = tag.tags.picture;
+              const base64String = data
+                .map((byte) => String.fromCharCode(byte))
+                .join("");
               imageUrl = `data:${format};base64,${btoa(base64String)}`;
             }
             resolve({
@@ -127,10 +153,10 @@ function loadPlaylist(playlistKey) {
               title,
               artist,
               imageUrl,
-              context: track.context || ""
+              context: track.context || "",
             });
           },
-          onError: function(error) {
+          onError: function (error) {
             console.warn("Erreur lecture des tags :", error);
             resolve({
               index,
@@ -138,13 +164,13 @@ function loadPlaylist(playlistKey) {
               title: `Piste ${index + 1}`,
               artist: "Artiste inconnu",
               imageUrl: track.fallbackCover,
-              context: track.context || ""
+              context: track.context || "",
             });
-          }
+          },
         });
       });
     });
-    Promise.all(tagReaders).then(results => {
+    Promise.all(tagReaders).then((results) => {
       // Tri par index (juste au cas où)
       results.sort((a, b) => a.index - b.index);
       results.forEach((trackData, i) => {
@@ -165,46 +191,51 @@ function loadPlaylist(playlistKey) {
 `;
         li.addEventListener("click", () => {
           playTrack(i);
-          document.getElementById('playPauseBtn').innerHTML = '<i class="fa-solid fa-pause"></i>';
+          document.getElementById("playPauseBtn").innerHTML =
+            '<i class="fa-solid fa-pause"></i>';
         });
         playlist.appendChild(li);
         trackElements.push(li);
       });
       // fade-in après ajout
       setTimeout(() => {
-        playlist.classList.add('visible');
+        playlist.classList.add("visible");
       }, 50);
     });
   }, 300); // Attendre la transition fade-out
 }
 // Gestion des onglets
-document.querySelectorAll(".tab-button").forEach(btn => {
+document.querySelectorAll(".tab-button").forEach((btn) => {
   btn.addEventListener("click", () => {
-    document.querySelectorAll(".tab-button").forEach(b => b.classList.remove("active"));
+    document
+      .querySelectorAll(".tab-button")
+      .forEach((b) => b.classList.remove("active"));
     btn.classList.add("active");
     loadPlaylist(btn.dataset.playlist);
   });
 });
 // Charger la playlist par défaut au démarrage
-const trackTitle = document.getElementById('track-title');
-const trackArtist = document.getElementById('track-artist');
-const trackArt = document.getElementById('track-art');
-const playBtn = document.getElementById('playPauseBtn');
-const progressBar = document.getElementById('progressBar');
-const timeDisplay = document.getElementById('timeDisplay');
-const progressContainer = document.querySelector('.progress-container');
+const trackTitle = document.getElementById("track-title");
+const trackArtist = document.getElementById("track-artist");
+const trackArt = document.getElementById("track-art");
+const playBtn = document.getElementById("playPauseBtn");
+const progressBar = document.getElementById("progressBar");
+const timeDisplay = document.getElementById("timeDisplay");
+const progressContainer = document.querySelector(".progress-container");
 
 function formatTime(seconds) {
   const minutes = Math.floor(seconds / 60);
-  const secs = Math.floor(seconds % 60).toString().padStart(2, '0');
+  const secs = Math.floor(seconds % 60)
+    .toString()
+    .padStart(2, "0");
   return `${minutes}:${secs}`;
 }
-audio.addEventListener('timeupdate', () => {
+audio.addEventListener("timeupdate", () => {
   const progress = (audio.currentTime / audio.duration) * 100;
   progressBar.style.width = `${progress}%`;
   timeDisplay.textContent = formatTime(audio.currentTime);
 });
-playBtn.addEventListener('click', () => {
+playBtn.addEventListener("click", () => {
   if (audio.paused) {
     audio.play();
     playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
@@ -213,30 +244,34 @@ playBtn.addEventListener('click', () => {
     playBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
   }
 });
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
 // Récupère les pistes
-const tracks = [...playlist.querySelectorAll('li')];
+const tracks = [...playlist.querySelectorAll("li")];
 // let currentTrackIndex = tracks.findIndex(li => li.dataset.src === audio.src);
 // Joue une piste donnée
 function playTrack(index) {
-  const totalTimeDisplay = document.getElementById('totalTimeDisplay');
+  const totalTimeDisplay = document.getElementById("totalTimeDisplay");
   const track = trackElements[index];
   if (!track) return;
-  const trackContext = document.getElementById('track-context');
+  const trackContext = document.getElementById("track-context");
   trackContext.textContent = track.dataset.context || "";
   currentTrackIndex = index;
   audio.src = track.dataset.src;
   // Attendre que les métadonnées soient chargées
-  audio.addEventListener("loadedmetadata", () => {
-    totalTimeDisplay.textContent = formatTime(audio.duration);
-  }, {
-    once: true
-  }); // ⚠️ important : une seule fois, sinon ça s'empile !
+  audio.addEventListener(
+    "loadedmetadata",
+    () => {
+      totalTimeDisplay.textContent = formatTime(audio.duration);
+    },
+    {
+      once: true,
+    }
+  ); // ⚠️ important : une seule fois, sinon ça s'empile !
   audio.play();
   // Mise à jour visuelle
-  trackElements.forEach(t => t.classList.remove('playing'));
-  track.classList.add('playing');
+  trackElements.forEach((t) => t.classList.remove("playing"));
+  track.classList.add("playing");
   trackTitle.textContent = track.dataset.title || "Titre inconnu";
   trackArtist.textContent = track.dataset.artist || "Artiste inconnu";
   trackArt.src = track.dataset.cover || "cover.jpg";
@@ -253,7 +288,7 @@ audio.addEventListener("ended", () => {
 });
 
 // Bouton précédent
-prevBtn.addEventListener('click', () => {
+prevBtn.addEventListener("click", () => {
   if (currentTrackIndex > 0) {
     playTrack(currentTrackIndex - 1);
   } else {
@@ -261,7 +296,7 @@ prevBtn.addEventListener('click', () => {
   }
 });
 // Bouton suivant
-nextBtn.addEventListener('click', () => {
+nextBtn.addEventListener("click", () => {
   if (currentTrackIndex < trackElements.length - 1) {
     playTrack(currentTrackIndex + 1);
   } else {
@@ -270,62 +305,63 @@ nextBtn.addEventListener('click', () => {
 });
 
 // Quand une piste est cliquée dans la playlist
-playlist.addEventListener('click', e => {
-  const li = e.target.closest('li');
+playlist.addEventListener("click", (e) => {
+  const li = e.target.closest("li");
   if (!li || !playlist.contains(li)) return;
   const clickedIndex = trackElements.indexOf(li);
   playTrack(clickedIndex);
 });
-const volumeSlider = document.getElementById('volumeSlider');
-const volumeIcon = document.getElementById('volumeIcon');
+const volumeSlider = document.getElementById("volumeSlider");
+const volumeIcon = document.getElementById("volumeIcon");
 // Appliquer la valeur du slider au démarrage
 window.addEventListener("DOMContentLoaded", () => {
   const initialVolume = parseFloat(volumeSlider.value || 1);
   audio.volume = initialVolume;
   // Met à jour l'icône si besoin
   if (initialVolume === 0) {
-    volumeIcon.className = 'fas fa-volume-xmark';
+    volumeIcon.className = "fas fa-volume-xmark";
   } else if (initialVolume < 0.5) {
-    volumeIcon.className = 'fas fa-volume-low';
+    volumeIcon.className = "fas fa-volume-low";
   } else {
-    volumeIcon.className = 'fas fa-volume-high';
+    volumeIcon.className = "fas fa-volume-high";
   }
 });
 let lastVolume = volumeSlider.value;
-volumeSlider.addEventListener('input', () => {
+volumeSlider.addEventListener("input", () => {
   audio.volume = volumeSlider.value;
   // Sauvegarde du volume si non nul
   if (volumeSlider.value > 0) lastVolume = volumeSlider.value;
   // Changement d’icône en fonction du volume
   if (audio.volume == 0) {
-    volumeIcon.className = 'fas fa-volume-xmark';
+    volumeIcon.className = "fas fa-volume-xmark";
   } else if (audio.volume < 0.5) {
-    volumeIcon.className = 'fas fa-volume-low';
+    volumeIcon.className = "fas fa-volume-low";
   } else {
-    volumeIcon.className = 'fas fa-volume-high';
+    volumeIcon.className = "fas fa-volume-high";
   }
 });
-volumeIcon.addEventListener('click', () => {
+volumeIcon.addEventListener("click", () => {
   if (audio.volume > 0) {
     lastVolume = audio.volume;
     audio.volume = 0;
     volumeSlider.value = 0;
-    volumeIcon.className = 'fas fa-volume-xmark';
+    volumeIcon.className = "fas fa-volume-xmark";
   } else {
     audio.volume = lastVolume || 1;
     volumeSlider.value = audio.volume;
-    volumeIcon.className = audio.volume < 0.5 ? 'fas fa-volume-low' : 'fas fa-volume-high';
+    volumeIcon.className =
+      audio.volume < 0.5 ? "fas fa-volume-low" : "fas fa-volume-high";
   }
 });
-progressContainer.addEventListener('click', (e) => {
+progressContainer.addEventListener("click", (e) => {
   const rect = progressContainer.getBoundingClientRect();
   const clickX = e.clientX - rect.left;
   const width = rect.width;
   const newTime = (clickX / width) * audio.duration;
   audio.currentTime = newTime;
 });
-playlist.addEventListener('click', e => {
-  if (e.target.tagName === 'LI') {
+playlist.addEventListener("click", (e) => {
+  if (e.target.tagName === "LI") {
     audio.src = e.target.dataset.src;
     audio.play();
     trackTitle.textContent = e.target.dataset.title || "Titre inconnu";
