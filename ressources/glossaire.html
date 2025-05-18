@@ -1,98 +1,140 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Glossaire | Codex - Etrian Odyssey TTRPG</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="../favicon.png" type="image/png">
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-  <canvas id="particles"></canvas>
+  <head>
+    <meta charset="UTF-8">
+    <title>Glossaire | Codex - Etrian Odyssey TTRPG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <canvas id="particles"></canvas>
 
-  <nav class="patch-nav">
-       <a href="#bonus-malus-vs-afflictions-etats">Bonus & Malus vs. Afflictions & États</a>
-       <a href="#points-d-action">Points d’Action (PA)</a>
-       <a href="#actions-et-reactions">Actions et Réactions</a>
-       <a href="#portee">Portée</a>
-       <a href="#ligne-de-vue">Ligne de vue</a>
-  </nav>
+    <nav class="patch-nav">
+      <a href="#bonus-malus-vs-afflictions-etats">Bonus & Malus vs. Afflictions
+        & États</a>
+      <a href="#points-d-action">Points d’Action (PA)</a>
+      <a href="#actions-et-reactions">Actions et Réactions</a>
+      <a href="#portee">Portée</a>
+      <a href="#ligne-de-vue">Ligne de vue</a>
+    </nav>
 
-  <header class="codex-header">
-    <a href="/" class="banniere-link"><img src="../assets/images/banniere.png" alt="Bannière" class="banniere"></a>
-    <h1>Glossaire</h1>
-    <p class="sous-titre">L’archive vivante des Égarés</p>
-  </header>
+    <header class="codex-header">
+      <a href="/" class="banniere-link"><img src="../assets/images/banniere.png"
+          alt="Bannière" class="banniere"></a>
+      <h1>Glossaire</h1>
+      <p class="sous-titre">L’archive vivante des Égarés</p>
+    </header>
 
-  <nav class="nav-magique">
-    <a href="/">Accueil</a>
-    <a href="/../notes/">Patch Notes</a>
-    <a href="/../regles/">Règles</a>
-    <a href="/../univers/">Univers</a>
-    <a href="../musique">Musiques</a>
-    <a href="/../ressources/">Ressources</a>
-    <a href="../credits">Crédits</a>
-  </nav>
+    <nav class="nav-magique">
+      <a href="/">Accueil</a>
+      <a href="/../notes/">Patch Notes</a>
+      <a href="/../regles/">Règles</a>
+      <a href="/../univers/">Univers</a>
+      <a href="../musique">Musiques</a>
+      <a href="/../ressources/">Ressources</a>
+      <a href="../credits">Crédits</a>
+    </nav>
 
-  <main class="accueil">
-    <div class="patch-list">
+    <main class="accueil">
+      <div class="patch-list">
 
-    <article class="effet-bloc" id="bonus-malus-vs-afflictions-etats">
-      <h4>Bonus & Malus vs. Afflictions & États</h4>
-      <p>
-        Un <strong>bonus</strong> ou un <strong>malus</strong> est une modification numérique simple d’une ou plusieurs caractéristiques (par exemple, +1d4 en Offense, -2 en Vitesse). Ces effets sont immédiats, quantifiables et n’ont pas d’impact supplémentaire.
-      </p>
-      <p>
-        À l’inverse, une <strong>affliction</strong> ou un <strong>état</strong> induit des effets plus complexes et spécifiques : limitations d’actions, altérations de comportement, conditions de dissipation, etc. Par exemple, la <em>Paralysie</em> réduit la Vitesse de moitié et empêche l’utilisation de certaines actions.
-      </p>
-    </article>
+        <article class="effet-bloc" id="bonus-malus-vs-afflictions-etats">
+          <h4>Bonus & Malus vs. Afflictions & États</h4>
+          <p>
+            Un <strong>bonus</strong> ou un <strong>malus</strong> est une
+            modification numérique simple d’une ou plusieurs caractéristiques
+            (par exemple, +1d4 en Offense, -2 en Vitesse). Ces effets sont
+            immédiats, quantifiables et n’ont pas d’impact supplémentaire.
+          </p>
+          <p>
+            À l’inverse, une <strong>affliction</strong> ou un
+            <strong>état</strong> induit des effets plus complexes et
+            spécifiques : limitations d’actions, altérations de comportement,
+            conditions de dissipation, etc. Par exemple, la <em>Paralysie</em>
+            réduit la Vitesse de moitié et empêche l’utilisation de certaines
+            actions.
+          </p>
+        </article>
 
-    <article class="effet-bloc" id="points-d-action">
-      <h4>Points d’Action (PA)</h4>
-      <p>
-        Les Points d’Action (<img src="/assets/images/action-costs/action-point.png" class="inline-icon"> PA) sont la ressource principale pour effectuer des actions en combat. Chaque personnage en regagne <strong>3 au début de son tour</strong>, jusqu’à un maximum de 4. Les PA non utilisés sont conservés entre les tours.
-      </p>
-      <p>
-        Différentes actions ont un coût en PA : une action standard coûte 2 PA, une action bonus, combo, ou une réaction coûte 1 PA, une action complexe coûte 3 PA.
-      </p>
-    </article>
+        <article class="effet-bloc" id="points-d-action">
+          <h4>Points d’Action (PA)</h4>
+          <p>
+            Les Points d’Action (<img
+              src="/assets/images/action-costs/action-point.png"
+              class="inline-icon"> PA) sont la ressource principale pour
+            effectuer des actions en combat. Chaque personnage en regagne
+            <strong>3 au début de son tour</strong>, jusqu’à un maximum de 4.
+            Les PA non utilisés sont conservés entre les tours.
+          </p>
+          <p>
+            Différentes actions ont un coût en PA : une action standard coûte 2
+            PA, une action bonus, combo, ou une réaction coûte 1 PA, une action
+            complexe coûte 3 PA.
+          </p>
+        </article>
 
-    <article class="effet-bloc" id="actions-et-reactions">
-      <h4>Actions et Réactions</h4>
-      <p>
-        Une <strong>action standard</strong> (<img src="/assets/images/action-costs/action.png" class="inline-icon">) est l’action principale d’un tour. Une <strong>action bonus</strong> (<img src="/assets/images/action-costs/bonus-action.png" class="inline-icon">) peut être utilisée si une capacité ou un effet l’autorise. Une <strong>réaction</strong> (<img src="/assets/images/action-costs/reaction.png" class="inline-icon">)  se déclenche en dehors de son tour, en réponse à une condition spécifique (ex : subir une attaque, voir un ennemi se déplacer...).
-      </p>
-      <p>
-        Une <strong>action combo</strong> (<img src="/assets/images/action-costs/combo-action.png" class="inline-icon">) est une action spéciale qui ne peut être utilisée que <strong>juste après une action spécifique</strong> dans le même tour. Elle coûte 1 PA et crée un enchaînement unique.
-      </p>
-      <p>
-        Une <strong>action complexe</strong> (<img src="/assets/images/action-costs/heavy-action.png" class="inline-icon">) est une action puissante qui coûte 3 PA et ne peut être utilisée qu’une seule fois par round. Il peut s’agir d’une invocation, d’une canalisation, ou d’une manœuvre lourde.
-      </p>
-    </article>    
+        <article class="effet-bloc" id="actions-et-reactions">
+          <h4>Actions et Réactions</h4>
+          <p>
+            Une <strong>action standard</strong> (<img
+              src="/assets/images/action-costs/action.png" class="inline-icon">)
+            est l’action principale d’un tour. Une <strong>action bonus</strong>
+            (<img src="/assets/images/action-costs/bonus-action.png"
+              class="inline-icon">) peut être utilisée si une capacité ou un
+            effet l’autorise. Une <strong>réaction</strong> (<img
+              src="/assets/images/action-costs/reaction.png"
+              class="inline-icon">) se déclenche en dehors de son tour, en
+            réponse à une condition spécifique (ex : subir une attaque, voir un
+            ennemi se déplacer...).
+          </p>
+          <p>
+            Une <strong>action combo</strong> (<img
+              src="/assets/images/action-costs/combo-action.png"
+              class="inline-icon">) est une action spéciale qui ne peut être
+            utilisée que <strong>juste après une action spécifique</strong> dans
+            le même tour. Elle coûte 1 PA et crée un enchaînement unique.
+          </p>
+          <p>
+            Une <strong>action complexe</strong> (<img
+              src="/assets/images/action-costs/heavy-action.png"
+              class="inline-icon">) est une action puissante qui coûte 3 PA et
+            ne peut être utilisée qu’une seule fois par round. Il peut s’agir
+            d’une invocation, d’une canalisation, ou d’une manœuvre lourde.
+          </p>
+        </article>
 
-    <article class="effet-bloc" id="portee">
-      <h4>Portée</h4>
-      <p>
-        La <strong>portée</strong> d’une attaque ou d’un effet correspond à la distance maximale à laquelle elle peut atteindre une cible. Les portées peuvent être en cases (ex : 3 cases) ou définies par des mots-clés (contact, ligne droite, en ligne de vue…).
-      </p>
-    </article>
-    
-    <article class="effet-bloc" id="ligne-de-vue">
-      <h4>Ligne de vue</h4>
-      <p>
-        Un personnage a la <strong>ligne de vue</strong> sur une cible s’il peut tracer une ligne droite jusqu’à elle sans obstacle majeur. Certains effets exigent une ligne de vue directe pour être utilisés, tandis que d'autres peuvent la contourner (ex : zone, rebond, etc.).
-      </p>
-    </article>
+        <article class="effet-bloc" id="portee">
+          <h4>Portée</h4>
+          <p>
+            La <strong>portée</strong> d’une attaque ou d’un effet correspond à
+            la distance maximale à laquelle elle peut atteindre une cible. Les
+            portées peuvent être en cases (ex : 3 cases) ou définies par des
+            mots-clés (contact, ligne droite, en ligne de vue…).
+          </p>
+        </article>
 
-    </div>
-  </main>
+        <article class="effet-bloc" id="ligne-de-vue">
+          <h4>Ligne de vue</h4>
+          <p>
+            Un personnage a la <strong>ligne de vue</strong> sur une cible s’il
+            peut tracer une ligne droite jusqu’à elle sans obstacle majeur.
+            Certains effets exigent une ligne de vue directe pour être utilisés,
+            tandis que d'autres peuvent la contourner (ex : zone, rebond, etc.).
+          </p>
+        </article>
 
-  <footer>
-    <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
-  </footer>
+      </div>
+    </main>
 
-  <script>
+    <footer>
+      <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+    </footer>
+
+    <script>
     document.addEventListener("DOMContentLoaded", function() {
           const navContainer = document.querySelector('.patch-nav');
           const navLinks = document.querySelectorAll('.patch-nav a[href^="#"]');
@@ -131,6 +173,6 @@
        sections.forEach(section => observer.observe(section));
        });
   </script>
-  <script src="../scripts/particles.js"></script>
-</body>
+    <script src="../scripts/particles.js"></script>
+  </body>
 </html>

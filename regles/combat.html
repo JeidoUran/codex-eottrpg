@@ -1,162 +1,239 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Système de Combat | Codex - Etrian Odyssey TTRPG</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="../favicon.png" type="image/png">
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-  <canvas id="particles"></canvas>
+  <head>
+    <meta charset="UTF-8">
+    <title>Système de Combat | Codex - Etrian Odyssey TTRPG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <canvas id="particles"></canvas>
 
-  <header class="codex-header">
-    <a href="/" class="banniere-link"><img src="../assets/images/banniere.png" alt="Bannière" class="banniere"></a>
-    <h1>Système de Combat</h1>
-    <p class="sous-titre">L’archive vivante des Égarés</p>
-  </header>
+    <header class="codex-header">
+      <a href="/" class="banniere-link"><img src="../assets/images/banniere.png"
+          alt="Bannière" class="banniere"></a>
+      <h1>Système de Combat</h1>
+      <p class="sous-titre">L’archive vivante des Égarés</p>
+    </header>
 
-  <nav class="nav-magique">
-    <a href="/">Accueil</a>
-    <a href="/../notes/">Patch Notes</a>
-    <a href="/../regles/">Règles</a>
-    <a href="/../univers/">Univers</a>
-    <a href="../musique">Musiques</a>
-    <a href="/../ressources/">Ressources</a>
-    <a href="../credits">Crédits</a>
-  </nav>
+    <nav class="nav-magique">
+      <a href="/">Accueil</a>
+      <a href="/../notes/">Patch Notes</a>
+      <a href="/../regles/">Règles</a>
+      <a href="/../univers/">Univers</a>
+      <a href="../musique">Musiques</a>
+      <a href="/../ressources/">Ressources</a>
+      <a href="../credits">Crédits</a>
+    </nav>
 
-  <main class="accueil">
-    <div class="patch-list">
-    <article class="article-combat">
-      <h2>Introduction au combat</h2>
-      <p>Cette page détaille les mécaniques de combat du Codex, incluant l'ordre des tours, les points d'action, les actions disponibles et les règles d'afflictions.</p>
-    </article>
+    <main class="accueil">
+      <div class="patch-list">
+        <article class="article-combat">
+          <h2>Introduction au combat</h2>
+          <p>Cette page détaille les mécaniques de combat du Codex, incluant
+            l'ordre des tours, les points d'action, les actions disponibles et
+            les règles d'afflictions.</p>
+        </article>
 
-    <article class="article-combat">
-      <h2>Ordre des tours</h2>
-      <p>
-        Le combat se déroule en <strong>rounds</strong>, durant lesquels les joueurs et les ennemis agissent tour à tour. L’ordre est fixe et alterne entre <strong>tours de joueurs</strong> et <strong>tours d’ennemis</strong>, en commençant généralement par un joueur.
-      </p>
-    
-      <ul class="image-list">
-        <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte"><strong>Début du combat :</strong> Les joueurs choisissent l’ordre dans lequel ils joueront. Si des ennemis surprennent le groupe, ils agissent en premier.</div></li>
-        <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte"><strong>Début du tour :</strong> Au début de leur tour, chaque personnage gagne <strong>3 <img src="../assets/images/action-costs/action-point.png" class="inline-icon"> Points d’Action (PA)</strong>, jusqu’à un maximum de 4. Les PA non dépensés sont conservés entre les rounds.</div></li>
-        <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte"><strong>Alternance :</strong> Les joueurs et les ennemis agissent à tour de rôle, en alternant à chaque action (ex : joueur, ennemi, joueur, ennemi...). Une fois que tous ont agi, un nouveau round commence.</div></li>
-        <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte"><strong>Exceptions :</strong> Si des effets influencent l’ordre d’action, les joueurs concernés décident ensemble qui agit en priorité.</div></li>
-      </ul>
-    
-      <p>
-        Les réactions</strong> et certains effets peuvent s’activer en dehors de ce cycle classique. Un joueur distrait (qui ne remarque pas les ennemis) ne gagne que <strong>2 PA</strong> lors de son premier tour et aucun PA au déclenchement du combat.
-      </p>
-    </article>
+        <article class="article-combat">
+          <h2>Ordre des tours</h2>
+          <p>
+            Le combat se déroule en <strong>rounds</strong>, durant lesquels les
+            joueurs et les ennemis agissent tour à tour. L’ordre est fixe et
+            alterne entre <strong>tours de joueurs</strong> et <strong>tours
+              d’ennemis</strong>, en commençant généralement par un joueur.
+          </p>
 
-    <article class="article-combat">
-      <h2>Actions disponibles</h2>
-      <ul class="image-list">
-        <li><img src="../assets/images/notes-medium.png" class="image">
-          <div class="image-texte">
-            <strong><img src="../assets/images/action-costs/action.png" class="inline-icon">Actions (2 PA) :</strong> Attaque, sort, interaction standard... Une action coûte <strong>2 PA</strong> et peut être effectuée plusieurs fois par tour tant que les PA le permettent.
-          </div>
-        </li>
-        <li><img src="../assets/images/notes-medium.png" class="image">
-          <div class="image-texte">
-            <strong><img src="../assets/images/action-costs/bonus-action.png" class="inline-icon">Actions Bonus (1 PA) :</strong> Une fois par round, un personnage peut effectuer une action spéciale à coût réduit (ex. : recharger, activer une capacité...).
-          </div>
-        </li>
-        <li><img src="../assets/images/notes-medium.png" class="image">
-          <div class="image-texte">
-            <strong><img src="../assets/images/action-costs/reaction.png" class="inline-icon"> Réactions (1 PA) :</strong> Une fois par round, certaines aptitudes permettent d’agir en dehors de son tour en réponse à une action ennemie.
-          </div>
-        </li>
-        <li><img src="../assets/images/notes-medium.png" class="image">
-          <div class="image-texte">
-            <strong><img src="../assets/images/action-costs/combo-action.png" class="inline-icon">Actions Combo (1 PA) :</strong> Une seule par round. Ces actions peuvent uniquement être utilisées en <strong>enchaînement avec une action spécifique</strong> effectuée juste avant, créant un effet combiné.
-          </div>
-        </li>
-        <li><img src="../assets/images/notes-medium.png" class="image">
-          <div class="image-texte">
-            <strong><img src="../assets/images/action-costs/heavy-action.png" class="inline-icon">Actions Complexes (3 PA) :</strong> Une seule par round. Ce sont des actions puissantes ou prolongées : canalisation, invocation, manœuvre lourde, etc.
-          </div>
-        </li>
-        <li><img src="../assets/images/notes-medium.png" class="image">
-          <div class="image-texte">
-            <strong><img src="../assets/images/action-costs/movement.png" class="inline-icon">Déplacement :</strong> Le déplacement ne coûte pas de PA, mais il est limité à la <strong>vitesse</strong> du personnage. Il peut être effectué avant ou après une action.
-          </div>
-        </li>
-      </ul>
-      
-    </article>
+          <ul class="image-list">
+            <li><img src="../assets/images/notes-medium.png" class="image"><div
+                class="image-texte"><strong>Début du combat :</strong> Les
+                joueurs choisissent l’ordre dans lequel ils joueront. Si des
+                ennemis surprennent le groupe, ils agissent en
+                premier.</div></li>
+            <li><img src="../assets/images/notes-medium.png" class="image"><div
+                  class="image-texte"><strong>Début du tour :</strong> Au début
+                  de leur tour, chaque personnage gagne <strong>3 <img
+                      src="../assets/images/action-costs/action-point.png"
+                      class="inline-icon"> Points d’Action (PA)</strong>,
+                  jusqu’à un maximum de 4. Les PA non dépensés sont conservés
+                  entre les rounds.</div></li>
+              <li><img src="../assets/images/notes-medium.png"
+                  class="image"><div class="image-texte"><strong>Alternance
+                    :</strong> Les joueurs et les ennemis agissent à tour de
+                  rôle, en alternant à chaque action (ex : joueur, ennemi,
+                  joueur, ennemi...). Une fois que tous ont agi, un nouveau
+                  round commence.</div></li>
+              <li><img src="../assets/images/notes-medium.png"
+                  class="image"><div class="image-texte"><strong>Exceptions
+                    :</strong> Si des effets influencent l’ordre d’action, les
+                  joueurs concernés décident ensemble qui agit en
+                  priorité.</div></li>
+            </ul>
 
-    <article class="article-combat">
-      <h2>Jet de Précision</h2>
-      <p>
-        Lorsqu’un personnage effectue une attaque avec une arme, il ne lance plus un d20 classique, mais un <strong>dé de Précision</strong> spécifique à l’arme utilisée.
-      </p>
-      <p>
-        Ce dé remplace le jet d’attaque habituel. Le joueur y ajoute ses modificateurs habituels (Force ou Dextérité, selon l’arme) et son bonus de maîtrise si applicable.
-      </p>
-      <p>
-        → Retrouvez la liste des armes et de leurs dés de précision sur la page <a href="/regles/equipement.html"><strong>Équipements</strong></a>.
-      </p>
-    </article>    
+            <p>
+              Les réactions</strong> et certains effets peuvent s’activer en
+            dehors de ce cycle classique. Un joueur distrait (qui ne remarque
+            pas les ennemis) ne gagne que <strong>2 PA</strong> lors de son
+            premier tour et aucun PA au déclenchement du combat.
+          </p>
+        </article>
 
-    <article class="article-combat">
-      <h2>Afflictions & effets</h2>
-      <ul class="image-list">
-        <li><img src="../assets/images/notes-medium.png" class="image">
-          <div class="image-texte">
-            <strong>Durée des afflictions :</strong> La plupart des états et afflictions sont subis normalement au <strong>premier tour</strong>, puis un jet de sauvegarde est effectué <strong>au début de chaque tour suivant</strong> pour tenter de s’en débarrasser.
-          </div>
-        </li>
-        <li><img src="../assets/images/notes-medium.png" class="image">
-          <div class="image-texte">
-            <strong>Progression des chances :</strong> À partir du <strong>troisième tour d'effet</strong>, les jets de sauvegarde contre une affliction bénéficient d’un bonus de +3.
-          </div>
-        </li>
-        <li><img src="../assets/images/notes-medium.png" class="image">
-          <div class="image-texte">
-            <strong>Résistance aux effets récents :</strong> Une créature gagne <strong>+5</strong> à ses jets contre un état auquel elle a déjà été soumise <strong>dans l’heure</strong> par un adversaire.
-          </div>
-        </li>
-        <li><img src="../assets/images/notes-medium.png" class="image">
-          <div class="image-texte">
-            <strong>Afflictions persistantes :</strong> Certains états (comme <em>Inconscience</em>, <em>Agrippé</em>, <em>Invisibilité</em>, ou <em>À terre</em>) <strong>ignorent ces règles</strong> et suivent des mécaniques spécifiques.
-          </div>
-        </li>
-      </ul>
-      
-    </article>
+        <article class="article-combat">
+          <h2>Actions disponibles</h2>
+          <ul class="image-list">
+            <li><img src="../assets/images/notes-medium.png" class="image">
+              <div class="image-texte">
+                <strong><img src="../assets/images/action-costs/action.png"
+                    class="inline-icon">Actions (2 PA) :</strong> Attaque, sort,
+                interaction standard... Une action coûte <strong>2 PA</strong>
+                et peut être effectuée plusieurs fois par tour tant que les PA
+                le permettent.
+              </div>
+            </li>
+            <li><img src="../assets/images/notes-medium.png" class="image">
+              <div class="image-texte">
+                <strong><img
+                    src="../assets/images/action-costs/bonus-action.png"
+                    class="inline-icon">Actions Bonus (1 PA) :</strong> Une fois
+                par round, un personnage peut effectuer une action spéciale à
+                coût réduit (ex. : recharger, activer une capacité...).
+              </div>
+            </li>
+            <li><img src="../assets/images/notes-medium.png" class="image">
+              <div class="image-texte">
+                <strong><img src="../assets/images/action-costs/reaction.png"
+                    class="inline-icon"> Réactions (1 PA) :</strong> Une fois
+                par round, certaines aptitudes permettent d’agir en dehors de
+                son tour en réponse à une action ennemie.
+              </div>
+            </li>
+            <li><img src="../assets/images/notes-medium.png" class="image">
+              <div class="image-texte">
+                <strong><img
+                    src="../assets/images/action-costs/combo-action.png"
+                    class="inline-icon">Actions Combo (1 PA) :</strong> Une
+                seule par round. Ces actions peuvent uniquement être utilisées
+                en <strong>enchaînement avec une action spécifique</strong>
+                effectuée juste avant, créant un effet combiné.
+              </div>
+            </li>
+            <li><img src="../assets/images/notes-medium.png" class="image">
+              <div class="image-texte">
+                <strong><img
+                    src="../assets/images/action-costs/heavy-action.png"
+                    class="inline-icon">Actions Complexes (3 PA) :</strong> Une
+                seule par round. Ce sont des actions puissantes ou prolongées :
+                canalisation, invocation, manœuvre lourde, etc.
+              </div>
+            </li>
+            <li><img src="../assets/images/notes-medium.png" class="image">
+              <div class="image-texte">
+                <strong><img src="../assets/images/action-costs/movement.png"
+                    class="inline-icon">Déplacement :</strong> Le déplacement ne
+                coûte pas de PA, mais il est limité à la
+                <strong>vitesse</strong> du personnage. Il peut être effectué
+                avant ou après une action.
+              </div>
+            </li>
+          </ul>
 
-    <article class="article-combat">
-      <h2>Zones, couverts et terrain</h2>
-      <ul class="image-list">
-        <li><img src="../assets/images/notes-medium.png" class="image">
-          <div class="image-texte">
-            <strong>Terrain difficile :</strong> Le terrain difficile réduit la vitesse de déplacement de moitié.
-          </div>
-        </li>
-        <li><img src="../assets/images/notes-medium.png" class="image">
-          <div class="image-texte">
-            <strong>Terrain dangereux :</strong> Certaines zones (acide, feu, gel…) infligent des dégâts lorsqu’on les traverse ou s’y termine son tour.
-          </div>
-        </li>
-        <li><img src="../assets/images/notes-medium.png" class="image">
-          <div class="image-texte">
-            <strong>Prise en tenaille :</strong> Lorsqu’un ennemi est encerclé, les joueurs gagnent +1 à leur jet de précision. Le nombre de joueurs nécessaires dépend de la taille de la cible.
-          </div>
-        </li>
-      </ul>
-      
-    </article>
-    </div>
-  </main>
+        </article>
 
-  <footer>
-    <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
-  </footer>
+        <article class="article-combat">
+          <h2>Jet de Précision</h2>
+          <p>
+            Lorsqu’un personnage effectue une attaque avec une arme, il ne lance
+            plus un d20 classique, mais un <strong>dé de Précision</strong>
+            spécifique à l’arme utilisée.
+          </p>
+          <p>
+            Ce dé remplace le jet d’attaque habituel. Le joueur y ajoute ses
+            modificateurs habituels (Force ou Dextérité, selon l’arme) et son
+            bonus de maîtrise si applicable.
+          </p>
+          <p>
+            → Retrouvez la liste des armes et de leurs dés de précision sur la
+            page <a
+              href="/regles/equipement.html"><strong>Équipements</strong></a>.
+          </p>
+        </article>
 
-  <script src="../scripts/particles.js"></script>
-</body>
+        <article class="article-combat">
+          <h2>Afflictions & effets</h2>
+          <ul class="image-list">
+            <li><img src="../assets/images/notes-medium.png" class="image">
+              <div class="image-texte">
+                <strong>Durée des afflictions :</strong> La plupart des états et
+                afflictions sont subis normalement au <strong>premier
+                  tour</strong>, puis un jet de sauvegarde est effectué
+                <strong>au début de chaque tour suivant</strong> pour tenter de
+                s’en débarrasser.
+              </div>
+            </li>
+            <li><img src="../assets/images/notes-medium.png" class="image">
+              <div class="image-texte">
+                <strong>Progression des chances :</strong> À partir du
+                <strong>troisième tour d'effet</strong>, les jets de sauvegarde
+                contre une affliction bénéficient d’un bonus de +3.
+              </div>
+            </li>
+            <li><img src="../assets/images/notes-medium.png" class="image">
+              <div class="image-texte">
+                <strong>Résistance aux effets récents :</strong> Une créature
+                gagne <strong>+5</strong> à ses jets contre un état auquel elle
+                a déjà été soumise <strong>dans l’heure</strong> par un
+                adversaire.
+              </div>
+            </li>
+            <li><img src="../assets/images/notes-medium.png" class="image">
+              <div class="image-texte">
+                <strong>Afflictions persistantes :</strong> Certains états
+                (comme <em>Inconscience</em>, <em>Agrippé</em>,
+                <em>Invisibilité</em>, ou <em>À terre</em>) <strong>ignorent ces
+                  règles</strong> et suivent des mécaniques spécifiques.
+              </div>
+            </li>
+          </ul>
+
+        </article>
+
+        <article class="article-combat">
+          <h2>Zones, couverts et terrain</h2>
+          <ul class="image-list">
+            <li><img src="../assets/images/notes-medium.png" class="image">
+              <div class="image-texte">
+                <strong>Terrain difficile :</strong> Le terrain difficile réduit
+                la vitesse de déplacement de moitié.
+              </div>
+            </li>
+            <li><img src="../assets/images/notes-medium.png" class="image">
+              <div class="image-texte">
+                <strong>Terrain dangereux :</strong> Certaines zones (acide,
+                feu, gel…) infligent des dégâts lorsqu’on les traverse ou s’y
+                termine son tour.
+              </div>
+            </li>
+            <li><img src="../assets/images/notes-medium.png" class="image">
+              <div class="image-texte">
+                <strong>Prise en tenaille :</strong> Lorsqu’un ennemi est
+                encerclé, les joueurs gagnent +1 à leur jet de précision. Le
+                nombre de joueurs nécessaires dépend de la taille de la cible.
+              </div>
+            </li>
+          </ul>
+
+        </article>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+    </footer>
+
+    <script src="../scripts/particles.js"></script>
+  </body>
 </html>
