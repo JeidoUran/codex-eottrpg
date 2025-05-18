@@ -2,7 +2,7 @@ const AWS = require("aws-sdk");
 const { writeFileSync, readFileSync, existsSync, mkdirSync } = require("fs");
 const path = require("path");
 
-const TMP_DIR = path.join(__dirname, "tmp");
+const TMP_DIR = path.join(os.tmpdir(), "dispo-rate-limit");
 const RATE_LIMIT_FILE = path.join(TMP_DIR, "dispo-rate-limit.json");
 
 function ensureTmpDir() {
