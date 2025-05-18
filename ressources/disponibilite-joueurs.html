@@ -9,8 +9,16 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../style.css">
-
   </head>
+  <style>
+    #message-confirmation {
+      opacity: 0;
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 1rem;
+      transition: opacity 0.3s ease;
+    }
+  </style>
   <body>
     <canvas id="particles"></canvas>
 
@@ -56,8 +64,7 @@
           <button class="animated-button" onclick="envoyerDispos()"><i
               class="fa-solid fa-cloud-arrow-up"></i> Envoyer
             disponibilités</button>
-          <div id="message-confirmation"
-            style="text-align: center; margin-top: 1rem; font-size: 1rem;"></div>
+          <div id="message-confirmation"></div>
           <div
             style="text-align: center; margin-top: 1rem; font-size: 1rem;">Pour
             modifier vos disponibilités, renvoyez le formulaire en utilisant
@@ -112,40 +119,64 @@
     window.addEventListener("DOMContentLoaded", chargerMetaEtGenerer);
 
 
+    function showNotification(message, color = "#000") {
+    const notificationArea = document.getElementById("message-confirmation");
+    if (!notificationArea) return;
+    notificationArea.textContent = message;
+    notificationArea.style.color = color;
+    notificationArea.style.opacity = "1";
+    setTimeout(() => {
+      notificationArea.style.opacity = "0";
+    }, 5000);
+  }
 
-    function envoyerDispos() {
+    async function envoyerDispos() {
     const pseudo = document.getElementById("pseudo").value.trim();
     const note = document.getElementById("note").value.trim();
-    const dates = [...document.querySelectorAll(".dispo-date.selected")].map(d => d.dataset.date);
-
-    const messageZone = document.getElementById("message-confirmation");
+    const dates = [...document.querySelectorAll(".dispo-date.selected")]
+                    .map(d => d.dataset.date);
 
     if (!pseudo) {
-      messageZone.textContent = "⚠️ Entrez votre pseudo avant d’envoyer.";
-      messageZone.style.color = "#cc8888";
+      // ⚠️ appel à showNotification au lieu de messageZone.textContent…
+      showNotification("⚠️ Entrez votre pseudo avant d’envoyer.", "#cc8888");
       return;
     }
-
     if (dates.length === 0) {
-      messageZone.textContent = "⚠️ Sélectionnez au moins une date.";
-      messageZone.style.color = "#cc8888";
+      showNotification("⚠️ Sélectionnez au moins une date.", "#cc8888");
       return;
     }
 
-    fetch("/.netlify/functions/manage-dispos", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ pseudo, dates, note })
-    })
-      .then(res => res.json())
-      .then(() => {
-        messageZone.textContent = "✅ Disponibilités enregistrées. Merci !";
-        messageZone.style.color = "#88c0a9";
-      })
-      .catch(() => {
-        messageZone.textContent = "❌ Erreur lors de l’envoi. Réessayez plus tard ou contactez le MJ.";
-        messageZone.style.color = "#cc4444";
+    try {
+      const res = await fetch("/.netlify/functions/manage-dispos", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ pseudo, dates, note })
       });
+
+      if (res.status === 429) {
+        // Too Many Requests
+        showNotification(
+          "⏳ Trop de requêtes… Patientez quelques instants avant de réessayer.",
+          "#cc8800"
+        );
+        return;
+      }
+
+      if (!res.ok) {
+        // Autres erreurs HTTP
+        throw new Error(`HTTP ${res.status}`);
+      }
+
+      await res.json();
+      showNotification("✅ Disponibilités enregistrées. Merci !", "#88c0a9");
+
+    } catch (err) {
+      console.error(err);
+      showNotification(
+        "❌ Erreur lors de l’envoi. Réessayez plus tard ou contactez le MJ.",
+        "#cc4444"
+      );
+    }
   }
 
 </script>
