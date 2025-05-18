@@ -1,5 +1,6 @@
+const os = require("os");
 const AWS = require("aws-sdk");
-/* const { writeFileSync, readFileSync, existsSync, mkdirSync } = require("fs");
+const { writeFileSync, readFileSync, existsSync, mkdirSync } = require("fs");
 const path = require("path");
 
 const TMP_DIR = path.join(os.tmpdir(), "dispo-rate-limit");
@@ -24,7 +25,7 @@ function loadRateLimitDb() {
 function saveRateLimitDb(db) {
   ensureTmpDir();
   writeFileSync(RATE_LIMIT_FILE, JSON.stringify(db));
-} */
+}
 
 const s3 = new AWS.S3({
   accessKeyId: process.env.AWS_KEY,
@@ -43,7 +44,7 @@ exports.handler = async (event) => {
     const body = JSON.parse(event.body);
     const now = new Date().toISOString();
 
-    /*     // 🛡️ Anti-spam par IP
+    // 🛡️ Anti-spam par IP
     const ip = event.headers["x-forwarded-for"]?.split(",")[0] || "unknown";
     const db = loadRateLimitDb();
     const timestampNow = Date.now();
@@ -60,7 +61,7 @@ exports.handler = async (event) => {
     }
 
     db[ip] = timestampNow;
-    saveRateLimitDb(db); */
+    saveRateLimitDb(db);
 
     // FLUSH LOGIC
     if (body.flush === true) {
