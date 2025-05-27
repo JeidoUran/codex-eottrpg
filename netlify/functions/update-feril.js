@@ -32,7 +32,7 @@ exports.handler = async function () {
     const actor = document instanceof Actor ? document : document.actor;
     if (!actor) return null;
 
-    await actor.prepareData();
+    await actor.getRollData();
 
     const ac = actor.system.attributes.ac;
     return ac?.value ?? null;`,
