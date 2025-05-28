@@ -67,6 +67,11 @@ const playlistData = {
       fallbackCover: "cover-explore.jpg",
       context: "Préparations au Refuge des Vents Errants",
     },
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/event/eo5-event-threat.mp3",
+      fallbackCover: "cover-explore.jpg",
+      context: "Menace inconnue",
+    },
   ],
   labyrinth: [
     {
@@ -107,12 +112,43 @@ const playlistData = {
       context: "Combat contre des monstres",
     },
   ],
-  foe: [],
+  foe: [
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/battle/foe/eo1u-battle-foe.mp3",
+      fallbackCover: "cover-explore.jpg",
+      context: "Combat contre un F.O.E.",
+    },
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/battle/foe/eo2u-battle-foe.mp3",
+      fallbackCover: "cover-explore.jpg",
+      context: "Combat contre un F.O.E.",
+    },
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/battle/foe/eo3-battle-foe-remix.mp3",
+      fallbackCover: "cover-explore.jpg",
+      context: "Combat contre un F.O.E.",
+    },
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/battle/foe/eo4-battle-foe.mp3",
+      fallbackCover: "cover-explore.jpg",
+      context: "Combat contre un F.O.E.",
+    },
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/battle/foe/eo5-battle-foe.mp3",
+      fallbackCover: "cover-explore.jpg",
+      context: "Combat contre un F.O.E.",
+    },
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/battle/foe/eon-battle-foe.mp3",
+      fallbackCover: "cover-explore.jpg",
+      context: "Combat contre un F.O.E.",
+    },
+  ],
   boss: [
     {
       src: "https://s3.codex.eottrpg.memiroa.com/audio/battle/boss/eo2u-battle-boss.mp3",
       fallbackCover: "cover-explore.jpg",
-      context: "Combat contre le Grand lynx α",
+      context: "Combat contre un boss mineur",
     },
   ],
 };
