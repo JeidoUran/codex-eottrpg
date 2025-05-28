@@ -151,6 +151,7 @@ const playlistData = {
       context: "Combat contre un boss mineur",
     },
   ],
+  unknown: [],
 };
 let trackElements = [];
 let currentTrackIndex = 0;
