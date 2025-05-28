@@ -1,91 +1,107 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Personnages | Codex - Etrian Odyssey TTRPG</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="../../favicon.png" type="image/png">
-  <link rel="stylesheet" href="../../style.css">
+  <head>
+    <meta charset="UTF-8">
+    <title>Personnages | Codex - Etrian Odyssey TTRPG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../favicon.png" type="image/png">
+    <link rel="stylesheet" href="../../style.css">
 
-</head>
-<body>
-  <canvas id="particles"></canvas>
+  </head>
+  <body>
+    <canvas id="particles"></canvas>
 
-  <header class="codex-header">
-    <a href="/" class="banniere-link"><img src="../../assets/images/banniere.png" alt="Bannière" class="banniere"></a>
-    <h1>Personnages</h1>
-    <p class="sous-titre">L’archive vivante des Égarés</p>
-  </header>
+    <header class="codex-header">
+      <a href="/" class="banniere-link"><img
+          src="../../assets/images/banniere.png" alt="Bannière"
+          class="banniere"></a>
+      <h1>Personnages</h1>
+      <p class="sous-titre">L’archive vivante des Égarés</p>
+    </header>
 
-  <nav class="nav-magique">
-    <a href="/">Accueil</a>
-    <a href="../../notes/">Patch Notes</a>
-    <a href="../../regles/">Règles</a>
-    <a href="../../univers/">Univers</a>
-    <a href="../../musique.html">Musiques</a>
-    <a href="../../ressources/">Ressources</a>
-    <a href="../../credits.html">Crédits</a>
-  </nav>
+    <nav class="nav-magique">
+      <a href="/">Accueil</a>
+      <a href="../../notes/">Patch Notes</a>
+      <a href="../../regles/">Règles</a>
+      <a href="../../univers/">Univers</a>
+      <a href="../../musique.html">Musiques</a>
+      <a href="../../ressources/">Ressources</a>
+      <a href="../../credits.html">Crédits</a>
+    </nav>
 
-  <main class="accueil">
-    <section class="intro">
-      <p>Retrouvez ici les héros et figures importantes de l’univers du Codex, joueurs et non-joueurs confondus.</p>
-    </section>
-    <div class="class-table-tabs-wrapper">
-      <button class="tab-button active" onclick="switchTab(event, 'pj')">🎲 Personnages Joueurs</button>
-      <button class="tab-button" onclick="switchTab(event, 'pnj')">👤 Personnages Non-Joueurs</button>
-    </div>
+    <main class="accueil">
+      <section class="intro">
+        <p>Retrouvez ici les héros et figures importantes de l’univers du Codex,
+          joueurs et non-joueurs confondus.</p>
+      </section>
+      <div class="class-table-tabs-wrapper">
+        <button class="tab-button active" onclick="switchTab(event, 'pj')">🎲
+          Personnages Joueurs</button>
+        <button class="tab-button" onclick="switchTab(event, 'pnj')">👤
+          Personnages Non-Joueurs</button>
+      </div>
 
-    <section id="tab-pj" class="tab-content active">
-      <a class="carte-lien large chara" href="feril.html">
-        <img src="../../assets/images/pc-icons/feril.png" alt="🌿" class="image chara-icon">
-        <h2>Féril</h2>
-        <p>Brouni enthousiaste et maladroit, il se bat avec fougue… et une pincée de chaos stratégique.</p><br>
-      </a>
-      <a class="carte-lien large chara" href="elsa.html">
-        <img src="../../assets/images/pc-icons/elsa.png" alt="🦊" class="image chara-icon">
-        <h2>Elsa</h2>
-        <p>Hache Thériane sans bannière, elle cherche une cause digne de son serment et une revanche sur l’échec.</p>
-      </a>
-      <a class="carte-lien large chara" href="ithil.html">
-        <img src="../../assets/images/pc-icons/ithil.png" alt="🌙" class="image chara-icon">
-        <h2>Ithil</h2>
-        <p>Médium désabusée, elle interroge les morts avec le calme de ceux qui les rejoindront bientôt.</p>
-      </a>
-      <a class="carte-lien large chara" href="oktar.html">
-        <img src="../../assets/images/pc-icons/oktar.png" alt="🛡️" class="image chara-icon">
-        <h2>Oktar</h2>
-        <p>Guerrier au regard de feu, il tranche d’instinct et protège sans compromis. Une lame façonnée par la perte.</p>
-      </a>
-      <a class="carte-lien large chara" href="kay.html">
-        <img src="../../assets/images/pc-icons/kay.png" alt="⚙️" class="image chara-icon">
-        <h2>Kay</h2>
-        <p>Tacticienne froide et lucide, elle mène comme elle joue : sans pitié, sans panique, sans pièce sacrifiable.</p>
-      </a>
-    </section>
+      <section id="tab-pj" class="tab-content active">
+        <a class="carte-lien large chara" href="feril.html">
+          <img src="../../assets/images/pc-icons/feril.png" alt="🌿"
+            class="image chara-icon">
+          <h2>Féril</h2>
+          <p>Brouni enthousiaste et maladroit, il se bat avec fougue… et une
+            pincée de chaos stratégique.</p><br>
+        </a>
+        <a class="carte-lien large chara" href="elsa.html">
+          <img src="../../assets/images/pc-icons/elsa.png" alt="🦊"
+            class="image chara-icon">
+          <h2>Elsa</h2>
+          <p>Hache Thériane sans bannière, elle cherche une cause digne de son
+            serment et une revanche sur l’échec.</p>
+        </a>
+        <a class="carte-lien large chara" href="ithil.html">
+          <img src="../../assets/images/pc-icons/ithil.png" alt="🌙"
+            class="image chara-icon">
+          <h2>Ithil</h2>
+          <p>Traqueuse taciturne, elle lit les traces oubliées avec la patience
+            de ceux qui savent qu’un jour, ils s’y perdront à leur tour.</p>
+        </a>
+        <a class="carte-lien large chara" href="oktar.html">
+          <img src="../../assets/images/pc-icons/oktar.png" alt="🛡️"
+            class="image chara-icon">
+          <h2>Oktar</h2>
+          <p>Guerrier au regard de feu, il tranche d’instinct et protège sans
+            compromis. Une lame façonnée par la perte.</p>
+        </a>
+        <a class="carte-lien large chara" href="kay.html">
+          <img src="../../assets/images/pc-icons/kay.png" alt="⚙️"
+            class="image chara-icon">
+          <h2>Kay</h2>
+          <p>Tacticienne froide et lucide, elle mène comme elle joue : sans
+            pitié, sans panique, sans pièce sacrifiable.</p>
+        </a>
+      </section>
 
-    <section id="tab-pnj" class="tab-content">
-      <a href="kujura.html" class="carte-lien large chara">
-        <img src="../../assets/images/npc-icons/kujura.png" alt="🌿" class="image chara-icon">
-        <h2>Kujura</h2>
-        <p></p>
-      </a>
-      <a href="#" class="carte-lien large chara">
-        <h2>Marcos</h2>
-        <p></p>
-      </a>
-      <a href="#" class="carte-lien large chara">
-        <h2>Aman</h2>
-        <p></p>
-      </a>
-    </section>
-  </main>
+      <section id="tab-pnj" class="tab-content">
+        <a href="kujura.html" class="carte-lien large chara">
+          <img src="../../assets/images/npc-icons/kujura.png" alt="🌿"
+            class="image chara-icon">
+          <h2>Kujura</h2>
+          <p></p>
+        </a>
+        <a href="#" class="carte-lien large chara">
+          <h2>Marcos</h2>
+          <p></p>
+        </a>
+        <a href="#" class="carte-lien large chara">
+          <h2>Aman</h2>
+          <p></p>
+        </a>
+      </section>
+    </main>
 
-  <footer>
-    <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
-  </footer>
+    <footer>
+      <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+    </footer>
 
-  <script>
+    <script>
     function switchTab(event, tabId) {
       const tabs = document.querySelectorAll('.tab-button');
       const contents = document.querySelectorAll('.tab-content');
@@ -102,6 +118,6 @@
       target.classList.add('active');
     }
   </script>
-  <script src="../../scripts/particles.js"></script>
-</body>
+    <script src="../../scripts/particles.js"></script>
+  </body>
 </html>
