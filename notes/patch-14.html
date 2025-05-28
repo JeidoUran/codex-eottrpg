@@ -24,7 +24,7 @@
   <header class="codex-header" id="top">
     <a href="/" class="banniere-link"><img src="../assets/images/banniere.png" alt="Bannière" class="banniere"></a>
     <h1><img src="../assets/images/silver-scroll.png" class="image codex-image-header"> Patch 2.7 – Session 16</h1>
-    <p class="sous-titre">Publié le 21 Mai 2025</p>
+    <p class="sous-titre">Publié le 28 mai 2025</p>
     <div class="fixed-header-links">
       <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Index des patchs</a>
     </div>
@@ -48,10 +48,24 @@
     Système
   </h2>
   <ul class="image-list">
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'interface "Baldur's Gate 3" a été mise à jour.<div class="note-expliquee">Désormais, lorsqu'une action bonus ou réaction est utilisée, les aptitudes coûtant une action bonus ou réaction sont grisées pour indiquer qu'elles sont consommées.</div><div class="note-expliquee">Il reste possible de forcer leur utilisation en cliquant dessus, au besoin.</div></div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Lorsqu'un coup critique est réalisé, une animation unique est désormais jouée.</div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les Tokens des joueurs ont été remplacés par des Tokens utilisant le système de Tokens Dynamiques de Foundry VTT.</div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le module permettant à deux Tokens de se suivre à été changé, le système a donc été modifié.<div class="note-expliquee">Ce changement est effectué car le module d'origine n'existe plus, et afin de simplifier le système.</div><div class="note-expliquee">Il suffit de sélectionner dans un premier temps <strong>le Token qui va suivre</strong>.</div><div class="note-expliquee">Ensuite, cliquer sur le bouton <i class="fa-solid fa-user-plus"></i> dans la barre de contrôle des Tokens, sur la gauche de l'écran.</div><div class="note-expliquee">Puis, cliquer sur le <strong>Token qui sera suivi</strong>.</div><div class="note-expliquee">Pour annuler le suivi, il faudra cliquer sur le bouton <i class="fa-solid fa-user-slash"></i>, dans la barre de contrôle des Tokens, sur la gauche de l'écran.</div><div class="note-expliquee"><img src="../assets/images/notes/patch-14/token-follow-buttons.png" class="patchnotes-icon tutorial-image lightbox-image" onclick="openLightbox(this.src)"> (Cliquez sur l'image pour l'agrandir)</div></div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le client permettant de se connecter à Foundry a reçu plusieurs mises à jour majeures. Vous pouvez le télécharger <a href="https://github.com/JeidoUran/fvtt-player-client/releases/download/1.13.0/FVTT-Desktop-Client_1.13.0_win-x64.exe" target="_blank">ici</a>.<div class="note-expliquee">Il peut désormais se mettre à jour automatiquement, sans nécessiter de téléchargement manuel via GitHub.</div><div class="note-expliquee">Une intégration Discord a été ajoutée. Pour l’activer, cochez l’option Enable Discord Rich Presence à la fois dans les paramètres du client et dans ceux de Foundry. N’hésitez pas à me demander de l’aide si besoin.</div><div class="note-expliquee">L’apparence du client est désormais entièrement personnalisable.</div></div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Foundry VTT a été mis à jour (12.331 → 12.343).</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le degré de difficulté du jet de sauvegarde des grenades basiques a été augmenté (12 → 14).</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'affliction <strong>Aveuglé</strong> ne masque plus complètement le champ de vision du joueur.<div class="note-expliquee">Ce changement permet aux joueurs de continuer à utiliser certaines aptitudes ne nécessitant pas la vue (comme les Ordres du Souverain) ou d’attaquer à l’aveugle s’ils le souhaitent. L’ancienne version bloquait totalement la vue et donc la quasi-totalité des actions, rendant l’état extrêmement contraignant. Il faudra toutefois veiller à limiter les dérives de métagaming induites par ce changement.</div></div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les jets de sauvegarde pour se libérer de certaines afflictions sont désormais automatiquement déclenchés en début de tour.<div class="note-expliquee">Le jet en lui-même ainsi que l'ajout de bonus éventuels restent à déclenchement manuel par le joueur concerné, comme tous les autres jets de sauvegarde.</div></div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les Tokens des joueurs utilisent désormais le système de Tokens Dynamiques de Foundry VTT.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Une animation unique se déclenche désormais lors d’un coup critique.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Un effet de vignette est désormais dynamiquement appliqué en fonction des dégâts subis par un personnage.<div class="note-expliquee">Ce filtre est configurable (ou désactivable) dans les paramètres de Foundry, rubrique <strong>Aeris Damage Vignette</strong>.</div><div class="note-expliquee"><img src="../assets/images/notes/patch-14/vignette-effect-disable.png" class="patchnotes-icon tutorial-image lightbox-image" onclick="openLightbox(this.src)"> (Cliquez sur l'image pour l'agrandir)</div></div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Des effets de caméra ont été ajoutés pour les déplacements en combat ainsi que lors de l’activation d’attaques ou d’aptitudes.<div class="note-expliquee">Ils sont configurables (ou désactivable) dans les paramètres de Foundry, rubrique <strong>Aeris Cinematic View</strong>.</div><div class="note-expliquee"><img src="../assets/images/notes/patch-14/cinematic-view-settings.png" class="patchnotes-icon tutorial-image lightbox-image" onclick="openLightbox(this.src)"> (Cliquez sur l'image pour l'agrandir)</div></div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'interface "Baldur's Gate 3" a été mise à jour.<div class="note-expliquee">La quantité des objets consommables est désormais visible, en plus de leur nombre d’utilisations.</div><div class="note-expliquee">Lorsqu’une action bonus ou une réaction est utilisée, les autres aptitudes du même type sont grisées pour signaler leur indisponibilité. Il reste toutefois possible de les forcer manuellement.</div></div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les attaques d’opportunité automatiques utilisent désormais l'action dédiée plutôt que l’arme équipée.<div class="note-expliquee">Ce changement est surtout technique : il facilite la gestion des PA, et ne devrait normalement pas modifier l’expérience côté joueur.</div></div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le score de caractéristique principal d'un personnage joueur, pouvant être augmenté jusqu'à 22, est désormais affiché en vert sur sa fiche de personnage.<div class="note-expliquee">Le score de caractéristique intangible des Thérians reste affiché en priorité.</div></div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les musiques sont désormais hébergées sur un stockage en ligne (S3), ce qui réduit la taille du dossier local et soulage ma connexion lors du streaming.<div class="note-expliquee">Le temps de chargement peut donc varier selon votre connexion.</div></div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Un système de bouclage dynamique a été mis en place pour les musiques.<div class="note-expliquee">Cela élimine les coupures sonores en fin de piste (auparavant bouclées manuellement sur 30 minutes).</div></div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L’interface des marchands affiche désormais la rareté des objets.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le son du changement de tour dépend désormais du volume de l’interface, et non plus de celui de l’environnement.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Il est à nouveau possible de cibler une créature depuis le traqueur de combat (bouton <i class="fas fa-crosshairs"></i>).</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Divers ajustements ont été effectués en préparation de la mise à jour vers Foundry v13.</div></li>
   </ul></section>
 
 <section class="patch-section" id="races">
@@ -65,7 +79,7 @@
       Vaisseau
     </h3>
     <ul class="image-list">
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'aptitude <strong>Inimitié des Ombres</strong> a été renommée en <strong>Inimitié contre les Ombres</strong>.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'aptitude <strong>Inimitié des Ombres</strong> a été renommée <strong>Inimitié contre les Ombres</strong>.</div></li>
     </ul>
   </div>
 
@@ -80,7 +94,7 @@
       Souverain
     </h3>
     <ul class="image-list">
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'aptitude <strong>Ordre de protection</strong> cible désormais un nombre quelconque d'alliés volontaires jusqu'au modificateur de Charisme du Souverain, au lieu d'un nombre quelconque illimité.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'aptitude <strong>Ordre de protection</strong> cible désormais un nombre d’alliés volontaires égal ou inférieur au modificateur de Charisme du Souverain, au lieu d’un nombre illimité.</div></li>
     </ul>
   </div>
   <div class="classe-subsection">
@@ -89,7 +103,7 @@
       Lansquenet
     </h3>
     <ul class="image-list">
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'aptitude <strong>Double frappe</strong> lance correctement 1d8 pour son calcul de Précision au lieu d'1d20.<div class="note-expliquee">Je ne suis pas parvenu à reproduire le bug du dé de Double frappe se déclenchant en "décalé". Il faudra y être attentif lors des prochaines sessions.</div></div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'aptitude <strong>Double frappe</strong> utilise désormais correctement 1d8 pour déterminer la Précision, à la place d’1d20.<div class="note-expliquee">Le bug "décalant" la valeur du dé de Double frappe n'a pas pu être reproduit. Il pourrait être lié à la charge serveur lorsque tous les joueurs sont connectés. Il faudra y être attentif lors des prochaines sessions.</div></div></li>
     </ul>
   </div>
   <div class="classe-subsection">
@@ -99,15 +113,7 @@
     </h3>
     <ul class="image-list">
     <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'aptitude <strong>Hirondelles jumelles</strong> applique désormais correctement l'effet de <strong>Frappe éclair</strong>.</div></li>
-    </ul>
-  </div>
-  <div class="classe-subsection">
-    <h3 class="classe-nom">
-      <img src="../assets/images/class-icons/vagabond.png" class="image image-h3">
-      Vagabond
-    </h3>
-    <ul class="image-list">
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Afin de tenter de corriger les problèmes de synchronisation des PA du Vagabond et de son compagnon, ainsi que pour alléger la charge sur le système, la synchronisation s'effectue désormais uniquement au début du tour du Vagabond ou de son compagnon, au lieu de s'effectuer dés que les PA de l'un ou de l'autre changent.<div class="note-expliquee">Ce changement a également pour effet d'afficher le bouton "Passer le tour" si le compagnon commence son tour avec 1 PA ou moins.</div></div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'animation de <strong>Parade</strong> a été modifiée.</div></li>
     </ul>
   </div>
 
@@ -117,7 +123,11 @@
     Codex
   </h2>
   <ul class="image-list">
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">La statistique de Défense est désormais affichée sur les fiches des personnages joueurs.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'historique d'Ithil a été modifié ("Émissaire des défunts" → "Pisteuse des silences").</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Sa description dans l’index des personnages a également été actualisée.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les thèmes musicaux des combats contre un F.O.E. ont été ajoutés.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Une nouvelle musique a été ajoutée à la catégorie Évènements.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">La statistique de Défense s’affiche désormais sur les fiches des personnages joueurs.</div></li>
   </ul></section>
 
 <section class="patch-section" id="problemes-resolus">
@@ -126,8 +136,11 @@
     Problèmes résolus
   </h2>
   <ul class="image-list">
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">(Résolu lors de la session 15) L'anneau d'explorateur octroie correctement un bonus de +1 en Perception.</div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">(Résolu lors de la session 15) Les fusils consomment correctement une charge à l'utilisation.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">(Résolu lors de la session 15) L’anneau d’explorateur confère correctement un bonus de +1 en Perception.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">(Résolu lors de la session 15) Les fusils consomment bien une charge à chaque utilisation.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">La réaction de l'aptitude <strong>Se tenir prêt</strong> n'est plus proposée au joueur dés que le personnage est pris pour cible.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les réactions <strong>Parade</strong> et <strong>Charge téméraire</strong> fonctionnent de nouveau comme prévu.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le bug qui empêchait certaines musiques de jouer pour certains joueurs devrait être résolu, d'une part à cause de l'hébergement externe de celles-ci, et d'autre part à cause d'un paramètre qui posait problème sur le nom de domaine, qui a été depuis retiré.</div></li>
   </ul></section>
 
 <section class="patch-section" id="problemes-connus">
@@ -137,6 +150,7 @@
   </h2>
   <ul class="image-list">
     <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Certaines emotes ne fonctionnent plus correctement sur les nouveaux Tokens des joueurs.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le minuteur des musiques respecte bien le bouclage dynamique lors de la première lecture, mais ne le réapplique pas ensuite.</div></li>
   </ul></section>
 
 <section class="patch-section" id="mj">
@@ -145,6 +159,8 @@
     MJ
   </h2>
   <ul class="image-list">
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'interface BG3 est désormais utilisable par les MJ lorsqu'aucun ou plusieurs Tokens sont sélectionnés.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Il est à nouveau possible de forcer le tour d'une créature depuis le traqueur de combat (bouton <i class="fa-solid fa-users-rays"></i>).</div></li>
   </ul></section>
   </main>
 
