@@ -150,6 +150,11 @@ const playlistData = {
       fallbackCover: "cover-explore.jpg",
       context: "Combat contre un boss mineur",
     },
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/battle/boss/eo3-battle-boss-remix.mp3",
+      fallbackCover: "cover-explore.jpg",
+      context: "Combat contre un boss majeur",
+    },
   ],
   unknown: [],
 };
