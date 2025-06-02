@@ -11,7 +11,7 @@ const s3 = new AWS.S3({
 });
 
 exports.handler = async function () {
-  const CLIENT_ID = process.env.FOUNDRY_CLIENT_ID; // à remplacer si nécessaire
+  const CLIENT_ID = process.env.FOUNDRY_CLIENT_ID;
   const UUID = "Actor.Lz8WJHrRMXJ9Tcfx";
   const API_KEY = process.env.FOUNDRY_API_KEY;
   const BUCKET_NAME = process.env.S3_BUCKET_NAME;

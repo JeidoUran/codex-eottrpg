@@ -10,7 +10,7 @@ const s3 = new AWS.S3({
   signatureVersion: "v4",
 });
 
-exports.handler = async function (event, context) {
+exports.handler = async function () {
   const CLIENT_ID = process.env.FOUNDRY_CLIENT_ID;
   const UUID = "Actor.DLc3BG2Qq87T57tk";
   const API_KEY = process.env.FOUNDRY_API_KEY;
