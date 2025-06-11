@@ -79,6 +79,11 @@ const playlistData = {
       fallbackCover: "cover-explore.jpg",
       context: "La 1ère Strate - Le Bois de la Cascade",
     },
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/dungeon/eo3-dungeon2-remix.mp3",
+      fallbackCover: "cover-explore.jpg",
+      context: "La 2ème Strate - La Grotte Immergée",
+    },
   ],
   battle: [
     {
@@ -156,7 +161,18 @@ const playlistData = {
       context: "Combat contre un boss majeur",
     },
   ],
-  unknown: [],
+  unknown: [
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/dungeon/eo1u-dungeon-extra.mp3",
+      fallbackCover: "cover-explore.jpg",
+      context: "?̴͎̬̣͂̀̓̐?̷̨̜̋́?̷̢̪̦̘͚̏̍͋",
+    },
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/dungeon/eo1u-dungeon-extra-pulse.mp3",
+      fallbackCover: "cover-explore.jpg",
+      context: "?̷͓͎̦̹̜͓͇̻̓̄̎̾́́̓̅̐͝?̵̨́̽͛̀̓̏͐̇̕̕?̶̭̣̩̟̝͔̀̚ͅ",
+    },
+  ],
 };
 let trackElements = [];
 let currentTrackIndex = 0;
