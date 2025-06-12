@@ -4,6 +4,7 @@ const updateElsa = require("./update-elsa.js");
 const updateIthil = require("./update-ithil.js");
 const updateKay = require("./update-kay.js");
 const updateChest = require("./update-chest.js");
+const updateBastion = require("./update-bastion.js");
 
 exports.handler = async function (event, context) {
   try {
@@ -38,10 +39,23 @@ exports.handler = async function (event, context) {
           throw new Error(`(${res.statusCode}) ${res.body}`);
         return res;
       }),
+      updateBastion.handler().then((res) => {
+        if (res.statusCode >= 400)
+          throw new Error(`(${res.statusCode}) ${res.body}`);
+        return res;
+      }),
     ]);
 
     const summary = results.map((result, i) => {
-      const name = ["oktar", "feril", "elsa", "ithil", "kay", "chest"][i];
+      const name = [
+        "oktar",
+        "feril",
+        "elsa",
+        "ithil",
+        "kay",
+        "chest",
+        "bastion",
+      ][i];
       if (result.status === "fulfilled") {
         return { name, status: "ok" };
       } else {
