@@ -2880,3 +2880,11 @@ body.dark-green-bg::after {
 .image-list .character-stats.spaced {
   margin-bottom: 1.1em;
 }
+
+.article-credits li {
+  margin-left: 1rem;
+}
+
+.patch-list.bastion h3 {
+  justify-content: initial;
+}

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bastion | Codex</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <canvas id="particles"></canvas>
+
+    <header class="codex-header">
+      <a href="/" class="banniere-link"><img src="../assets/images/banniere.png"
+          alt="Bannière" class="banniere" /></a>
+      <h1>Bastion</h1>
+      <p class="sous-titre">L’archive vivante des Égarés</p>
+    </header>
+
+    <nav class="nav-magique">
+      <a href="/">Accueil</a>
+      <a href="/../notes/">Patch Notes</a>
+      <a href="/../regles/">Règles</a>
+      <a href="/../univers/">Univers</a>
+      <a href="../musique">Musiques</a>
+      <a href="/../ressources/">Ressources</a>
+      <a href="../credits">Crédits</a>
+    </nav>
+
+    <main>
+      <div class="patch-list bastion">
+        <article class="article-credits">
+          <h2><i class="fa-solid fa-magnifying-glass"></i> Présentation</h2>
+          <p>
+            Le système de Bastion est issu du Guide du Maître (2024), chapitre
+            8, page 334. Dans notre campagne, les cinq personnages partagent un
+            seul et même
+            Bastion, un lieu central qui évolue avec eux. Ce havre est d’abord
+            un espace de repos, de soin et de réconfort entre deux expéditions —
+            un foyer, un quartier général, un symbole de leur union.</p>
+
+          <p>Mais le Bastion ne se limite pas à la détente. Il joue un rôle
+            actif
+            dans l’aventure : vous pourrez recruter des membres pour votre
+            guilde, leur assigner des tâches variées (artisanat, recherche,
+            entraînement, missions dans le Labyrinthe…), améliorer vos
+            installations, et bien
+            plus encore. Ce système vous permet d’influencer le monde au-delà
+            du Labyrinthe, d’investir dans votre avenir et de bâtir votre propre
+            légende.</p>
+
+          <p>Le Bastion dispose également d’une jauge de Confort, influencée par
+            les meubles et installations que vous y placez. En franchissant
+            certains paliers de confort, vous débloquerez divers bénéfices
+            passifs : récupération améliorée, bonus sur les tâches accomplies
+            par vos recrues, et autres
+            privilèges qui rendent votre refuge toujours plus accueillant et
+            efficace.
+          </p>
+        </article>
+        <article class="article-credits">
+          <h2><i class="fa-solid fa-clock"></i> Tours de Bastion</h2>
+          <p>
+            Le Bastion fonctionne selon un rythme quotidien, structuré en tours
+            de Bastion : chaque jour qui passe en jeu correspond à un tour.
+            Toutes les activités entreprises dans le Bastion — qu’il s’agisse de
+            missions confiées aux membres de la guilde, de construction
+            d’installations, d’études, d’artisanat ou de récupération — ont une
+            durée exprimée en nombre de tours. À chaque nouveau jour, un tour
+            s’écoule, permettant de faire progresser toutes les tâches en cours.
+            Ce système offre une gestion souple mais immersive du temps, et
+            renforce le sentiment que votre Bastion vit, s’anime, et évolue en
+            parallèle de vos aventures.
+          </p>
+        </article>
+        <article class="article-credits">
+          <h2><i class="fa-solid fa-gear"></i> Installations</h2>
+          <p>
+            Le Bastion peut accueillir diverses installations, véritables
+            centres d’activité où vos recrues de guilde peuvent être affectées
+            pour accomplir des tâches spécifiques : production d’objets,
+            entraînement, recherche, collecte, etc. Ces installations
+            constituent l’ossature fonctionnelle de votre domaine, et permettent
+            de faire vivre la guilde même en dehors des expéditions.</p>
+
+          <p>Le menu des installations est présenté sous la forme d’un arbre de
+            compétences, facilitant la lecture des prérequis et des évolutions
+            possibles.</p>
+
+          <img src="../assets/images/rules/bastion-skill-tree.png"
+            class="tutorial-image" />
+
+          <p>Chaque installation nécessite de remplir trois conditions
+            pour être construite :</p>
+
+          <li>Atteindre un certain niveau,</li>
+
+          <li>Dépenser une somme d’or,</li>
+
+          <li>Disposer d’assez de place dans le Bastion pour l’accueillir.</li>
+
+          <p>Une fois en place, une installation peut être agrandie, ce qui
+            augmente ses effets, débloque de nouvelles options ou permet d’y
+            affecter davantage de recrues. Il est aussi possible d’agrandir le
+            Bastion lui-même, afin d’y construire plus d’installations
+            et développer votre guilde selon vos priorités stratégiques.</p>
+        </article>
+        <article class="article-credits">
+          <h2><i class="fa-solid fa-gears"></i> Liste des installations</h2>
+          <h3>
+            <img class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/Siege_workshop_aoe2DE.png" />
+            Atelier
+          </h3>
+          <p>
+            Permet à vos recrues de fabriquer des munitions à partir de recettes
+            connues. Offre une source d’Inspiration après un repos court. Peut
+            être agrandi pour accueillir plus d’employés et accélérer la
+            production.
+          </p>
+          <h3>
+            <img class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/7264_b.png" />
+            Bar de guilde
+          </h3>
+          <p>
+            Lieu convivial où vos recrues partagent rumeurs et informations.
+            Permet de localiser des cibles dans le Labyrinthe et propose une
+            boisson magique différente chaque jour, aux effets utiles et variés.
+            Son agrandissement améliore le confort et débloque une seconde
+            boisson active.
+          </p>
+          <h3>
+            <img class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/University_AoE2_DE.png" />
+            Bibliothèque
+          </h3>
+          <p>
+            Permet de mener des recherches approfondies sur un sujet précis :
+            lieux, créatures, objets, légendes... Après quelques jours, vous
+            recevez jusqu’à trois informations inédites. Son agrandissement
+            réduit le temps de recherche en ajoutant des employés.
+          </p>
+          <h3>
+            <img class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/Bedroom.png" />
+            Chambre
+          </h3>
+          <p>
+            Espace privé et personnel réservé à chaque membre original de la
+            guilde, la
+            chambre n’a pas d’effet mécanique direct, mais constitue un lieu de
+            repos et d’intimité essentiel pour les personnages.
+          </p>
+          <h3>
+            <img class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/001853_hr1.png" />
+            Cuisine
+          </h3>
+          <p>
+            Permet à vos recrues de préparer des plats issus des recettes
+            connues de la guilde, avec effets variés selon les mets.
+            L’agrandissement ajoute du confort et accélère la préparation grâce
+            à une équipe élargie.
+          </p>
+          <h3>
+            <img class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/052647_hr1_waifu2x_scale2x.png" />
+            Dortoir
+          </h3>
+          <p>
+            Permet d’héberger les recrues de la guilde. Indispensable pour
+            recruter de nouveaux membres, chaque lit disponible dans le dortoir
+            représente une place d’accueil active pour la guilde.
+          </p>
+          <h3>
+            <img class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/Blacksmith_aoe2de.png" />
+            Forge
+          </h3>
+          <p>
+            Permet à vos recrues de fabriquer armes, armures et équipements à
+            partir des plans maîtrisés par la guilde. L’agrandissement augmente
+            le nombre d’employés pour accélérer la production.
+          </p>
+          <h3>
+            <img class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/scroll-bound-gold-brown.webp" />
+            Hall de guilde
+          </h3>
+          <p>
+            Permet de recruter de nouveaux membres pour votre Bastion ou
+            d’organiser des missions de guilde pour éliminer des ennemis connus
+            et récupérer leur butin. Sert aussi de lieu de réunion et de détente
+            pour vos recrues.
+          </p>
+          <h3>
+            <img class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/cornflower-blue.webp" />
+            Jardin
+          </h3>
+          <p>
+            Permet de récolter des ressources naturelles selon le type de jardin
+            choisi (fleurs, rations, herbes médicinales, poisons…). Vous pouvez
+            changer son type avec du temps, et l’agrandir pour doubler les
+            récoltes.
+          </p>
+          <h3>
+            <img class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/vials-blue-pink.webp" />
+            Laboratoire d’alchimie
+          </h3>
+          <p>
+            Permet à vos recrues de fabriquer des objets alchimiques à partir
+            des recettes connues. Son agrandissement ajoute des employés pour
+            accélérer la production et améliorer l’efficacité du laboratoire.
+          </p>
+          <h3>
+            <img class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/Barracks_aoe2DE.png" />
+            Salle d'entraînement
+          </h3>
+          <p>
+            Permet à vos personnages de suivre un programme d’entraînement
+            intensif et de bénéficier de bonus temporaires selon le type
+            d'entraîneur choisi (combat, magie, compétences). Peut être agrandie
+            pour offrir plusieurs entraînements simultanés.
+          </p>
+          <h3>
+            <img class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/BankingDE.png" />
+            Salle de jeux
+          </h3>
+          <p>
+            Offre à votre guilde un lieu de divertissement et de paris
+            organisés, rapportant des gains aléatoires chaque semaine. Son
+            agrandissement augmente les revenus et renforce le confort du
+            Bastion.
+          </p>
+          <h3>
+            <img class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/SanctityDE.webp" />
+            Salle des trophées
+          </h3>
+          <p>
+            Exposition de souvenirs glorieux et trophées de vos victoires, cette
+            pièce augmente considérablement le confort du Bastion. Peut être
+            agrandie pour accueillir plus de trophées et renforcer le prestige
+            du lieu.
+          </p>
+          <h3>
+            <img class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/2961_b.png" />
+            Salon
+          </h3>
+          <p>
+            Pièce centrale du Bastion, le Salon sert de lieu de repas, de repos
+            et de réunion pour les membres de la guilde. Indispensable pour
+            créer une ambiance conviviale, il est requis pour certaines autres
+            installations, comme le hall de guilde.
+          </p>
+        </article>
+      </div>
+    </main>
+
+    <script src="../scripts/particles.js"></script>
+  </body>
+</html>
