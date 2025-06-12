@@ -15,25 +15,30 @@
     <canvas id="particles"></canvas>
 
     <nav class="patch-nav">
-      <a href="#arum-titan" class="section-link">Arum titan</a>
-      <a href="#cerfurieux" class="section-link">Cerfurieux</a>
-      <a href="#champitoxi" class="section-link">Champitoxi</a>
-      <a href="#corbec" class="section-link">Corbec</a>
-      <a href="#crabe-scylla" class="section-link">Crabe scylla</a>
-      <a href="#dendrobate" class="section-link">Dendrobate</a>
-      <a href="#diablotin-d-eau" class="section-link">Diablotin d'eau</a>
-      <a href="#durian-letal" class="section-link">Durian létal</a>
-      <a href="#gigaconda" class="section-link">Gigaconda</a>
-      <a href="#gigapede" class="section-link">Gigapède</a>
-      <a href="#grand-lynx" class="section-link">Grand lynx</a>
-      <a href="#granthorynque" class="section-link">Granthorynque</a>
-      <a href="#lezard-goinfre" class="section-link">Lézard goinfre</a>
-      <a href="#limace-astrale" class="section-link">Limace astrale</a>
-      <a href="#narmer" class="section-link">Narmer</a>
-      <a href="#pincette" class="section-link">Pincette</a>
-      <a href="#piravageur" class="section-link">Piravageur</a>
-      <a href="#rainette" class="section-link">Rainette</a>
-      <a href="#tyran-dechaîne" class="section-link">Tyran déchaîné</a>
+      <a href="#stratum1" class="section-link">1ère Strate</a>
+      <a href="#s1-boss" class="section-link">Essences de Boss</a>
+      <a href="#narmer" class="sub-link">Narmer</a>
+      <a href="#s1-foe" class="section-link">Essences de F.O.E.</a>
+      <a href="#cerfurieux" class="sub-link">Cerfurieux</a>
+      <a href="#lezard-goinfre" class="sub-link">Lézard goinfre</a>
+      <a href="#tyran-dechaîne" class="sub-link">Tyran déchaîné</a>
+      <a href="#s1-monsters" class="section-link">Essences de monstres</a>
+      <a href="#arum-titan" class="sub-link">Arum titan</a>
+      <a href="#champitoxi" class="sub-link">Champitoxi</a>
+      <a href="#corbec" class="sub-link">Corbec</a>
+      <a href="#crabe-scylla" class="sub-link">Crabe scylla</a>
+      <a href="#dendrobate" class="sub-link">Dendrobate</a>
+      <a href="#diablotin-d-eau" class="sub-link">Diablotin d'eau</a>
+      <a href="#durian-letal" class="sub-link">Durian létal</a>
+      <a href="#gigaconda" class="sub-link">Gigaconda</a>
+      <a href="#gigapede" class="sub-link">Gigapède</a>
+      <a href="#grand-lynx" class="sub-link">Grand lynx</a>
+      <a href="#granthorynque" class="sub-link">Granthorynque</a>
+      <a href="#limace-astrale" class="sub-link">Limace astrale</a>
+      <a href="#pincette" class="sub-link">Pincette</a>
+      <a href="#piravageur" class="sub-link">Piravageur</a>
+      <a href="#rainette" class="sub-link">Rainette</a>
+
     </nav>
 
     <header class="codex-header">
@@ -58,13 +63,143 @@
           disponible <a
             href="../ressources/tutoriels.html#essences">ici</a>.</p></section>
       <div class="toggle-section">
-        <h2 class="patch-titre" id="aptitudes">
+        <h2 class="patch-titre" id="stratum1">
           <img src="../../assets/images/notes-big.png" class="image image-h2">
           1ère Strate <button class="toggle-button"
             onclick="toggleSection(this)">▲</button>
         </h2>
       </div>
       <div class="collapsible-content expanded">
+        <h2 class="patch-titre" id="s1-boss">
+          <img src="../../assets/images/notes-big.png" class="image image-h2">
+          Essences de Boss
+        </h2>
+        <article id="narmer">
+          <h3>
+            <img class="image skill-icon"
+              src="../assets/images/foundry-icons/items-icons/materia/materia-45.png" />
+            Essence cristallisée de Narmer
+            <span><img alt="Coût" class="image action-icon"
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/narmer-loot.png" />1
+              Moustache électrique</span>
+          </h3>
+          <p>Une essence crée à partir de matériaux de Narmer grâce à
+            l'ancienne magie de Voarmur.</p>
+          <div class="effet-bloc"><h4>Effet sur arme</h4><p>Confère l'aptitude
+              <strong>Flash</strong> au porteur.</p>
+
+            <p><strong>Flash</strong> : En tant qu'action, votre arme se mets à
+              briller puis émet un puissant éclat lumineux. Toutes les créatures
+              hostiles
+              dans un rayon de 3 mètres autour de vous doivent effectuer un jet
+              de
+              sauvegarde de Sagesse de DD 14. De nuit, le rayon d'effet est de
+              4.5
+              mètres et le DD du jet de sauvegarde passe à 16. En cas d'échec du
+              jet, elles sont aveuglées
+              pendant 3 rounds. En cas de réussite à la sauvegarde, la créature
+              n'est pas aveuglée. Flash est utilisable 2 fois par repos long.
+            </p></div>
+          <div class="effet-bloc"><h4>Effet sur armure</h4><p>Les dégâts
+              perforants et de glace reçus sont diminués de 4. Les dégâts de feu
+              et de foudre reçus sont augmentés de 2.</p></div>
+        </article>
+        <h2 class="patch-titre" id="s1-foe">
+          <img src="../../assets/images/notes-big.png" class="image image-h2">
+          Essences de F.O.E.
+        </h2>
+        <article id="cerfurieux">
+          <h3>
+            <img class="image skill-icon"
+              src="../assets/images/foundry-icons/items-icons/materia/materia-77.png" />
+            Essence cristallisée de Cerfurieux
+            <span><img alt="Coût" class="image action-icon"
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/furyhorn-loot.png" />2
+              Peau de cerf</span>
+          </h3>
+          <p>Une essence crée à partir de matériaux de Cerfurieux grâce à
+            l'ancienne magie de Voarmur.</p>
+          <div class="effet-bloc"><h4>Effet sur arme</h4><p>Confère l'aptitude
+              <strong>Assaut perturbant</strong> au porteur.</p>
+
+            <p><strong>Assaut perturbant</strong> : En tant qu'action, attaquez
+              une
+              créature avec
+              votre arme. En cas de touche, cette créature doit effectuer un jet
+              de sauvegarde d'Intelligence de DD 17. En cas d'échec du jet, elle
+              est confuse
+              pendant 3 rounds. En cas de réussite à la sauvegarde, la créature
+              n'est pas confuse. Assaut perturbant est utilisable 2 fois par
+              repos
+              long.
+            </p></div>
+          <div class="effet-bloc"><h4>Effet sur armure</h4><p>Les dégâts de
+              foudre
+              reçus sont diminués de 2. Les dégâts de feu reçus sont augmentés
+              de
+              1.</p></div>
+        </article>
+        <article id="lezard-goinfre">
+          <h3>
+            <img class="image skill-icon"
+              src="../assets/images/foundry-icons/items-icons/materia/materia-73.png" />
+            Essence cristallisée de Lézard goinfre
+            <span><img alt="Coût" class="image action-icon"
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/greedy-lizard-loot.png" />2
+              Crête de lézard</span>
+          </h3>
+          <p>Une essence crée à partir de matériaux de Lézard goinfre grâce à
+            l'ancienne magie de Voarmur.</p>
+          <div class="effet-bloc"><h4>Effet sur arme</h4><p>Confère l'aptitude
+              <strong>Assaut corrosif</strong> au porteur.</p>
+
+            <p><strong>Assaut corrosif</strong> : En tant qu'action, attaquez
+              une
+              créature avec votre arme. En cas de touche, cette créature doit
+              effectuer un jet de sauvegarde de Constitution de DD 17. En cas
+              d'échec du jet, elle est empoisonnée
+              pendant 3 rounds, subissant 1d6 + 3 de dégâts de poison à chaque
+              tour où elle continue d'être empoisonnée. En cas de réussite à la
+              sauvegarde, la créature n'est pas empoisonnée. Assaut corrosif est
+              utilisable 2 fois par repos long.
+            </p></div>
+          <div class="effet-bloc"><h4>Effet sur armure</h4><p>Les dégâts de feu
+              reçus sont diminués de 2. Les dégâts de glace reçus sont augmentés
+              de 1.</p></div>
+        </article>
+        <article id="tyran-dechaîne">
+          <h3>
+            <img class="image skill-icon"
+              src="../assets/images/foundry-icons/items-icons/materia/materia-69.png" />
+            Essence cristallisée de Tyran déchaîné
+            <span><img alt="Coût" class="image action-icon"
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/raging-tyrant-loot.png" />2
+              Dent d'hippopotame</span>
+          </h3>
+          <p>Une essence crée à partir de matériaux de Tyran déchaîné grâce à
+            l'ancienne magie de Voarmur.</p>
+          <div class="effet-bloc"><h4>Effet sur arme</h4><p>Confère l'aptitude
+              <strong>Charge furieuse</strong> au porteur.</p>
+
+            <p><strong>Charge furieuse</strong> : En tant qu'action complexe,
+              vous
+              chargez en ligne droite, jusqu'à votre vitesse de déplacement
+              restante. Si vous vous déplacez d'au moins 3 mètres de cette
+              façon,
+              et que vous entrez en collision avec une autre créature, vous
+              pouvez
+              effectuer une attaque contre celle-ci en situation d'avantage. En
+              cas de touche, la créature est repoussée de jusqu'à 3 mètres de
+              vous. Charge furieuse est utilisable 2 fois par repos long.
+            </p></div>
+          <div class="effet-bloc"><h4>Effet sur armure</h4><p>Les dégâts
+              contondants reçus sont diminués de 2. Les dégâts de feu reçus sont
+              augmentés de 1.</p></div>
+        </article>
+        <h2 class="patch-titre" id="s1-monsters">
+          <img src="../../assets/images/notes-big.png" class="image image-h2">
+          Essences de monstres
+        </h2>
         <article id="arum-titan">
           <h3>
             <img class="image skill-icon"
@@ -96,37 +231,6 @@
               reçus sont diminués de 2. Les dégâts tranchants reçus sont
               augmentés
               de 2.</p></div>
-        </article>
-        <article id="cerfurieux">
-          <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/items-icons/materia/materia-77.png" />
-            Essence cristallisée de Cerfurieux
-            <span><img alt="Coût" class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/furyhorn-loot.png" />2
-              Peau de cerf</span>
-          </h3>
-          <p>Une essence crée à partir de matériaux de Cerfurieux grâce à
-            l'ancienne magie de Voarmur.</p>
-          <div class="effet-bloc"><h4>Effet sur arme</h4><p>Confère l'aptitude
-              <strong>Assaut perturbant</strong> au porteur.</p>
-
-            <p><strong>Assaut perturbant</strong> : En tant qu'action, attaquez
-              une
-              créature avec
-              votre arme. En cas de touche, cette créature doit effectuer un jet
-              de sauvegarde d'Intelligence de DD 17. En cas d'échec du jet, elle
-              est confuse
-              pendant 3 rounds. En cas de réussite à la sauvegarde, la créature
-              n'est pas confuse. Assaut perturbant est utilisable 2 fois par
-              repos
-              long.
-            </p></div>
-          <div class="effet-bloc"><h4>Effet sur armure</h4><p>Les dégâts de
-              foudre
-              reçus sont diminués de 2. Les dégâts de feu reçus sont augmentés
-              de
-              1.</p></div>
         </article>
         <article id="champitoxi">
           <h3>
@@ -393,34 +497,6 @@
               de
               2.</p></div>
         </article>
-        <article id="lezard-goinfre">
-          <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/items-icons/materia/materia-73.png" />
-            Essence cristallisée de Lézard goinfre
-            <span><img alt="Coût" class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/greedy-lizard-loot.png" />2
-              Crête de lézard</span>
-          </h3>
-          <p>Une essence crée à partir de matériaux de Lézard goinfre grâce à
-            l'ancienne magie de Voarmur.</p>
-          <div class="effet-bloc"><h4>Effet sur arme</h4><p>Confère l'aptitude
-              <strong>Assaut corrosif</strong> au porteur.</p>
-
-            <p><strong>Assaut corrosif</strong> : En tant qu'action, attaquez
-              une
-              créature avec votre arme. En cas de touche, cette créature doit
-              effectuer un jet de sauvegarde de Constitution de DD 17. En cas
-              d'échec du jet, elle est empoisonnée
-              pendant 3 rounds, subissant 1d6 + 3 de dégâts de poison à chaque
-              tour où elle continue d'être empoisonnée. En cas de réussite à la
-              sauvegarde, la créature n'est pas empoisonnée. Assaut corrosif est
-              utilisable 2 fois par repos long.
-            </p></div>
-          <div class="effet-bloc"><h4>Effet sur armure</h4><p>Les dégâts de feu
-              reçus sont diminués de 2. Les dégâts de glace reçus sont augmentés
-              de 1.</p></div>
-        </article>
         <article id="limace-astrale">
           <h3>
             <img class="image skill-icon"
@@ -442,36 +518,6 @@
               reçus sont diminués de 2. Les dégâts de foudre reçus sont
               augmentés
               de 2.</p></div>
-        </article>
-        <article id="narmer">
-          <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/items-icons/materia/materia-45.png" />
-            Essence cristallisée de Narmer
-            <span><img alt="Coût" class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/narmer-loot.png" />1
-              Moustache électrique</span>
-          </h3>
-          <p>Une essence crée à partir de matériaux de Narmer grâce à
-            l'ancienne magie de Voarmur.</p>
-          <div class="effet-bloc"><h4>Effet sur arme</h4><p>Confère l'aptitude
-              <strong>Flash</strong> au porteur.</p>
-
-            <p><strong>Flash</strong> : En tant qu'action, votre arme se mets à
-              briller puis émet un puissant éclat lumineux. Toutes les créatures
-              hostiles
-              dans un rayon de 3 mètres autour de vous doivent effectuer un jet
-              de
-              sauvegarde de Sagesse de DD 14. De nuit, le rayon d'effet est de
-              4.5
-              mètres et le DD du jet de sauvegarde passe à 16. En cas d'échec du
-              jet, elles sont aveuglées
-              pendant 3 rounds. En cas de réussite à la sauvegarde, la créature
-              n'est pas aveuglée. Flash est utilisable 2 fois par repos long.
-            </p></div>
-          <div class="effet-bloc"><h4>Effet sur armure</h4><p>Les dégâts
-              perforants et de glace reçus sont diminués de 4. Les dégâts de feu
-              et de foudre reçus sont augmentés de 2.</p></div>
         </article>
         <article id="pincette">
           <h3>
@@ -542,35 +588,6 @@
               foudre
               reçus sont diminués de 2. Les dégâts de glace reçus sont augmentés
               de 2.</p></div>
-        </article>
-        <article id="tyran-dechaîne">
-          <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/items-icons/materia/materia-69.png" />
-            Essence cristallisée de Tyran déchaîné
-            <span><img alt="Coût" class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/raging-tyrant-loot.png" />2
-              Dent d'hippopotame</span>
-          </h3>
-          <p>Une essence crée à partir de matériaux de Tyran déchaîné grâce à
-            l'ancienne magie de Voarmur.</p>
-          <div class="effet-bloc"><h4>Effet sur arme</h4><p>Confère l'aptitude
-              <strong>Charge furieuse</strong> au porteur.</p>
-
-            <p><strong>Charge furieuse</strong> : En tant qu'action complexe,
-              vous
-              chargez en ligne droite, jusqu'à votre vitesse de déplacement
-              restante. Si vous vous déplacez d'au moins 3 mètres de cette
-              façon,
-              et que vous entrez en collision avec une autre créature, vous
-              pouvez
-              effectuer une attaque contre celle-ci en situation d'avantage. En
-              cas de touche, la créature est repoussée de jusqu'à 3 mètres de
-              vous. Charge furieuse est utilisable 2 fois par repos long.
-            </p></div>
-          <div class="effet-bloc"><h4>Effet sur armure</h4><p>Les dégâts
-              contondants reçus sont diminués de 2. Les dégâts de feu reçus sont
-              augmentés de 1.</p></div>
         </article>
       </div>
     </main>
