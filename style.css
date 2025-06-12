@@ -95,13 +95,18 @@ main.accueil {
 .patch-list.essence h3 {
   display: flex;
   align-items: center;
-  justify-content: initial;
   gap: 1rem;
 }
 
 .patch-list h3 span {
   font-weight: normal;
   font-size: 0.9em;
+  margin-left: auto;
+}
+
+.patch-list.essence h3 span {
+  font-weight: normal;
+  font-size: 0.8em;
   margin-left: auto;
 }
 
@@ -128,6 +133,11 @@ main.accueil {
   box-shadow: 0 0 15px rgba(76, 118, 141, 0.3);
   pointer-events: none;
 }
+
+.patch-list.essence article {
+  max-width: 820px;
+}
+
 
 a {
   color: #3ae7e7;
