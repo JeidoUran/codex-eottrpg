@@ -12,6 +12,12 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Inter';
+  src: url('assets/fonts/Inter.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 html {
   font-size: 18px;
@@ -1857,6 +1863,7 @@ select option {
 .inventory .item:hover {
   background: rgba(255, 255, 255, 0.089);
   transition: background 0.3s ease;
+  cursor: pointer;
 }
 
 .inventory .item img {
@@ -2887,4 +2894,86 @@ body.dark-green-bg::after {
 
 .patch-list.bastion h3 {
   justify-content: initial;
+}
+
+.illustration-character.background {
+  position: absolute;
+  z-index: 0;
+}
+
+.item-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.item-modal.hidden {
+  display: none;
+}
+
+.item-modal-content {
+  position: relative;
+  /* 👈 Ajoute cette ligne */
+  background: #1d1d1d;
+  border: 2px solid #aaa;
+  padding: 1.5rem;
+  width: 500px;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.close-button {
+  position: absolute;
+  top: 0.5rem;
+  /* plus près du bord du contenu */
+  right: 0.75rem;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.item-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.item-modal-header img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border: 1px solid #888;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.modal-header-texts {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.item-modal-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.item-modal-price {
+  background-color: #222;
+  color: #f0c060;
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  margin-right: 0.5rem;
+  font-family: "Inter";
 }

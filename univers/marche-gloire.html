@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Marché de la Gloire | Codex - Etrian Odyssey TTRPG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  </head>
+  <body>
+    <canvas id="particles"></canvas>
+
+    <header class="codex-header">
+      <a href="/" class="banniere-link"><img src="../assets/images/banniere.png"
+          alt="Bannière" class="banniere"></a>
+      <h1>Marché de la Gloire</h1>
+      <p class="sous-titre">L’archive vivante des Égarés</p>
+    </header>
+
+    <nav class="nav-magique">
+      <a href="/">Accueil</a>
+      <a href="../notes/">Patch Notes</a>
+      <a href="../regles/">Règles</a>
+      <a href="../univers/">Univers</a>
+      <a href="../musique">Musiques</a>
+      <a href="../ressources/">Ressources</a>
+      <a href="../credits">Crédits</a>
+    </nav>
+
+    <img src="../assets/images/portraits/iskar.png"
+      class="illustration-character background">
+
+    <main class="fiche-lore"
+      style="flex-direction: column; align-items: center;">
+      <article class="article-credits">
+        <h2><i class="fa-solid fa-coins"></i> Objets en vente</h2>
+        <ul class="image-list">
+          <div class="inventory" id="sunday-market-inventory">
+            <em>Chargement de l'inventaire...</em>
+          </div>
+          <p class="last-updated timestamp">Chargement...</p>
+        </ul>
+      </article>
+    </main>
+
+    <div class="backToTop-static-button">
+      <button id="backToTop-static"
+        onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+        <i class="fa-solid fa-arrow-up"></i> Retour en haut
+      </button>
+    </div>
+
+    <footer>
+      <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+    </footer>
+
+    <script
+      src="../scripts/player-chara-data/read-sunday-market-data.js"></script>
+    <script src="../scripts/particles.js"></script>
+    <div id="item-modal" class="item-modal hidden">
+      <div class="item-modal-content">
+        <span class="close-button">&times;</span>
+        <div id="item-modal-title"></div>
+        <p id="item-modal-description"></p>
+      </div>
+    </div>
+  </body>
+</html>

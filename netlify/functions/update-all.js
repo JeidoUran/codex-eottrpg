@@ -5,6 +5,7 @@ const updateIthil = require("./update-ithil.js");
 const updateKay = require("./update-kay.js");
 const updateChest = require("./update-chest.js");
 const updateBastion = require("./update-bastion.js");
+const updateSundayMarket = require("./update-sunday-market.js");
 
 exports.handler = async function (event, context) {
   try {
@@ -44,6 +45,11 @@ exports.handler = async function (event, context) {
           throw new Error(`(${res.statusCode}) ${res.body}`);
         return res;
       }),
+      updateSundayMarket.handler().then((res) => {
+        if (res.statusCode >= 400)
+          throw new Error(`(${res.statusCode}) ${res.body}`);
+        return res;
+      }),
     ]);
 
     const summary = results.map((result, i) => {
@@ -55,6 +61,7 @@ exports.handler = async function (event, context) {
         "kay",
         "chest",
         "bastion",
+        "sunday-market",
       ][i];
       if (result.status === "fulfilled") {
         return { name, status: "ok" };
