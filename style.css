@@ -219,6 +219,10 @@ a:hover {
   position: relative;
 }
 
+.accueil.large {
+  max-width: 1260px;
+}
+
 .accueil-music {
   max-width: 900px;
   margin: 2rem auto;
@@ -244,6 +248,12 @@ a:hover {
 .sections-liees {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.accueil.large .sections-liees {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 1.5rem;
 }
 
