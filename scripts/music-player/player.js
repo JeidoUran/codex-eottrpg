@@ -65,6 +65,11 @@ const playlistData = {
       fallbackCover: "cover-sys.jpg",
       context: "Voarmur - Port d'Inver",
     },
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/city/eo1u-house.mp3",
+      fallbackCover: "cover-explore.jpg",
+      context: "Voarmur - Bastion des Égarés",
+    },
   ],
   events: [
     {
@@ -76,6 +81,11 @@ const playlistData = {
       src: "https://s3.codex.eottrpg.memiroa.com/audio/event/eo5-event-threat.mp3",
       fallbackCover: "cover-explore.jpg",
       context: "Menace inconnue",
+    },
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/event/eo1u-event-blue.mp3",
+      fallbackCover: "cover-explore.jpg",
+      context: "Interrogations",
     },
   ],
   labyrinth: [
