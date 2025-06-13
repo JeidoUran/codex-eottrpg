@@ -60,6 +60,11 @@ const playlistData = {
       fallbackCover: "cover-sys.jpg",
       context: "Voarmur - Palais du Sénat",
     },
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/city/eo3-harbor-remix.mp3",
+      fallbackCover: "cover-sys.jpg",
+      context: "Voarmur - Port d'Inver",
+    },
   ],
   events: [
     {
