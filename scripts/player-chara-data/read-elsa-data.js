@@ -65,11 +65,11 @@ fetch(url)
       "gem",
       "gear",
       "art",
-      "furniture",
       "etrian",
       "trinket",
       "",
       "key",
+      "furniture",
     ];
 
     // Fonction de tri
@@ -86,10 +86,13 @@ fetch(url)
       const relativePath = match ? match[1] : "placeholder.png";
       const iconPath = `../../assets/images/foundry-icons/${relativePath}`;
       const quantity = item.system?.quantity;
-      const rarity = item.system?.rarity ?? "common"; // fallback si manquant
+      const rarity = item.system?.rarity ?? "common";
+      const description =
+        item.system?.description?.chat.trim() ||
+        item.system?.description?.value;
 
       return `
-          <div class="item rarity-${rarity}">
+          <div class="item rarity-${rarity}" data-name="${item.name}" data-description="${description}">
             <img src="${iconPath}" alt="${item.name}">
             ${quantity > 1 ? `<span class="quantity">${quantity}</span>` : ""}
             <div class="tooltip">${item.name}</div>
@@ -190,7 +193,7 @@ fetch(url)
     let html = `
         <div class="inventory-section">
           <li class="character-stats" style="display: flex; align-items: flex-start; gap: 0.75rem; list-style: none;"><img src="../../assets/images/notes-medium.png" class="image" style="width: 24px; height: 24px; flex-shrink: 0; margin-top: 2px;"><strong>Équipé :</strong></li>
-          <div class="inventory equipped-inventory">
+          <div class="inventory equipped-inventory no-feats">
             ${equippedItems.length > 0 ? equippedItems.map(renderItem).join("") : "<em>Aucun objet équipé.</em>"}
           </div>
         </div>
@@ -203,13 +206,42 @@ fetch(url)
           <div class="tooltip">Entals possédés</div>
           </div>
           <strong><span id="gold-value">…</span> en</strong></li></ul>
-          <div class="inventory bag-inventory">
+          <div class="inventory bag-inventory no-feats">
             ${inventoryItems.length > 0 ? inventoryItems.map(renderItem).join("") : "<em>Inventaire vide.</em>"}
           </div>
         </div>
       `;
 
     inventoryDiv.innerHTML = html;
+    document.querySelectorAll(".inventory.no-feats .item").forEach((itemEl) => {
+      itemEl.addEventListener("click", () => {
+        const name = itemEl.dataset.name;
+        const desc =
+          itemEl.dataset.description?.trim() || "Aucune description.";
+        const cleanedDesc = desc
+          .replace(/@UUID\[[^\]]+]\{([^}]+)\}/g, "$1")
+          .replace(/\[\[[^\]]+]]/g, "");
+        const imgSrc = itemEl.querySelector("img")?.src;
+
+        const headerHTML = `
+        <div class="item-modal-header">
+          <img src="${imgSrc}" alt="${name}">
+          <div class="modal-header-texts">
+            <h3>${name}</h3>
+          </div>
+        </div>
+      `;
+
+        document.getElementById("item-modal-title").innerHTML = headerHTML;
+        document.getElementById("item-modal-description").innerHTML =
+          cleanedDesc;
+        document.getElementById("item-modal").classList.remove("hidden");
+      });
+    });
+
+    document.querySelector(".close-button").addEventListener("click", () => {
+      document.getElementById("item-modal").classList.add("hidden");
+    });
 
     if (!data.system || !data.system.attributes || !data.system.abilities) {
       stats.innerHTML = "<em>Données d'Elsa incomplètes.</em>";

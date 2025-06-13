@@ -2888,7 +2888,7 @@ body.dark-green-bg::after {
   margin-bottom: 1.1em;
 }
 
-.article-credits li {
+.article-credits li.in-article {
   margin-left: 1rem;
 }
 
@@ -2927,6 +2927,8 @@ body.dark-green-bg::after {
   width: 500px;
   color: #fff;
   border-radius: 12px;
+  max-height: 75%;
+  overflow-y: scroll;
 }
 
 .close-button {

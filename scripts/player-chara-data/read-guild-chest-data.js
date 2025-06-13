@@ -37,6 +37,7 @@ fetch(`${chestUrl}?nocache=${Date.now()}`)
       "resource",
       "treasure",
       "key",
+      "furniture",
       "",
     ];
 
@@ -49,17 +50,20 @@ fetch(`${chestUrl}?nocache=${Date.now()}`)
     const renderItem = (item) => {
       const match = item.img.match(/data\/assets\/(.+)/);
       const relativePath = match ? match[1] : "placeholder.png";
-      const iconPath = `../assets/images/foundry-icons/${relativePath}`;
+      const iconPath = `../../assets/images/foundry-icons/${relativePath}`;
       const quantity = item.system?.quantity;
       const rarity = item.system?.rarity ?? "common";
+      const description =
+        item.system?.description?.chat.trim() ||
+        item.system?.description?.value;
 
       return `
-        <div class="item rarity-${rarity}">
-          <img src="${iconPath}" alt="${item.name}">
-          ${quantity > 1 ? `<span class="quantity">${quantity}</span>` : ""}
-          <div class="tooltip">${item.name}</div>
-        </div>
-      `;
+          <div class="item rarity-${rarity}" data-name="${item.name}" data-description="${description}">
+            <img src="${iconPath}" alt="${item.name}">
+            ${quantity > 1 ? `<span class="quantity">${quantity}</span>` : ""}
+            <div class="tooltip">${item.name}</div>
+          </div>
+        `;
     };
 
     const inventoryItems = allItems
@@ -70,6 +74,36 @@ fetch(`${chestUrl}?nocache=${Date.now()}`)
       inventoryItems.length > 0
         ? inventoryItems.map(renderItem).join("")
         : "<em>Le coffre est vide.</em>";
+
+    document.querySelectorAll(".inventory .item").forEach((itemEl) => {
+      itemEl.addEventListener("click", () => {
+        const name = itemEl.dataset.name;
+        const desc =
+          itemEl.dataset.description?.trim() || "Aucune description.";
+        const cleanedDesc = desc
+          .replace(/@UUID\[[^\]]+]\{([^}]+)\}/g, "$1")
+          .replace(/\[\[[^\]]+]]/g, "");
+        const imgSrc = itemEl.querySelector("img")?.src;
+
+        const headerHTML = `
+            <div class="item-modal-header">
+              <img src="${imgSrc}" alt="${name}">
+              <div class="modal-header-texts">
+                <h3>${name}</h3>
+              </div>
+            </div>
+          `;
+
+        document.getElementById("item-modal-title").innerHTML = headerHTML;
+        document.getElementById("item-modal-description").innerHTML =
+          cleanedDesc;
+        document.getElementById("item-modal").classList.remove("hidden");
+      });
+    });
+
+    document.querySelector(".close-button").addEventListener("click", () => {
+      document.getElementById("item-modal").classList.add("hidden");
+    });
 
     const updated = new Date(json._codexLastUpdate);
     document.querySelector(".timestamp").textContent =

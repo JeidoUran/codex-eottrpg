@@ -32,9 +32,9 @@ fetch(`${sundayMarketUrl}?nocache=${Date.now()}`)
       "food",
       "material",
       "resource",
-      "furniture",
       "treasure",
       "key",
+      "furniture",
       "",
     ];
 
@@ -66,7 +66,7 @@ fetch(`${sundayMarketUrl}?nocache=${Date.now()}`)
       <div class="item rarity-${rarity}" data-name="${item.name}" data-description="${description}" data-marketprice="${marketPrice}" data-quantityforprice="${quantityForPrice}" data-pricemultiplier="${priceMultiplier}">
         <img src="${iconPath}" alt="${item.name}">
         ${quantity > 1 ? `<span class="quantity">${quantity}</span>` : ""}
-        <div class="tooltip market">${item.name}</div>
+        <div class="tooltip">${item.name}</div>
       </div>
       `;
     };
@@ -78,7 +78,7 @@ fetch(`${sundayMarketUrl}?nocache=${Date.now()}`)
     inventoryDiv.innerHTML =
       inventoryItems.length > 0
         ? inventoryItems.map(renderItem).join("")
-        : "<em>Le coffre est vide.</em>";
+        : "<em>Iskar n'a rien à vendre.</em>";
     document.querySelectorAll(".inventory .item").forEach((itemEl) => {
       itemEl.addEventListener("click", () => {
         const name = itemEl.dataset.name;
@@ -122,5 +122,5 @@ fetch(`${sundayMarketUrl}?nocache=${Date.now()}`)
     document.getElementById("sunday-market-inventory").innerHTML =
       "<em>Données indisponibles. Le fichier JSON est introuvable ou le serveur est hors ligne.</em>";
     document.querySelector(".timestamp").textContent = "";
-    console.error("Erreur chargement coffre :", err);
+    console.error("Erreur chargement marché :", err);
   });
