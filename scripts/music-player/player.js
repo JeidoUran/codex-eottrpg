@@ -217,6 +217,7 @@ function loadPlaylist(playlistKey) {
           onSuccess: function (tag) {
             const title = tag.tags.title || `Piste ${index + 1}`;
             const artist = tag.tags.artist || "Artiste inconnu";
+            const album = tag.tags.album || "Album inconnu";
             let imageUrl = track.fallbackCover;
             if (tag.tags.picture) {
               const { data, format } = tag.tags.picture;
@@ -230,6 +231,7 @@ function loadPlaylist(playlistKey) {
               src: track.src,
               title,
               artist,
+              album,
               imageUrl,
               context: track.context || "",
             });
@@ -241,6 +243,7 @@ function loadPlaylist(playlistKey) {
               src: track.src,
               title: `Piste ${index + 1}`,
               artist: "Artiste inconnu",
+              album: "Album inconnu",
               imageUrl: track.fallbackCover,
               context: track.context || "",
             });
@@ -256,6 +259,7 @@ function loadPlaylist(playlistKey) {
         li.dataset.src = trackData.src;
         li.dataset.title = trackData.title;
         li.dataset.artist = trackData.artist;
+        li.dataset.album = trackData.album;
         li.dataset.cover = trackData.imageUrl;
         li.dataset.context = trackData.context;
         li.innerHTML = `
@@ -296,6 +300,7 @@ document.querySelectorAll(".tab-button").forEach((btn) => {
 const trackTitle = document.getElementById("track-title");
 const trackArtist = document.getElementById("track-artist");
 const trackArt = document.getElementById("track-art");
+const trackAlbum = document.getElementById("track-album");
 const playBtn = document.getElementById("playPauseBtn");
 const progressBar = document.getElementById("progressBar");
 const timeDisplay = document.getElementById("timeDisplay");
@@ -352,6 +357,7 @@ function playTrack(index) {
   track.classList.add("playing");
   trackTitle.textContent = track.dataset.title || "Titre inconnu";
   trackArtist.textContent = track.dataset.artist || "Artiste inconnu";
+  trackAlbum.textContent = track.dataset.album || "Album inconnu";
   trackArt.src = track.dataset.cover || "cover.jpg";
 }
 
@@ -444,6 +450,7 @@ playlist.addEventListener("click", (e) => {
     audio.play();
     trackTitle.textContent = e.target.dataset.title || "Titre inconnu";
     trackArtist.textContent = e.target.dataset.artist || "Artiste inconnu";
+    trackAlbum.textContent = e.target.dataset.album || "Album inconnu";
     trackArt.src = e.target.dataset.cover || "cover.jpg";
   }
 });
