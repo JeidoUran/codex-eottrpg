@@ -87,6 +87,11 @@ const playlistData = {
       fallbackCover: "cover-explore.jpg",
       context: "Interrogations",
     },
+    {
+      src: "https://s3.codex.eottrpg.memiroa.com/audio/event/eo2u-event-blossoms.mp3",
+      fallbackCover: "cover-explore.jpg",
+      context: "Rencontre avec la Princesse",
+    },
   ],
   labyrinth: [
     {
