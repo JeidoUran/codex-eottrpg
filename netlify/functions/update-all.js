@@ -1,92 +1,27 @@
-const updateOktar = require("./update-oktar.js");
-const updateFeril = require("./update-feril.js");
-const updateElsa = require("./update-elsa.js");
-const updateIthil = require("./update-ithil.js");
-const updateKay = require("./update-kay.js");
-const updateChest = require("./update-chest.js");
-const updateBastion = require("./update-bastion.js");
-const updateSundayMarket = require("./update-sunday-market.js");
+// netlify/functions/update-all.js
+// Kicker synchrone : déclenche la background, puis répond 200 immédiatement.
+exports.handler = async function (event) {
+  // Construit l'URL de la background
+  const scheme = event.headers["x-forwarded-proto"] || "https";
+  const host = event.headers.host; // ex: codex.eottrpg.memiroa.com
+  const base = process.env.SITE_URL || (host ? `${scheme}://${host}` : "");
+  const url = `${base}/.netlify/functions/update-all-background`;
 
-exports.handler = async function (event, context) {
+  // Timeout court pour ne pas rester bloqué si le réseau accroche
+  const controller = new AbortController();
+  const t = setTimeout(() => controller.abort(), 3000);
+
   try {
-    const results = await Promise.allSettled([
-      updateOktar.handler().then((res) => {
-        if (res.statusCode >= 400)
-          throw new Error(`(${res.statusCode}) ${res.body}`);
-        return res;
-      }),
-      updateFeril.handler().then((res) => {
-        if (res.statusCode >= 400)
-          throw new Error(`(${res.statusCode}) ${res.body}`);
-        return res;
-      }),
-      updateElsa.handler().then((res) => {
-        if (res.statusCode >= 400)
-          throw new Error(`(${res.statusCode}) ${res.body}`);
-        return res;
-      }),
-      updateIthil.handler().then((res) => {
-        if (res.statusCode >= 400)
-          throw new Error(`(${res.statusCode}) ${res.body}`);
-        return res;
-      }),
-      updateKay.handler().then((res) => {
-        if (res.statusCode >= 400)
-          throw new Error(`(${res.statusCode}) ${res.body}`);
-        return res;
-      }),
-      updateChest.handler().then((res) => {
-        if (res.statusCode >= 400)
-          throw new Error(`(${res.statusCode}) ${res.body}`);
-        return res;
-      }),
-      updateBastion.handler().then((res) => {
-        if (res.statusCode >= 400)
-          throw new Error(`(${res.statusCode}) ${res.body}`);
-        return res;
-      }),
-      updateSundayMarket.handler().then((res) => {
-        if (res.statusCode >= 400)
-          throw new Error(`(${res.statusCode}) ${res.body}`);
-        return res;
-      }),
-    ]);
-
-    const summary = results.map((result, i) => {
-      const name = [
-        "oktar",
-        "feril",
-        "elsa",
-        "ithil",
-        "kay",
-        "chest",
-        "bastion",
-        "sunday-market",
-      ][i];
-      if (result.status === "fulfilled") {
-        return { name, status: "ok" };
-      } else {
-        return {
-          name,
-          status: "error",
-          reason: result.reason?.message || "Unknown error",
-        };
-      }
-    });
-
-    const hasError = results.some((r) => r.status === "rejected");
-
-    return {
-      statusCode: hasError ? 207 : 200,
-      body: JSON.stringify({
-        status: hasError ? "partial-failure" : "done",
-        summary,
-      }),
-    };
-  } catch (err) {
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ status: "error", message: err.message }),
-    };
+    // On "tape" la background en POST, mais on ignore son résultat (elle renverra 202)
+    await fetch(url, { method: "POST", signal: controller.signal }).catch(
+      () => {}
+    );
+  } finally {
+    clearTimeout(t);
   }
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ kicked: true, target: "update-all-background" }),
+  };
 };
