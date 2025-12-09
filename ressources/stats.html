@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Statistiques | Codex - Etrian Odyssey TTRPG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <canvas id="particles"></canvas>
+
+    <header class="codex-header">
+      <a href="/" class="banniere-link"><img src="../assets/images/banniere.png"
+          alt="Bannière" class="banniere"></a>
+      <h1>Statistiques</h1>
+      <p class="sous-titre">L’archive vivante des Égarés</p>
+    </header>
+
+    <nav class="nav-magique">
+      <a href="/">Accueil</a>
+      <a href="/../notes/">Patch Notes</a>
+      <a href="/../regles/">Règles</a>
+      <a href="/../univers/">Univers</a>
+      <a href="../musique">Musiques</a>
+      <a href="/../ressources/">Ressources</a>
+      <a href="../credits">Crédits</a>
+    </nav>
+
+    <main class="accueil">
+      <div class="patch-list">
+        <div class="class-table-tabs-wrapper">
+          <button class="tab-button active"
+            data-player="edenai"
+            onclick="switchTab(event, 'edenai')">Edenai</button>
+          <button class="tab-button"
+            data-player="gregorysly"
+            onclick="switchTab(event, 'gregorysly')">Gregorysly</button>
+          <button class="tab-button" data-player="jeido"
+            onclick="switchTab(event, 'jeido')">Jeido</button>
+          <button class="tab-button"
+            data-player="rashaza"
+            onclick="switchTab(event, 'rashaza')">Rashaza</button>
+          <button class="tab-button"
+            data-player="stratof"
+            onclick="switchTab(event, 'stratof')">Stratof</button>
+          <button class="tab-button"
+            data-player="stricomal"
+            onclick="switchTab(event, 'stricomal')">Stricomal</button>
+          <button class="tab-button"
+            data-player="tailos"
+            onclick="switchTab(event, 'tailos')">Tailos</button>
+        </div>
+
+        <div class="table-container tab-content active" id="tab-edenai">
+          <!-- EDENAI -->
+          <div class="dice-player-table" data-player="edenai">
+            <table class="progression-table">
+              <thead>
+                <tr>
+                  <th>Type de dés</th>
+                  <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th>
+                  <th>6</th><th>7</th><th>8</th><th>9</th><th>10</th>
+                  <th>11</th><th>12</th><th>13</th><th>14</th><th>15</th>
+                  <th>16</th><th>17</th><th>18</th><th>19</th><th>20</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>D2</td>
+                  <td>0</td><td>0</td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D3</td>
+                  <td>0</td><td>0</td><td>0</td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D4</td>
+                  <td>2</td><td>1</td><td>0</td><td>0</td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D6</td>
+                  <td>1</td><td>2</td><td>2</td><td>2</td><td>2</td><td>0</td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D8</td>
+                  <td>3</td><td>1</td><td>5</td><td>4</td><td>2</td><td>2</td><td>1</td><td>2</td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D10</td>
+                  <td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D12</td>
+                  <td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D20</td>
+                  <td>3</td><td>6</td><td>0</td><td>3</td><td>3</td><td>3</td><td>3</td><td>2</td><td>0</td><td>5</td>
+                  <td>2</td><td>2</td><td>1</td><td>5</td><td>2</td><td>4</td><td>0</td><td>5</td><td>1</td><td>4</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- GREGORYSLY -->
+        <div class="table-container tab-content active" id="tab-gregorysly"
+          style="display:none;">
+          <div class="dice-player-table" data-player="gregorysly">
+            <table class="progression-table">
+              <thead>
+                <tr>
+                  <th>Type de dés</th>
+                  <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th>
+                  <th>6</th><th>7</th><th>8</th><th>9</th><th>10</th>
+                  <th>11</th><th>12</th><th>13</th><th>14</th><th>15</th>
+                  <th>16</th><th>17</th><th>18</th><th>19</th><th>20</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>D2</td>
+                  <td>0</td><td>0</td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D3</td>
+                  <td>0</td><td>0</td><td>0</td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D4</td>
+                  <td>6</td><td>4</td><td>5</td><td>7</td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D6</td>
+                  <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D8</td>
+                  <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D10</td>
+                  <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D12</td>
+                  <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D20</td>
+                  <td>1</td><td>1</td><td>2</td><td>1</td><td>0</td><td>0</td><td>3</td><td>1</td><td>1</td><td>5</td>
+                  <td>2</td><td>3</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- JEIDO -->
+        <div class="table-container tab-content active" id="tab-jeido"
+          style="display:none;">
+          <div class="dice-player-table" data-player="jeido">
+            <table class="progression-table">
+              <thead>
+                <tr>
+                  <th>Type de dés</th>
+                  <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th>
+                  <th>6</th><th>7</th><th>8</th><th>9</th><th>10</th>
+                  <th>11</th><th>12</th><th>13</th><th>14</th><th>15</th>
+                  <th>16</th><th>17</th><th>18</th><th>19</th><th>20</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>D2</td>
+                  <td>5</td><td>1</td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D3</td>
+                  <td>1</td><td>2</td><td>1</td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D4</td>
+                  <td>52</td><td>39</td><td>57</td><td>53</td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D6</td>
+                  <td>10</td><td>7</td><td>6</td><td>10</td><td>7</td><td>10</td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D8</td>
+                  <td>16</td><td>20</td><td>22</td><td>11</td><td>12</td><td>16</td><td>13</td><td>11</td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D10</td>
+                  <td>2</td><td>1</td><td>0</td><td>4</td><td>1</td><td>2</td><td>2</td><td>1</td><td>1</td><td>1</td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D12</td>
+                  <td>0</td><td>2</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td><td>1</td><td>0</td><td>0</td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D20</td>
+                  <td>4</td><td>4</td><td>1</td><td>10</td><td>2</td><td>3</td><td>3</td><td>5</td><td>3</td><td>5</td>
+                  <td>2</td><td>7</td><td>0</td><td>1</td><td>4</td><td>3</td><td>4</td><td>2</td><td>6</td><td>5</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- RASHAZA -->
+        <div class="table-container tab-content active" id="tab-rashaza"
+          style="display:none;">
+          <div class="dice-player-table" data-player="rashaza">
+            <table class="progression-table">
+              <thead>
+                <tr>
+                  <th>Type de dés</th>
+                  <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th>
+                  <th>6</th><th>7</th><th>8</th><th>9</th><th>10</th>
+                  <th>11</th><th>12</th><th>13</th><th>14</th><th>15</th>
+                  <th>16</th><th>17</th><th>18</th><th>19</th><th>20</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>D2</td>
+                  <td>0</td><td>0</td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D3</td>
+                  <td>2</td><td>9</td><td>2</td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D4</td>
+                  <td>6</td><td>5</td><td>5</td><td>4</td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D6</td>
+                  <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D8</td>
+                  <td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>2</td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D10</td>
+                  <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D12</td>
+                  <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D20</td>
+                  <td>0</td><td>1</td><td>1</td><td>2</td><td>0</td><td>1</td><td>2</td><td>0</td><td>0</td><td>1</td>
+                  <td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- STRATOF -->
+        <div class="table-container tab-content active" id="tab-stratof"
+          style="display:none;">
+          <div class="dice-player-table" data-player="stratof">
+            <table class="progression-table">
+              <thead>
+                <tr>
+                  <th>Type de dés</th>
+                  <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th>
+                  <th>6</th><th>7</th><th>8</th><th>9</th><th>10</th>
+                  <th>11</th><th>12</th><th>13</th><th>14</th><th>15</th>
+                  <th>16</th><th>17</th><th>18</th><th>19</th><th>20</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>D2</td>
+                  <td>0</td><td>0</td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D3</td>
+                  <td>0</td><td>0</td><td>0</td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D4</td>
+                  <td>2</td><td>1</td><td>0</td><td>0</td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D6</td>
+                  <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D8</td>
+                  <td>2</td><td>2</td><td>2</td><td>2</td><td>9</td><td>0</td><td>3</td><td>1</td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D10</td>
+                  <td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D12</td>
+                  <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D20</td>
+                  <td>1</td><td>0</td><td>0</td><td>2</td><td>3</td><td>2</td><td>1</td><td>0</td><td>1</td><td>0</td>
+                  <td>1</td><td>3</td><td>0</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>2</td><td>0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- STRICOMAL -->
+        <div class="table-container tab-content active" id="tab-stricomal"
+          style="display:none;">
+          <div class="dice-player-table" data-player="stricomal">
+            <table class="progression-table">
+              <thead>
+                <tr>
+                  <th>Type de dés</th>
+                  <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th>
+                  <th>6</th><th>7</th><th>8</th><th>9</th><th>10</th>
+                  <th>11</th><th>12</th><th>13</th><th>14</th><th>15</th>
+                  <th>16</th><th>17</th><th>18</th><th>19</th><th>20</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>D2</td>
+                  <td>0</td><td>0</td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D3</td>
+                  <td>0</td><td>0</td><td>0</td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D4</td>
+                  <td>5</td><td>6</td><td>7</td><td>10</td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D6</td>
+                  <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D8</td>
+                  <td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D10</td>
+                  <td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D12</td>
+                  <td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D20</td>
+                  <td>1</td><td>2</td><td>1</td><td>2</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>1</td>
+                  <td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>2</td><td>3</td><td>0</td><td>0</td><td>0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- TAILOS -->
+        <div class="table-container tab-content active" id="tab-tailos"
+          style="display:none;">
+          <div class="dice-player-table" data-player="tailos">
+            <table class="progression-table">
+              <thead>
+                <tr>
+                  <th>Type de dés</th>
+                  <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th>
+                  <th>6</th><th>7</th><th>8</th><th>9</th><th>10</th>
+                  <th>11</th><th>12</th><th>13</th><th>14</th><th>15</th>
+                  <th>16</th><th>17</th><th>18</th><th>19</th><th>20</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>D2</td>
+                  <td>0</td><td>0</td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D3</td>
+                  <td>4</td><td>4</td><td>3</td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D4</td>
+                  <td>0</td><td>1</td><td>0</td><td>2</td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D6</td>
+                  <td>0</td><td>1</td><td>2</td><td>0</td><td>2</td><td>1</td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D8</td>
+                  <td>2</td><td>4</td><td>1</td><td>4</td><td>4</td><td>3</td><td>4</td><td>6</td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D10</td>
+                  <td>1</td><td>1</td><td>2</td><td>3</td><td>2</td><td>2</td><td>3</td><td>2</td><td>1</td><td>0</td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D12</td>
+                  <td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td><td>2</td><td>2</td>
+                  <td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>D20</td>
+                  <td>1</td><td>1</td><td>3</td><td>2</td><td>2</td><td>1</td><td>2</td><td>4</td><td>1</td><td>0</td>
+                  <td>2</td><td>1</td><td>3</td><td>0</td><td>1</td><td>2</td><td>2</td><td>1</td><td>3</td><td>4</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+    function switchTab(event, tabId) {
+      const tabs = document.querySelectorAll('.tab-button');
+      const contents = document.querySelectorAll('.tab-content');
+      tabs.forEach(t => t.classList.remove('active'));
+      contents.forEach(c => {
+        c.classList.remove('active');
+        c.style.display = 'none';
+      });
+
+      event.target.classList.add('active');
+      const target = document.getElementById(`tab-${tabId}`);
+      target.style.display = 'block';
+      void target.offsetWidth; // forcer repaint
+      target.classList.add('active');
+    }
+</script>
+    <footer>
+      <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+    </footer>
+    <script src="../scripts/particles.js"></script>
+  </body>
+</html>
