@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Patch 3.3 – Session 23 | Codex - Etrian Odyssey TTRPG</title>
+  <link rel="icon" href="../favicon.png" type="image/png">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <canvas id="particles"></canvas>
+
+  
+<nav class="patch-nav">
+ <a href="#systeme" class="section-link">Système</a>
+    <a href="#codex" class="section-link">Codex</a>
+    <a href="#problemes-resolus" class="section-link">Problèmes résolus</a>
+  </nav>
+
+  <header class="codex-header" id="top">
+    <a href="/" class="banniere-link"><img src="../assets/images/banniere.png" alt="Bannière" class="banniere"></a>
+    <h1><img src="../assets/images/silver-scroll.png" class="image codex-image-header"> Patch 3.3 – Session 23</h1>
+    <p class="sous-titre">Publié le 10 Décembre 2025</p>
+    <div class="fixed-header-links">
+      <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Index des patchs</a>
+    </div>
+  </header>
+
+  <nav class="nav-magique">
+    <a href="/">Accueil</a>
+    <a href="../notes/">Patch Notes</a>
+    <a href="../resumes/">Résumés</a>
+    <a href="../regles/">Règles</a>
+    <a href="../univers/">Univers</a>
+    <a href="../musique">Musiques</a>
+    <a href="../ressources/">Ressources</a>
+    <a href="../credits">Crédits</a>
+  </nav>
+
+<main class="accueil">
+    
+<section class="patch-section" id="systeme">
+  <h2 class="patch-titre">
+    <img src="../assets/images/notes-big.png" class="image image-h2">
+    Système
+  </h2>
+  <ul class="image-list">
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Foundry VTT a été mis à jour (12.350 → 13.351).</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'effet "Sens de l'embuscade" propose désormais d'ajouter ses dégâts bonus lors d'un jet de dégâts.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'effet des "Gants du guerrier assiégé" s'applique désormais automatiquement.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Une nouvelle méthode de notifications relatives aux bonus conférés à un personnage a été ajoutée, pour l'instant uniquement sur les "Gants du guerrier assiégé".</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les effets d'enchantement d'équipement sont désormais affichés lorsqu'un équipement est envoyé dans le tchat.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Un bouton permettant de contacter le bot d'Archivist AI a été ajouté à la barre latérale.<div class="note-expliquee">Vous pouvez lui poser des questions en relation avec la campagne, par exemple "Qui est Kujura ?" ou "Qui a porté le coup final lors du combat contre Narmer ?".</div><div class="note-expliquee">Le bot est également disponible sur Discord, dans le canal #archivist-ai. Il vous suffit de "@Archivist AI" puis d'écrire votre question.</div><div class="note-expliquee">Bien évidemment, s'agissant d'une IA, des réponses étranges et/ou fausses peuvent survenir. De plus, je n'ai pas encore ajouté tout le contenu des précédentes sessions, le bot n'a donc aucune connaissance sur ce qu'il manque (mais vous le fera normalement remarquer).</div><div class="note-expliquee">Le bot possède les mêmes connaissances que vous.</div><div class="note-expliquee">Plus d'infos en début de session.</div></div></li>
+  </ul></section>
+
+<section class="patch-section" id="codex">
+  <h2 class="patch-titre">
+    <img src="../assets/images/notes-big.png" class="image image-h2">
+    Codex
+  </h2>
+  <ul class="image-list">
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Une section "Résumés", qui comporte des résumés des précédentes sessions, a été ajoutée.<div class="note-expliquee">Un résumé du début de l'aventure, couvrant les sessions 1 à 13, à été ajouté à cette section.</div><div class="note-expliquee">Les résumés des sessions 20, 21 et 22 sont manquants mais seront ajoutés au plus vite.</div></div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">La section "Factions" est désormais fonctionnelle.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Des PNJ ont été ajoutés.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Ces sections sont incomplètes et servent plutôt de "proof-of-concept" pour l'instant.</div></li>
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">"Archivist AI" a permit tous ces ajouts, plus d'informations en début de session.</div></li>
+  </ul></section>
+
+<section class="patch-section" id="problemes-resolus">
+  <h2 class="patch-titre">
+    <img src="../assets/images/notes-big.png" class="image image-h2">
+    Problèmes résolus
+  </h2>
+  <ul class="image-list">
+    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les réactions ne devraient plus être proposées de manière intempestive.<div class="note-expliquee">"Devraient" car il s'agit d'une modification que j'avais déjà effectué par le passé et qui a vraisemblablement sauté, sûrement suite à une mise à jour.</div></div></li>
+  </ul></section>
+  </main>
+
+  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button>
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Portrait" />
+  </div>
+
+  <footer>
+    <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+</footer>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+        const navContainer = document.querySelector('.patch-nav');
+        const navLinks = document.querySelectorAll('.patch-nav a[href^="#"]');
+        const sections = [...document.querySelectorAll(".patch-section")];
+
+        let lastActive = null;
+        const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+            const activeLink = [...navLinks].find(link => link.getAttribute("href") === `#${id}`);
+            if (activeLink && activeLink !== lastActive) {
+              navLinks.forEach(link => link.classList.remove("active"));
+              activeLink.classList.add("active");
+
+              // Scroll l'élément actif dans le menu si partiellement masqué
+              const linkTop = activeLink.getBoundingClientRect().top;
+              const navTop = navContainer.getBoundingClientRect().top;
+              const linkBottom = linkTop + activeLink.offsetHeight;
+              const navBottom = navTop + navContainer.offsetHeight;
+
+              if (linkTop < navTop || linkBottom > navBottom) {
+                activeLink.scrollIntoView({ behavior: "smooth", block: "center" });
+              }
+
+              lastActive = activeLink;
+            }
+          }
+        });
+      }, {
+        rootMargin: "-20% 0px -30% 0px",
+        threshold: 0.1
+      });
+
+     
+     sections.forEach(section => observer.observe(section));
+     });
+</script>
+  <script src="../scripts/backToTop.js"></script>
+  <script src="../scripts/particles.js"></script>
+  <script src="../scripts/lightbox.js"></script>
+</body>
+</html>
