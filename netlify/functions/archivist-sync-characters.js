@@ -1,6 +1,5 @@
 // netlify/functions/archivist-sync-characters.js
-import fetch from "node-fetch";
-const AWS = import("aws-sdk");
+const AWS = require("aws-sdk");
 
 const API_BASE = "https://api.myarchivist.ai/v1";
 const s3 = new AWS.S3({
