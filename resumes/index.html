@@ -37,57 +37,57 @@
         </button>
       </div>
       <a href="session22.html" class="carte-lien large patch"
-        data-patch="session22.html">
+        data-session="session22.html">
         <h2><img src="../assets/images/gold-scroll.png"
             class="image codex-silver-scroll-patch"> Session 22 -
           Placeholder</h2>
         <p>Publiée le 12 Novembre 2025</p>
-        <span class="patch-nouveau" hidden><img
+        <span class="session-nouveau" hidden><img
             src="../assets/images/exclam_mark.png"
             class="image new-patch"></span>
       </a>
       <a href="session21.html" class="carte-lien large patch"
-        data-patch="session21.html">
+        data-session="session21.html">
         <h2><img src="../assets/images/gold-scroll.png"
             class="image codex-silver-scroll-patch"> Session 21 -
           Placeholder</h2>
         <p>Publiée le 15 Octobre 2025</p>
-        <span class="patch-nouveau" hidden><img
+        <span class="session-nouveau" hidden><img
             src="../assets/images/exclam_mark.png"
             class="image new-patch"></span>
       </a>
       <a href="session20.html" class="carte-lien large patch"
-        data-patch="session20.html">
+        data-session="session20.html">
         <h2><img src="../assets/images/gold-scroll.png"
             class="image codex-silver-scroll-patch"> Session 20 -
           Placeholder</h2>
         <p>Publiée le 24 Septembre 2025</p>
-        <span class="patch-nouveau" hidden><img
+        <span class="session-nouveau" hidden><img
             src="../assets/images/exclam_mark.png"
             class="image new-patch"></span>
       </a>
       <a href="session19.html" class="carte-lien large patch"
-        data-patch="session19.html">
+        data-session="session19.html">
         <h2><img src="../assets/images/gold-scroll.png"
             class="image codex-silver-scroll-patch"> Session 19 -
           Audience avec la Princesse</h2>
         <p>Publiée le 18 Juin 2025</p>
-        <span class="patch-nouveau" hidden><img
+        <span class="session-nouveau" hidden><img
             src="../assets/images/exclam_mark.png"
             class="image new-patch"></span>
       </a>
       <a href="session18.html" class="carte-lien large patch"
-        data-patch="session18.html">
+        data-session="session18.html">
         <h2><img src="../assets/images/gold-scroll.png"
             class="image codex-silver-scroll-patch"> Session 18 -
           Obtention du Bastion</h2>
         <p>Publiée le 11 Juin 2025</p>
-        <span class="patch-nouveau" hidden><img
+        <span class="session-nouveau" hidden><img
             src="../assets/images/exclam_mark.png"
             class="image new-patch"></span>
       </a>
       <a href="session17.html" class="carte-lien large patch"
-        data-patch="session17.html">
+        data-session="session17.html">
         <h2><img src="../assets/images/gold-scroll.png"
             class="image codex-silver-scroll-patch"> Session 17 -
 
@@ -97,36 +97,36 @@
           ̴̨̧̛̰͔̌?̴̡͕̜͈̝̗̲͖̗̽̋̒͌̔͂̽̏̇̈́͜ͅ?̴̘͈̏̇̊͒̄͑̈́̎̊͆̚?̴̗͙̺̝̮̓͊̿̏͑͐̃̌̏͛?̶͚̪̜̫̱͓͖̞̣̐̐́̈́͜ͅ?̶̡̢̨̧̺̣̼͇͔̙̹́
         </h2>
         <p>Publiée le 4 Juin 2025</p>
-        <span class="patch-nouveau" hidden><img
+        <span class="session-nouveau" hidden><img
             src="../assets/images/exclam_mark.png"
             class="image new-patch"></span>
       </a>
       <a href="session16.html" class="carte-lien large patch"
-        data-patch="session16.html">
+        data-session="session16.html">
         <h2><img src="../assets/images/gold-scroll.png"
             class="image codex-silver-scroll-patch"> Session 16 - Combat contre
           Narmer</h2>
         <p>Publiée le 28 Mai 2025</p>
-        <span class="patch-nouveau" hidden><img
+        <span class="session-nouveau" hidden><img
             src="../assets/images/exclam_mark.png"
             class="image new-patch"></span>
       </a>
       <a href="session15.html" class="carte-lien large patch"
-        data-patch="session15.html">
+        data-session="session15.html">
         <h2><img src="../assets/images/gold-scroll.png"
             class="image codex-silver-scroll-patch"> Session 15 - Alliance dans
           le Labyrinthe</h2>
         <p>Publiée le 30 Avril 2025</p>
-        <span class="patch-nouveau" hidden><img
+        <span class="session-nouveau" hidden><img
             src="../assets/images/exclam_mark.png"
             class="image new-patch"></span>
       </a>
       <a href="introduction.html" class="carte-lien large patch"
-        data-patch="introduction.html">
+        data-session="introduction.html">
         <h2><img src="../assets/images/gold-scroll.png"
             class="image codex-silver-scroll-patch"> Résumé du début de
           l'aventure</h2>
-        <span class="patch-nouveau" hidden><img
+        <span class="session-nouveau" hidden><img
             src="../assets/images/exclam_mark.png"
             class="image new-patch"></span>
       </a>
@@ -144,12 +144,12 @@
     </footer>
 
     <script>
-      const vues = JSON.parse(localStorage.getItem("patchesVus") || "[]");
-      const patches = Array.from(document.querySelectorAll(".carte-lien[data-patch]"));
+      const vues = JSON.parse(localStorage.getItem("sessionsVues") || "[]");
+      const patches = Array.from(document.querySelectorAll(".carte-lien[data-session]"));
       let tousLus = true;
       patches.forEach(carte => {
-        const patch = carte.getAttribute("data-patch");
-        const badge = carte.querySelector(".patch-nouveau");
+        const patch = carte.getAttribute("data-session");
+        const badge = carte.querySelector(".session-nouveau");
         if (!vues.includes(patch)) {
           badge.hidden = false;
           tousLus = false;
@@ -157,7 +157,7 @@
         carte.addEventListener("click", () => {
           if (!vues.includes(patch)) {
             vues.push(patch);
-            localStorage.setItem("patchesVus", JSON.stringify(vues));
+            localStorage.setItem("sessionsVues", JSON.stringify(vues));
           }
         });
       });
@@ -167,9 +167,9 @@
         boutonLu.style.display = "none";
       }
       boutonLu.addEventListener("click", () => {
-        const tous = patches.map(c => c.getAttribute("data-patch"));
-        localStorage.setItem("patchesVus", JSON.stringify(tous));
-        document.querySelectorAll(".patch-nouveau").forEach(badge => badge.hidden = true);
+        const tous = patches.map(c => c.getAttribute("data-session"));
+        localStorage.setItem("sessionsVues", JSON.stringify(tous));
+        document.querySelectorAll(".session-nouveau").forEach(badge => badge.hidden = true);
         boutonLu.style.display = "none";
       });
     </script>

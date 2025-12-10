@@ -396,6 +396,15 @@ footer {
   animation: pulse 2s infinite ease-in-out;
 }
 
+.session-nouveau {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.5rem;
+  color: #63b0c4;
+  animation: pulse 2s infinite ease-in-out;
+}
+
 @keyframes pulse {
 
   0%,
