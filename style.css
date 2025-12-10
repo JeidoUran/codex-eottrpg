@@ -213,7 +213,7 @@ a:hover {
 }
 
 .accueil {
-  max-width: 850px;
+  max-width: 900px;
   margin: 2rem auto;
   z-index: 2;
   position: relative;
@@ -363,7 +363,7 @@ footer {
   gap: 1rem;
   padding: 1rem;
   margin: 1rem auto;
-  max-width: 680px;
+  max-width: 775px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   transition: transform 0.3s ease, background 0.3s ease;
@@ -372,7 +372,7 @@ footer {
 
 .carte-lien.large.chara h2 {
   width: 150px;
-  min-width: 150px;
+  min-width: 235px;
 }
 
 .carte-lien.large.chara p {
@@ -1969,6 +1969,10 @@ select option {
   border-radius: 8px;
   transition: background 0.3s;
   box-shadow: 0 0 15px rgba(76, 118, 141, 0.3);
+}
+
+.fiche-lore.npc {
+  max-width: 1175px;
 }
 
 .fiche-lore:hover {
