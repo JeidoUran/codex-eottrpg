@@ -1,11 +1,11 @@
 // netlify/functions/update-all-background.js
-const updateCharas = require("./archivist-sync-characters.js");
-const updateSessions = require("./archivist-sync-sessions.js");
-const updateFactions = require("./archivist-sync-factions.js");
+const updateCharas = import("./archivist-sync-characters.js");
+const updateSessions = import("./archivist-sync-sessions.js");
+const updateFactions = import("./archivist-sync-factions.js");
 
 // IMPORTANT : cette fonction tourne "en arrière-plan" (jusqu'à 15 min).
 // La réponse HTTP réelle sera toujours 202 renvoyée par Netlify.
-exports.handler = async function () {
+export async function handler() {
   try {
     const results = await Promise.allSettled(
       [
@@ -43,4 +43,4 @@ exports.handler = async function () {
       body: JSON.stringify({ status: "error", message: err.message }),
     };
   }
-};
+}

@@ -1,6 +1,6 @@
 // netlify/functions/update-all.js
 // Kicker synchrone : déclenche la background, puis répond 200 immédiatement.
-exports.handler = async function (event) {
+export async function handler(event) {
   // Construit l'URL de la background
   const scheme = event.headers["x-forwarded-proto"] || "https";
   const host = event.headers.host; // ex: codex.eottrpg.memiroa.com
@@ -27,4 +27,4 @@ exports.handler = async function (event) {
       target: "archivist-update-all-background",
     }),
   };
-};
+}
