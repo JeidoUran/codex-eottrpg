@@ -58,7 +58,7 @@
         }
 
         const data = await res.json();
-        const html = renderArchivistText(data.summary, linkMap);
+        const html = renderArchivistText(data.description, linkMap);
         container.innerHTML = html;
       } catch (err) {
         console.error(err);
