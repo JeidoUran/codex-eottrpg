@@ -35,32 +35,37 @@
     return htmlParagraphs.join("\n");
   }
 
-  /** Auto-load du JSON Archivist en fonction du data-session */
-  async function loadSession() {
-    const container = document.querySelector("[data-session]");
-    if (!container) return; // page sans session : on ignore
+  /** Auto-load du JSON Archivist en fonction des data-session */
+  async function loadSessions() {
+    const containers = document.querySelectorAll("[data-session]");
+    if (!containers.length) return; // page sans session : on ignore
 
-    const slug = container.dataset.session;
-    if (!slug) return;
-
-    // URL où tu stockes les JSON Archivist
-    const jsonUrl = `https://s3.codex.eottrpg.memiroa.com/data/archivist/sessions/${slug}.json`;
-
-    // Charger le linkMap global
+    // Charger le linkMap global une seule fois
     const mapRes = await fetch("/assets/data/linkmap.json");
     const linkMap = await mapRes.json();
 
-    // Charger le JSON de la session
-    const res = await fetch(jsonUrl, { cache: "no-cache" });
-    if (!res.ok) {
-      container.innerHTML = `<p>Erreur lors du chargement du résumé.</p>`;
-      return;
-    }
+    for (const container of containers) {
+      const slug = container.dataset.session;
+      if (!slug) continue;
 
-    const data = await res.json();
-    const html = renderArchivistText(data.summary, linkMap);
-    container.innerHTML = html;
+      const jsonUrl = `https://s3.codex.eottrpg.memiroa.com/data/archivist/sessions/${slug}.json`;
+
+      try {
+        const res = await fetch(jsonUrl, { cache: "no-cache" });
+        if (!res.ok) {
+          container.innerHTML = `<p>Erreur lors du chargement du résumé.</p>`;
+          continue;
+        }
+
+        const data = await res.json();
+        const html = renderArchivistText(data.summary, linkMap);
+        container.innerHTML = html;
+      } catch (err) {
+        console.error(err);
+        container.innerHTML = `<p>Erreur lors du chargement du résumé.</p>`;
+      }
+    }
   }
 
-  loadSession();
+  loadSessions();
 })();
