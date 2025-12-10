@@ -9,12 +9,17 @@
   "Agata": "/univers/personnages/agata.html",
   "Hypatia": "/univers/personnages/hypatia.html",
 
-  "Kujura": "/univers/personnages/kujura.html",
   "Marcos": "/univers/personnages/marcos.html",
   "Aman": "/univers/personnages/aman.html",
+  "Vulk": "/univers/personnages/vulk.html",
+
+  "Kujura": "/univers/personnages/kujura.html",
   "Flaudia": "/univers/personnages/flaudia.html",
+  "Princesse": "/univers/personnages/princesse-gutrune.html",
+  "Princesse Gutrune de Voarmur": "/univers/personnages/princesse-gutrune.html",
 
   "femme inconnue": "/univers/personnages/femme-inconnue.html",
+  "Femme inconnue": "/univers/personnages/femme-inconnue.html",
 
   "Batavia": "/univers/regions/batavia.html",
   "Voarmur": "/univers/regions/voarmur.html",
@@ -24,6 +29,8 @@
   "Bois de la Cascade": "/univers/regions/bois-de-la-cascade.html",
 
   "Sénat": "/univers/factions/senat-de-voarmur.html",
+  "Sénat de Voarmur": "/univers/factions/senat-de-voarmur.html",
+  "Sylvagons": "/univers/factions/sylvagons.html",
 
   "Les Égarés": "/univers/factions/guildes/les-egares",
   "Murotsumi": "/univers/factions/guildes/murotsumi.html",
@@ -33,8 +40,5 @@
   "Durians": "/bestiaire/durian-létal.html",
   "Durian létal": "/bestiaire/durian-létal.html",
   "Rôde-marais": "/bestiaire/rode-marais.html",
-  "Narmer": "/bestiaire/narmer.html",
-
-  "Princesse": "/univers/personnages/princesse-gutrune.html",
-  "Princesse Gutrune de Voarmur": "/univers/personnages/princesse-gutrune.html"
+  "Narmer": "/bestiaire/narmer.html"
 }
