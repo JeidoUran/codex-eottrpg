@@ -1,6 +1,4 @@
 const AWS = require("aws-sdk");
-const fetch = (...args) =>
-  import("node-fetch").then(({ default: f }) => f(...args));
 
 const s3 = new AWS.S3({
   accessKeyId: process.env.AWS_KEY,
