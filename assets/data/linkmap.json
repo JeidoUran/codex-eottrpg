@@ -6,22 +6,24 @@
   "Oktar": "/univers/personnages/oktar.html",
   "Kay": "/univers/personnages/kay.html",
 
-  "Agata": "/univers/personnages/agata.html",
-  "Hypatia": "/univers/personnages/hypatia.html",
+  "Agata": "/univers/personnages/pnj/agata.html",
+  "Hypatia": "/univers/personnages/pnj/hypatia.html",
 
-  "Marcos": "/univers/personnages/marcos.html",
-  "Aman": "/univers/personnages/aman.html",
-  "Vulk": "/univers/personnages/vulk.html",
-  "Seyna": "/univers/personnages/seyna.html",
+  "Tailos": "/univers/personnages/pnj/tailos.html",
 
-  "Kujura": "/univers/personnages/kujura.html",
-  "Flaudia": "/univers/personnages/flaudia.html",
-  "Princesse": "/univers/personnages/princesse-gutrune.html",
-  "Princesse Gutrune": "/univers/personnages/princesse-gutrune.html",
-  "Princesse Gutrune de Voarmur": "/univers/personnages/princesse-gutrune.html",
+  "Marcos": "/univers/personnages/pnj/marcos.html",
+  "Aman": "/univers/personnages/pnj/aman.html",
+  "Vulk": "/univers/personnages/pnj/vulk.html",
+  "Seyna": "/univers/personnages/pnj/seyna.html",
 
-  "femme inconnue": "/univers/personnages/femme-inconnue.html",
-  "Femme inconnue": "/univers/personnages/femme-inconnue.html",
+  "Kujura": "/univers/personnages/pnj/kujura.html",
+  "Flaudia": "/univers/personnages/pnj/flaudia.html",
+  "Princesse": "/univers/personnages/pnj/princesse-gutrune.html",
+  "Princesse Gutrune": "/univers/personnages/pnj/princesse-gutrune.html",
+  "Princesse Gutrune de Voarmur": "/univers/personnages/pnj/princesse-gutrune.html",
+
+  "femme inconnue": "/univers/personnages/pnj/femme-inconnue.html",
+  "Femme inconnue": "/univers/personnages/pnj/femme-inconnue.html",
 
   "Batavia": "/univers/regions/batavia.html",
   "Voarmur": "/univers/regions/voarmur.html",
@@ -36,12 +38,13 @@
 
   "Les Égarés": "/univers/factions/guildes/les-egares",
   "les Égarés": "/univers/factions/guildes/les-egares",
+  "Égarés": "/univers/factions/guildes/les-egares",
   "Murotsumi": "/univers/factions/guildes/murotsumi.html",
   "MioRaem": "/univers/factions/guildes/mioraem.html",
 
-  "Durian": "/bestiaire/durian-létal.html",
-  "Durians": "/bestiaire/durian-létal.html",
-  "Durian létal": "/bestiaire/durian-létal.html",
+  "Durian": "/bestiaire/durian-letal.html",
+  "Durians": "/bestiaire/durian-letal.html",
+  "Durian létal": "/bestiaire/durian-letal.html",
   "Rôde-marais": "/bestiaire/rode-marais.html",
   "Narmer": "/bestiaire/narmer.html"
 }
