@@ -251,6 +251,12 @@ a:hover {
   gap: 1.5rem;
 }
 
+.sections-liees.regions {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 1.5rem;
+}
+
 .accueil.large .sections-liees {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
