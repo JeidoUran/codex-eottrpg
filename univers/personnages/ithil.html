@@ -1,132 +1,201 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Ithil | Codex - Etrian Odyssey TTRPG</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="../../favicon.png" type="image/png">
-  <link rel="stylesheet" href="../../style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ithil | Codex - Etrian Odyssey TTRPG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="red-bg">
+    <canvas id="particles"></canvas>
 
-</head>
-<body class="red-bg">
-<canvas id="particles"></canvas>
+    <header class="codex-header">
+      <div class="illustration-wrapper">
+        <img
+          src="../../assets/images/portraits/ithil.png"
+          class="illustration-character"
+          onclick="openLightbox(this.src)"
+        />
+      </div>
+      <h1>Ithil</h1>
+      <p class="sous-titre">Pisteuse des silences</p>
+    </header>
 
-<header class="codex-header">
-  <div class="illustration-wrapper">
-    <img src="../../assets/images/portraits/ithil.png" class="illustration-character" onclick="openLightbox(this.src)">
-  </div>
-  <h1>Ithil</h1>
-  <p class="sous-titre">Pisteuse des silences</p>
-</header>
+    <nav class="nav-magique">
+      <a href="/">Accueil</a>
+      <a href="/notes/">Patch Notes</a>
+      <a href="/resumes/">Résumés</a>
+      <a href="/regles/">Règles</a>
+      <a href="/univers/">Univers</a>
+      <a href="/musique.html">Musiques</a>
+      <a href="/ressources/">Ressources</a>
+      <a href="/credits.html">Crédits</a>
+    </nav>
 
-<nav class="nav-magique">
-  <a href="/">Accueil</a>
-  <a href="/notes/">Patch Notes</a>
-  <a href="/resumes/">Résumés</a>
-  <a href="/regles/">Règles</a>
-  <a href="/univers/">Univers</a>
-  <a href="/musique.html">Musiques</a>
-  <a href="/ressources/">Ressources</a>
-  <a href="/credits.html">Crédits</a>
-</nav>
-
-<div class="header-links-center">
-  <a href="../../univers/personnages/" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Index des personnages</a>
-</div>
-
-<div class="fiche-personnage">
-<div class="fiche-stats">
-  <article class="article-credits">
-    <h2>Caractéristiques</h2>
-    <ul class="image-list">
-      <div class="stat-block">
-        <li class="level-block">
-          <div class="tooltip-wrapper">
-            <img id="inspiration-icon" src="../../assets/images/inspiration-icons/inspiration-off.png" alt="Inspiration" class="inspiration-off">
-            <div class="tooltip">Inspiration</div>
-          </div>
-         <h3>Niveau : <span id="level-value">?</span></h3></li>
-        <div class="xp-bar-container">
-          <div class="xp-bar-ithil" id="xp-bar-ithil" style="width: 0%"></div>
-        </div>
-        <small class="xp-text" id="xp-text">? / ?</small>
-      </div>      
-        <div class="image-texte" id="ithil-stats">
-          <em>Chargement des données d'Ithil...</em>
-        </div>
-    </ul>
-  </article>
-  <article class="article-credits">
-    <h2>Inventaire</h2>
-    <div class="inventory" id="ithil-inventory">
-      <em>Chargement de l'inventaire...</em>
+    <div class="header-links-center">
+      <a
+        href="../../univers/personnages/"
+        class="carte-lien"
+        style="display: inline-block; max-width: 300px"
+        ><i class="fa-solid fa-arrow-left"></i> Index des personnages</a
+      >
     </div>
-  </article>
-    <p class="last-updated timestamp">Chargement...</p>
-</div>
 
-<div class="fiche-centrale">
-<main class="fiche-lore">
-  <article class="article-credits">
-    <h2><i class="fa-solid fa-scroll"></i> Présentation</h2>
-    <ul class="image-list">
-        <div class="image-texte">
-          <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Race :</strong>Célestrien</li>
-          <li class="character-stats"><img src="../../assets/images/notes-medium.png" class="image"><strong>Classe :</strong> Vagabond</li>
+    <div class="fiche-personnage">
+      <div class="fiche-stats">
+        <article class="article-credits">
+          <h2>Caractéristiques</h2>
+          <ul class="image-list">
+            <div class="stat-block">
+              <li class="level-block">
+                <div class="tooltip-wrapper">
+                  <img
+                    id="inspiration-icon"
+                    src="../../assets/images/inspiration-icons/inspiration-off.png"
+                    alt="Inspiration"
+                    class="inspiration-off"
+                  />
+                  <div class="tooltip">Inspiration</div>
+                </div>
+                <h3>Niveau : <span id="level-value">?</span></h3>
+              </li>
+              <div class="xp-bar-container">
+                <div
+                  class="xp-bar-ithil"
+                  id="xp-bar-ithil"
+                  style="width: 0%"
+                ></div>
+              </div>
+              <small class="xp-text" id="xp-text">? / ?</small>
+            </div>
+            <div class="image-texte" id="ithil-stats">
+              <em>Chargement des données d'Ithil...</em>
+            </div>
+          </ul>
+        </article>
+        <article class="article-credits">
+          <h2>Inventaire</h2>
+          <div class="inventory" id="ithil-inventory">
+            <em>Chargement de l'inventaire...</em>
+          </div>
+        </article>
+        <p class="last-updated timestamp">Chargement...</p>
+      </div>
+
+      <div class="fiche-centrale">
+        <main class="fiche-lore">
+          <article class="article-credits">
+            <h2><i class="fa-solid fa-scroll"></i> Présentation</h2>
+            <ul class="image-list">
+              <div class="image-texte">
+                <li class="character-stats">
+                  <img
+                    src="../../assets/images/notes-medium.png"
+                    class="image"
+                  /><strong>Race :</strong>Célestrien
+                </li>
+                <li class="character-stats">
+                  <img
+                    src="../../assets/images/notes-medium.png"
+                    class="image"
+                  /><strong>Classe :</strong> Vagabond
+                </li>
+              </div>
+
+              <li class="character-stats description">
+                <img src="../../assets/images/notes-medium.png" class="image" />
+                <div class="image-texte">
+                  <strong>Biographie :</strong><br />
+                  Elle entre toujours la première, seule — ou presque. Fuschia
+                  la suit, ombre au poil pâle, museau bas, regard aux aguets. Ce
+                  que les autres fuient, Ithil s’y rend comme on s’assoit à
+                  table : en pisteuse méthodique. Les forêts mortes, les
+                  clairs-obscurs qui sentent le piège, les clairières hantées
+                  par des récits tus… ce ne sont pas des obstacles. Ce sont ses
+                  terrains de chasse.<br /><br />
+                  On murmure qu’elle entend des choses dans le vent, qu’elle lit
+                  les traces là où les autres ne voient que boue. Mais ce qu’on
+                  oublie, c’est que les sentiers oubliés ne mènent jamais à des
+                  vérités rassurantes.<br /><br />
+                  Autrefois soldate, aujourd’hui traqueuse désabusée, elle vend
+                  ses services à la garde comme d'autres vendent leur lame —
+                  mais elle, ce sont les énigmes qu’elle traque. Une empreinte,
+                  un cri étouffé, un arbre trop silencieux : tout devient
+                  indice. Quand elle s’arrête, c’est pour écouter. Quand elle
+                  lève la main, c’est pour faire taire le monde, et mieux
+                  entendre ce que la nature tente encore de révéler.<br /><br />
+                  Ithil ne pleure plus. Elle n’espère plus. Elle recense les
+                  disparitions comme d’autres comptent leurs primes, sachant que
+                  peu de vérités valent la peine d’être connues. Mais parfois,
+                  dans la nuit, elle regarde la lune comme on cherche un repère
+                  au bord du vide, et murmure à la bête à ses côtés :<br />
+                  “Demain, on reprendra la piste. Je leur ai promis… alors j’y
+                  retournerai.”
+                </div>
+              </li>
+            </ul>
+          </article>
+        </main>
+
+        <div class="fiche-lore">
+          <article class="article-credits">
+            <h2><i class="fa-solid fa-scroll"></i> Résumé</h2>
+            <ul class="image-list">
+              <div class="image-texte">
+                <div id="ithil-description" data-character="ithil">
+                  Chargement du résumé...
+                </div>
+              </div>
+            </ul>
+          </article>
         </div>
-     
-      <li class="character-stats description"><img src="../../assets/images/notes-medium.png" class="image">
-        <div class="image-texte">
-          <strong>Biographie :</strong><br>
-          Elle entre toujours la première, seule — ou presque. Fuschia la suit, ombre au poil pâle, museau bas, regard aux aguets. Ce que les autres fuient, Ithil s’y rend comme on s’assoit à table : en pisteuse méthodique. Les forêts mortes, les clairs-obscurs qui sentent le piège, les clairières hantées par des récits tus… ce ne sont pas des obstacles. Ce sont ses terrains de chasse.<br><br>
-          On murmure qu’elle entend des choses dans le vent, qu’elle lit les traces là où les autres ne voient que boue. Mais ce qu’on oublie, c’est que les sentiers oubliés ne mènent jamais à des vérités rassurantes.<br><br>
-          Autrefois soldate, aujourd’hui traqueuse désabusée, elle vend ses services à la garde comme d'autres vendent leur lame — mais elle, ce sont les énigmes qu’elle traque. Une empreinte, un cri étouffé, un arbre trop silencieux : tout devient indice. Quand elle s’arrête, c’est pour écouter. Quand elle lève la main, c’est pour faire taire le monde, et mieux entendre ce que la nature tente encore de révéler.<br><br>
-          Ithil ne pleure plus. Elle n’espère plus. Elle recense les disparitions comme d’autres comptent leurs primes, sachant que peu de vérités valent la peine d’être connues. Mais parfois, dans la nuit, elle regarde la lune comme on cherche un repère au bord du vide, et murmure à la bête à ses côtés :<br>
-          “Demain, on reprendra la piste. Je leur ai promis… alors j’y retournerai.”
+
+        <div class="backToTop-static-button">
+          <button
+            id="backToTop-static"
+            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+            aria-label="Retour en haut"
+          >
+            <i class="fa-solid fa-arrow-up"></i> Retour en haut
+          </button>
         </div>
-      </li>
-    </ul>
-  </article>
-</main>
+      </div>
 
-<div class="backToTop-static-button">
-  <button id="backToTop-static" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut">
-    <i class="fa-solid fa-arrow-up"></i> Retour en haut
-  </button>
-  </div>
+      <div class="fiche-skills">
+        <article class="article-credits">
+          <h2>Aptitudes</h2>
+          <div class="inventory" id="ithil-features">
+            <em>Chargement des aptitudes...</em>
+          </div>
+        </article>
 
-</div>
+        <p class="last-updated timestamp">Chargement...</p>
+      </div>
+    </div>
 
-<div class="fiche-skills">
-</article>
-<article class="article-credits">
-  <h2>Aptitudes</h2>
-  <div class="inventory" id="ithil-features">
-    <em>Chargement des aptitudes...</em>
-  </div>
-</article>
-
-    <p class="last-updated timestamp">Chargement...</p>
-</div>
-</div>
-
-
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img" src="" alt="Portrait" />
-</div>
-<footer>
-  <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
-</footer>
-<script src="../../scripts/player-chara-data/read-ithil-data.js"></script>  
-<script src="../../scripts/lightbox.js"></script>
-<script src="../../scripts/particles.js"></script>
-<div id="item-modal" class="item-modal hidden">
-  <div class="item-modal-content">
-    <span class="close-button">&times;</span>
-    <div id="item-modal-title"></div>
-    <p id="item-modal-description"></p>
-  </div>
-</div>
-</body>
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <img id="lightbox-img" src="" alt="Portrait" />
+    </div>
+    <footer>
+      <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+    </footer>
+    <script src="../../scripts/player-chara-data/read-ithil-data.js"></script>
+    <script src="../../scripts/lightbox.js"></script>
+    <script src="../../scripts/particles.js"></script>
+    <script src="../../../scripts/archivist-ai/archivist-character-loader.js"></script>
+    <div id="item-modal" class="item-modal hidden">
+      <div class="item-modal-content">
+        <span class="close-button">&times;</span>
+        <div id="item-modal-title"></div>
+        <p id="item-modal-description"></p>
+      </div>
+    </div>
+  </body>
 </html>
