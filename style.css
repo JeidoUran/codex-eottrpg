@@ -3024,7 +3024,9 @@ body.dark-green-bg::after {
   font-style: italic;
 }
 
-.refresh-moments {
+.refresh-moments,
+.moments-mode,
+.moments-pagination-button {
   border: none;
   font-size: 1rem;
   font-weight: 700;
@@ -3035,18 +3037,58 @@ body.dark-green-bg::after {
   background-color: transparent;
 }
 
-.refresh-moments:hover {
+.refresh-moments:hover,
+.moments-mode:hover,
+.moments-pagination-button:hover {
   cursor: pointer;
   border: none;
   transform: scale(1.25);
 }
 
-.moments-controls {
-  display: flex;
+.moments-head {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: 15px;
+  gap: 1rem;
+}
+
+/* Le titre peut respirer */
+.moments-head h2 {
+  grid-column: 1 / 3;
+}
+
+/* Les controls restent centrés dans la ligne */
+.moments-controls {
+  grid-column: 2 / 3;
+  /* ancré dans la colonne centrale */
+  justify-self: center;
+}
+
+.moments-controls>* {
+  margin-left: 10px;
+}
+
+.moments-controls>*:first-child {
+  margin-left: 0;
 }
 
 #moments-session {
-  max-width: 21em;
+  width: 19em;
+}
+
+.moments-pagination {
+  text-align: center;
+  font-size: 26px;
+}
+
+.moments-pagination-button {
+  padding: 30px;
+}
+
+.patch-list.moments article {
+  max-width: 1200px;
+}
+
+.accueil.moments {
+  max-width: 1200px;
 }

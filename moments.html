@@ -41,16 +41,22 @@
       <a href="/credits.html">Crédits</a>
     </nav>
 
-    <main class="accueil">
-      <div class="patch-list">
+    <main class="accueil moments">
+      <div class="patch-list moments">
         <article class="article-credits">
           <section class="moments-random">
             <div class="moments-head">
-              <h2>Moments aléatoires</h2>
+              <h2>Moments</h2>
               <div class="moments-controls">
                 <i
                   id="moments-refresh"
                   class="fa-solid fa-arrows-rotate refresh-moments"
+                ></i>
+
+                <i
+                  id="moments-mode"
+                  class="fa-solid fa-list moments-mode"
+                  title="Mode ordonné"
                 ></i>
 
                 <select
@@ -79,6 +85,7 @@
             </div>
 
             <div id="moments-grid" class="moments-grid"></div>
+            <div id="moments-pagination" class="moments-pagination"></div>
           </section>
         </article>
       </div>
