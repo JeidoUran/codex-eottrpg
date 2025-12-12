@@ -8,6 +8,8 @@
 
   "Agata": "/univers/personnages/pnj/agata.html",
   "Hypatia": "/univers/personnages/pnj/hypatia.html",
+  "Lyra": "/univers/personnages/pnj/lyra.html",
+  "Lyra Faye": "/univers/personnages/pnj/lyra.html",
 
   "Tailos": "/univers/personnages/pnj/tailos.html",
 
@@ -31,6 +33,10 @@
   "Labyrinthe d’Yggdrasil": "/univers/regions/labyrinthe.html",
   "Labyrinthe d'Yggdrasil": "/univers/regions/labyrinthe.html",
   "Bois de la Cascade": "/univers/regions/bois-de-la-cascade.html",
+  "Grotte immergée": "/univers/regions/grotte-immergee.html",
+
+  "Bastion": "/univers/regions/bastion.html",
+  "Bastion des Égarés": "/univers/regions/bastion.html",
 
   "Sénat": "/univers/factions/senat-de-voarmur.html",
   "Sénat de Voarmur": "/univers/factions/senat-de-voarmur.html",
@@ -45,6 +51,9 @@
   "Durian": "/bestiaire/durian-letal.html",
   "Durians": "/bestiaire/durian-letal.html",
   "Durian létal": "/bestiaire/durian-letal.html",
+  "Tyran déchaîné": "/bestiaire/tyran-dechaine.html",
+  "Tyran": "/bestiaire/tyran-dechaine.html",
+  "Cerfurieux": "/bestiaire/cerfurieux.html",
   "Rôde-marais": "/bestiaire/rode-marais.html",
   "Narmer": "/bestiaire/narmer.html"
 }
