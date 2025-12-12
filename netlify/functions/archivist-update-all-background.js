@@ -2,6 +2,8 @@
 const updateCharas = require("./archivist-sync-characters.js");
 const updateSessions = require("./archivist-sync-sessions.js");
 const updateFactions = require("./archivist-sync-factions.js");
+const updateCampaign = require("./archivist-sync-campaign.js");
+const updateMoments = require("./archivist-sync-moments.js");
 
 // IMPORTANT : cette fonction tourne "en arrière-plan" (jusqu'à 15 min).
 // La réponse HTTP réelle sera toujours 202 renvoyée par Netlify.
@@ -12,6 +14,8 @@ exports.handler = async function () {
         updateCharas.handler(),
         updateSessions.handler(),
         updateFactions.handler(),
+        updateCampaign.handler(),
+        updateMoments.handler(),
       ].map((p) =>
         p.then((res) => {
           if (res && res.statusCode >= 400)
@@ -21,7 +25,7 @@ exports.handler = async function () {
       )
     );
 
-    const names = ["characters", "sessions", "factions"];
+    const names = ["characters", "sessions", "factions", "campaign", "moments"];
     const summary = results.map((r, i) => ({
       name: names[i],
       status: r.status,
@@ -29,7 +33,6 @@ exports.handler = async function () {
     }));
     const hasError = results.some((r) => r.status === "rejected");
 
-    // Utile pour les logs Netlify
     return {
       statusCode: hasError ? 207 : 200,
       body: JSON.stringify({
