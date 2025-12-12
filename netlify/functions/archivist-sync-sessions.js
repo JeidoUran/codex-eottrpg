@@ -64,6 +64,26 @@ async function uploadSession(sessionData) {
     pending: sessionData.pending,
   };
 
+  const sessions = await fetchAllSessions();
+  const index = {
+    campaign_id: CAMPAIGN_ID,
+    updated_at: new Date().toISOString(),
+    total: sessions.length,
+    sessions: sessions
+      .map((s) => ({
+        id: s.id,
+        title: s.title || s.label,
+        index: s.index,
+        date: s.session_date,
+      }))
+      .sort((a, b) => {
+        if (!a.date && !b.date) return 0;
+        if (!a.date) return 1;
+        if (!b.date) return -1;
+        return new Date(b.date) - new Date(a.date);
+      }),
+  };
+
   await s3
     .putObject({
       Bucket: BUCKET,
@@ -71,6 +91,16 @@ async function uploadSession(sessionData) {
       Body: JSON.stringify(payload, null, 2),
       ContentType: "application/json; charset=utf-8",
       ACL: "public-read",
+    })
+    .promise();
+
+  await s3
+    .putObject({
+      Bucket: BUCKET,
+      Key: "data/archivist/sessions/index.json",
+      Body: JSON.stringify(index, null, 2),
+      ContentType: "application/json; charset=utf-8",
+      CacheControl: "public, max-age=300",
     })
     .promise();
 
