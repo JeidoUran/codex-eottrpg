@@ -28,7 +28,7 @@
 
     if (isList) {
       const items = lines.map((l) => {
-        const item = l.replace(/^\s*-\s?/, "• ").trim();
+        const item = l.replace(/^\s*-\s?/, "").trim();
         return `<li>${convertWikilinks(item, map)}</li>`;
       });
       return `<ul>${items.join("")}</ul>`;
