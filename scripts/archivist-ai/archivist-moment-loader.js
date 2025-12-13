@@ -195,7 +195,9 @@
     const title = document.querySelector(".moments-head h2");
     if (title)
       title.textContent =
-        mode === "ordered" ? "Moments (ordonnés)" : "Moments (aléatoires)";
+        mode === "ordered"
+          ? "Moments (ordre chronologique)"
+          : "Moments (aléatoires)";
   }
 
   function renderCards(list) {
