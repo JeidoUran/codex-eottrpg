@@ -4,7 +4,6 @@ const updateFeril = require("./update-feril.js");
 const updateElsa = require("./update-elsa.js");
 const updateIthil = require("./update-ithil.js");
 const updateKay = require("./update-kay.js");
-const updateChest = require("./update-chest.js");
 const updateBastion = require("./update-bastion.js");
 const updateSundayMarket = require("./update-sunday-market.js");
 
@@ -21,7 +20,6 @@ exports.handler = async function () {
       { name: "elsa", fn: updateElsa.handler },
       { name: "ithil", fn: updateIthil.handler },
       { name: "kay", fn: updateKay.handler },
-      { name: "chest", fn: updateChest.handler },
       { name: "bastion", fn: updateBastion.handler },
       { name: "sunday-market", fn: updateSundayMarket.handler },
     ];
