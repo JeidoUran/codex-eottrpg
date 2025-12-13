@@ -1,5 +1,5 @@
 const chestUrl =
-  "https://s3.codex.eottrpg.memiroa.com/data/characters/chest.json";
+  "https://s3.codex.eottrpg.memiroa.com/data/characters/bastion.json";
 
 fetch(`${chestUrl}?nocache=${Date.now()}`)
   .then((res) => res.json())
