@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="fr">
   <head>
@@ -7,9 +7,12 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <link href="../favicon.png" rel="icon" type="image/png" />
     <link href="../style.css" rel="stylesheet" />
-    <link rel="stylesheet"
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <canvas id="particles"></canvas>
@@ -38,619 +41,895 @@
       <a href="#pincette" class="sub-link">Pincette</a>
       <a href="#piravageur" class="sub-link">Piravageur</a>
       <a href="#rainette" class="sub-link">Rainette</a>
-
     </nav>
 
     <header class="codex-header">
-      <a href="/" class="banniere-link"><img src="../assets/images/banniere.png"
-          alt="Bannière" class="banniere"></a>
+      <a href="/" class="banniere-link"
+        ><img
+          src="../assets/images/banniere.png"
+          alt="Bannière"
+          class="banniere"
+      /></a>
       <h1>Essences cristallisées</h1>
       <p class="sous-titre">L’archive vivante des Égarés</p>
     </header>
     <nav class="nav-magique">
-  <a href="/">Accueil</a>
-  <a href="/notes/">Patch Notes</a>
-  <a href="/resumes/">Résumés</a>
-  <a href="/moments.html">Moments</a>
-  <a href="/univers/">Univers</a>
-  <a href="/regles/">Règles</a>
-  <a href="/musique.html">Musiques</a>
-  <a href="/ressources/">Ressources</a>
-  <a href="/credits.html">Crédits</a>
-</nav>
+      <a href="/">Accueil</a>
+      <a href="/notes/">Patch Notes</a>
+      <a href="/resumes/">Résumés</a>
+      <a href="/moments.html">Moments</a>
+      <a href="/univers/">Univers</a>
+      <a href="/regles/">Règles</a>
+      <a href="/musique.html">Musiques</a>
+      <a href="/ressources/">Ressources</a>
+      <a href="/credits.html">Crédits</a>
+    </nav>
 
     <main class="patch-list accueil essence">
-      <section class="intro"><p>Voici la liste des essences et leurs
-          effets.</p><p>Un tutoriel sur le fonctionnement des essences est
-          disponible <a
-            href="../ressources/tutoriels.html#essences">ici</a>.</p></section>
+      <section class="intro">
+        <p>Voici la liste des essences et leurs effets.</p>
+        <p>
+          Un tutoriel sur le fonctionnement des essences est disponible
+          <a href="../ressources/tutoriels.html#essences">ici</a>.
+        </p>
+      </section>
       <div class="toggle-section">
         <h2 class="patch-titre" id="stratum1">
-          <img src="../../assets/images/notes-big.png" class="image image-h2">
-          1ère Strate <button class="toggle-button"
-            onclick="toggleSection(this)">▲</button>
+          <img src="../../assets/images/notes-big.png" class="image image-h2" />
+          1ère Strate
+          <button class="toggle-button" onclick="toggleSection(this)">▲</button>
         </h2>
       </div>
       <div class="collapsible-content expanded">
         <h2 class="patch-titre" id="s1-boss">
-          <img src="../../assets/images/notes-big.png" class="image image-h2">
+          <img src="../../assets/images/notes-big.png" class="image image-h2" />
           Essences de Boss
         </h2>
         <article id="narmer">
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/items-icons/materia/materia-45.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/items-icons/materia/materia-45.png"
+            />
             Essence cristallisée de Narmer
-            <span><img alt="Coût" class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/narmer-loot.png" />1
-              Moustache électrique</span>
+            <span
+              ><img
+                alt="Coût"
+                class="image action-icon"
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/narmer-loot.png"
+              />1 Moustache électrique</span
+            >
           </h3>
-          <p>Une essence crée à partir de matériaux de Narmer grâce à
-            l'ancienne magie de Voarmur.</p>
-          <div class="effet-bloc"><h4>Effet sur arme</h4><p>Confère l'aptitude
-              <strong>Flash</strong> au porteur.</p>
+          <p>
+            Une essence crée à partir de matériaux de Narmer grâce à l'ancienne
+            magie de Voarmur.
+          </p>
+          <div class="effet-bloc">
+            <h4>Effet sur arme</h4>
+            <p>Confère l'aptitude <strong>Flash</strong> au porteur.</p>
 
-            <p><strong>Flash</strong> : En tant qu'action, votre arme se mets à
+            <p>
+              <strong>Flash</strong> : En tant qu'action, votre arme se mets à
               briller puis émet un puissant éclat lumineux. Toutes les créatures
-              hostiles
-              dans un rayon de 3 mètres autour de vous doivent effectuer un jet
-              de
-              sauvegarde de Sagesse de DD 14. De nuit, le rayon d'effet est de
-              4.5
-              mètres et le DD du jet de sauvegarde passe à 16. En cas d'échec du
-              jet, elles sont aveuglées
-              pendant 3 rounds. En cas de réussite à la sauvegarde, la créature
-              n'est pas aveuglée. Flash est utilisable 2 fois par repos long.
-            </p></div>
-          <div class="effet-bloc"><h4>Effet sur armure</h4><p>Les dégâts
-              perforants et de glace reçus sont diminués de 4. Les dégâts de feu
-              et de foudre reçus sont augmentés de 2.</p></div>
+              hostiles dans un rayon de 3 mètres autour de vous doivent
+              effectuer un jet de sauvegarde de Sagesse de DD 14. De nuit, le
+              rayon d'effet est de 4.5 mètres et le DD du jet de sauvegarde
+              passe à 16. En cas d'échec du jet, elles sont aveuglées pendant 3
+              rounds. En cas de réussite à la sauvegarde, la créature n'est pas
+              aveuglée. Flash est utilisable 2 fois par repos long.
+            </p>
+          </div>
+          <div class="effet-bloc">
+            <h4>Effet sur armure</h4>
+            <p>
+              Les dégâts perforants et de glace reçus sont diminués de 4. Les
+              dégâts de feu et de foudre reçus sont augmentés de 2.
+            </p>
+          </div>
         </article>
         <h2 class="patch-titre" id="s1-foe">
-          <img src="../../assets/images/notes-big.png" class="image image-h2">
+          <img src="../../assets/images/notes-big.png" class="image image-h2" />
           Essences de F.O.E.
         </h2>
         <article id="cerfurieux">
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/items-icons/materia/materia-77.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/items-icons/materia/materia-77.png"
+            />
             Essence cristallisée de Cerfurieux
-            <span><img alt="Coût" class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/furyhorn-loot.png" />2
-              Peau de cerf</span>
+            <span
+              ><img
+                alt="Coût"
+                class="image action-icon"
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/furyhorn-loot.png"
+              />2 Peau de cerf</span
+            >
           </h3>
-          <p>Une essence crée à partir de matériaux de Cerfurieux grâce à
-            l'ancienne magie de Voarmur.</p>
-          <div class="effet-bloc"><h4>Effet sur arme</h4><p>Confère l'aptitude
-              <strong>Assaut perturbant</strong> au porteur.</p>
+          <p>
+            Une essence crée à partir de matériaux de Cerfurieux grâce à
+            l'ancienne magie de Voarmur.
+          </p>
+          <div class="effet-bloc">
+            <h4>Effet sur arme</h4>
+            <p>
+              Confère l'aptitude <strong>Assaut perturbant</strong> au porteur.
+            </p>
 
-            <p><strong>Assaut perturbant</strong> : En tant qu'action, attaquez
-              une
-              créature avec
-              votre arme. En cas de touche, cette créature doit effectuer un jet
-              de sauvegarde d'Intelligence de DD 17. En cas d'échec du jet, elle
-              est confuse
-              pendant 3 rounds. En cas de réussite à la sauvegarde, la créature
-              n'est pas confuse. Assaut perturbant est utilisable 2 fois par
-              repos
-              long.
-            </p></div>
-          <div class="effet-bloc"><h4>Effet sur armure</h4><p>Les dégâts de
-              foudre
-              reçus sont diminués de 2. Les dégâts de feu reçus sont augmentés
-              de
-              1.</p></div>
+            <p>
+              <strong>Assaut perturbant</strong> : En tant qu'action, attaquez
+              une créature avec votre arme. En cas de touche, cette créature
+              doit effectuer un jet de sauvegarde d'Intelligence de DD 17. En
+              cas d'échec du jet, elle est confuse pendant 3 rounds. En cas de
+              réussite à la sauvegarde, la créature n'est pas confuse. Assaut
+              perturbant est utilisable 2 fois par repos long.
+            </p>
+          </div>
+          <div class="effet-bloc">
+            <h4>Effet sur armure</h4>
+            <p>
+              Les dégâts de foudre reçus sont diminués de 2. Les dégâts de feu
+              reçus sont augmentés de 1.
+            </p>
+          </div>
         </article>
         <article id="lezard-goinfre">
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/items-icons/materia/materia-73.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/items-icons/materia/materia-73.png"
+            />
             Essence cristallisée de Lézard goinfre
-            <span><img alt="Coût" class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/greedy-lizard-loot.png" />2
-              Crête de lézard</span>
+            <span
+              ><img
+                alt="Coût"
+                class="image action-icon"
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/greedy-lizard-loot.png"
+              />2 Crête de lézard</span
+            >
           </h3>
-          <p>Une essence crée à partir de matériaux de Lézard goinfre grâce à
-            l'ancienne magie de Voarmur.</p>
-          <div class="effet-bloc"><h4>Effet sur arme</h4><p>Confère l'aptitude
-              <strong>Assaut corrosif</strong> au porteur.</p>
+          <p>
+            Une essence crée à partir de matériaux de Lézard goinfre grâce à
+            l'ancienne magie de Voarmur.
+          </p>
+          <div class="effet-bloc">
+            <h4>Effet sur arme</h4>
+            <p>
+              Confère l'aptitude <strong>Assaut corrosif</strong> au porteur.
+            </p>
 
-            <p><strong>Assaut corrosif</strong> : En tant qu'action, attaquez
-              une
+            <p>
+              <strong>Assaut corrosif</strong> : En tant qu'action, attaquez une
               créature avec votre arme. En cas de touche, cette créature doit
               effectuer un jet de sauvegarde de Constitution de DD 17. En cas
-              d'échec du jet, elle est empoisonnée
-              pendant 3 rounds, subissant 1d6 + 3 de dégâts de poison à chaque
-              tour où elle continue d'être empoisonnée. En cas de réussite à la
-              sauvegarde, la créature n'est pas empoisonnée. Assaut corrosif est
-              utilisable 2 fois par repos long.
-            </p></div>
-          <div class="effet-bloc"><h4>Effet sur armure</h4><p>Les dégâts de feu
-              reçus sont diminués de 2. Les dégâts de glace reçus sont augmentés
-              de 1.</p></div>
+              d'échec du jet, elle est empoisonnée pendant 3 rounds, subissant
+              1d6 + 3 de dégâts de poison à chaque tour où elle continue d'être
+              empoisonnée. En cas de réussite à la sauvegarde, la créature n'est
+              pas empoisonnée. Assaut corrosif est utilisable 2 fois par repos
+              long.
+            </p>
+          </div>
+          <div class="effet-bloc">
+            <h4>Effet sur armure</h4>
+            <p>
+              Les dégâts de feu reçus sont diminués de 2. Les dégâts de glace
+              reçus sont augmentés de 1.
+            </p>
+          </div>
         </article>
         <article id="tyran-dechaîne">
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/items-icons/materia/materia-69.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/items-icons/materia/materia-69.png"
+            />
             Essence cristallisée de Tyran déchaîné
-            <span><img alt="Coût" class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/raging-tyrant-loot.png" />2
-              Dent d'hippopotame</span>
+            <span
+              ><img
+                alt="Coût"
+                class="image action-icon"
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/raging-tyrant-loot.png"
+              />2 Dent d'hippopotame</span
+            >
           </h3>
-          <p>Une essence crée à partir de matériaux de Tyran déchaîné grâce à
-            l'ancienne magie de Voarmur.</p>
-          <div class="effet-bloc"><h4>Effet sur arme</h4><p>Confère l'aptitude
-              <strong>Charge furieuse</strong> au porteur.</p>
+          <p>
+            Une essence crée à partir de matériaux de Tyran déchaîné grâce à
+            l'ancienne magie de Voarmur.
+          </p>
+          <div class="effet-bloc">
+            <h4>Effet sur arme</h4>
+            <p>
+              Confère l'aptitude <strong>Charge furieuse</strong> au porteur.
+            </p>
 
-            <p><strong>Charge furieuse</strong> : En tant qu'action complexe,
-              vous
-              chargez en ligne droite, jusqu'à votre vitesse de déplacement
+            <p>
+              <strong>Charge furieuse</strong> : En tant qu'action complexe,
+              vous chargez en ligne droite, jusqu'à votre vitesse de déplacement
               restante. Si vous vous déplacez d'au moins 3 mètres de cette
-              façon,
-              et que vous entrez en collision avec une autre créature, vous
-              pouvez
-              effectuer une attaque contre celle-ci en situation d'avantage. En
-              cas de touche, la créature est repoussée de jusqu'à 3 mètres de
-              vous. Charge furieuse est utilisable 2 fois par repos long.
-            </p></div>
-          <div class="effet-bloc"><h4>Effet sur armure</h4><p>Les dégâts
-              contondants reçus sont diminués de 2. Les dégâts de feu reçus sont
-              augmentés de 1.</p></div>
+              façon, et que vous entrez en collision avec une autre créature,
+              vous pouvez effectuer une attaque contre celle-ci en situation
+              d'avantage. En cas de touche, la créature est repoussée de jusqu'à
+              3 mètres de vous. Charge furieuse est utilisable 2 fois par repos
+              long.
+            </p>
+          </div>
+          <div class="effet-bloc">
+            <h4>Effet sur armure</h4>
+            <p>
+              Les dégâts contondants reçus sont diminués de 2. Les dégâts de feu
+              reçus sont augmentés de 1.
+            </p>
+          </div>
         </article>
         <h2 class="patch-titre" id="s1-monsters">
-          <img src="../../assets/images/notes-big.png" class="image image-h2">
+          <img src="../../assets/images/notes-big.png" class="image image-h2" />
           Essences de monstres
         </h2>
         <article id="arum-titan">
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/items-icons/materia/materia-76.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/items-icons/materia/materia-76.png"
+            />
             Essence cristallisée d'Arum titan
-            <span><img alt="Coût" class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/titan-arum-loot.png" />3
-              Lierre piquant</span>
+            <span
+              ><img
+                alt="Coût"
+                class="image action-icon"
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/titan-arum-loot.png"
+              />3 Lierre piquant</span
+            >
           </h3>
-          <p>Une essence créée à partir de matériaux d'Arum titan grâce à
-            l'ancienne magie de Voarmur.</p>
-          <div class="effet-bloc"><h4>Effet sur arme</h4><p>Confère l'aptitude
-              <strong>Assaut aveuglant</strong> au porteur.</p>
+          <p>
+            Une essence créée à partir de matériaux d'Arum titan grâce à
+            l'ancienne magie de Voarmur.
+          </p>
+          <div class="effet-bloc">
+            <h4>Effet sur arme</h4>
+            <p>
+              Confère l'aptitude <strong>Assaut aveuglant</strong> au porteur.
+            </p>
 
-            <p><strong>Assaut aveuglant</strong> : En tant qu'action, attaquez
-              une
-              créature avec
-              votre arme. En cas de touche, cette créature doit effectuer un jet
-              de sauvegarde de Constitution de DD 16. En cas d'échec du jet,
-              elle
-              est aveuglée
-              pendant 3 rounds. En cas de réussite à la sauvegarde, la créature
-              n'est pas aveuglée. Assaut aveuglant est utilisable 2 fois par
-              repos
-              long.
-            </p></div>
-          <div class="effet-bloc"><h4>Effet sur armure</h4><p>Les dégâts de
-              foudre
-              reçus sont diminués de 2. Les dégâts tranchants reçus sont
-              augmentés
-              de 2.</p></div>
+            <p>
+              <strong>Assaut aveuglant</strong> : En tant qu'action, attaquez
+              une créature avec votre arme. En cas de touche, cette créature
+              doit effectuer un jet de sauvegarde de Constitution de DD 16. En
+              cas d'échec du jet, elle est aveuglée pendant 3 rounds. En cas de
+              réussite à la sauvegarde, la créature n'est pas aveuglée. Assaut
+              aveuglant est utilisable 2 fois par repos long.
+            </p>
+          </div>
+          <div class="effet-bloc">
+            <h4>Effet sur armure</h4>
+            <p>
+              Les dégâts de foudre reçus sont diminués de 2. Les dégâts
+              tranchants reçus sont augmentés de 2.
+            </p>
+          </div>
         </article>
         <article id="champitoxi">
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/items-icons/materia/materia-76.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/items-icons/materia/materia-76.png"
+            />
             Essence cristallisée de Champitoxi
-            <span><img alt="Coût" class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/venomshroom-loot.png" />3
-              Hyphe toxique</span>
+            <span
+              ><img
+                alt="Coût"
+                class="image action-icon"
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/venomshroom-loot.png"
+              />3 Hyphe toxique</span
+            >
           </h3>
-          <p>Une essence crée à partir de matériaux de Champitoxi grâce à
-            l'ancienne magie de Voarmur.</p>
-          <div class="effet-bloc"><h4>Effet sur arme</h4><p>Confère l'aptitude
-              <strong>Assaut affaiblissant</strong> au porteur.</p>
+          <p>
+            Une essence crée à partir de matériaux de Champitoxi grâce à
+            l'ancienne magie de Voarmur.
+          </p>
+          <div class="effet-bloc">
+            <h4>Effet sur arme</h4>
+            <p>
+              Confère l'aptitude <strong>Assaut affaiblissant</strong> au
+              porteur.
+            </p>
 
-            <p><strong>Assaut affaiblissant</strong> : En tant qu'action,
-              attaquez
-              une créature avec votre arme. En cas de touche, cette créature
-              doit
-              effectuer un jet de sauvegarde de Constitution de DD 16. En cas
-              d'échec du jet, elle subit un malus de -2 sur ses jets de
-              sauvegarde
-              pendant 3 rounds. En cas de réussite à la sauvegarde, elle ne
-              subit
-              pas de malus. Assaut affaiblissant est utilisable 2 fois par repos
-              long.
-            </p></div>
-          <div class="effet-bloc"><h4>Effet sur armure</h4><p>Les dégâts de
-              foudre
-              reçus sont diminués de 2. Les dégâts de feu reçus sont augmentés
-              de
-              2.</p></div>
+            <p>
+              <strong>Assaut affaiblissant</strong> : En tant qu'action,
+              attaquez une créature avec votre arme. En cas de touche, cette
+              créature doit effectuer un jet de sauvegarde de Constitution de DD
+              16. En cas d'échec du jet, elle subit un malus de -2 sur ses jets
+              de sauvegarde pendant 3 rounds. En cas de réussite à la
+              sauvegarde, elle ne subit pas de malus. Assaut affaiblissant est
+              utilisable 2 fois par repos long.
+            </p>
+          </div>
+          <div class="effet-bloc">
+            <h4>Effet sur armure</h4>
+            <p>
+              Les dégâts de foudre reçus sont diminués de 2. Les dégâts de feu
+              reçus sont augmentés de 2.
+            </p>
+          </div>
         </article>
         <article id="corbec">
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/items-icons/materia/materia-72.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/items-icons/materia/materia-72.png"
+            />
             Essence cristallisée de Corbec
-            <span><img alt="Coût" class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/largebill-loot.png" />3
-              Plume verte</span>
+            <span
+              ><img
+                alt="Coût"
+                class="image action-icon"
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/largebill-loot.png"
+              />3 Plume verte</span
+            >
           </h3>
-          <p>Une essence crée à partir de matériaux de Corbec grâce à
-            l'ancienne magie de Voarmur.</p>
-          <div class="effet-bloc"><h4>Effet sur arme</h4><p>Change le type de
-              dégâts de l'arme en contondant.</p></div>
-          <div class="effet-bloc"><h4>Effet sur armure</h4><p>Les dégâts de feu
-              reçus sont diminués de 2. Les dégâts perforants reçus sont
-              augmentés
-              de 2.</p></div>
+          <p>
+            Une essence crée à partir de matériaux de Corbec grâce à l'ancienne
+            magie de Voarmur.
+          </p>
+          <div class="effet-bloc">
+            <h4>Effet sur arme</h4>
+            <p>Change le type de dégâts de l'arme en contondant.</p>
+          </div>
+          <div class="effet-bloc">
+            <h4>Effet sur armure</h4>
+            <p>
+              Les dégâts de feu reçus sont diminués de 2. Les dégâts perforants
+              reçus sont augmentés de 2.
+            </p>
+          </div>
         </article>
         <article id="crabe-scylla">
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/items-icons/materia/materia-64.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/items-icons/materia/materia-64.png"
+            />
             Essence cristallisée de Crabe scylla
-            <span><img alt="Coût" class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/scylla-crab-loot.png" />3
-              Pince ensanglantée<br><img alt="Coût"
+            <span
+              ><img
+                alt="Coût"
                 class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/scylla-crab-loot-2.png" />3
-              Carapace d'acier</span>
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/scylla-crab-loot.png"
+              />3 Pince ensanglantée<br /><img
+                alt="Coût"
+                class="image action-icon"
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/scylla-crab-loot-2.png"
+              />3 Carapace d'acier</span
+            >
           </h3>
-          <p>Une essence crée à partir de matériaux de Crabe scylla grâce à
-            l'ancienne magie de Voarmur.</p>
-          <div class="effet-bloc"><h4>Effet sur arme</h4><p>Confère un bonus de
-              1d6 aux dégâts infligés contre les cibles incapables de se
-              déplacer.</p></div>
-          <div class="effet-bloc"><h4>Effet sur armure</h4><p>Les dégâts
-              perforants reçus sont diminués de 2. Les dégâts contondants reçus
-              sont augmentés de 2.</p></div>
+          <p>
+            Une essence crée à partir de matériaux de Crabe scylla grâce à
+            l'ancienne magie de Voarmur.
+          </p>
+          <div class="effet-bloc">
+            <h4>Effet sur arme</h4>
+            <p>
+              Confère un bonus de 1d6 aux dégâts infligés contre les cibles
+              incapables de se déplacer.
+            </p>
+          </div>
+          <div class="effet-bloc">
+            <h4>Effet sur armure</h4>
+            <p>
+              Les dégâts perforants reçus sont diminués de 2. Les dégâts
+              contondants reçus sont augmentés de 2.
+            </p>
+          </div>
         </article>
         <article id="dendrobate">
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/items-icons/materia/materia-76.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/items-icons/materia/materia-76.png"
+            />
             Essence cristallisée de Dendrobate
-            <span><img alt="Coût" class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/spotted-frog-loot.png" />3
-              Langue élastique</span>
+            <span
+              ><img
+                alt="Coût"
+                class="image action-icon"
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/spotted-frog-loot.png"
+              />3 Langue élastique</span
+            >
           </h3>
-          <p>Une essence crée à partir de matériaux de Dendrobate grâce à
-            l'ancienne magie de Voarmur.</p>
-          <div class="effet-bloc"><h4>Effet sur arme</h4><p>Confère l'aptitude
-              <strong>Assaut bondissant</strong> au porteur.</p>
+          <p>
+            Une essence crée à partir de matériaux de Dendrobate grâce à
+            l'ancienne magie de Voarmur.
+          </p>
+          <div class="effet-bloc">
+            <h4>Effet sur arme</h4>
+            <p>
+              Confère l'aptitude <strong>Assaut bondissant</strong> au porteur.
+            </p>
 
-            <p><strong>Assaut bondissant</strong> : En tant qu'action bonus,
+            <p>
+              <strong>Assaut bondissant</strong> : En tant qu'action bonus,
               ciblez une créature à portée de mêlée et effectuez un test
-              d'Acrobaties de DD 14. En cas de réussite du jet, vous
-              bondissez au dessus de la créature ciblée et retombez derrière
-              elle, sans déclencher d'attaques d'opportunité. En cas d'échec à
-              la sauvegarde, vous ne vous déplacez pas. Assaut bondissant est
-              utilisable 2 fois par repos long.
-            </p></div>
-          <div class="effet-bloc"><h4>Effet sur armure</h4><p>Les dégâts de
-              foudre reçus sont diminués de 2. Les dégâts de glace reçus sont
-              augmentés de 2.</p></div>
+              d'Acrobaties de DD 14. En cas de réussite du test, vous bondissez
+              au dessus de la créature ciblée et retombez derrière elle, sans
+              déclencher d'attaques d'opportunité. En cas d'échec du test, vous
+              ne vous déplacez pas. Assaut bondissant est utilisable 2 fois par
+              repos long.
+            </p>
+          </div>
+          <div class="effet-bloc">
+            <h4>Effet sur armure</h4>
+            <p>
+              Les dégâts de foudre reçus sont diminués de 2. Les dégâts de glace
+              reçus sont augmentés de 2.
+            </p>
+          </div>
         </article>
         <article id="diablotin-d-eau">
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/items-icons/materia/materia-72.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/items-icons/materia/materia-72.png"
+            />
             Essence cristallisée de Diablotin d'eau
-            <span><img alt="Coût" class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/fanged-fish-loot.png" />3
-              Dent robuste</span>
+            <span
+              ><img
+                alt="Coût"
+                class="image action-icon"
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/fanged-fish-loot.png"
+              />3 Dent robuste</span
+            >
           </h3>
-          <p>Une essence crée à partir de matériaux de Diablotin d'eau grâce à
-            l'ancienne magie de Voarmur.</p>
-          <div class="effet-bloc"><h4>Effet sur arme</h4><p>Change le type de
-              dégâts de l'arme en tranchant.</p></div>
-          <div class="effet-bloc"><h4>Effet sur armure</h4><p>Les dégâts de feu
-              reçus sont diminués de 2. Les dégâts contondants reçus sont
-              augmentés de 2.</p></div>
+          <p>
+            Une essence crée à partir de matériaux de Diablotin d'eau grâce à
+            l'ancienne magie de Voarmur.
+          </p>
+          <div class="effet-bloc">
+            <h4>Effet sur arme</h4>
+            <p>Change le type de dégâts de l'arme en tranchant.</p>
+          </div>
+          <div class="effet-bloc">
+            <h4>Effet sur armure</h4>
+            <p>
+              Les dégâts de feu reçus sont diminués de 2. Les dégâts contondants
+              reçus sont augmentés de 2.
+            </p>
+          </div>
         </article>
         <article id="durian-letal">
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/items-icons/materia/materia-68.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/items-icons/materia/materia-68.png"
+            />
             Essence cristallisée de Durian létal
-            <span><img alt="Coût" class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/deadly-durian-loot.png" />3
-              Épine verte</span>
+            <span
+              ><img
+                alt="Coût"
+                class="image action-icon"
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/deadly-durian-loot.png"
+              />3 Épine verte</span
+            >
           </h3>
-          <p>Une essence crée à partir de matériaux de Durian létal grâce à
-            l'ancienne magie de Voarmur.</p>
-          <div class="effet-bloc"><h4>Effet sur arme</h4><p>Confère l'aptitude
-              <strong>Assaut fétide</strong> au porteur.</p>
+          <p>
+            Une essence crée à partir de matériaux de Durian létal grâce à
+            l'ancienne magie de Voarmur.
+          </p>
+          <div class="effet-bloc">
+            <h4>Effet sur arme</h4>
+            <p>Confère l'aptitude <strong>Assaut fétide</strong> au porteur.</p>
 
-            <p><strong>Assaut fétide</strong> : En tant qu'action, attaquez une
+            <p>
+              <strong>Assaut fétide</strong> : En tant qu'action, attaquez une
               créature avec votre arme. En cas de touche, cette créature doit
               effectuer un jet de sauvegarde de Constitution de DD 16. En cas
-              d'échec du jet, elle est empoisonnée
-              pendant 3 rounds, subissant 1d4 + 2 de dégâts de poison à chaque
-              tour où elle continue d'être empoisonnée. En cas de réussite à la
-              sauvegarde, la créature n'est pas empoisonnée. Assaut fétide est
-              utilisable 2 fois par repos long.
-            </p></div>
-          <div class="effet-bloc"><h4>Effet sur armure</h4><p>Les dégâts
-              contondants reçus sont diminués de 2. Les dégâts de glace reçus
-              sont
-              augmentés de 2.</p></div>
+              d'échec du jet, elle est empoisonnée pendant 3 rounds, subissant
+              1d4 + 2 de dégâts de poison à chaque tour où elle continue d'être
+              empoisonnée. En cas de réussite à la sauvegarde, la créature n'est
+              pas empoisonnée. Assaut fétide est utilisable 2 fois par repos
+              long.
+            </p>
+          </div>
+          <div class="effet-bloc">
+            <h4>Effet sur armure</h4>
+            <p>
+              Les dégâts contondants reçus sont diminués de 2. Les dégâts de
+              glace reçus sont augmentés de 2.
+            </p>
+          </div>
         </article>
         <article id="gigaconda">
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/items-icons/materia/materia-60.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/items-icons/materia/materia-60.png"
+            />
             Essence cristallisée de Gigaconda
-            <span><img alt="Coût" class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/great-anaconda-loot.png" />3
-              Écaille violette</span>
+            <span
+              ><img
+                alt="Coût"
+                class="image action-icon"
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/great-anaconda-loot.png"
+              />3 Écaille violette</span
+            >
           </h3>
-          <p>Une essence crée à partir de matériaux de Gigaconda grâce à
-            l'ancienne magie de Voarmur.</p>
-          <div class="effet-bloc"><h4>Effet sur arme</h4><p>Confère l'aptitude
-              <strong>Assaut constricteur</strong> au porteur.</p>
+          <p>
+            Une essence crée à partir de matériaux de Gigaconda grâce à
+            l'ancienne magie de Voarmur.
+          </p>
+          <div class="effet-bloc">
+            <h4>Effet sur arme</h4>
+            <p>
+              Confère l'aptitude <strong>Assaut constricteur</strong> au
+              porteur.
+            </p>
 
-            <p><strong>Assaut constricteur</strong> : En tant qu'action,
-              attaquez
+            <p>
+              <strong>Assaut constricteur</strong> : En tant qu'action, attaquez
               une créature avec votre arme. En cas de touche, cette créature
-              doit
-              effectuer un jet de sauvegarde de Force de DD 16. En cas d'échec
-              du
-              jet, elle est liée aux bras pendant 3 rounds. En cas de réussite à
-              la sauvegarde, la
-              créature n'est pas liée aux bras. Assaut constricteur est
-              utilisable
-              2 fois par repos long.
-            </p></div>
-          <div class="effet-bloc"><h4>Effet sur armure</h4><p>Les dégâts
-              tranchants reçus sont diminués de 2. Les dégâts de glace reçus
-              sont
-              augmentés de 2.</p></div>
+              doit effectuer un jet de sauvegarde de Force de DD 16. En cas
+              d'échec du jet, elle est liée aux bras pendant 3 rounds. En cas de
+              réussite à la sauvegarde, la créature n'est pas liée aux bras.
+              Assaut constricteur est utilisable 2 fois par repos long.
+            </p>
+          </div>
+          <div class="effet-bloc">
+            <h4>Effet sur armure</h4>
+            <p>
+              Les dégâts tranchants reçus sont diminués de 2. Les dégâts de
+              glace reçus sont augmentés de 2.
+            </p>
+          </div>
         </article>
         <article id="gigapede">
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/items-icons/materia/materia-60.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/items-icons/materia/materia-60.png"
+            />
             Essence cristallisée de Gigapède
-            <span><img alt="Coût" class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/gigapede-loot.png" />3
-              Patte de Gigapède</span>
+            <span
+              ><img
+                alt="Coût"
+                class="image action-icon"
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/gigapede-loot.png"
+              />3 Patte de Gigapède</span
+            >
           </h3>
-          <p>Une essence crée à partir de matériaux de Gigapède grâce à
-            l'ancienne magie de Voarmur.</p>
-          <div class="effet-bloc"><h4>Effet sur arme</h4><p>Confère l'aptitude
-              <strong>Assaut immobilisant</strong> au porteur.</p>
+          <p>
+            Une essence crée à partir de matériaux de Gigapède grâce à
+            l'ancienne magie de Voarmur.
+          </p>
+          <div class="effet-bloc">
+            <h4>Effet sur arme</h4>
+            <p>
+              Confère l'aptitude <strong>Assaut immobilisant</strong> au
+              porteur.
+            </p>
 
-            <p><strong>Assaut immobilisant</strong> : En tant qu'action,
-              attaquez
+            <p>
+              <strong>Assaut immobilisant</strong> : En tant qu'action, attaquez
               une créature avec votre arme. En cas de touche, cette créature
-              doit
-              effectuer un jet de sauvegarde de Dextérité de DD 16. En cas
-              d'échec
-              du jet, elle est liée aux jambes pendant 3 rounds. En cas de
-              réussite à la sauvegarde, la
-              créature n'est pas liée aux jambes. Assaut immobilisant est
-              utilisable 2 fois par repos long.
-            </p></div>
-          <div class="effet-bloc"><h4>Effet sur armure</h4><p>Les dégâts
-              tranchants reçus sont diminués de 2. Les dégâts de foudre reçus
-              sont
-              augmentés de 2.</p></div>
+              doit effectuer un jet de sauvegarde de Dextérité de DD 16. En cas
+              d'échec du jet, elle est liée aux jambes pendant 3 rounds. En cas
+              de réussite à la sauvegarde, la créature n'est pas liée aux
+              jambes. Assaut immobilisant est utilisable 2 fois par repos long.
+            </p>
+          </div>
+          <div class="effet-bloc">
+            <h4>Effet sur armure</h4>
+            <p>
+              Les dégâts tranchants reçus sont diminués de 2. Les dégâts de
+              foudre reçus sont augmentés de 2.
+            </p>
+          </div>
         </article>
         <article id="grand-lynx">
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/items-icons/materia/materia-76.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/items-icons/materia/materia-76.png"
+            />
             Essence cristallisée de Grand lynx
-            <span><img alt="Coût" class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/great-lynx-loot.png" />3
-              Peau de Grand lynx<br><img alt="Coût"
+            <span
+              ><img
+                alt="Coût"
                 class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/great-lynx-loot-2.png" />3
-              Griffe des montagnes</span>
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/great-lynx-loot.png"
+              />3 Peau de Grand lynx<br /><img
+                alt="Coût"
+                class="image action-icon"
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/great-lynx-loot-2.png"
+              />3 Griffe des montagnes</span
+            >
           </h3>
-          <p>Une essence crée à partir de matériaux de Grand lynx grâce à
-            l'ancienne magie de Voarmur.</p>
-          <div class="effet-bloc"><h4>Effet sur arme</h4><p>Confère un bonus de
-              1d3
-              aux dégâts contre les cibles prises en tenaille.</p></div>
-          <div class="effet-bloc"><h4>Effet sur armure</h4><p>Les dégâts de
-              foudre
-              reçus sont diminués de 2. Les dégâts de feu reçus sont augmentés
-              de
-              2.</p></div>
+          <p>
+            Une essence crée à partir de matériaux de Grand lynx grâce à
+            l'ancienne magie de Voarmur.
+          </p>
+          <div class="effet-bloc">
+            <h4>Effet sur arme</h4>
+            <p>
+              Confère un bonus de 1d3 aux dégâts contre les cibles prises en
+              tenaille.
+            </p>
+          </div>
+          <div class="effet-bloc">
+            <h4>Effet sur armure</h4>
+            <p>
+              Les dégâts de foudre reçus sont diminués de 2. Les dégâts de feu
+              reçus sont augmentés de 2.
+            </p>
+          </div>
         </article>
         <article id="granthorynque">
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/items-icons/materia/materia-56.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/items-icons/materia/materia-56.png"
+            />
             Essence cristallisée de Granthorynque
-            <span><img alt="Coût" class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/great-platypus-loot.png" />3
-              Queue empoisonnée</span>
+            <span
+              ><img
+                alt="Coût"
+                class="image action-icon"
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/great-platypus-loot.png"
+              />3 Queue empoisonnée</span
+            >
           </h3>
-          <p>Une essence crée à partir de matériaux de Granthorynque grâce à
-            l'ancienne magie de Voarmur.</p>
-          <div class="effet-bloc"><h4>Effet sur arme</h4><p>Confère l'aptitude
-              <strong>Tacle</strong> au porteur.</p>
+          <p>
+            Une essence crée à partir de matériaux de Granthorynque grâce à
+            l'ancienne magie de Voarmur.
+          </p>
+          <div class="effet-bloc">
+            <h4>Effet sur arme</h4>
+            <p>Confère l'aptitude <strong>Tacle</strong> au porteur.</p>
 
-            <p><strong>Tacle</strong> : En tant qu'action, attaquez une créature
-              à
-              portée de mêlée. En cas de touche, cette créature doit effectuer
-              un
-              jet de sauvegarde de Constitution de DD 16. En cas d'échec du jet,
-              la créature est repoussée de 1,5 mètres en arrière et vous avancez
-              vers l'emplacement qu'elle occupait. Ce déplacement est
-              obligatoire
-              si la créature a été repoussée. Si la créature ne peut pas reculer
-              à
-              cause d'un obstacle, elle reste sur place mais subit 1d10 de
-              dégâts
-              contondants supplémentaire. En cas de réussite à la sauvegarde, la
-              créature n'est pas repoussée. Tacle est utilisable 2 fois par
-              repos
-              long.
-            </p></div>
-          <div class="effet-bloc"><h4>Effet sur armure</h4><p>Les dégâts de
-              glace
-              reçus sont diminués de 2. Les dégâts de feu reçus sont augmentés
-              de
-              2.</p></div>
+            <p>
+              <strong>Tacle</strong> : En tant qu'action, attaquez une créature
+              à portée de mêlée. En cas de touche, cette créature doit effectuer
+              un jet de sauvegarde de Constitution de DD 16. En cas d'échec du
+              jet, la créature est repoussée de 1,5 mètres en arrière et vous
+              avancez vers l'emplacement qu'elle occupait. Ce déplacement est
+              obligatoire si la créature a été repoussée. Si la créature ne peut
+              pas reculer à cause d'un obstacle, elle reste sur place mais subit
+              1d10 de dégâts contondants supplémentaire. En cas de réussite à la
+              sauvegarde, la créature n'est pas repoussée. Tacle est utilisable
+              2 fois par repos long.
+            </p>
+          </div>
+          <div class="effet-bloc">
+            <h4>Effet sur armure</h4>
+            <p>
+              Les dégâts de glace reçus sont diminués de 2. Les dégâts de feu
+              reçus sont augmentés de 2.
+            </p>
+          </div>
         </article>
         <article id="limace-astrale">
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/items-icons/materia/materia-56.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/items-icons/materia/materia-56.png"
+            />
             Essence cristallisée de Limace astrale
-            <span><img alt="Coût" class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/starry-slug-loot.png" />3
-              Détecteur puissant<br><img alt="Coût"
+            <span
+              ><img
+                alt="Coût"
                 class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/astral-slug-blood.png" />3
-              Sang de Limace astrale</span>
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/starry-slug-loot.png"
+              />3 Détecteur puissant<br /><img
+                alt="Coût"
+                class="image action-icon"
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/astral-slug-blood.png"
+              />3 Sang de Limace astrale</span
+            >
           </h3>
-          <p>Une essence crée à partir de matériaux de Limace astrale grâce à
-            l'ancienne magie de Voarmur.</p>
-          <div class="effet-bloc"><h4>Effet sur arme</h4><p>Change le type de
-              dégâts de l'arme en glace.</p></div>
-          <div class="effet-bloc"><h4>Effet sur armure</h4><p>Les dégâts de
-              glace
-              reçus sont diminués de 2. Les dégâts de foudre reçus sont
-              augmentés
-              de 2.</p></div>
+          <p>
+            Une essence crée à partir de matériaux de Limace astrale grâce à
+            l'ancienne magie de Voarmur.
+          </p>
+          <div class="effet-bloc">
+            <h4>Effet sur arme</h4>
+            <p>Change le type de dégâts de l'arme en glace.</p>
+          </div>
+          <div class="effet-bloc">
+            <h4>Effet sur armure</h4>
+            <p>
+              Les dégâts de glace reçus sont diminués de 2. Les dégâts de foudre
+              reçus sont augmentés de 2.
+            </p>
+          </div>
         </article>
         <article id="pincette">
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/items-icons/materia/materia-72.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/items-icons/materia/materia-72.png"
+            />
             Essence cristallisée de Pincette
-            <span><img alt="Coût" class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/claw-shrimp-loot.png" />3
-              Petite carapace</span>
+            <span
+              ><img
+                alt="Coût"
+                class="image action-icon"
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/claw-shrimp-loot.png"
+              />3 Petite carapace</span
+            >
           </h3>
-          <p>Une essence crée à partir de matériaux de Pincette grâce à
-            l'ancienne magie de Voarmur.</p>
-          <div class="effet-bloc"><h4>Effet sur arme</h4><p>Confère l'aptitude
-              <strong>Assaut paralysant</strong> au porteur.</p>
+          <p>
+            Une essence crée à partir de matériaux de Pincette grâce à
+            l'ancienne magie de Voarmur.
+          </p>
+          <div class="effet-bloc">
+            <h4>Effet sur arme</h4>
+            <p>
+              Confère l'aptitude <strong>Assaut paralysant</strong> au porteur.
+            </p>
 
-            <p><strong>Assaut paralysant</strong> : En tant qu'action, attaquez
+            <p>
+              <strong>Assaut paralysant</strong> : En tant qu'action, attaquez
               une créature avec votre arme. En cas de touche, cette créature
-              doit
-              effectuer un jet de sauvegarde de Constitution de DD 16. En cas
-              d'échec du jet, elle est paralysée
-              pendant 3 rounds. En cas de réussite à la sauvegarde, la créature
-              n'est pas paralysée. Assaut paralysant est utilisable 2 fois par
-              repos long.
-            </p></div>
-          <div class="effet-bloc"><h4>Effet sur armure</h4><p>Les dégâts de feu
-              reçus sont diminués de 2. Les dégâts de glace reçus sont augmentés
-              de 2.</p></div>
+              doit effectuer un jet de sauvegarde de Constitution de DD 16. En
+              cas d'échec du jet, elle est paralysée pendant 3 rounds. En cas de
+              réussite à la sauvegarde, la créature n'est pas paralysée. Assaut
+              paralysant est utilisable 2 fois par repos long.
+            </p>
+          </div>
+          <div class="effet-bloc">
+            <h4>Effet sur armure</h4>
+            <p>
+              Les dégâts de feu reçus sont diminués de 2. Les dégâts de glace
+              reçus sont augmentés de 2.
+            </p>
+          </div>
         </article>
         <article id="piravageur">
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/items-icons/materia/materia-56.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/items-icons/materia/materia-56.png"
+            />
             Essence cristallisée de Piravageur
-            <span><img alt="Coût" class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/fanged-fish-loot.png" />3
-              Dent acérée<br><img alt="Coût"
+            <span
+              ><img
+                alt="Coût"
                 class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/fanged-fish-loot-2.png" />3
-              Écaille rouge</span>
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/fanged-fish-loot.png"
+              />3 Dent acérée<br /><img
+                alt="Coût"
+                class="image action-icon"
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/fanged-fish-loot-2.png"
+              />3 Écaille rouge</span
+            >
           </h3>
-          <p>Une essence crée à partir de matériaux de Piravageur grâce à
-            l'ancienne magie de Voarmur.</p>
-          <div class="effet-bloc"><h4>Effet sur arme</h4><p>Change le type de
-              dégâts de l'arme en perforant.</p></div>
-          <div class="effet-bloc"><h4>Effet sur armure</h4><p>Les dégâts de
-              glace
-              reçus sont diminués de 2. Les dégâts contondants reçus sont
-              augmentés de 2.</p></div>
+          <p>
+            Une essence crée à partir de matériaux de Piravageur grâce à
+            l'ancienne magie de Voarmur.
+          </p>
+          <div class="effet-bloc">
+            <h4>Effet sur arme</h4>
+            <p>Change le type de dégâts de l'arme en perforant.</p>
+          </div>
+          <div class="effet-bloc">
+            <h4>Effet sur armure</h4>
+            <p>
+              Les dégâts de glace reçus sont diminués de 2. Les dégâts
+              contondants reçus sont augmentés de 2.
+            </p>
+          </div>
         </article>
         <article id="rainette">
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/items-icons/materia/materia-76.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/items-icons/materia/materia-76.png"
+            />
             Essence cristallisée de Rainette
-            <span><img alt="Coût" class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/spotted-frog-loot.png" />3
-              Jambe gluante<br><img alt="Coût"
+            <span
+              ><img
+                alt="Coût"
                 class="image action-icon"
-                src="../assets/images/foundry-icons/items-icons/loot/stratum1/forest-frog-loot.png" />3
-              Joue de grenouille</span>
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/spotted-frog-loot.png"
+              />3 Jambe gluante<br /><img
+                alt="Coût"
+                class="image action-icon"
+                src="../assets/images/foundry-icons/items-icons/loot/stratum1/forest-frog-loot.png"
+              />3 Joue de grenouille</span
+            >
           </h3>
-          <p>Une essence crée à partir de matériaux de Rainette grâce à
-            l'ancienne magie de Voarmur.</p>
-          <div class="effet-bloc"><h4>Effet sur arme</h4><p>Confère un bonus de
-              +1
-              à la précision et aux dégâts des attaques d'opportunité.</p></div>
-          <div class="effet-bloc"><h4>Effet sur armure</h4><p>Les dégâts de
-              foudre
-              reçus sont diminués de 2. Les dégâts de glace reçus sont augmentés
-              de 2.</p></div>
+          <p>
+            Une essence crée à partir de matériaux de Rainette grâce à
+            l'ancienne magie de Voarmur.
+          </p>
+          <div class="effet-bloc">
+            <h4>Effet sur arme</h4>
+            <p>
+              Confère un bonus de +1 à la précision et aux dégâts des attaques
+              d'opportunité.
+            </p>
+          </div>
+          <div class="effet-bloc">
+            <h4>Effet sur armure</h4>
+            <p>
+              Les dégâts de foudre reçus sont diminués de 2. Les dégâts de glace
+              reçus sont augmentés de 2.
+            </p>
+          </div>
         </article>
       </div>
     </main>
 
-    <button id="backToTop"
+    <button
+      id="backToTop"
       onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-      aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en
-      haut</button>
+      aria-label="Retour en haut"
+    >
+      <i class="fa-solid fa-arrow-up"></i> Retour en haut
+    </button>
 
     <footer>
       <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
     </footer>
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
-            const navContainer = document.querySelector('.patch-nav');
-            const navLinks = document.querySelectorAll('.patch-nav a[href^="#"]');
-            const sections = [...document.querySelectorAll("article")];
-    
-            let lastActive = null;
-            const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
+      document.addEventListener("DOMContentLoaded", function () {
+        const navContainer = document.querySelector(".patch-nav");
+        const navLinks = document.querySelectorAll('.patch-nav a[href^="#"]');
+        const sections = [...document.querySelectorAll("article")];
+
+        let lastActive = null;
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
               if (entry.isIntersecting) {
                 const id = entry.target.getAttribute("id");
-                const activeLink = [...navLinks].find(link => link.getAttribute("href") === `#${id}`);
+                const activeLink = [...navLinks].find(
+                  (link) => link.getAttribute("href") === `#${id}`
+                );
                 if (activeLink && activeLink !== lastActive) {
-                  navLinks.forEach(link => link.classList.remove("active"));
+                  navLinks.forEach((link) => link.classList.remove("active"));
                   activeLink.classList.add("active");
-    
+
                   // Scroll l'élément actif dans le menu si partiellement masqué
                   const linkTop = activeLink.getBoundingClientRect().top;
                   const navTop = navContainer.getBoundingClientRect().top;
                   const linkBottom = linkTop + activeLink.offsetHeight;
                   const navBottom = navTop + navContainer.offsetHeight;
-    
+
                   if (linkTop < navTop || linkBottom > navBottom) {
-                    activeLink.scrollIntoView({ behavior: "smooth", block: "center" });
+                    activeLink.scrollIntoView({
+                      behavior: "smooth",
+                      block: "center",
+                    });
                   }
-    
+
                   lastActive = activeLink;
                 }
               }
             });
-          }, {
+          },
+          {
             rootMargin: "-20% 0px -30% 0px",
-            threshold: 0.1
-          });
-    
-         
-         sections.forEach(section => observer.observe(section));
-         });
+            threshold: 0.1,
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+      });
     </script>
     <script src="../scripts/particles.js"></script>
     <script src="../scripts/backToTop.js"></script>
-    <script>function toggleSection(button) {
-      const content = button.closest("main").querySelector(".collapsible-content");
-      const isOpen = content.classList.contains("expanded");
-      if (isOpen) {
-        content.classList.remove("expanded");
-        button.textContent = "▼";
-      } else {
-        content.classList.add("expanded");
-        button.textContent = "▲";
+    <script>
+      function toggleSection(button) {
+        const content = button
+          .closest("main")
+          .querySelector(".collapsible-content");
+        const isOpen = content.classList.contains("expanded");
+        if (isOpen) {
+          content.classList.remove("expanded");
+          button.textContent = "▼";
+        } else {
+          content.classList.add("expanded");
+          button.textContent = "▲";
+        }
       }
-    }</script>
+    </script>
   </body>
 </html>
