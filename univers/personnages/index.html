@@ -22,16 +22,16 @@
     </header>
 
     <nav class="nav-magique">
-  <a href="/">Accueil</a>
-  <a href="/notes/">Patch Notes</a>
-  <a href="/resumes/">Résumés</a>
-  <a href="/moments.html">Moments</a>
-  <a href="/univers/">Univers</a>
-  <a href="/regles/">Règles</a>
-  <a href="/musique.html">Musiques</a>
-  <a href="/ressources/">Ressources</a>
-  <a href="/credits.html">Crédits</a>
-</nav>
+      <a href="/">Accueil</a>
+      <a href="/notes/">Patch Notes</a>
+      <a href="/resumes/">Résumés</a>
+      <a href="/moments.html">Moments</a>
+      <a href="/univers/">Univers</a>
+      <a href="/regles/">Règles</a>
+      <a href="/musique.html">Musiques</a>
+      <a href="/ressources/">Ressources</a>
+      <a href="/credits.html">Crédits</a>
+    </nav>
 
     <main class="accueil">
       <section class="intro">
@@ -108,7 +108,7 @@
       </section>
 
       <section id="tab-pnj" class="tab-content">
-        <a href="#" class="carte-lien large chara">
+        <a href="pnj/aman.html" class="carte-lien large npc">
           <img
             src="../../assets/images/npc-icons/aman.png"
             class="image chara-icon"
@@ -116,7 +116,7 @@
           <h2>Aman</h2>
           <p></p>
         </a>
-        <a href="pnj/kujura.html" class="carte-lien large chara">
+        <a href="pnj/kujura.html" class="carte-lien large npc">
           <img
             src="../../assets/images/npc-icons/kujura.png"
             class="image chara-icon"
@@ -124,7 +124,7 @@
           <h2>Kujura</h2>
           <p></p>
         </a>
-        <a href="#" class="carte-lien large chara">
+        <a href="pnj/marcos.html" class="carte-lien large npc">
           <img
             src="../../assets/images/npc-icons/marcos.png"
             class="image chara-icon"
@@ -151,7 +151,7 @@
 
         event.target.classList.add("active");
         const target = document.getElementById(`tab-${tabId}`);
-        target.style.display = "block";
+        target.style.display = "grid";
         void target.offsetWidth; // forcer repaint
         target.classList.add("active");
       }
