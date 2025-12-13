@@ -21,18 +21,29 @@
     });
   }
 
-  /** Rend le texte Archivist en paragraphes + wikilinks cliquables */
-  function renderArchivistText(text, linkMap) {
+  // Rend un bloc Markdown : liste "- " ou paragraphe
+  function renderBlock(block, map) {
+    const lines = block.split("\n");
+    const isList = lines.every((l) => l.trim().startsWith("- "));
+
+    if (isList) {
+      const items = lines.map((l) => {
+        const item = l.replace(/^\s*-\s?/, "• ").trim();
+        return `<li>${convertWikilinks(item, map)}</li>`;
+      });
+      return `<ul>${items.join("")}</ul>`;
+    }
+
+    const withLineBreaks = block.replace(/\n/g, "<br>");
+    return `<p>${convertWikilinks(withLineBreaks, map)}</p>`;
+  }
+
+  /** Rend le texte Archivist : paragraphes + listes + wikilinks */
+  function renderArchivistText(text, map) {
     if (!text) return "";
-
-    let safe = escapeHtml(text);
-
-    const paragraphs = safe.split(/\n\s*\n/);
-    const htmlParagraphs = paragraphs.map((p) => {
-      return `<p>${convertWikilinks(p, linkMap)}</p>`;
-    });
-
-    return htmlParagraphs.join("\n");
+    const safe = escapeHtml(text);
+    const blocks = safe.split(/\n\s*\n/);
+    return blocks.map((b) => renderBlock(b, map)).join("\n");
   }
 
   /** Auto-load du JSON Archivist en fonction du data-character */
