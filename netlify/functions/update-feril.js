@@ -51,16 +51,14 @@ exports.handler = async function () {
     data.armorClass = armorClass;
 
     // 🔒 Sécurité : si l'API retourne une erreur, on ne touche pas au fichier
-    if (data.error && data.tip) {
+    if (data && typeof data === "object" && "error" in data) {
       console.error("Erreur API Foundry :", data.error);
-      console.error("Astuce :", data.tip);
 
       return {
-        statusCode: 500,
+        statusCode: 503,
         body: JSON.stringify({
           error: "API error: JSON not uploaded",
           message: data.error,
-          tip: data.tip,
         }),
       };
     }
