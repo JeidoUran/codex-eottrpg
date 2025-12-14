@@ -1,68 +1,109 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Shogun | Codex - Etrian Odyssey TTRPG</title>
-    <meta name="description" content="Stratège d’élite et meneur de front, le Shogun galvanise ses alliés tout en frappant l’ennemi avec une précision impitoyable.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../../favicon.png" type="image/png">
-    <link rel="stylesheet" href="../../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta
+      name="description"
+      content="Stratège d’élite et meneur de front, le Shogun galvanise ses alliés tout en frappant l’ennemi avec une précision impitoyable."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <canvas id="particles"></canvas> 
-<div class="class-nav">
-  <a href="#details" class="section-link">Détails</a>
-  <a href="#aptitudes" class="section-link">Aptitudes</a>
-  <a href="#epee-secondaire" class="sub-link">Épée secondaire</a>
-  <a href="#frappe-eclair" class="sub-link">Frappe éclair</a>
-  <a href="#parade" class="sub-link">Parade</a>
-  <a href="#ecole-de-tactiques" class="sub-link">École de tactiques</a>
-  <a href="#ordre-attaque-frontale" class="sub-link">Ordre : Attaque frontale</a>
-  <a href="#heure-du-crepuscule" class="sub-link">Heure du crépuscule</a>
-  <a href="#etoile-du-matin" class="sub-link">Étoile du matin</a>
-  <a href="#encouragement-revigorant" class="sub-link">Encouragement revigorant</a>
-  <a href="#vue-d-avidya" class="sub-link">Vue d'Avidya</a>
-  <a href="#confins-de-la-mort" class="sub-link">Confins de la mort</a>
-  <a href="#lance-sanglante" class="sub-link">Lance sanglante</a>
-  <a href="#provoquer-les-assassins" class="sub-link">Provoquer les assassins</a>
-  <a href="#resurgence" class="sub-link">Résurgence</a>
-  <a href="#historien-de-guerre" class="sub-link">Historien de guerre</a>
-  <a href="#lame-resonnante" class="sub-link">Lame résonnante</a>
-  <a href="#puissance-du-guerrier" class="sub-link">Puissance du guerrier</a>
-  <a href="#specialisations" class="section-link">Spécialisations</a>
-  <a href="#ecole-du-commandement" class="section-link">École du Commandement</a>
-  <a href="#ordre-endurer" class="sub-link">Ordre : Endurer</a>
-  <a href="#positionnement-tactique" class="sub-link">Positionnement tactique</a>
-  <a href="#ordre-attaque-eclair" class="sub-link">Ordre : Attaque éclair</a>
-  <a href="#ecole-de-l-offense" class="section-link">École de l'Offense</a>
-  <a href="#hirondelles-jumelles" class="sub-link">Hirondelles jumelles</a>
-  <a href="#demon-sans-pareille" class="sub-link">Démon sans pareille</a>
-  <a href="#epee-a-5-anneaux" class="sub-link">Épée à 5 anneaux</a>
-  <a href="#ecole-du-seigneur-de-guerre" class="section-link">École du Seigneur de Guerre</a>
-  <a href="#justice-rapide" class="sub-link">Justice rapide</a>
-  <a href="#effort-unifie" class="sub-link">Effort unifié</a>
-  <a href="#grand-guerrier" class="sub-link">Grand guerrier</a>
-  <a href="#tab-general" class="section-link">Progression par niveau</a>
-</div> <header class="codex-header">
+    <canvas id="particles"></canvas>
+    <div class="class-nav">
+      <a href="#details" class="section-link">Détails</a>
+      <a href="#aptitudes" class="section-link">Aptitudes</a>
+      <a href="#epee-secondaire" class="sub-link">Épée secondaire</a>
+      <a href="#frappe-eclair" class="sub-link">Frappe éclair</a>
+      <a href="#parade" class="sub-link">Parade</a>
+      <a href="#ecole-de-tactiques" class="sub-link">École de tactiques</a>
+      <a href="#ordre-attaque-frontale" class="sub-link"
+        >Ordre : Attaque frontale</a
+      >
+      <a href="#heure-du-crepuscule" class="sub-link">Heure du crépuscule</a>
+      <a href="#etoile-du-matin" class="sub-link">Étoile du matin</a>
+      <a href="#encouragement-revigorant" class="sub-link"
+        >Encouragement revigorant</a
+      >
+      <a href="#vue-d-avidya" class="sub-link">Vue d'Avidya</a>
+      <a href="#confins-de-la-mort" class="sub-link">Confins de la mort</a>
+      <a href="#lance-sanglante" class="sub-link">Lance sanglante</a>
+      <a href="#provoquer-les-assassins" class="sub-link"
+        >Provoquer les assassins</a
+      >
+      <a href="#resurgence" class="sub-link">Résurgence</a>
+      <a href="#historien-de-guerre" class="sub-link">Historien de guerre</a>
+      <a href="#lame-resonnante" class="sub-link">Lame résonnante</a>
+      <a href="#puissance-du-guerrier" class="sub-link"
+        >Puissance du guerrier</a
+      >
+      <a href="#specialisations" class="section-link">Spécialisations</a>
+      <a href="#ecole-du-commandement" class="section-link"
+        >École du Commandement</a
+      >
+      <a href="#ordre-endurer" class="sub-link">Ordre : Endurer</a>
+      <a href="#positionnement-tactique" class="sub-link"
+        >Positionnement tactique</a
+      >
+      <a href="#ordre-attaque-eclair" class="sub-link"
+        >Ordre : Attaque éclair</a
+      >
+      <a href="#ecole-de-l-offense" class="section-link">École de l'Offense</a>
+      <a href="#hirondelles-jumelles" class="sub-link">Hirondelles jumelles</a>
+      <a href="#demon-sans-pareille" class="sub-link">Démon sans pareille</a>
+      <a href="#epee-a-5-anneaux" class="sub-link">Épée à 5 anneaux</a>
+      <a href="#ecole-du-seigneur-de-guerre" class="section-link"
+        >École du Seigneur de Guerre</a
+      >
+      <a href="#justice-rapide" class="sub-link">Justice rapide</a>
+      <a href="#effort-unifie" class="sub-link">Effort unifié</a>
+      <a href="#grand-guerrier" class="sub-link">Grand guerrier</a>
+      <a href="#tab-general" class="section-link">Progression par niveau</a>
+    </div>
+    <header class="codex-header">
       <div class="illustration-wrapper">
-      
-          <img src="../../assets/images/class-art/shogun1.png" alt="Illustration Shogun" class="illustration-classe" onclick="openLightbox(this.src)">
-        
+        <img
+          src="../../assets/images/class-art/shogun1.png"
+          alt="Illustration Shogun"
+          class="illustration-classe"
+          onclick="openLightbox(this.src)"
+        />
 
-          <img src="../../assets/images/class-art/shogun2.png" alt="Illustration Shogun" class="illustration-classe" onclick="openLightbox(this.src)">
-         
-        </div>
-        <h1>
-          <img src="../../assets/images/class-icons/shogun.png" class="image class-icon"> Shogun
-        </h1>
-        <p class="sous-titre">L’archive vivante des Égarés</p>
-        <div class="fixed-header-links">
-          <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Index des classes</a>
-        </div>
+        <img
+          src="../../assets/images/class-art/shogun2.png"
+          alt="Illustration Shogun"
+          class="illustration-classe"
+          onclick="openLightbox(this.src)"
+        />
+      </div>
+      <h1>
+        <img
+          src="../../assets/images/class-icons/shogun.png"
+          class="image class-icon"
+        />
+        Shogun
+      </h1>
+      <p class="sous-titre">L’archive vivante des Égarés</p>
+      <div class="fixed-header-links">
+        <a
+          href="index.html"
+          class="carte-lien"
+          style="display: inline-block; max-width: 300px"
+          ><i class="fa-solid fa-arrow-left"></i> Index des classes</a
+        >
+      </div>
     </header>
 
-    <nav class="nav-magique">
+    <nav class="nav-bar">
       <a href="/">Accueil</a>
       <a href="../../notes/">Patch Notes</a>
       <a href="../../resumes/">Résumés</a>
@@ -76,423 +117,1080 @@
 
     <main class="accueil">
       <section class="intro-collapsible click" id="intro">
-        <p>Un leader entraîné avec un sens tactique. Le Shogun dirige ses alliés vers la victoire, optimisant leur efficacité sur le champ de bataille. Ils ont également perfectionné leurs compétences au combat, et peuvent combattre aux côtés de leurs alliés, préférant mener depuis les premières lignes plutôt que depuis l'arrière. Les Shoguns peuvent manier deux lames simultanément avec un effet dévastateur, en plus d'améliorer l'efficacité de leurs alliés ; cependant, ils paient le prix en durabilité, car ils sont totalement intrépides face à de puissants ennemis, et négligent la défense au profit de l'attaque. </p>
-        <button class="toggle-intro" onclick="toggleIntro()">Afficher la suite</button>
+        <p>
+          Un leader entraîné avec un sens tactique. Le Shogun dirige ses alliés
+          vers la victoire, optimisant leur efficacité sur le champ de bataille.
+          Ils ont également perfectionné leurs compétences au combat, et peuvent
+          combattre aux côtés de leurs alliés, préférant mener depuis les
+          premières lignes plutôt que depuis l'arrière. Les Shoguns peuvent
+          manier deux lames simultanément avec un effet dévastateur, en plus
+          d'améliorer l'efficacité de leurs alliés ; cependant, ils paient le
+          prix en durabilité, car ils sont totalement intrépides face à de
+          puissants ennemis, et négligent la défense au profit de l'attaque.
+        </p>
+        <button class="toggle-intro" onclick="toggleIntro()">
+          Afficher la suite
+        </button>
       </section>
       <section class="patch-section">
         <h2 class="patch-titre" id="details">
-          <img src="../../assets/images/notes-big.png" class="image image-h2"> Détails de la classe
+          <img src="../../assets/images/notes-big.png" class="image image-h2" />
+          Détails de la classe
         </h2>
-        <ul class="image-list"> <li><div class="image-texte"><strong><img src="../../assets/images/class-details/health.png" class="image details-icon"> Points de vie :</strong> 1d8 + modificateur de Constitution par niveau de Shogun</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/class-details/hit-dice.png" class="image details-icon"> Dés de vie :</strong> 1d8 par niveau de Shogun</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/class-details/saving-throw-dc.png" class="image details-icon"> DD des jets de sauvegarde :</strong> 8 + bonus de maîtrise + modificateur de Charisme</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/class-details/masteries.png" class="image details-icon"> Maîtrises :</strong> Épées, Katana ; Armures légères ; Jeu d'échecs</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/class-details/saving-throw.png" class="image details-icon"> Jets de sauvegarde :</strong> Force, Charisme</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/class-details/skills.png" class="image details-icon"> Compétences :</strong> Choisissez 2 parmi Acrobaties, Athlétisme, Histoire, Investigation, Intimidation, Persuasion, Tromperie, Représentation, Discrétion et Escamotage</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/class-details/starting-equipment.png" class="image details-icon"> Équipement de départ :</strong> Une arme maîtrisée (ou deux si légères), une armure légère, un jeu d'échecs, un sac d'explorateur</div></li> </ul>
+        <ul class="image-list">
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/health.png"
+                  class="image details-icon"
+                />
+                Points de vie :</strong
+              >
+              1d8 + modificateur de Constitution par niveau de Shogun
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/hit-dice.png"
+                  class="image details-icon"
+                />
+                Dés de vie :</strong
+              >
+              1d8 par niveau de Shogun
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/saving-throw-dc.png"
+                  class="image details-icon"
+                />
+                DD des jets de sauvegarde :</strong
+              >
+              8 + bonus de maîtrise + modificateur de Charisme
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/masteries.png"
+                  class="image details-icon"
+                />
+                Maîtrises :</strong
+              >
+              Épées, Katana ; Armures légères ; Jeu d'échecs
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/saving-throw.png"
+                  class="image details-icon"
+                />
+                Jets de sauvegarde :</strong
+              >
+              Force, Charisme
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/skills.png"
+                  class="image details-icon"
+                />
+                Compétences :</strong
+              >
+              Choisissez 2 parmi Acrobaties, Athlétisme, Histoire,
+              Investigation, Intimidation, Persuasion, Tromperie,
+              Représentation, Discrétion et Escamotage
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/starting-equipment.png"
+                  class="image details-icon"
+                />
+                Équipement de départ :</strong
+              >
+              Une arme maîtrisée (ou deux si légères), une armure légère, un jeu
+              d'échecs, un sac d'explorateur
+            </div>
+          </li>
+        </ul>
       </section>
       <section class="patch-section">
-          <div class="aptitude-search-container">
-            <input type="text" id="search-bar" placeholder="Rechercher une aptitude ou un sort..." />
-          </div>
+        <div class="aptitude-search-container">
+          <input
+            type="text"
+            id="search-bar"
+            placeholder="Rechercher une aptitude ou un sort..."
+          />
+        </div>
         <div class="toggle-section">
           <h2 class="patch-titre" id="aptitudes">
-            <img src="../../assets/images/notes-big.png" class="image image-h2"> Aptitudes de classe <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+            <img
+              src="../../assets/images/notes-big.png"
+              class="image image-h2"
+            />
+            Aptitudes de classe
+            <button class="toggle-button" onclick="toggleSection(this)">
+              ▲
+            </button>
           </h2>
         </div>
         <div class="collapsible-content expanded">
-          <div class="patch-list"> 
-  <article id="epee-secondaire">
-  <h3>
-    <img src="../../assets/images/skills-icons/shogun/second-sword.png" class="image skill-icon">
-    Épée secondaire
-    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-  </h3>
-    <p>Le Shogun peut ajouter son modificateur de Force au jet de dégâts pour une attaque d'arme avec sa deuxième arme. S'il ne tient qu'une seule arme sans le trait “à deux mains”, vous pouvez effectuer une deuxième attaque en action bonus comme si vous teniez deux armes légères, mais sans ajouter votre modificateur de Force à ses dégâts. Vous pouvez ajouter votre Offense à ces attaques.</p>
-  </article>
+          <div class="patch-list">
+            <article id="epee-secondaire">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/shogun/second-sword.png"
+                  class="image skill-icon"
+                />
+                Épée secondaire
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                Le Shogun peut ajouter son modificateur de Force au jet de
+                dégâts pour une attaque d'arme avec sa deuxième arme. S'il ne
+                tient qu'une seule arme sans le trait “à deux mains”, vous
+                pouvez effectuer une deuxième attaque en action bonus comme si
+                vous teniez deux armes légères, mais sans ajouter votre
+                modificateur de Force à ses dégâts. Vous pouvez ajouter votre
+                Offense à ces attaques.
+              </p>
+            </article>
 
-  <article id="frappe-eclair">
-  <h3>
-    <img src="../../assets/images/skills-icons/shogun/bolt-slash.png" class="image skill-icon">
-    Frappe éclair
-    <span><img src="../../assets/images/action-costs/bonus-action.png" alt="Bonus" class="image action-icon">1 PA (Action Bonus)</span>
-  </h3>
-    <p>En tant qu'action bonus, le Shogun peut imbiber sa lame d'éclairs crépitants ; toutes les attaques jusqu'à la fin de leur prochain tour infligent des dégâts de foudre en plus de leur type de dégâts normal (les dégâts sont calculés comme s'ils étaient du type auquel l'ennemi est le plus vulnérable).</p>
-  </article>
+            <article id="frappe-eclair">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/shogun/bolt-slash.png"
+                  class="image skill-icon"
+                />
+                Frappe éclair
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/bonus-action.png"
+                    alt="Bonus"
+                    class="image action-icon"
+                  />1 PA (Action Bonus)</span
+                >
+              </h3>
+              <p>
+                En tant qu'action bonus, le Shogun peut imbiber sa lame
+                d'éclairs crépitants ; toutes les attaques jusqu'à la fin de
+                leur prochain tour infligent des dégâts de foudre en plus de
+                leur type de dégâts normal (les dégâts sont calculés comme s'ils
+                étaient du type auquel l'ennemi est le plus vulnérable).
+              </p>
+            </article>
 
-  <article id="parade">
-  <h3>
-    <img src="../../assets/images/skills-icons/shogun/parry.png" class="image skill-icon">
-    Parade
-    <span><img src="../../assets/images/action-costs/reaction.png" alt="Reaction" class="image action-icon">1 PA (Réaction)</span>
-  </h3>
-    <p>Après un jet d'attaque au corps à corps contre le Shogun, il peut dépenser sa réaction pour ajouter 1 + son modificateur de Force à sa Défense contre cette attaque.</p>
-  </article>
+            <article id="parade">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/shogun/parry.png"
+                  class="image skill-icon"
+                />
+                Parade
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/reaction.png"
+                    alt="Reaction"
+                    class="image action-icon"
+                  />1 PA (Réaction)</span
+                >
+              </h3>
+              <p>
+                Après un jet d'attaque au corps à corps contre le Shogun, il
+                peut dépenser sa réaction pour ajouter 1 + son modificateur de
+                Force à sa Défense contre cette attaque.
+              </p>
+            </article>
 
-  <article id="ecole-de-tactiques">
-  <h3>
-    <img src="../../assets/images/skills-icons/shogun/tactics-school.png" class="image skill-icon">
-    École de tactiques
-    <span><img src="../../assets/images/action-costs/specialisation.png" alt="Specialisation" class="image action-icon">Spécialisation</span>
-  </h3>
-    <p>Choisissez une École de tactiques. Le Shogun acquerra des aptitudes supplémentaires de cette École au fur et à mesure de leur montée en niveau.</p>
-  </article>
+            <article id="ecole-de-tactiques">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/shogun/tactics-school.png"
+                  class="image skill-icon"
+                />
+                École de tactiques
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/specialisation.png"
+                    alt="Specialisation"
+                    class="image action-icon"
+                  />Spécialisation</span
+                >
+              </h3>
+              <p>
+                Choisissez une École de tactiques. Le Shogun acquerra des
+                aptitudes supplémentaires de cette École au fur et à mesure de
+                leur montée en niveau.
+              </p>
+            </article>
 
-  <article id="ordre-attaque-frontale">
-  <h3>
-    <img src="../../assets/images/skills-icons/shogun/front-command.png" class="image skill-icon">
-    Ordre : Attaque frontale
-    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-  </h3>
-    <p>En tant qu'action, ciblez une créature dans un rayon de 3 mètres. Jusqu'au début du prochain tour du Shogun, lorsque cette créature est touchée par une attaque ou une aptitude d'une créature hostile, une créature amicale volontaire choisie par le Shogun dans un rayon de 9 mètres de cette cible peut effectuer une seule attaque d'arme. Les dégâts de ces attaques remplacent leur modificateur de caractéristique par le modificateur de Charisme du Shogun.</p>
-  </article>
+            <article id="ordre-attaque-frontale">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/shogun/front-command.png"
+                  class="image skill-icon"
+                />
+                Ordre : Attaque frontale
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                En tant qu'action, ciblez une créature dans un rayon de 3
+                mètres. Jusqu'au début du prochain tour du Shogun, lorsque cette
+                créature est touchée par une attaque ou une aptitude d'une
+                créature hostile, une créature amicale volontaire choisie par le
+                Shogun dans un rayon de 9 mètres de cette cible peut effectuer
+                une seule attaque d'arme. Les dégâts de ces attaques remplacent
+                leur modificateur de caractéristique par le modificateur de
+                Charisme du Shogun.
+              </p>
+            </article>
 
-  <article id="heure-du-crepuscule">
-  <h3>
-    <img src="../../assets/images/skills-icons/shogun/twilight-hour.png" class="image skill-icon">
-    Heure du crépuscule
-    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-  </h3>
-    <p>Utilisable uniquement de nuit. En tant qu'action, effectuez une attaque au corps à corps contre un ennemi. Cette attaque est effectuée avec un malus de -1 à la précision, mais tout effleurement compte comme une réussite.</p>
-  </article>
+            <article id="heure-du-crepuscule">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/shogun/twilight-hour.png"
+                  class="image skill-icon"
+                />
+                Heure du crépuscule
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                Utilisable uniquement de nuit. En tant qu'action, effectuez une
+                attaque au corps à corps contre un ennemi. Cette attaque est
+                effectuée avec un malus de -1 à la précision, mais tout
+                effleurement compte comme une réussite.
+              </p>
+            </article>
 
-  <article id="etoile-du-matin">
-  <h3>
-    <img src="../../assets/images/skills-icons/shogun/morning-star.png" class="image skill-icon">
-    Étoile du matin
-    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-  </h3>
-    <p>Utilisable uniquement en journée. En tant qu'action, effectuez une attaque au corps à corps contre un nombre quelconque de créatures dans un rayon de 3 mètres, avec des jets d'attaque séparés pour chaque cible.</p>
-  </article>
+            <article id="etoile-du-matin">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/shogun/morning-star.png"
+                  class="image skill-icon"
+                />
+                Étoile du matin
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                Utilisable uniquement en journée. En tant qu'action, effectuez
+                une attaque au corps à corps contre un nombre quelconque de
+                créatures dans un rayon de 3 mètres, avec des jets d'attaque
+                séparés pour chaque cible.
+              </p>
+            </article>
 
-  <article id="encouragement-revigorant">
-  <h3>
-    <img src="../../assets/images/skills-icons/shogun/morale-boost.png" class="image skill-icon">
-    Encouragement revigorant
-    <span><img src="../../assets/images/action-costs/reaction.png" alt="Reaction" class="image action-icon">1 PA (Réaction)</span>
-  </h3>
-    <p>Lorsque le Shogun regagne des points de vie d'une source autre que l’Encouragement revigorant, il peut utiliser sa réaction pour soigner jusqu'à 4 créatures dans un rayon de 18 mètres pour des points de vie égaux à 1d8 + modificateur de Charisme (minimum 1). L’Encouragement revigorant peut être utilisé un nombre de fois égal au bonus de maîtrise du Shogun.</p>
-  </article>
+            <article id="encouragement-revigorant">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/shogun/morale-boost.png"
+                  class="image skill-icon"
+                />
+                Encouragement revigorant
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/reaction.png"
+                    alt="Reaction"
+                    class="image action-icon"
+                  />1 PA (Réaction)</span
+                >
+              </h3>
+              <p>
+                Lorsque le Shogun regagne des points de vie d'une source autre
+                que l’Encouragement revigorant, il peut utiliser sa réaction
+                pour soigner jusqu'à 4 créatures dans un rayon de 18 mètres pour
+                des points de vie égaux à 1d8 + modificateur de Charisme
+                (minimum 1). L’Encouragement revigorant peut être utilisé un
+                nombre de fois égal au bonus de maîtrise du Shogun.
+              </p>
+            </article>
 
-  <article id="vue-d-avidya">
-  <h3>
-    <img src="../../assets/images/skills-icons/shogun/avidya-sight.png" class="image skill-icon">
-    Vue d'Avidya
-    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-  </h3>
-    <p>Le Shogun peut voir la lumière faible comme s'il s'agissait de lumière vive sur une distance de 45 mètres, et aucune lumière comme s'il s'agissait de lumière faible sur la même distance. Le Shogun gagne 1 en précision lorsqu'il se trouve dans une lumière faible ou inexistante.</p>
-  </article>
+            <article id="vue-d-avidya">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/shogun/avidya-sight.png"
+                  class="image skill-icon"
+                />
+                Vue d'Avidya
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                Le Shogun peut voir la lumière faible comme s'il s'agissait de
+                lumière vive sur une distance de 45 mètres, et aucune lumière
+                comme s'il s'agissait de lumière faible sur la même distance. Le
+                Shogun gagne 1 en précision lorsqu'il se trouve dans une lumière
+                faible ou inexistante.
+              </p>
+            </article>
 
-  <article id="confins-de-la-mort">
-  <h3>
-    <img src="../../assets/images/skills-icons/shogun/boundary-of-death.png" class="image skill-icon">
-    Confins de la mort
-    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-  </h3>
-    <p>Lorsqu'il a moins de 25 % de ses points de vie maximum, les attaques du Shogun deviennent critiques en cas de réussite.</p>
-  </article>
+            <article id="confins-de-la-mort">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/shogun/boundary-of-death.png"
+                  class="image skill-icon"
+                />
+                Confins de la mort
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                Lorsqu'il a moins de 25 % de ses points de vie maximum, les
+                attaques du Shogun deviennent critiques en cas de réussite.
+              </p>
+            </article>
 
-  <article id="lance-sanglante">
-  <h3>
-    <img src="../../assets/images/skills-icons/shogun/bloody-lance.png" class="image skill-icon">
-    Lance sanglante
-    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-  </h3>
-    <p>Une fois par combat, lorsque le Shogun abat un ennemi, il gagne 4 d'Offense jusqu'à la fin de la rencontre.</p>
-  </article>
+            <article id="lance-sanglante">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/shogun/bloody-lance.png"
+                  class="image skill-icon"
+                />
+                Lance sanglante
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                Une fois par combat, lorsque le Shogun abat un ennemi, il gagne
+                4 d'Offense jusqu'à la fin de la rencontre.
+              </p>
+            </article>
 
-  <article id="provoquer-les-assassins">
-  <h3>
-    <img src="../../assets/images/skills-icons/shogun/taunt-assassins.png" class="image skill-icon">
-    Provoquer les assassins
-    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-  </h3>
-    <p>En tant qu'action, le Shogun peut tenter d'attirer toutes les créatures dans un rayon de 6 mètres vers lui. Ces créatures doivent réussir un jet de sauvegarde de Sagesse ou être contraintes de se déplacer uniquement en ligne droite vers le Shogun et ont désavantage sur les jets d'attaque contre les ennemis qui ne sont pas le Shogun, jusqu'au début du prochain tour du Shogun.</p>
-  </article>
+            <article id="provoquer-les-assassins">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/shogun/taunt-assassins.png"
+                  class="image skill-icon"
+                />
+                Provoquer les assassins
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                En tant qu'action, le Shogun peut tenter d'attirer toutes les
+                créatures dans un rayon de 6 mètres vers lui. Ces créatures
+                doivent réussir un jet de sauvegarde de Sagesse ou être
+                contraintes de se déplacer uniquement en ligne droite vers le
+                Shogun et ont désavantage sur les jets d'attaque contre les
+                ennemis qui ne sont pas le Shogun, jusqu'au début du prochain
+                tour du Shogun.
+              </p>
+            </article>
 
-  <article id="resurgence">
-  <h3>
-    <img src="../../assets/images/skills-icons/shogun/reincarnation.png" class="image skill-icon">
-    Résurgence
-    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-  </h3>
-    <p>Lorsque le Shogun réussit un jet de sauvegarde contre la mort, il peut compter cette réussite comme deux.</p>
-  </article>
+            <article id="resurgence">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/shogun/reincarnation.png"
+                  class="image skill-icon"
+                />
+                Résurgence
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                Lorsque le Shogun réussit un jet de sauvegarde contre la mort,
+                il peut compter cette réussite comme deux.
+              </p>
+            </article>
 
-  <article id="historien-de-guerre">
-  <h3>
-    <img src="../../assets/images/skills-icons/shogun/battle-historian.png" class="image skill-icon">
-    Historien de guerre
-    <span><img src="../../assets/images/action-costs/bonus-action.png" alt="Bonus" class="image action-icon">1 PA (Action Bonus)</span>
-  </h3>
-    <p>Le Shogun a l'avantage sur les tests de compétence pour jouer à des jeux impliquant des tactiques. De plus, le Shogun peut immédiatement reconnaître quand les ennemis ont une Union disponible ; il peut tenter de déchiffrer quels en sont les effets en utilisant un jet d'Intelligence de DD 15 en tant qu'action bonus.</p>
-  </article>
+            <article id="historien-de-guerre">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/shogun/battle-historian.png"
+                  class="image skill-icon"
+                />
+                Historien de guerre
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/bonus-action.png"
+                    alt="Bonus"
+                    class="image action-icon"
+                  />1 PA (Action Bonus)</span
+                >
+              </h3>
+              <p>
+                Le Shogun a l'avantage sur les tests de compétence pour jouer à
+                des jeux impliquant des tactiques. De plus, le Shogun peut
+                immédiatement reconnaître quand les ennemis ont une Union
+                disponible ; il peut tenter de déchiffrer quels en sont les
+                effets en utilisant un jet d'Intelligence de DD 15 en tant
+                qu'action bonus.
+              </p>
+            </article>
 
-  <article id="lame-resonnante">
-  <h3>
-    <img src="../../assets/images/skills-icons/shogun/echoing-slash.png" class="image skill-icon">
-    Lame résonnante
-    <span><img src="../../assets/images/action-costs/reaction.png" alt="Reaction" class="image action-icon">1 PA (Réaction)</span>
-  </h3>
-    <p>Le Shogun peut utiliser sa réaction pour effectuer une attaque au corps à corps lorsqu'une créature qu'il a touchée avec une attaque ce round commence son tour à moins de 1.5 mètres du Shogun.</p>
-  </article>
+            <article id="lame-resonnante">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/shogun/echoing-slash.png"
+                  class="image skill-icon"
+                />
+                Lame résonnante
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/reaction.png"
+                    alt="Reaction"
+                    class="image action-icon"
+                  />1 PA (Réaction)</span
+                >
+              </h3>
+              <p>
+                Le Shogun peut utiliser sa réaction pour effectuer une attaque
+                au corps à corps lorsqu'une créature qu'il a touchée avec une
+                attaque ce round commence son tour à moins de 1.5 mètres du
+                Shogun.
+              </p>
+            </article>
 
-  <article id="puissance-du-guerrier">
-  <h3>
-    <img src="../../assets/images/skills-icons/shogun/warrior-might.png" class="image skill-icon">
-    Puissance du guerrier
-    <span><img src="../../assets/images/action-costs/heavy-action.png" alt="Heavy" class="image action-icon">3 PA (Action Complexe)</span>
-  </h3>
-    <p>La marque noble de la maison du Souverain apparaît sur le corps du Souverain. Pendant le repos court ou long, cette marque rassemble de l'énergie spirituelle et commence à briller faiblement ; la première aptitude utilisant des dés d'Inspiration après un repos court ou long obtient toujours le résultat maximal, et la lueur disparaît.</p>
-  </article> </div>
+            <article id="puissance-du-guerrier">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/shogun/warrior-might.png"
+                  class="image skill-icon"
+                />
+                Puissance du guerrier
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/heavy-action.png"
+                    alt="Heavy"
+                    class="image action-icon"
+                  />3 PA (Action Complexe)</span
+                >
+              </h3>
+              <p>
+                La marque noble de la maison du Souverain apparaît sur le corps
+                du Souverain. Pendant le repos court ou long, cette marque
+                rassemble de l'énergie spirituelle et commence à briller
+                faiblement ; la première aptitude utilisant des dés
+                d'Inspiration après un repos court ou long obtient toujours le
+                résultat maximal, et la lueur disparaît.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
       <h2 class="patch-titre" id="specialisations">
-        <img src="../../assets/images/notes-big.png" class="image image-h2"> Spécialisations
+        <img src="../../assets/images/notes-big.png" class="image image-h2" />
+        Spécialisations
       </h2>
-    
-  <section class="patch-section">
-  <div class="toggle-section">
-    <h2 class="patch-titre" id="ecole-du-commandement">
-      <img src="../../assets/images/subclass-icons/shogun/command.png" class="image class-icon">
-      École du Commandement
-      <button class="toggle-button" onclick="toggleSection(this)">▲</button>
-    </h2>
-    </div>
-    <div class="collapsible-content expanded">
-    <div class="patch-list">
-      
-        <article id="ordre-endurer">
-        <h3>
-          <img src="../../assets/images/skills-icons/shogun/endure-command.png" class="image skill-icon">
-          Ordre : Endurer
-          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-        </h3>
-          <p>En tant qu'action, le Shogun peut se cibler lui-même. Jusqu'au début du prochain tour du Shogun, lorsqu'il est touché, effleuré ou manqué par une attaque ou une aptitude d'une créature hostile, le Shogun choisit un nombre quelconque d'alliés dans un rayon de 9 mètres jusqu'à son modificateur de Charisme (minimum 1) ; ces alliés peuvent effectuer une seule attaque d'arme ou lancer un sort mineur.</p>
-        </article>
 
-        <article id="positionnement-tactique">
-        <h3>
-          <img src="../../assets/images/skills-icons/shogun/tactical-positioning.png" class="image skill-icon">
-          Positionnement tactique
-          <span><img src="../../assets/images/action-costs/combo-action.png" alt="Combo" class="image action-icon">1 PA (Action Combo)</span>
-        </h3>
-          <p>Lorsque le Shogun donne un Ordre, il peut demander un repositionnement tactique en tant qu'action combo ; toutes les créatures alliées et volontaires dans un rayon de 15 mètres peuvent se déplacer jusqu'à 4.5 mètres immédiatement sans provoquer de réactions. Ce déplacement est effectué avant que l’Ordre ne fasse effet.</p>
-        </article>
+      <section class="patch-section">
+        <div class="toggle-section">
+          <h2 class="patch-titre" id="ecole-du-commandement">
+            <img
+              src="../../assets/images/subclass-icons/shogun/command.png"
+              class="image class-icon"
+            />
+            École du Commandement
+            <button class="toggle-button" onclick="toggleSection(this)">
+              ▲
+            </button>
+          </h2>
+        </div>
+        <div class="collapsible-content expanded">
+          <div class="patch-list">
+            <article id="ordre-endurer">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/shogun/endure-command.png"
+                  class="image skill-icon"
+                />
+                Ordre : Endurer
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                En tant qu'action, le Shogun peut se cibler lui-même. Jusqu'au
+                début du prochain tour du Shogun, lorsqu'il est touché, effleuré
+                ou manqué par une attaque ou une aptitude d'une créature
+                hostile, le Shogun choisit un nombre quelconque d'alliés dans un
+                rayon de 9 mètres jusqu'à son modificateur de Charisme (minimum
+                1) ; ces alliés peuvent effectuer une seule attaque d'arme ou
+                lancer un sort mineur.
+              </p>
+            </article>
 
-        <article id="ordre-attaque-eclair">
-        <h3>
-          <img src="../../assets/images/skills-icons/shogun/blitz-command.png" class="image skill-icon">
-          Ordre : Attaque éclair
-          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-        </h3>
-          <p>En tant qu'action, le Shogun crie une tactique exaltante. Un nombre quelconque d'alliés dans un rayon de 9 mètres allant jusqu'au modificateur de Charisme du Shogun (minimum 1) peuvent effectuer une seule attaque d'arme ou lancer un sort mineur.</p>
-        </article>
-    </div>
-    </div>
-  </section>
+            <article id="positionnement-tactique">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/shogun/tactical-positioning.png"
+                  class="image skill-icon"
+                />
+                Positionnement tactique
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/combo-action.png"
+                    alt="Combo"
+                    class="image action-icon"
+                  />1 PA (Action Combo)</span
+                >
+              </h3>
+              <p>
+                Lorsque le Shogun donne un Ordre, il peut demander un
+                repositionnement tactique en tant qu'action combo ; toutes les
+                créatures alliées et volontaires dans un rayon de 15 mètres
+                peuvent se déplacer jusqu'à 4.5 mètres immédiatement sans
+                provoquer de réactions. Ce déplacement est effectué avant que
+                l’Ordre ne fasse effet.
+              </p>
+            </article>
 
-  <section class="patch-section">
-  <div class="toggle-section">
-    <h2 class="patch-titre" id="ecole-de-l-offense">
-      <img src="../../assets/images/subclass-icons/shogun/offense.png" class="image class-icon">
-      École de l'Offense
-      <button class="toggle-button" onclick="toggleSection(this)">▲</button>
-    </h2>
-    </div>
-    <div class="collapsible-content expanded">
-    <div class="patch-list">
-      
-        <article id="hirondelles-jumelles">
-        <h3>
-          <img src="../../assets/images/skills-icons/shogun/twin-swallows.png" class="image skill-icon">
-          Hirondelles jumelles
-          <span><img src="../../assets/images/action-costs/combo-action.png" alt="Combo" class="image action-icon">1 PA (Action Combo)</span>
-        </h3>
-          <p>Lorsque le Shogun touche avec une attaque, il peut enchaîner avec une autre attaque à une vitesse aveuglante en tant qu'action combo. S'il porte deux armes légères, effectuez une attaque avec l'arme secondaire ; s'il ne tient qu'une seule arme sans la propriété “à deux mains”, effectuez une deuxième attaque avec cette arme, mais n'ajoutez pas de modificateur de caractéristique aux dégâts. Les Hirondelles jumelles accordent un bonus d’Offense supplémentaire égal au modificateur de Force du Shogun jusqu'à la fin du round, et peuvent être utilisées un nombre de fois égal à son modificateur de Charisme (minimum 1) fois par repos long.</p>
-        </article>
+            <article id="ordre-attaque-eclair">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/shogun/blitz-command.png"
+                  class="image skill-icon"
+                />
+                Ordre : Attaque éclair
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                En tant qu'action, le Shogun crie une tactique exaltante. Un
+                nombre quelconque d'alliés dans un rayon de 9 mètres allant
+                jusqu'au modificateur de Charisme du Shogun (minimum 1) peuvent
+                effectuer une seule attaque d'arme ou lancer un sort mineur.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-        <article id="demon-sans-pareille">
-        <h3>
-          <img src="../../assets/images/skills-icons/shogun/peerless-demon.png" class="image skill-icon">
-          Démon sans pareille
-          <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-        </h3>
-          <p>Chaque fois que le Shogun attaque, son Offense augmente de 2 jusqu'à la fin du round.</p>
-        </article>
+      <section class="patch-section">
+        <div class="toggle-section">
+          <h2 class="patch-titre" id="ecole-de-l-offense">
+            <img
+              src="../../assets/images/subclass-icons/shogun/offense.png"
+              class="image class-icon"
+            />
+            École de l'Offense
+            <button class="toggle-button" onclick="toggleSection(this)">
+              ▲
+            </button>
+          </h2>
+        </div>
+        <div class="collapsible-content expanded">
+          <div class="patch-list">
+            <article id="hirondelles-jumelles">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/shogun/twin-swallows.png"
+                  class="image skill-icon"
+                />
+                Hirondelles jumelles
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/combo-action.png"
+                    alt="Combo"
+                    class="image action-icon"
+                  />1 PA (Action Combo)</span
+                >
+              </h3>
+              <p>
+                Lorsque le Shogun touche avec une attaque, il peut enchaîner
+                avec une autre attaque à une vitesse aveuglante en tant
+                qu'action combo. S'il porte deux armes légères, effectuez une
+                attaque avec l'arme secondaire ; s'il ne tient qu'une seule arme
+                sans la propriété “à deux mains”, effectuez une deuxième attaque
+                avec cette arme, mais n'ajoutez pas de modificateur de
+                caractéristique aux dégâts. Les Hirondelles jumelles accordent
+                un bonus d’Offense supplémentaire égal au modificateur de Force
+                du Shogun jusqu'à la fin du round, et peuvent être utilisées un
+                nombre de fois égal à son modificateur de Charisme (minimum 1)
+                fois par repos long.
+              </p>
+            </article>
 
-        <article id="epee-a-5-anneaux">
-        <h3>
-          <img src="../../assets/images/skills-icons/shogun/5-ring-sword.png" class="image skill-icon">
-          Épée à 5 anneaux
-          <span><img src="../../assets/images/action-costs/heavy-action.png" alt="Heavy" class="image action-icon">3 PA (Action Complexe)</span>
-        </h3>
-          <p>En tant qu'action complexe, lancez 1d6 + 1. Le shogun effectue jusqu'à autant d'attaques d'arme au corps à corps. Si le Shogun tient deux armes légères, lancez 1d6 + 3 et effectuez autant d'attaques à la place, en alternant entre son arme principale et sa deuxième arme. L'Épée à 5 anneaux peut être utilisée un nombre de fois par repos long égal au modificateur de Charisme du Shogun (minimum 1).</p>
-        </article>
-    </div>
-    </div>
-  </section>
+            <article id="demon-sans-pareille">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/shogun/peerless-demon.png"
+                  class="image skill-icon"
+                />
+                Démon sans pareille
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                Chaque fois que le Shogun attaque, son Offense augmente de 2
+                jusqu'à la fin du round.
+              </p>
+            </article>
 
-  <section class="patch-section">
-  <div class="toggle-section">
-    <h2 class="patch-titre" id="ecole-du-seigneur-de-guerre">
-      <img src="../../assets/images/subclass-icons/shogun/warlord.png" class="image class-icon">
-      École du Seigneur de Guerre
-      <button class="toggle-button" onclick="toggleSection(this)">▲</button>
-    </h2>
-    </div>
-    <div class="collapsible-content expanded">
-    <div class="patch-list">
-      
-        <article id="justice-rapide">
-        <h3>
-          <img src="../../assets/images/skills-icons/shogun/swift-justice.png" class="image skill-icon">
-          Justice rapide
-          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-        </h3>
-          <p>En tant qu'action, ciblez 1 créature amicale et consentante dans un rayon de 18 mètres. Cette créature gagne 1d4 + modificateur de Charisme du Shogun d’Offense pour sa première attaque du round pendant 5 rounds. Ce bonus augmente à 2d4 + modificateur de Charisme au niveau 9, et à 3d4 + modificateur de Charisme au niveau 15. Ils gagnent également 1 PA bonus au début de leur tour à utiliser pour foncer ou se désengager, qui disparaît à la fin de leur tour.</p>
-        </article>
+            <article id="epee-a-5-anneaux">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/shogun/5-ring-sword.png"
+                  class="image skill-icon"
+                />
+                Épée à 5 anneaux
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/heavy-action.png"
+                    alt="Heavy"
+                    class="image action-icon"
+                  />3 PA (Action Complexe)</span
+                >
+              </h3>
+              <p>
+                En tant qu'action complexe, lancez 1d6 + 1. Le shogun effectue
+                jusqu'à autant d'attaques d'arme au corps à corps. Si le Shogun
+                tient deux armes légères, lancez 1d6 + 3 et effectuez autant
+                d'attaques à la place, en alternant entre son arme principale et
+                sa deuxième arme. L'Épée à 5 anneaux peut être utilisée un
+                nombre de fois par repos long égal au modificateur de Charisme
+                du Shogun (minimum 1).
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-        <article id="effort-unifie">
-        <h3>
-          <img src="../../assets/images/skills-icons/shogun/unified-effort.png" class="image skill-icon">
-          Effort unifié
-          <span><img src="../../assets/images/action-costs/combo-action.png" alt="Combo" class="image action-icon">1 PA (Action Combo)</span>
-        </h3>
-          <p>Lorsque le Shogun donne un Ordre ou applique la Justice rapide ou le Grand guerrier, il peut utiliser son action combo pour pousser un cri de renforcement ; lancez 2d8 + modificateur de Charisme. Les créatures amicales et volontaires dans un rayon de 18 mètres actuellement sous les effets du Grand guerrier, de la Justice rapide ou d'un Ordre du Shogun gagnent ce montant de points de vie temporaires, et peuvent dépenser tous les points de vie temporaires sur n'importe quel jet de dégâts pour infliger des dégâts bonus égaux au montant dépensé. L'Effort unifié peut être utilisé jusqu'à 2 fois par repos long.</p>
-        </article>
+      <section class="patch-section">
+        <div class="toggle-section">
+          <h2 class="patch-titre" id="ecole-du-seigneur-de-guerre">
+            <img
+              src="../../assets/images/subclass-icons/shogun/warlord.png"
+              class="image class-icon"
+            />
+            École du Seigneur de Guerre
+            <button class="toggle-button" onclick="toggleSection(this)">
+              ▲
+            </button>
+          </h2>
+        </div>
+        <div class="collapsible-content expanded">
+          <div class="patch-list">
+            <article id="justice-rapide">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/shogun/swift-justice.png"
+                  class="image skill-icon"
+                />
+                Justice rapide
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                En tant qu'action, ciblez 1 créature amicale et consentante dans
+                un rayon de 18 mètres. Cette créature gagne 1d4 + modificateur
+                de Charisme du Shogun d’Offense pour sa première attaque du
+                round pendant 5 rounds. Ce bonus augmente à 2d4 + modificateur
+                de Charisme au niveau 9, et à 3d4 + modificateur de Charisme au
+                niveau 15. Ils gagnent également 1 PA bonus au début de leur
+                tour à utiliser pour foncer ou se désengager, qui disparaît à la
+                fin de leur tour.
+              </p>
+            </article>
 
-        <article id="grand-guerrier">
-        <h3>
-          <img src="../../assets/images/skills-icons/shogun/great-warrior.png" class="image skill-icon">
-          Grand guerrier
-          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-        </h3>
-          <p>En tant qu'action, ciblez 1 créature amicale et volontaire dans un rayon de 18 mètres. Cette créature gagne 2d4 + modificateur de Charisme du Shogun d’Offense pendant 5 rounds, et les attaques contre les créatures amicales dans un rayon de 1.5 mètres de la créature désignée comme Grand guerrier (autre que cette créature elle-même) subissent un désavantage. Désigner un autre Grand guerrier supprime l'effet du précédent.</p>
-        </article>
-    </div>
-    </div>
-  </section>
-    
-    <section class="patch-section">
-  <h2 class="patch-titre" id="progression">
-    <img src="../../assets/images/notes-big.png" class="image image-h2">
-    Progression par niveau
-  </h2>
+            <article id="effort-unifie">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/shogun/unified-effort.png"
+                  class="image skill-icon"
+                />
+                Effort unifié
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/combo-action.png"
+                    alt="Combo"
+                    class="image action-icon"
+                  />1 PA (Action Combo)</span
+                >
+              </h3>
+              <p>
+                Lorsque le Shogun donne un Ordre ou applique la Justice rapide
+                ou le Grand guerrier, il peut utiliser son action combo pour
+                pousser un cri de renforcement ; lancez 2d8 + modificateur de
+                Charisme. Les créatures amicales et volontaires dans un rayon de
+                18 mètres actuellement sous les effets du Grand guerrier, de la
+                Justice rapide ou d'un Ordre du Shogun gagnent ce montant de
+                points de vie temporaires, et peuvent dépenser tous les points
+                de vie temporaires sur n'importe quel jet de dégâts pour
+                infliger des dégâts bonus égaux au montant dépensé. L'Effort
+                unifié peut être utilisé jusqu'à 2 fois par repos long.
+              </p>
+            </article>
 
-  <div class="class-table-tabs-wrapper">
-    <button class="tab-button active" onclick="switchTab(event, 'general')">Shogun</button>
-    <button class="tab-button" onclick="switchTab(event, 'commandement')">École du Commandement</button>
-    <button class="tab-button" onclick="switchTab(event, 'offense')">École de l'Offense</button>
-    <button class="tab-button" onclick="switchTab(event, 'seigneur')">École du Seigneur de Guerre</button>
-  </div>
+            <article id="grand-guerrier">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/shogun/great-warrior.png"
+                  class="image skill-icon"
+                />
+                Grand guerrier
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                En tant qu'action, ciblez 1 créature amicale et volontaire dans
+                un rayon de 18 mètres. Cette créature gagne 2d4 + modificateur
+                de Charisme du Shogun d’Offense pendant 5 rounds, et les
+                attaques contre les créatures amicales dans un rayon de 1.5
+                mètres de la créature désignée comme Grand guerrier (autre que
+                cette créature elle-même) subissent un désavantage. Désigner un
+                autre Grand guerrier supprime l'effet du précédent.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-  <!-- Onglet Général -->
-  <div class="table-container tab-content active" id="tab-general">
-    <table class="progression-table">
-      <thead>
-        <tr>
-          <th>Niveau</th>
-          <th>Bonus de maîtrise</th>
-          <th>Aptitudes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>1</td><td>+2</td><td>Épée secondaire</td></tr>
-        <tr><td>2</td><td>+2</td><td>Frappe éclair, Parade</td></tr>
-        <tr><td>3</td><td>+2</td><td>École de tactiques, Aptitude d'École</td></tr>
-        <tr><td>4</td><td>+2</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-        <tr><td>5</td><td>+3</td><td>Ordre : Attaque Frontale</td></tr>
-        <tr><td>6</td><td>+3</td><td>Heure du crépuscule, Étoile du matin</td></tr>
-        <tr><td>7</td><td>+3</td><td>Encouragement revigorant</td></tr>
-        <tr><td>8</td><td>+3</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-        <tr><td>9</td><td>+4</td><td>Aptitude d'École</td></tr>
-        <tr><td>10</td><td>+4</td><td>Vue d'Avidya</td></tr>
-        <tr><td>11</td><td>+4</td><td>Confins de la mort</td></tr>
-        <tr><td>12</td><td>+4</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-        <tr><td>13</td><td>+5</td><td>Lance sanglante</td></tr>
-        <tr><td>14</td><td>+5</td><td>Provoquer les assassins</td></tr>
-        <tr><td>15</td><td>+5</td><td>Aptitude d'École</td></tr>
-        <tr><td>16</td><td>+5</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-        <tr><td>17</td><td>+6</td><td>Résurgence</td></tr>
-        <tr><td>18</td><td>+6</td><td>Historien de guerre</td></tr>
-        <tr><td>19</td><td>+6</td><td>Lame résonnante</td></tr>
-        <tr><td>20</td><td>+6</td><td>Puissance du guerrier</td></tr>
-      </tbody>
-    </table>
-  </div>
+      <section class="patch-section">
+        <h2 class="patch-titre" id="progression">
+          <img src="../../assets/images/notes-big.png" class="image image-h2" />
+          Progression par niveau
+        </h2>
 
-  <!-- Onglet Commandement -->
-  <div class="table-container tab-content" id="tab-commandement" style="display:none;">
-    <table class="progression-table">
-      <thead><tr><th>Niveau</th><th>Aptitudes de l'École du Commandement</th></tr></thead>
-      <tbody>
-        <tr><td>3</td><td>Ordre : Endurer</td></tr>
-        <tr><td>9</td><td>Positionnement tactique</td></tr>
-        <tr><td>15</td><td>Ordre : Attaque éclair</td></tr>
-      </tbody>
-    </table>
-  </div>
+        <div class="class-table-tabs-wrapper">
+          <button
+            class="tab-button active"
+            onclick="switchTab(event, 'general')"
+          >
+            Shogun
+          </button>
+          <button class="tab-button" onclick="switchTab(event, 'commandement')">
+            École du Commandement
+          </button>
+          <button class="tab-button" onclick="switchTab(event, 'offense')">
+            École de l'Offense
+          </button>
+          <button class="tab-button" onclick="switchTab(event, 'seigneur')">
+            École du Seigneur de Guerre
+          </button>
+        </div>
 
-  <!-- Onglet Offense -->
-  <div class="table-container tab-content" id="tab-offense" style="display:none;">
-    <table class="progression-table">
-      <thead><tr><th>Niveau</th><th>Aptitudes de l'École de l'Offense</th></tr></thead>
-      <tbody>
-        <tr><td>3</td><td>Hirondelles jumelles</td></tr>
-        <tr><td>9</td><td>Démon sans pareille</td></tr>
-        <tr><td>15</td><td>Épée à 5 anneaux</td></tr>
-      </tbody>
-    </table>
-  </div>
+        <!-- Onglet Général -->
+        <div class="table-container tab-content active" id="tab-general">
+          <table class="progression-table">
+            <thead>
+              <tr>
+                <th>Niveau</th>
+                <th>Bonus de maîtrise</th>
+                <th>Aptitudes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>+2</td>
+                <td>Épée secondaire</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>+2</td>
+                <td>Frappe éclair, Parade</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>+2</td>
+                <td>École de tactiques, Aptitude d'École</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>+2</td>
+                <td>Amélioration de caractéristiques, Défense +1</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>+3</td>
+                <td>Ordre : Attaque Frontale</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>+3</td>
+                <td>Heure du crépuscule, Étoile du matin</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>+3</td>
+                <td>Encouragement revigorant</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>+3</td>
+                <td>Amélioration de caractéristiques, Défense +1</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>+4</td>
+                <td>Aptitude d'École</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>+4</td>
+                <td>Vue d'Avidya</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>+4</td>
+                <td>Confins de la mort</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>+4</td>
+                <td>Amélioration de caractéristiques, Défense +1</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>+5</td>
+                <td>Lance sanglante</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>+5</td>
+                <td>Provoquer les assassins</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>+5</td>
+                <td>Aptitude d'École</td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td>+5</td>
+                <td>Amélioration de caractéristiques, Défense +1</td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>+6</td>
+                <td>Résurgence</td>
+              </tr>
+              <tr>
+                <td>18</td>
+                <td>+6</td>
+                <td>Historien de guerre</td>
+              </tr>
+              <tr>
+                <td>19</td>
+                <td>+6</td>
+                <td>Lame résonnante</td>
+              </tr>
+              <tr>
+                <td>20</td>
+                <td>+6</td>
+                <td>Puissance du guerrier</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-  <!-- Onglet Seigneur de Guerre -->
-  <div class="table-container tab-content" id="tab-seigneur" style="display:none;">
-    <table class="progression-table">
-      <thead><tr><th>Niveau</th><th>Aptitudes de l'École du Seigneur de Guerre</th></tr></thead>
-      <tbody>
-        <tr><td>3</td><td>Justice rapide</td></tr>
-        <tr><td>9</td><td>Effort unifié</td></tr>
-        <tr><td>15</td><td>Grand guerrier</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+        <!-- Onglet Commandement -->
+        <div
+          class="table-container tab-content"
+          id="tab-commandement"
+          style="display: none"
+        >
+          <table class="progression-table">
+            <thead>
+              <tr>
+                <th>Niveau</th>
+                <th>Aptitudes de l'École du Commandement</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3</td>
+                <td>Ordre : Endurer</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Positionnement tactique</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>Ordre : Attaque éclair</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-<script>
-    function switchTab(event, tabId) {
-      const tabs = document.querySelectorAll('.tab-button');
-      const contents = document.querySelectorAll('.tab-content');
-      tabs.forEach(t => t.classList.remove('active'));
-      contents.forEach(c => {
-        c.classList.remove('active');
-        c.style.display = 'none';
-      });
+        <!-- Onglet Offense -->
+        <div
+          class="table-container tab-content"
+          id="tab-offense"
+          style="display: none"
+        >
+          <table class="progression-table">
+            <thead>
+              <tr>
+                <th>Niveau</th>
+                <th>Aptitudes de l'École de l'Offense</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3</td>
+                <td>Hirondelles jumelles</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Démon sans pareille</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>Épée à 5 anneaux</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-      event.target.classList.add('active');
-      const target = document.getElementById(`tab-${tabId}`);
-      target.style.display = 'block';
-      void target.offsetWidth; // forcer repaint
-      target.classList.add('active');
-    }
-</script>
+        <!-- Onglet Seigneur de Guerre -->
+        <div
+          class="table-container tab-content"
+          id="tab-seigneur"
+          style="display: none"
+        >
+          <table class="progression-table">
+            <thead>
+              <tr>
+                <th>Niveau</th>
+                <th>Aptitudes de l'École du Seigneur de Guerre</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3</td>
+                <td>Justice rapide</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Effort unifié</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>Grand guerrier</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
+      <script>
+        function switchTab(event, tabId) {
+          const tabs = document.querySelectorAll(".tab-button");
+          const contents = document.querySelectorAll(".tab-content");
+          tabs.forEach((t) => t.classList.remove("active"));
+          contents.forEach((c) => {
+            c.classList.remove("active");
+            c.style.display = "none";
+          });
+
+          event.target.classList.add("active");
+          const target = document.getElementById(`tab-${tabId}`);
+          target.style.display = "block";
+          void target.offsetWidth; // forcer repaint
+          target.classList.add("active");
+        }
+      </script>
     </main>
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
       <img id="lightbox-img" src="" alt="Portrait" />
     </div>
-    <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button>
+    <button
+      id="backToTop"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      aria-label="Retour en haut"
+    >
+      <i class="fa-solid fa-arrow-up"></i> Retour en haut
+    </button>
     <footer>
-    <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
-</footer>
+      <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+    </footer>
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
+      document.addEventListener("DOMContentLoaded", function () {
         const searchInput = document.getElementById("search-bar");
         const aptitudeArticles = document.querySelectorAll("article");
-        searchInput.addEventListener("input", function() {
+        searchInput.addEventListener("input", function () {
           const value = searchInput.value.toLowerCase();
-          aptitudeArticles.forEach(article => {
-            const title = article.querySelector("h3")?.textContent?.toLowerCase() || "";
+          aptitudeArticles.forEach((article) => {
+            const title =
+              article.querySelector("h3")?.textContent?.toLowerCase() || "";
             const content = article.textContent?.toLowerCase() || "";
             if (title.includes(value) || content.includes(value)) {
               article.style.display = "";
@@ -517,40 +1215,156 @@
     <script src="../../scripts/lightbox.js"></script>
     <script src="../../scripts/particles.js"></script>
     <script src="../../scripts/backToTop.js"></script>
-    <button class="mobile-nav-toggle" onclick="toggleMobileNav(this)">☰</button>
+    <button class="mobile-nav-toggle" onclick="toggleMobileNav(this)">
+      ☰
+    </button>
     <div class="mobile-nav-overlay" id="mobileNav">
-      <div class="mobile-nav-content">  <a href="#details" class="section-link" onclick="toggleMobileNav()">Détails</a>
- <a href="#aptitudes" class="section-link" onclick="toggleMobileNav()">Aptitudes</a>
- <a href="#epee-secondaire" class="sub-link" onclick="toggleMobileNav()">Épée secondaire</a>
- <a href="#frappe-eclair" class="sub-link" onclick="toggleMobileNav()">Frappe éclair</a>
- <a href="#parade" class="sub-link" onclick="toggleMobileNav()">Parade</a>
- <a href="#ecole-de-tactiques" class="sub-link" onclick="toggleMobileNav()">École de tactiques</a>
- <a href="#ordre-attaque-frontale" class="sub-link" onclick="toggleMobileNav()">Ordre : Attaque frontale</a>
- <a href="#heure-du-crepuscule" class="sub-link" onclick="toggleMobileNav()">Heure du crépuscule</a>
- <a href="#etoile-du-matin" class="sub-link" onclick="toggleMobileNav()">Étoile du matin</a>
- <a href="#encouragement-revigorant" class="sub-link" onclick="toggleMobileNav()">Encouragement revigorant</a>
- <a href="#vue-d-avidya" class="sub-link" onclick="toggleMobileNav()">Vue d'Avidya</a>
- <a href="#confins-de-la-mort" class="sub-link" onclick="toggleMobileNav()">Confins de la mort</a>
- <a href="#lance-sanglante" class="sub-link" onclick="toggleMobileNav()">Lance sanglante</a>
- <a href="#provoquer-les-assassins" class="sub-link" onclick="toggleMobileNav()">Provoquer les assassins</a>
- <a href="#resurgence" class="sub-link" onclick="toggleMobileNav()">Résurgence</a>
- <a href="#historien-de-guerre" class="sub-link" onclick="toggleMobileNav()">Historien de guerre</a>
- <a href="#lame-resonnante" class="sub-link" onclick="toggleMobileNav()">Lame résonnante</a>
- <a href="#puissance-du-guerrier" class="sub-link" onclick="toggleMobileNav()">Puissance du guerrier</a>
- <a href="#specialisations" class="section-link" onclick="toggleMobileNav()">Spécialisations</a>
- <a href="#ecole-du-commandement" class="section-link" onclick="toggleMobileNav()">École du Commandement</a>
- <a href="#ordre-endurer" class="sub-link" onclick="toggleMobileNav()">Ordre : Endurer</a>
- <a href="#positionnement-tactique" class="sub-link" onclick="toggleMobileNav()">Positionnement tactique</a>
- <a href="#ordre-attaque-eclair" class="sub-link" onclick="toggleMobileNav()">Ordre : Attaque éclair</a>
- <a href="#ecole-de-l-offense" class="section-link" onclick="toggleMobileNav()">École de l'Offense</a>
- <a href="#hirondelles-jumelles" class="sub-link" onclick="toggleMobileNav()">Hirondelles jumelles</a>
- <a href="#demon-sans-pareille" class="sub-link" onclick="toggleMobileNav()">Démon sans pareille</a>
- <a href="#epee-a-5-anneaux" class="sub-link" onclick="toggleMobileNav()">Épée à 5 anneaux</a>
- <a href="#ecole-du-seigneur-de-guerre" class="section-link" onclick="toggleMobileNav()">École du Seigneur de Guerre</a>
- <a href="#justice-rapide" class="sub-link" onclick="toggleMobileNav()">Justice rapide</a>
- <a href="#effort-unifie" class="sub-link" onclick="toggleMobileNav()">Effort unifié</a>
- <a href="#grand-guerrier" class="sub-link" onclick="toggleMobileNav()">Grand guerrier</a>
- <a href="#tab-general" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
+      <div class="mobile-nav-content">
+        <a href="#details" class="section-link" onclick="toggleMobileNav()"
+          >Détails</a
+        >
+        <a href="#aptitudes" class="section-link" onclick="toggleMobileNav()"
+          >Aptitudes</a
+        >
+        <a href="#epee-secondaire" class="sub-link" onclick="toggleMobileNav()"
+          >Épée secondaire</a
+        >
+        <a href="#frappe-eclair" class="sub-link" onclick="toggleMobileNav()"
+          >Frappe éclair</a
+        >
+        <a href="#parade" class="sub-link" onclick="toggleMobileNav()"
+          >Parade</a
+        >
+        <a
+          href="#ecole-de-tactiques"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >École de tactiques</a
+        >
+        <a
+          href="#ordre-attaque-frontale"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Ordre : Attaque frontale</a
+        >
+        <a
+          href="#heure-du-crepuscule"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Heure du crépuscule</a
+        >
+        <a href="#etoile-du-matin" class="sub-link" onclick="toggleMobileNav()"
+          >Étoile du matin</a
+        >
+        <a
+          href="#encouragement-revigorant"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Encouragement revigorant</a
+        >
+        <a href="#vue-d-avidya" class="sub-link" onclick="toggleMobileNav()"
+          >Vue d'Avidya</a
+        >
+        <a
+          href="#confins-de-la-mort"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Confins de la mort</a
+        >
+        <a href="#lance-sanglante" class="sub-link" onclick="toggleMobileNav()"
+          >Lance sanglante</a
+        >
+        <a
+          href="#provoquer-les-assassins"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Provoquer les assassins</a
+        >
+        <a href="#resurgence" class="sub-link" onclick="toggleMobileNav()"
+          >Résurgence</a
+        >
+        <a
+          href="#historien-de-guerre"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Historien de guerre</a
+        >
+        <a href="#lame-resonnante" class="sub-link" onclick="toggleMobileNav()"
+          >Lame résonnante</a
+        >
+        <a
+          href="#puissance-du-guerrier"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Puissance du guerrier</a
+        >
+        <a
+          href="#specialisations"
+          class="section-link"
+          onclick="toggleMobileNav()"
+          >Spécialisations</a
+        >
+        <a
+          href="#ecole-du-commandement"
+          class="section-link"
+          onclick="toggleMobileNav()"
+          >École du Commandement</a
+        >
+        <a href="#ordre-endurer" class="sub-link" onclick="toggleMobileNav()"
+          >Ordre : Endurer</a
+        >
+        <a
+          href="#positionnement-tactique"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Positionnement tactique</a
+        >
+        <a
+          href="#ordre-attaque-eclair"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Ordre : Attaque éclair</a
+        >
+        <a
+          href="#ecole-de-l-offense"
+          class="section-link"
+          onclick="toggleMobileNav()"
+          >École de l'Offense</a
+        >
+        <a
+          href="#hirondelles-jumelles"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Hirondelles jumelles</a
+        >
+        <a
+          href="#demon-sans-pareille"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Démon sans pareille</a
+        >
+        <a href="#epee-a-5-anneaux" class="sub-link" onclick="toggleMobileNav()"
+          >Épée à 5 anneaux</a
+        >
+        <a
+          href="#ecole-du-seigneur-de-guerre"
+          class="section-link"
+          onclick="toggleMobileNav()"
+          >École du Seigneur de Guerre</a
+        >
+        <a href="#justice-rapide" class="sub-link" onclick="toggleMobileNav()"
+          >Justice rapide</a
+        >
+        <a href="#effort-unifie" class="sub-link" onclick="toggleMobileNav()"
+          >Effort unifié</a
+        >
+        <a href="#grand-guerrier" class="sub-link" onclick="toggleMobileNav()"
+          >Grand guerrier</a
+        >
+        <a href="#tab-general" class="section-link" onclick="toggleMobileNav()"
+          >Progression par niveau</a
+        >
+      </div>
     </div>
   </body>
 </html>

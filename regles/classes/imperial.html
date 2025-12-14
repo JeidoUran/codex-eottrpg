@@ -1,64 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Impérial | Codex - Etrian Odyssey TTRPG</title>
-    <meta name="description" content="Chevalier d’élite maniant une lame cinétique, l’Impérial écrase ses ennemis par des frappes surpuissantes au prix d’une maîtrise rigoureuse de son art.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../../favicon.png" type="image/png">
-    <link rel="stylesheet" href="../../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta
+      name="description"
+      content="Chevalier d’élite maniant une lame cinétique, l’Impérial écrase ses ennemis par des frappes surpuissantes au prix d’une maîtrise rigoureuse de son art."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <canvas id="particles"></canvas> 
-<div class="class-nav">
-  <a href="#details" class="section-link">Détails</a>
-  <a href="#aptitudes" class="section-link">Aptitudes</a>
-  <a href="#maitrise-de-la-lame-cinetique" class="sub-link">Maîtrise de la lame cinétique</a>
-  <a href="#assaut-cinetique" class="sub-link">Assaut cinétique</a>
-  <a href="#tranchant-acere" class="sub-link">Tranchant acéré</a>
-  <a href="#garde-lourde" class="sub-link">Garde lourde</a>
-  <a href="#serment-imperial" class="sub-link">Serment impérial</a>
-  <a href="#tranchant-massif" class="sub-link">Tranchant massif</a>
-  <a href="#lame-du-dragon" class="sub-link">Lame du dragon</a>
-  <a href="#fortitude-du-chevalier" class="sub-link">Fortitude du chevalier</a>
-  <a href="#feu-gel-foudre-cinetique" class="sub-link">Feu/Gel/Foudre cinétique</a>
-  <a href="#tranchant-sanguinaire" class="sub-link">Tranchant sanguinaire</a>
-  <a href="#absorbeur" class="sub-link">Absorbeur</a>
-  <a href="#mecanique-avancee" class="sub-link">Mécanique avancée</a>
-  <a href="#tranchant-impulsif" class="sub-link">Tranchant impulsif</a>
-  <a href="#tranchant-charge" class="sub-link">Tranchant chargé</a>
-  <a href="#acceleration-cinetique" class="sub-link">Accélération cinétique</a>
-  <a href="#amorcage" class="sub-link">Amorçage</a>
-  <a href="#specialisations" class="section-link">Spécialisations</a>
-  <a href="#serment-de-destruction" class="section-link">Serment de Destruction</a>
-  <a href="#inter-refroidisseur" class="sub-link">Inter-refroidisseur</a>
-  <a href="#dissipateur-de-chaleur" class="sub-link">Dissipateur de chaleur</a>
-  <a href="#effet-large" class="sub-link">Effet large</a>
-  <a href="#serment-de-protection" class="section-link">Serment de Protection</a>
-  <a href="#ecran-thermique" class="sub-link">Écran thermique</a>
-  <a href="#reserve-elementaire" class="sub-link">Réserve élémentaire</a>
-  <a href="#tranchant-tempere" class="sub-link">Tranchant tempéré</a>
-  <a href="#tab-general" class="section-link">Progression par niveau</a>
-</div> <header class="codex-header">
+    <canvas id="particles"></canvas>
+    <div class="class-nav">
+      <a href="#details" class="section-link">Détails</a>
+      <a href="#aptitudes" class="section-link">Aptitudes</a>
+      <a href="#maitrise-de-la-lame-cinetique" class="sub-link"
+        >Maîtrise de la lame cinétique</a
+      >
+      <a href="#assaut-cinetique" class="sub-link">Assaut cinétique</a>
+      <a href="#tranchant-acere" class="sub-link">Tranchant acéré</a>
+      <a href="#garde-lourde" class="sub-link">Garde lourde</a>
+      <a href="#serment-imperial" class="sub-link">Serment impérial</a>
+      <a href="#tranchant-massif" class="sub-link">Tranchant massif</a>
+      <a href="#lame-du-dragon" class="sub-link">Lame du dragon</a>
+      <a href="#fortitude-du-chevalier" class="sub-link"
+        >Fortitude du chevalier</a
+      >
+      <a href="#feu-gel-foudre-cinetique" class="sub-link"
+        >Feu/Gel/Foudre cinétique</a
+      >
+      <a href="#tranchant-sanguinaire" class="sub-link"
+        >Tranchant sanguinaire</a
+      >
+      <a href="#absorbeur" class="sub-link">Absorbeur</a>
+      <a href="#mecanique-avancee" class="sub-link">Mécanique avancée</a>
+      <a href="#tranchant-impulsif" class="sub-link">Tranchant impulsif</a>
+      <a href="#tranchant-charge" class="sub-link">Tranchant chargé</a>
+      <a href="#acceleration-cinetique" class="sub-link"
+        >Accélération cinétique</a
+      >
+      <a href="#amorcage" class="sub-link">Amorçage</a>
+      <a href="#specialisations" class="section-link">Spécialisations</a>
+      <a href="#serment-de-destruction" class="section-link"
+        >Serment de Destruction</a
+      >
+      <a href="#inter-refroidisseur" class="sub-link">Inter-refroidisseur</a>
+      <a href="#dissipateur-de-chaleur" class="sub-link"
+        >Dissipateur de chaleur</a
+      >
+      <a href="#effet-large" class="sub-link">Effet large</a>
+      <a href="#serment-de-protection" class="section-link"
+        >Serment de Protection</a
+      >
+      <a href="#ecran-thermique" class="sub-link">Écran thermique</a>
+      <a href="#reserve-elementaire" class="sub-link">Réserve élémentaire</a>
+      <a href="#tranchant-tempere" class="sub-link">Tranchant tempéré</a>
+      <a href="#tab-general" class="section-link">Progression par niveau</a>
+    </div>
+    <header class="codex-header">
       <div class="illustration-wrapper">
-      
-          <img src="../../assets/images/class-art/imperial1.png" alt="Illustration Impérial" class="illustration-classe" onclick="openLightbox(this.src)">
-        
+        <img
+          src="../../assets/images/class-art/imperial1.png"
+          alt="Illustration Impérial"
+          class="illustration-classe"
+          onclick="openLightbox(this.src)"
+        />
 
-          <img src="../../assets/images/class-art/imperial2.png" alt="Illustration Impérial" class="illustration-classe" onclick="openLightbox(this.src)">
-         
-        </div>
-        <h1>
-          <img src="../../assets/images/class-icons/imperial.png" class="image class-icon"> Impérial
-        </h1>
-        <p class="sous-titre">L’archive vivante des Égarés</p>
-        <div class="fixed-header-links">
-          <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Index des classes</a>
-        </div>
+        <img
+          src="../../assets/images/class-art/imperial2.png"
+          alt="Illustration Impérial"
+          class="illustration-classe"
+          onclick="openLightbox(this.src)"
+        />
+      </div>
+      <h1>
+        <img
+          src="../../assets/images/class-icons/imperial.png"
+          class="image class-icon"
+        />
+        Impérial
+      </h1>
+      <p class="sous-titre">L’archive vivante des Égarés</p>
+      <div class="fixed-header-links">
+        <a
+          href="index.html"
+          class="carte-lien"
+          style="display: inline-block; max-width: 300px"
+          ><i class="fa-solid fa-arrow-left"></i> Index des classes</a
+        >
+      </div>
     </header>
 
-    <nav class="nav-magique">
+    <nav class="nav-bar">
       <a href="/">Accueil</a>
       <a href="../../notes/">Patch Notes</a>
       <a href="../../resumes/">Résumés</a>
@@ -72,360 +113,1002 @@
 
     <main class="accueil">
       <section class="intro-collapsible click" id="intro">
-        <p>Les Impériaux sont des chevaliers errants lourdement armés qui accomplissent leurs objectifs chevaleresques en dévastant totalement les ennemis qu'ils jugent mauvais sur leur chemin. Ils manient les lames cinétiques, un type spécial d'artillerie haute puissance moulée sous la forme d'une claymore, et les utilisent pour déchaîner des attaques dévastatrices sur des ennemis individuels. Cependant, ce pouvoir inégalé a un coût ; les lames cinétiques surchauffent après utilisation et doivent refroidir avant de pouvoir tirer à nouveau. Certains Impériaux, avec suffisamment d'entraînement, peuvent apprendre à utiliser cette énergie surchauffée pour se protéger et protéger leurs alliés, tandis que d'autres apprennent à limiter le temps pendant lequel leurs lames cinétiques ne peuvent pas tirer. </p>
-        <button class="toggle-intro" onclick="toggleIntro()">Afficher la suite</button>
+        <p>
+          Les Impériaux sont des chevaliers errants lourdement armés qui
+          accomplissent leurs objectifs chevaleresques en dévastant totalement
+          les ennemis qu'ils jugent mauvais sur leur chemin. Ils manient les
+          lames cinétiques, un type spécial d'artillerie haute puissance moulée
+          sous la forme d'une claymore, et les utilisent pour déchaîner des
+          attaques dévastatrices sur des ennemis individuels. Cependant, ce
+          pouvoir inégalé a un coût ; les lames cinétiques surchauffent après
+          utilisation et doivent refroidir avant de pouvoir tirer à nouveau.
+          Certains Impériaux, avec suffisamment d'entraînement, peuvent
+          apprendre à utiliser cette énergie surchauffée pour se protéger et
+          protéger leurs alliés, tandis que d'autres apprennent à limiter le
+          temps pendant lequel leurs lames cinétiques ne peuvent pas tirer.
+        </p>
+        <button class="toggle-intro" onclick="toggleIntro()">
+          Afficher la suite
+        </button>
       </section>
       <section class="patch-section">
         <h2 class="patch-titre" id="details">
-          <img src="../../assets/images/notes-big.png" class="image image-h2"> Détails de la classe
+          <img src="../../assets/images/notes-big.png" class="image image-h2" />
+          Détails de la classe
         </h2>
-        <ul class="image-list"> <li><div class="image-texte"><strong><img src="../../assets/images/class-details/health.png" class="image details-icon"> Points de vie :</strong> 1d10 + modificateur de Constitution par niveau d’Impérial</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/class-details/hit-dice.png" class="image details-icon"> Dés de vie :</strong> 1d10 par niveau d'Impérial</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/class-details/saving-throw-dc.png" class="image details-icon"> DD des jets de sauvegarde :</strong> 8 + bonus de maîtrise + modificateur de Force</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/class-details/masteries.png" class="image details-icon"> Maîtrises :</strong> Lames cinétiques ; Armures lourdes ; Outils de bricoleur</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/class-details/saving-throw.png" class="image details-icon"> Jets de sauvegarde :</strong> Force, Constitution</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/class-details/skills.png" class="image details-icon"> Compétences :</strong> Choisissez 2 parmi Athlétisme, Histoire, Investigation, Médecine, Intuition, Intimidation, Persuasion, Tromperie ou Survie</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/class-details/starting-equipment.png" class="image details-icon"> Équipement de départ :</strong> Une  lame cinétique, une armure lourde, une trousse de bricoleur, 5 cartouches d'Assaut cinétique, un sac d'explorateur</div></li> </ul>
+        <ul class="image-list">
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/health.png"
+                  class="image details-icon"
+                />
+                Points de vie :</strong
+              >
+              1d10 + modificateur de Constitution par niveau d’Impérial
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/hit-dice.png"
+                  class="image details-icon"
+                />
+                Dés de vie :</strong
+              >
+              1d10 par niveau d'Impérial
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/saving-throw-dc.png"
+                  class="image details-icon"
+                />
+                DD des jets de sauvegarde :</strong
+              >
+              8 + bonus de maîtrise + modificateur de Force
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/masteries.png"
+                  class="image details-icon"
+                />
+                Maîtrises :</strong
+              >
+              Lames cinétiques ; Armures lourdes ; Outils de bricoleur
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/saving-throw.png"
+                  class="image details-icon"
+                />
+                Jets de sauvegarde :</strong
+              >
+              Force, Constitution
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/skills.png"
+                  class="image details-icon"
+                />
+                Compétences :</strong
+              >
+              Choisissez 2 parmi Athlétisme, Histoire, Investigation, Médecine,
+              Intuition, Intimidation, Persuasion, Tromperie ou Survie
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/starting-equipment.png"
+                  class="image details-icon"
+                />
+                Équipement de départ :</strong
+              >
+              Une lame cinétique, une armure lourde, une trousse de bricoleur, 5
+              cartouches d'Assaut cinétique, un sac d'explorateur
+            </div>
+          </li>
+        </ul>
       </section>
       <section class="patch-section">
-          <div class="aptitude-search-container">
-            <input type="text" id="search-bar" placeholder="Rechercher une aptitude ou un sort..." />
-          </div>
+        <div class="aptitude-search-container">
+          <input
+            type="text"
+            id="search-bar"
+            placeholder="Rechercher une aptitude ou un sort..."
+          />
+        </div>
         <div class="toggle-section">
           <h2 class="patch-titre" id="aptitudes">
-            <img src="../../assets/images/notes-big.png" class="image image-h2"> Aptitudes de classe <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+            <img
+              src="../../assets/images/notes-big.png"
+              class="image image-h2"
+            />
+            Aptitudes de classe
+            <button class="toggle-button" onclick="toggleSection(this)">
+              ▲
+            </button>
           </h2>
         </div>
         <div class="collapsible-content expanded">
-          <div class="patch-list"> 
-  <article id="maitrise-de-la-lame-cinetique">
-  <h3>
-    <img src="../../assets/images/skills-icons/imperial/drive-blade-mastery.png" class="image skill-icon">
-    Maîtrise de la lame cinétique
-    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-  </h3>
-    <p>L'Impérial possède une connaissance unique lui permettant d'utiliser une fusion d'artillerie haute puissance et d'armes de mêlée appelée lame cinétique. Cependant, pour l'utiliser, il doit lui fournir du carburant pour alimenter ses attaques les plus dévastatrices. Ce carburant est appelé une cartouche, et dans des circonstances normales, toute utilisation d'une action cinétique consommera une cartouche correspondant au type de l'action qui a été utilisé. Il existe actuellement cinq types de cartouches connus : les cartouches d'Assaut pour l’Assaut cinétique, les cartouches de Feu, de Gel et de Foudre pour les actions cinétiques élémentaires, et enfin les cartouches d'accélération pour l'Accélération cinétique. La cartouche doit être remplacée avec une action bonus avant qu'une action cinétique puisse être utilisée à nouveau. Les cartouches peuvent être achetées dans les magasins ou synthétisées en combinant des demi-cartouches du même type laissées par certaines capacités que l'Impérial apprendra plus tard. Combiner deux demi-cartouches en une cartouche entière nécessite 5 minutes en dehors du combat.</p>
-  </article>
+          <div class="patch-list">
+            <article id="maitrise-de-la-lame-cinetique">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/imperial/drive-blade-mastery.png"
+                  class="image skill-icon"
+                />
+                Maîtrise de la lame cinétique
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                L'Impérial possède une connaissance unique lui permettant
+                d'utiliser une fusion d'artillerie haute puissance et d'armes de
+                mêlée appelée lame cinétique. Cependant, pour l'utiliser, il
+                doit lui fournir du carburant pour alimenter ses attaques les
+                plus dévastatrices. Ce carburant est appelé une cartouche, et
+                dans des circonstances normales, toute utilisation d'une action
+                cinétique consommera une cartouche correspondant au type de
+                l'action qui a été utilisé. Il existe actuellement cinq types de
+                cartouches connus : les cartouches d'Assaut pour l’Assaut
+                cinétique, les cartouches de Feu, de Gel et de Foudre pour les
+                actions cinétiques élémentaires, et enfin les cartouches
+                d'accélération pour l'Accélération cinétique. La cartouche doit
+                être remplacée avec une action bonus avant qu'une action
+                cinétique puisse être utilisée à nouveau. Les cartouches peuvent
+                être achetées dans les magasins ou synthétisées en combinant des
+                demi-cartouches du même type laissées par certaines capacités
+                que l'Impérial apprendra plus tard. Combiner deux
+                demi-cartouches en une cartouche entière nécessite 5 minutes en
+                dehors du combat.
+              </p>
+            </article>
 
-  <article id="assaut-cinetique">
-  <h3>
-    <img src="../../assets/images/skills-icons/imperial/assault-drive.png" class="image skill-icon">
-    Assaut cinétique
-    <span><img src="../../assets/images/action-costs/heavy-action.png" alt="Heavy" class="image action-icon">3 PA (Action Complexe)</span>
-  </h3>
-    <p>Au premier niveau, les Impériaux sont capables d'utiliser des cartouches de carburant d’Assaut afin de déchaîner l’Assaut cinétique. En tant qu'action complexe, effectuez une attaque de mêlée pour toucher un ennemi avec la Lame Cinétique. En cas de réussite, l’Assaut cinétique inflige 4d8 + modificateur de Force de dégâts tranchants. Une cartouche d’Assaut est utilisée, et la lame cinétique surchauffe pendant 6 rounds (36 secondes). L’Impérial ne peut pas utiliser une autre action cinétique tant qu'elle est en surchauffe. La lame doit être rechargée avec une autre cartouche en tant qu'action bonus avant d'utiliser à nouveau une action cinétique.</p>
-  </article>
+            <article id="assaut-cinetique">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/imperial/assault-drive.png"
+                  class="image skill-icon"
+                />
+                Assaut cinétique
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/heavy-action.png"
+                    alt="Heavy"
+                    class="image action-icon"
+                  />3 PA (Action Complexe)</span
+                >
+              </h3>
+              <p>
+                Au premier niveau, les Impériaux sont capables d'utiliser des
+                cartouches de carburant d’Assaut afin de déchaîner l’Assaut
+                cinétique. En tant qu'action complexe, effectuez une attaque de
+                mêlée pour toucher un ennemi avec la Lame Cinétique. En cas de
+                réussite, l’Assaut cinétique inflige 4d8 + modificateur de Force
+                de dégâts tranchants. Une cartouche d’Assaut est utilisée, et la
+                lame cinétique surchauffe pendant 6 rounds (36 secondes).
+                L’Impérial ne peut pas utiliser une autre action cinétique tant
+                qu'elle est en surchauffe. La lame doit être rechargée avec une
+                autre cartouche en tant qu'action bonus avant d'utiliser à
+                nouveau une action cinétique.
+              </p>
+            </article>
 
-  <article id="tranchant-acere">
-  <h3>
-    <img src="../../assets/images/skills-icons/imperial/sharp-edge.png" class="image skill-icon">
-    Tranchant acéré
-    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-  </h3>
-    <p>Chaque fois que l'Impérial touche une cible en attaquant directement avec son arme équipée, la durée de Surchauffe est réduite de 6 secondes supplémentaires (1 round).</p>
-  </article>
+            <article id="tranchant-acere">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/imperial/sharp-edge.png"
+                  class="image skill-icon"
+                />
+                Tranchant acéré
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                Chaque fois que l'Impérial touche une cible en attaquant
+                directement avec son arme équipée, la durée de Surchauffe est
+                réduite de 6 secondes supplémentaires (1 round).
+              </p>
+            </article>
 
-  <article id="garde-lourde">
-  <h3>
-    <img src="../../assets/images/skills-icons/imperial/heavy-guard.png" class="image skill-icon">
-    Garde lourde
-    <span><img src="../../assets/images/action-costs/reaction.png" alt="Reaction" class="image action-icon">1 PA (Réaction)</span>
-  </h3>
-    <p>Lorsqu'un allié est ciblé par une attaque, l'Impérial peut voler à son secours en tant que réaction. L'Impérial cible un allié dans un rayon de 3 mètres et échange sa place avec lui, encaissant ainsi l'attaque pour l'allié désigné.</p>
-  </article>
+            <article id="garde-lourde">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/imperial/heavy-guard.png"
+                  class="image skill-icon"
+                />
+                Garde lourde
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/reaction.png"
+                    alt="Reaction"
+                    class="image action-icon"
+                  />1 PA (Réaction)</span
+                >
+              </h3>
+              <p>
+                Lorsqu'un allié est ciblé par une attaque, l'Impérial peut voler
+                à son secours en tant que réaction. L'Impérial cible un allié
+                dans un rayon de 3 mètres et échange sa place avec lui,
+                encaissant ainsi l'attaque pour l'allié désigné.
+              </p>
+            </article>
 
-  <article id="serment-imperial">
-  <h3>
-    <img src="../../assets/images/skills-icons/imperial/imperial-vow.png" class="image skill-icon">
-    Serment impérial
-    <span><img src="../../assets/images/action-costs/specialisation.png" alt="Specialisation" class="image action-icon">Spécialisation</span>
-  </h3>
-    <p>Au troisième niveau, les Impériaux choisissent un Serment à suivre. Ceux qui prêtent Serment de Destruction déchaînent une force terrifiante qui piétine sans effort les ennemis, tandis que les Impériaux qui choisissent de prêter Serment de Protection utilisent la chaleur naturelle générée par leur arme pour se fortifier et défendre les alliés. Ces Serments leur accordent des aptitudes supplémentaires à mesure qu'ils montent en niveau</p>
-  </article>
+            <article id="serment-imperial">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/imperial/imperial-vow.png"
+                  class="image skill-icon"
+                />
+                Serment impérial
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/specialisation.png"
+                    alt="Specialisation"
+                    class="image action-icon"
+                  />Spécialisation</span
+                >
+              </h3>
+              <p>
+                Au troisième niveau, les Impériaux choisissent un Serment à
+                suivre. Ceux qui prêtent Serment de Destruction déchaînent une
+                force terrifiante qui piétine sans effort les ennemis, tandis
+                que les Impériaux qui choisissent de prêter Serment de
+                Protection utilisent la chaleur naturelle générée par leur arme
+                pour se fortifier et défendre les alliés. Ces Serments leur
+                accordent des aptitudes supplémentaires à mesure qu'ils montent
+                en niveau
+              </p>
+            </article>
 
-  <article id="tranchant-massif">
-  <h3>
-    <img src="../../assets/images/skills-icons/imperial/massive-edge.png" class="image skill-icon">
-    Tranchant massif
-    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-  </h3>
-    <p>La maîtrise de l'Impérial sur les aspects physiques de sa lame cinétique augmente. Effectuez une attaque avec une lame cinétique. Gagnez 1d4 d'Offense sur l'attaque, et jusqu'à 2 créatures dans un rayon de 3 mètres de la première cible subissent 1d8 + modificateur de Force de dégâts de force.</p>
-  </article>
+            <article id="tranchant-massif">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/imperial/massive-edge.png"
+                  class="image skill-icon"
+                />
+                Tranchant massif
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                La maîtrise de l'Impérial sur les aspects physiques de sa lame
+                cinétique augmente. Effectuez une attaque avec une lame
+                cinétique. Gagnez 1d4 d'Offense sur l'attaque, et jusqu'à 2
+                créatures dans un rayon de 3 mètres de la première cible
+                subissent 1d8 + modificateur de Force de dégâts de force.
+              </p>
+            </article>
 
-  <article id="lame-du-dragon">
-  <h3>
-    <img src="../../assets/images/skills-icons/imperial/dragon-blade.png" class="image skill-icon">
-    Lame du dragon
-    <span><img src="../../assets/images/action-costs/bonus-action.png" alt="Bonus" class="image action-icon">1 PA (Action Bonus)</span>
-  </h3>
-    <p>Après avoir émis un Ordre, le Souverain peut utiliser une action combo pour adopter une posture de combat avec son arme de choix. Tant qu'il est dans cette posture, le Souverain peut attaquer une fois avec son arme équipée en tant qu'action libre. Cette attaque inflige des dégâts supplémentaires de force égaux à 1d6 + modificateur de Charisme.</p>
-  </article>
+            <article id="lame-du-dragon">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/imperial/dragon-blade.png"
+                  class="image skill-icon"
+                />
+                Lame du dragon
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/bonus-action.png"
+                    alt="Bonus"
+                    class="image action-icon"
+                  />1 PA (Action Bonus)</span
+                >
+              </h3>
+              <p>
+                Après avoir émis un Ordre, le Souverain peut utiliser une action
+                combo pour adopter une posture de combat avec son arme de choix.
+                Tant qu'il est dans cette posture, le Souverain peut attaquer
+                une fois avec son arme équipée en tant qu'action libre. Cette
+                attaque inflige des dégâts supplémentaires de force égaux à 1d6
+                + modificateur de Charisme.
+              </p>
+            </article>
 
-  <article id="fortitude-du-chevalier">
-  <h3>
-    <img src="../../assets/images/skills-icons/imperial/knight-fortitude.png" class="image skill-icon">
-    Fortitude du chevalier
-    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-  </h3>
-    <p>Les Impériaux ont l'avantage aux jets de sauvegarde contre la peur.</p>
-  </article>
+            <article id="fortitude-du-chevalier">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/imperial/knight-fortitude.png"
+                  class="image skill-icon"
+                />
+                Fortitude du chevalier
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                Les Impériaux ont l'avantage aux jets de sauvegarde contre la
+                peur.
+              </p>
+            </article>
 
-  <article id="feu-gel-foudre-cinetique">
-  <h3>
-    <img src="../../assets/images/skills-icons/imperial/flame-drive.png" class="image skill-icon">
-    Feu/Gel/Foudre cinétique
-    <span><img src="../../assets/images/action-costs/heavy-action.png" alt="Heavy" class="image action-icon">3 PA (Action Complexe)</span>
-  </h3>
-    <p>Au huitième niveau, les Impériaux ont appris à utiliser des cartouches plus complexes pour déchaîner des actions cinétiques élémentaires. En tant qu'action complexe, effectuez une attaque de mêlée pour toucher un ennemi avec une lame cinétique. En cas de réussite, l'ennemi subit 4d12 + modificateur de force de dégâts de feu, de glace ou de foudre, selon la cartouche utilisée. La cartouche est consommée après utilisation, et la lame doit être rechargée avec une autre cartouche avant d'utiliser à nouveau une action cinétique. Après l'utilisation de Feu, Gel, ou Foudre cinétique, la lame est en surchauffe pendant 8 rounds (48 secondes).</p>
-  </article>
+            <article id="feu-gel-foudre-cinetique">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/imperial/flame-drive.png"
+                  class="image skill-icon"
+                />
+                Feu/Gel/Foudre cinétique
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/heavy-action.png"
+                    alt="Heavy"
+                    class="image action-icon"
+                  />3 PA (Action Complexe)</span
+                >
+              </h3>
+              <p>
+                Au huitième niveau, les Impériaux ont appris à utiliser des
+                cartouches plus complexes pour déchaîner des actions cinétiques
+                élémentaires. En tant qu'action complexe, effectuez une attaque
+                de mêlée pour toucher un ennemi avec une lame cinétique. En cas
+                de réussite, l'ennemi subit 4d12 + modificateur de force de
+                dégâts de feu, de glace ou de foudre, selon la cartouche
+                utilisée. La cartouche est consommée après utilisation, et la
+                lame doit être rechargée avec une autre cartouche avant
+                d'utiliser à nouveau une action cinétique. Après l'utilisation
+                de Feu, Gel, ou Foudre cinétique, la lame est en surchauffe
+                pendant 8 rounds (48 secondes).
+              </p>
+            </article>
 
-  <article id="tranchant-sanguinaire">
-  <h3>
-    <img src="../../assets/images/skills-icons/imperial/blood-edge.png" class="image skill-icon">
-    Tranchant sanguinaire
-    <span><img src="../../assets/images/action-costs/combo-action.png" alt="Combo" class="image action-icon">1 PA (Action Combo)</span>
-  </h3>
-    <p>Lors de l'activation de Tranchant acéré, l'Impérial peut absorber le sang tiré par sa lame affûtée pour récupérer sa propre vitalité. L'Impérial peut utiliser une action combo pour récupérer des points de vie égaux à 1d8 + modificateur de Constitution lorsque Tranchant acéré réduit le temps de recharge de la surchauffe.</p>
-  </article>
+            <article id="tranchant-sanguinaire">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/imperial/blood-edge.png"
+                  class="image skill-icon"
+                />
+                Tranchant sanguinaire
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/combo-action.png"
+                    alt="Combo"
+                    class="image action-icon"
+                  />1 PA (Action Combo)</span
+                >
+              </h3>
+              <p>
+                Lors de l'activation de Tranchant acéré, l'Impérial peut
+                absorber le sang tiré par sa lame affûtée pour récupérer sa
+                propre vitalité. L'Impérial peut utiliser une action combo pour
+                récupérer des points de vie égaux à 1d8 + modificateur de
+                Constitution lorsque Tranchant acéré réduit le temps de recharge
+                de la surchauffe.
+              </p>
+            </article>
 
-  <article id="absorbeur">
-  <h3>
-    <img src="../../assets/images/skills-icons/imperial/absorber.png" class="image skill-icon">
-    Absorbeur
-    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-  </h3>
-    <p>Lorsque l'Impérial réussit à toucher avec une action cinétique, la cartouche n'est consommée qu'à moitié ; deux demi-cartouches peuvent être combinées en utilisant cinq minutes en dehors d’un combat en une cartouche entière, pouvant être utilisée pour des actions cinétiques. La cartouche entière est toujours consommée en cas de manqué ou d'effleurement.</p>
-  </article>
+            <article id="absorbeur">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/imperial/absorber.png"
+                  class="image skill-icon"
+                />
+                Absorbeur
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                Lorsque l'Impérial réussit à toucher avec une action cinétique,
+                la cartouche n'est consommée qu'à moitié ; deux demi-cartouches
+                peuvent être combinées en utilisant cinq minutes en dehors d’un
+                combat en une cartouche entière, pouvant être utilisée pour des
+                actions cinétiques. La cartouche entière est toujours consommée
+                en cas de manqué ou d'effleurement.
+              </p>
+            </article>
 
-  <article id="mecanique-avancee">
-  <h3>
-    <img src="../../assets/images/skills-icons/imperial/advanced-mechanic.png" class="image skill-icon">
-    Mécanique avancée
-    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-  </h3>
-    <p>Au quatorzième niveau, l'Impérial a passé suffisamment de temps à entretenir et à améliorer sa lame cinétique pour devenir familier avec la mécanique à petite échelle. L'Impérial a l'avantage sur tous les jets visant à utiliser un kit de bricolage pour construire ou réparer de petites machines. Il peut également combiner des demi-cartouches une fois par tour en tant qu'action libre.</p>
-  </article>
+            <article id="mecanique-avancee">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/imperial/advanced-mechanic.png"
+                  class="image skill-icon"
+                />
+                Mécanique avancée
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                Au quatorzième niveau, l'Impérial a passé suffisamment de temps
+                à entretenir et à améliorer sa lame cinétique pour devenir
+                familier avec la mécanique à petite échelle. L'Impérial a
+                l'avantage sur tous les jets visant à utiliser un kit de
+                bricolage pour construire ou réparer de petites machines. Il
+                peut également combiner des demi-cartouches une fois par tour en
+                tant qu'action libre.
+              </p>
+            </article>
 
-  <article id="tranchant-impulsif">
-  <h3>
-    <img src="../../assets/images/skills-icons/imperial/impulse-edge.png" class="image skill-icon">
-    Tranchant impulsif
-    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-  </h3>
-    <p>En tirant la puissance résiduelle d'une action cinétique dans leur lame, l'Impérial peut utiliser une action pour effectuer une attaque de mêlée avec sa lame cinétique. Si l'Impérial a utilisé une action cinétique dans la dernière minute, Tranchant impulsif inflige 2d8 dégâts supplémentaires de l'élément de la dernière action cinétique, après quoi Tranchant impulsif ne peut plus être utilisé jusqu'à ce que l'Impérial utilise une autre action cinétique.</p>
-  </article>
+            <article id="tranchant-impulsif">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/imperial/impulse-edge.png"
+                  class="image skill-icon"
+                />
+                Tranchant impulsif
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                En tirant la puissance résiduelle d'une action cinétique dans
+                leur lame, l'Impérial peut utiliser une action pour effectuer
+                une attaque de mêlée avec sa lame cinétique. Si l'Impérial a
+                utilisé une action cinétique dans la dernière minute, Tranchant
+                impulsif inflige 2d8 dégâts supplémentaires de l'élément de la
+                dernière action cinétique, après quoi Tranchant impulsif ne peut
+                plus être utilisé jusqu'à ce que l'Impérial utilise une autre
+                action cinétique.
+              </p>
+            </article>
 
-  <article id="tranchant-charge">
-  <h3>
-    <img src="../../assets/images/skills-icons/imperial/charge-edge.png" class="image skill-icon">
-    Tranchant chargé
-    <span><img src="../../assets/images/action-costs/combo-action.png" alt="Combo" class="image action-icon">1 PA (Action Combo)</span>
-  </h3>
-    <p>L'Impérial a appris à préparer la cartouche avant de déclencher une action cinétique pour augmenter sa puissance destructrice. Si l'Impérial a activé une compétence de Tranchant au moins 3 fois depuis le début de son dernier tour, il peut utiliser une action combo pour amorcer une seule cartouche ; vous pouvez changer la cartouche dans la lame cinétique lorsque vous utilisez Tranchant chargé. Jusqu'à la fin du prochain tour de l'Impérial, toute action cinétique utilisant cette cartouche lance deux fois les dés pour les dégâts. Si le prochain tour de l'Impérial se termine sans utiliser la cartouche, elle est consommée à moitié.</p>
-  </article>
+            <article id="tranchant-charge">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/imperial/charge-edge.png"
+                  class="image skill-icon"
+                />
+                Tranchant chargé
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/combo-action.png"
+                    alt="Combo"
+                    class="image action-icon"
+                  />1 PA (Action Combo)</span
+                >
+              </h3>
+              <p>
+                L'Impérial a appris à préparer la cartouche avant de déclencher
+                une action cinétique pour augmenter sa puissance destructrice.
+                Si l'Impérial a activé une compétence de Tranchant au moins 3
+                fois depuis le début de son dernier tour, il peut utiliser une
+                action combo pour amorcer une seule cartouche ; vous pouvez
+                changer la cartouche dans la lame cinétique lorsque vous
+                utilisez Tranchant chargé. Jusqu'à la fin du prochain tour de
+                l'Impérial, toute action cinétique utilisant cette cartouche
+                lance deux fois les dés pour les dégâts. Si le prochain tour de
+                l'Impérial se termine sans utiliser la cartouche, elle est
+                consommée à moitié.
+              </p>
+            </article>
 
-  <article id="acceleration-cinetique">
-  <h3>
-    <img src="../../assets/images/skills-icons/imperial/accel-drive.png" class="image skill-icon">
-    Accélération cinétique
-    <span><img src="../../assets/images/action-costs/heavy-action.png" alt="Heavy" class="image action-icon">3 PA (Action Complexe)</span>
-  </h3>
-    <p>Au dix-neuvième niveau, l'Impérial a appris à utiliser la cartouche de carburant la plus instable sans se blesser ni endommager sa lame cinétique. En tant qu'action complexe, effectuez une attaque de mêlée pour toucher un ennemi avec une lame cinétique. En cas de réussite, l’Accélération cinétique inflige 8d10 + modificateur de force de dégâts tranchants, ignorant la résistance aux dégâts tranchants. Une cartouche d'Accélération est consommée, et la lame est en surchauffe pendant 10 rounds.</p>
-  </article>
+            <article id="acceleration-cinetique">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/imperial/accel-drive.png"
+                  class="image skill-icon"
+                />
+                Accélération cinétique
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/heavy-action.png"
+                    alt="Heavy"
+                    class="image action-icon"
+                  />3 PA (Action Complexe)</span
+                >
+              </h3>
+              <p>
+                Au dix-neuvième niveau, l'Impérial a appris à utiliser la
+                cartouche de carburant la plus instable sans se blesser ni
+                endommager sa lame cinétique. En tant qu'action complexe,
+                effectuez une attaque de mêlée pour toucher un ennemi avec une
+                lame cinétique. En cas de réussite, l’Accélération cinétique
+                inflige 8d10 + modificateur de force de dégâts tranchants,
+                ignorant la résistance aux dégâts tranchants. Une cartouche
+                d'Accélération est consommée, et la lame est en surchauffe
+                pendant 10 rounds.
+              </p>
+            </article>
 
-  <article id="amorcage">
-  <h3>
-    <img src="../../assets/images/skills-icons/imperial/ignition.png" class="image skill-icon">
-    Amorçage
-    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-  </h3>
-    <p>Ayant pleinement maîtrisé l'utilisation de leur arme signature, les Impériaux apprennent à se pousser eux-mêmes et leur équipement au-delà des limites normales. En utilisant une action pour retirer le limiteur de l'arme, la lame cinétique ne surchauffera plus pendant 3 rounds, et, après la fin de l’Amorçage, l'arme ne peut plus servir à l'Amorçage sans subir de graves dommages. Par conséquent, l'Impérial doit passer au moins vingt minutes lors d'un repos long ou court avec son kit de bricolage pour entretenir la lame cinétique afin de pouvoir utiliser l’Amorçage avec cette arme ; s'il n'a pas de kit de bricolage, il doit faire entretenir l'arme dans un magasin qui propose ce service ou être incapable d'utiliser l’Amorçage avec cette arme.</p>
-  </article> </div>
+            <article id="amorcage">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/imperial/ignition.png"
+                  class="image skill-icon"
+                />
+                Amorçage
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                Ayant pleinement maîtrisé l'utilisation de leur arme signature,
+                les Impériaux apprennent à se pousser eux-mêmes et leur
+                équipement au-delà des limites normales. En utilisant une action
+                pour retirer le limiteur de l'arme, la lame cinétique ne
+                surchauffera plus pendant 3 rounds, et, après la fin de
+                l’Amorçage, l'arme ne peut plus servir à l'Amorçage sans subir
+                de graves dommages. Par conséquent, l'Impérial doit passer au
+                moins vingt minutes lors d'un repos long ou court avec son kit
+                de bricolage pour entretenir la lame cinétique afin de pouvoir
+                utiliser l’Amorçage avec cette arme ; s'il n'a pas de kit de
+                bricolage, il doit faire entretenir l'arme dans un magasin qui
+                propose ce service ou être incapable d'utiliser l’Amorçage avec
+                cette arme.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
       <h2 class="patch-titre" id="specialisations">
-        <img src="../../assets/images/notes-big.png" class="image image-h2"> Spécialisations
+        <img src="../../assets/images/notes-big.png" class="image image-h2" />
+        Spécialisations
       </h2>
-    
-  <section class="patch-section">
-  <div class="toggle-section">
-    <h2 class="patch-titre" id="serment-de-destruction">
-      <img src="../../assets/images/subclass-icons/imperial/destruction.png" class="image class-icon">
-      Serment de Destruction
-      <button class="toggle-button" onclick="toggleSection(this)">▲</button>
-    </h2>
-    </div>
-    <div class="collapsible-content expanded">
-    <div class="patch-list">
-      
-        <article id="inter-refroidisseur">
-        <h3>
-          <img src="../../assets/images/skills-icons/imperial/intercooler.png" class="image skill-icon">
-          Inter-refroidisseur
-          <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-        </h3>
-          <p>L'Impérial équipe sa lame d'un agent de refroidissement qui s'active pendant l'état de surchauffe. Le temps de surchauffe est réduit de 2 rounds, soit 12 secondes. Cela augmente à 3 rounds (18 secondes) au niveau 10, et à 4 rounds (24 secondes) au niveau 15.</p>
-        </article>
 
-        <article id="dissipateur-de-chaleur">
-        <h3>
-          <img src="../../assets/images/skills-icons/imperial/heat-sink.png" class="image skill-icon">
-          Dissipateur de chaleur
-          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-        </h3>
-          <p>L'Impérial s'arrête pour une action afin d'engager le mécanisme de dissipation de chaleur de la lame cinétique, réduisant son temps de surchauffe de 5 rounds (30 secondes).</p>
-        </article>
+      <section class="patch-section">
+        <div class="toggle-section">
+          <h2 class="patch-titre" id="serment-de-destruction">
+            <img
+              src="../../assets/images/subclass-icons/imperial/destruction.png"
+              class="image class-icon"
+            />
+            Serment de Destruction
+            <button class="toggle-button" onclick="toggleSection(this)">
+              ▲
+            </button>
+          </h2>
+        </div>
+        <div class="collapsible-content expanded">
+          <div class="patch-list">
+            <article id="inter-refroidisseur">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/imperial/intercooler.png"
+                  class="image skill-icon"
+                />
+                Inter-refroidisseur
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                L'Impérial équipe sa lame d'un agent de refroidissement qui
+                s'active pendant l'état de surchauffe. Le temps de surchauffe
+                est réduit de 2 rounds, soit 12 secondes. Cela augmente à 3
+                rounds (18 secondes) au niveau 10, et à 4 rounds (24 secondes)
+                au niveau 15.
+              </p>
+            </article>
 
-        <article id="effet-large">
-        <h3>
-          <img src="../../assets/images/skills-icons/imperial/wide-effect.png" class="image skill-icon">
-          Effet large
-          <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-        </h3>
-          <p>Une amélioration supplémentaire de la lame cinétique lui confère la capacité d'élargir les actions cinétiques sans coût supplémentaire pour les cartouches. Chaque fois qu'une action cinétique est utilisée, l'Impérial peut choisir d'élargir son rayon de souffle ; cette action cinétique touche également toute créature dans une ligne de 3 mètres à partir de l'Impérial et passant par le centre de la cible, mais elle inflige 2 dés de dégâts en moins.</p>
-        </article>
-    </div>
-    </div>
-  </section>
+            <article id="dissipateur-de-chaleur">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/imperial/heat-sink.png"
+                  class="image skill-icon"
+                />
+                Dissipateur de chaleur
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                L'Impérial s'arrête pour une action afin d'engager le mécanisme
+                de dissipation de chaleur de la lame cinétique, réduisant son
+                temps de surchauffe de 5 rounds (30 secondes).
+              </p>
+            </article>
 
-  <section class="patch-section">
-  <div class="toggle-section">
-    <h2 class="patch-titre" id="serment-de-protection">
-      <img src="../../assets/images/subclass-icons/imperial/protection.png" class="image class-icon">
-      Serment de Protection
-      <button class="toggle-button" onclick="toggleSection(this)">▲</button>
-    </h2>
-    </div>
-    <div class="collapsible-content expanded">
-    <div class="patch-list">
-      
-        <article id="ecran-thermique">
-        <h3>
-          <img src="../../assets/images/skills-icons/imperial/heat-shield.png" class="image skill-icon">
-          Écran thermique
-          <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-        </h3>
-          <p>L'Impérial apprend à manipuler l'énergie thermique de l'état de surchauffe pour se défendre. Pendant l'état de surchauffe ou d'Amorçage, un bouclier scintillant de chaleur brûlante entoure l'Impérial ; il gagne une résistance aux dégâts tranchants, perforants et contondants de tous les ennemis se tenant à moins de 3 mètres.</p>
-        </article>
+            <article id="effet-large">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/imperial/wide-effect.png"
+                  class="image skill-icon"
+                />
+                Effet large
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                Une amélioration supplémentaire de la lame cinétique lui confère
+                la capacité d'élargir les actions cinétiques sans coût
+                supplémentaire pour les cartouches. Chaque fois qu'une action
+                cinétique est utilisée, l'Impérial peut choisir d'élargir son
+                rayon de souffle ; cette action cinétique touche également toute
+                créature dans une ligne de 3 mètres à partir de l'Impérial et
+                passant par le centre de la cible, mais elle inflige 2 dés de
+                dégâts en moins.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-        <article id="reserve-elementaire">
-        <h3>
-          <img src="../../assets/images/skills-icons/imperial/elemental-reserve.png" class="image skill-icon">
-          Réserve élémentaire
-          <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-        </h3>
-          <p>La poudre persistante des actions cinétiques élémentaires entrave toute tentative d'utiliser cet élément contre l'Impérial. Lorsque Feu, Gel ou Foudre cinétique sont utilisées, l'Impérial gagne une résistance à l'élément correspondant pour la durée de cette surchauffe ou pour le reste de l'Amorçage. Les dégâts de Feu, Gel et Foudre cinétiques augmentent de 1d12.</p>
-        </article>
+      <section class="patch-section">
+        <div class="toggle-section">
+          <h2 class="patch-titre" id="serment-de-protection">
+            <img
+              src="../../assets/images/subclass-icons/imperial/protection.png"
+              class="image class-icon"
+            />
+            Serment de Protection
+            <button class="toggle-button" onclick="toggleSection(this)">
+              ▲
+            </button>
+          </h2>
+        </div>
+        <div class="collapsible-content expanded">
+          <div class="patch-list">
+            <article id="ecran-thermique">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/imperial/heat-shield.png"
+                  class="image skill-icon"
+                />
+                Écran thermique
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                L'Impérial apprend à manipuler l'énergie thermique de l'état de
+                surchauffe pour se défendre. Pendant l'état de surchauffe ou
+                d'Amorçage, un bouclier scintillant de chaleur brûlante entoure
+                l'Impérial ; il gagne une résistance aux dégâts tranchants,
+                perforants et contondants de tous les ennemis se tenant à moins
+                de 3 mètres.
+              </p>
+            </article>
 
-        <article id="tranchant-tempere">
-        <h3>
-          <img src="../../assets/images/skills-icons/imperial/tempered-edge.png" class="image skill-icon">
-          Tranchant tempéré
-          <span><img src="../../assets/images/action-costs/bonus-action.png" alt="Bonus" class="image action-icon">1 PA (Action Bonus)</span>
-        </h3>
-          <p>Pendant l'état de surchauffe, l'Impérial peut canaliser la chaleur générée par l'activation d'actions cinétiques dans le tranchant de sa lame. La prochaine attaque de l'Impérial avec sa lame cinétique inflige 1d12 de dégâts de feu supplémentaires.</p>
-        </article>
-    </div>
-    </div>
-  </section>
-    
-    <section class="patch-section">
-  <h2 class="patch-titre" id="progression">
-    <img src="../../assets/images/notes-big.png" class="image image-h2">
-    Progression par niveau
-  </h2>
+            <article id="reserve-elementaire">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/imperial/elemental-reserve.png"
+                  class="image skill-icon"
+                />
+                Réserve élémentaire
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                La poudre persistante des actions cinétiques élémentaires
+                entrave toute tentative d'utiliser cet élément contre
+                l'Impérial. Lorsque Feu, Gel ou Foudre cinétique sont utilisées,
+                l'Impérial gagne une résistance à l'élément correspondant pour
+                la durée de cette surchauffe ou pour le reste de l'Amorçage. Les
+                dégâts de Feu, Gel et Foudre cinétiques augmentent de 1d12.
+              </p>
+            </article>
 
-  <div class="class-table-tabs-wrapper">
-    <button class="tab-button active" onclick="switchTab(event, 'general')">Impérial</button>
-    <button class="tab-button" onclick="switchTab(event, 'imperial-destruction')">Serment de Destruction</button>
-    <button class="tab-button" onclick="switchTab(event, 'imperial-protection')">Serment de Protection</button>
-  </div>
+            <article id="tranchant-tempere">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/imperial/tempered-edge.png"
+                  class="image skill-icon"
+                />
+                Tranchant tempéré
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/bonus-action.png"
+                    alt="Bonus"
+                    class="image action-icon"
+                  />1 PA (Action Bonus)</span
+                >
+              </h3>
+              <p>
+                Pendant l'état de surchauffe, l'Impérial peut canaliser la
+                chaleur générée par l'activation d'actions cinétiques dans le
+                tranchant de sa lame. La prochaine attaque de l'Impérial avec sa
+                lame cinétique inflige 1d12 de dégâts de feu supplémentaires.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-  <div class="table-container tab-content active" id="tab-general">
-    <table class="progression-table">
-      <thead><tr><th>Niveau</th><th>Bonus de maîtrise</th><th>Aptitudes</th></tr></thead>
-      <tbody>
-        <tr><td>1</td><td>+2</td><td>Maîtrise de la lame cinétique, Assaut cinétique</td></tr>
-        <tr><td>2</td><td>+2</td><td>Tranchant acéré, Garde lourde</td></tr>
-        <tr><td>3</td><td>+2</td><td>Serment impérial, Aptitude de Serment</td></tr>
-        <tr><td>4</td><td>+2</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-        <tr><td>5</td><td>+3</td><td>Tranchant massif</td></tr>
-        <tr><td>6</td><td>+3</td><td>Lame du dragon</td></tr>
-        <tr><td>7</td><td>+3</td><td>Fortitude du chevalier</td></tr>
-        <tr><td>8</td><td>+3</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-        <tr><td>9</td><td>+4</td><td>Feu cinétique, Gel cinétique, Foudre cinétique</td></tr>
-        <tr><td>10</td><td>+4</td><td>Aptitude de Serment</td></tr>
-        <tr><td>11</td><td>+4</td><td>Tranchant sanguinaire</td></tr>
-        <tr><td>12</td><td>+4</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-        <tr><td>13</td><td>+5</td><td>Absorbeur</td></tr>
-        <tr><td>14</td><td>+5</td><td>Mécanique avancée</td></tr>
-        <tr><td>15</td><td>+5</td><td>Tranchant impulsif</td></tr>
-        <tr><td>16</td><td>+5</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-        <tr><td>17</td><td>+6</td><td>Aptitude de Serment</td></tr>
-        <tr><td>18</td><td>+6</td><td>Tranchant chargé</td></tr>
-        <tr><td>19</td><td>+6</td><td>Accélération cinétique</td></tr>
-        <tr><td>20</td><td>+6</td><td>Amorçage</td></tr>
-      </tbody>
-    </table>
-  </div>
+      <section class="patch-section">
+        <h2 class="patch-titre" id="progression">
+          <img src="../../assets/images/notes-big.png" class="image image-h2" />
+          Progression par niveau
+        </h2>
 
-  <div class="table-container tab-content" id="tab-imperial-destruction" style="display:none;">
-    <table class="progression-table">
-      <thead><tr><th>Niveau</th><th>Aptitudes du Serment de Destruction</th></tr></thead>
-      <tbody>
-        <tr><td>3</td><td>Inter-refroidisseur</td></tr>
-        <tr><td>10</td><td>Dissipateur de chaleur</td></tr>
-        <tr><td>17</td><td>Effet large</td></tr>
-      </tbody>
-    </table>
-  </div>
+        <div class="class-table-tabs-wrapper">
+          <button
+            class="tab-button active"
+            onclick="switchTab(event, 'general')"
+          >
+            Impérial
+          </button>
+          <button
+            class="tab-button"
+            onclick="switchTab(event, 'imperial-destruction')"
+          >
+            Serment de Destruction
+          </button>
+          <button
+            class="tab-button"
+            onclick="switchTab(event, 'imperial-protection')"
+          >
+            Serment de Protection
+          </button>
+        </div>
 
-  <div class="table-container tab-content" id="tab-imperial-protection" style="display:none;">
-    <table class="progression-table">
-      <thead><tr><th>Niveau</th><th>Aptitudes du Serment de Protection</th></tr></thead>
-      <tbody>
-        <tr><td>3</td><td>Écran thermique</td></tr>
-        <tr><td>10</td><td>Réserve élémentaire</td></tr>
-        <tr><td>17</td><td>Tranchant tempéré</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+        <div class="table-container tab-content active" id="tab-general">
+          <table class="progression-table">
+            <thead>
+              <tr>
+                <th>Niveau</th>
+                <th>Bonus de maîtrise</th>
+                <th>Aptitudes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>+2</td>
+                <td>Maîtrise de la lame cinétique, Assaut cinétique</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>+2</td>
+                <td>Tranchant acéré, Garde lourde</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>+2</td>
+                <td>Serment impérial, Aptitude de Serment</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>+2</td>
+                <td>Amélioration de caractéristiques, Défense +1</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>+3</td>
+                <td>Tranchant massif</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>+3</td>
+                <td>Lame du dragon</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>+3</td>
+                <td>Fortitude du chevalier</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>+3</td>
+                <td>Amélioration de caractéristiques, Défense +1</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>+4</td>
+                <td>Feu cinétique, Gel cinétique, Foudre cinétique</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>+4</td>
+                <td>Aptitude de Serment</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>+4</td>
+                <td>Tranchant sanguinaire</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>+4</td>
+                <td>Amélioration de caractéristiques, Défense +1</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>+5</td>
+                <td>Absorbeur</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>+5</td>
+                <td>Mécanique avancée</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>+5</td>
+                <td>Tranchant impulsif</td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td>+5</td>
+                <td>Amélioration de caractéristiques, Défense +1</td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>+6</td>
+                <td>Aptitude de Serment</td>
+              </tr>
+              <tr>
+                <td>18</td>
+                <td>+6</td>
+                <td>Tranchant chargé</td>
+              </tr>
+              <tr>
+                <td>19</td>
+                <td>+6</td>
+                <td>Accélération cinétique</td>
+              </tr>
+              <tr>
+                <td>20</td>
+                <td>+6</td>
+                <td>Amorçage</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-<script>
-    function switchTab(event, tabId) {
-      const tabs = document.querySelectorAll('.tab-button');
-      const contents = document.querySelectorAll('.tab-content');
-      tabs.forEach(t => t.classList.remove('active'));
-      contents.forEach(c => {
-        c.classList.remove('active');
-        c.style.display = 'none';
-      });
+        <div
+          class="table-container tab-content"
+          id="tab-imperial-destruction"
+          style="display: none"
+        >
+          <table class="progression-table">
+            <thead>
+              <tr>
+                <th>Niveau</th>
+                <th>Aptitudes du Serment de Destruction</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3</td>
+                <td>Inter-refroidisseur</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Dissipateur de chaleur</td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>Effet large</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-      event.target.classList.add('active');
-      const target = document.getElementById(`tab-${tabId}`);
-      target.style.display = 'block';
-      void target.offsetWidth; // forcer repaint
-      target.classList.add('active');
-    }
-</script>
+        <div
+          class="table-container tab-content"
+          id="tab-imperial-protection"
+          style="display: none"
+        >
+          <table class="progression-table">
+            <thead>
+              <tr>
+                <th>Niveau</th>
+                <th>Aptitudes du Serment de Protection</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3</td>
+                <td>Écran thermique</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Réserve élémentaire</td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>Tranchant tempéré</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
+      <script>
+        function switchTab(event, tabId) {
+          const tabs = document.querySelectorAll(".tab-button");
+          const contents = document.querySelectorAll(".tab-content");
+          tabs.forEach((t) => t.classList.remove("active"));
+          contents.forEach((c) => {
+            c.classList.remove("active");
+            c.style.display = "none";
+          });
+
+          event.target.classList.add("active");
+          const target = document.getElementById(`tab-${tabId}`);
+          target.style.display = "block";
+          void target.offsetWidth; // forcer repaint
+          target.classList.add("active");
+        }
+      </script>
     </main>
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
       <img id="lightbox-img" src="" alt="Portrait" />
     </div>
-    <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button>
+    <button
+      id="backToTop"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      aria-label="Retour en haut"
+    >
+      <i class="fa-solid fa-arrow-up"></i> Retour en haut
+    </button>
     <footer>
-    <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
-</footer>
+      <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+    </footer>
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
+      document.addEventListener("DOMContentLoaded", function () {
         const searchInput = document.getElementById("search-bar");
         const aptitudeArticles = document.querySelectorAll("article");
-        searchInput.addEventListener("input", function() {
+        searchInput.addEventListener("input", function () {
           const value = searchInput.value.toLowerCase();
-          aptitudeArticles.forEach(article => {
-            const title = article.querySelector("h3")?.textContent?.toLowerCase() || "";
+          aptitudeArticles.forEach((article) => {
+            const title =
+              article.querySelector("h3")?.textContent?.toLowerCase() || "";
             const content = article.textContent?.toLowerCase() || "";
             if (title.includes(value) || content.includes(value)) {
               article.style.display = "";
@@ -450,36 +1133,138 @@
     <script src="../../scripts/lightbox.js"></script>
     <script src="../../scripts/particles.js"></script>
     <script src="../../scripts/backToTop.js"></script>
-    <button class="mobile-nav-toggle" onclick="toggleMobileNav(this)">☰</button>
+    <button class="mobile-nav-toggle" onclick="toggleMobileNav(this)">
+      ☰
+    </button>
     <div class="mobile-nav-overlay" id="mobileNav">
-      <div class="mobile-nav-content">  <a href="#details" class="section-link" onclick="toggleMobileNav()">Détails</a>
- <a href="#aptitudes" class="section-link" onclick="toggleMobileNav()">Aptitudes</a>
- <a href="#maitrise-de-la-lame-cinetique" class="sub-link" onclick="toggleMobileNav()">Maîtrise de la lame cinétique</a>
- <a href="#assaut-cinetique" class="sub-link" onclick="toggleMobileNav()">Assaut cinétique</a>
- <a href="#tranchant-acere" class="sub-link" onclick="toggleMobileNav()">Tranchant acéré</a>
- <a href="#garde-lourde" class="sub-link" onclick="toggleMobileNav()">Garde lourde</a>
- <a href="#serment-imperial" class="sub-link" onclick="toggleMobileNav()">Serment impérial</a>
- <a href="#tranchant-massif" class="sub-link" onclick="toggleMobileNav()">Tranchant massif</a>
- <a href="#lame-du-dragon" class="sub-link" onclick="toggleMobileNav()">Lame du dragon</a>
- <a href="#fortitude-du-chevalier" class="sub-link" onclick="toggleMobileNav()">Fortitude du chevalier</a>
- <a href="#feu-gel-foudre-cinetique" class="sub-link" onclick="toggleMobileNav()">Feu/Gel/Foudre cinétique</a>
- <a href="#tranchant-sanguinaire" class="sub-link" onclick="toggleMobileNav()">Tranchant sanguinaire</a>
- <a href="#absorbeur" class="sub-link" onclick="toggleMobileNav()">Absorbeur</a>
- <a href="#mecanique-avancee" class="sub-link" onclick="toggleMobileNav()">Mécanique avancée</a>
- <a href="#tranchant-impulsif" class="sub-link" onclick="toggleMobileNav()">Tranchant impulsif</a>
- <a href="#tranchant-charge" class="sub-link" onclick="toggleMobileNav()">Tranchant chargé</a>
- <a href="#acceleration-cinetique" class="sub-link" onclick="toggleMobileNav()">Accélération cinétique</a>
- <a href="#amorcage" class="sub-link" onclick="toggleMobileNav()">Amorçage</a>
- <a href="#specialisations" class="section-link" onclick="toggleMobileNav()">Spécialisations</a>
- <a href="#serment-de-destruction" class="section-link" onclick="toggleMobileNav()">Serment de Destruction</a>
- <a href="#inter-refroidisseur" class="sub-link" onclick="toggleMobileNav()">Inter-refroidisseur</a>
- <a href="#dissipateur-de-chaleur" class="sub-link" onclick="toggleMobileNav()">Dissipateur de chaleur</a>
- <a href="#effet-large" class="sub-link" onclick="toggleMobileNav()">Effet large</a>
- <a href="#serment-de-protection" class="section-link" onclick="toggleMobileNav()">Serment de Protection</a>
- <a href="#ecran-thermique" class="sub-link" onclick="toggleMobileNav()">Écran thermique</a>
- <a href="#reserve-elementaire" class="sub-link" onclick="toggleMobileNav()">Réserve élémentaire</a>
- <a href="#tranchant-tempere" class="sub-link" onclick="toggleMobileNav()">Tranchant tempéré</a>
- <a href="#tab-general" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
+      <div class="mobile-nav-content">
+        <a href="#details" class="section-link" onclick="toggleMobileNav()"
+          >Détails</a
+        >
+        <a href="#aptitudes" class="section-link" onclick="toggleMobileNav()"
+          >Aptitudes</a
+        >
+        <a
+          href="#maitrise-de-la-lame-cinetique"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Maîtrise de la lame cinétique</a
+        >
+        <a href="#assaut-cinetique" class="sub-link" onclick="toggleMobileNav()"
+          >Assaut cinétique</a
+        >
+        <a href="#tranchant-acere" class="sub-link" onclick="toggleMobileNav()"
+          >Tranchant acéré</a
+        >
+        <a href="#garde-lourde" class="sub-link" onclick="toggleMobileNav()"
+          >Garde lourde</a
+        >
+        <a href="#serment-imperial" class="sub-link" onclick="toggleMobileNav()"
+          >Serment impérial</a
+        >
+        <a href="#tranchant-massif" class="sub-link" onclick="toggleMobileNav()"
+          >Tranchant massif</a
+        >
+        <a href="#lame-du-dragon" class="sub-link" onclick="toggleMobileNav()"
+          >Lame du dragon</a
+        >
+        <a
+          href="#fortitude-du-chevalier"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Fortitude du chevalier</a
+        >
+        <a
+          href="#feu-gel-foudre-cinetique"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Feu/Gel/Foudre cinétique</a
+        >
+        <a
+          href="#tranchant-sanguinaire"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Tranchant sanguinaire</a
+        >
+        <a href="#absorbeur" class="sub-link" onclick="toggleMobileNav()"
+          >Absorbeur</a
+        >
+        <a
+          href="#mecanique-avancee"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Mécanique avancée</a
+        >
+        <a
+          href="#tranchant-impulsif"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Tranchant impulsif</a
+        >
+        <a href="#tranchant-charge" class="sub-link" onclick="toggleMobileNav()"
+          >Tranchant chargé</a
+        >
+        <a
+          href="#acceleration-cinetique"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Accélération cinétique</a
+        >
+        <a href="#amorcage" class="sub-link" onclick="toggleMobileNav()"
+          >Amorçage</a
+        >
+        <a
+          href="#specialisations"
+          class="section-link"
+          onclick="toggleMobileNav()"
+          >Spécialisations</a
+        >
+        <a
+          href="#serment-de-destruction"
+          class="section-link"
+          onclick="toggleMobileNav()"
+          >Serment de Destruction</a
+        >
+        <a
+          href="#inter-refroidisseur"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Inter-refroidisseur</a
+        >
+        <a
+          href="#dissipateur-de-chaleur"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Dissipateur de chaleur</a
+        >
+        <a href="#effet-large" class="sub-link" onclick="toggleMobileNav()"
+          >Effet large</a
+        >
+        <a
+          href="#serment-de-protection"
+          class="section-link"
+          onclick="toggleMobileNav()"
+          >Serment de Protection</a
+        >
+        <a href="#ecran-thermique" class="sub-link" onclick="toggleMobileNav()"
+          >Écran thermique</a
+        >
+        <a
+          href="#reserve-elementaire"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Réserve élémentaire</a
+        >
+        <a
+          href="#tranchant-tempere"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Tranchant tempéré</a
+        >
+        <a href="#tab-general" class="section-link" onclick="toggleMobileNav()"
+          >Progression par niveau</a
+        >
+      </div>
     </div>
   </body>
 </html>

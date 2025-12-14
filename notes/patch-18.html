@@ -1,172 +1,446 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Patch 3.0 – Session 20 | Codex - Etrian Odyssey TTRPG</title>
-  <link rel="icon" href="../favicon.png" type="image/png">
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-  <canvas id="particles"></canvas>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Patch 3.0 – Session 20 | Codex - Etrian Odyssey TTRPG</title>
+    <link rel="icon" href="../favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <canvas id="particles"></canvas>
 
-  
-<nav class="patch-nav">
- <a href="#systeme" class="section-link">Système</a>
-    <a href="#codex" class="section-link">Codex</a>
-    <a href="#problemes-resolus" class="section-link">Problèmes résolus</a>
-    <a href="#problemes-connus" class="section-link">Problèmes connus</a>
-    <a href="#mj" class="section-link">MJ</a>
-  </nav>
+    <nav class="patch-nav">
+      <a href="#systeme" class="section-link">Système</a>
+      <a href="#codex" class="section-link">Codex</a>
+      <a href="#problemes-resolus" class="section-link">Problèmes résolus</a>
+      <a href="#problemes-connus" class="section-link">Problèmes connus</a>
+      <a href="#mj" class="section-link">MJ</a>
+    </nav>
 
-  <header class="codex-header" id="top">
-    <a href="/" class="banniere-link"><img src="../assets/images/banniere.png" alt="Bannière" class="banniere"></a>
-    <h1><img src="../assets/images/silver-scroll.png" class="image codex-image-header"> Patch 3.0 – Session 20</h1>
-    <p class="sous-titre">Publié le 24 Septembre 2025</p>
-    <div class="fixed-header-links">
-      <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Index des patchs</a>
+    <header class="codex-header" id="top">
+      <a href="/" class="banniere-link"
+        ><img
+          src="../assets/images/banniere.png"
+          alt="Bannière"
+          class="banniere"
+      /></a>
+      <h1>
+        <img
+          src="../assets/images/silver-scroll.png"
+          class="image codex-image-header"
+        />
+        Patch 3.0 – Session 20
+      </h1>
+      <p class="sous-titre">Publié le 24 Septembre 2025</p>
+      <div class="fixed-header-links">
+        <a
+          href="index.html"
+          class="carte-lien"
+          style="display: inline-block; max-width: 300px"
+          ><i class="fa-solid fa-arrow-left"></i> Index des patchs</a
+        >
+      </div>
+    </header>
+
+    <nav class="nav-bar">
+      <a href="/">Accueil</a>
+      <a href="/notes/">Patch Notes</a>
+      <a href="/resumes/">Résumés</a>
+      <a href="/moments.html">Moments</a>
+      <a href="/univers/">Univers</a>
+      <a href="/regles/">Règles</a>
+      <a href="/musique.html">Musiques</a>
+      <a href="/ressources/">Ressources</a>
+      <a href="/credits.html">Crédits</a>
+    </nav>
+
+    <main class="accueil">
+      <section class="patch-section" id="systeme">
+        <h2 class="patch-titre">
+          <img src="../assets/images/notes-big.png" class="image image-h2" />
+          Système
+        </h2>
+        <ul class="image-list">
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              Foundry VTT a été mis à jour (12.343 → 13.348). Il s'agit d'une
+              mise à jour majeure qui apporte une large refonte de l'interface
+              utilisateur. À cette occasion, le serveur sera ouvert plus tôt
+              qu'habituellement pour vous permettre de vous familiariser avec
+              cette nouvelle interface.
+              <div class="note-expliquee">
+                Bien que toutes les précautions aient été prises pour assurer
+                une migration sans accroc, il se peut toujours que nous ayons
+                manqué certains problèmes, notamment ceux difficiles à repérer
+                en environnement de dev.
+              </div>
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              Il est possible de configurer les éléments de la nouvelle
+              interface dans <strong>Configurer les paramètres</strong> →
+              <strong>Core</strong> → <strong>Configurer l'interface</strong>.
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              Le calendrier est désormais positionné dans un bandeau au sommet
+              de l'écran et est géré par un système totalement différent du
+              précédent.
+              <div class="note-expliquee">
+                L'affichage de l'heure est désormais mis à jour toutes les 10
+                secondes.
+              </div>
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              Les ressources du groupe sont positionnées sous la barre de
+              navigation, en haut à gauche de l'écran.
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              Certaines ressources, telles que l'Inspiration noble du Souverain
+              ou le Tranchant furieux du Lansquenet, sont désormais affichées
+              sur la fiche de personnage sous forme de jauge, sous les points de
+              vie et les dés de vie.
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              Il est désormais possible de déplacer un Token en positionnant des
+              repères. Pour cela, maintenez CTRL tout en déplaçant votre Token à
+              plusieurs endroits, puis validez en relâchant CTRL. Votre Token
+              suivra alors tous les repères placés pour se rendre jusqu'à sa
+              destination.
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">Les portes sont désormais animées.</div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              En combat, un anneau entoure désormais le Token dont c'est le
+              tour.
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              Le système de jeu, D&D5e, a été mis à jour (4.4.3 → 5.1.9).
+              <div class="note-expliquee">
+                Il s'agit d'une mise à jour majeure apportant la compatibilité
+                avec Foundry v13, ainsi que des fonctionnalités et correctifs
+                divers.
+              </div>
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              Lorsqu'un repos est déclenché par les MJ, une carte apparaît
+              désormais dans le Tchat, depuis laquelle les joueurs peuvent
+              démarrer ou redémarrer le processus de repos.
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              Le volet d'actions a été retiré à cause de son incompatibilité
+              avec la v13 ainsi que le manque de suivi du module par son auteur.
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              <strong
+                >Attaquer un ennemi avant le début du combat consomme désormais
+                la ressource de l’action utilisée, lors du premier tour de
+                combat.</strong
+              >
+              <div class="note-expliquee">
+                Ce changement est réalisé car l'assaut combiné des joueurs en
+                début de combat, si gratuit, est extrêmement puissant. Nous nous
+                alignons sur le système de Baldur's Gate 3, qui laisse la
+                possibilité de réaliser un assaut combiné sans que cela ne soit
+                trop déséquilibré en faveur des joueurs.
+              </div>
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              La portée des armes est désormais indiquée autour du token lorsque
+              celles-ci sont survolées dans l'interface BG3.
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              Deux nouveaux thèmes, "V13" et "Union", ont été ajoutés pour
+              l'interface BG3.
+              <div class="note-expliquee">
+                Ils sont principalement basés sur les nouvelles couleurs de
+                l'interface.
+              </div>
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              Les armes forgées en version légère ou lourde disposent désormais
+              d'un encadré récapitulant les effets associés.
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              Des mannequins d'entraînement ont été ajoutés aux chambres des
+              personnages dans le Bastion. Merci Greg !
+              <div class="note-expliquee">
+                Ils peuvent être retirés sur demande.
+              </div>
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">Les trucs et astuces ont été révisés.</div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              L'apparence du menu <strong>Quêtes et journaux</strong> a été
+              modifiée pour se rapprocher de celle du Codex.
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">La chronologie a été mise à jour.</div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="patch-section" id="codex">
+        <h2 class="patch-titre">
+          <img src="../assets/images/notes-big.png" class="image image-h2" />
+          Codex
+        </h2>
+        <ul class="image-list">
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              Une musique a été ajoutée à la catégorie "Événements".
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              L'album de la piste musicale en cours de lecture est désormais
+              indiqué sous le nom de l'artiste.
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              La description de l'aptitude <strong>Tir de pistage</strong> du
+              Vagabond a été actualisée.
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="patch-section" id="problemes-resolus">
+        <h2 class="patch-titre">
+          <img src="../assets/images/notes-big.png" class="image image-h2" />
+          Problèmes résolus
+        </h2>
+        <ul class="image-list">
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              Les barres BG3 d'Elsa sont à nouveau fonctionnelles, cependant,
+              elles étaient corrompues et ont de ce fait dû être réinitialisées.
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              Les joueurs peuvent désormais correctement placer des meubles dans
+              le Bastion.
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              L'aptitude <strong>Négociation</strong> du Souverain fonctionne
+              désormais comme prévu lorsqu'elle est utilisée par un joueur.
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              Le champ permettant d'éditer le nombre d'emplacements d'essence
+              est à nouveau affiché sur les fiches d'objets de type "Tidy5e".
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              Le champ permettant d'éditer la valeur de confort est à nouveau
+              affiché sur les fiches d'objets de type "Tidy5e".
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="patch-section" id="problemes-connus">
+        <h2 class="patch-titre">
+          <img src="../assets/images/notes-big.png" class="image image-h2" />
+          Problèmes connus
+        </h2>
+        <ul class="image-list">
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              Un message d'erreur sans incidence peut apparaître lors de la
+              connexion initiale au serveur.
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              Il se peut que certains de vos paramètres aient été réinitialisé.
+              Nous nous excusons pour la gêne occasionnée.
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              Les personnalisations des fiches de personnages (couleurs, etc)
+              sont manquantes.
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              L'aptitude <strong>Assaut paralysant</strong> applique son effet
+              correctement, mais l'animation de l'effet est manquante.
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              Des ralentissements anormaux de Foundry ont été constatés côté MJ,
+              merci de nous signaler si ils se produisent également côté
+              joueurs.
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="patch-section" id="mj">
+        <h2 class="patch-titre">
+          <img src="../assets/images/notes-big.png" class="image image-h2" />
+          MJ
+        </h2>
+        <ul class="image-list">
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              Il est désormais possible d'alterner entre la barre BG3 des
+              joueurs et celle des MJ même si un Token est sélectionné.
+            </div>
+          </li>
+          <li>
+            <img src="../assets/images/notes-medium.png" class="image" />
+            <div class="image-texte">
+              Un message de confirmation est désormais affiché lors de la
+              suppression d'un Token en combat.
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <button
+      id="backToTop"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      aria-label="Retour en haut"
+    >
+      <i class="fa-solid fa-arrow-up"></i> Retour en haut
+    </button>
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <img id="lightbox-img" src="" alt="Portrait" />
     </div>
-  </header>
 
-  <nav class="nav-magique">
-  <a href="/">Accueil</a>
-  <a href="/notes/">Patch Notes</a>
-  <a href="/resumes/">Résumés</a>
-  <a href="/moments.html">Moments</a>
-  <a href="/univers/">Univers</a>
-  <a href="/regles/">Règles</a>
-  <a href="/musique.html">Musiques</a>
-  <a href="/ressources/">Ressources</a>
-  <a href="/credits.html">Crédits</a>
-</nav>
+    <footer>
+      <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+    </footer>
 
-<main class="accueil">
-    
-<section class="patch-section" id="systeme">
-  <h2 class="patch-titre">
-    <img src="../assets/images/notes-big.png" class="image image-h2">
-    Système
-  </h2>
-  <ul class="image-list">
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Foundry VTT a été mis à jour (12.343 → 13.348). Il s'agit d'une mise à jour majeure qui apporte une large refonte de l'interface utilisateur. À cette occasion, le serveur sera ouvert plus tôt qu'habituellement pour vous permettre de vous familiariser avec cette nouvelle interface.<div class="note-expliquee">Bien que toutes les précautions aient été prises pour assurer une migration sans accroc, il se peut toujours que nous ayons manqué certains problèmes, notamment ceux difficiles à repérer en environnement de dev.</div></div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Il est possible de configurer les éléments de la nouvelle interface dans <strong>Configurer les paramètres</strong> → <strong>Core</strong> → <strong>Configurer l'interface</strong>.</div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le calendrier est désormais positionné dans un bandeau au sommet de l'écran et est géré par un système totalement différent du précédent.<div class="note-expliquee">L'affichage de l'heure est désormais mis à jour toutes les 10 secondes.</div></div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les ressources du groupe sont positionnées sous la barre de navigation, en haut à gauche de l'écran.</div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Certaines ressources, telles que l'Inspiration noble du Souverain ou le Tranchant furieux du Lansquenet, sont désormais affichées sur la fiche de personnage sous forme de jauge, sous les points de vie et les dés de vie.</div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Il est désormais possible de déplacer un Token en positionnant des repères. Pour cela, maintenez CTRL tout en déplaçant votre Token à plusieurs endroits, puis validez en relâchant CTRL. Votre Token suivra alors tous les repères placés pour se rendre jusqu'à sa destination.</div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les portes sont désormais animées.</div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">En combat, un anneau entoure désormais le Token dont c'est le tour.</div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le système de jeu, D&D5e, a été mis à jour (4.4.3 → 5.1.9).<div class="note-expliquee">Il s'agit d'une mise à jour majeure apportant la compatibilité avec Foundry v13, ainsi que des fonctionnalités et correctifs divers.</div></div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Lorsqu'un repos est déclenché par les MJ, une carte apparaît désormais dans le Tchat, depuis laquelle les joueurs peuvent démarrer ou redémarrer le processus de repos.</div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le volet d'actions a été retiré à cause de son incompatibilité avec la v13 ainsi que le manque de suivi du module par son auteur.</div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte"><strong>Attaquer un ennemi avant le début du combat consomme désormais la ressource de l’action utilisée, lors du premier tour de combat.</strong><div class="note-expliquee">Ce changement est réalisé car l'assaut combiné des joueurs en début de combat, si gratuit, est extrêmement puissant. Nous nous alignons sur le système de Baldur's Gate 3, qui laisse la possibilité de réaliser un assaut combiné sans que cela ne soit trop déséquilibré en faveur des joueurs.</div></div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">La portée des armes est désormais indiquée autour du token lorsque celles-ci sont survolées dans l'interface BG3.</div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Deux nouveaux thèmes, "V13" et "Union", ont été ajoutés pour l'interface BG3.<div class="note-expliquee">Ils sont principalement basés sur les nouvelles couleurs de l'interface.</div></div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les armes forgées en version légère ou lourde disposent désormais d'un encadré récapitulant les effets associés.</div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Des mannequins d'entraînement ont été ajoutés aux chambres des personnages dans le Bastion. Merci Greg !<div class="note-expliquee">Ils peuvent être retirés sur demande.</div></div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les trucs et astuces ont été révisés.</div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'apparence du menu <strong>Quêtes et journaux</strong> a été modifiée pour se rapprocher de celle du Codex.</div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">La chronologie a été mise à jour.</div></li>
-  </ul></section>
-
-<section class="patch-section" id="codex">
-  <h2 class="patch-titre">
-    <img src="../assets/images/notes-big.png" class="image image-h2">
-    Codex
-  </h2>
-  <ul class="image-list">
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Une musique a été ajoutée à la catégorie "Événements".</div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'album de la piste musicale en cours de lecture est désormais indiqué sous le nom de l'artiste.</div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">La description de l'aptitude <strong>Tir de pistage</strong> du Vagabond a été actualisée.</div></li>
-  </ul></section>
-
-<section class="patch-section" id="problemes-resolus">
-  <h2 class="patch-titre">
-    <img src="../assets/images/notes-big.png" class="image image-h2">
-    Problèmes résolus
-  </h2>
-  <ul class="image-list">
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les barres BG3 d'Elsa sont à nouveau fonctionnelles, cependant, elles étaient corrompues et ont de ce fait dû être réinitialisées.</div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les joueurs peuvent désormais correctement placer des meubles dans le Bastion.</div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'aptitude <strong>Négociation</strong> du Souverain fonctionne désormais comme prévu lorsqu'elle est utilisée par un joueur.</div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le champ permettant d'éditer le nombre d'emplacements d'essence est à nouveau affiché sur les fiches d'objets de type "Tidy5e".</div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Le champ permettant d'éditer la valeur de confort est à nouveau affiché sur les fiches d'objets de type "Tidy5e".</div></li>
-  </ul></section>
-
-<section class="patch-section" id="problemes-connus">
-  <h2 class="patch-titre">
-    <img src="../assets/images/notes-big.png" class="image image-h2">
-    Problèmes connus
-  </h2>
-  <ul class="image-list">
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Un message d'erreur sans incidence peut apparaître lors de la connexion initiale au serveur.</div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Il se peut que certains de vos paramètres aient été réinitialisé. Nous nous excusons pour la gêne occasionnée.</div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Les personnalisations des fiches de personnages (couleurs, etc) sont manquantes.</div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">L'aptitude <strong>Assaut paralysant</strong> applique son effet correctement, mais l'animation de l'effet est manquante.</div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Des ralentissements anormaux de Foundry ont été constatés côté MJ, merci de nous signaler si ils se produisent également côté joueurs.</div></li>
-  </ul></section>
-
-<section class="patch-section" id="mj">
-  <h2 class="patch-titre">
-    <img src="../assets/images/notes-big.png" class="image image-h2">
-    MJ
-  </h2>
-  <ul class="image-list">
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Il est désormais possible d'alterner entre la barre BG3 des joueurs et celle des MJ même si un Token est sélectionné.</div></li>
-    <li><img src="../assets/images/notes-medium.png" class="image"><div class="image-texte">Un message de confirmation est désormais affiché lors de la suppression d'un Token en combat.</div></li>
-  </ul></section>
-  </main>
-
-  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button>
-  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img" src="" alt="Portrait" />
-  </div>
-
-  <footer>
-    <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
-</footer>
-
-  <script>
-  document.addEventListener("DOMContentLoaded", function() {
-        const navContainer = document.querySelector('.patch-nav');
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navContainer = document.querySelector(".patch-nav");
         const navLinks = document.querySelectorAll('.patch-nav a[href^="#"]');
         const sections = [...document.querySelectorAll(".patch-section")];
 
         let lastActive = null;
-        const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const id = entry.target.getAttribute("id");
-            const activeLink = [...navLinks].find(link => link.getAttribute("href") === `#${id}`);
-            if (activeLink && activeLink !== lastActive) {
-              navLinks.forEach(link => link.classList.remove("active"));
-              activeLink.classList.add("active");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const id = entry.target.getAttribute("id");
+                const activeLink = [...navLinks].find(
+                  (link) => link.getAttribute("href") === `#${id}`
+                );
+                if (activeLink && activeLink !== lastActive) {
+                  navLinks.forEach((link) => link.classList.remove("active"));
+                  activeLink.classList.add("active");
 
-              // Scroll l'élément actif dans le menu si partiellement masqué
-              const linkTop = activeLink.getBoundingClientRect().top;
-              const navTop = navContainer.getBoundingClientRect().top;
-              const linkBottom = linkTop + activeLink.offsetHeight;
-              const navBottom = navTop + navContainer.offsetHeight;
+                  // Scroll l'élément actif dans le menu si partiellement masqué
+                  const linkTop = activeLink.getBoundingClientRect().top;
+                  const navTop = navContainer.getBoundingClientRect().top;
+                  const linkBottom = linkTop + activeLink.offsetHeight;
+                  const navBottom = navTop + navContainer.offsetHeight;
 
-              if (linkTop < navTop || linkBottom > navBottom) {
-                activeLink.scrollIntoView({ behavior: "smooth", block: "center" });
+                  if (linkTop < navTop || linkBottom > navBottom) {
+                    activeLink.scrollIntoView({
+                      behavior: "smooth",
+                      block: "center",
+                    });
+                  }
+
+                  lastActive = activeLink;
+                }
               }
-
-              lastActive = activeLink;
-            }
+            });
+          },
+          {
+            rootMargin: "-20% 0px -30% 0px",
+            threshold: 0.1,
           }
-        });
-      }, {
-        rootMargin: "-20% 0px -30% 0px",
-        threshold: 0.1
-      });
+        );
 
-     
-     sections.forEach(section => observer.observe(section));
-     });
-</script>
-  <script src="../scripts/backToTop.js"></script>
-  <script src="../scripts/particles.js"></script>
-  <script src="../scripts/lightbox.js"></script>
-</body>
+        sections.forEach((section) => observer.observe(section));
+      });
+    </script>
+    <script src="../scripts/backToTop.js"></script>
+    <script src="../scripts/particles.js"></script>
+    <script src="../scripts/lightbox.js"></script>
+  </body>
 </html>

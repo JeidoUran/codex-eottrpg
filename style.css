@@ -71,7 +71,7 @@ h6,
 .patch-titre,
 .classe-nom,
 .codex-header h1,
-.nav-magique a,
+.nav-bar a,
 .button,
 .btn-lu,
 .fixed-header-links,
@@ -184,7 +184,7 @@ a:hover {
   margin-bottom: 1rem;
 }
 
-.nav-magique {
+.nav-bar {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
@@ -197,18 +197,18 @@ a:hover {
   margin-top: 1rem;
 }
 
-.nav-magique a {
+.nav-bar a {
   color: #88c0a9;
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s;
 }
 
-.nav-magique a:hover {
+.nav-bar a:hover {
   text-shadow: 0 0 6px #88c0a9;
 }
 
-.nav-magique a::before {
+.nav-bar a::before {
   content: none;
 }
 

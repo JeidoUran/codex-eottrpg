@@ -1,64 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Dragoon | Codex - Etrian Odyssey TTRPG</title>
-    <meta name="description" content="Sentinelle cuirassée, le Dragoon encaisse les coups pour ses alliés et élimine les menaces grâce à son bouclier massif et son canon dorsal.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../../favicon.png" type="image/png">
-    <link rel="stylesheet" href="../../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta
+      name="description"
+      content="Sentinelle cuirassée, le Dragoon encaisse les coups pour ses alliés et élimine les menaces grâce à son bouclier massif et son canon dorsal."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <canvas id="particles"></canvas> 
-<div class="class-nav">
-  <a href="#details" class="section-link">Détails</a>
-  <a href="#aptitudes" class="section-link">Aptitudes</a>
-  <a href="#corps-a-corps" class="sub-link">Corps à corps</a>
-  <a href="#garde-de-ligne" class="sub-link">Garde de ligne</a>
-  <a href="#bunker-leurre" class="sub-link">Bunker leurre</a>
-  <a href="#garde-curative" class="sub-link">Garde curative</a>
-  <a href="#style-de-combat" class="sub-link">Style de combat</a>
-  <a href="#canon-monte" class="sub-link">Canon monté</a>
-  <a href="#garde-de-mana" class="sub-link">Garde de Mana</a>
-  <a href="#auto-bunker" class="sub-link">Auto-bunker</a>
-  <a href="#mur-barrage" class="sub-link">Mur barrage</a>
-  <a href="#tourelle-leurre" class="sub-link">Tourelle leurre</a>
-  <a href="#exercice-de-terrain" class="sub-link">Exercice de terrain</a>
-  <a href="#garde-partagee" class="sub-link">Garde partagée</a>
-  <a href="#conditionnement-de-soldat" class="sub-link">Conditionnement de soldat</a>
-  <a href="#garde-de-recuperation" class="sub-link">Garde de récupération</a>
-  <a href="#formation-defensive" class="sub-link">Formation défensive</a>
-  <a href="#garde-totale" class="sub-link">Garde totale</a>
-  <a href="#specialisations" class="section-link">Spécialisations</a>
-  <a href="#porteur-de-canon" class="section-link">Porteur de Canon</a>
-  <a href="#maitrise-du-canon" class="sub-link">Maîtrise du canon</a>
-  <a href="#preparation-d-artillerie" class="sub-link">Préparation d'artillerie</a>
-  <a href="#canon-buster" class="sub-link">Canon Buster</a>
-  <a href="#porteur-de-bouclier" class="section-link">Porteur de Bouclier</a>
-  <a href="#expertise-en-defense" class="sub-link">Expertise en défense</a>
-  <a href="#contre-garde" class="sub-link">Contre-garde</a>
-  <a href="#force-du-dragon" class="sub-link">Force du dragon</a>
-  <a href="#tab-general" class="section-link">Progression par niveau</a>
-</div> <header class="codex-header">
+    <canvas id="particles"></canvas>
+    <div class="class-nav">
+      <a href="#details" class="section-link">Détails</a>
+      <a href="#aptitudes" class="section-link">Aptitudes</a>
+      <a href="#corps-a-corps" class="sub-link">Corps à corps</a>
+      <a href="#garde-de-ligne" class="sub-link">Garde de ligne</a>
+      <a href="#bunker-leurre" class="sub-link">Bunker leurre</a>
+      <a href="#garde-curative" class="sub-link">Garde curative</a>
+      <a href="#style-de-combat" class="sub-link">Style de combat</a>
+      <a href="#canon-monte" class="sub-link">Canon monté</a>
+      <a href="#garde-de-mana" class="sub-link">Garde de Mana</a>
+      <a href="#auto-bunker" class="sub-link">Auto-bunker</a>
+      <a href="#mur-barrage" class="sub-link">Mur barrage</a>
+      <a href="#tourelle-leurre" class="sub-link">Tourelle leurre</a>
+      <a href="#exercice-de-terrain" class="sub-link">Exercice de terrain</a>
+      <a href="#garde-partagee" class="sub-link">Garde partagée</a>
+      <a href="#conditionnement-de-soldat" class="sub-link"
+        >Conditionnement de soldat</a
+      >
+      <a href="#garde-de-recuperation" class="sub-link"
+        >Garde de récupération</a
+      >
+      <a href="#formation-defensive" class="sub-link">Formation défensive</a>
+      <a href="#garde-totale" class="sub-link">Garde totale</a>
+      <a href="#specialisations" class="section-link">Spécialisations</a>
+      <a href="#porteur-de-canon" class="section-link">Porteur de Canon</a>
+      <a href="#maitrise-du-canon" class="sub-link">Maîtrise du canon</a>
+      <a href="#preparation-d-artillerie" class="sub-link"
+        >Préparation d'artillerie</a
+      >
+      <a href="#canon-buster" class="sub-link">Canon Buster</a>
+      <a href="#porteur-de-bouclier" class="section-link"
+        >Porteur de Bouclier</a
+      >
+      <a href="#expertise-en-defense" class="sub-link">Expertise en défense</a>
+      <a href="#contre-garde" class="sub-link">Contre-garde</a>
+      <a href="#force-du-dragon" class="sub-link">Force du dragon</a>
+      <a href="#tab-general" class="section-link">Progression par niveau</a>
+    </div>
+    <header class="codex-header">
       <div class="illustration-wrapper">
-      
-          <img src="../../assets/images/class-art/dragoon1.png" alt="Illustration Dragoon" class="illustration-classe" onclick="openLightbox(this.src)">
-        
+        <img
+          src="../../assets/images/class-art/dragoon1.png"
+          alt="Illustration Dragoon"
+          class="illustration-classe"
+          onclick="openLightbox(this.src)"
+        />
 
-          <img src="../../assets/images/class-art/dragoon2.png" alt="Illustration Dragoon" class="illustration-classe" onclick="openLightbox(this.src)">
-         
-        </div>
-        <h1>
-          <img src="../../assets/images/class-icons/dragoon.png" class="image class-icon"> Dragoon
-        </h1>
-        <p class="sous-titre">L’archive vivante des Égarés</p>
-        <div class="fixed-header-links">
-          <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Index des classes</a>
-        </div>
+        <img
+          src="../../assets/images/class-art/dragoon2.png"
+          alt="Illustration Dragoon"
+          class="illustration-classe"
+          onclick="openLightbox(this.src)"
+        />
+      </div>
+      <h1>
+        <img
+          src="../../assets/images/class-icons/dragoon.png"
+          class="image class-icon"
+        />
+        Dragoon
+      </h1>
+      <p class="sous-titre">L’archive vivante des Égarés</p>
+      <div class="fixed-header-links">
+        <a
+          href="index.html"
+          class="carte-lien"
+          style="display: inline-block; max-width: 300px"
+          ><i class="fa-solid fa-arrow-left"></i> Index des classes</a
+        >
+      </div>
     </header>
 
-    <nav class="nav-magique">
+    <nav class="nav-bar">
       <a href="/">Accueil</a>
       <a href="../../notes/">Patch Notes</a>
       <a href="../../resumes/">Résumés</a>
@@ -72,359 +105,941 @@
 
     <main class="accueil">
       <section class="intro-collapsible click" id="intro">
-        <p>Un soldat portant un bouclier, revêtu d'une armure lourde et portant un canon attaché à son dos. Les Dragoons consacrent leur vie à la protection de leurs alliés, que ce soit par la protection d'un bouclier imposant ou par l'annihilation des menaces avec leur puissant canon. Avant tout, les Dragoons sont des soldats, et ils proviennent de divers milieux, allant de la noblesse guerrière avide de gloire aux simples habitants des villes préoccupés par la protection de leurs amis qu'ils chérissent. Quelles que soient leurs origines, les Dragoons sont toujours prêts à protéger leurs alliés des dangers. </p>
-        <button class="toggle-intro" onclick="toggleIntro()">Afficher la suite</button>
+        <p>
+          Un soldat portant un bouclier, revêtu d'une armure lourde et portant
+          un canon attaché à son dos. Les Dragoons consacrent leur vie à la
+          protection de leurs alliés, que ce soit par la protection d'un
+          bouclier imposant ou par l'annihilation des menaces avec leur puissant
+          canon. Avant tout, les Dragoons sont des soldats, et ils proviennent
+          de divers milieux, allant de la noblesse guerrière avide de gloire aux
+          simples habitants des villes préoccupés par la protection de leurs
+          amis qu'ils chérissent. Quelles que soient leurs origines, les
+          Dragoons sont toujours prêts à protéger leurs alliés des dangers.
+        </p>
+        <button class="toggle-intro" onclick="toggleIntro()">
+          Afficher la suite
+        </button>
       </section>
       <section class="patch-section">
         <h2 class="patch-titre" id="details">
-          <img src="../../assets/images/notes-big.png" class="image image-h2"> Détails de la classe
+          <img src="../../assets/images/notes-big.png" class="image image-h2" />
+          Détails de la classe
         </h2>
-        <ul class="image-list"> <li><div class="image-texte"><strong><img src="../../assets/images/class-details/health.png" class="image details-icon"> Points de vie :</strong> 1d12 + modificateur de Constitution par niveau de Dragoon</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/class-details/hit-dice.png" class="image details-icon"> Dés de vie :</strong> 1d12 par niveau de Dragoon</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/class-details/saving-throw-dc.png" class="image details-icon"> DD des jets de sauvegarde :</strong> 8 + bonus de maîtrise + modificateur de Dextérité</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/class-details/masteries.png" class="image details-icon"> Maîtrises :</strong> Armes à feu, Canons ; Armures moyennes, Armures lourdes ; Boucliers ; Kit de construction de bunker</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/class-details/saving-throw.png" class="image details-icon"> Jets de sauvegarde :</strong> Dextérité, Constitution</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/class-details/skills.png" class="image details-icon"> Compétences :</strong> Choisissez 2 parmi Athlétisme, Acrobaties, Nature, Intimidation, Dressage, Médecine, Persuasion, Tromperie et Survie</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/class-details/starting-equipment.png" class="image details-icon"> Équipement de départ :</strong> Une arme maîtrisée, une armure moyenne, un bouclier, un kit de construction de bunker, un sac d'explorateur</div></li> </ul>
+        <ul class="image-list">
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/health.png"
+                  class="image details-icon"
+                />
+                Points de vie :</strong
+              >
+              1d12 + modificateur de Constitution par niveau de Dragoon
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/hit-dice.png"
+                  class="image details-icon"
+                />
+                Dés de vie :</strong
+              >
+              1d12 par niveau de Dragoon
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/saving-throw-dc.png"
+                  class="image details-icon"
+                />
+                DD des jets de sauvegarde :</strong
+              >
+              8 + bonus de maîtrise + modificateur de Dextérité
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/masteries.png"
+                  class="image details-icon"
+                />
+                Maîtrises :</strong
+              >
+              Armes à feu, Canons ; Armures moyennes, Armures lourdes ;
+              Boucliers ; Kit de construction de bunker
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/saving-throw.png"
+                  class="image details-icon"
+                />
+                Jets de sauvegarde :</strong
+              >
+              Dextérité, Constitution
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/skills.png"
+                  class="image details-icon"
+                />
+                Compétences :</strong
+              >
+              Choisissez 2 parmi Athlétisme, Acrobaties, Nature, Intimidation,
+              Dressage, Médecine, Persuasion, Tromperie et Survie
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/starting-equipment.png"
+                  class="image details-icon"
+                />
+                Équipement de départ :</strong
+              >
+              Une arme maîtrisée, une armure moyenne, un bouclier, un kit de
+              construction de bunker, un sac d'explorateur
+            </div>
+          </li>
+        </ul>
       </section>
       <section class="patch-section">
-          <div class="aptitude-search-container">
-            <input type="text" id="search-bar" placeholder="Rechercher une aptitude ou un sort..." />
-          </div>
+        <div class="aptitude-search-container">
+          <input
+            type="text"
+            id="search-bar"
+            placeholder="Rechercher une aptitude ou un sort..."
+          />
+        </div>
         <div class="toggle-section">
           <h2 class="patch-titre" id="aptitudes">
-            <img src="../../assets/images/notes-big.png" class="image image-h2"> Aptitudes de classe <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+            <img
+              src="../../assets/images/notes-big.png"
+              class="image image-h2"
+            />
+            Aptitudes de classe
+            <button class="toggle-button" onclick="toggleSection(this)">
+              ▲
+            </button>
           </h2>
         </div>
         <div class="collapsible-content expanded">
-          <div class="patch-list"> 
-  <article id="corps-a-corps">
-  <h3>
-    <img src="../../assets/images/skills-icons/dragoon/close-quarters.png" class="image skill-icon">
-    Corps à corps
-    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-  </h3>
-    <p>La pénalité pour attaquer avec une arme à distance alors qu'un ennemi est à moins de 1.5 mètres ne s'applique plus au Dragoon.</p>
-  </article>
+          <div class="patch-list">
+            <article id="corps-a-corps">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/dragoon/close-quarters.png"
+                  class="image skill-icon"
+                />
+                Corps à corps
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                La pénalité pour attaquer avec une arme à distance alors qu'un
+                ennemi est à moins de 1.5 mètres ne s'applique plus au Dragoon.
+              </p>
+            </article>
 
-  <article id="garde-de-ligne">
-  <h3>
-    <img src="../../assets/images/skills-icons/dragoon/line-guard.png" class="image skill-icon">
-    Garde de ligne
-    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-  </h3>
-    <p>En tant qu'action, le Dragoon peut préparer son bouclier. Le Dragoon peut réduire jusqu'à 3 instances de dégâts contondants, perforants ou tranchants de son modificateur de Constitution + la moitié de son niveau, arrondi à l’inférieur. Il ne peut protéger que les créatures à moins de 3 mètres de lui, ne peut réduire les dégâts en dessous de 1, et l'effet dure jusqu'au début de son prochain tour.</p>
-  </article>
+            <article id="garde-de-ligne">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/dragoon/line-guard.png"
+                  class="image skill-icon"
+                />
+                Garde de ligne
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                En tant qu'action, le Dragoon peut préparer son bouclier. Le
+                Dragoon peut réduire jusqu'à 3 instances de dégâts contondants,
+                perforants ou tranchants de son modificateur de Constitution +
+                la moitié de son niveau, arrondi à l’inférieur. Il ne peut
+                protéger que les créatures à moins de 3 mètres de lui, ne peut
+                réduire les dégâts en dessous de 1, et l'effet dure jusqu'au
+                début de son prochain tour.
+              </p>
+            </article>
 
-  <article id="bunker-leurre">
-  <h3>
-    <img src="../../assets/images/skills-icons/dragoon/decoy-bunker.png" class="image skill-icon">
-    Bunker leurre
-    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-  </h3>
-    <p>En tant qu'action, le Dragoon peut déployer et activer un bunker dans un espace non occupé à moins de 1.5 mètres. Le bunker a une Défense de 10, a 15 points de vie, et impose un malus de -1 aux jets de précision contre les cibles amicales à moins de 1.5 mètres de lui qui ne sont pas le bunker lui-même. Les bunkers peuvent être construits à l'aide du kit de construction de bunker, pendant 30 minutes pendant un repos court ou long, et 5 kg de ferraille, et un seul peut être détenu à la fois. Si un bunker a des points de vie restants, il peut être ramassé en utilisant une action et réparé à pleine vie en utilisant 10 minutes d'un repos court ou long et le kit de construction de bunker.</p>
-  </article>
+            <article id="bunker-leurre">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/dragoon/decoy-bunker.png"
+                  class="image skill-icon"
+                />
+                Bunker leurre
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                En tant qu'action, le Dragoon peut déployer et activer un bunker
+                dans un espace non occupé à moins de 1.5 mètres. Le bunker a une
+                Défense de 10, a 15 points de vie, et impose un malus de -1 aux
+                jets de précision contre les cibles amicales à moins de 1.5
+                mètres de lui qui ne sont pas le bunker lui-même. Les bunkers
+                peuvent être construits à l'aide du kit de construction de
+                bunker, pendant 30 minutes pendant un repos court ou long, et 5
+                kg de ferraille, et un seul peut être détenu à la fois. Si un
+                bunker a des points de vie restants, il peut être ramassé en
+                utilisant une action et réparé à pleine vie en utilisant 10
+                minutes d'un repos court ou long et le kit de construction de
+                bunker.
+              </p>
+            </article>
 
-  <article id="garde-curative">
-  <h3>
-    <img src="../../assets/images/skills-icons/dragoon/healing-guard.png" class="image skill-icon">
-    Garde curative
-    <span><img src="../../assets/images/action-costs/reaction.png" alt="Reaction" class="image action-icon">1 PA (Réaction)</span>
-  </h3>
-    <p>Lorsque le Dragoon est touché alors qu'il est sous l'effet d'une Garde, il peut utiliser sa réaction pour se soigner de 1d10 + son modificateur de Constitution points de vie. Cette aptitude peut être utilisée 3 fois par repos long.</p>
-  </article>
+            <article id="garde-curative">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/dragoon/healing-guard.png"
+                  class="image skill-icon"
+                />
+                Garde curative
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/reaction.png"
+                    alt="Reaction"
+                    class="image action-icon"
+                  />1 PA (Réaction)</span
+                >
+              </h3>
+              <p>
+                Lorsque le Dragoon est touché alors qu'il est sous l'effet d'une
+                Garde, il peut utiliser sa réaction pour se soigner de 1d10 +
+                son modificateur de Constitution points de vie. Cette aptitude
+                peut être utilisée 3 fois par repos long.
+              </p>
+            </article>
 
-  <article id="style-de-combat">
-  <h3>
-    <img src="../../assets/images/skills-icons/dragoon/combat-style.png" class="image skill-icon">
-    Style de combat
-    <span><img src="../../assets/images/action-costs/specialisation.png" alt="Specialisation" class="image action-icon">Spécialisation</span>
-  </h3>
-    <p>La maîtrise de l'Impérial sur les aspects physiques de sa lame cinétique augmente. Effectuez une attaque avec une lame cinétique. Gagnez 1d4 d'Offense sur l'attaque, et jusqu'à 2 créatures dans un rayon de 3 mètres de la première cible subissent 1d8 + modificateur de Force de dégâts de force.</p>
-  </article>
+            <article id="style-de-combat">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/dragoon/combat-style.png"
+                  class="image skill-icon"
+                />
+                Style de combat
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/specialisation.png"
+                    alt="Specialisation"
+                    class="image action-icon"
+                  />Spécialisation</span
+                >
+              </h3>
+              <p>
+                La maîtrise de l'Impérial sur les aspects physiques de sa lame
+                cinétique augmente. Effectuez une attaque avec une lame
+                cinétique. Gagnez 1d4 d'Offense sur l'attaque, et jusqu'à 2
+                créatures dans un rayon de 3 mètres de la première cible
+                subissent 1d8 + modificateur de Force de dégâts de force.
+              </p>
+            </article>
 
-  <article id="canon-monte">
-  <h3>
-    <img src="../../assets/images/skills-icons/dragoon/gunmount.png" class="image skill-icon">
-    Canon monté
-    <span><img src="../../assets/images/action-costs/combo-action.png" alt="Combo" class="image action-icon">1 PA (Action Combo)</span>
-  </h3>
-    <p>Si une aptitude de Garde a été utilisée lors du dernier tour du Dragoon, et que le Dragoon fait un jet d'attaque, il peut choisir de reproduire l'effet de la dernière aptitude de Garde utilisée en action combo ; le Dragoon gagne également 1d8 d’Offense jusqu'à la fin du tour.</p>
-  </article>
+            <article id="canon-monte">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/dragoon/gunmount.png"
+                  class="image skill-icon"
+                />
+                Canon monté
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/combo-action.png"
+                    alt="Combo"
+                    class="image action-icon"
+                  />1 PA (Action Combo)</span
+                >
+              </h3>
+              <p>
+                Si une aptitude de Garde a été utilisée lors du dernier tour du
+                Dragoon, et que le Dragoon fait un jet d'attaque, il peut
+                choisir de reproduire l'effet de la dernière aptitude de Garde
+                utilisée en action combo ; le Dragoon gagne également 1d8
+                d’Offense jusqu'à la fin du tour.
+              </p>
+            </article>
 
-  <article id="garde-de-mana">
-  <h3>
-    <img src="../../assets/images/skills-icons/dragoon/mana-guard.png" class="image skill-icon">
-    Garde de Mana
-    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-  </h3>
-    <p>En tant qu'action, le Dragoon peut projeter une barrière magique depuis son bouclier. Jusqu'au début de son prochain tour, le Dragoon peut réduire de moitié un certain nombre d'instances de dégâts de feu, de glace ou de foudre aux créatures dans un rayon de 12 mètres, jusqu'à son modificateur de Constitution.</p>
-  </article>
+            <article id="garde-de-mana">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/dragoon/mana-guard.png"
+                  class="image skill-icon"
+                />
+                Garde de Mana
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                En tant qu'action, le Dragoon peut projeter une barrière magique
+                depuis son bouclier. Jusqu'au début de son prochain tour, le
+                Dragoon peut réduire de moitié un certain nombre d'instances de
+                dégâts de feu, de glace ou de foudre aux créatures dans un rayon
+                de 12 mètres, jusqu'à son modificateur de Constitution.
+              </p>
+            </article>
 
-  <article id="auto-bunker">
-  <h3>
-    <img src="../../assets/images/skills-icons/dragoon/auto-bunker.png" class="image skill-icon">
-    Auto-bunker
-    <span><img src="../../assets/images/action-costs/bonus-action.png" alt="Bonus" class="image action-icon">1 PA (Action Bonus)</span>
-  </h3>
-    <p>Lors du premier tour de combat du Dragoon, il peut choisir de déployer un bunker ou une tourelle leurre en tant qu'action bonus.</p>
-  </article>
+            <article id="auto-bunker">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/dragoon/auto-bunker.png"
+                  class="image skill-icon"
+                />
+                Auto-bunker
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/bonus-action.png"
+                    alt="Bonus"
+                    class="image action-icon"
+                  />1 PA (Action Bonus)</span
+                >
+              </h3>
+              <p>
+                Lors du premier tour de combat du Dragoon, il peut choisir de
+                déployer un bunker ou une tourelle leurre en tant qu'action
+                bonus.
+              </p>
+            </article>
 
-  <article id="mur-barrage">
-  <h3>
-    <img src="../../assets/images/skills-icons/dragoon/barrage-wall.png" class="image skill-icon">
-    Mur barrage
-    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-  </h3>
-    <p>Le Dragoon décharge une rafale de munitions dans une zone à portée de son arme sans viser. Chaque créature dans un rayon de 3 mètres de ce point doit effectuer un jet de sauvegarde de Dextérité ou subir la moitié des dégâts de cette arme (arrondi à l’inférieur) et perdre de l’Offense à hauteur du modificateur de Dextérité du Dragoon pendant 1 tour. En cas de succès, elle ne subit aucun dégât et ne perd pas d'Offense.</p>
-  </article>
+            <article id="mur-barrage">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/dragoon/barrage-wall.png"
+                  class="image skill-icon"
+                />
+                Mur barrage
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                Le Dragoon décharge une rafale de munitions dans une zone à
+                portée de son arme sans viser. Chaque créature dans un rayon de
+                3 mètres de ce point doit effectuer un jet de sauvegarde de
+                Dextérité ou subir la moitié des dégâts de cette arme (arrondi à
+                l’inférieur) et perdre de l’Offense à hauteur du modificateur de
+                Dextérité du Dragoon pendant 1 tour. En cas de succès, elle ne
+                subit aucun dégât et ne perd pas d'Offense.
+              </p>
+            </article>
 
-  <article id="tourelle-leurre">
-  <h3>
-    <img src="../../assets/images/skills-icons/dragoon/decoy-turret.png" class="image skill-icon">
-    Tourelle leurre
-    <span><img src="../../assets/images/action-costs/bonus-action.png" alt="Bonus" class="image action-icon">1 PA (Action Bonus)</span>
-  </h3>
-    <p>Les bunkers disposent désormais de 25 points de vie. Le Dragoon peut effectuer une attaque à partir de l'emplacement du bunker en tant qu'action bonus, avec une portée de 18 mètres, comme s'il attaquait avec son arme actuelle ; si cette arme est de mêlée, il peut plutôt attaquer dans un rayon de 3 mètres de la tourelle.</p>
-  </article>
+            <article id="tourelle-leurre">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/dragoon/decoy-turret.png"
+                  class="image skill-icon"
+                />
+                Tourelle leurre
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/bonus-action.png"
+                    alt="Bonus"
+                    class="image action-icon"
+                  />1 PA (Action Bonus)</span
+                >
+              </h3>
+              <p>
+                Les bunkers disposent désormais de 25 points de vie. Le Dragoon
+                peut effectuer une attaque à partir de l'emplacement du bunker
+                en tant qu'action bonus, avec une portée de 18 mètres, comme
+                s'il attaquait avec son arme actuelle ; si cette arme est de
+                mêlée, il peut plutôt attaquer dans un rayon de 3 mètres de la
+                tourelle.
+              </p>
+            </article>
 
-  <article id="exercice-de-terrain">
-  <h3>
-    <img src="../../assets/images/skills-icons/dragoon/field-exercise.png" class="image skill-icon">
-    Exercice de terrain
-    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-  </h3>
-    <p>L'expérience des circonstances extrêmes permet au Dragoon de garantir la sécurité de leurs alliés tout en tentant de monter un camp dans des conditions dangereuses. Si le Dragoon aide à monter un campement, il ajoute diverses fonctionnalités pour le rendre plus sûr ; le groupe ne peut pas être pris en embuscade lorsqu'il utilise ce campement pour se reposer.</p>
-  </article>
+            <article id="exercice-de-terrain">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/dragoon/field-exercise.png"
+                  class="image skill-icon"
+                />
+                Exercice de terrain
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                L'expérience des circonstances extrêmes permet au Dragoon de
+                garantir la sécurité de leurs alliés tout en tentant de monter
+                un camp dans des conditions dangereuses. Si le Dragoon aide à
+                monter un campement, il ajoute diverses fonctionnalités pour le
+                rendre plus sûr ; le groupe ne peut pas être pris en embuscade
+                lorsqu'il utilise ce campement pour se reposer.
+              </p>
+            </article>
 
-  <article id="garde-partagee">
-  <h3>
-    <img src="../../assets/images/skills-icons/dragoon/divide-guard.png" class="image skill-icon">
-    Garde partagée
-    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-  </h3>
-    <p>Chaque fois qu'un allié à moins de 3 mètres du Dragoon subit des dégâts, un montant égal au modificateur de Constitution du Dragoon est redirigé vers le Dragoon. Le Dragoon peut choisir d’arrêter la Garde partagée jusqu'à la fin de son tour en tant qu'action libre à tout moment.</p>
-  </article>
+            <article id="garde-partagee">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/dragoon/divide-guard.png"
+                  class="image skill-icon"
+                />
+                Garde partagée
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                Chaque fois qu'un allié à moins de 3 mètres du Dragoon subit des
+                dégâts, un montant égal au modificateur de Constitution du
+                Dragoon est redirigé vers le Dragoon. Le Dragoon peut choisir
+                d’arrêter la Garde partagée jusqu'à la fin de son tour en tant
+                qu'action libre à tout moment.
+              </p>
+            </article>
 
-  <article id="conditionnement-de-soldat">
-  <h3>
-    <img src="../../assets/images/skills-icons/dragoon/soldier-conditioning.png" class="image skill-icon">
-    Conditionnement de soldat
-    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-  </h3>
-    <p>Le Dragoon, ayant été entraîné de manière intensive à se conditionner pour le terrain, ne souffre des effets de l'épuisement que d'un niveau inférieur à leur épuisement actuel ; s'il est de 1 ou moins, il ne subit aucun effet de l'épuisement. De plus, leur score de Constitution et leur Constitution maximale augmentent de 2.</p>
-  </article>
+            <article id="conditionnement-de-soldat">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/dragoon/soldier-conditioning.png"
+                  class="image skill-icon"
+                />
+                Conditionnement de soldat
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                Le Dragoon, ayant été entraîné de manière intensive à se
+                conditionner pour le terrain, ne souffre des effets de
+                l'épuisement que d'un niveau inférieur à leur épuisement actuel
+                ; s'il est de 1 ou moins, il ne subit aucun effet de
+                l'épuisement. De plus, leur score de Constitution et leur
+                Constitution maximale augmentent de 2.
+              </p>
+            </article>
 
-  <article id="garde-de-recuperation">
-  <h3>
-    <img src="../../assets/images/skills-icons/dragoon/recovery-guard.png" class="image skill-icon">
-    Garde de récupération
-    <span><img src="../../assets/images/action-costs/combo-action.png" alt="Combo" class="image action-icon">1 PA (Action Combo)</span>
-  </h3>
-    <p>Lorsque le Dragoon active une aptitude de Garde, il peut utiliser une action combo pour soigner 2 créatures à moins de 12 mètres de lui d'une affliction les affectant qui n'est pas un lien, à terre, agrippé ou de l’épuisement. Il peut activer cette aptitude un nombre de fois égal à leur modificateur de Constitution par repos long.</p>
-  </article>
+            <article id="garde-de-recuperation">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/dragoon/recovery-guard.png"
+                  class="image skill-icon"
+                />
+                Garde de récupération
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/combo-action.png"
+                    alt="Combo"
+                    class="image action-icon"
+                  />1 PA (Action Combo)</span
+                >
+              </h3>
+              <p>
+                Lorsque le Dragoon active une aptitude de Garde, il peut
+                utiliser une action combo pour soigner 2 créatures à moins de 12
+                mètres de lui d'une affliction les affectant qui n'est pas un
+                lien, à terre, agrippé ou de l’épuisement. Il peut activer cette
+                aptitude un nombre de fois égal à leur modificateur de
+                Constitution par repos long.
+              </p>
+            </article>
 
-  <article id="formation-defensive">
-  <h3>
-    <img src="../../assets/images/skills-icons/dragoon/defence-form.png" class="image skill-icon">
-    Formation défensive
-    <span><img src="../../assets/images/action-costs/reaction.png" alt="Reaction" class="image action-icon">1 PA (Réaction)</span>
-  </h3>
-    <p>Le Dragoon peut utiliser sa réaction pour imposer un désavantage sur un jet d'attaque contre une créature à moins de 1.5 mètres d'un bunker.</p>
-  </article>
+            <article id="formation-defensive">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/dragoon/defence-form.png"
+                  class="image skill-icon"
+                />
+                Formation défensive
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/reaction.png"
+                    alt="Reaction"
+                    class="image action-icon"
+                  />1 PA (Réaction)</span
+                >
+              </h3>
+              <p>
+                Le Dragoon peut utiliser sa réaction pour imposer un désavantage
+                sur un jet d'attaque contre une créature à moins de 1.5 mètres
+                d'un bunker.
+              </p>
+            </article>
 
-  <article id="garde-totale">
-  <h3>
-    <img src="../../assets/images/skills-icons/dragoon/full-guard.png" class="image skill-icon">
-    Garde totale
-    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-  </h3>
-    <p>Le Dragoon peut utiliser sa réaction pour imposer un désavantage sur un jet d'attaque contre une créature à moins de 1.5 mètres d'un bunker.</p>
-  </article> </div>
+            <article id="garde-totale">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/dragoon/full-guard.png"
+                  class="image skill-icon"
+                />
+                Garde totale
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                Le Dragoon peut utiliser sa réaction pour imposer un désavantage
+                sur un jet d'attaque contre une créature à moins de 1.5 mètres
+                d'un bunker.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
       <h2 class="patch-titre" id="specialisations">
-        <img src="../../assets/images/notes-big.png" class="image image-h2"> Spécialisations
+        <img src="../../assets/images/notes-big.png" class="image image-h2" />
+        Spécialisations
       </h2>
-    
-  <section class="patch-section">
-  <div class="toggle-section">
-    <h2 class="patch-titre" id="porteur-de-canon">
-      <img src="../../assets/images/subclass-icons/dragoon/cannon-bearer.png" class="image class-icon">
-      Porteur de Canon
-      <button class="toggle-button" onclick="toggleSection(this)">▲</button>
-    </h2>
-    </div>
-    <div class="collapsible-content expanded">
-    <div class="patch-list">
-      
-        <article id="maitrise-du-canon">
-        <h3>
-          <img src="../../assets/images/skills-icons/dragoon/cannon-mastery.png" class="image skill-icon">
-          Maîtrise du canon
-          <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-        </h3>
-          <p>L'Offense du Dragoon augmente de 1d6 lorsqu'il attaque avec un fusil ou un canon.</p>
-        </article>
 
-        <article id="preparation-d-artillerie">
-        <h3>
-          <img src="../../assets/images/skills-icons/dragoon/prep-artillery.png" class="image skill-icon">
-          Préparation d'artillerie
-          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-        </h3>
-          <p>En tant qu'action, le Dragoon peut préparer son canon pour tirer. La prochaine attaque effectuée par le Dragoon bénéficie d'un bonus supplémentaire de +2 pour toucher, et le Dragoon lance deux fois les dés de dégâts.</p>
-        </article>
+      <section class="patch-section">
+        <div class="toggle-section">
+          <h2 class="patch-titre" id="porteur-de-canon">
+            <img
+              src="../../assets/images/subclass-icons/dragoon/cannon-bearer.png"
+              class="image class-icon"
+            />
+            Porteur de Canon
+            <button class="toggle-button" onclick="toggleSection(this)">
+              ▲
+            </button>
+          </h2>
+        </div>
+        <div class="collapsible-content expanded">
+          <div class="patch-list">
+            <article id="maitrise-du-canon">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/dragoon/cannon-mastery.png"
+                  class="image skill-icon"
+                />
+                Maîtrise du canon
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                L'Offense du Dragoon augmente de 1d6 lorsqu'il attaque avec un
+                fusil ou un canon.
+              </p>
+            </article>
 
-        <article id="canon-buster">
-        <h3>
-          <img src="../../assets/images/skills-icons/dragoon/buster-cannon.png" class="image skill-icon">
-          Canon Buster
-          <span><img src="../../assets/images/action-costs/heavy-action.png" alt="Heavy" class="image action-icon">3 PA (Action Complexe)</span>
-        </h3>
-          <p>En tant qu'action complexe, le Dragoon peut cibler une créature dans un rayon de 18 mètres et préparer son canon. Au début de son prochain tour, si cette cible est toujours à moins de 18 mètres, effectuez une attaque à distance contre cette cible, infligeant 2d10 + modificateur de Dextérité de dégâts contondants et 1d10 de dégâts de feu.</p>
-        </article>
-    </div>
-    </div>
-  </section>
+            <article id="preparation-d-artillerie">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/dragoon/prep-artillery.png"
+                  class="image skill-icon"
+                />
+                Préparation d'artillerie
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                En tant qu'action, le Dragoon peut préparer son canon pour
+                tirer. La prochaine attaque effectuée par le Dragoon bénéficie
+                d'un bonus supplémentaire de +2 pour toucher, et le Dragoon
+                lance deux fois les dés de dégâts.
+              </p>
+            </article>
 
-  <section class="patch-section">
-  <div class="toggle-section">
-    <h2 class="patch-titre" id="porteur-de-bouclier">
-      <img src="../../assets/images/subclass-icons/dragoon/shield-bearer.png" class="image class-icon">
-      Porteur de Bouclier
-      <button class="toggle-button" onclick="toggleSection(this)">▲</button>
-    </h2>
-    </div>
-    <div class="collapsible-content expanded">
-    <div class="patch-list">
-      
-        <article id="expertise-en-defense">
-        <h3>
-          <img src="../../assets/images/skills-icons/dragoon/shield-mastery.png" class="image skill-icon">
-          Expertise en défense
-          <span><img src="../../assets/images/action-costs/reaction.png" alt="Reaction" class="image action-icon">1 PA (Réaction)</span>
-        </h3>
-          <p>Le Dragoon peut utiliser sa réaction pour toute aptitude de Garde, mais il ne peut toujours avoir qu'une Garde active à la fois. Le Dragoon devient compétent dans les attaques improvisées avec un bouclier.</p>
-        </article>
+            <article id="canon-buster">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/dragoon/buster-cannon.png"
+                  class="image skill-icon"
+                />
+                Canon Buster
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/heavy-action.png"
+                    alt="Heavy"
+                    class="image action-icon"
+                  />3 PA (Action Complexe)</span
+                >
+              </h3>
+              <p>
+                En tant qu'action complexe, le Dragoon peut cibler une créature
+                dans un rayon de 18 mètres et préparer son canon. Au début de
+                son prochain tour, si cette cible est toujours à moins de 18
+                mètres, effectuez une attaque à distance contre cette cible,
+                infligeant 2d10 + modificateur de Dextérité de dégâts
+                contondants et 1d10 de dégâts de feu.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-        <article id="contre-garde">
-        <h3>
-          <img src="../../assets/images/skills-icons/dragoon/counter-guard.png" class="image skill-icon">
-          Contre-garde
-          <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-        </h3>
-          <p>Lorsque le Dragoon réduit les dégâts infligés à une créature à l'aide d'une aptitude de Garde, cette créature peut utiliser sa réaction pour effectuer une seule attaque d'arme contre la créature qui a infligé les dégâts, à condition qu'elle soit à portée.</p>
-        </article>
+      <section class="patch-section">
+        <div class="toggle-section">
+          <h2 class="patch-titre" id="porteur-de-bouclier">
+            <img
+              src="../../assets/images/subclass-icons/dragoon/shield-bearer.png"
+              class="image class-icon"
+            />
+            Porteur de Bouclier
+            <button class="toggle-button" onclick="toggleSection(this)">
+              ▲
+            </button>
+          </h2>
+        </div>
+        <div class="collapsible-content expanded">
+          <div class="patch-list">
+            <article id="expertise-en-defense">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/dragoon/shield-mastery.png"
+                  class="image skill-icon"
+                />
+                Expertise en défense
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/reaction.png"
+                    alt="Reaction"
+                    class="image action-icon"
+                  />1 PA (Réaction)</span
+                >
+              </h3>
+              <p>
+                Le Dragoon peut utiliser sa réaction pour toute aptitude de
+                Garde, mais il ne peut toujours avoir qu'une Garde active à la
+                fois. Le Dragoon devient compétent dans les attaques improvisées
+                avec un bouclier.
+              </p>
+            </article>
 
-        <article id="force-du-dragon">
-        <h3>
-          <img src="../../assets/images/skills-icons/dragoon/dragon-force.png" class="image skill-icon">
-          Force du dragon
-          <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-        </h3>
-          <p>Lorsque le Dragoon réduit les dégâts infligés à une créature avec une aptitude de Garde, il peut regagner 1 PA. Cela ne peut s'activer qu'une fois par tour.</p>
-        </article>
-    </div>
-    </div>
-  </section>
-    
-    <section class="patch-section">
-  <h2 class="patch-titre" id="progression">
-    <img src="../../assets/images/notes-big.png" class="image image-h2">
-    Progression par niveau
-  </h2>
-  <div class="class-table-tabs-wrapper">
-    <button class="tab-button active" onclick="switchTab(event, 'general')">Dragoon</button>
-    <button class="tab-button" onclick="switchTab(event, 'canon')">Porteur de Canon</button>
-    <button class="tab-button" onclick="switchTab(event, 'bouclier')">Porteur de Bouclier</button>
-  </div>
+            <article id="contre-garde">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/dragoon/counter-guard.png"
+                  class="image skill-icon"
+                />
+                Contre-garde
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                Lorsque le Dragoon réduit les dégâts infligés à une créature à
+                l'aide d'une aptitude de Garde, cette créature peut utiliser sa
+                réaction pour effectuer une seule attaque d'arme contre la
+                créature qui a infligé les dégâts, à condition qu'elle soit à
+                portée.
+              </p>
+            </article>
 
-  <div class="table-container tab-content active" id="tab-general">
-    <table class="progression-table">
-      <thead><tr><th>Niveau</th><th>Bonus de maîtrise</th><th>Aptitudes</th></tr></thead>
-      <tbody>
-        <tr><td>1</td><td>+2</td><td>Garde de ligne, Corps à corps</td></tr>
-        <tr><td>2</td><td>+2</td><td>Bunker leurre, Garde curative</td></tr>
-        <tr><td>3</td><td>+2</td><td>Style de combat, Aptitude de Style</td></tr>
-        <tr><td>4</td><td>+2</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-        <tr><td>5</td><td>+3</td><td>Canon monté</td></tr>
-        <tr><td>6</td><td>+3</td><td>Garde de Mana</td></tr>
-        <tr><td>7</td><td>+3</td><td>Auto-Bunker</td></tr>
-        <tr><td>8</td><td>+3</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-        <tr><td>9</td><td>+4</td><td>Aptitude de Style</td></tr>
-        <tr><td>10</td><td>+4</td><td>Mur barrage</td></tr>
-        <tr><td>11</td><td>+4</td><td>Tourelle leurre</td></tr>
-        <tr><td>12</td><td>+4</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-        <tr><td>13</td><td>+5</td><td>Exercice de terrain</td></tr>
-        <tr><td>14</td><td>+5</td><td>Garde partagée</td></tr>
-        <tr><td>15</td><td>+5</td><td>Conditionnement de soldat</td></tr>
-        <tr><td>16</td><td>+5</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-        <tr><td>17</td><td>+6</td><td>Aptitude de Style</td></tr>
-        <tr><td>18</td><td>+6</td><td>Garde de récupération</td></tr>
-        <tr><td>19</td><td>+6</td><td>Formation défensive</td></tr>
-        <tr><td>20</td><td>+6</td><td>Garde totale</td></tr>
-      </tbody>
-    </table>
-  </div>
+            <article id="force-du-dragon">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/dragoon/dragon-force.png"
+                  class="image skill-icon"
+                />
+                Force du dragon
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                Lorsque le Dragoon réduit les dégâts infligés à une créature
+                avec une aptitude de Garde, il peut regagner 1 PA. Cela ne peut
+                s'activer qu'une fois par tour.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-  <div class="table-container tab-content" id="tab-canon" style="display:none;">
-    <table class="progression-table">
-      <thead><tr><th>Niveau</th><th>Aptitudes du Porteur de Canon</th></tr></thead>
-      <tbody>
-        <tr><td>3</td><td>Maîtrise du canon</td></tr>
-        <tr><td>9</td><td>Préparation d'artillerie</td></tr>
-        <tr><td>17</td><td>Canon Buster</td></tr>
-      </tbody>
-    </table>
-  </div>
+      <section class="patch-section">
+        <h2 class="patch-titre" id="progression">
+          <img src="../../assets/images/notes-big.png" class="image image-h2" />
+          Progression par niveau
+        </h2>
+        <div class="class-table-tabs-wrapper">
+          <button
+            class="tab-button active"
+            onclick="switchTab(event, 'general')"
+          >
+            Dragoon
+          </button>
+          <button class="tab-button" onclick="switchTab(event, 'canon')">
+            Porteur de Canon
+          </button>
+          <button class="tab-button" onclick="switchTab(event, 'bouclier')">
+            Porteur de Bouclier
+          </button>
+        </div>
 
-  <div class="table-container tab-content" id="tab-bouclier" style="display:none;">
-    <table class="progression-table">
-      <thead><tr><th>Niveau</th><th>Aptitudes du Porteur de Bouclier</th></tr></thead>
-      <tbody>
-        <tr><td>3</td><td>Expertise en défense</td></tr>
-        <tr><td>9</td><td>Contre-garde</td></tr>
-        <tr><td>17</td><td>Force du Dragon</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+        <div class="table-container tab-content active" id="tab-general">
+          <table class="progression-table">
+            <thead>
+              <tr>
+                <th>Niveau</th>
+                <th>Bonus de maîtrise</th>
+                <th>Aptitudes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>+2</td>
+                <td>Garde de ligne, Corps à corps</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>+2</td>
+                <td>Bunker leurre, Garde curative</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>+2</td>
+                <td>Style de combat, Aptitude de Style</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>+2</td>
+                <td>Amélioration de caractéristiques, Défense +1</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>+3</td>
+                <td>Canon monté</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>+3</td>
+                <td>Garde de Mana</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>+3</td>
+                <td>Auto-Bunker</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>+3</td>
+                <td>Amélioration de caractéristiques, Défense +1</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>+4</td>
+                <td>Aptitude de Style</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>+4</td>
+                <td>Mur barrage</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>+4</td>
+                <td>Tourelle leurre</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>+4</td>
+                <td>Amélioration de caractéristiques, Défense +1</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>+5</td>
+                <td>Exercice de terrain</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>+5</td>
+                <td>Garde partagée</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>+5</td>
+                <td>Conditionnement de soldat</td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td>+5</td>
+                <td>Amélioration de caractéristiques, Défense +1</td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>+6</td>
+                <td>Aptitude de Style</td>
+              </tr>
+              <tr>
+                <td>18</td>
+                <td>+6</td>
+                <td>Garde de récupération</td>
+              </tr>
+              <tr>
+                <td>19</td>
+                <td>+6</td>
+                <td>Formation défensive</td>
+              </tr>
+              <tr>
+                <td>20</td>
+                <td>+6</td>
+                <td>Garde totale</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-<script>
-    function switchTab(event, tabId) {
-      const tabs = document.querySelectorAll('.tab-button');
-      const contents = document.querySelectorAll('.tab-content');
-      tabs.forEach(t => t.classList.remove('active'));
-      contents.forEach(c => {
-        c.classList.remove('active');
-        c.style.display = 'none';
-      });
+        <div
+          class="table-container tab-content"
+          id="tab-canon"
+          style="display: none"
+        >
+          <table class="progression-table">
+            <thead>
+              <tr>
+                <th>Niveau</th>
+                <th>Aptitudes du Porteur de Canon</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3</td>
+                <td>Maîtrise du canon</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Préparation d'artillerie</td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>Canon Buster</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-      event.target.classList.add('active');
-      const target = document.getElementById(`tab-${tabId}`);
-      target.style.display = 'block';
-      void target.offsetWidth; // forcer repaint
-      target.classList.add('active');
-    }
-</script>
+        <div
+          class="table-container tab-content"
+          id="tab-bouclier"
+          style="display: none"
+        >
+          <table class="progression-table">
+            <thead>
+              <tr>
+                <th>Niveau</th>
+                <th>Aptitudes du Porteur de Bouclier</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3</td>
+                <td>Expertise en défense</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Contre-garde</td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>Force du Dragon</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
+      <script>
+        function switchTab(event, tabId) {
+          const tabs = document.querySelectorAll(".tab-button");
+          const contents = document.querySelectorAll(".tab-content");
+          tabs.forEach((t) => t.classList.remove("active"));
+          contents.forEach((c) => {
+            c.classList.remove("active");
+            c.style.display = "none";
+          });
+
+          event.target.classList.add("active");
+          const target = document.getElementById(`tab-${tabId}`);
+          target.style.display = "block";
+          void target.offsetWidth; // forcer repaint
+          target.classList.add("active");
+        }
+      </script>
     </main>
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
       <img id="lightbox-img" src="" alt="Portrait" />
     </div>
-    <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button>
+    <button
+      id="backToTop"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      aria-label="Retour en haut"
+    >
+      <i class="fa-solid fa-arrow-up"></i> Retour en haut
+    </button>
     <footer>
-    <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
-</footer>
+      <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+    </footer>
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
+      document.addEventListener("DOMContentLoaded", function () {
         const searchInput = document.getElementById("search-bar");
         const aptitudeArticles = document.querySelectorAll("article");
-        searchInput.addEventListener("input", function() {
+        searchInput.addEventListener("input", function () {
           const value = searchInput.value.toLowerCase();
-          aptitudeArticles.forEach(article => {
-            const title = article.querySelector("h3")?.textContent?.toLowerCase() || "";
+          aptitudeArticles.forEach((article) => {
+            const title =
+              article.querySelector("h3")?.textContent?.toLowerCase() || "";
             const content = article.textContent?.toLowerCase() || "";
             if (title.includes(value) || content.includes(value)) {
               article.style.display = "";
@@ -449,36 +1064,126 @@
     <script src="../../scripts/lightbox.js"></script>
     <script src="../../scripts/particles.js"></script>
     <script src="../../scripts/backToTop.js"></script>
-    <button class="mobile-nav-toggle" onclick="toggleMobileNav(this)">☰</button>
+    <button class="mobile-nav-toggle" onclick="toggleMobileNav(this)">
+      ☰
+    </button>
     <div class="mobile-nav-overlay" id="mobileNav">
-      <div class="mobile-nav-content">  <a href="#details" class="section-link" onclick="toggleMobileNav()">Détails</a>
- <a href="#aptitudes" class="section-link" onclick="toggleMobileNav()">Aptitudes</a>
- <a href="#corps-a-corps" class="sub-link" onclick="toggleMobileNav()">Corps à corps</a>
- <a href="#garde-de-ligne" class="sub-link" onclick="toggleMobileNav()">Garde de ligne</a>
- <a href="#bunker-leurre" class="sub-link" onclick="toggleMobileNav()">Bunker leurre</a>
- <a href="#garde-curative" class="sub-link" onclick="toggleMobileNav()">Garde curative</a>
- <a href="#style-de-combat" class="sub-link" onclick="toggleMobileNav()">Style de combat</a>
- <a href="#canon-monte" class="sub-link" onclick="toggleMobileNav()">Canon monté</a>
- <a href="#garde-de-mana" class="sub-link" onclick="toggleMobileNav()">Garde de Mana</a>
- <a href="#auto-bunker" class="sub-link" onclick="toggleMobileNav()">Auto-bunker</a>
- <a href="#mur-barrage" class="sub-link" onclick="toggleMobileNav()">Mur barrage</a>
- <a href="#tourelle-leurre" class="sub-link" onclick="toggleMobileNav()">Tourelle leurre</a>
- <a href="#exercice-de-terrain" class="sub-link" onclick="toggleMobileNav()">Exercice de terrain</a>
- <a href="#garde-partagee" class="sub-link" onclick="toggleMobileNav()">Garde partagée</a>
- <a href="#conditionnement-de-soldat" class="sub-link" onclick="toggleMobileNav()">Conditionnement de soldat</a>
- <a href="#garde-de-recuperation" class="sub-link" onclick="toggleMobileNav()">Garde de récupération</a>
- <a href="#formation-defensive" class="sub-link" onclick="toggleMobileNav()">Formation défensive</a>
- <a href="#garde-totale" class="sub-link" onclick="toggleMobileNav()">Garde totale</a>
- <a href="#specialisations" class="section-link" onclick="toggleMobileNav()">Spécialisations</a>
- <a href="#porteur-de-canon" class="section-link" onclick="toggleMobileNav()">Porteur de Canon</a>
- <a href="#maitrise-du-canon" class="sub-link" onclick="toggleMobileNav()">Maîtrise du canon</a>
- <a href="#preparation-d-artillerie" class="sub-link" onclick="toggleMobileNav()">Préparation d'artillerie</a>
- <a href="#canon-buster" class="sub-link" onclick="toggleMobileNav()">Canon Buster</a>
- <a href="#porteur-de-bouclier" class="section-link" onclick="toggleMobileNav()">Porteur de Bouclier</a>
- <a href="#expertise-en-defense" class="sub-link" onclick="toggleMobileNav()">Expertise en défense</a>
- <a href="#contre-garde" class="sub-link" onclick="toggleMobileNav()">Contre-garde</a>
- <a href="#force-du-dragon" class="sub-link" onclick="toggleMobileNav()">Force du dragon</a>
- <a href="#tab-general" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
+      <div class="mobile-nav-content">
+        <a href="#details" class="section-link" onclick="toggleMobileNav()"
+          >Détails</a
+        >
+        <a href="#aptitudes" class="section-link" onclick="toggleMobileNav()"
+          >Aptitudes</a
+        >
+        <a href="#corps-a-corps" class="sub-link" onclick="toggleMobileNav()"
+          >Corps à corps</a
+        >
+        <a href="#garde-de-ligne" class="sub-link" onclick="toggleMobileNav()"
+          >Garde de ligne</a
+        >
+        <a href="#bunker-leurre" class="sub-link" onclick="toggleMobileNav()"
+          >Bunker leurre</a
+        >
+        <a href="#garde-curative" class="sub-link" onclick="toggleMobileNav()"
+          >Garde curative</a
+        >
+        <a href="#style-de-combat" class="sub-link" onclick="toggleMobileNav()"
+          >Style de combat</a
+        >
+        <a href="#canon-monte" class="sub-link" onclick="toggleMobileNav()"
+          >Canon monté</a
+        >
+        <a href="#garde-de-mana" class="sub-link" onclick="toggleMobileNav()"
+          >Garde de Mana</a
+        >
+        <a href="#auto-bunker" class="sub-link" onclick="toggleMobileNav()"
+          >Auto-bunker</a
+        >
+        <a href="#mur-barrage" class="sub-link" onclick="toggleMobileNav()"
+          >Mur barrage</a
+        >
+        <a href="#tourelle-leurre" class="sub-link" onclick="toggleMobileNav()"
+          >Tourelle leurre</a
+        >
+        <a
+          href="#exercice-de-terrain"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Exercice de terrain</a
+        >
+        <a href="#garde-partagee" class="sub-link" onclick="toggleMobileNav()"
+          >Garde partagée</a
+        >
+        <a
+          href="#conditionnement-de-soldat"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Conditionnement de soldat</a
+        >
+        <a
+          href="#garde-de-recuperation"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Garde de récupération</a
+        >
+        <a
+          href="#formation-defensive"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Formation défensive</a
+        >
+        <a href="#garde-totale" class="sub-link" onclick="toggleMobileNav()"
+          >Garde totale</a
+        >
+        <a
+          href="#specialisations"
+          class="section-link"
+          onclick="toggleMobileNav()"
+          >Spécialisations</a
+        >
+        <a
+          href="#porteur-de-canon"
+          class="section-link"
+          onclick="toggleMobileNav()"
+          >Porteur de Canon</a
+        >
+        <a
+          href="#maitrise-du-canon"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Maîtrise du canon</a
+        >
+        <a
+          href="#preparation-d-artillerie"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Préparation d'artillerie</a
+        >
+        <a href="#canon-buster" class="sub-link" onclick="toggleMobileNav()"
+          >Canon Buster</a
+        >
+        <a
+          href="#porteur-de-bouclier"
+          class="section-link"
+          onclick="toggleMobileNav()"
+          >Porteur de Bouclier</a
+        >
+        <a
+          href="#expertise-en-defense"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Expertise en défense</a
+        >
+        <a href="#contre-garde" class="sub-link" onclick="toggleMobileNav()"
+          >Contre-garde</a
+        >
+        <a href="#force-du-dragon" class="sub-link" onclick="toggleMobileNav()"
+          >Force du dragon</a
+        >
+        <a href="#tab-general" class="section-link" onclick="toggleMobileNav()"
+          >Progression par niveau</a
+        >
+      </div>
     </div>
   </body>
 </html>

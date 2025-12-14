@@ -1,32 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Célestrien | Codex - Etrian Odyssey TTRPG</title>
-    <meta name="description" content="Humanoïdes érudits liés à la magie, dévoués à l’étude des mystères du monde.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../../favicon.png" type="image/png">
-    <link rel="stylesheet" href="../../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta
+      name="description"
+      content="Humanoïdes érudits liés à la magie, dévoués à l’étude des mystères du monde."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <canvas id="particles"></canvas>
     <header class="codex-header">
-        <div class="illustration-wrapper">
-          
-        <img src="../../assets/images/race-art/celestrian.png" alt="Illustration Célestrien" class="illustration-race" onclick="openLightbox(this.src)">
-         
-        </div>
-        <h1>
-          <img src="../../assets/images/race-icons/celestrien.png" class="image class-icon"> Célestrien
-        </h1>
-          <p class="sous-titre">L’archive vivante des Égarés</p>
-        <div class="fixed-header-links">
-          <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Index des races</a>
-        </div>
+      <div class="illustration-wrapper">
+        <img
+          src="../../assets/images/race-art/celestrian.png"
+          alt="Illustration Célestrien"
+          class="illustration-race"
+          onclick="openLightbox(this.src)"
+        />
+      </div>
+      <h1>
+        <img
+          src="../../assets/images/race-icons/celestrien.png"
+          class="image class-icon"
+        />
+        Célestrien
+      </h1>
+      <p class="sous-titre">L’archive vivante des Égarés</p>
+      <div class="fixed-header-links">
+        <a
+          href="index.html"
+          class="carte-lien"
+          style="display: inline-block; max-width: 300px"
+          ><i class="fa-solid fa-arrow-left"></i> Index des races</a
+        >
+      </div>
     </header>
 
-    <nav class="nav-magique">
+    <nav class="nav-bar">
       <a href="/">Accueil</a>
       <a href="../../notes/">Patch Notes</a>
       <a href="../../resumes/">Résumés</a>
@@ -37,59 +57,191 @@
       <a href="../../ressources/">Ressources</a>
       <a href="../../credits">Crédits</a>
     </nav>
-    
+
     <main class="accueil">
       <section class="intro-collapsible click" id="intro">
-        <p>« Les chercheurs aux connaissances profondes de la magie inscrivent ; C'est là que tous les mystères deviennent clairs. »<br> <br> Les Célestriens sont une race principalement connue pour leur connexion magique avec le monde et leur recherche constante de connaissances. Érudits solitaires : Ils se confinent généralement dans des tours et des institutions académiques construites dans le but de rechercher le monde et son mysticisme, ce qui peut les isoler et rendre difficile la création de liens avec d'autres races. Ils peuvent sembler égoïstes, tendant généralement vers un alignement véritablement neutre. Malgré leurs faiblesses, les Célestriens peuvent très bien fonctionner en équipe avec d'autres races, démontrant des capacités de leadership exceptionnelles avec leurs connaissances et compétences cultivées au fil des années d'études. Cependant, leurs contributions peuvent être limitées par leur intérêt personnel pour la question.<br> <br> Apparence physique : Les Célestriens ont une apparence semblable à celle des elfes, principalement en raison de leurs oreilles pointues. Leur couleur de peau varie largement, d'une nuance de pêche subtile à un brun foncé, en passant par des couleurs plus sauvages comme le bleu bébé ou le vert citron. Leur taille se situe confortablement dans la moyenne des autres humanoïdes, avec une moyenne de 180 cm de haut à l'âge adulte, que ce soit pour les hommes ou les femmes.<br> <br> Une vie de recherche : Les Célestriens atteignent l'âge adulte vers l'âge de 20 ans et peuvent vivre jusqu'à 120 ans. Les Célestriens possédant une grande affinité magique sont rarement vus, car ils passent la majeure partie de leur vie à étudier et à entraîner leurs pouvoirs. Ils sont généralement originaires des régions du nord d'Ieria, mais les Célestriens moins enclins à la scolarité peuvent migrer vers Hallaradh ou même plus au sud. </p>
-        <button class="toggle-intro" onclick="toggleIntro()">Afficher la suite</button>
+        <p>
+          « Les chercheurs aux connaissances profondes de la magie inscrivent ;
+          C'est là que tous les mystères deviennent clairs. »<br />
+          <br />
+          Les Célestriens sont une race principalement connue pour leur
+          connexion magique avec le monde et leur recherche constante de
+          connaissances. Érudits solitaires : Ils se confinent généralement dans
+          des tours et des institutions académiques construites dans le but de
+          rechercher le monde et son mysticisme, ce qui peut les isoler et
+          rendre difficile la création de liens avec d'autres races. Ils peuvent
+          sembler égoïstes, tendant généralement vers un alignement
+          véritablement neutre. Malgré leurs faiblesses, les Célestriens peuvent
+          très bien fonctionner en équipe avec d'autres races, démontrant des
+          capacités de leadership exceptionnelles avec leurs connaissances et
+          compétences cultivées au fil des années d'études. Cependant, leurs
+          contributions peuvent être limitées par leur intérêt personnel pour la
+          question.<br />
+          <br />
+          Apparence physique : Les Célestriens ont une apparence semblable à
+          celle des elfes, principalement en raison de leurs oreilles pointues.
+          Leur couleur de peau varie largement, d'une nuance de pêche subtile à
+          un brun foncé, en passant par des couleurs plus sauvages comme le bleu
+          bébé ou le vert citron. Leur taille se situe confortablement dans la
+          moyenne des autres humanoïdes, avec une moyenne de 180 cm de haut à
+          l'âge adulte, que ce soit pour les hommes ou les femmes.<br />
+          <br />
+          Une vie de recherche : Les Célestriens atteignent l'âge adulte vers
+          l'âge de 20 ans et peuvent vivre jusqu'à 120 ans. Les Célestriens
+          possédant une grande affinité magique sont rarement vus, car ils
+          passent la majeure partie de leur vie à étudier et à entraîner leurs
+          pouvoirs. Ils sont généralement originaires des régions du nord
+          d'Ieria, mais les Célestriens moins enclins à la scolarité peuvent
+          migrer vers Hallaradh ou même plus au sud.
+        </p>
+        <button class="toggle-intro" onclick="toggleIntro()">
+          Afficher la suite
+        </button>
       </section>
       <section class="patch-section">
         <h2 class="patch-titre" id="details">
-          <img src="../../assets/images/notes-big.png" class="image image-h2"> Traits raciaux
+          <img src="../../assets/images/notes-big.png" class="image image-h2" />
+          Traits raciaux
         </h2>
-        <ul class="image-list"> <li><div class="image-texte"><strong><img src="../../assets/images/race-traits/ability-score-increase.png" class="image details-icon"> Augmentation de caractéristique :</strong> +2 à un attribut et à son maximum, +1 à un autre attribut</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/race-traits/languages.png" class="image details-icon"> Langues :</strong> Commun, Célestrien</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/race-traits/speed.png" class="image details-icon"> Vitesse de déplacement :</strong> 7.5 mètres</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/race-traits/bonus-skills.png" class="image details-icon"> Compétences supplémentaires :</strong> Arcanes, Investigation</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/race-traits/union-skills.png" class="image details-icon"> Compétences d'Union :</strong> Tri-Magie, Explosion en Chaîne</div></li> </ul>
+        <ul class="image-list">
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/race-traits/ability-score-increase.png"
+                  class="image details-icon"
+                />
+                Augmentation de caractéristique :</strong
+              >
+              +2 à un attribut et à son maximum, +1 à un autre attribut
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/race-traits/languages.png"
+                  class="image details-icon"
+                />
+                Langues :</strong
+              >
+              Commun, Célestrien
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/race-traits/speed.png"
+                  class="image details-icon"
+                />
+                Vitesse de déplacement :</strong
+              >
+              7.5 mètres
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/race-traits/bonus-skills.png"
+                  class="image details-icon"
+                />
+                Compétences supplémentaires :</strong
+              >
+              Arcanes, Investigation
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/race-traits/union-skills.png"
+                  class="image details-icon"
+                />
+                Compétences d'Union :</strong
+              >
+              Tri-Magie, Explosion en Chaîne
+            </div>
+          </li>
+        </ul>
       </section>
       <section class="patch-section">
         <div class="toggle-section">
           <h2 class="patch-titre" id="aptitudes">
-            <img src="../../assets/images/notes-big.png" class="image image-h2"> Aptitudes raciales <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+            <img
+              src="../../assets/images/notes-big.png"
+              class="image image-h2"
+            />
+            Aptitudes raciales
+            <button class="toggle-button" onclick="toggleSection(this)">
+              ▲
+            </button>
           </h2>
         </div>
         <div class="collapsible-content expanded">
-          <div class="patch-list"> 
-  <article id="talent-naturel">
-  <h3>
-    <img src="../../assets/images/skills-icons/races/celestrian/natural-talent.png" class="image skill-icon">
-    Talent naturel
-    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-  </h3>
-    <p>Une fois par repos long, lorsqu'il attaque ou lance un sort d'attaque, le Célestrien peut choisir de relancer les dés une deuxième fois et de prendre le second résultat.</p>
-  </article>
+          <div class="patch-list">
+            <article id="talent-naturel">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/races/celestrian/natural-talent.png"
+                  class="image skill-icon"
+                />
+                Talent naturel
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                Une fois par repos long, lorsqu'il attaque ou lance un sort
+                d'attaque, le Célestrien peut choisir de relancer les dés une
+                deuxième fois et de prendre le second résultat.
+              </p>
+            </article>
 
-  <article id="etude-de-la-magie">
-  <h3>
-    <img src="../../assets/images/skills-icons/races/celestrian/study-of-magic.png" class="image skill-icon">
-    Étude de la magie
-    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-  </h3>
-    <p>Un Célestrien peut utiliser l'Intelligence comme modificateur pour tout sort ou sauvegarde de sort.</p>
-  </article> </div>
+            <article id="etude-de-la-magie">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/races/celestrian/study-of-magic.png"
+                  class="image skill-icon"
+                />
+                Étude de la magie
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                Un Célestrien peut utiliser l'Intelligence comme modificateur
+                pour tout sort ou sauvegarde de sort.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
     </main>
-    <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button>
+    <button
+      id="backToTop"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      aria-label="Retour en haut"
+    >
+      <i class="fa-solid fa-arrow-up"></i> Retour en haut
+    </button>
 
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
       <img id="lightbox-img" src="" alt="Portrait" />
     </div>
-    
+
     <footer>
-    <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
-</footer>
+      <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+    </footer>
 
     <script src="../../scripts/backToTop.js"></script>
     <script src="../../scripts/toggleable-intro.js"></script>

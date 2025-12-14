@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -6,64 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/favicon.png" type="image/png" />
     <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet"
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <canvas id="particles"></canvas>
 
     <header class="codex-header">
-      <a href="/" class="banniere-link"><img src="../assets/images/banniere.png"
-          alt="Bannière" class="banniere" /></a>
+      <a href="/" class="banniere-link"
+        ><img
+          src="../assets/images/banniere.png"
+          alt="Bannière"
+          class="banniere"
+      /></a>
       <h1>Bastion</h1>
       <p class="sous-titre">L’archive vivante des Égarés</p>
     </header>
 
-    <nav class="nav-magique">
-  <a href="/">Accueil</a>
-  <a href="/notes/">Patch Notes</a>
-  <a href="/resumes/">Résumés</a>
-  <a href="/moments.html">Moments</a>
-  <a href="/univers/">Univers</a>
-  <a href="/regles/">Règles</a>
-  <a href="/musique.html">Musiques</a>
-  <a href="/ressources/">Ressources</a>
-  <a href="/credits.html">Crédits</a>
-</nav>
+    <nav class="nav-bar">
+      <a href="/">Accueil</a>
+      <a href="/notes/">Patch Notes</a>
+      <a href="/resumes/">Résumés</a>
+      <a href="/moments.html">Moments</a>
+      <a href="/univers/">Univers</a>
+      <a href="/regles/">Règles</a>
+      <a href="/musique.html">Musiques</a>
+      <a href="/ressources/">Ressources</a>
+      <a href="/credits.html">Crédits</a>
+    </nav>
 
     <main class="patch-list accueil">
-      <section class="intro"><p>Un tutoriel sur le fonctionnement du Bastion
-          est disponible <a
-            href="../ressources/tutoriels.html#bastion">ici</a>.</p></section>
+      <section class="intro">
+        <p>
+          Un tutoriel sur le fonctionnement du Bastion est disponible
+          <a href="../ressources/tutoriels.html#bastion">ici</a>.
+        </p>
+      </section>
       <div class="patch-list bastion">
         <article class="article-credits">
           <h2><i class="fa-solid fa-magnifying-glass"></i> Présentation</h2>
           <p>
             Le système de Bastion est issu du Guide du Maître (2024), chapitre
             8, page 334. Dans notre campagne, les cinq personnages partagent un
-            seul et même
-            Bastion, un lieu central qui évolue avec eux. Ce havre est d’abord
-            un espace de repos, de soin et de réconfort entre deux expéditions —
-            un foyer, un quartier général, un symbole de leur union.</p>
+            seul et même Bastion, un lieu central qui évolue avec eux. Ce havre
+            est d’abord un espace de repos, de soin et de réconfort entre deux
+            expéditions — un foyer, un quartier général, un symbole de leur
+            union.
+          </p>
 
-          <p>Mais le Bastion ne se limite pas à la détente. Il joue un rôle
-            actif
+          <p>
+            Mais le Bastion ne se limite pas à la détente. Il joue un rôle actif
             dans l’aventure : vous pourrez recruter des membres pour votre
             guilde, leur assigner des tâches variées (artisanat, recherche,
             entraînement, missions dans le Labyrinthe…), améliorer vos
-            installations, et bien
-            plus encore. Ce système vous permet d’influencer le monde au-delà
-            du Labyrinthe, d’investir dans votre avenir et de bâtir votre propre
-            légende.</p>
+            installations, et bien plus encore. Ce système vous permet
+            d’influencer le monde au-delà du Labyrinthe, d’investir dans votre
+            avenir et de bâtir votre propre légende.
+          </p>
 
-          <p>Le Bastion dispose également d’une jauge de Confort, influencée par
+          <p>
+            Le Bastion dispose également d’une jauge de Confort, influencée par
             les meubles et installations que vous y placez. En franchissant
             certains paliers de confort, vous débloquerez divers bénéfices
             passifs : récupération améliorée, bonus sur les tâches accomplies
-            par vos recrues, et autres
-            privilèges qui rendent votre refuge toujours plus accueillant et
-            efficace.
+            par vos recrues, et autres privilèges qui rendent votre refuge
+            toujours plus accueillant et efficace.
           </p>
         </article>
         <article class="article-credits">
@@ -89,36 +100,48 @@
             pour accomplir des tâches spécifiques : production d’objets,
             entraînement, recherche, collecte, etc. Ces installations
             constituent l’ossature fonctionnelle de votre domaine, et permettent
-            de faire vivre la guilde même en dehors des expéditions.</p>
+            de faire vivre la guilde même en dehors des expéditions.
+          </p>
 
-          <p>Le menu des installations est présenté sous la forme d’un arbre de
+          <p>
+            Le menu des installations est présenté sous la forme d’un arbre de
             compétences, facilitant la lecture des prérequis et des évolutions
-            possibles.</p>
+            possibles.
+          </p>
 
-          <img src="../assets/images/rules/bastion-skill-tree.png"
-            class="tutorial-image" />
+          <img
+            src="../assets/images/rules/bastion-skill-tree.png"
+            class="tutorial-image"
+          />
 
-          <p>Chaque installation nécessite de remplir trois conditions
-            pour être construite :</p>
+          <p>
+            Chaque installation nécessite de remplir trois conditions pour être
+            construite :
+          </p>
 
           <li class="in-article">Atteindre un certain niveau,</li>
 
           <li class="in-article">Dépenser une somme d’entals,</li>
 
-          <li class="in-article">Disposer d’assez de place dans le Bastion pour
-            l’accueillir.</li>
+          <li class="in-article">
+            Disposer d’assez de place dans le Bastion pour l’accueillir.
+          </li>
 
-          <p>Une fois en place, une installation peut être agrandie, ce qui
+          <p>
+            Une fois en place, une installation peut être agrandie, ce qui
             augmente ses effets, débloque de nouvelles options ou permet d’y
             affecter davantage de recrues. Il est aussi possible d’agrandir le
-            Bastion lui-même, afin d’y construire plus d’installations
-            et développer votre guilde selon vos priorités stratégiques.</p>
+            Bastion lui-même, afin d’y construire plus d’installations et
+            développer votre guilde selon vos priorités stratégiques.
+          </p>
         </article>
         <article class="article-credits">
           <h2><i class="fa-solid fa-gears"></i> Liste des installations</h2>
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/facilities-icons/Siege_workshop_aoe2DE.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/Siege_workshop_aoe2DE.png"
+            />
             Atelier
           </h3>
           <p>
@@ -128,8 +151,10 @@
             production.
           </p>
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/facilities-icons/7264_b.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/7264_b.png"
+            />
             Bar de guilde
           </h3>
           <p>
@@ -140,8 +165,10 @@
             boisson active.
           </p>
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/facilities-icons/University_AoE2_DE.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/University_AoE2_DE.png"
+            />
             Bibliothèque
           </h3>
           <p>
@@ -151,19 +178,22 @@
             réduit le temps de recherche en ajoutant des employés.
           </p>
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/facilities-icons/Bedroom.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/Bedroom.png"
+            />
             Chambre
           </h3>
           <p>
             Espace privé et personnel réservé à chaque membre original de la
-            guilde, la
-            chambre n’a pas d’effet mécanique direct, mais constitue un lieu de
-            repos et d’intimité essentiel pour les personnages.
+            guilde, la chambre n’a pas d’effet mécanique direct, mais constitue
+            un lieu de repos et d’intimité essentiel pour les personnages.
           </p>
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/facilities-icons/001853_hr1.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/001853_hr1.png"
+            />
             Cuisine
           </h3>
           <p>
@@ -173,8 +203,10 @@
             à une équipe élargie.
           </p>
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/facilities-icons/052647_hr1_waifu2x_scale2x.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/052647_hr1_waifu2x_scale2x.png"
+            />
             Dortoir
           </h3>
           <p>
@@ -183,8 +215,10 @@
             représente une place d’accueil active pour la guilde.
           </p>
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/facilities-icons/Blacksmith_aoe2de.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/Blacksmith_aoe2de.png"
+            />
             Forge
           </h3>
           <p>
@@ -193,8 +227,10 @@
             le nombre d’employés pour accélérer la production.
           </p>
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/facilities-icons/scroll-bound-gold-brown.webp" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/scroll-bound-gold-brown.webp"
+            />
             Hall de guilde
           </h3>
           <p>
@@ -204,8 +240,10 @@
             pour vos recrues.
           </p>
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/facilities-icons/cornflower-blue.webp" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/cornflower-blue.webp"
+            />
             Jardin
           </h3>
           <p>
@@ -215,8 +253,10 @@
             récoltes.
           </p>
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/facilities-icons/vials-blue-pink.webp" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/vials-blue-pink.webp"
+            />
             Laboratoire d’alchimie
           </h3>
           <p>
@@ -225,8 +265,10 @@
             accélérer la production et améliorer l’efficacité du laboratoire.
           </p>
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/facilities-icons/Barracks_aoe2DE.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/Barracks_aoe2DE.png"
+            />
             Salle d'entraînement
           </h3>
           <p>
@@ -236,8 +278,10 @@
             pour offrir plusieurs entraînements simultanés.
           </p>
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/facilities-icons/BankingDE.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/BankingDE.png"
+            />
             Salle de jeux
           </h3>
           <p>
@@ -247,8 +291,10 @@
             Bastion.
           </p>
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/facilities-icons/SanctityDE.webp" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/SanctityDE.webp"
+            />
             Salle des trophées
           </h3>
           <p>
@@ -258,8 +304,10 @@
             du lieu.
           </p>
           <h3>
-            <img class="image skill-icon"
-              src="../assets/images/foundry-icons/facilities-icons/2961_b.png" />
+            <img
+              class="image skill-icon"
+              src="../assets/images/foundry-icons/facilities-icons/2961_b.png"
+            />
             Salon
           </h3>
           <p>

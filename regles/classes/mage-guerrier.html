@@ -1,66 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Mage guerrier | Codex - Etrian Odyssey TTRPG</title>
-    <meta name="description" content="Chaman protecteur et guérisseur, le Mage Guerrier combine arts occultes et lame rituelle pour soutenir ses alliés et frapper au moment opportun.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../../favicon.png" type="image/png">
-    <link rel="stylesheet" href="../../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta
+      name="description"
+      content="Chaman protecteur et guérisseur, le Mage Guerrier combine arts occultes et lame rituelle pour soutenir ses alliés et frapper au moment opportun."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <canvas id="particles"></canvas> 
-<div class="class-nav">
-  <a href="#details" class="section-link">Détails</a>
-  <a href="#aptitudes" class="section-link">Aptitudes</a>
-  <a href="#maitrise-des-lames-de-guerre" class="sub-link">Maîtrise des lames de guerre</a>
-  <a href="#soins-de-guerre" class="sub-link">Soins de guerre</a>
-  <a href="#maladie-aleatoire" class="sub-link">Maladie aléatoire</a>
-  <a href="#barriere" class="sub-link">Barrière</a>
-  <a href="#tranche-force" class="sub-link">Tranche-force</a>
-  <a href="#conclave-des-magiciens" class="sub-link">Conclave des magiciens</a>
-  <a href="#force-de-la-nature" class="sub-link">Force de la nature</a>
-  <a href="#langue-de-la-nature" class="sub-link">Langue de la nature</a>
-  <a href="#epidemie" class="sub-link">Épidémie</a>
-  <a href="#vitesse-de-l-elan" class="sub-link">Vitesse de l’élan</a>
-  <a href="#effacement" class="sub-link">Effacement</a>
-  <a href="#soins-de-guerre-en-ligne" class="sub-link">Soins de guerre en ligne</a>
-  <a href="#transfert" class="sub-link">Transfert</a>
-  <a href="#tranche-membre" class="sub-link">Tranche-membre</a>
-  <a href="#arme-biomagique" class="sub-link">Arme biomagique</a>
-  <a href="#vampire" class="sub-link">Vampire</a>
-  <a href="#vidange-mentale" class="sub-link">Vidange mentale</a>
-  <a href="#robe-de-fee" class="sub-link">Robe de fée</a>
-  <a href="#specialisations" class="section-link">Spécialisations</a>
-  <a href="#conclave-des-lames-de-guerre" class="sub-link">Conclave des Lames de Guerre</a>
-  <a href="#tranche-garde" class="sub-link">Tranche-garde</a>
-  <a href="#lame-veritable" class="sub-link">Lame véritable</a>
-  <a href="#lame-nefaste" class="sub-link">Lame néfaste</a>
-  <a href="#conclave-du-savoir-de-la-guerre" class="sub-link">Conclave du Savoir de la Guerre</a>
-  <a href="#peau-de-pierre" class="sub-link">Peau de pierre</a>
-  <a href="#puissance-de-guerre" class="sub-link">Puissance de guerre</a>
-  <a href="#maitrise-des-lois-de-la-guerre" class="sub-link">Maîtrise des lois de la guerre</a>
-  <a href="#tab-general" class="section-link">Progression par niveau</a>
-</div> <header class="codex-header">
+    <canvas id="particles"></canvas>
+    <div class="class-nav">
+      <a href="#details" class="section-link">Détails</a>
+      <a href="#aptitudes" class="section-link">Aptitudes</a>
+      <a href="#maitrise-des-lames-de-guerre" class="sub-link"
+        >Maîtrise des lames de guerre</a
+      >
+      <a href="#soins-de-guerre" class="sub-link">Soins de guerre</a>
+      <a href="#maladie-aleatoire" class="sub-link">Maladie aléatoire</a>
+      <a href="#barriere" class="sub-link">Barrière</a>
+      <a href="#tranche-force" class="sub-link">Tranche-force</a>
+      <a href="#conclave-des-magiciens" class="sub-link"
+        >Conclave des magiciens</a
+      >
+      <a href="#force-de-la-nature" class="sub-link">Force de la nature</a>
+      <a href="#langue-de-la-nature" class="sub-link">Langue de la nature</a>
+      <a href="#epidemie" class="sub-link">Épidémie</a>
+      <a href="#vitesse-de-l-elan" class="sub-link">Vitesse de l’élan</a>
+      <a href="#effacement" class="sub-link">Effacement</a>
+      <a href="#soins-de-guerre-en-ligne" class="sub-link"
+        >Soins de guerre en ligne</a
+      >
+      <a href="#transfert" class="sub-link">Transfert</a>
+      <a href="#tranche-membre" class="sub-link">Tranche-membre</a>
+      <a href="#arme-biomagique" class="sub-link">Arme biomagique</a>
+      <a href="#vampire" class="sub-link">Vampire</a>
+      <a href="#vidange-mentale" class="sub-link">Vidange mentale</a>
+      <a href="#robe-de-fee" class="sub-link">Robe de fée</a>
+      <a href="#specialisations" class="section-link">Spécialisations</a>
+      <a href="#conclave-des-lames-de-guerre" class="sub-link"
+        >Conclave des Lames de Guerre</a
+      >
+      <a href="#tranche-garde" class="sub-link">Tranche-garde</a>
+      <a href="#lame-veritable" class="sub-link">Lame véritable</a>
+      <a href="#lame-nefaste" class="sub-link">Lame néfaste</a>
+      <a href="#conclave-du-savoir-de-la-guerre" class="sub-link"
+        >Conclave du Savoir de la Guerre</a
+      >
+      <a href="#peau-de-pierre" class="sub-link">Peau de pierre</a>
+      <a href="#puissance-de-guerre" class="sub-link">Puissance de guerre</a>
+      <a href="#maitrise-des-lois-de-la-guerre" class="sub-link"
+        >Maîtrise des lois de la guerre</a
+      >
+      <a href="#tab-general" class="section-link">Progression par niveau</a>
+    </div>
+    <header class="codex-header">
       <div class="illustration-wrapper">
-      
-          <img src="../../assets/images/class-art/war-magus1.png" alt="Illustration Mage guerrier" class="illustration-classe" onclick="openLightbox(this.src)">
-        
+        <img
+          src="../../assets/images/class-art/war-magus1.png"
+          alt="Illustration Mage guerrier"
+          class="illustration-classe"
+          onclick="openLightbox(this.src)"
+        />
 
-          <img src="../../assets/images/class-art/war-magus2.png" alt="Illustration Mage guerrier" class="illustration-classe" onclick="openLightbox(this.src)">
-         
-        </div>
-        <h1>
-          <img src="../../assets/images/class-icons/mage-guerrier.png" class="image class-icon"> Mage guerrier
-        </h1>
-        <p class="sous-titre">L’archive vivante des Égarés</p>
-        <div class="fixed-header-links">
-          <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Index des classes</a>
-        </div>
+        <img
+          src="../../assets/images/class-art/war-magus2.png"
+          alt="Illustration Mage guerrier"
+          class="illustration-classe"
+          onclick="openLightbox(this.src)"
+        />
+      </div>
+      <h1>
+        <img
+          src="../../assets/images/class-icons/mage-guerrier.png"
+          class="image class-icon"
+        />
+        Mage guerrier
+      </h1>
+      <p class="sous-titre">L’archive vivante des Égarés</p>
+      <div class="fixed-header-links">
+        <a
+          href="index.html"
+          class="carte-lien"
+          style="display: inline-block; max-width: 300px"
+          ><i class="fa-solid fa-arrow-left"></i> Index des classes</a
+        >
+      </div>
     </header>
 
-    <nav class="nav-magique">
+    <nav class="nav-bar">
       <a href="/">Accueil</a>
       <a href="../../notes/">Patch Notes</a>
       <a href="../../resumes/">Résumés</a>
@@ -74,388 +111,1091 @@
 
     <main class="accueil">
       <section class="intro-collapsible click" id="intro">
-        <p>Un chaman polyvalent qui parcourt la terre offrant protection et guérison à travers des pratiques voilées de mystère pour les non-Mage guerriers. Toujours en demande grâce à leur ensemble de compétences varié, certains Mages guerriers ont répondu à l'appel de l'aventure, offrant leur aide en guérissant les alliés, en affaiblissant les ennemis, voire en capitalisant sur les états affaiblis des ennemis pour infliger des dégâts importants. Ils manient des armes improvisées qui combinent les composants magiques des bâtons avec les composants tranchants d'une lame. </p>
-        <button class="toggle-intro" onclick="toggleIntro()">Afficher la suite</button>
+        <p>
+          Un chaman polyvalent qui parcourt la terre offrant protection et
+          guérison à travers des pratiques voilées de mystère pour les non-Mage
+          guerriers. Toujours en demande grâce à leur ensemble de compétences
+          varié, certains Mages guerriers ont répondu à l'appel de l'aventure,
+          offrant leur aide en guérissant les alliés, en affaiblissant les
+          ennemis, voire en capitalisant sur les états affaiblis des ennemis
+          pour infliger des dégâts importants. Ils manient des armes improvisées
+          qui combinent les composants magiques des bâtons avec les composants
+          tranchants d'une lame.
+        </p>
+        <button class="toggle-intro" onclick="toggleIntro()">
+          Afficher la suite
+        </button>
       </section>
       <section class="patch-section">
         <h2 class="patch-titre" id="details">
-          <img src="../../assets/images/notes-big.png" class="image image-h2"> Détails de la classe
+          <img src="../../assets/images/notes-big.png" class="image image-h2" />
+          Détails de la classe
         </h2>
-        <ul class="image-list"> <li><div class="image-texte"><strong><img src="../../assets/images/class-details/health.png" class="image details-icon"> Points de vie :</strong> 1d8 + modificateur de Constitution par niveau de Mage guerrier</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/class-details/hit-dice.png" class="image details-icon"> Dés de vie :</strong> 1d8 par niveau de Mage guerrier</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/class-details/saving-throw-dc.png" class="image details-icon"> DD des jets de sauvegarde :</strong> 8 + bonus de maîtrise + modificateur de Sagesse</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/class-details/masteries.png" class="image details-icon"> Maîtrises :</strong> Lames de guerre, Épées, Bâtons ; Armures légères, Armures moyennes ; Kit d'herboristerie</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/class-details/saving-throw.png" class="image details-icon"> Jets de sauvegarde :</strong> Intelligence, Charisme</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/class-details/skills.png" class="image details-icon"> Compétences :</strong> Choisissez 3 parmi Dressage, Arcanes, Religion, Histoire, Investigation, Intuition, Médecine, Nature, Discrétion et Perception</div></li>
-<li><div class="image-texte"><strong><img src="../../assets/images/class-details/starting-equipment.png" class="image details-icon"> Équipement de départ :</strong> Un bâton, une épée, une armure moyenne, un kit d'herboristerie, un journal détaillant des notes médicales avec de la place pour des ajouts et un stylo, un sac d'explorateur</div></li> </ul>
+        <ul class="image-list">
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/health.png"
+                  class="image details-icon"
+                />
+                Points de vie :</strong
+              >
+              1d8 + modificateur de Constitution par niveau de Mage guerrier
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/hit-dice.png"
+                  class="image details-icon"
+                />
+                Dés de vie :</strong
+              >
+              1d8 par niveau de Mage guerrier
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/saving-throw-dc.png"
+                  class="image details-icon"
+                />
+                DD des jets de sauvegarde :</strong
+              >
+              8 + bonus de maîtrise + modificateur de Sagesse
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/masteries.png"
+                  class="image details-icon"
+                />
+                Maîtrises :</strong
+              >
+              Lames de guerre, Épées, Bâtons ; Armures légères, Armures moyennes
+              ; Kit d'herboristerie
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/saving-throw.png"
+                  class="image details-icon"
+                />
+                Jets de sauvegarde :</strong
+              >
+              Intelligence, Charisme
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/skills.png"
+                  class="image details-icon"
+                />
+                Compétences :</strong
+              >
+              Choisissez 3 parmi Dressage, Arcanes, Religion, Histoire,
+              Investigation, Intuition, Médecine, Nature, Discrétion et
+              Perception
+            </div>
+          </li>
+          <li>
+            <div class="image-texte">
+              <strong
+                ><img
+                  src="../../assets/images/class-details/starting-equipment.png"
+                  class="image details-icon"
+                />
+                Équipement de départ :</strong
+              >
+              Un bâton, une épée, une armure moyenne, un kit d'herboristerie, un
+              journal détaillant des notes médicales avec de la place pour des
+              ajouts et un stylo, un sac d'explorateur
+            </div>
+          </li>
+        </ul>
       </section>
       <section class="patch-section">
-          <div class="aptitude-search-container">
-            <input type="text" id="search-bar" placeholder="Rechercher une aptitude ou un sort..." />
-          </div>
+        <div class="aptitude-search-container">
+          <input
+            type="text"
+            id="search-bar"
+            placeholder="Rechercher une aptitude ou un sort..."
+          />
+        </div>
         <div class="toggle-section">
           <h2 class="patch-titre" id="aptitudes">
-            <img src="../../assets/images/notes-big.png" class="image image-h2"> Aptitudes de classe <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+            <img
+              src="../../assets/images/notes-big.png"
+              class="image image-h2"
+            />
+            Aptitudes de classe
+            <button class="toggle-button" onclick="toggleSection(this)">
+              ▲
+            </button>
           </h2>
         </div>
         <div class="collapsible-content expanded">
-          <div class="patch-list"> 
-  <article id="maitrise-des-lames-de-guerre">
-  <h3>
-    <img src="../../assets/images/skills-icons/war-magus/war-edge-mastery.png" class="image skill-icon">
-    Maîtrise des lames de guerre
-    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-  </h3>
-    <p>Le Mage guerrier apprend à créer et à manier une lame de guerre. Combinez un bâton et une épée courte ; la lame de guerre conserve les propriétés des deux, mais elle devient une arme à deux mains. Lorsqu'il attaque avec une lame de guerre, vous pouvez choisir entre des dégâts perforants ou contondants, mais le dé de précision est choisi parmi les deux composants lors de la création de l'arme.</p>
-  </article>
+          <div class="patch-list">
+            <article id="maitrise-des-lames-de-guerre">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/war-magus/war-edge-mastery.png"
+                  class="image skill-icon"
+                />
+                Maîtrise des lames de guerre
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                Le Mage guerrier apprend à créer et à manier une lame de guerre.
+                Combinez un bâton et une épée courte ; la lame de guerre
+                conserve les propriétés des deux, mais elle devient une arme à
+                deux mains. Lorsqu'il attaque avec une lame de guerre, vous
+                pouvez choisir entre des dégâts perforants ou contondants, mais
+                le dé de précision est choisi parmi les deux composants lors de
+                la création de l'arme.
+              </p>
+            </article>
 
-  <article id="soins-de-guerre">
-  <h3>
-    <img src="../../assets/images/skills-icons/war-magus/war-heal.png" class="image skill-icon">
-    Soins de guerre
-    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-  </h3>
-    <p>En tant qu'action, dépensez un emplacement de sort de niveau 1 pour soigner une cible une fois lors du tour du Mage guerrier, et de nouveau à la fin du round, pour 1d6 + modificateur de Sagesse points de vie. Le Mage guerrier doit toucher la cible. Le soin augmente à 3d6 + modificateur de Sagesse avec un emplacement de sort de niveau 2 et 6d6 + modificateur de Sagesse avec un emplacement de sort de niveau 3. S'il est effectué en dehors du combat, la cible restaure simultanément les deux instances de soin.</p>
-  </article>
+            <article id="soins-de-guerre">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/war-magus/war-heal.png"
+                  class="image skill-icon"
+                />
+                Soins de guerre
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                En tant qu'action, dépensez un emplacement de sort de niveau 1
+                pour soigner une cible une fois lors du tour du Mage guerrier,
+                et de nouveau à la fin du round, pour 1d6 + modificateur de
+                Sagesse points de vie. Le Mage guerrier doit toucher la cible.
+                Le soin augmente à 3d6 + modificateur de Sagesse avec un
+                emplacement de sort de niveau 2 et 6d6 + modificateur de Sagesse
+                avec un emplacement de sort de niveau 3. S'il est effectué en
+                dehors du combat, la cible restaure simultanément les deux
+                instances de soin.
+              </p>
+            </article>
 
-  <article id="maladie-aleatoire">
-  <h3>
-    <img src="../../assets/images/skills-icons/war-magus/random-disease.png" class="image skill-icon">
-    Maladie aléatoire
-    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-  </h3>
-    <p>En tant qu'action, dépensez un emplacement de sort de niveau 1 et lancez 1d6, puis ciblez une créature dans un rayon de 18 mètres. Cette créature doit réussir un jet de sauvegarde de Sagesse ou être affectée par une affliction pendant 3 rounds en fonction du résultat du 1d6. <li style="list-style: none;"><strong>1 :</strong> Aveuglé <li style="list-style: none;"><strong>2 :</strong> Charmé <li style="list-style: none;"><strong>3 :</strong> Maudit <li style="list-style: none;"><strong>4 :</strong> Empoisonné pour 1d8 par round de poison. Augmente à 2d8 au niveau 5, 3d8 au niveau 10, 4d8 au niveau 14 et 5d8 au niveau 19. <li style="list-style: none;"><strong>5 :</strong> Assourdi <li style="list-style: none;"><strong>6 :</strong> Paralysé</p>
-  </article>
+            <article id="maladie-aleatoire">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/war-magus/random-disease.png"
+                  class="image skill-icon"
+                />
+                Maladie aléatoire
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                En tant qu'action, dépensez un emplacement de sort de niveau 1
+                et lancez 1d6, puis ciblez une créature dans un rayon de 18
+                mètres. Cette créature doit réussir un jet de sauvegarde de
+                Sagesse ou être affectée par une affliction pendant 3 rounds en
+                fonction du résultat du 1d6.
+                <li style="list-style: none"><strong>1 :</strong> Aveuglé</li>
+                <li style="list-style: none"><strong>2 :</strong> Charmé</li>
+                <li style="list-style: none"><strong>3 :</strong> Maudit</li>
+                <li style="list-style: none">
+                  <strong>4 :</strong> Empoisonné pour 1d8 par round de poison.
+                  Augmente à 2d8 au niveau 5, 3d8 au niveau 10, 4d8 au niveau 14
+                  et 5d8 au niveau 19.
+                </li>
+                <li style="list-style: none"><strong>5 :</strong> Assourdi</li>
+                <li style="list-style: none"><strong>6 :</strong> Paralysé</li>
+              </p>
+            </article>
 
-  <article id="barriere">
-  <h3>
-    <img src="../../assets/images/skills-icons/war-magus/barrier.png" class="image skill-icon">
-    Barrière
-    <span><img src="../../assets/images/action-costs/reaction.png" alt="Reaction" class="image action-icon">1 PA (Réaction)</span>
-  </h3>
-    <p>Un bouclier protecteur d'énergie radieuse repousse les tentatives d’infliger des afflictions aux alliés. Lorsqu'un ennemi force au moins un allié à effectuer un jet de sauvegarde contre une affliction, le Mage guerrier peut utiliser sa réaction pour accorder +4 à tous les jets de sauvegarde des alliés contre cet effet.</p>
-  </article>
+            <article id="barriere">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/war-magus/barrier.png"
+                  class="image skill-icon"
+                />
+                Barrière
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/reaction.png"
+                    alt="Reaction"
+                    class="image action-icon"
+                  />1 PA (Réaction)</span
+                >
+              </h3>
+              <p>
+                Un bouclier protecteur d'énergie radieuse repousse les
+                tentatives d’infliger des afflictions aux alliés. Lorsqu'un
+                ennemi force au moins un allié à effectuer un jet de sauvegarde
+                contre une affliction, le Mage guerrier peut utiliser sa
+                réaction pour accorder +4 à tous les jets de sauvegarde des
+                alliés contre cet effet.
+              </p>
+            </article>
 
-  <article id="tranche-force">
-  <h3>
-    <img src="../../assets/images/skills-icons/war-magus/strength-slash.png" class="image skill-icon">
-    Tranche-force
-    <span><img src="../../assets/images/action-costs/combo-action.png" alt="Combo" class="image action-icon">1 PA (Action Combo)</span>
-  </h3>
-    <p>Lorsque le Mage guerrier frappe un ennemi souffrant d'une affliction avec une attaque, le Mage guerrier peut utiliser une action combo pour réduire l'Offense de cet ennemi de son modificateur de Sagesse pendant 3 rounds, et le Mage guerrier lance 1d6 supplémentaire lors du calcul des dégâts de cette attaque.</p>
-  </article>
+            <article id="tranche-force">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/war-magus/strength-slash.png"
+                  class="image skill-icon"
+                />
+                Tranche-force
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/combo-action.png"
+                    alt="Combo"
+                    class="image action-icon"
+                  />1 PA (Action Combo)</span
+                >
+              </h3>
+              <p>
+                Lorsque le Mage guerrier frappe un ennemi souffrant d'une
+                affliction avec une attaque, le Mage guerrier peut utiliser une
+                action combo pour réduire l'Offense de cet ennemi de son
+                modificateur de Sagesse pendant 3 rounds, et le Mage guerrier
+                lance 1d6 supplémentaire lors du calcul des dégâts de cette
+                attaque.
+              </p>
+            </article>
 
-  <article id="conclave-des-magiciens">
-  <h3>
-    <img src="../../assets/images/skills-icons/war-magus/magi-conclave.png" class="image skill-icon">
-    Conclave des magiciens
-    <span><img src="../../assets/images/action-costs/specialisation.png" alt="Specialisation" class="image action-icon">Spécialisation</span>
-  </h3>
-    <p>Les Mages guerriers se regroupent parfois pour partager des informations et des techniques secrètes. Choisissez un Conclave, et le Mage guerrier acquerra des aptitudes supplémentaires de ce Conclave au fur et à mesure de son niveau.</p>
-  </article>
+            <article id="conclave-des-magiciens">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/war-magus/magi-conclave.png"
+                  class="image skill-icon"
+                />
+                Conclave des magiciens
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/specialisation.png"
+                    alt="Specialisation"
+                    class="image action-icon"
+                  />Spécialisation</span
+                >
+              </h3>
+              <p>
+                Les Mages guerriers se regroupent parfois pour partager des
+                informations et des techniques secrètes. Choisissez un Conclave,
+                et le Mage guerrier acquerra des aptitudes supplémentaires de ce
+                Conclave au fur et à mesure de son niveau.
+              </p>
+            </article>
 
-  <article id="force-de-la-nature">
-  <h3>
-    <img src="../../assets/images/skills-icons/war-magus/force-of-nature.png" class="image skill-icon">
-    Force de la nature
-    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-  </h3>
-    <p>Le Mage guerrier peut effectuer deux attaques dans la même action avec sa lame de guerre, la première infligeant des dégâts tranchants et la seconde des dégâts contondants.</p>
-  </article>
+            <article id="force-de-la-nature">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/war-magus/force-of-nature.png"
+                  class="image skill-icon"
+                />
+                Force de la nature
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                Le Mage guerrier peut effectuer deux attaques dans la même
+                action avec sa lame de guerre, la première infligeant des dégâts
+                tranchants et la seconde des dégâts contondants.
+              </p>
+            </article>
 
-  <article id="langue-de-la-nature">
-  <h3>
-    <img src="../../assets/images/skills-icons/war-magus/language-of-the-wild.png" class="image skill-icon">
-    Langue de la nature
-    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-  </h3>
-    <p>Les capacités chamaniques du Mage guerrier lui permettent de parler et de comprendre les créatures du Labyrinthe. Le mage guerrier peut comprendre la langue des créatures non-humanoïdes, si elles en ont une.</p>
-  </article>
+            <article id="langue-de-la-nature">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/war-magus/language-of-the-wild.png"
+                  class="image skill-icon"
+                />
+                Langue de la nature
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                Les capacités chamaniques du Mage guerrier lui permettent de
+                parler et de comprendre les créatures du Labyrinthe. Le mage
+                guerrier peut comprendre la langue des créatures non-humanoïdes,
+                si elles en ont une.
+              </p>
+            </article>
 
-  <article id="epidemie">
-  <h3>
-    <img src="../../assets/images/skills-icons/war-magus/epidemic.png" class="image skill-icon">
-    Épidémie
-    <span><img src="../../assets/images/action-costs/combo-action.png" alt="Combo" class="image action-icon">1 PA (Action Combo)</span>
-  </h3>
-    <p>Après avoir touché une cible souffrant d'une affliction avec une attaque, le Mage guerrier peut dépenser un emplacement de sort de niveau 1 pour forcer un nombre quelconque de créatures choisies dans un rayon de 6 mètres à effectuer un jet de sauvegarde de Sagesse ou à être affligées par cette affliction pendant 3 rounds.</p>
-  </article>
+            <article id="epidemie">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/war-magus/epidemic.png"
+                  class="image skill-icon"
+                />
+                Épidémie
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/combo-action.png"
+                    alt="Combo"
+                    class="image action-icon"
+                  />1 PA (Action Combo)</span
+                >
+              </h3>
+              <p>
+                Après avoir touché une cible souffrant d'une affliction avec une
+                attaque, le Mage guerrier peut dépenser un emplacement de sort
+                de niveau 1 pour forcer un nombre quelconque de créatures
+                choisies dans un rayon de 6 mètres à effectuer un jet de
+                sauvegarde de Sagesse ou à être affligées par cette affliction
+                pendant 3 rounds.
+              </p>
+            </article>
 
-  <article id="vitesse-de-l-elan">
-  <h3>
-    <img src="../../assets/images/skills-icons/war-magus/elkspeed.png" class="image skill-icon">
-    Vitesse de l’élan
-    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-  </h3>
-    <p>En tant qu'action, dépensez un emplacement de sort de niveau 1 pour cibler un certain nombre de créatures dans un rayon de 30 mètres, jusqu'au modificateur de Sagesse du Mage guerrier. Ces créatures gagnent 1 PA bonus au début de leur tour pendant 1 round qu'elles ne peuvent utiliser que pour foncer ou se désengager, mais ce PA disparaît à la fin de leur tour si elles ne l'utilisent pas. Elles peuvent temporairement dépasser le plafond de 4 PA avec Vitesse de l’élan.</p>
-  </article>
+            <article id="vitesse-de-l-elan">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/war-magus/elkspeed.png"
+                  class="image skill-icon"
+                />
+                Vitesse de l’élan
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                En tant qu'action, dépensez un emplacement de sort de niveau 1
+                pour cibler un certain nombre de créatures dans un rayon de 30
+                mètres, jusqu'au modificateur de Sagesse du Mage guerrier. Ces
+                créatures gagnent 1 PA bonus au début de leur tour pendant 1
+                round qu'elles ne peuvent utiliser que pour foncer ou se
+                désengager, mais ce PA disparaît à la fin de leur tour si elles
+                ne l'utilisent pas. Elles peuvent temporairement dépasser le
+                plafond de 4 PA avec Vitesse de l’élan.
+              </p>
+            </article>
 
-  <article id="effacement">
-  <h3>
-    <img src="../../assets/images/skills-icons/war-magus/erase.png" class="image skill-icon">
-    Effacement
-    <span><img src="../../assets/images/action-costs/bonus-action.png" alt="Bonus" class="image action-icon">1 PA (Action Bonus)</span>
-  </h3>
-    <p>En tant qu'action bonus, supprimez tous les bonus ou malus sur une créature dans un rayon de 15 mètres. Le Mage guerrier récupère un emplacement de sort de niveau 2 ou moins par bonus ou malus purgé. Le Mage guerrier ne peut récupérer que jusqu'à 2 emplacements de sorts de cette manière par repos long.</p>
-  </article>
+            <article id="effacement">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/war-magus/erase.png"
+                  class="image skill-icon"
+                />
+                Effacement
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/bonus-action.png"
+                    alt="Bonus"
+                    class="image action-icon"
+                  />1 PA (Action Bonus)</span
+                >
+              </h3>
+              <p>
+                En tant qu'action bonus, supprimez tous les bonus ou malus sur
+                une créature dans un rayon de 15 mètres. Le Mage guerrier
+                récupère un emplacement de sort de niveau 2 ou moins par bonus
+                ou malus purgé. Le Mage guerrier ne peut récupérer que jusqu'à 2
+                emplacements de sorts de cette manière par repos long.
+              </p>
+            </article>
 
-  <article id="soins-de-guerre-en-ligne">
-  <h3>
-    <img src="../../assets/images/skills-icons/war-magus/war-heal-line.png" class="image skill-icon">
-    Soins de guerre en ligne
-    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-  </h3>
-    <p>En tant qu'action, le Mage guerrier peut dépenser un emplacement de sort de niveau 2 pour cibler jusqu'à 3 créatures amicales dans un rayon de 30 mètres et les soigner pour 1d8 + modificateur de Sagesse points de vie une fois lors du tour du Mage guerrier, et de nouveau à la fin du round. Le soin augmente à 2d8 + modificateur de Sagesse avec un emplacement de sort de niveau trois. S'il est effectué en dehors du combat, la cible restaure simultanément les deux instances de soin.</p>
-  </article>
+            <article id="soins-de-guerre-en-ligne">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/war-magus/war-heal-line.png"
+                  class="image skill-icon"
+                />
+                Soins de guerre en ligne
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                En tant qu'action, le Mage guerrier peut dépenser un emplacement
+                de sort de niveau 2 pour cibler jusqu'à 3 créatures amicales
+                dans un rayon de 30 mètres et les soigner pour 1d8 +
+                modificateur de Sagesse points de vie une fois lors du tour du
+                Mage guerrier, et de nouveau à la fin du round. Le soin augmente
+                à 2d8 + modificateur de Sagesse avec un emplacement de sort de
+                niveau trois. S'il est effectué en dehors du combat, la cible
+                restaure simultanément les deux instances de soin.
+              </p>
+            </article>
 
-  <article id="transfert">
-  <h3>
-    <img src="../../assets/images/skills-icons/war-magus/displace.png" class="image skill-icon">
-    Transfert
-    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-  </h3>
-    <p>En tant qu'action, dépensez un emplacement de sort de niveau 2 pour supprimer une seule affliction d'une créature amicale volontaire dans un rayon de 36 mètres. Une créature ciblée dans un rayon de 36 mètres doit ensuite réussir un jet de sauvegarde de Dextérité avec désavantage ou subir cette affliction pendant 3 rounds.</p>
-  </article>
+            <article id="transfert">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/war-magus/displace.png"
+                  class="image skill-icon"
+                />
+                Transfert
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                En tant qu'action, dépensez un emplacement de sort de niveau 2
+                pour supprimer une seule affliction d'une créature amicale
+                volontaire dans un rayon de 36 mètres. Une créature ciblée dans
+                un rayon de 36 mètres doit ensuite réussir un jet de sauvegarde
+                de Dextérité avec désavantage ou subir cette affliction pendant
+                3 rounds.
+              </p>
+            </article>
 
-  <article id="tranche-membre">
-  <h3>
-    <img src="../../assets/images/skills-icons/war-magus/head-arm-leg-cut.png" class="image skill-icon">
-    Tranche-membre
-    <span><img src="../../assets/images/action-costs/combo-action.png" alt="Combo" class="image action-icon">1 PA (Action Combo)</span>
-  </h3>
-    <p>Chaque fois que le Mage guerrier frappe un ennemi souffrant d'une affliction avec une attaque, le Mage guerrier peut dépenser un emplacement de sort de niveau 2 et une action combo pour choisir un lien. Cet ennemi doit réussir un jet de sauvegarde de Dextérité ou subir le lien choisi pendant 3 rounds.</p>
-  </article>
+            <article id="tranche-membre">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/war-magus/head-arm-leg-cut.png"
+                  class="image skill-icon"
+                />
+                Tranche-membre
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/combo-action.png"
+                    alt="Combo"
+                    class="image action-icon"
+                  />1 PA (Action Combo)</span
+                >
+              </h3>
+              <p>
+                Chaque fois que le Mage guerrier frappe un ennemi souffrant
+                d'une affliction avec une attaque, le Mage guerrier peut
+                dépenser un emplacement de sort de niveau 2 et une action combo
+                pour choisir un lien. Cet ennemi doit réussir un jet de
+                sauvegarde de Dextérité ou subir le lien choisi pendant 3
+                rounds.
+              </p>
+            </article>
 
-  <article id="arme-biomagique">
-  <h3>
-    <img src="../../assets/images/skills-icons/war-magus/bioweapon.png" class="image skill-icon">
-    Arme biomagique
-    <span><img src="../../assets/images/action-costs/bonus-action.png" alt="Bonus" class="image action-icon">1 PA (Action Bonus)</span>
-  </h3>
-    <p>L'expérimentation avec différentes concentrations d'énergie magique permet au Mage guerrier de contrôler quelle maladie inflige la Maladie aléatoire. En utilisant une action bonus, le Mage guerrier peut choisir quelle maladie inflige la Maladie aléatoire jusqu'à la fin de son prochain tour.</p>
-  </article>
+            <article id="arme-biomagique">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/war-magus/bioweapon.png"
+                  class="image skill-icon"
+                />
+                Arme biomagique
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/bonus-action.png"
+                    alt="Bonus"
+                    class="image action-icon"
+                  />1 PA (Action Bonus)</span
+                >
+              </h3>
+              <p>
+                L'expérimentation avec différentes concentrations d'énergie
+                magique permet au Mage guerrier de contrôler quelle maladie
+                inflige la Maladie aléatoire. En utilisant une action bonus, le
+                Mage guerrier peut choisir quelle maladie inflige la Maladie
+                aléatoire jusqu'à la fin de son prochain tour.
+              </p>
+            </article>
 
-  <article id="vampire">
-  <h3>
-    <img src="../../assets/images/skills-icons/war-magus/vampire.png" class="image skill-icon">
-    Vampire
-    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-  </h3>
-    <p>Lorsque le Mage guerrier frappe un ennemi souffrant d'une affliction avec une attaque, le Mage guerrier restaure 1d8 + modificateur de Sagesse points de vie.</p>
-  </article>
+            <article id="vampire">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/war-magus/vampire.png"
+                  class="image skill-icon"
+                />
+                Vampire
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                Lorsque le Mage guerrier frappe un ennemi souffrant d'une
+                affliction avec une attaque, le Mage guerrier restaure 1d8 +
+                modificateur de Sagesse points de vie.
+              </p>
+            </article>
 
-  <article id="vidange-mentale">
-  <h3>
-    <img src="../../assets/images/skills-icons/war-magus/mind-drain.png" class="image skill-icon">
-    Vidange mentale
-    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-  </h3>
-    <p>Lorsque le Mage guerrier frappe un ennemi à la fois lié et souffrant d'une autre affliction avec une attaque, il restaure un emplacement de sort de n'importe quel niveau. Il peut, à la place, accorder à un allié un emplacement de sort de l'un de ces niveaux, ou restaurer une utilisation d'une capacité de niveau 19 ou inférieure limitée par les repos longs ou courts. La Vidange mentale ne peut restaurer les emplacements de sorts ou les utilisations de fonction que 3 fois par repos long.</p>
-  </article>
+            <article id="vidange-mentale">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/war-magus/mind-drain.png"
+                  class="image skill-icon"
+                />
+                Vidange mentale
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                Lorsque le Mage guerrier frappe un ennemi à la fois lié et
+                souffrant d'une autre affliction avec une attaque, il restaure
+                un emplacement de sort de n'importe quel niveau. Il peut, à la
+                place, accorder à un allié un emplacement de sort de l'un de ces
+                niveaux, ou restaurer une utilisation d'une capacité de niveau
+                19 ou inférieure limitée par les repos longs ou courts. La
+                Vidange mentale ne peut restaurer les emplacements de sorts ou
+                les utilisations de fonction que 3 fois par repos long.
+              </p>
+            </article>
 
-  <article id="robe-de-fee">
-  <h3>
-    <img src="../../assets/images/skills-icons/war-magus/fairy-robe.png" class="image skill-icon">
-    Robe de fée
-    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-  </h3>
-    <p>En tant qu'action, restaurez 6d10 + modificateur de Sagesse points de vie à toutes les créatures amicales volontaires dans un rayon de 36 mètres. Ces créatures se remettent de toutes les afflictions qui les affectent et ne peuvent être affligées par des afflictions jusqu'à la fin du prochain tour du Mage guerrier. La Robe de fée peut être utilisée une fois par repos long.</p>
-  </article> </div>
+            <article id="robe-de-fee">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/war-magus/fairy-robe.png"
+                  class="image skill-icon"
+                />
+                Robe de fée
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                En tant qu'action, restaurez 6d10 + modificateur de Sagesse
+                points de vie à toutes les créatures amicales volontaires dans
+                un rayon de 36 mètres. Ces créatures se remettent de toutes les
+                afflictions qui les affectent et ne peuvent être affligées par
+                des afflictions jusqu'à la fin du prochain tour du Mage
+                guerrier. La Robe de fée peut être utilisée une fois par repos
+                long.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
       <h2 class="patch-titre" id="specialisations">
-        <img src="../../assets/images/notes-big.png" class="image image-h2"> Spécialisations
+        <img src="../../assets/images/notes-big.png" class="image image-h2" />
+        Spécialisations
       </h2>
-    
-  <section class="patch-section">
-  <div class="toggle-section">
-    <h2 class="patch-titre" id="conclave-des-lames-de-guerre">
-      <img src="../../assets/images/subclass-icons/war-magus/war-edge.png" class="image class-icon">
-      Conclave des Lames de Guerre
-      <button class="toggle-button" onclick="toggleSection(this)">▲</button>
-    </h2>
-    </div>
-    <div class="collapsible-content expanded">
-    <div class="patch-list">
-      
-        <article id="tranche-garde">
-        <h3>
-          <img src="../../assets/images/skills-icons/war-magus/guard-slash.png" class="image skill-icon">
-          Tranche-garde
-          <span><img src="../../assets/images/action-costs/combo-action.png" alt="Combo" class="image action-icon">1 PA (Action Combo)</span>
-        </h3>
-          <p>Le dé supplémentaire de 1d6 sur Tranche-force augmente à 1d8. De plus, lorsque le Mage guerrier frappe une cible souffrant d'une affliction avec une attaque, le Mage guerrier peut dépenser une action combo pour augmenter les dégâts de l'attaque de 1d8 et infliger cet effet pendant 3 rounds : les attaques contre cette créature gagnent une Offense égale au modificateur de Sagesse du Mage guerrier.</p>
-        </article>
 
-        <article id="lame-veritable">
-        <h3>
-          <img src="../../assets/images/skills-icons/war-magus/true-slash.png" class="image skill-icon">
-          Lame véritable
-          <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-        </h3>
-          <p>Le Mage guerrier gagne un bonus de +2 sur les jets d'attaque contre les cibles souffrant d'une affliction. Il ignore tout effet qui pourrait influer négativement sur le résultat de leur jet d'attaque lorsqu'il attaque une cible souffrant d'une affliction.</p>
-        </article>
+      <section class="patch-section">
+        <div class="toggle-section">
+          <h2 class="patch-titre" id="conclave-des-lames-de-guerre">
+            <img
+              src="../../assets/images/subclass-icons/war-magus/war-edge.png"
+              class="image class-icon"
+            />
+            Conclave des Lames de Guerre
+            <button class="toggle-button" onclick="toggleSection(this)">
+              ▲
+            </button>
+          </h2>
+        </div>
+        <div class="collapsible-content expanded">
+          <div class="patch-list">
+            <article id="tranche-garde">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/war-magus/guard-slash.png"
+                  class="image skill-icon"
+                />
+                Tranche-garde
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/combo-action.png"
+                    alt="Combo"
+                    class="image action-icon"
+                  />1 PA (Action Combo)</span
+                >
+              </h3>
+              <p>
+                Le dé supplémentaire de 1d6 sur Tranche-force augmente à 1d8. De
+                plus, lorsque le Mage guerrier frappe une cible souffrant d'une
+                affliction avec une attaque, le Mage guerrier peut dépenser une
+                action combo pour augmenter les dégâts de l'attaque de 1d8 et
+                infliger cet effet pendant 3 rounds : les attaques contre cette
+                créature gagnent une Offense égale au modificateur de Sagesse du
+                Mage guerrier.
+              </p>
+            </article>
 
-        <article id="lame-nefaste">
-        <h3>
-          <img src="../../assets/images/skills-icons/war-magus/ailing-slash.png" class="image skill-icon">
-          Lame néfaste
-          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-        </h3>
-          <p>En tant qu'action, le Mage guerrier peut dépenser un emplacement de sort de niveau 3 pour activer Lame néfaste. Effectuez un jet d'attaque au corps à corps avec une lame de guerre sur un ennemi souffrant d'une affliction. En cas de réussite, la cible subit 6d10 + modificateur de Force de dégâts tranchants. Ces dégâts ignorent la résistance ou l'immunité aux dégâts tranchants.</p>
-        </article>
-    </div>
-    </div>
-  </section>
+            <article id="lame-veritable">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/war-magus/true-slash.png"
+                  class="image skill-icon"
+                />
+                Lame véritable
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                Le Mage guerrier gagne un bonus de +2 sur les jets d'attaque
+                contre les cibles souffrant d'une affliction. Il ignore tout
+                effet qui pourrait influer négativement sur le résultat de leur
+                jet d'attaque lorsqu'il attaque une cible souffrant d'une
+                affliction.
+              </p>
+            </article>
 
-  <section class="patch-section">
-  <div class="toggle-section">
-    <h2 class="patch-titre" id="conclave-du-savoir-de-la-guerre">
-      <img src="../../assets/images/subclass-icons/war-magus/war-lore.png" class="image class-icon">
-      Conclave du Savoir de la Guerre
-      <button class="toggle-button" onclick="toggleSection(this)">▲</button>
-    </h2>
-    </div>
-    <div class="collapsible-content expanded">
-    <div class="patch-list">
-      
-        <article id="peau-de-pierre">
-        <h3>
-          <img src="../../assets/images/skills-icons/war-magus/stoneskin.png" class="image skill-icon">
-          Peau de pierre
-          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-        </h3>
-          <p>En tant qu'action, consommez un emplacement de sort de niveau 1 pour cibler une créature volontaire dans un rayon de 30 mètres. Cette créature gagne un bonus de +2 à la Défense pendant 3 rounds.</p>
-        </article>
+            <article id="lame-nefaste">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/war-magus/ailing-slash.png"
+                  class="image skill-icon"
+                />
+                Lame néfaste
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                En tant qu'action, le Mage guerrier peut dépenser un emplacement
+                de sort de niveau 3 pour activer Lame néfaste. Effectuez un jet
+                d'attaque au corps à corps avec une lame de guerre sur un ennemi
+                souffrant d'une affliction. En cas de réussite, la cible subit
+                6d10 + modificateur de Force de dégâts tranchants. Ces dégâts
+                ignorent la résistance ou l'immunité aux dégâts tranchants.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-        <article id="puissance-de-guerre">
-        <h3>
-          <img src="../../assets/images/skills-icons/war-magus/warmight.png" class="image skill-icon">
-          Puissance de guerre
-          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
-        </h3>
-          <p>En tant qu'action, consommez un emplacement de sort de niveau 2 pour cibler une créature amicale volontaire dans un rayon de 30 mètres. Son Offense augmente de 2d4 + modificateur de Sagesse pendant 3 rounds, lancés par le Mage guerrier lors de l'activation.</p>
-        </article>
+      <section class="patch-section">
+        <div class="toggle-section">
+          <h2 class="patch-titre" id="conclave-du-savoir-de-la-guerre">
+            <img
+              src="../../assets/images/subclass-icons/war-magus/war-lore.png"
+              class="image class-icon"
+            />
+            Conclave du Savoir de la Guerre
+            <button class="toggle-button" onclick="toggleSection(this)">
+              ▲
+            </button>
+          </h2>
+        </div>
+        <div class="collapsible-content expanded">
+          <div class="patch-list">
+            <article id="peau-de-pierre">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/war-magus/stoneskin.png"
+                  class="image skill-icon"
+                />
+                Peau de pierre
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                En tant qu'action, consommez un emplacement de sort de niveau 1
+                pour cibler une créature volontaire dans un rayon de 30 mètres.
+                Cette créature gagne un bonus de +2 à la Défense pendant 3
+                rounds.
+              </p>
+            </article>
 
-        <article id="maitrise-des-lois-de-la-guerre">
-        <h3>
-          <img src="../../assets/images/skills-icons/war-magus/war-lore-mastery.png" class="image skill-icon">
-          Maîtrise des lois de la guerre
-          <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
-        </h3>
-          <p>Vitesse de l’Élan, Peau de pierre et Puissance de guerre durent un round supplémentaire. De plus, le Mage guerrier gagne la capacité de les lancer avec des emplacements de sort de niveau supérieur. Vitesse de l’Élan dure 1 tour supplémentaire avec un emplacement de sort de niveau 2, et 2 tours supplémentaires avec un emplacement de sort de niveau 3. Peau de pierre affecte 2 alliés avec un emplacement de sort de niveau 2, et 3 alliés avec un emplacement de sort de niveau 3. Puissance de guerre augmente à 4d4 + modificateur de Sagesse avec un emplacement de sort de niveau 3.</p>
-        </article>
-    </div>
-    </div>
-  </section>
-    
-    
-<section class="patch-section">
-  <h2 class="patch-titre" id="progression">
-    <img src="../../assets/images/notes-big.png" class="image image-h2">
-    Progression par niveau
-  </h2>
-  <div class="class-table-tabs-wrapper">
-    <button class="tab-button active" onclick="switchTab(event, 'general')">Mage guerrier</button>
-    <button class="tab-button" onclick="switchTab(event, 'lames')">Conclave des Lames de Guerre</button>
-    <button class="tab-button" onclick="switchTab(event, 'savoir')">Conclave du Savoir de la Guerre</button>
-  </div>
+            <article id="puissance-de-guerre">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/war-magus/warmight.png"
+                  class="image skill-icon"
+                />
+                Puissance de guerre
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/action.png"
+                    alt="Action"
+                    class="image action-icon"
+                  />2 PA (Action)</span
+                >
+              </h3>
+              <p>
+                En tant qu'action, consommez un emplacement de sort de niveau 2
+                pour cibler une créature amicale volontaire dans un rayon de 30
+                mètres. Son Offense augmente de 2d4 + modificateur de Sagesse
+                pendant 3 rounds, lancés par le Mage guerrier lors de
+                l'activation.
+              </p>
+            </article>
 
-  <div class="table-container tab-content active" id="tab-general">
-    <table class="progression-table">
-      <thead>
-        <tr>
-          <th>Niveau</th>
-          <th>Bonus de maîtrise</th>
-          <th>Sorts niv. 1</th>
-          <th>Sorts niv. 2</th>
-          <th>Sorts niv. 3</th>
-          <th>Aptitudes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>1</td><td>+2</td><td>3</td><td>—</td><td>—</td><td>Soins de guerre, Maîtrise des lames de guerre, Maladie aléatoire</td></tr>
-        <tr><td>2</td><td>+2</td><td>3</td><td>—</td><td>—</td><td>Tranche-Force, Barrière</td></tr>
-        <tr><td>3</td><td>+2</td><td>4</td><td>—</td><td>—</td><td>Conclave des magiciens, Aptitude de conclave</td></tr>
-        <tr><td>4</td><td>+2</td><td>4</td><td>—</td><td>—</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-        <tr><td>5</td><td>+3</td><td>4</td><td>—</td><td>—</td><td>Force de la nature, Langue de la nature</td></tr>
-        <tr><td>6</td><td>+3</td><td>5</td><td>—</td><td>—</td><td>Épidémie</td></tr>
-        <tr><td>7</td><td>+3</td><td>5</td><td>—</td><td>—</td><td>Vitesse de l'élan</td></tr>
-        <tr><td>8</td><td>+3</td><td>5</td><td>—</td><td>—</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-        <tr><td>9</td><td>+4</td><td>5</td><td>2</td><td>—</td><td>Aptitude de conclave</td></tr>
-        <tr><td>10</td><td>+4</td><td>5</td><td>2</td><td>—</td><td>Effacement</td></tr>
-        <tr><td>11</td><td>+4</td><td>5</td><td>2</td><td>—</td><td>Soins de guerre en ligne</td></tr>
-        <tr><td>12</td><td>+4</td><td>5</td><td>3</td><td>—</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-        <tr><td>13</td><td>+5</td><td>5</td><td>3</td><td>—</td><td>Transfert</td></tr>
-        <tr><td>14</td><td>+5</td><td>5</td><td>3</td><td>—</td><td>Tranche-membre</td></tr>
-        <tr><td>15</td><td>+5</td><td>5</td><td>3</td><td>2</td><td>Aptitude de conclave</td></tr>
-        <tr><td>16</td><td>+5</td><td>5</td><td>3</td><td>2</td><td>Arme biomagique</td></tr>
-        <tr><td>17</td><td>+6</td><td>5</td><td>3</td><td>2</td><td>Vampire</td></tr>
-        <tr><td>18</td><td>+6</td><td>5</td><td>3</td><td>3</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
-        <tr><td>19</td><td>+6</td><td>5</td><td>3</td><td>3</td><td>Vidange mentale</td></tr>
-        <tr><td>20</td><td>+6</td><td>5</td><td>3</td><td>3</td><td>Robe de fée</td></tr>
-      </tbody>
-    </table>
-  </div>
+            <article id="maitrise-des-lois-de-la-guerre">
+              <h3>
+                <img
+                  src="../../assets/images/skills-icons/war-magus/war-lore-mastery.png"
+                  class="image skill-icon"
+                />
+                Maîtrise des lois de la guerre
+                <span
+                  ><img
+                    src="../../assets/images/action-costs/passive-action.png"
+                    alt="Passive"
+                    class="image action-icon"
+                  />Passif</span
+                >
+              </h3>
+              <p>
+                Vitesse de l’Élan, Peau de pierre et Puissance de guerre durent
+                un round supplémentaire. De plus, le Mage guerrier gagne la
+                capacité de les lancer avec des emplacements de sort de niveau
+                supérieur. Vitesse de l’Élan dure 1 tour supplémentaire avec un
+                emplacement de sort de niveau 2, et 2 tours supplémentaires avec
+                un emplacement de sort de niveau 3. Peau de pierre affecte 2
+                alliés avec un emplacement de sort de niveau 2, et 3 alliés avec
+                un emplacement de sort de niveau 3. Puissance de guerre augmente
+                à 4d4 + modificateur de Sagesse avec un emplacement de sort de
+                niveau 3.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-  <div class="table-container tab-content" id="tab-lames" style="display:none;">
-    <table class="progression-table">
-      <thead><tr><th>Niveau</th><th>Aptitudes des Lames de Guerre</th></tr></thead>
-      <tbody>
-          <tr><td>3</td><td>Tranche-garde</td></tr>
-          <tr><td>9</td><td>Lame véritable</td></tr>
-          <tr><td>15</td><td>Lame néfaste</td></tr>
-      </tbody>
-    </table>
-  </div>
+      <section class="patch-section">
+        <h2 class="patch-titre" id="progression">
+          <img src="../../assets/images/notes-big.png" class="image image-h2" />
+          Progression par niveau
+        </h2>
+        <div class="class-table-tabs-wrapper">
+          <button
+            class="tab-button active"
+            onclick="switchTab(event, 'general')"
+          >
+            Mage guerrier
+          </button>
+          <button class="tab-button" onclick="switchTab(event, 'lames')">
+            Conclave des Lames de Guerre
+          </button>
+          <button class="tab-button" onclick="switchTab(event, 'savoir')">
+            Conclave du Savoir de la Guerre
+          </button>
+        </div>
 
-  <div class="table-container tab-content" id="tab-savoir" style="display:none;">
-    <table class="progression-table">
-      <thead><tr><th>Niveau</th><th>Aptitudes du Savoir de la Guerre</th></tr></thead>
-      <tbody>
-          <tr><td>3</td><td>Peau de pierre</td></tr>
-          <tr><td>9</td><td>Puissance de guerre</td></tr>
-          <tr><td>15</td><td>Maîtrise des lois de la guerre</td></tr>
-      </tbody>
-    </table>
-  </div>
+        <div class="table-container tab-content active" id="tab-general">
+          <table class="progression-table">
+            <thead>
+              <tr>
+                <th>Niveau</th>
+                <th>Bonus de maîtrise</th>
+                <th>Sorts niv. 1</th>
+                <th>Sorts niv. 2</th>
+                <th>Sorts niv. 3</th>
+                <th>Aptitudes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>+2</td>
+                <td>3</td>
+                <td>—</td>
+                <td>—</td>
+                <td>
+                  Soins de guerre, Maîtrise des lames de guerre, Maladie
+                  aléatoire
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>+2</td>
+                <td>3</td>
+                <td>—</td>
+                <td>—</td>
+                <td>Tranche-Force, Barrière</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>+2</td>
+                <td>4</td>
+                <td>—</td>
+                <td>—</td>
+                <td>Conclave des magiciens, Aptitude de conclave</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>+2</td>
+                <td>4</td>
+                <td>—</td>
+                <td>—</td>
+                <td>Amélioration de caractéristiques, Défense +1</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>+3</td>
+                <td>4</td>
+                <td>—</td>
+                <td>—</td>
+                <td>Force de la nature, Langue de la nature</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>+3</td>
+                <td>5</td>
+                <td>—</td>
+                <td>—</td>
+                <td>Épidémie</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>+3</td>
+                <td>5</td>
+                <td>—</td>
+                <td>—</td>
+                <td>Vitesse de l'élan</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>+3</td>
+                <td>5</td>
+                <td>—</td>
+                <td>—</td>
+                <td>Amélioration de caractéristiques, Défense +1</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>+4</td>
+                <td>5</td>
+                <td>2</td>
+                <td>—</td>
+                <td>Aptitude de conclave</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>+4</td>
+                <td>5</td>
+                <td>2</td>
+                <td>—</td>
+                <td>Effacement</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>+4</td>
+                <td>5</td>
+                <td>2</td>
+                <td>—</td>
+                <td>Soins de guerre en ligne</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>+4</td>
+                <td>5</td>
+                <td>3</td>
+                <td>—</td>
+                <td>Amélioration de caractéristiques, Défense +1</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>+5</td>
+                <td>5</td>
+                <td>3</td>
+                <td>—</td>
+                <td>Transfert</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>+5</td>
+                <td>5</td>
+                <td>3</td>
+                <td>—</td>
+                <td>Tranche-membre</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>+5</td>
+                <td>5</td>
+                <td>3</td>
+                <td>2</td>
+                <td>Aptitude de conclave</td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td>+5</td>
+                <td>5</td>
+                <td>3</td>
+                <td>2</td>
+                <td>Arme biomagique</td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>+6</td>
+                <td>5</td>
+                <td>3</td>
+                <td>2</td>
+                <td>Vampire</td>
+              </tr>
+              <tr>
+                <td>18</td>
+                <td>+6</td>
+                <td>5</td>
+                <td>3</td>
+                <td>3</td>
+                <td>Amélioration de caractéristiques, Défense +1</td>
+              </tr>
+              <tr>
+                <td>19</td>
+                <td>+6</td>
+                <td>5</td>
+                <td>3</td>
+                <td>3</td>
+                <td>Vidange mentale</td>
+              </tr>
+              <tr>
+                <td>20</td>
+                <td>+6</td>
+                <td>5</td>
+                <td>3</td>
+                <td>3</td>
+                <td>Robe de fée</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-</section>
+        <div
+          class="table-container tab-content"
+          id="tab-lames"
+          style="display: none"
+        >
+          <table class="progression-table">
+            <thead>
+              <tr>
+                <th>Niveau</th>
+                <th>Aptitudes des Lames de Guerre</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3</td>
+                <td>Tranche-garde</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Lame véritable</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>Lame néfaste</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-<script>
-    function switchTab(event, tabId) {
-      const tabs = document.querySelectorAll('.tab-button');
-      const contents = document.querySelectorAll('.tab-content');
-      tabs.forEach(t => t.classList.remove('active'));
-      contents.forEach(c => {
-        c.classList.remove('active');
-        c.style.display = 'none';
-      });
+        <div
+          class="table-container tab-content"
+          id="tab-savoir"
+          style="display: none"
+        >
+          <table class="progression-table">
+            <thead>
+              <tr>
+                <th>Niveau</th>
+                <th>Aptitudes du Savoir de la Guerre</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3</td>
+                <td>Peau de pierre</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Puissance de guerre</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>Maîtrise des lois de la guerre</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-      event.target.classList.add('active');
-      const target = document.getElementById(`tab-${tabId}`);
-      target.style.display = 'block';
-      void target.offsetWidth; // forcer repaint
-      target.classList.add('active');
-    }
-</script>
+      <script>
+        function switchTab(event, tabId) {
+          const tabs = document.querySelectorAll(".tab-button");
+          const contents = document.querySelectorAll(".tab-content");
+          tabs.forEach((t) => t.classList.remove("active"));
+          contents.forEach((c) => {
+            c.classList.remove("active");
+            c.style.display = "none";
+          });
 
+          event.target.classList.add("active");
+          const target = document.getElementById(`tab-${tabId}`);
+          target.style.display = "block";
+          void target.offsetWidth; // forcer repaint
+          target.classList.add("active");
+        }
+      </script>
     </main>
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
       <img id="lightbox-img" src="" alt="Portrait" />
     </div>
-    <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button>
+    <button
+      id="backToTop"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      aria-label="Retour en haut"
+    >
+      <i class="fa-solid fa-arrow-up"></i> Retour en haut
+    </button>
     <footer>
-    <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
-</footer>
+      <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+    </footer>
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
+      document.addEventListener("DOMContentLoaded", function () {
         const searchInput = document.getElementById("search-bar");
         const aptitudeArticles = document.querySelectorAll("article");
-        searchInput.addEventListener("input", function() {
+        searchInput.addEventListener("input", function () {
           const value = searchInput.value.toLowerCase();
-          aptitudeArticles.forEach(article => {
-            const title = article.querySelector("h3")?.textContent?.toLowerCase() || "";
+          aptitudeArticles.forEach((article) => {
+            const title =
+              article.querySelector("h3")?.textContent?.toLowerCase() || "";
             const content = article.textContent?.toLowerCase() || "";
             if (title.includes(value) || content.includes(value)) {
               article.style.display = "";
@@ -480,38 +1220,138 @@
     <script src="../../scripts/lightbox.js"></script>
     <script src="../../scripts/particles.js"></script>
     <script src="../../scripts/backToTop.js"></script>
-    <button class="mobile-nav-toggle" onclick="toggleMobileNav(this)">☰</button>
+    <button class="mobile-nav-toggle" onclick="toggleMobileNav(this)">
+      ☰
+    </button>
     <div class="mobile-nav-overlay" id="mobileNav">
-      <div class="mobile-nav-content">  <a href="#details" class="section-link" onclick="toggleMobileNav()">Détails</a>
- <a href="#aptitudes" class="section-link" onclick="toggleMobileNav()">Aptitudes</a>
- <a href="#maitrise-des-lames-de-guerre" class="sub-link" onclick="toggleMobileNav()">Maîtrise des lames de guerre</a>
- <a href="#soins-de-guerre" class="sub-link" onclick="toggleMobileNav()">Soins de guerre</a>
- <a href="#maladie-aleatoire" class="sub-link" onclick="toggleMobileNav()">Maladie aléatoire</a>
- <a href="#barriere" class="sub-link" onclick="toggleMobileNav()">Barrière</a>
- <a href="#tranche-force" class="sub-link" onclick="toggleMobileNav()">Tranche-force</a>
- <a href="#conclave-des-magiciens" class="sub-link" onclick="toggleMobileNav()">Conclave des magiciens</a>
- <a href="#force-de-la-nature" class="sub-link" onclick="toggleMobileNav()">Force de la nature</a>
- <a href="#langue-de-la-nature" class="sub-link" onclick="toggleMobileNav()">Langue de la nature</a>
- <a href="#epidemie" class="sub-link" onclick="toggleMobileNav()">Épidémie</a>
- <a href="#vitesse-de-l-elan" class="sub-link" onclick="toggleMobileNav()">Vitesse de l’élan</a>
- <a href="#effacement" class="sub-link" onclick="toggleMobileNav()">Effacement</a>
- <a href="#soins-de-guerre-en-ligne" class="sub-link" onclick="toggleMobileNav()">Soins de guerre en ligne</a>
- <a href="#transfert" class="sub-link" onclick="toggleMobileNav()">Transfert</a>
- <a href="#tranche-membre" class="sub-link" onclick="toggleMobileNav()">Tranche-membre</a>
- <a href="#arme-biomagique" class="sub-link" onclick="toggleMobileNav()">Arme biomagique</a>
- <a href="#vampire" class="sub-link" onclick="toggleMobileNav()">Vampire</a>
- <a href="#vidange-mentale" class="sub-link" onclick="toggleMobileNav()">Vidange mentale</a>
- <a href="#robe-de-fee" class="sub-link" onclick="toggleMobileNav()">Robe de fée</a>
- <a href="#specialisations" class="section-link" onclick="toggleMobileNav()">Spécialisations</a>
- <a href="#conclave-des-lames-de-guerre" class="sub-link" onclick="toggleMobileNav()">Conclave des Lames de Guerre</a>
- <a href="#tranche-garde" class="sub-link" onclick="toggleMobileNav()">Tranche-garde</a>
- <a href="#lame-veritable" class="sub-link" onclick="toggleMobileNav()">Lame véritable</a>
- <a href="#lame-nefaste" class="sub-link" onclick="toggleMobileNav()">Lame néfaste</a>
- <a href="#conclave-du-savoir-de-la-guerre" class="sub-link" onclick="toggleMobileNav()">Conclave du Savoir de la Guerre</a>
- <a href="#peau-de-pierre" class="sub-link" onclick="toggleMobileNav()">Peau de pierre</a>
- <a href="#puissance-de-guerre" class="sub-link" onclick="toggleMobileNav()">Puissance de guerre</a>
- <a href="#maitrise-des-lois-de-la-guerre" class="sub-link" onclick="toggleMobileNav()">Maîtrise des lois de la guerre</a>
- <a href="#tab-general" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
+      <div class="mobile-nav-content">
+        <a href="#details" class="section-link" onclick="toggleMobileNav()"
+          >Détails</a
+        >
+        <a href="#aptitudes" class="section-link" onclick="toggleMobileNav()"
+          >Aptitudes</a
+        >
+        <a
+          href="#maitrise-des-lames-de-guerre"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Maîtrise des lames de guerre</a
+        >
+        <a href="#soins-de-guerre" class="sub-link" onclick="toggleMobileNav()"
+          >Soins de guerre</a
+        >
+        <a
+          href="#maladie-aleatoire"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Maladie aléatoire</a
+        >
+        <a href="#barriere" class="sub-link" onclick="toggleMobileNav()"
+          >Barrière</a
+        >
+        <a href="#tranche-force" class="sub-link" onclick="toggleMobileNav()"
+          >Tranche-force</a
+        >
+        <a
+          href="#conclave-des-magiciens"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Conclave des magiciens</a
+        >
+        <a
+          href="#force-de-la-nature"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Force de la nature</a
+        >
+        <a
+          href="#langue-de-la-nature"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Langue de la nature</a
+        >
+        <a href="#epidemie" class="sub-link" onclick="toggleMobileNav()"
+          >Épidémie</a
+        >
+        <a
+          href="#vitesse-de-l-elan"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Vitesse de l’élan</a
+        >
+        <a href="#effacement" class="sub-link" onclick="toggleMobileNav()"
+          >Effacement</a
+        >
+        <a
+          href="#soins-de-guerre-en-ligne"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Soins de guerre en ligne</a
+        >
+        <a href="#transfert" class="sub-link" onclick="toggleMobileNav()"
+          >Transfert</a
+        >
+        <a href="#tranche-membre" class="sub-link" onclick="toggleMobileNav()"
+          >Tranche-membre</a
+        >
+        <a href="#arme-biomagique" class="sub-link" onclick="toggleMobileNav()"
+          >Arme biomagique</a
+        >
+        <a href="#vampire" class="sub-link" onclick="toggleMobileNav()"
+          >Vampire</a
+        >
+        <a href="#vidange-mentale" class="sub-link" onclick="toggleMobileNav()"
+          >Vidange mentale</a
+        >
+        <a href="#robe-de-fee" class="sub-link" onclick="toggleMobileNav()"
+          >Robe de fée</a
+        >
+        <a
+          href="#specialisations"
+          class="section-link"
+          onclick="toggleMobileNav()"
+          >Spécialisations</a
+        >
+        <a
+          href="#conclave-des-lames-de-guerre"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Conclave des Lames de Guerre</a
+        >
+        <a href="#tranche-garde" class="sub-link" onclick="toggleMobileNav()"
+          >Tranche-garde</a
+        >
+        <a href="#lame-veritable" class="sub-link" onclick="toggleMobileNav()"
+          >Lame véritable</a
+        >
+        <a href="#lame-nefaste" class="sub-link" onclick="toggleMobileNav()"
+          >Lame néfaste</a
+        >
+        <a
+          href="#conclave-du-savoir-de-la-guerre"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Conclave du Savoir de la Guerre</a
+        >
+        <a href="#peau-de-pierre" class="sub-link" onclick="toggleMobileNav()"
+          >Peau de pierre</a
+        >
+        <a
+          href="#puissance-de-guerre"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Puissance de guerre</a
+        >
+        <a
+          href="#maitrise-des-lois-de-la-guerre"
+          class="sub-link"
+          onclick="toggleMobileNav()"
+          >Maîtrise des lois de la guerre</a
+        >
+        <a href="#tab-general" class="section-link" onclick="toggleMobileNav()"
+          >Progression par niveau</a
+        >
+      </div>
     </div>
   </body>
 </html>
