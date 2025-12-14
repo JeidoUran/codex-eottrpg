@@ -3105,11 +3105,11 @@ body.dark-green-bg::after {
   padding: 30px;
 }
 
-.patch-list.moments article {
+.patch-list.xl article {
   max-width: 1200px;
 }
 
-.accueil.moments {
+.accueil.xl {
   max-width: 1200px;
 }
 
