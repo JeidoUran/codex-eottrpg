@@ -1,93 +1,66 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Souverain | Codex - Etrian Odyssey TTRPG</title>
-    <meta
-      name="description"
-      content="Dirigeant charismatique, le Souverain guide ses alliés par la stratégie, l'inspiration et la puissance du verbe."
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="../../favicon.png" type="image/png" />
-    <link rel="stylesheet" href="../../style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <meta name="description" content="Dirigeant charismatique, le Souverain guide ses alliés par la stratégie, l'inspiration et la puissance du verbe.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../favicon.png" type="image/png">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
-    <canvas id="particles"></canvas>
-    <div class="class-nav">
-      <a href="#details" class="section-link">Détails</a>
-      <a href="#aptitudes" class="section-link">Aptitudes</a>
-      <a href="#inspiration-noble" class="sub-link">Inspiration noble</a>
-      <a href="#ordre-d-attaque" class="sub-link">Ordre d'attaque</a>
-      <a href="#ordre-de-garde" class="sub-link">Ordre de garde</a>
-      <a href="#voile-royal" class="sub-link">Voile royal</a>
-      <a href="#titre-noble" class="sub-link">Titre noble</a>
-      <a href="#negociation" class="sub-link">Négociation</a>
-      <a href="#escrime-de-cour" class="sub-link">Escrime de cour</a>
-      <a href="#ordre-de-liaison-i" class="sub-link">Ordre de liaison I</a>
-      <a href="#renforcement" class="sub-link">Renforcement</a>
-      <a href="#lignee-royale" class="sub-link">Lignée royale</a>
-      <a href="#maitrise-des-ordres" class="sub-link">Maîtrise des ordres</a>
-      <a href="#marche-monarchique" class="sub-link">Marche monarchique</a>
-      <a href="#autorisation" class="sub-link">Autorisation</a>
-      <a href="#a-l-unisson" class="sub-link">À l'unisson !</a>
-      <a href="#marque-noble" class="sub-link">Marque noble</a>
-      <a href="#decret-final" class="sub-link">Décret final</a>
-      <a href="#chevalerie" class="sub-link">Chevalerie</a>
-      <a href="#specialisations" class="section-link">Spécialisations</a>
-      <a href="#magierkaiser" class="section-link">Magierkaiser</a>
-      <a href="#armes-de-feu-gel-foudre" class="sub-link"
-        >Armes de feu/gel/foudre</a
-      >
-      <a href="#ordre-de-liaison-ii" class="sub-link">Ordre de liaison II</a>
-      <a href="#eclat-royal" class="sub-link">Éclat royal</a>
-      <a href="#arztkaiser" class="section-link">Arztkaiser</a>
-      <a href="#ordre-de-protection" class="sub-link">Ordre de protection</a>
-      <a href="#ordre-de-prevention" class="sub-link">Ordre de prévention</a>
-      <a href="#ordre-de-ralliement" class="sub-link">Ordre de ralliement</a>
-      <a href="#starkekaiser" class="section-link">Starkekaiser</a>
-      <a href="#ordres-feroces" class="sub-link">Ordres féroces</a>
-      <a href="#ex-nihilo" class="sub-link">Ex Nihilo</a>
-      <a href="#boost-de-moral" class="sub-link">Boost de moral</a>
-      <a href="#tab-general" class="section-link">Progression par niveau</a>
-    </div>
-    <header class="codex-header">
+    <canvas id="particles"></canvas> 
+<div class="class-nav">
+  <a href="#details" class="section-link">Détails</a>
+  <a href="#aptitudes" class="section-link">Aptitudes</a>
+  <a href="#inspiration-noble" class="sub-link">Inspiration noble</a>
+  <a href="#ordre-d-attaque" class="sub-link">Ordre d'attaque</a>
+  <a href="#ordre-de-garde" class="sub-link">Ordre de garde</a>
+  <a href="#voile-royal" class="sub-link">Voile royal</a>
+  <a href="#titre-noble" class="sub-link">Titre noble</a>
+  <a href="#negociation" class="sub-link">Négociation</a>
+  <a href="#escrime-de-cour" class="sub-link">Escrime de cour</a>
+  <a href="#ordre-de-liaison-i" class="sub-link">Ordre de liaison I</a>
+  <a href="#renforcement" class="sub-link">Renforcement</a>
+  <a href="#lignee-royale" class="sub-link">Lignée royale</a>
+  <a href="#maitrise-des-ordres" class="sub-link">Maîtrise des ordres</a>
+  <a href="#marche-monarchique" class="sub-link">Marche monarchique</a>
+  <a href="#autorisation" class="sub-link">Autorisation</a>
+  <a href="#a-l-unisson" class="sub-link">À l'unisson !</a>
+  <a href="#marque-noble" class="sub-link">Marque noble</a>
+  <a href="#decret-final" class="sub-link">Décret final</a>
+  <a href="#chevalerie" class="sub-link">Chevalerie</a>
+  <a href="#specialisations" class="section-link">Spécialisations</a>
+  <a href="#magierkaiser" class="section-link">Magierkaiser</a>
+  <a href="#armes-de-feu-gel-foudre" class="sub-link">Armes de feu/gel/foudre</a>
+  <a href="#ordre-de-liaison-ii" class="sub-link">Ordre de liaison II</a>
+  <a href="#eclat-royal" class="sub-link">Éclat royal</a>
+  <a href="#arztkaiser" class="section-link">Arztkaiser</a>
+  <a href="#ordre-de-protection" class="sub-link">Ordre de protection</a>
+  <a href="#ordre-de-prevention" class="sub-link">Ordre de prévention</a>
+  <a href="#ordre-de-ralliement" class="sub-link">Ordre de ralliement</a>
+  <a href="#starkekaiser" class="section-link">Starkekaiser</a>
+  <a href="#ordres-feroces" class="sub-link">Ordres féroces</a>
+  <a href="#ex-nihilo" class="sub-link">Ex Nihilo</a>
+  <a href="#boost-de-moral" class="sub-link">Boost de moral</a>
+  <a href="#tab-general" class="section-link">Progression par niveau</a>
+</div> <header class="codex-header">
       <div class="illustration-wrapper">
-        <img
-          src="../../assets/images/class-art/sovereign1.png"
-          alt="Illustration Souverain"
-          class="illustration-classe"
-          onclick="openLightbox(this.src)"
-        />
+      
+          <img src="../../assets/images/class-art/sovereign1.png" alt="Illustration Souverain" class="illustration-classe" onclick="openLightbox(this.src)">
+        
 
-        <img
-          src="../../assets/images/class-art/sovereign2.png"
-          alt="Illustration Souverain"
-          class="illustration-classe"
-          onclick="openLightbox(this.src)"
-        />
-      </div>
-      <h1>
-        <img
-          src="../../assets/images/class-icons/souverain.png"
-          class="image class-icon"
-        />
-        Souverain
-      </h1>
-      <p class="sous-titre">L’archive vivante des Égarés</p>
-      <div class="fixed-header-links">
-        <a
-          href="index.html"
-          class="carte-lien"
-          style="display: inline-block; max-width: 300px"
-          ><i class="fa-solid fa-arrow-left"></i> Index des classes</a
-        >
-      </div>
+          <img src="../../assets/images/class-art/sovereign2.png" alt="Illustration Souverain" class="illustration-classe" onclick="openLightbox(this.src)">
+         
+        </div>
+        <h1>
+          <img src="../../assets/images/class-icons/souverain.png" class="image class-icon"> Souverain
+        </h1>
+        <p class="sous-titre">L’archive vivante des Égarés</p>
+        <div class="fixed-header-links">
+          <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Index des classes</a>
+        </div>
     </header>
 
     <nav class="nav-bar">
@@ -104,1161 +77,429 @@
 
     <main class="accueil">
       <section class="intro-collapsible click" id="intro">
-        <p>
-          Un noble serein avec une présence imposante. Les Souverains s'appuient
-          sur leur charisme naturel et leur titre pour inspirer et diriger leurs
-          alliés. Les Souverains considèrent comme leur devoir de commander ceux
-          qui sont sous leur responsabilité ; que cela profite à eux-mêmes ou au
-          Souverain dépend du souverain lui-même. Leur formation aux grâces
-          sociales et à l'art de la guerre leur confère la capacité de penser de
-          manière pratique dans les deux situations, bien que de nombreux
-          Souverains soient naïfs quant aux véritables rouages du monde et
-          s'appuient sur leur pratique et leur apprentissage plutôt que sur
-          l'intuition. De plus, bien qu'ils soient talentueux pour diriger des
-          alliés, ils sont moins capables de faire face aux menaces eux-mêmes.
-        </p>
-        <button class="toggle-intro" onclick="toggleIntro()">
-          Afficher la suite
-        </button>
+        <p>Un noble serein avec une présence imposante. Les Souverains s'appuient sur leur charisme naturel et leur titre pour inspirer et diriger leurs alliés. Les Souverains considèrent comme leur devoir de commander ceux qui sont sous leur responsabilité ; que cela profite à eux-mêmes ou au Souverain dépend du souverain lui-même. Leur formation aux grâces sociales et à l'art de la guerre leur confère la capacité de penser de manière pratique dans les deux situations, bien que de nombreux Souverains soient naïfs quant aux véritables rouages du monde et s'appuient sur leur pratique et leur apprentissage plutôt que sur l'intuition. De plus, bien qu'ils soient talentueux pour diriger des alliés, ils sont moins capables de faire face aux menaces eux-mêmes. </p>
+        <button class="toggle-intro" onclick="toggleIntro()">Afficher la suite</button>
       </section>
       <section class="patch-section">
         <h2 class="patch-titre" id="details">
-          <img src="../../assets/images/notes-big.png" class="image image-h2" />
-          Détails de la classe
+          <img src="../../assets/images/notes-big.png" class="image image-h2"> Détails de la classe
         </h2>
-        <ul class="image-list">
-          <li>
-            <div class="image-texte">
-              <strong
-                ><img
-                  src="../../assets/images/class-details/health.png"
-                  class="image details-icon"
-                />
-                Points de vie :</strong
-              >
-              1d8 + modificateur de Constitution par niveau de Souverain
-            </div>
-          </li>
-          <li>
-            <div class="image-texte">
-              <strong
-                ><img
-                  src="../../assets/images/class-details/hit-dice.png"
-                  class="image details-icon"
-                />
-                Dés de vie :</strong
-              >
-              1d8 par niveau de Souverain
-            </div>
-          </li>
-          <li>
-            <div class="image-texte">
-              <strong
-                ><img
-                  src="../../assets/images/class-details/saving-throw-dc.png"
-                  class="image details-icon"
-                />
-                DD des jets de sauvegarde :</strong
-              >
-              8 + bonus de maîtrise + modificateur de Charisme
-            </div>
-          </li>
-          <li>
-            <div class="image-texte">
-              <strong
-                ><img
-                  src="../../assets/images/class-details/masteries.png"
-                  class="image details-icon"
-                />
-                Maîtrises :</strong
-              >
-              Rapières, Épées, Bâtons, Armes à feu ; Armures moyennes ;
-              Boucliers
-            </div>
-          </li>
-          <li>
-            <div class="image-texte">
-              <strong
-                ><img
-                  src="../../assets/images/class-details/saving-throw.png"
-                  class="image details-icon"
-                />
-                Jets de sauvegarde :</strong
-              >
-              Sagesse, Charisme
-            </div>
-          </li>
-          <li>
-            <div class="image-texte">
-              <strong
-                ><img
-                  src="../../assets/images/class-details/skills.png"
-                  class="image details-icon"
-                />
-                Compétences :</strong
-              >
-              Choisissez 3 parmi Arcanes, Tromperie, Histoire, Intuition,
-              Perception, Investigation, Médecine, Représentation, Persuasion,
-              Religion
-            </div>
-          </li>
-          <li>
-            <div class="image-texte">
-              <strong
-                ><img
-                  src="../../assets/images/class-details/starting-equipment.png"
-                  class="image details-icon"
-                />
-                Équipement de départ :</strong
-              >
-              Une arme maîtrisée (ou deux si légères), un bouclier, une armure
-              moyenne, un journal et un stylo à encre, un sac d'explorateur
-            </div>
-          </li>
-        </ul>
+        <ul class="image-list"> <li><div class="image-texte"><strong><img src="../../assets/images/class-details/health.png" class="image details-icon"> Points de vie :</strong> 1d8 + modificateur de Constitution par niveau de Souverain</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/hit-dice.png" class="image details-icon"> Dés de vie :</strong> 1d8 par niveau de Souverain</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/saving-throw-dc.png" class="image details-icon"> DD des jets de sauvegarde :</strong> 8 + bonus de maîtrise + modificateur de Charisme</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/masteries.png" class="image details-icon"> Maîtrises :</strong> Rapières, Épées, Bâtons, Armes à feu ; Armures moyennes ; Boucliers</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/saving-throw.png" class="image details-icon"> Jets de sauvegarde :</strong> Sagesse, Charisme</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/skills.png" class="image details-icon"> Compétences :</strong> Choisissez 3 parmi Arcanes, Tromperie, Histoire, Intuition, Perception, Investigation, Médecine, Représentation, Persuasion, Religion</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/starting-equipment.png" class="image details-icon"> Équipement de départ :</strong> Une arme maîtrisée (ou deux si légères), un bouclier, une armure moyenne, un journal et un stylo à encre, un sac d'explorateur</div></li> </ul>
       </section>
       <section class="patch-section">
-        <div class="aptitude-search-container">
-          <input
-            type="text"
-            id="search-bar"
-            placeholder="Rechercher une aptitude ou un sort..."
-          />
-        </div>
+          <div class="aptitude-search-container">
+            <input type="text" id="search-bar" placeholder="Rechercher une aptitude ou un sort..." />
+          </div>
         <div class="toggle-section">
           <h2 class="patch-titre" id="aptitudes">
-            <img
-              src="../../assets/images/notes-big.png"
-              class="image image-h2"
-            />
-            Aptitudes de classe
-            <button class="toggle-button" onclick="toggleSection(this)">
-              ▲
-            </button>
+            <img src="../../assets/images/notes-big.png" class="image image-h2"> Aptitudes de classe <button class="toggle-button" onclick="toggleSection(this)">▲</button>
           </h2>
         </div>
         <div class="collapsible-content expanded">
-          <div class="patch-list">
-            <article id="inspiration-noble">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/sovereign/noble-inspiration.png"
-                  class="image skill-icon"
-                />
-                Inspiration noble
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/passive-action.png"
-                    alt="Passive"
-                    class="image action-icon"
-                  />Passif</span
-                >
-              </h3>
-              <p>
-                Le Souverain dispose d'une réserve de dés d'inspiration utilisés
-                pour activer ses aptitudes spéciales. Cette réserve commence à
-                4d4 et augmente avec le niveau. Il récupère jusqu'à la moitié de
-                sa réserve maximale lors d'un repos court, et la totalité lors
-                d’un repos long.
-              </p>
-            </article>
+          <div class="patch-list"> 
+  <article id="inspiration-noble">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/noble-inspiration.png" class="image skill-icon">
+    Inspiration noble
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>Le Souverain dispose d'une réserve de dés d'inspiration utilisés pour activer ses aptitudes spéciales. Cette réserve commence à 4d4 et augmente avec le niveau. Il récupère jusqu'à la moitié de sa réserve maximale lors d'un repos court, et la totalité lors d’un repos long.</p>
+  </article>
 
-            <article id="ordre-d-attaque">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/sovereign/attack-order.png"
-                  class="image skill-icon"
-                />
-                Ordre d'attaque
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/action.png"
-                    alt="Action"
-                    class="image action-icon"
-                  />2 PA (Action)</span
-                >
-              </h3>
-              <p>
-                Le Souverain inspire ses alliés à mettre plus d'efforts dans
-                leurs attaques. En tant qu'action, consommez un dé d’Inspiration
-                du Souverain ; lancez-le. Chaque allié volontaire qui peut
-                entendre l'Ordre, jusqu'à un nombre égal au modificateur de
-                Charisme du Souverain (minimum 1), ajoute ce nombre à son
-                Offense pendant 3 rounds.
-              </p>
-            </article>
+  <article id="ordre-d-attaque">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/attack-order.png" class="image skill-icon">
+    Ordre d'attaque
+    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+  </h3>
+    <p>Le Souverain inspire ses alliés à mettre plus d'efforts dans leurs attaques. En tant qu'action, consommez un dé d’Inspiration du Souverain ; lancez-le. Chaque allié volontaire qui peut entendre l'Ordre, jusqu'à un nombre égal au modificateur de Charisme du Souverain (minimum 1), ajoute ce nombre à son Offense pendant 3 rounds.</p>
+  </article>
 
-            <article id="ordre-de-garde">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/sovereign/guard-order.png"
-                  class="image skill-icon"
-                />
-                Ordre de garde
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/action.png"
-                    alt="Action"
-                    class="image action-icon"
-                  />2 PA (Action)</span
-                >
-              </h3>
-              <p>
-                Le Souverain donne un ordre défensif détaillé. En tant
-                qu'action, consommez un dé d'inspiration ; lancez-le. Chaque
-                allié volontaire qui peut entendre l'Ordre, jusqu'à un nombre
-                égal au modificateur de Charisme du Souverain (minimum 1),
-                réduit l'Offense de leurs ennemis de ce montant pendant 3
-                rounds.
-              </p>
-            </article>
+  <article id="ordre-de-garde">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/guard-order.png" class="image skill-icon">
+    Ordre de garde
+    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+  </h3>
+    <p>Le Souverain donne un ordre défensif détaillé. En tant qu'action, consommez un dé d'inspiration ; lancez-le. Chaque allié volontaire qui peut entendre l'Ordre, jusqu'à un nombre égal au modificateur de Charisme du Souverain (minimum 1), réduit l'Offense de leurs ennemis de ce montant pendant 3 rounds.</p>
+  </article>
 
-            <article id="voile-royal">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/sovereign/royal-veil.png"
-                  class="image skill-icon"
-                />
-                Voile royal
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/reaction.png"
-                    alt="Reaction"
-                    class="image action-icon"
-                  />1 PA (Réaction)</span
-                >
-              </h3>
-              <p>
-                Un comportement posé permet au Souverain de réconforter les
-                autres. Lorsqu'un allié subit des dégâts d'une attaque, le
-                Souverain peut utiliser sa réaction pour consommer 1 dé
-                d'Inspiration, le lancer, ajouter son modificateur de Sagesse et
-                restaurer autant de points de vie à la cible ; si la cible
-                aurait perdu connaissance à cause des dégâts subis, elle reçoit
-                quand même un niveau d’épuisement.
-              </p>
-            </article>
+  <article id="voile-royal">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/royal-veil.png" class="image skill-icon">
+    Voile royal
+    <span><img src="../../assets/images/action-costs/reaction.png" alt="Reaction" class="image action-icon">1 PA (Réaction)</span>
+  </h3>
+    <p>Un comportement posé permet au Souverain de réconforter les autres. Lorsqu'un allié subit des dégâts d'une attaque, le Souverain peut utiliser sa réaction pour consommer 1 dé d'Inspiration, le lancer, ajouter son modificateur de Sagesse et restaurer autant de points de vie à la cible ; si la cible aurait perdu connaissance à cause des dégâts subis, elle reçoit quand même un niveau d’épuisement.</p>
+  </article>
 
-            <article id="titre-noble">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/sovereign/noble-title.png"
-                  class="image skill-icon"
-                />
-                Titre noble
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/specialisation.png"
-                    alt="Specialisation"
-                    class="image action-icon"
-                  />Spécialisation</span
-                >
-              </h3>
-              <p>
-                Le Souverain choisit un titre à suivre. Choisissez un titre, et
-                ce titre accordera des aptitudes supplémentaires à mesure que le
-                Souverain gagne en niveau. Les Magierkaisers exploitent les
-                faiblesses de l'ennemi en modifiant les éléments des armements
-                des alliés, puis en suivant avec leurs puissantes attaques
-                magiques. Les Artzkaisers adoptent une approche plus
-                nourricière, soutenant le groupe en les protégeant et en
-                guérissant leurs blessures. Les Starkekaisers renoncent à une
-                approche concentrée, préférant diriger par la seule force de
-                leur personnalité, ce qui renforce la puissance de leurs ordres
-                existants.
-              </p>
-            </article>
+  <article id="titre-noble">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/noble-title.png" class="image skill-icon">
+    Titre noble
+    <span><img src="../../assets/images/action-costs/specialisation.png" alt="Specialisation" class="image action-icon">Spécialisation</span>
+  </h3>
+    <p>Le Souverain choisit un titre à suivre. Choisissez un titre, et ce titre accordera des aptitudes supplémentaires à mesure que le Souverain gagne en niveau. Les Magierkaisers exploitent les faiblesses de l'ennemi en modifiant les éléments des armements des alliés, puis en suivant avec leurs puissantes attaques magiques. Les Artzkaisers adoptent une approche plus nourricière, soutenant le groupe en les protégeant et en guérissant leurs blessures. Les Starkekaisers renoncent à une approche concentrée, préférant diriger par la seule force de leur personnalité, ce qui renforce la puissance de leurs ordres existants.</p>
+  </article>
 
-            <article id="negociation">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/sovereign/negociate.png"
-                  class="image skill-icon"
-                />
-                Négociation
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/bonus-action.png"
-                    alt="Bonus"
-                    class="image action-icon"
-                  />1 PA (Action Bonus)</span
-                >
-              </h3>
-              <p>
-                En tant qu'action bonus, le Souverain peut choisir d'échanger
-                les effets de tous les Ordres d'attaque et de garde actuellement
-                actifs, en conservant leur valeur d'origine. La durée des deux
-                est réinitialisée à 3 rounds. Cela passe à 4 lorsque la Maîtrise
-                des ordres est acquise.
-              </p>
-            </article>
+  <article id="negociation">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/negociate.png" class="image skill-icon">
+    Négociation
+    <span><img src="../../assets/images/action-costs/bonus-action.png" alt="Bonus" class="image action-icon">1 PA (Action Bonus)</span>
+  </h3>
+    <p>En tant qu'action bonus, le Souverain peut choisir d'échanger les effets de tous les Ordres d'attaque et de garde actuellement actifs, en conservant leur valeur d'origine. La durée des deux est réinitialisée à 3 rounds. Cela passe à 4 lorsque la Maîtrise des ordres est acquise.</p>
+  </article>
 
-            <article id="escrime-de-cour">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/sovereign/court-fencing.png"
-                  class="image skill-icon"
-                />
-                Escrime de cour
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/combo-action.png"
-                    alt="Combo"
-                    class="image action-icon"
-                  />1 PA (Action Combo)</span
-                >
-              </h3>
-              <p>
-                Après avoir émis un Ordre, le Souverain peut utiliser une action
-                combo pour adopter une posture de combat avec son arme de choix.
-                Tant qu'il est dans cette posture, le Souverain peut attaquer
-                une fois avec son arme équipée en tant qu'action libre. Cette
-                attaque inflige des dégâts supplémentaires de force égaux à 1d6
-                + modificateur de Charisme.
-              </p>
-            </article>
+  <article id="escrime-de-cour">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/court-fencing.png" class="image skill-icon">
+    Escrime de cour
+    <span><img src="../../assets/images/action-costs/combo-action.png" alt="Combo" class="image action-icon">1 PA (Action Combo)</span>
+  </h3>
+    <p>Après avoir émis un Ordre, le Souverain peut utiliser une action combo pour adopter une posture de combat avec son arme de choix. Tant qu'il est dans cette posture, le Souverain peut attaquer une fois avec son arme équipée en tant qu'action libre. Cette attaque inflige des dégâts supplémentaires de force égaux à 1d6 + modificateur de Charisme.</p>
+  </article>
 
-            <article id="ordre-de-liaison-i">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/sovereign/link-order1.png"
-                  class="image skill-icon"
-                />
-                Ordre de liaison I
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/reaction.png"
-                    alt="Reaction"
-                    class="image action-icon"
-                  />1 PA (Réaction)</span
-                >
-              </h3>
-              <p>
-                Lorsqu'une créature hostile dans un rayon de 30 mètres subit des
-                dégâts de feu, de glace ou de foudre, le Souverain peut utiliser
-                sa réaction pour infliger des dégâts de feu/glace/foudre égaux à
-                1d4 + son modificateur de Charisme à la cible en fonction de
-                l'élément déclenchant la réaction.
-              </p>
-            </article>
+  <article id="ordre-de-liaison-i">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/link-order1.png" class="image skill-icon">
+    Ordre de liaison I
+    <span><img src="../../assets/images/action-costs/reaction.png" alt="Reaction" class="image action-icon">1 PA (Réaction)</span>
+  </h3>
+    <p>Lorsqu'une créature hostile dans un rayon de 30 mètres subit des dégâts de feu, de glace ou de foudre, le Souverain peut utiliser sa réaction pour infliger des dégâts de feu/glace/foudre égaux à 1d4 + son modificateur de Charisme à la cible en fonction de l'élément déclenchant la réaction.</p>
+  </article>
 
-            <article id="renforcement">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/sovereign/reinforce.png"
-                  class="image skill-icon"
-                />
-                Renforcement
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/passive-action.png"
-                    alt="Passive"
-                    class="image action-icon"
-                  />Passif</span
-                >
-              </h3>
-              <p>
-                Lorsqu'un allié reçoit un bonus du Souverain, il récupère des
-                points de vie égaux à la moitié de la valeur numérique du bonus,
-                arrondie à l'entier supérieur. Renforcement s'applique lorsque
-                les Ordres ou les Armes sont d'abord émis, indépendamment des
-                effets récurrents.
-              </p>
-            </article>
+  <article id="renforcement">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/reinforce.png" class="image skill-icon">
+    Renforcement
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>Lorsqu'un allié reçoit un bonus du Souverain, il récupère des points de vie égaux à la moitié de la valeur numérique du bonus, arrondie à l'entier supérieur. Renforcement s'applique lorsque les Ordres ou les Armes sont d'abord émis, indépendamment des effets récurrents.</p>
+  </article>
 
-            <article id="lignee-royale">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/sovereign/royal-lineage.png"
-                  class="image skill-icon"
-                />
-                Lignée royale
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/passive-action.png"
-                    alt="Passive"
-                    class="image action-icon"
-                  />Passif</span
-                >
-              </h3>
-              <p>
-                Chaque fois que le Souverain dépenserait un dé d'Inspiration, si
-                le résultat obtenu au lancer est la valeur maximale, le dé n’est
-                pas consommé.
-              </p>
-            </article>
+  <article id="lignee-royale">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/royal-lineage.png" class="image skill-icon">
+    Lignée royale
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>Chaque fois que le Souverain dépenserait un dé d'Inspiration, si le résultat obtenu au lancer est la valeur maximale, le dé n’est pas consommé.</p>
+  </article>
 
-            <article id="maitrise-des-ordres">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/sovereign/order-mastery.png"
-                  class="image skill-icon"
-                />
-                Maîtrise des ordres
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/passive-action.png"
-                    alt="Passive"
-                    class="image action-icon"
-                  />Passif</span
-                >
-              </h3>
-              <p>
-                Tous les ordres, sauf les Ordres de Liaison I et II, durent un
-                tour supplémentaire.
-              </p>
-            </article>
+  <article id="maitrise-des-ordres">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/order-mastery.png" class="image skill-icon">
+    Maîtrise des ordres
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>Tous les ordres, sauf les Ordres de Liaison I et II, durent un tour supplémentaire.</p>
+  </article>
 
-            <article id="marche-monarchique">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/sovereign/monarch-march.png"
-                  class="image skill-icon"
-                />
-                Marche monarchique
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/passive-action.png"
-                    alt="Passive"
-                    class="image action-icon"
-                  />Passif</span
-                >
-              </h3>
-              <p>
-                Le Souverain reste vigilant en marchant, accordant un bonus de
-                +2 aux tests de perception passive contre les ennemis cachés en
-                dehors du combat. Si le Souverain repère un ennemi caché au
-                début du combat, tous ses alliés le remarquent également.
-              </p>
-            </article>
+  <article id="marche-monarchique">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/monarch-march.png" class="image skill-icon">
+    Marche monarchique
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>Le Souverain reste vigilant en marchant, accordant un bonus de +2 aux tests de perception passive contre les ennemis cachés en dehors du combat. Si le Souverain repère un ennemi caché au début du combat, tous ses alliés le remarquent également.</p>
+  </article>
 
-            <article id="autorisation">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/sovereign/clearance.png"
-                  class="image skill-icon"
-                />
-                Autorisation
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/action.png"
-                    alt="Action"
-                    class="image action-icon"
-                  />2 PA (Action)</span
-                >
-              </h3>
-              <p>
-                En tant qu'action, annulez les effets de tous les bonus du
-                Souverain sur les créatures amicales, ainsi que tous les malus
-                temporaires infligés par les capacités ou les sorts des
-                créatures hostiles ; tous les alliés affectés récupèrent des
-                points de vie égaux à la valeur absolue de tous les bonus et
-                malus. L'effet de guérison de l’Autorisation échoue si au moins
-                un bonus du Souverain n'est pas annulé.
-              </p>
-            </article>
+  <article id="autorisation">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/clearance.png" class="image skill-icon">
+    Autorisation
+    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+  </h3>
+    <p>En tant qu'action, annulez les effets de tous les bonus du Souverain sur les créatures amicales, ainsi que tous les malus temporaires infligés par les capacités ou les sorts des créatures hostiles ; tous les alliés affectés récupèrent des points de vie égaux à la valeur absolue de tous les bonus et malus. L'effet de guérison de l’Autorisation échoue si au moins un bonus du Souverain n'est pas annulé.</p>
+  </article>
 
-            <article id="a-l-unisson">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/sovereign/in-unison.png"
-                  class="image skill-icon"
-                />
-                À l'unisson !
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/passive-action.png"
-                    alt="Passive"
-                    class="image action-icon"
-                  />Passif</span
-                >
-              </h3>
-              <p>
-                Le groupe du Souverain reçoit un point d'Union supplémentaire au
-                début du premier round.
-              </p>
-            </article>
+  <article id="a-l-unisson">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/in-unison.png" class="image skill-icon">
+    À l'unisson !
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>Le groupe du Souverain reçoit un point d'Union supplémentaire au début du premier round.</p>
+  </article>
 
-            <article id="marque-noble">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/sovereign/noble-brand.png"
-                  class="image skill-icon"
-                />
-                Marque noble
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/passive-action.png"
-                    alt="Passive"
-                    class="image action-icon"
-                  />Passif</span
-                >
-              </h3>
-              <p>
-                La marque noble de la maison du Souverain apparaît sur le corps
-                du Souverain. Pendant le repos court ou long, cette marque
-                rassemble de l'énergie spirituelle et commence à briller
-                faiblement ; la première aptitude utilisant des dés
-                d'Inspiration après un repos court ou long obtient toujours le
-                résultat maximal, et la lueur disparaît.
-              </p>
-            </article>
+  <article id="marque-noble">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/noble-brand.png" class="image skill-icon">
+    Marque noble
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>La marque noble de la maison du Souverain apparaît sur le corps du Souverain. Pendant le repos court ou long, cette marque rassemble de l'énergie spirituelle et commence à briller faiblement ; la première aptitude utilisant des dés d'Inspiration après un repos court ou long obtient toujours le résultat maximal, et la lueur disparaît.</p>
+  </article>
 
-            <article id="decret-final">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/sovereign/final-decree.png"
-                  class="image skill-icon"
-                />
-                Décret final
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/action.png"
-                    alt="Action"
-                    class="image action-icon"
-                  />2 PA (Action)</span
-                >
-              </h3>
-              <p>
-                En tant qu'action, dissipez tous les bonus sur le Souverain (au
-                minimum 1) pour doubler les effets de tous les bonus appliqués
-                par le Souverain jusqu'à la fin du round.
-              </p>
-            </article>
+  <article id="decret-final">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/final-decree.png" class="image skill-icon">
+    Décret final
+    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+  </h3>
+    <p>En tant qu'action, dissipez tous les bonus sur le Souverain (au minimum 1) pour doubler les effets de tous les bonus appliqués par le Souverain jusqu'à la fin du round.</p>
+  </article>
 
-            <article id="chevalerie">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/sovereign/knighthood.png"
-                  class="image skill-icon"
-                />
-                Chevalerie
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/action.png"
-                    alt="Action"
-                    class="image action-icon"
-                  />2 PA (Action)</span
-                >
-              </h3>
-              <p>
-                Après avoir terminé son parcours pour apprendre tous les
-                fardeaux, responsabilités, forces et capacités d'un Souverain,
-                le Souverain est enfin reconnu par la force mystérieuse qui
-                protège sa noble maison, et obtient le droit de conférer la
-                Chevalerie à un individu. En tant qu'action, le Souverain peut
-                désigner une créature amicale et volontaire. Dans le prochain
-                round de combat, cette créature agit en premier (ce qui prend le
-                pas sur les autres effets qui font agir une créature en
-                premier), inflige des dégâts supplémentaires de force égaux à
-                3d10 + modificateur de Charisme du Souverain (lancé à
-                l'activation par le Souverain) lors de sa première instance de
-                dégâts, est immunisée contre toutes les afflictions, et subit
-                1d12 + le modificateur de Constitution de cette créature de
-                moins de dégâts lors de la première attaque reçue. Ses PA sont
-                également fixés à 4 au début de son tour. La Chevalerie peut
-                être accordée une fois par repos long.
-              </p>
-            </article>
-          </div>
+  <article id="chevalerie">
+  <h3>
+    <img src="../../assets/images/skills-icons/sovereign/knighthood.png" class="image skill-icon">
+    Chevalerie
+    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+  </h3>
+    <p>Après avoir terminé son parcours pour apprendre tous les fardeaux, responsabilités, forces et capacités d'un Souverain, le Souverain est enfin reconnu par la force mystérieuse qui protège sa noble maison, et obtient le droit de conférer la Chevalerie à un individu. En tant qu'action, le Souverain peut désigner une créature amicale et volontaire. Dans le prochain round de combat, cette créature agit en premier (ce qui prend le pas sur les autres effets qui font agir une créature en premier), inflige des dégâts supplémentaires de force égaux à 3d10 + modificateur de Charisme du Souverain (lancé à l'activation par le Souverain) lors de sa première instance de dégâts, est immunisée contre toutes les afflictions, et subit 1d12 + le modificateur de Constitution de cette créature de moins de dégâts lors de la première attaque reçue. Ses PA sont également fixés à 4 au début de son tour. La Chevalerie peut être accordée une fois par repos long.</p>
+  </article> </div>
         </div>
       </section>
       <h2 class="patch-titre" id="specialisations">
-        <img src="../../assets/images/notes-big.png" class="image image-h2" />
-        Spécialisations
+        <img src="../../assets/images/notes-big.png" class="image image-h2"> Spécialisations
       </h2>
+    
+  <section class="patch-section">
+  <div class="toggle-section">
+    <h2 class="patch-titre" id="magierkaiser">
+      <img src="../../assets/images/subclass-icons/sovereign/magierkaiser.png" class="image class-icon">
+      Magierkaiser
+      <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+    </h2>
+    </div>
+    <div class="collapsible-content expanded">
+    <div class="patch-list">
+      
+        <article id="armes-de-feu-gel-foudre">
+        <h3>
+          <img src="../../assets/images/skills-icons/sovereign/fire-arms.png" class="image skill-icon">
+          Armes de feu/gel/foudre
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p>En tant qu'action, choisissez le feu, la glace ou la foudre. Lancez un dé d'Inspiration du Souverain et consommez-le, puis ajoutez le modificateur de Charisme du Souverain. Jusqu'à 2 créatures amicales et volontaires augmentent leur niveau d'Offense de cette valeur lors de leur prochaine attaque, et leurs dégâts d’Offense deviennent l'élément spécifié pour cette attaque. Seul un élément d’Armes peut être actif sur une créature donnée à la fois. Les cibles doivent être capables d'entendre et être conscientes pour bénéficier des Armes de feu/gel/foudre. Les Armes de feu/gel/foudre disparaissent après 5 minutes si elles ne sont pas activées ou dissipées auparavant.</p>
+        </article>
 
-      <section class="patch-section">
-        <div class="toggle-section">
-          <h2 class="patch-titre" id="magierkaiser">
-            <img
-              src="../../assets/images/subclass-icons/sovereign/magierkaiser.png"
-              class="image class-icon"
-            />
-            Magierkaiser
-            <button class="toggle-button" onclick="toggleSection(this)">
-              ▲
-            </button>
-          </h2>
-        </div>
-        <div class="collapsible-content expanded">
-          <div class="patch-list">
-            <article id="armes-de-feu-gel-foudre">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/sovereign/fire-arms.png"
-                  class="image skill-icon"
-                />
-                Armes de feu/gel/foudre
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/action.png"
-                    alt="Action"
-                    class="image action-icon"
-                  />2 PA (Action)</span
-                >
-              </h3>
-              <p>
-                En tant qu'action, choisissez le feu, la glace ou la foudre.
-                Lancez un dé d'Inspiration du Souverain et consommez-le, puis
-                ajoutez le modificateur de Charisme du Souverain. Jusqu'à 2
-                créatures amicales et volontaires augmentent leur niveau
-                d'Offense de cette valeur lors de leur prochaine attaque, et
-                leurs dégâts d’Offense deviennent l'élément spécifié pour cette
-                attaque. Seul un élément d’Armes peut être actif sur une
-                créature donnée à la fois. Les cibles doivent être capables
-                d'entendre et être conscientes pour bénéficier des Armes de
-                feu/gel/foudre. Les Armes de feu/gel/foudre disparaissent après
-                5 minutes si elles ne sont pas activées ou dissipées auparavant.
-              </p>
-            </article>
+        <article id="ordre-de-liaison-ii">
+        <h3>
+          <img src="../../assets/images/skills-icons/sovereign/link-order2.png" class="image skill-icon">
+          Ordre de liaison II
+          <span><img src="../../assets/images/action-costs/reaction.png" alt="Reaction" class="image action-icon">1 PA (Réaction)</span>
+        </h3>
+          <p>Lorsqu'une créature hostile dans un rayon de 30 mètres subit des dégâts de feu, de glace ou de foudre, le Souverain peut utiliser sa réaction pour infliger des dégâts de feu, de glace ou de foudre égaux à 2d4 + modificateur de Charisme à la cible, en fonction de l'élément déclenchant la réaction, ainsi qu'à deux créatures supplémentaires situées à moins de 3 mètres de la cible.</p>
+        </article>
 
-            <article id="ordre-de-liaison-ii">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/sovereign/link-order2.png"
-                  class="image skill-icon"
-                />
-                Ordre de liaison II
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/reaction.png"
-                    alt="Reaction"
-                    class="image action-icon"
-                  />1 PA (Réaction)</span
-                >
-              </h3>
-              <p>
-                Lorsqu'une créature hostile dans un rayon de 30 mètres subit des
-                dégâts de feu, de glace ou de foudre, le Souverain peut utiliser
-                sa réaction pour infliger des dégâts de feu, de glace ou de
-                foudre égaux à 2d4 + modificateur de Charisme à la cible, en
-                fonction de l'élément déclenchant la réaction, ainsi qu'à deux
-                créatures supplémentaires situées à moins de 3 mètres de la
-                cible.
-              </p>
-            </article>
+        <article id="eclat-royal">
+        <h3>
+          <img src="../../assets/images/skills-icons/sovereign/royal-radiance.png" class="image skill-icon">
+          Éclat royal
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p>En tant qu'action, dissipez les Armes de feu, de gel ou de foudre d'une créature amicale et volontaire, puis ciblez une créature dans un rayon de 36 mètres. Cette créature subit des dégâts de 4d10 + modificateur de Charisme d'un type correspondant à l'élément de l’Arme dissipé.</p>
+        </article>
+    </div>
+    </div>
+  </section>
 
-            <article id="eclat-royal">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/sovereign/royal-radiance.png"
-                  class="image skill-icon"
-                />
-                Éclat royal
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/action.png"
-                    alt="Action"
-                    class="image action-icon"
-                  />2 PA (Action)</span
-                >
-              </h3>
-              <p>
-                En tant qu'action, dissipez les Armes de feu, de gel ou de
-                foudre d'une créature amicale et volontaire, puis ciblez une
-                créature dans un rayon de 36 mètres. Cette créature subit des
-                dégâts de 4d10 + modificateur de Charisme d'un type
-                correspondant à l'élément de l’Arme dissipé.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
+  <section class="patch-section">
+  <div class="toggle-section">
+    <h2 class="patch-titre" id="arztkaiser">
+      <img src="../../assets/images/subclass-icons/sovereign/arztkaiser.png" class="image class-icon">
+      Arztkaiser
+      <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+    </h2>
+    </div>
+    <div class="collapsible-content expanded">
+    <div class="patch-list">
+      
+        <article id="ordre-de-protection">
+        <h3>
+          <img src="../../assets/images/skills-icons/sovereign/protect-order.png" class="image skill-icon">
+          Ordre de protection
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p>En tant qu'action, consommez 1 dé d'Inspiration et lancez-le, puis ajoutez le modificateur de Sagesse du Souverain au total. Chaque allié volontaire qui peut entendre l'Ordre, jusqu'à un nombre égal au modificateur de Charisme du Souverain (minimum 1), récupère autant de points de vie à la fin du round pendant 3 rounds. Le nombre de dés d'Inspiration lancés pour cette aptitude augmente à 2 au niveau 8, à 3 au niveau 13 et à 4 au niveau 18; cependant, l'Ordre de protection ne diminue que de 2 au maximum la réserve de dés d'Inspiration du Souverain. Les cibles doivent être capables d'entendre et être conscientes pour bénéficier de l'Ordre de protection.</p>
+        </article>
 
-      <section class="patch-section">
-        <div class="toggle-section">
-          <h2 class="patch-titre" id="arztkaiser">
-            <img
-              src="../../assets/images/subclass-icons/sovereign/arztkaiser.png"
-              class="image class-icon"
-            />
-            Arztkaiser
-            <button class="toggle-button" onclick="toggleSection(this)">
-              ▲
-            </button>
-          </h2>
-        </div>
-        <div class="collapsible-content expanded">
-          <div class="patch-list">
-            <article id="ordre-de-protection">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/sovereign/protect-order.png"
-                  class="image skill-icon"
-                />
-                Ordre de protection
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/action.png"
-                    alt="Action"
-                    class="image action-icon"
-                  />2 PA (Action)</span
-                >
-              </h3>
-              <p>
-                En tant qu'action, consommez 1 dé d'Inspiration et lancez-le,
-                puis ajoutez le modificateur de Sagesse du Souverain au total.
-                Chaque allié volontaire qui peut entendre l'Ordre, jusqu'à un
-                nombre égal au modificateur de Charisme du Souverain (minimum
-                1), récupère autant de points de vie à la fin du round pendant 3
-                rounds. Le nombre de dés d'Inspiration lancés pour cette
-                aptitude augmente à 2 au niveau 8, à 3 au niveau 13 et à 4 au
-                niveau 18; cependant, l'Ordre de protection ne diminue que de 2
-                au maximum la réserve de dés d'Inspiration du Souverain. Les
-                cibles doivent être capables d'entendre et être conscientes pour
-                bénéficier de l'Ordre de protection.
-              </p>
-            </article>
+        <article id="ordre-de-prevention">
+        <h3>
+          <img src="../../assets/images/skills-icons/sovereign/prevent-order.png" class="image skill-icon">
+          Ordre de prévention
+          <span><img src="../../assets/images/action-costs/reaction.png" alt="Reaction" class="image action-icon">1 PA (Réaction)</span>
+        </h3>
+          <p>Lorsqu'un allié est sur le point d'être affecté par une affliction, le Souverain peut utiliser sa réaction pour consommer un dé d'Inspiration - pendant 3 rounds, chaque fois qu'une affliction doit être infligée à une créature amicale, cette affliction n'est pas infligée. Cet effet peut être activé un nombre maximum de fois égal au modificateur de Charisme du Souverain, avec un minimum d'une activation, par repos long. Les cibles doivent être capables d'entendre et être conscientes pour bénéficier de l'Ordre de prévention.</p>
+        </article>
 
-            <article id="ordre-de-prevention">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/sovereign/prevent-order.png"
-                  class="image skill-icon"
-                />
-                Ordre de prévention
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/reaction.png"
-                    alt="Reaction"
-                    class="image action-icon"
-                  />1 PA (Réaction)</span
-                >
-              </h3>
-              <p>
-                Lorsqu'un allié est sur le point d'être affecté par une
-                affliction, le Souverain peut utiliser sa réaction pour
-                consommer un dé d'Inspiration - pendant 3 rounds, chaque fois
-                qu'une affliction doit être infligée à une créature amicale,
-                cette affliction n'est pas infligée. Cet effet peut être activé
-                un nombre maximum de fois égal au modificateur de Charisme du
-                Souverain, avec un minimum d'une activation, par repos long. Les
-                cibles doivent être capables d'entendre et être conscientes pour
-                bénéficier de l'Ordre de prévention.
-              </p>
-            </article>
+        <article id="ordre-de-ralliement">
+        <h3>
+          <img src="../../assets/images/skills-icons/sovereign/rally-order.png" class="image skill-icon">
+          Ordre de ralliement
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p>Lancez 2 dés d'inspiration du Souverain et consommez-les. Tous les alliés gagnent des points de vie temporaires égaux à la valeur obtenue + le modificateur de Charisme du Souverain au début du round pendant 3 rounds. Les points de vie temporaires expirent au début du 4ème round s'ils n'ont pas été épuisés. Tant que les alliés ont des points de vie temporaires de l'Ordre de ralliement, ils peuvent choisir de dissiper ces points de vie temporaires pour relancer un jet d'attaque ou de dégâts et prendre le second résultat. Les cibles doivent être capables d'entendre et conscientes pour bénéficier de l'Ordre de ralliement.</p>
+        </article>
+    </div>
+    </div>
+  </section>
 
-            <article id="ordre-de-ralliement">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/sovereign/rally-order.png"
-                  class="image skill-icon"
-                />
-                Ordre de ralliement
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/action.png"
-                    alt="Action"
-                    class="image action-icon"
-                  />2 PA (Action)</span
-                >
-              </h3>
-              <p>
-                Lancez 2 dés d'inspiration du Souverain et consommez-les. Tous
-                les alliés gagnent des points de vie temporaires égaux à la
-                valeur obtenue + le modificateur de Charisme du Souverain au
-                début du round pendant 3 rounds. Les points de vie temporaires
-                expirent au début du 4ème round s'ils n'ont pas été épuisés.
-                Tant que les alliés ont des points de vie temporaires de l'Ordre
-                de ralliement, ils peuvent choisir de dissiper ces points de vie
-                temporaires pour relancer un jet d'attaque ou de dégâts et
-                prendre le second résultat. Les cibles doivent être capables
-                d'entendre et conscientes pour bénéficier de l'Ordre de
-                ralliement.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
+  <section class="patch-section">
+  <div class="toggle-section">
+    <h2 class="patch-titre" id="starkekaiser">
+      <img src="../../assets/images/subclass-icons/sovereign/starkekaiser.png" class="image class-icon">
+      Starkekaiser
+      <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+    </h2>
+    </div>
+    <div class="collapsible-content expanded">
+    <div class="patch-list">
+      
+        <article id="ordres-feroces">
+        <h3>
+          <img src="../../assets/images/skills-icons/sovereign/fierce-orders.png" class="image skill-icon">
+          Ordres féroces
+          <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+        </h3>
+          <p>Lorsqu'un Ordre amène le Souverain à lancer des dés d'Inspiration, le Souverain peut choisir de consommer un dé d'Inspiration supplémentaire et de l'ajouter au total. Le Souverain ajoute 2 dés supplémentaires à sa réserve totale de dés d'Inspiration.</p>
+        </article>
 
-      <section class="patch-section">
-        <div class="toggle-section">
-          <h2 class="patch-titre" id="starkekaiser">
-            <img
-              src="../../assets/images/subclass-icons/sovereign/starkekaiser.png"
-              class="image class-icon"
-            />
-            Starkekaiser
-            <button class="toggle-button" onclick="toggleSection(this)">
-              ▲
-            </button>
-          </h2>
-        </div>
-        <div class="collapsible-content expanded">
-          <div class="patch-list">
-            <article id="ordres-feroces">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/sovereign/fierce-orders.png"
-                  class="image skill-icon"
-                />
-                Ordres féroces
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/passive-action.png"
-                    alt="Passive"
-                    class="image action-icon"
-                  />Passif</span
-                >
-              </h3>
-              <p>
-                Lorsqu'un Ordre amène le Souverain à lancer des dés
-                d'Inspiration, le Souverain peut choisir de consommer un dé
-                d'Inspiration supplémentaire et de l'ajouter au total. Le
-                Souverain ajoute 2 dés supplémentaires à sa réserve totale de
-                dés d'Inspiration.
-              </p>
-            </article>
+        <article id="ex-nihilo">
+        <h3>
+          <img src="../../assets/images/skills-icons/sovereign/ex-nihilo.png" class="image skill-icon">
+          Ex Nihilo
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p>Effectuez un jet d'attaque avec l'arme actuellement équipée, en utilisant le Charisme comme modificateur, contre une cible située dans un rayon de 9 mètres, infligeant des dégâts de force égaux à 1d12 + modificateur de Charisme en cas de réussite. S'il y a des bonus ou des malus sur la cible, Ex Nihilo touche sans jet d'attaque, inflige des dégâts doublés et toutes les modifications sont annulées.</p>
+        </article>
 
-            <article id="ex-nihilo">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/sovereign/ex-nihilo.png"
-                  class="image skill-icon"
-                />
-                Ex Nihilo
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/action.png"
-                    alt="Action"
-                    class="image action-icon"
-                  />2 PA (Action)</span
-                >
-              </h3>
-              <p>
-                Effectuez un jet d'attaque avec l'arme actuellement équipée, en
-                utilisant le Charisme comme modificateur, contre une cible
-                située dans un rayon de 9 mètres, infligeant des dégâts de force
-                égaux à 1d12 + modificateur de Charisme en cas de réussite. S'il
-                y a des bonus ou des malus sur la cible, Ex Nihilo touche sans
-                jet d'attaque, inflige des dégâts doublés et toutes les
-                modifications sont annulées.
-              </p>
-            </article>
+        <article id="boost-de-moral">
+        <h3>
+          <img src="../../assets/images/skills-icons/sovereign/morale-boost.png" class="image skill-icon">
+          Boost de moral
+          <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+        </h3>
+          <p>Lorsque l'Ordre d'attaque ou de garde est lancé, les créatures affectées bénéficient d'un bonus aux jets d'attaque égal au modificateur de Charisme du Souverain sur leur prochain jet d'attaque.</p>
+        </article>
+    </div>
+    </div>
+  </section>
+    
+    <section class="patch-section">
+  <h2 class="patch-titre" id="progression">
+    <img src="../../assets/images/notes-big.png" class="image image-h2">
+    Progression par niveau
+  </h2>
 
-            <article id="boost-de-moral">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/sovereign/morale-boost.png"
-                  class="image skill-icon"
-                />
-                Boost de moral
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/passive-action.png"
-                    alt="Passive"
-                    class="image action-icon"
-                  />Passif</span
-                >
-              </h3>
-              <p>
-                Lorsque l'Ordre d'attaque ou de garde est lancé, les créatures
-                affectées bénéficient d'un bonus aux jets d'attaque égal au
-                modificateur de Charisme du Souverain sur leur prochain jet
-                d'attaque.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
+  <div class="class-table-tabs-wrapper">
+    <button class="tab-button active" onclick="switchTab(event, 'general')">Souverain</button>
+    <button class="tab-button" onclick="switchTab(event, 'souverain-magierkaiser')">Magierkaiser</button>
+    <button class="tab-button" onclick="switchTab(event, 'souverain-arztkaiser')">Arztkaiser</button>
+    <button class="tab-button" onclick="switchTab(event, 'souverain-starkekaiser')">Starkekaiser</button>
+  </div>
 
-      <section class="patch-section">
-        <h2 class="patch-titre" id="progression">
-          <img src="../../assets/images/notes-big.png" class="image image-h2" />
-          Progression par niveau
-        </h2>
+  <div class="table-container tab-content active" id="tab-general">
+    <table class="progression-table">
+      <thead>
+        <tr>
+          <th>Niveau</th>
+          <th>Bonus de maîtrise</th>
+          <th>Dés d'Inspiration</th>
+          <th>Aptitudes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>+2</td><td>4d4</td><td>Inspiration noble, Ordre d'attaque</td></tr>
+        <tr><td>2</td><td>+2</td><td>4d4</td><td>Ordre de garde, Voile royal</td></tr>
+        <tr><td>3</td><td>+2</td><td>5d4</td><td>Titre noble, Négociation, Aptitude de Titre</td></tr>
+        <tr><td>4</td><td>+2</td><td>5d4</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+        <tr><td>5</td><td>+3</td><td>6d6</td><td>Escrime de cour</td></tr>
+        <tr><td>6</td><td>+3</td><td>6d6</td><td>Ordre de liaison I</td></tr>
+        <tr><td>7</td><td>+3</td><td>7d6</td><td>Renforcement</td></tr>
+        <tr><td>8</td><td>+3</td><td>7d6</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+        <tr><td>9</td><td>+4</td><td>7d6</td><td>Aptitude de Titre</td></tr>
+        <tr><td>10</td><td>+4</td><td>8d8</td><td>Lignée royale</td></tr>
+        <tr><td>11</td><td>+4</td><td>8d8</td><td>Maîtrise des ordres</td></tr>
+        <tr><td>12</td><td>+4</td><td>9d8</td><td>Marche monarchique</td></tr>
+        <tr><td>13</td><td>+5</td><td>9d8</td><td>Autorisation</td></tr>
+        <tr><td>14</td><td>+5</td><td>10d10</td><td>Aptitude de Titre</td></tr>
+        <tr><td>15</td><td>+5</td><td>10d10</td><td>À l'unisson !</td></tr>
+        <tr><td>16</td><td>+5</td><td>11d10</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+        <tr><td>17</td><td>+6</td><td>11d10</td><td>Marque noble</td></tr>
+        <tr><td>18</td><td>+6</td><td>12d10</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+        <tr><td>19</td><td>+6</td><td>12d10</td><td>Décret final</td></tr>
+        <tr><td>20</td><td>+6</td><td>12d10</td><td>Chevalerie</td></tr>
+      </tbody>
+    </table>
+  </div>
 
-        <div class="class-table-tabs-wrapper">
-          <button
-            class="tab-button active"
-            onclick="switchTab(event, 'general')"
-          >
-            Souverain
-          </button>
-          <button
-            class="tab-button"
-            onclick="switchTab(event, 'souverain-magierkaiser')"
-          >
-            Magierkaiser
-          </button>
-          <button
-            class="tab-button"
-            onclick="switchTab(event, 'souverain-arztkaiser')"
-          >
-            Arztkaiser
-          </button>
-          <button
-            class="tab-button"
-            onclick="switchTab(event, 'souverain-starkekaiser')"
-          >
-            Starkekaiser
-          </button>
-        </div>
+  <div class="table-container tab-content" id="tab-souverain-magierkaiser" style="display:none;">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Aptitudes du Magierkaiser</th></tr></thead>
+      <tbody>
+        <tr><td>3</td><td>Arme de feu, Arme de gel, Arme de foudre</td></tr>
+        <tr><td>9</td><td>Ordre de liaison II</td></tr>
+        <tr><td>14</td><td>Éclat royal</td></tr>
+      </tbody>
+    </table>
+  </div>
 
-        <div class="table-container tab-content active" id="tab-general">
-          <table class="progression-table">
-            <thead>
-              <tr>
-                <th>Niveau</th>
-                <th>Bonus de maîtrise</th>
-                <th>Dés d'Inspiration</th>
-                <th>Aptitudes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>+2</td>
-                <td>4d4</td>
-                <td>Inspiration noble, Ordre d'attaque</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>+2</td>
-                <td>4d4</td>
-                <td>Ordre de garde, Voile royal</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>+2</td>
-                <td>5d4</td>
-                <td>Titre noble, Négociation, Aptitude de Titre</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>+2</td>
-                <td>5d4</td>
-                <td>Amélioration de caractéristiques, Défense +1</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>+3</td>
-                <td>6d6</td>
-                <td>Escrime de cour</td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>+3</td>
-                <td>6d6</td>
-                <td>Ordre de liaison I</td>
-              </tr>
-              <tr>
-                <td>7</td>
-                <td>+3</td>
-                <td>7d6</td>
-                <td>Renforcement</td>
-              </tr>
-              <tr>
-                <td>8</td>
-                <td>+3</td>
-                <td>7d6</td>
-                <td>Amélioration de caractéristiques, Défense +1</td>
-              </tr>
-              <tr>
-                <td>9</td>
-                <td>+4</td>
-                <td>7d6</td>
-                <td>Aptitude de Titre</td>
-              </tr>
-              <tr>
-                <td>10</td>
-                <td>+4</td>
-                <td>8d8</td>
-                <td>Lignée royale</td>
-              </tr>
-              <tr>
-                <td>11</td>
-                <td>+4</td>
-                <td>8d8</td>
-                <td>Maîtrise des ordres</td>
-              </tr>
-              <tr>
-                <td>12</td>
-                <td>+4</td>
-                <td>9d8</td>
-                <td>Marche monarchique</td>
-              </tr>
-              <tr>
-                <td>13</td>
-                <td>+5</td>
-                <td>9d8</td>
-                <td>Autorisation</td>
-              </tr>
-              <tr>
-                <td>14</td>
-                <td>+5</td>
-                <td>10d10</td>
-                <td>Aptitude de Titre</td>
-              </tr>
-              <tr>
-                <td>15</td>
-                <td>+5</td>
-                <td>10d10</td>
-                <td>À l'unisson !</td>
-              </tr>
-              <tr>
-                <td>16</td>
-                <td>+5</td>
-                <td>11d10</td>
-                <td>Amélioration de caractéristiques, Défense +1</td>
-              </tr>
-              <tr>
-                <td>17</td>
-                <td>+6</td>
-                <td>11d10</td>
-                <td>Marque noble</td>
-              </tr>
-              <tr>
-                <td>18</td>
-                <td>+6</td>
-                <td>12d10</td>
-                <td>Amélioration de caractéristiques, Défense +1</td>
-              </tr>
-              <tr>
-                <td>19</td>
-                <td>+6</td>
-                <td>12d10</td>
-                <td>Décret final</td>
-              </tr>
-              <tr>
-                <td>20</td>
-                <td>+6</td>
-                <td>12d10</td>
-                <td>Chevalerie</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+  <div class="table-container tab-content" id="tab-souverain-arztkaiser" style="display:none;">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Aptitudes de l'Arztkaiser</th></tr></thead>
+      <tbody>
+        <tr><td>3</td><td>Ordre de protection</td></tr>
+        <tr><td>9</td><td>Ordre de prévention</td></tr>
+        <tr><td>14</td><td>Ordre de ralliement</td></tr>
+      </tbody>
+    </table>
+  </div>
 
-        <div
-          class="table-container tab-content"
-          id="tab-souverain-magierkaiser"
-          style="display: none"
-        >
-          <table class="progression-table">
-            <thead>
-              <tr>
-                <th>Niveau</th>
-                <th>Aptitudes du Magierkaiser</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>3</td>
-                <td>Arme de feu, Arme de gel, Arme de foudre</td>
-              </tr>
-              <tr>
-                <td>9</td>
-                <td>Ordre de liaison II</td>
-              </tr>
-              <tr>
-                <td>14</td>
-                <td>Éclat royal</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+  <div class="table-container tab-content" id="tab-souverain-starkekaiser" style="display:none;">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Aptitudes du Starkekaiser</th></tr></thead>
+      <tbody>
+        <tr><td>3</td><td>Ordres féroces</td></tr>
+        <tr><td>9</td><td>Ex Nihilo</td></tr>
+        <tr><td>14</td><td>Boost de moral</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-        <div
-          class="table-container tab-content"
-          id="tab-souverain-arztkaiser"
-          style="display: none"
-        >
-          <table class="progression-table">
-            <thead>
-              <tr>
-                <th>Niveau</th>
-                <th>Aptitudes de l'Arztkaiser</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>3</td>
-                <td>Ordre de protection</td>
-              </tr>
-              <tr>
-                <td>9</td>
-                <td>Ordre de prévention</td>
-              </tr>
-              <tr>
-                <td>14</td>
-                <td>Ordre de ralliement</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+<script>
+    function switchTab(event, tabId) {
+      const tabs = document.querySelectorAll('.tab-button');
+      const contents = document.querySelectorAll('.tab-content');
+      tabs.forEach(t => t.classList.remove('active'));
+      contents.forEach(c => {
+        c.classList.remove('active');
+        c.style.display = 'none';
+      });
 
-        <div
-          class="table-container tab-content"
-          id="tab-souverain-starkekaiser"
-          style="display: none"
-        >
-          <table class="progression-table">
-            <thead>
-              <tr>
-                <th>Niveau</th>
-                <th>Aptitudes du Starkekaiser</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>3</td>
-                <td>Ordres féroces</td>
-              </tr>
-              <tr>
-                <td>9</td>
-                <td>Ex Nihilo</td>
-              </tr>
-              <tr>
-                <td>14</td>
-                <td>Boost de moral</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+      event.target.classList.add('active');
+      const target = document.getElementById(`tab-${tabId}`);
+      target.style.display = 'block';
+      void target.offsetWidth; // forcer repaint
+      target.classList.add('active');
+    }
+</script>
 
-      <script>
-        function switchTab(event, tabId) {
-          const tabs = document.querySelectorAll(".tab-button");
-          const contents = document.querySelectorAll(".tab-content");
-          tabs.forEach((t) => t.classList.remove("active"));
-          contents.forEach((c) => {
-            c.classList.remove("active");
-            c.style.display = "none";
-          });
-
-          event.target.classList.add("active");
-          const target = document.getElementById(`tab-${tabId}`);
-          target.style.display = "block";
-          void target.offsetWidth; // forcer repaint
-          target.classList.add("active");
-        }
-      </script>
     </main>
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
       <img id="lightbox-img" src="" alt="Portrait" />
     </div>
-    <button
-      id="backToTop"
-      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-      aria-label="Retour en haut"
-    >
-      <i class="fa-solid fa-arrow-up"></i> Retour en haut
-    </button>
+    <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button>
     <footer>
-      <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
-    </footer>
+    <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+</footer>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
+      document.addEventListener("DOMContentLoaded", function() {
         const searchInput = document.getElementById("search-bar");
         const aptitudeArticles = document.querySelectorAll("article");
-        searchInput.addEventListener("input", function () {
+        searchInput.addEventListener("input", function() {
           const value = searchInput.value.toLowerCase();
-          aptitudeArticles.forEach((article) => {
-            const title =
-              article.querySelector("h3")?.textContent?.toLowerCase() || "";
+          aptitudeArticles.forEach(article => {
+            const title = article.querySelector("h3")?.textContent?.toLowerCase() || "";
             const content = article.textContent?.toLowerCase() || "";
             if (title.includes(value) || content.includes(value)) {
               article.style.display = "";
@@ -1283,141 +524,41 @@
     <script src="../../scripts/lightbox.js"></script>
     <script src="../../scripts/particles.js"></script>
     <script src="../../scripts/backToTop.js"></script>
-    <button class="mobile-nav-toggle" onclick="toggleMobileNav(this)">
-      ☰
-    </button>
+    <button class="mobile-nav-toggle" onclick="toggleMobileNav(this)">☰</button>
     <div class="mobile-nav-overlay" id="mobileNav">
-      <div class="mobile-nav-content">
-        <a href="#details" class="section-link" onclick="toggleMobileNav()"
-          >Détails</a
-        >
-        <a href="#aptitudes" class="section-link" onclick="toggleMobileNav()"
-          >Aptitudes</a
-        >
-        <a
-          href="#inspiration-noble"
-          class="sub-link"
-          onclick="toggleMobileNav()"
-          >Inspiration noble</a
-        >
-        <a href="#ordre-d-attaque" class="sub-link" onclick="toggleMobileNav()"
-          >Ordre d'attaque</a
-        >
-        <a href="#ordre-de-garde" class="sub-link" onclick="toggleMobileNav()"
-          >Ordre de garde</a
-        >
-        <a href="#voile-royal" class="sub-link" onclick="toggleMobileNav()"
-          >Voile royal</a
-        >
-        <a href="#titre-noble" class="sub-link" onclick="toggleMobileNav()"
-          >Titre noble</a
-        >
-        <a href="#negociation" class="sub-link" onclick="toggleMobileNav()"
-          >Négociation</a
-        >
-        <a href="#escrime-de-cour" class="sub-link" onclick="toggleMobileNav()"
-          >Escrime de cour</a
-        >
-        <a
-          href="#ordre-de-liaison-i"
-          class="sub-link"
-          onclick="toggleMobileNav()"
-          >Ordre de liaison I</a
-        >
-        <a href="#renforcement" class="sub-link" onclick="toggleMobileNav()"
-          >Renforcement</a
-        >
-        <a href="#lignee-royale" class="sub-link" onclick="toggleMobileNav()"
-          >Lignée royale</a
-        >
-        <a
-          href="#maitrise-des-ordres"
-          class="sub-link"
-          onclick="toggleMobileNav()"
-          >Maîtrise des ordres</a
-        >
-        <a
-          href="#marche-monarchique"
-          class="sub-link"
-          onclick="toggleMobileNav()"
-          >Marche monarchique</a
-        >
-        <a href="#autorisation" class="sub-link" onclick="toggleMobileNav()"
-          >Autorisation</a
-        >
-        <a href="#a-l-unisson" class="sub-link" onclick="toggleMobileNav()"
-          >À l'unisson !</a
-        >
-        <a href="#marque-noble" class="sub-link" onclick="toggleMobileNav()"
-          >Marque noble</a
-        >
-        <a href="#decret-final" class="sub-link" onclick="toggleMobileNav()"
-          >Décret final</a
-        >
-        <a href="#chevalerie" class="sub-link" onclick="toggleMobileNav()"
-          >Chevalerie</a
-        >
-        <a
-          href="#specialisations"
-          class="section-link"
-          onclick="toggleMobileNav()"
-          >Spécialisations</a
-        >
-        <a href="#magierkaiser" class="section-link" onclick="toggleMobileNav()"
-          >Magierkaiser</a
-        >
-        <a
-          href="#armes-de-feu-gel-foudre"
-          class="sub-link"
-          onclick="toggleMobileNav()"
-          >Armes de feu/gel/foudre</a
-        >
-        <a
-          href="#ordre-de-liaison-ii"
-          class="sub-link"
-          onclick="toggleMobileNav()"
-          >Ordre de liaison II</a
-        >
-        <a href="#eclat-royal" class="sub-link" onclick="toggleMobileNav()"
-          >Éclat royal</a
-        >
-        <a href="#arztkaiser" class="section-link" onclick="toggleMobileNav()"
-          >Arztkaiser</a
-        >
-        <a
-          href="#ordre-de-protection"
-          class="sub-link"
-          onclick="toggleMobileNav()"
-          >Ordre de protection</a
-        >
-        <a
-          href="#ordre-de-prevention"
-          class="sub-link"
-          onclick="toggleMobileNav()"
-          >Ordre de prévention</a
-        >
-        <a
-          href="#ordre-de-ralliement"
-          class="sub-link"
-          onclick="toggleMobileNav()"
-          >Ordre de ralliement</a
-        >
-        <a href="#starkekaiser" class="section-link" onclick="toggleMobileNav()"
-          >Starkekaiser</a
-        >
-        <a href="#ordres-feroces" class="sub-link" onclick="toggleMobileNav()"
-          >Ordres féroces</a
-        >
-        <a href="#ex-nihilo" class="sub-link" onclick="toggleMobileNav()"
-          >Ex Nihilo</a
-        >
-        <a href="#boost-de-moral" class="sub-link" onclick="toggleMobileNav()"
-          >Boost de moral</a
-        >
-        <a href="#tab-general" class="section-link" onclick="toggleMobileNav()"
-          >Progression par niveau</a
-        >
-      </div>
+      <div class="mobile-nav-content">  <a href="#details" class="section-link" onclick="toggleMobileNav()">Détails</a>
+ <a href="#aptitudes" class="section-link" onclick="toggleMobileNav()">Aptitudes</a>
+ <a href="#inspiration-noble" class="sub-link" onclick="toggleMobileNav()">Inspiration noble</a>
+ <a href="#ordre-d-attaque" class="sub-link" onclick="toggleMobileNav()">Ordre d'attaque</a>
+ <a href="#ordre-de-garde" class="sub-link" onclick="toggleMobileNav()">Ordre de garde</a>
+ <a href="#voile-royal" class="sub-link" onclick="toggleMobileNav()">Voile royal</a>
+ <a href="#titre-noble" class="sub-link" onclick="toggleMobileNav()">Titre noble</a>
+ <a href="#negociation" class="sub-link" onclick="toggleMobileNav()">Négociation</a>
+ <a href="#escrime-de-cour" class="sub-link" onclick="toggleMobileNav()">Escrime de cour</a>
+ <a href="#ordre-de-liaison-i" class="sub-link" onclick="toggleMobileNav()">Ordre de liaison I</a>
+ <a href="#renforcement" class="sub-link" onclick="toggleMobileNav()">Renforcement</a>
+ <a href="#lignee-royale" class="sub-link" onclick="toggleMobileNav()">Lignée royale</a>
+ <a href="#maitrise-des-ordres" class="sub-link" onclick="toggleMobileNav()">Maîtrise des ordres</a>
+ <a href="#marche-monarchique" class="sub-link" onclick="toggleMobileNav()">Marche monarchique</a>
+ <a href="#autorisation" class="sub-link" onclick="toggleMobileNav()">Autorisation</a>
+ <a href="#a-l-unisson" class="sub-link" onclick="toggleMobileNav()">À l'unisson !</a>
+ <a href="#marque-noble" class="sub-link" onclick="toggleMobileNav()">Marque noble</a>
+ <a href="#decret-final" class="sub-link" onclick="toggleMobileNav()">Décret final</a>
+ <a href="#chevalerie" class="sub-link" onclick="toggleMobileNav()">Chevalerie</a>
+ <a href="#specialisations" class="section-link" onclick="toggleMobileNav()">Spécialisations</a>
+ <a href="#magierkaiser" class="section-link" onclick="toggleMobileNav()">Magierkaiser</a>
+ <a href="#armes-de-feu-gel-foudre" class="sub-link" onclick="toggleMobileNav()">Armes de feu/gel/foudre</a>
+ <a href="#ordre-de-liaison-ii" class="sub-link" onclick="toggleMobileNav()">Ordre de liaison II</a>
+ <a href="#eclat-royal" class="sub-link" onclick="toggleMobileNav()">Éclat royal</a>
+ <a href="#arztkaiser" class="section-link" onclick="toggleMobileNav()">Arztkaiser</a>
+ <a href="#ordre-de-protection" class="sub-link" onclick="toggleMobileNav()">Ordre de protection</a>
+ <a href="#ordre-de-prevention" class="sub-link" onclick="toggleMobileNav()">Ordre de prévention</a>
+ <a href="#ordre-de-ralliement" class="sub-link" onclick="toggleMobileNav()">Ordre de ralliement</a>
+ <a href="#starkekaiser" class="section-link" onclick="toggleMobileNav()">Starkekaiser</a>
+ <a href="#ordres-feroces" class="sub-link" onclick="toggleMobileNav()">Ordres féroces</a>
+ <a href="#ex-nihilo" class="sub-link" onclick="toggleMobileNav()">Ex Nihilo</a>
+ <a href="#boost-de-moral" class="sub-link" onclick="toggleMobileNav()">Boost de moral</a>
+ <a href="#tab-general" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
     </div>
   </body>
 </html>

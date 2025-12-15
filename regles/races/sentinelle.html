@@ -1,49 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Sentinelle | Codex - Etrian Odyssey TTRPG</title>
-    <meta
-      name="description"
-      content="Géants aux traits animaux, pacifiques et soudés, vivant en harmonie avec la nature."
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="../../favicon.png" type="image/png" />
-    <link rel="stylesheet" href="../../style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <meta name="description" content="Géants aux traits animaux, pacifiques et soudés, vivant en harmonie avec la nature.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../favicon.png" type="image/png">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <canvas id="particles"></canvas>
     <header class="codex-header">
-      <div class="illustration-wrapper">
-        <img
-          src="../../assets/images/race-art/sentinel.png"
-          alt="Illustration Sentinelle"
-          class="illustration-race"
-          onclick="openLightbox(this.src)"
-        />
-      </div>
-      <h1>
-        <img
-          src="../../assets/images/race-icons/sentinelle.png"
-          class="image class-icon"
-        />
-        Sentinelle
-      </h1>
-      <p class="sous-titre">L’archive vivante des Égarés</p>
-      <div class="fixed-header-links">
-        <a
-          href="index.html"
-          class="carte-lien"
-          style="display: inline-block; max-width: 300px"
-          ><i class="fa-solid fa-arrow-left"></i> Index des races</a
-        >
-      </div>
+        <div class="illustration-wrapper">
+          
+        <img src="../../assets/images/race-art/sentinel.png" alt="Illustration Sentinelle" class="illustration-race" onclick="openLightbox(this.src)">
+         
+        </div>
+        <h1>
+          <img src="../../assets/images/race-icons/sentinelle.png" class="image class-icon"> Sentinelle
+        </h1>
+          <p class="sous-titre">L’archive vivante des Égarés</p>
+        <div class="fixed-header-links">
+          <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Index des races</a>
+        </div>
     </header>
 
     <nav class="nav-bar">
@@ -57,185 +37,60 @@
       <a href="../../ressources/">Ressources</a>
       <a href="../../credits">Crédits</a>
     </nav>
-
+    
     <main class="accueil">
       <section class="intro-collapsible click" id="intro">
-        <p>
-          Les Sentinelles sont la plus grande race humanoïde. Ils ressemblent à
-          de grands mélanges entre des caractéristiques animales et humanoïdes,
-          ressemblant souvent à des loups, des lions et des bovins. En raison de
-          leur taille, ils peuvent sembler intimidants, mais ce sont en réalité
-          des gens pacifiques, qui vivent en groupes et s'installent près des
-          rivières ou des forêts pour pêcher et faire du ravitaillement. Ils
-          coopèrent bien, servant généralement de muscle dans des groupes de
-          races mixtes.
-        </p>
-        <button class="toggle-intro" onclick="toggleIntro()">
-          Afficher la suite
-        </button>
+        <p>Les Sentinelles sont la plus grande race humanoïde. Ils ressemblent à de grands mélanges entre des caractéristiques animales et humanoïdes, ressemblant souvent à des loups, des lions et des bovins. En raison de leur taille, ils peuvent sembler intimidants, mais ce sont en réalité des gens pacifiques, qui vivent en groupes et s'installent près des rivières ou des forêts pour pêcher et faire du ravitaillement. Ils coopèrent bien, servant généralement de muscle dans des groupes de races mixtes. </p>
+        <button class="toggle-intro" onclick="toggleIntro()">Afficher la suite</button>
       </section>
       <section class="patch-section">
         <h2 class="patch-titre" id="details">
-          <img src="../../assets/images/notes-big.png" class="image image-h2" />
-          Traits raciaux
+          <img src="../../assets/images/notes-big.png" class="image image-h2"> Traits raciaux
         </h2>
-        <ul class="image-list">
-          <li>
-            <div class="image-texte">
-              <strong
-                ><img
-                  src="../../assets/images/race-traits/ability-score-increase.png"
-                  class="image details-icon"
-                />
-                Augmentation de caractéristique :</strong
-              >
-              +2 à un attribut et à son maximum
-            </div>
-          </li>
-          <li>
-            <div class="image-texte">
-              <strong
-                ><img
-                  src="../../assets/images/race-traits/alignment.png"
-                  class="image details-icon"
-                />
-                Alignement :</strong
-              >
-              Souvent Loyal Bon, mais diversité marquée selon l’histoire
-              personnelle.
-            </div>
-          </li>
-          <li>
-            <div class="image-texte">
-              <strong
-                ><img
-                  src="../../assets/images/race-traits/languages.png"
-                  class="image details-icon"
-                />
-                Langues :</strong
-              >
-              Commun, Sentinelle
-            </div>
-          </li>
-          <li>
-            <div class="image-texte">
-              <strong
-                ><img
-                  src="../../assets/images/race-traits/speed.png"
-                  class="image details-icon"
-                />
-                Vitesse de déplacement :</strong
-              >
-              7.5 mètres
-            </div>
-          </li>
-          <li>
-            <div class="image-texte">
-              <strong
-                ><img
-                  src="../../assets/images/race-traits/bonus-skills.png"
-                  class="image details-icon"
-                />
-                Compétences supplémentaires :</strong
-              >
-              Athlétisme
-            </div>
-          </li>
-          <li>
-            <div class="image-texte">
-              <strong
-                ><img
-                  src="../../assets/images/race-traits/union-skills.png"
-                  class="image details-icon"
-                />
-                Compétences d'Union :</strong
-              >
-              Endurance
-            </div>
-          </li>
-        </ul>
+        <ul class="image-list"> <li><div class="image-texte"><strong><img src="../../assets/images/race-traits/ability-score-increase.png" class="image details-icon"> Augmentation de caractéristique :</strong> +2 à un attribut et à son maximum</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/race-traits/alignment.png" class="image details-icon"> Alignement :</strong> Souvent Loyal Bon, mais diversité marquée selon l’histoire personnelle.</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/race-traits/languages.png" class="image details-icon"> Langues :</strong> Commun, Sentinelle</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/race-traits/speed.png" class="image details-icon"> Vitesse de déplacement :</strong> 7.5 mètres</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/race-traits/bonus-skills.png" class="image details-icon"> Compétences supplémentaires :</strong> Athlétisme</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/race-traits/union-skills.png" class="image details-icon"> Compétences d'Union :</strong> Endurance</div></li> </ul>
       </section>
       <section class="patch-section">
         <div class="toggle-section">
           <h2 class="patch-titre" id="aptitudes">
-            <img
-              src="../../assets/images/notes-big.png"
-              class="image image-h2"
-            />
-            Aptitudes raciales
-            <button class="toggle-button" onclick="toggleSection(this)">
-              ▲
-            </button>
+            <img src="../../assets/images/notes-big.png" class="image image-h2"> Aptitudes raciales <button class="toggle-button" onclick="toggleSection(this)">▲</button>
           </h2>
         </div>
         <div class="collapsible-content expanded">
-          <div class="patch-list">
-            <article id="poussee-sanguine">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/races/sentinel/blood-surge.png"
-                  class="image skill-icon"
-                />
-                Poussée sanguine
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/special.png"
-                    alt="Special"
-                    class="image action-icon"
-                  />Spécial</span
-                >
-              </h3>
-              <p>
-                Activé au début d'un combat pour subir 1/2/3/4 point de vie de
-                dégâts chaque tour au début du tour du Sentinelle, mais inflige
-                un supplément de 1d3/1d4/1d6/1d8 de dégâts pour le premier jet
-                de dégâts à chaque tour. Ces valeurs évoluent aux niveaux 5, 10,
-                15 et 20.
-              </p>
-            </article>
+          <div class="patch-list"> 
+  <article id="poussee-sanguine">
+  <h3>
+    <img src="../../assets/images/skills-icons/races/sentinel/blood-surge.png" class="image skill-icon">
+    Poussée sanguine
+    <span><img src="../../assets/images/action-costs/special.png" alt="Special" class="image action-icon">Spécial</span>
+  </h3>
+    <p>Activé au début d'un combat pour subir 1/2/3/4 point de vie de dégâts chaque tour au début du tour du Sentinelle, mais inflige un supplément de 1d3/1d4/1d6/1d8 de dégâts pour le premier jet de dégâts à chaque tour. Ces valeurs évoluent aux niveaux 5, 10, 15 et 20.</p>
+  </article>
 
-            <article id="souffle">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/races/sentinel/breath.png"
-                  class="image skill-icon"
-                />
-                Souffle
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/bonus-action.png"
-                    alt="Bonus"
-                    class="image action-icon"
-                  />1 PA (Action Bonus)</span
-                >
-              </h3>
-              <p>
-                Au combat, en tant qu'action bonus, peut dissiper une Poussée
-                sanguine activée pour récupérer 1d6/1d8/1d10/1d12 + modificateur
-                de Constitution points de vie. Si Souffle est utilisé lorsqu'un
-                combat se termine, seuls 1d3/1d4/1d5/1d6 points de vie sont
-                restaurés. Ces valeurs évoluent aux niveaux 5, 10, 15 et 20.
-              </p>
-            </article>
-          </div>
+  <article id="souffle">
+  <h3>
+    <img src="../../assets/images/skills-icons/races/sentinel/breath.png" class="image skill-icon">
+    Souffle
+    <span><img src="../../assets/images/action-costs/bonus-action.png" alt="Bonus" class="image action-icon">1 PA (Action Bonus)</span>
+  </h3>
+    <p>Au combat, en tant qu'action bonus, peut dissiper une Poussée sanguine activée pour récupérer 1d6/1d8/1d10/1d12 + modificateur de Constitution points de vie. Si Souffle est utilisé lorsqu'un combat se termine, seuls 1d3/1d4/1d5/1d6 points de vie sont restaurés. Ces valeurs évoluent aux niveaux 5, 10, 15 et 20.</p>
+  </article> </div>
         </div>
       </section>
     </main>
-    <button
-      id="backToTop"
-      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-      aria-label="Retour en haut"
-    >
-      <i class="fa-solid fa-arrow-up"></i> Retour en haut
-    </button>
+    <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button>
 
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
       <img id="lightbox-img" src="" alt="Portrait" />
     </div>
-
+    
     <footer>
-      <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
-    </footer>
+    <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+</footer>
 
     <script src="../../scripts/backToTop.js"></script>
     <script src="../../scripts/toggleable-intro.js"></script>

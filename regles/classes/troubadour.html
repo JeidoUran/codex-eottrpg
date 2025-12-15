@@ -1,95 +1,66 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Troubadour | Codex - Etrian Odyssey TTRPG</title>
-    <meta
-      name="description"
-      content="Artiste itinérant au pouvoir enchanteur, le Troubadour galvanise ses alliés par la musique, la poésie et la lumière de l’inspiration."
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="../../favicon.png" type="image/png" />
-    <link rel="stylesheet" href="../../style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <meta name="description" content="Artiste itinérant au pouvoir enchanteur, le Troubadour galvanise ses alliés par la musique, la poésie et la lumière de l’inspiration.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../favicon.png" type="image/png">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
-    <canvas id="particles"></canvas>
-    <div class="class-nav">
-      <a href="#details" class="section-link">Détails</a>
-      <a href="#aptitudes" class="section-link">Aptitudes</a>
-      <a href="#maitrise-des-chants" class="sub-link">Maîtrise des chants</a>
-      <a href="#chant-du-guerrier" class="sub-link">Chant du Guerrier</a>
-      <a href="#chant-du-refuge" class="sub-link">Chant du Refuge</a>
-      <a href="#reverberation" class="sub-link">Réverbération</a>
-      <a href="#tempo" class="sub-link">Tempo</a>
-      <a href="#ensemble" class="sub-link">Ensemble</a>
-      <a href="#chant-du-pied-leger" class="sub-link">Chant du Pied Léger</a>
-      <a href="#prelude" class="sub-link">Prélude</a>
-      <a href="#harmonisation" class="sub-link">Harmonisation</a>
-      <a href="#heurt-retentissant" class="sub-link">Heurt Retentissant</a>
-      <a href="#requiem-de-sante" class="sub-link">Requiem de Santé</a>
-      <a href="#final" class="sub-link">Final</a>
-      <a href="#ensemble-de-la-vie" class="sub-link">Ensemble de la Vie</a>
-      <a href="#don-sacre" class="sub-link">Don sacré</a>
-      <a href="#fantasia" class="sub-link">Fantasia</a>
-      <a href="#chant-de-l-intuition" class="sub-link">Chant de l’Intuition</a>
-      <a href="#croisade" class="sub-link">Croisade</a>
-      <a href="#specialisations" class="section-link">Spécialisations</a>
-      <a href="#allegro" class="section-link">Allegro</a>
-      <a href="#bridge" class="sub-link">Bridge</a>
-      <a href="#ensemble-de-l-energie" class="sub-link"
-        >Ensemble de l’Énergie</a
-      >
-      <a href="#chant-de-skanda" class="sub-link">Chant de Skanda</a>
-      <a href="#moderato" class="section-link">Moderato</a>
-      <a href="#crescendo-frappant" class="sub-link">Crescendo Frappant</a>
-      <a href="#chant-de-l-eradication" class="sub-link"
-        >Chant de l’Éradication</a
-      >
-      <a href="#da-capo" class="sub-link">Da Capo</a>
-      <a href="#adagio" class="section-link">Adagio</a>
-      <a href="#hurlement-effrayant" class="sub-link">Hurlement effrayant</a>
-      <a href="#chant-barbare" class="sub-link">Chant Barbare</a>
-      <a href="#ronde-tabou" class="sub-link">Ronde Tabou</a>
-      <a href="#tab-general" class="section-link">Progression par niveau</a>
-    </div>
-    <header class="codex-header">
+    <canvas id="particles"></canvas> 
+<div class="class-nav">
+  <a href="#details" class="section-link">Détails</a>
+  <a href="#aptitudes" class="section-link">Aptitudes</a>
+  <a href="#maitrise-des-chants" class="sub-link">Maîtrise des chants</a>
+  <a href="#chant-du-guerrier" class="sub-link">Chant du Guerrier</a>
+  <a href="#chant-du-refuge" class="sub-link">Chant du Refuge</a>
+  <a href="#reverberation" class="sub-link">Réverbération</a>
+  <a href="#tempo" class="sub-link">Tempo</a>
+  <a href="#ensemble" class="sub-link">Ensemble</a>
+  <a href="#chant-du-pied-leger" class="sub-link">Chant du Pied Léger</a>
+  <a href="#prelude" class="sub-link">Prélude</a>
+  <a href="#harmonisation" class="sub-link">Harmonisation</a>
+  <a href="#heurt-retentissant" class="sub-link">Heurt Retentissant</a>
+  <a href="#requiem-de-sante" class="sub-link">Requiem de Santé</a>
+  <a href="#final" class="sub-link">Final</a>
+  <a href="#ensemble-de-la-vie" class="sub-link">Ensemble de la Vie</a>
+  <a href="#don-sacre" class="sub-link">Don sacré</a>
+  <a href="#fantasia" class="sub-link">Fantasia</a>
+  <a href="#chant-de-l-intuition" class="sub-link">Chant de l’Intuition</a>
+  <a href="#croisade" class="sub-link">Croisade</a>
+  <a href="#specialisations" class="section-link">Spécialisations</a>
+  <a href="#allegro" class="section-link">Allegro</a>
+  <a href="#bridge" class="sub-link">Bridge</a>
+  <a href="#ensemble-de-l-energie" class="sub-link">Ensemble de l’Énergie</a>
+  <a href="#chant-de-skanda" class="sub-link">Chant de Skanda</a>
+  <a href="#moderato" class="section-link">Moderato</a>
+  <a href="#crescendo-frappant" class="sub-link">Crescendo Frappant</a>
+  <a href="#chant-de-l-eradication" class="sub-link">Chant de l’Éradication</a>
+  <a href="#da-capo" class="sub-link">Da Capo</a>
+  <a href="#adagio" class="section-link">Adagio</a>
+  <a href="#hurlement-effrayant" class="sub-link">Hurlement effrayant</a>
+  <a href="#chant-barbare" class="sub-link">Chant Barbare</a>
+  <a href="#ronde-tabou" class="sub-link">Ronde Tabou</a>
+  <a href="#tab-general" class="section-link">Progression par niveau</a>
+</div> <header class="codex-header">
       <div class="illustration-wrapper">
-        <img
-          src="../../assets/images/class-art/troubadour1.png"
-          alt="Illustration Troubadour"
-          class="illustration-classe"
-          onclick="openLightbox(this.src)"
-        />
+      
+          <img src="../../assets/images/class-art/troubadour1.png" alt="Illustration Troubadour" class="illustration-classe" onclick="openLightbox(this.src)">
+        
 
-        <img
-          src="../../assets/images/class-art/troubadour2.png"
-          alt="Illustration Troubadour"
-          class="illustration-classe"
-          onclick="openLightbox(this.src)"
-        />
-      </div>
-      <h1>
-        <img
-          src="../../assets/images/class-icons/troubadour.png"
-          class="image class-icon"
-        />
-        Troubadour
-      </h1>
-      <p class="sous-titre">L’archive vivante des Égarés</p>
-      <div class="fixed-header-links">
-        <a
-          href="index.html"
-          class="carte-lien"
-          style="display: inline-block; max-width: 300px"
-          ><i class="fa-solid fa-arrow-left"></i> Index des classes</a
-        >
-      </div>
+          <img src="../../assets/images/class-art/troubadour2.png" alt="Illustration Troubadour" class="illustration-classe" onclick="openLightbox(this.src)">
+         
+        </div>
+        <h1>
+          <img src="../../assets/images/class-icons/troubadour.png" class="image class-icon"> Troubadour
+        </h1>
+        <p class="sous-titre">L’archive vivante des Égarés</p>
+        <div class="fixed-header-links">
+          <a href="index.html" class="carte-lien" style="display: inline-block; max-width: 300px;"><i class="fa-solid fa-arrow-left"></i> Index des classes</a>
+        </div>
     </header>
 
     <nav class="nav-bar">
@@ -106,1182 +77,428 @@
 
     <main class="accueil">
       <section class="intro-collapsible click" id="intro">
-        <p>
-          La chanson, la danse, la poésie et l'art possèdent un pouvoir mystique
-          pour franchir les frontières de la communication et toucher les cœurs
-          et les esprits là où une main physique ne peut pas. Les Troubadours
-          consacrent leur vie à perfectionner ces métiers. Créer, pour un
-          Troubadour, n'est pas une profession, mais un mode de vie ; et en
-          façonnant la totalité d'eux-mêmes dans ce qu'ils créent, quelque chose
-          de plus grand émerge : la force. La force de se relever lorsque les
-          jambes flanchent et échouent, la force de repousser les limites et de
-          tendre la main dans l'obscurité, avec seulement la chanson du
-          Troubadour pour guider le chemin. Comme la lumière qui inspire les
-          alliés, les Troubadours comptent sur ces mêmes amis pour se protéger
-          du combat. Ils ne se débrouillent souvent pas bien dans des situations
-          isolées, en tête-à-tête, bien qu'ils puissent quand même se défendre
-          si nécessaire. Les Troubadours fonctionnent mieux en grands groupes,
-          tirant leur puissance et leur motivation de plus de personnes
-          observant et aimant leur travail.
-        </p>
-        <button class="toggle-intro" onclick="toggleIntro()">
-          Afficher la suite
-        </button>
+        <p>La chanson, la danse, la poésie et l'art possèdent un pouvoir mystique pour franchir les frontières de la communication et toucher les cœurs et les esprits là où une main physique ne peut pas. Les Troubadours consacrent leur vie à perfectionner ces métiers. Créer, pour un Troubadour, n'est pas une profession, mais un mode de vie ; et en façonnant la totalité d'eux-mêmes dans ce qu'ils créent, quelque chose de plus grand émerge : la force. La force de se relever lorsque les jambes flanchent et échouent, la force de repousser les limites et de tendre la main dans l'obscurité, avec seulement la chanson du Troubadour pour guider le chemin. Comme la lumière qui inspire les alliés, les Troubadours comptent sur ces mêmes amis pour se protéger du combat. Ils ne se débrouillent souvent pas bien dans des situations isolées, en tête-à-tête, bien qu'ils puissent quand même se défendre si nécessaire. Les Troubadours fonctionnent mieux en grands groupes, tirant leur puissance et leur motivation de plus de personnes observant et aimant leur travail. </p>
+        <button class="toggle-intro" onclick="toggleIntro()">Afficher la suite</button>
       </section>
       <section class="patch-section">
         <h2 class="patch-titre" id="details">
-          <img src="../../assets/images/notes-big.png" class="image image-h2" />
-          Détails de la classe
+          <img src="../../assets/images/notes-big.png" class="image image-h2"> Détails de la classe
         </h2>
-        <ul class="image-list">
-          <li>
-            <div class="image-texte">
-              <strong
-                ><img
-                  src="../../assets/images/class-details/health.png"
-                  class="image details-icon"
-                />
-                Points de vie :</strong
-              >
-              1d8 + modificateur de Constitution par niveau de Troubadour
-            </div>
-          </li>
-          <li>
-            <div class="image-texte">
-              <strong
-                ><img
-                  src="../../assets/images/class-details/hit-dice.png"
-                  class="image details-icon"
-                />
-                Dés de vie :</strong
-              >
-              1d8 par niveau de Troubadour
-            </div>
-          </li>
-          <li>
-            <div class="image-texte">
-              <strong
-                ><img
-                  src="../../assets/images/class-details/saving-throw-dc.png"
-                  class="image details-icon"
-                />
-                DD des jets de sauvegarde :</strong
-              >
-              8 + bonus de maîtrise + modificateur de Charisme
-            </div>
-          </li>
-          <li>
-            <div class="image-texte">
-              <strong
-                ><img
-                  src="../../assets/images/class-details/masteries.png"
-                  class="image details-icon"
-                />
-                Maîtrises :</strong
-              >
-              Arcs, Armes à feu, Épées, Haches, Couteaux de lancer ; Armures
-              légères ; Tout instrument ou ensemble d'outils pouvant être
-              utilisé pour performer
-            </div>
-          </li>
-          <li>
-            <div class="image-texte">
-              <strong
-                ><img
-                  src="../../assets/images/class-details/saving-throw.png"
-                  class="image details-icon"
-                />
-                Jets de sauvegarde :</strong
-              >
-              Dextérité, Charisme
-            </div>
-          </li>
-          <li>
-            <div class="image-texte">
-              <strong
-                ><img
-                  src="../../assets/images/class-details/skills.png"
-                  class="image details-icon"
-                />
-                Compétences :</strong
-              >
-              Choisissez 3 parmi Acrobaties, Escamotage, Discrétion, Arcanes,
-              Nature, Intuition, Perception, Tromperie, Intimidation et
-              Persuasion
-            </div>
-          </li>
-          <li>
-            <div class="image-texte">
-              <strong
-                ><img
-                  src="../../assets/images/class-details/starting-equipment.png"
-                  class="image details-icon"
-                />
-                Équipement de départ :</strong
-              >
-              Une arme maîtrisée (ou deux si légères), une armure légère, a) 10
-              couteaux de lancer ou b) 10 hachettes, un ensemble d'outils ou un
-              instrument dont ils ont la maîtrise, un sac d'explorateur
-            </div>
-          </li>
-        </ul>
+        <ul class="image-list"> <li><div class="image-texte"><strong><img src="../../assets/images/class-details/health.png" class="image details-icon"> Points de vie :</strong> 1d8 + modificateur de Constitution par niveau de Troubadour</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/hit-dice.png" class="image details-icon"> Dés de vie :</strong> 1d8 par niveau de Troubadour</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/saving-throw-dc.png" class="image details-icon"> DD des jets de sauvegarde :</strong> 8 + bonus de maîtrise + modificateur de Charisme</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/masteries.png" class="image details-icon"> Maîtrises :</strong> Arcs, Armes à feu, Épées, Haches, Couteaux de lancer ; Armures légères ; Tout instrument ou ensemble d'outils pouvant être utilisé pour performer</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/saving-throw.png" class="image details-icon"> Jets de sauvegarde :</strong> Dextérité, Charisme</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/skills.png" class="image details-icon"> Compétences :</strong> Choisissez 3 parmi Acrobaties, Escamotage, Discrétion, Arcanes, Nature, Intuition, Perception, Tromperie, Intimidation et Persuasion</div></li>
+<li><div class="image-texte"><strong><img src="../../assets/images/class-details/starting-equipment.png" class="image details-icon"> Équipement de départ :</strong> Une arme maîtrisée (ou deux si légères), une armure légère, a) 10 couteaux de lancer ou b) 10 hachettes, un ensemble d'outils ou un instrument dont ils ont la maîtrise, un sac d'explorateur</div></li> </ul>
       </section>
       <section class="patch-section">
-        <div class="aptitude-search-container">
-          <input
-            type="text"
-            id="search-bar"
-            placeholder="Rechercher une aptitude ou un sort..."
-          />
-        </div>
+          <div class="aptitude-search-container">
+            <input type="text" id="search-bar" placeholder="Rechercher une aptitude ou un sort..." />
+          </div>
         <div class="toggle-section">
           <h2 class="patch-titre" id="aptitudes">
-            <img
-              src="../../assets/images/notes-big.png"
-              class="image image-h2"
-            />
-            Aptitudes de classe
-            <button class="toggle-button" onclick="toggleSection(this)">
-              ▲
-            </button>
+            <img src="../../assets/images/notes-big.png" class="image image-h2"> Aptitudes de classe <button class="toggle-button" onclick="toggleSection(this)">▲</button>
           </h2>
         </div>
         <div class="collapsible-content expanded">
-          <div class="patch-list">
-            <article id="maitrise-des-chants">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/troubadour/song-mastery.png"
-                  class="image skill-icon"
-                />
-                Maîtrise des chants
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/passive-action.png"
-                    alt="Passive"
-                    class="image action-icon"
-                  />Passif</span
-                >
-              </h3>
-              <p>
-                Le Troubadour soutient principalement son groupe par le biais de
-                chansons et de performances. De nombreuses aptitudes prennent la
-                forme de chants, bien que ceux-ci puissent également se
-                manifester sous d'autres formes auditives ou visuelles, selon
-                les talents propres du Troubadour.<br />
-                <br />
-                L’activation d’un chant requiert une action. Aux tours suivants,
-                le Troubadour peut prolonger les effets du chant en dépensant
-                une action spéciale à 1 PA. La durée du chant est alors étendue
-                jusqu’à la fin de son prochain tour.<br />
-                <br />
-                Un chant prend fin si le Troubadour termine son tour sans
-                l’avoir prolongé, ou s’il devient inconscient ou incapable de se
-                produire. Un seul chant peut être actif à la fois. Pour
-                bénéficier des effets d’un autre chant, le Troubadour doit en
-                commencer un nouveau en utilisant une action.<br />
-                <br />
-                Au niveau 1, le Troubadour gagne la maîtrise de la compétence
-                Représentation. Si un chant est maintenu pendant une période
-                prolongée (comme lors d’un voyage ou d’une exploration de
-                donjon), le Troubadour gagne un niveau d’épuisement pour chaque
-                heure de performance continue.
-              </p>
-            </article>
+          <div class="patch-list"> 
+  <article id="maitrise-des-chants">
+  <h3>
+    <img src="../../assets/images/skills-icons/troubadour/song-mastery.png" class="image skill-icon">
+    Maîtrise des chants
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>Le Troubadour soutient principalement son groupe par le biais de chansons et de performances. De nombreuses aptitudes prennent la forme de chants, bien que ceux-ci puissent également se manifester sous d'autres formes auditives ou visuelles, selon les talents propres du Troubadour.<br> <br> L’activation d’un chant requiert une action. Aux tours suivants, le Troubadour peut prolonger les effets du chant en dépensant une action spéciale à 1 PA. La durée du chant est alors étendue jusqu’à la fin de son prochain tour.<br> <br> Un chant prend fin si le Troubadour termine son tour sans l’avoir prolongé, ou s’il devient inconscient ou incapable de se produire. Un seul chant peut être actif à la fois. Pour bénéficier des effets d’un autre chant, le Troubadour doit en commencer un nouveau en utilisant une action.<br> <br> Au niveau 1, le Troubadour gagne la maîtrise de la compétence Représentation. Si un chant est maintenu pendant une période prolongée (comme lors d’un voyage ou d’une exploration de donjon), le Troubadour gagne un niveau d’épuisement pour chaque heure de performance continue.</p>
+  </article>
 
-            <article id="chant-du-guerrier">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/troubadour/warrior-song.png"
-                  class="image skill-icon"
-                />
-                Chant du Guerrier
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/action.png"
-                    alt="Action"
-                    class="image action-icon"
-                  />2 PA (Action)</span
-                >
-              </h3>
-              <p>
-                Jouant un hymne ardent, le Troubadour stimule ses alliés à
-                l'action. Jusqu'à la fin du prochain tour du Troubadour ou
-                jusqu'à ce que le Troubadour commence un nouveau chant, les
-                alliés qui peuvent entendre ou voir le Troubadour (selon le type
-                de performance) gagnent une Offense égale au modificateur de
-                Charisme du Troubadour. Ce bonus ne peut pas dépasser la moitié
-                du niveau du Troubadour, arrondi au supérieur (minimum 1).
-              </p>
-            </article>
+  <article id="chant-du-guerrier">
+  <h3>
+    <img src="../../assets/images/skills-icons/troubadour/warrior-song.png" class="image skill-icon">
+    Chant du Guerrier
+    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+  </h3>
+    <p>Jouant un hymne ardent, le Troubadour stimule ses alliés à l'action. Jusqu'à la fin du prochain tour du Troubadour ou jusqu'à ce que le Troubadour commence un nouveau chant, les alliés qui peuvent entendre ou voir le Troubadour (selon le type de performance) gagnent une Offense égale au modificateur de Charisme du Troubadour. Ce bonus ne peut pas dépasser la moitié du niveau du Troubadour, arrondi au supérieur (minimum 1).</p>
+  </article>
 
-            <article id="chant-du-refuge">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/troubadour/shelter-song.png"
-                  class="image skill-icon"
-                />
-                Chant du Refuge
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/action.png"
-                    alt="Action"
-                    class="image action-icon"
-                  />2 PA (Action)</span
-                >
-              </h3>
-              <p>
-                Avec un staccato vif, le Troubadour maintient ses alliés sur
-                leurs gardes et alertes au danger. Jusqu'à la fin du prochain
-                tour du Troubadour ou jusqu'à ce que le Troubadour commence un
-                nouveau chant, les alliés qui peuvent entendre ou voir le
-                Troubadour (selon le type de performance) gagnent 1 de Défense.
-              </p>
-            </article>
+  <article id="chant-du-refuge">
+  <h3>
+    <img src="../../assets/images/skills-icons/troubadour/shelter-song.png" class="image skill-icon">
+    Chant du Refuge
+    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+  </h3>
+    <p>Avec un staccato vif, le Troubadour maintient ses alliés sur leurs gardes et alertes au danger. Jusqu'à la fin du prochain tour du Troubadour ou jusqu'à ce que le Troubadour commence un nouveau chant, les alliés qui peuvent entendre ou voir le Troubadour (selon le type de performance) gagnent 1 de Défense.</p>
+  </article>
 
-            <article id="reverberation">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/troubadour/reverb.png"
-                  class="image skill-icon"
-                />
-                Réverbération
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/reaction.png"
-                    alt="Reaction"
-                    class="image action-icon"
-                  />1 PA (Réaction)</span
-                >
-              </h3>
-              <p>
-                Lorsqu'un bonus doit être appliqué à un allié dans les 18
-                mètres, ou un malus doit être appliqué à un ennemi dans la même
-                portée, le Troubadour peut utiliser sa réaction pour étendre ses
-                effets à un nombre d'alliés/ennemis égal à son modificateur de
-                Charisme dans les 18 mètres pour la même durée que l'effet
-                original.
-              </p>
-            </article>
+  <article id="reverberation">
+  <h3>
+    <img src="../../assets/images/skills-icons/troubadour/reverb.png" class="image skill-icon">
+    Réverbération
+    <span><img src="../../assets/images/action-costs/reaction.png" alt="Reaction" class="image action-icon">1 PA (Réaction)</span>
+  </h3>
+    <p>Lorsqu'un bonus doit être appliqué à un allié dans les 18 mètres, ou un malus doit être appliqué à un ennemi dans la même portée, le Troubadour peut utiliser sa réaction pour étendre ses effets à un nombre d'alliés/ennemis égal à son modificateur de Charisme dans les 18 mètres pour la même durée que l'effet original.</p>
+  </article>
 
-            <article id="tempo">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/troubadour/tempo.png"
-                  class="image skill-icon"
-                />
-                Tempo
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/specialisation.png"
-                    alt="Specialisation"
-                    class="image action-icon"
-                  />Spécialisation</span
-                >
-              </h3>
-              <p>
-                Choisissez un Tempo, une stratégie et une vitesse à laquelle le
-                Troubadour opère. Le Troubadour gagnera des aptitudes
-                supplémentaires de ce Tempo à mesure qu'il augmentera de niveau.
-              </p>
-            </article>
+  <article id="tempo">
+  <h3>
+    <img src="../../assets/images/skills-icons/troubadour/tempo.png" class="image skill-icon">
+    Tempo
+    <span><img src="../../assets/images/action-costs/specialisation.png" alt="Specialisation" class="image action-icon">Spécialisation</span>
+  </h3>
+    <p>Choisissez un Tempo, une stratégie et une vitesse à laquelle le Troubadour opère. Le Troubadour gagnera des aptitudes supplémentaires de ce Tempo à mesure qu'il augmentera de niveau.</p>
+  </article>
 
-            <article id="ensemble">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/troubadour/ensemble.png"
-                  class="image skill-icon"
-                />
-                Ensemble
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/passive-action.png"
-                    alt="Passive"
-                    class="image action-icon"
-                  />Passif</span
-                >
-              </h3>
-              <p>
-                Le Troubadour peut maintenir une mélodie plus complexe. Ils
-                peuvent combiner les effets de deux chants lorsqu'ils commencent
-                à chanter, et maintenir les deux chants comme s'ils ne
-                continuaient qu'un seul.
-              </p>
-            </article>
+  <article id="ensemble">
+  <h3>
+    <img src="../../assets/images/skills-icons/troubadour/ensemble.png" class="image skill-icon">
+    Ensemble
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>Le Troubadour peut maintenir une mélodie plus complexe. Ils peuvent combiner les effets de deux chants lorsqu'ils commencent à chanter, et maintenir les deux chants comme s'ils ne continuaient qu'un seul.</p>
+  </article>
 
-            <article id="chant-du-pied-leger">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/troubadour/lightfoot-song.png"
-                  class="image skill-icon"
-                />
-                Chant du Pied Léger
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/action.png"
-                    alt="Action"
-                    class="image action-icon"
-                  />2 PA (Action)</span
-                >
-              </h3>
-              <p>
-                Un air léger soulève le poids des épaules des alliés, leur
-                permettant de se déplacer rapidement. Jusqu'à la fin du prochain
-                tour du Troubadour ou jusqu'à ce que le Troubadour commence un
-                nouveau chant, les alliés bénéficient d'un bonus à toutes les
-                vitesses de déplacement auxquelles ils ont actuellement accès.
-                Ce bonus est égal à 1.5 mètres multiplié par le modificateur de
-                Charisme du troubadour, avec un minimum de 1.5 mètres.
-              </p>
-            </article>
+  <article id="chant-du-pied-leger">
+  <h3>
+    <img src="../../assets/images/skills-icons/troubadour/lightfoot-song.png" class="image skill-icon">
+    Chant du Pied Léger
+    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+  </h3>
+    <p>Un air léger soulève le poids des épaules des alliés, leur permettant de se déplacer rapidement. Jusqu'à la fin du prochain tour du Troubadour ou jusqu'à ce que le Troubadour commence un nouveau chant, les alliés bénéficient d'un bonus à toutes les vitesses de déplacement auxquelles ils ont actuellement accès. Ce bonus est égal à 1.5 mètres multiplié par le modificateur de Charisme du troubadour, avec un minimum de 1.5 mètres.</p>
+  </article>
 
-            <article id="prelude">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/troubadour/fire-ice-volt-prelude.png"
-                  class="image skill-icon"
-                />
-                Prélude
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/bonus-action.png"
-                    alt="Bonus"
-                    class="image action-icon"
-                  />1 PA (Action Bonus)</span
-                >
-              </h3>
-              <p>
-                En ajoutant une touche de magie élémentaire pour enchaîner sur
-                un chant, le Troubadour peut accorder à ses alliés un bonus
-                supplémentaire. Choisissez le Prélude du feu, de la glace ou de
-                la foudre, et un allié que vous pouvez voir. Si cet allié est
-                affecté par un chant commencé ce tour ou celui que le Troubadour
-                a choisi de prolonger, il peut infliger des dégâts de feu, de
-                glace ou de foudre (selon le Prélude choisi) au lieu du type de
-                dégâts de son arme jusqu'à la fin du prochain tour du
-                Troubadour.
-              </p>
-            </article>
+  <article id="prelude">
+  <h3>
+    <img src="../../assets/images/skills-icons/troubadour/fire-ice-volt-prelude.png" class="image skill-icon">
+    Prélude
+    <span><img src="../../assets/images/action-costs/bonus-action.png" alt="Bonus" class="image action-icon">1 PA (Action Bonus)</span>
+  </h3>
+    <p>En ajoutant une touche de magie élémentaire pour enchaîner sur un chant, le Troubadour peut accorder à ses alliés un bonus supplémentaire. Choisissez le Prélude du feu, de la glace ou de la foudre, et un allié que vous pouvez voir. Si cet allié est affecté par un chant commencé ce tour ou celui que le Troubadour a choisi de prolonger, il peut infliger des dégâts de feu, de glace ou de foudre (selon le Prélude choisi) au lieu du type de dégâts de son arme jusqu'à la fin du prochain tour du Troubadour.</p>
+  </article>
 
-            <article id="harmonisation">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/troubadour/harmonise.png"
-                  class="image skill-icon"
-                />
-                Harmonisation
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/action.png"
-                    alt="Action"
-                    class="image action-icon"
-                  />2 PA (Action)</span
-                >
-              </h3>
-              <p>
-                En jouant une pièce qui convient à l'instant, le Troubadour peut
-                offrir son aide même de loin. Spécifiez un jet d'attaque ou un
-                type de test de compétence et un allié qui peut vous voir ou
-                vous entendre (selon le type de performance) ; faites un jet de
-                Charisme (Représentation) de DD 15 ; en cas de succès, cette
-                créature bénéficie d'un avantage sur sa prochaine tentative au
-                test de compétence spécifié ou au jet d'attaque, jusqu'au début
-                du prochain tour du Troubadour. Le Troubadour ne peut
-                s'harmoniser qu'avec une seule créature à la fois.
-              </p>
-            </article>
+  <article id="harmonisation">
+  <h3>
+    <img src="../../assets/images/skills-icons/troubadour/harmonise.png" class="image skill-icon">
+    Harmonisation
+    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+  </h3>
+    <p>En jouant une pièce qui convient à l'instant, le Troubadour peut offrir son aide même de loin. Spécifiez un jet d'attaque ou un type de test de compétence et un allié qui peut vous voir ou vous entendre (selon le type de performance) ; faites un jet de Charisme (Représentation) de DD 15 ; en cas de succès, cette créature bénéficie d'un avantage sur sa prochaine tentative au test de compétence spécifié ou au jet d'attaque, jusqu'au début du prochain tour du Troubadour. Le Troubadour ne peut s'harmoniser qu'avec une seule créature à la fois.</p>
+  </article>
 
-            <article id="heurt-retentissant">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/troubadour/bombastic-clash.png"
-                  class="image skill-icon"
-                />
-                Heurt Retentissant
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/passive-action.png"
-                    alt="Passive"
-                    class="image action-icon"
-                  />Passif</span
-                >
-              </h3>
-              <p>
-                Les gestes théâtraux et les explosions tonitruantes ne font
-                qu’ajouter à la prestation du Troubadour ! Lorsqu’il est en
-                plein élan, même les effets négatifs semblent nourrir sa fougue.
-                Si le Troubadour est en train de chanter un chant et qu’il doit
-                effectuer un jet de sauvegarde contre une créature hostile ou un
-                danger, il peut ajouter son bonus de maîtrise au jet si le type
-                de chant qu’il interprète correspond à la caractéristique du jet
-                de sauvegarde.<br />
-                <br />Correspondances entre chants et caractéristiques :
-                <li style="list-style: none">
-                  <strong>Chant du Guerrier</strong> – Force, Sagesse
-                </li>
-                <li style="list-style: none">
-                  <strong>Chant du Pied Léger</strong> – Dextérité, Intelligence
-                </li>
-                <li style="list-style: none">
-                  <strong>Chant du Refuge</strong> – Constitution, Charisme
-                </li>
-                <li style="list-style: none">
-                  <strong>Chant de l'Intuition</strong> – Intelligence, Sagesse
-                </li>
-                <li style="list-style: none">
-                  <strong>Chant de l'Éradication</strong> – Force, Dextérité
-                </li>
-                <li style="list-style: none">
-                  <strong>Chant de Skanda</strong> – Charisme, Constitution
-                </li>
-                <li style="list-style: none">
-                  <strong>Chant Barbare</strong> – Force, Constitution
-                </li>
-              </p>
-            </article>
+  <article id="heurt-retentissant">
+  <h3>
+    <img src="../../assets/images/skills-icons/troubadour/bombastic-clash.png" class="image skill-icon">
+    Heurt Retentissant
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>Les gestes théâtraux et les explosions tonitruantes ne font qu’ajouter à la prestation du Troubadour ! Lorsqu’il est en plein élan, même les effets négatifs semblent nourrir sa fougue. Si le Troubadour est en train de chanter un chant et qu’il doit effectuer un jet de sauvegarde contre une créature hostile ou un danger, il peut ajouter son bonus de maîtrise au jet si le type de chant qu’il interprète correspond à la caractéristique du jet de sauvegarde.<br> <br>Correspondances entre chants et caractéristiques : <li style="list-style: none;"><strong>Chant du Guerrier</strong> – Force, Sagesse <li style="list-style: none;"><strong>Chant du Pied Léger</strong> – Dextérité, Intelligence <li style="list-style: none;"><strong>Chant du Refuge</strong> – Constitution, Charisme <li style="list-style: none;"><strong>Chant de l'Intuition</strong> – Intelligence, Sagesse <li style="list-style: none;"><strong>Chant de l'Éradication</strong> – Force, Dextérité <li style="list-style: none;"><strong>Chant de Skanda</strong> – Charisme, Constitution <li style="list-style: none;"><strong>Chant Barbare</strong> – Force, Constitution</p>
+  </article>
 
-            <article id="requiem-de-sante">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/troubadour/health-requiem.png"
-                  class="image skill-icon"
-                />
-                Requiem de Santé
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/action.png"
-                    alt="Action"
-                    class="image action-icon"
-                  />2 PA (Action)</span
-                >
-              </h3>
-              <p>
-                Pendant 3 rounds, les alliés qui peuvent entendre ou voir le
-                troubadour (selon le type de performance) gagnent un bonus de +4
-                sur les jets pour récupérer des conditions de statut. Si le
-                Troubadour souffre actuellement de confusion, il peut faire un
-                jet de Charisme (Représentation) de DD 15 au début de son tour ;
-                en cas de réussite, il peut utiliser le Requiem de Santé au lieu
-                d'attaquer selon les règles normales de la confusion.
-              </p>
-            </article>
+  <article id="requiem-de-sante">
+  <h3>
+    <img src="../../assets/images/skills-icons/troubadour/health-requiem.png" class="image skill-icon">
+    Requiem de Santé
+    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+  </h3>
+    <p>Pendant 3 rounds, les alliés qui peuvent entendre ou voir le troubadour (selon le type de performance) gagnent un bonus de +4 sur les jets pour récupérer des conditions de statut. Si le Troubadour souffre actuellement de confusion, il peut faire un jet de Charisme (Représentation) de DD 15 au début de son tour ; en cas de réussite, il peut utiliser le Requiem de Santé au lieu d'attaquer selon les règles normales de la confusion.</p>
+  </article>
 
-            <article id="final">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/troubadour/finale.png"
-                  class="image skill-icon"
-                />
-                Final
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/heavy-action.png"
-                    alt="Heavy"
-                    class="image action-icon"
-                  />3 PA (Action Complexe)</span
-                >
-              </h3>
-              <p>
-                Mettez immédiatement fin à tous les effets de chants. Jusqu'à la
-                fin de leur prochain tour, les alliés qui perdraient les effets
-                des chants gagnent des points de vie temporaires égaux à la
-                moitié du niveau du Troubadour (arrondi à l’inférieur) + leur
-                modificateur de Charisme. Le Troubadour ne peut pas commencer un
-                autre chant jusqu'à la fin du prochain tour. Final ne peut être
-                utilisé qu'une fois par long repos.
-              </p>
-            </article>
+  <article id="final">
+  <h3>
+    <img src="../../assets/images/skills-icons/troubadour/finale.png" class="image skill-icon">
+    Final
+    <span><img src="../../assets/images/action-costs/heavy-action.png" alt="Heavy" class="image action-icon">3 PA (Action Complexe)</span>
+  </h3>
+    <p>Mettez immédiatement fin à tous les effets de chants. Jusqu'à la fin de leur prochain tour, les alliés qui perdraient les effets des chants gagnent des points de vie temporaires égaux à la moitié du niveau du Troubadour (arrondi à l’inférieur) + leur modificateur de Charisme. Le Troubadour ne peut pas commencer un autre chant jusqu'à la fin du prochain tour. Final ne peut être utilisé qu'une fois par long repos.</p>
+  </article>
 
-            <article id="ensemble-de-la-vie">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/troubadour/life-ensemble.png"
-                  class="image skill-icon"
-                />
-                Ensemble de la Vie
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/bonus-action.png"
-                    alt="Bonus"
-                    class="image action-icon"
-                  />1 PA (Action Bonus)</span
-                >
-              </h3>
-              <p>
-                Jusqu'à la fin du prochain tour du Troubadour, la première fois
-                qu'un allié sous les effets d'un chant subit des dégâts d'un
-                ennemi, il peut récupérer 3d8 + modificateur de Charisme du
-                Troubadour points de vie. Si les dégâts devaient les faire
-                tomber à 0 points de vie, ils subissent toujours un niveau
-                d’épuisement, mais ne perdent pas leurs bonus et malus. Le
-                Troubadour ne peut pas activer de nouveau l'Ensemble de la Vie
-                avant de commencer un nouveau chant en utilisant une action.
-              </p>
-            </article>
+  <article id="ensemble-de-la-vie">
+  <h3>
+    <img src="../../assets/images/skills-icons/troubadour/life-ensemble.png" class="image skill-icon">
+    Ensemble de la Vie
+    <span><img src="../../assets/images/action-costs/bonus-action.png" alt="Bonus" class="image action-icon">1 PA (Action Bonus)</span>
+  </h3>
+    <p>Jusqu'à la fin du prochain tour du Troubadour, la première fois qu'un allié sous les effets d'un chant subit des dégâts d'un ennemi, il peut récupérer 3d8 + modificateur de Charisme du Troubadour points de vie. Si les dégâts devaient les faire tomber à 0 points de vie, ils subissent toujours un niveau d’épuisement, mais ne perdent pas leurs bonus et malus. Le Troubadour ne peut pas activer de nouveau l'Ensemble de la Vie avant de commencer un nouveau chant en utilisant une action.</p>
+  </article>
 
-            <article id="don-sacre">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/troubadour/holy-gift.png"
-                  class="image skill-icon"
-                />
-                Don sacré
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/passive-action.png"
-                    alt="Passive"
-                    class="image action-icon"
-                  />Passif</span
-                >
-              </h3>
-              <p>
-                Les prodigieuses capacités d'un Troubadour brillent comme un
-                phare pour que tous puissent s'abriter et se réconforter,
-                emportant leurs soucis comme un ruisseau d'été. Lorsqu'il
-                s'accorde un court repos, le Troubadour peut faire un jet de
-                Charisme (Représentation); sur un résultat de 15 ou plus, tous
-                les alliés peuvent restaurer une utilisation d'une aptitude
-                limitée, un emplacement de sort de n'importe quel niveau, un dé
-                d'inspiration, ou jusqu'à 5 points de Qi. Ils peuvent également
-                lancer un dé de vie supplémentaire pour récupérer des points de
-                vie sans le dépenser, quel que soit le résultat du Troubadour
-                sur le jet de Représentation.
-              </p>
-            </article>
+  <article id="don-sacre">
+  <h3>
+    <img src="../../assets/images/skills-icons/troubadour/holy-gift.png" class="image skill-icon">
+    Don sacré
+    <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+  </h3>
+    <p>Les prodigieuses capacités d'un Troubadour brillent comme un phare pour que tous puissent s'abriter et se réconforter, emportant leurs soucis comme un ruisseau d'été. Lorsqu'il s'accorde un court repos, le Troubadour peut faire un jet de Charisme (Représentation); sur un résultat de 15 ou plus, tous les alliés peuvent restaurer une utilisation d'une aptitude limitée, un emplacement de sort de n'importe quel niveau, un dé d'inspiration, ou jusqu'à 5 points de Qi. Ils peuvent également lancer un dé de vie supplémentaire pour récupérer des points de vie sans le dépenser, quel que soit le résultat du Troubadour sur le jet de Représentation.</p>
+  </article>
 
-            <article id="fantasia">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/troubadour/flame-frost-shock-fantasia.png"
-                  class="image skill-icon"
-                />
-                Fantasia
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/heavy-action.png"
-                    alt="Heavy"
-                    class="image action-icon"
-                  />3 PA (Action Complexe)</span
-                >
-              </h3>
-              <p>
-                Choisissez Fantasia de la Flamme, du Givre ou de la Foudre.
-                Pendant 3 rounds, les Préludes de ce type affectent tous les
-                alliés influencés par un chant. Pendant ce temps, les alliés
-                sous l'effet d'un Prélude peuvent annuler ses effets pour
-                réduire un instance de dégâts du même type que le Prélude par le
-                modificateur de Charisme du Troubadour (minimum 1).
-              </p>
-            </article>
+  <article id="fantasia">
+  <h3>
+    <img src="../../assets/images/skills-icons/troubadour/flame-frost-shock-fantasia.png" class="image skill-icon">
+    Fantasia
+    <span><img src="../../assets/images/action-costs/heavy-action.png" alt="Heavy" class="image action-icon">3 PA (Action Complexe)</span>
+  </h3>
+    <p>Choisissez Fantasia de la Flamme, du Givre ou de la Foudre. Pendant 3 rounds, les Préludes de ce type affectent tous les alliés influencés par un chant. Pendant ce temps, les alliés sous l'effet d'un Prélude peuvent annuler ses effets pour réduire un instance de dégâts du même type que le Prélude par le modificateur de Charisme du Troubadour (minimum 1).</p>
+  </article>
 
-            <article id="chant-de-l-intuition">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/troubadour/insight-song.png"
-                  class="image skill-icon"
-                />
-                Chant de l’Intuition
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/action.png"
-                    alt="Action"
-                    class="image action-icon"
-                  />2 PA (Action)</span
-                >
-              </h3>
-              <p>
-                Une mélodie claire et tranquille accorde de la clarté aux
-                alliés. Les alliés qui peuvent entendre ou voir le Troubadour
-                (selon le type de performance) gagnent un bonus pour toucher
-                égal à la moitié de leur modificateur de Charisme, arrondi au
-                supérieur (minimum 1) jusqu'à la fin du prochain tour du
-                Troubadour.
-              </p>
-            </article>
+  <article id="chant-de-l-intuition">
+  <h3>
+    <img src="../../assets/images/skills-icons/troubadour/insight-song.png" class="image skill-icon">
+    Chant de l’Intuition
+    <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+  </h3>
+    <p>Une mélodie claire et tranquille accorde de la clarté aux alliés. Les alliés qui peuvent entendre ou voir le Troubadour (selon le type de performance) gagnent un bonus pour toucher égal à la moitié de leur modificateur de Charisme, arrondi au supérieur (minimum 1) jusqu'à la fin du prochain tour du Troubadour.</p>
+  </article>
 
-            <article id="croisade">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/troubadour/crusade.png"
-                  class="image skill-icon"
-                />
-                Croisade
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/heavy-action.png"
-                    alt="Heavy"
-                    class="image action-icon"
-                  />3 PA (Action Complexe)</span
-                >
-              </h3>
-              <p>
-                Jusqu'à la fin du round en cours, tous les alliés qui peuvent
-                entendre ou voir le Troubadour (selon le type de performance)
-                infligent 50% de dégâts supplémentaires. La Croisade ne peut
-                être utilisée qu'une fois par long repos. Le Troubadour reçoit 1
-                niveau d'épuisement après une Croisade réussie, à la fin du
-                tour.
-              </p>
-            </article>
-          </div>
+  <article id="croisade">
+  <h3>
+    <img src="../../assets/images/skills-icons/troubadour/crusade.png" class="image skill-icon">
+    Croisade
+    <span><img src="../../assets/images/action-costs/heavy-action.png" alt="Heavy" class="image action-icon">3 PA (Action Complexe)</span>
+  </h3>
+    <p>Jusqu'à la fin du round en cours, tous les alliés qui peuvent entendre ou voir le Troubadour (selon le type de performance) infligent 50% de dégâts supplémentaires. La Croisade ne peut être utilisée qu'une fois par long repos. Le Troubadour reçoit 1 niveau d'épuisement après une Croisade réussie, à la fin du tour.</p>
+  </article> </div>
         </div>
       </section>
       <h2 class="patch-titre" id="specialisations">
-        <img src="../../assets/images/notes-big.png" class="image image-h2" />
-        Spécialisations
+        <img src="../../assets/images/notes-big.png" class="image image-h2"> Spécialisations
       </h2>
+    
+  <section class="patch-section">
+  <div class="toggle-section">
+    <h2 class="patch-titre" id="allegro">
+      <img src="../../assets/images/subclass-icons/troubadour/allegro.png" class="image class-icon">
+      Allegro
+      <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+    </h2>
+    </div>
+    <div class="collapsible-content expanded">
+    <div class="patch-list">
+      
+        <article id="bridge">
+        <h3>
+          <img src="../../assets/images/skills-icons/troubadour/bridge.png" class="image skill-icon">
+          Bridge
+          <span><img src="../../assets/images/action-costs/combo-action.png" alt="Combo" class="image action-icon">1 PA (Action Combo)</span>
+        </h3>
+          <p>Lorsque le Troubadour continuerait un chant avec les effets de plusieurs chants combinés grâce à l'Ensemble, il peut plutôt dépenser son action combo pour échanger les effets d'un des chants actifs contre un autre. S'il n'utilise actuellement que les effets d'un seul chant, ils peuvent tisser les effets d'un deuxième Chant.</p>
+        </article>
 
-      <section class="patch-section">
-        <div class="toggle-section">
-          <h2 class="patch-titre" id="allegro">
-            <img
-              src="../../assets/images/subclass-icons/troubadour/allegro.png"
-              class="image class-icon"
-            />
-            Allegro
-            <button class="toggle-button" onclick="toggleSection(this)">
-              ▲
-            </button>
-          </h2>
-        </div>
-        <div class="collapsible-content expanded">
-          <div class="patch-list">
-            <article id="bridge">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/troubadour/bridge.png"
-                  class="image skill-icon"
-                />
-                Bridge
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/combo-action.png"
-                    alt="Combo"
-                    class="image action-icon"
-                  />1 PA (Action Combo)</span
-                >
-              </h3>
-              <p>
-                Lorsque le Troubadour continuerait un chant avec les effets de
-                plusieurs chants combinés grâce à l'Ensemble, il peut plutôt
-                dépenser son action combo pour échanger les effets d'un des
-                chants actifs contre un autre. S'il n'utilise actuellement que
-                les effets d'un seul chant, ils peuvent tisser les effets d'un
-                deuxième Chant.
-              </p>
-            </article>
+        <article id="ensemble-de-l-energie">
+        <h3>
+          <img src="../../assets/images/skills-icons/troubadour/energy-ensemble.png" class="image skill-icon">
+          Ensemble de l’Énergie
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p>Un certain nombre d'alliés qui possèdent actuellement un bonus prodigué par un chant, jusqu'au modificateur de Charisme du Troubadour (minimum 1), gagnent 1 PA temporaire. Ce PA peut dépasser le maximum et ne compte pas pour le plafond normal de 4.</p>
+        </article>
 
-            <article id="ensemble-de-l-energie">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/troubadour/energy-ensemble.png"
-                  class="image skill-icon"
-                />
-                Ensemble de l’Énergie
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/action.png"
-                    alt="Action"
-                    class="image action-icon"
-                  />2 PA (Action)</span
-                >
-              </h3>
-              <p>
-                Un certain nombre d'alliés qui possèdent actuellement un bonus
-                prodigué par un chant, jusqu'au modificateur de Charisme du
-                Troubadour (minimum 1), gagnent 1 PA temporaire. Ce PA peut
-                dépasser le maximum et ne compte pas pour le plafond normal de
-                4.
-              </p>
-            </article>
+        <article id="chant-de-skanda">
+        <h3>
+          <img src="../../assets/images/skills-icons/troubadour/skanda-song.png" class="image skill-icon">
+          Chant de Skanda
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p>Des notes frénétiques incitent les alliés à agir rapidement et en binômes. Jusqu'à la fin du prochain tour du Troubadour, les alliés affectés qui n'ont pas encore pris leur tour peuvent choisir d'agir en binôme, en prenant toutes leurs actions en même temps. L'initiative fonctionne sinon normalement - une fois que le tour combiné se termine, un seul tour ennemi suit, puis un autre allié, etc., jusqu'à ce que toutes les actions aient été dépensées d'un côté, moment auquel toutes les actions restantes ont lieu d'affilée.</p>
+        </article>
+    </div>
+    </div>
+  </section>
 
-            <article id="chant-de-skanda">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/troubadour/skanda-song.png"
-                  class="image skill-icon"
-                />
-                Chant de Skanda
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/action.png"
-                    alt="Action"
-                    class="image action-icon"
-                  />2 PA (Action)</span
-                >
-              </h3>
-              <p>
-                Des notes frénétiques incitent les alliés à agir rapidement et
-                en binômes. Jusqu'à la fin du prochain tour du Troubadour, les
-                alliés affectés qui n'ont pas encore pris leur tour peuvent
-                choisir d'agir en binôme, en prenant toutes leurs actions en
-                même temps. L'initiative fonctionne sinon normalement - une fois
-                que le tour combiné se termine, un seul tour ennemi suit, puis
-                un autre allié, etc., jusqu'à ce que toutes les actions aient
-                été dépensées d'un côté, moment auquel toutes les actions
-                restantes ont lieu d'affilée.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
+  <section class="patch-section">
+  <div class="toggle-section">
+    <h2 class="patch-titre" id="moderato">
+      <img src="../../assets/images/subclass-icons/troubadour/moderato.png" class="image class-icon">
+      Moderato
+      <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+    </h2>
+    </div>
+    <div class="collapsible-content expanded">
+    <div class="patch-list">
+      
+        <article id="crescendo-frappant">
+        <h3>
+          <img src="../../assets/images/skills-icons/troubadour/striking-crescendo.png" class="image skill-icon">
+          Crescendo Frappant
+          <span><img src="../../assets/images/action-costs/combo-action.png" alt="Combo" class="image action-icon">1 PA (Action Combo)</span>
+        </h3>
+          <p>Lorsque vous choisissez de continuer un chant, vous pouvez plutôt dépenser une action combo pour également effectuer une seule attaque d'arme contre un ennemi. Cette attaque ne peut pas ajouter votre modificateur ou votre Offense aux dégâts.</p>
+        </article>
 
-      <section class="patch-section">
-        <div class="toggle-section">
-          <h2 class="patch-titre" id="moderato">
-            <img
-              src="../../assets/images/subclass-icons/troubadour/moderato.png"
-              class="image class-icon"
-            />
-            Moderato
-            <button class="toggle-button" onclick="toggleSection(this)">
-              ▲
-            </button>
-          </h2>
-        </div>
-        <div class="collapsible-content expanded">
-          <div class="patch-list">
-            <article id="crescendo-frappant">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/troubadour/striking-crescendo.png"
-                  class="image skill-icon"
-                />
-                Crescendo Frappant
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/combo-action.png"
-                    alt="Combo"
-                    class="image action-icon"
-                  />1 PA (Action Combo)</span
-                >
-              </h3>
-              <p>
-                Lorsque vous choisissez de continuer un chant, vous pouvez
-                plutôt dépenser une action combo pour également effectuer une
-                seule attaque d'arme contre un ennemi. Cette attaque ne peut pas
-                ajouter votre modificateur ou votre Offense aux dégâts.
-              </p>
-            </article>
+        <article id="chant-de-l-eradication">
+        <h3>
+          <img src="../../assets/images/skills-icons/troubadour/eradication-song.png" class="image skill-icon">
+          Chant de l’Éradication
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p>Une explosion agressive et déformée incite les alliés à se précipiter. Jusqu'à la fin du prochain tour du Troubadour ou jusqu'à ce qu'il commence un nouveau chant, les alliés qui peuvent entendre ou voir le Troubadour (selon le type de performance) peuvent effectuer une seule attaque d'arme chaque fois qu'ils réduisent les points de vie d'un ennemi à 0. Cet effet peut se produire un nombre de fois par tour égal au modificateur de Force ou de Dextérité du Troubadour, selon lequel est le plus élevé (minimum 1).</p>
+        </article>
 
-            <article id="chant-de-l-eradication">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/troubadour/eradication-song.png"
-                  class="image skill-icon"
-                />
-                Chant de l’Éradication
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/action.png"
-                    alt="Action"
-                    class="image action-icon"
-                  />2 PA (Action)</span
-                >
-              </h3>
-              <p>
-                Une explosion agressive et déformée incite les alliés à se
-                précipiter. Jusqu'à la fin du prochain tour du Troubadour ou
-                jusqu'à ce qu'il commence un nouveau chant, les alliés qui
-                peuvent entendre ou voir le Troubadour (selon le type de
-                performance) peuvent effectuer une seule attaque d'arme chaque
-                fois qu'ils réduisent les points de vie d'un ennemi à 0. Cet
-                effet peut se produire un nombre de fois par tour égal au
-                modificateur de Force ou de Dextérité du Troubadour, selon
-                lequel est le plus élevé (minimum 1).
-              </p>
-            </article>
+        <article id="da-capo">
+        <h3>
+          <img src="../../assets/images/skills-icons/troubadour/da-capo.png" class="image skill-icon">
+          Da Capo
+          <span><img src="../../assets/images/action-costs/passive-action.png" alt="Passive" class="image action-icon">Passif</span>
+        </h3>
+          <p>Chaque fois que le Troubadour commence un nouveau chant qui ne remplace pas un chant actuel, il peut effectuer une seule attaque d'arme dans le cadre de l'action du chant ; cette attaque inflige des dégâts bonus égaux au modificateur de Force ou de Dextérité du Troubadour, selon lequel est le plus élevé. Ils peuvent également commencer un nouveau chant le tour suivant un Final.</p>
+        </article>
+    </div>
+    </div>
+  </section>
 
-            <article id="da-capo">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/troubadour/da-capo.png"
-                  class="image skill-icon"
-                />
-                Da Capo
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/passive-action.png"
-                    alt="Passive"
-                    class="image action-icon"
-                  />Passif</span
-                >
-              </h3>
-              <p>
-                Chaque fois que le Troubadour commence un nouveau chant qui ne
-                remplace pas un chant actuel, il peut effectuer une seule
-                attaque d'arme dans le cadre de l'action du chant ; cette
-                attaque inflige des dégâts bonus égaux au modificateur de Force
-                ou de Dextérité du Troubadour, selon lequel est le plus élevé.
-                Ils peuvent également commencer un nouveau chant le tour suivant
-                un Final.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
+  <section class="patch-section">
+  <div class="toggle-section">
+    <h2 class="patch-titre" id="adagio">
+      <img src="../../assets/images/subclass-icons/troubadour/adagio.png" class="image class-icon">
+      Adagio
+      <button class="toggle-button" onclick="toggleSection(this)">▲</button>
+    </h2>
+    </div>
+    <div class="collapsible-content expanded">
+    <div class="patch-list">
+      
+        <article id="hurlement-effrayant">
+        <h3>
+          <img src="../../assets/images/skills-icons/troubadour/frightful-yawl.png" class="image skill-icon">
+          Hurlement effrayant
+          <span><img src="../../assets/images/action-costs/combo-action.png" alt="Combo" class="image action-icon">1 PA (Action Combo)</span>
+        </h3>
+          <p>Lorsque vous choisissez de continuer un Chant, vous pouvez plutôt dépenser une action combo pour également tenter d'intimider un ennemi avec un cri rauque. Faites un test de Constitution (Intimidation) contre un ennemi dans les 18 mètres. En cas de réussite, cet ennemi reçoit un malus de -2 sur son prochain jet d'attaque contre une créature amicale. Cet effet dure jusqu'à la fin du prochain tour du Troubadour.</p>
+        </article>
 
-      <section class="patch-section">
-        <div class="toggle-section">
-          <h2 class="patch-titre" id="adagio">
-            <img
-              src="../../assets/images/subclass-icons/troubadour/adagio.png"
-              class="image class-icon"
-            />
-            Adagio
-            <button class="toggle-button" onclick="toggleSection(this)">
-              ▲
-            </button>
-          </h2>
-        </div>
-        <div class="collapsible-content expanded">
-          <div class="patch-list">
-            <article id="hurlement-effrayant">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/troubadour/frightful-yawl.png"
-                  class="image skill-icon"
-                />
-                Hurlement effrayant
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/combo-action.png"
-                    alt="Combo"
-                    class="image action-icon"
-                  />1 PA (Action Combo)</span
-                >
-              </h3>
-              <p>
-                Lorsque vous choisissez de continuer un Chant, vous pouvez
-                plutôt dépenser une action combo pour également tenter
-                d'intimider un ennemi avec un cri rauque. Faites un test de
-                Constitution (Intimidation) contre un ennemi dans les 18 mètres.
-                En cas de réussite, cet ennemi reçoit un malus de -2 sur son
-                prochain jet d'attaque contre une créature amicale. Cet effet
-                dure jusqu'à la fin du prochain tour du Troubadour.
-              </p>
-            </article>
+        <article id="chant-barbare">
+        <h3>
+          <img src="../../assets/images/skills-icons/troubadour/barbaric-song.png" class="image skill-icon">
+          Chant Barbare
+          <span><img src="../../assets/images/action-costs/action.png" alt="Action" class="image action-icon">2 PA (Action)</span>
+        </h3>
+          <p>Un rythme sauvage revigore les alliés qui entendent le Chant jusqu'à la fin du prochain tour du Troubadour. Les alliés gagnent des points de vie maximum égaux à la moitié du niveau du Troubadour (arrondi à l’inférieur) + leur modificateur de Constitution (minimum 1), et sont soignés du même montant. Une fois que les alliés ont gagné des points de vie grâce au Chant Barbare, ils ne peuvent plus s'en servir pour récupérer des points de vie tant qu'ils ne s'accordent pas de repos long ou court, bien qu'ils bénéficient toujours de l'augmentation des points de vie maximum, si le Chant Barbare recommence.</p>
+        </article>
 
-            <article id="chant-barbare">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/troubadour/barbaric-song.png"
-                  class="image skill-icon"
-                />
-                Chant Barbare
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/action.png"
-                    alt="Action"
-                    class="image action-icon"
-                  />2 PA (Action)</span
-                >
-              </h3>
-              <p>
-                Un rythme sauvage revigore les alliés qui entendent le Chant
-                jusqu'à la fin du prochain tour du Troubadour. Les alliés
-                gagnent des points de vie maximum égaux à la moitié du niveau du
-                Troubadour (arrondi à l’inférieur) + leur modificateur de
-                Constitution (minimum 1), et sont soignés du même montant. Une
-                fois que les alliés ont gagné des points de vie grâce au Chant
-                Barbare, ils ne peuvent plus s'en servir pour récupérer des
-                points de vie tant qu'ils ne s'accordent pas de repos long ou
-                court, bien qu'ils bénéficient toujours de l'augmentation des
-                points de vie maximum, si le Chant Barbare recommence.
-              </p>
-            </article>
+        <article id="ronde-tabou">
+        <h3>
+          <img src="../../assets/images/skills-icons/troubadour/taboo-rondo.png" class="image skill-icon">
+          Ronde Tabou
+          <span><img src="../../assets/images/action-costs/reaction.png" alt="Reaction" class="image action-icon">1 PA (Réaction)</span>
+        </h3>
+          <p>Lorsqu'un ennemi gagne un bonus, vous pouvez utiliser votre réaction pour copier ce bonus sur un certain nombre d'alliés dans un rayon de 18 mètres, jusqu'à votre modificateur de Constitution (minimum 1).</p>
+        </article>
+    </div>
+    </div>
+  </section>
+    
+    
+<section class="patch-section">
+  <h2 class="patch-titre" id="progression">
+    <img src="../../assets/images/notes-big.png" class="image image-h2">
+    Progression par niveau
+  </h2>
+  <div class="class-table-tabs-wrapper">
+    <button class="tab-button active" onclick="switchTab(event, 'general')">Troubadour</button>
+    <button class="tab-button" onclick="switchTab(event, 'allegro')">Allegro</button>
+    <button class="tab-button" onclick="switchTab(event, 'moderato')">Moderato</button>
+    <button class="tab-button" onclick="switchTab(event, 'adagio')">Adagio</button>
+  </div>
 
-            <article id="ronde-tabou">
-              <h3>
-                <img
-                  src="../../assets/images/skills-icons/troubadour/taboo-rondo.png"
-                  class="image skill-icon"
-                />
-                Ronde Tabou
-                <span
-                  ><img
-                    src="../../assets/images/action-costs/reaction.png"
-                    alt="Reaction"
-                    class="image action-icon"
-                  />1 PA (Réaction)</span
-                >
-              </h3>
-              <p>
-                Lorsqu'un ennemi gagne un bonus, vous pouvez utiliser votre
-                réaction pour copier ce bonus sur un certain nombre d'alliés
-                dans un rayon de 18 mètres, jusqu'à votre modificateur de
-                Constitution (minimum 1).
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
+  <div class="table-container tab-content active" id="tab-general">
+    <table class="progression-table">
+      <thead>
+        <tr>
+          <th>Niveau</th>
+          <th>Bonus de maîtrise</th>
+          <th>Aptitudes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>+2</td><td>Maîtrise des Chants, Chant du Guerrier</td></tr>
+        <tr><td>2</td><td>+2</td><td>Chant du Refuge, Réverbération</td></tr>
+        <tr><td>3</td><td>+2</td><td>Tempo, Aptitude de Tempo</td></tr>
+        <tr><td>4</td><td>+2</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+        <tr><td>5</td><td>+3</td><td>Ensemble, Chant du Pied Léger</td></tr>
+        <tr><td>6</td><td>+3</td><td>Prélude</td></tr>
+        <tr><td>7</td><td>+3</td><td>Harmoniser</td></tr>
+        <tr><td>8</td><td>+3</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+        <tr><td>9</td><td>+4</td><td>Aptitude de Tempo</td></tr>
+        <tr><td>10</td><td>+4</td><td>Heurt Retentissant</td></tr>
+        <tr><td>11</td><td>+4</td><td>Requiem de Santé</td></tr>
+        <tr><td>12</td><td>+4</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+        <tr><td>13</td><td>+5</td><td>Final</td></tr>
+        <tr><td>14</td><td>+5</td><td>Ensemble de la Vie</td></tr>
+        <tr><td>15</td><td>+5</td><td>Aptitude de Tempo</td></tr>
+        <tr><td>16</td><td>+5</td><td>Amélioration de caractéristiques, Défense +1</td></tr>
+        <tr><td>17</td><td>+6</td><td>Don sacré</td></tr>
+        <tr><td>18</td><td>+6</td><td>Fantasia</td></tr>
+        <tr><td>19</td><td>+6</td><td>Chant de l'Intuition</td></tr>
+        <tr><td>20</td><td>+6</td><td>Croisade</td></tr>
+      </tbody>
+    </table>
+  </div>
 
-      <section class="patch-section">
-        <h2 class="patch-titre" id="progression">
-          <img src="../../assets/images/notes-big.png" class="image image-h2" />
-          Progression par niveau
-        </h2>
-        <div class="class-table-tabs-wrapper">
-          <button
-            class="tab-button active"
-            onclick="switchTab(event, 'general')"
-          >
-            Troubadour
-          </button>
-          <button class="tab-button" onclick="switchTab(event, 'allegro')">
-            Allegro
-          </button>
-          <button class="tab-button" onclick="switchTab(event, 'moderato')">
-            Moderato
-          </button>
-          <button class="tab-button" onclick="switchTab(event, 'adagio')">
-            Adagio
-          </button>
-        </div>
+  <div class="table-container tab-content" id="tab-allegro" style="display:none;">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Aptitudes de l'Allegro</th></tr></thead>
+      <tbody>
+        <tr><td>3</td><td>Bridge</td></tr>
+        <tr><td>9</td><td>Ensemble de l'Énergie</td></tr>
+        <tr><td>15</td><td>Chant de Skanda</td></tr>
+      </tbody>
+    </table>
+  </div>
 
-        <div class="table-container tab-content active" id="tab-general">
-          <table class="progression-table">
-            <thead>
-              <tr>
-                <th>Niveau</th>
-                <th>Bonus de maîtrise</th>
-                <th>Aptitudes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>+2</td>
-                <td>Maîtrise des Chants, Chant du Guerrier</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>+2</td>
-                <td>Chant du Refuge, Réverbération</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>+2</td>
-                <td>Tempo, Aptitude de Tempo</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>+2</td>
-                <td>Amélioration de caractéristiques, Défense +1</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>+3</td>
-                <td>Ensemble, Chant du Pied Léger</td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>+3</td>
-                <td>Prélude</td>
-              </tr>
-              <tr>
-                <td>7</td>
-                <td>+3</td>
-                <td>Harmoniser</td>
-              </tr>
-              <tr>
-                <td>8</td>
-                <td>+3</td>
-                <td>Amélioration de caractéristiques, Défense +1</td>
-              </tr>
-              <tr>
-                <td>9</td>
-                <td>+4</td>
-                <td>Aptitude de Tempo</td>
-              </tr>
-              <tr>
-                <td>10</td>
-                <td>+4</td>
-                <td>Heurt Retentissant</td>
-              </tr>
-              <tr>
-                <td>11</td>
-                <td>+4</td>
-                <td>Requiem de Santé</td>
-              </tr>
-              <tr>
-                <td>12</td>
-                <td>+4</td>
-                <td>Amélioration de caractéristiques, Défense +1</td>
-              </tr>
-              <tr>
-                <td>13</td>
-                <td>+5</td>
-                <td>Final</td>
-              </tr>
-              <tr>
-                <td>14</td>
-                <td>+5</td>
-                <td>Ensemble de la Vie</td>
-              </tr>
-              <tr>
-                <td>15</td>
-                <td>+5</td>
-                <td>Aptitude de Tempo</td>
-              </tr>
-              <tr>
-                <td>16</td>
-                <td>+5</td>
-                <td>Amélioration de caractéristiques, Défense +1</td>
-              </tr>
-              <tr>
-                <td>17</td>
-                <td>+6</td>
-                <td>Don sacré</td>
-              </tr>
-              <tr>
-                <td>18</td>
-                <td>+6</td>
-                <td>Fantasia</td>
-              </tr>
-              <tr>
-                <td>19</td>
-                <td>+6</td>
-                <td>Chant de l'Intuition</td>
-              </tr>
-              <tr>
-                <td>20</td>
-                <td>+6</td>
-                <td>Croisade</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+  <div class="table-container tab-content" id="tab-moderato" style="display:none;">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Aptitudes du Moderato</th></tr></thead>
+      <tbody>
+        <tr><td>3</td><td>Crescendo Frappant</td></tr>
+        <tr><td>9</td><td>Chant de l'Éradication</td></tr>
+        <tr><td>15</td><td>Da Capo</td></tr>
+      </tbody>
+    </table>
+  </div>
 
-        <div
-          class="table-container tab-content"
-          id="tab-allegro"
-          style="display: none"
-        >
-          <table class="progression-table">
-            <thead>
-              <tr>
-                <th>Niveau</th>
-                <th>Aptitudes de l'Allegro</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>3</td>
-                <td>Bridge</td>
-              </tr>
-              <tr>
-                <td>9</td>
-                <td>Ensemble de l'Énergie</td>
-              </tr>
-              <tr>
-                <td>15</td>
-                <td>Chant de Skanda</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+  <div class="table-container tab-content" id="tab-adagio" style="display:none;">
+    <table class="progression-table">
+      <thead><tr><th>Niveau</th><th>Aptitudes de l'Adagio</th></tr></thead>
+      <tbody>
+        <tr><td>3</td><td>Hurlement effrayant</td></tr>
+        <tr><td>9</td><td>Chant barbare</td></tr>
+        <tr><td>15</td><td>Ronde tabou</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-        <div
-          class="table-container tab-content"
-          id="tab-moderato"
-          style="display: none"
-        >
-          <table class="progression-table">
-            <thead>
-              <tr>
-                <th>Niveau</th>
-                <th>Aptitudes du Moderato</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>3</td>
-                <td>Crescendo Frappant</td>
-              </tr>
-              <tr>
-                <td>9</td>
-                <td>Chant de l'Éradication</td>
-              </tr>
-              <tr>
-                <td>15</td>
-                <td>Da Capo</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+<script>
+    function switchTab(event, tabId) {
+      const tabs = document.querySelectorAll('.tab-button');
+      const contents = document.querySelectorAll('.tab-content');
+      tabs.forEach(t => t.classList.remove('active'));
+      contents.forEach(c => {
+        c.classList.remove('active');
+        c.style.display = 'none';
+      });
 
-        <div
-          class="table-container tab-content"
-          id="tab-adagio"
-          style="display: none"
-        >
-          <table class="progression-table">
-            <thead>
-              <tr>
-                <th>Niveau</th>
-                <th>Aptitudes de l'Adagio</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>3</td>
-                <td>Hurlement effrayant</td>
-              </tr>
-              <tr>
-                <td>9</td>
-                <td>Chant barbare</td>
-              </tr>
-              <tr>
-                <td>15</td>
-                <td>Ronde tabou</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+      event.target.classList.add('active');
+      const target = document.getElementById(`tab-${tabId}`);
+      target.style.display = 'block';
+      void target.offsetWidth; // forcer repaint
+      target.classList.add('active');
+    }
+</script>
 
-      <script>
-        function switchTab(event, tabId) {
-          const tabs = document.querySelectorAll(".tab-button");
-          const contents = document.querySelectorAll(".tab-content");
-          tabs.forEach((t) => t.classList.remove("active"));
-          contents.forEach((c) => {
-            c.classList.remove("active");
-            c.style.display = "none";
-          });
-
-          event.target.classList.add("active");
-          const target = document.getElementById(`tab-${tabId}`);
-          target.style.display = "block";
-          void target.offsetWidth; // forcer repaint
-          target.classList.add("active");
-        }
-      </script>
     </main>
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
       <img id="lightbox-img" src="" alt="Portrait" />
     </div>
-    <button
-      id="backToTop"
-      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-      aria-label="Retour en haut"
-    >
-      <i class="fa-solid fa-arrow-up"></i> Retour en haut
-    </button>
+    <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button>
     <footer>
-      <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
-    </footer>
+    <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+</footer>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
+      document.addEventListener("DOMContentLoaded", function() {
         const searchInput = document.getElementById("search-bar");
         const aptitudeArticles = document.querySelectorAll("article");
-        searchInput.addEventListener("input", function () {
+        searchInput.addEventListener("input", function() {
           const value = searchInput.value.toLowerCase();
-          aptitudeArticles.forEach((article) => {
-            const title =
-              article.querySelector("h3")?.textContent?.toLowerCase() || "";
+          aptitudeArticles.forEach(article => {
+            const title = article.querySelector("h3")?.textContent?.toLowerCase() || "";
             const content = article.textContent?.toLowerCase() || "";
             if (title.includes(value) || content.includes(value)) {
               article.style.display = "";
@@ -1306,140 +523,41 @@
     <script src="../../scripts/lightbox.js"></script>
     <script src="../../scripts/particles.js"></script>
     <script src="../../scripts/backToTop.js"></script>
-    <button class="mobile-nav-toggle" onclick="toggleMobileNav(this)">
-      ☰
-    </button>
+    <button class="mobile-nav-toggle" onclick="toggleMobileNav(this)">☰</button>
     <div class="mobile-nav-overlay" id="mobileNav">
-      <div class="mobile-nav-content">
-        <a href="#details" class="section-link" onclick="toggleMobileNav()"
-          >Détails</a
-        >
-        <a href="#aptitudes" class="section-link" onclick="toggleMobileNav()"
-          >Aptitudes</a
-        >
-        <a
-          href="#maitrise-des-chants"
-          class="sub-link"
-          onclick="toggleMobileNav()"
-          >Maîtrise des chants</a
-        >
-        <a
-          href="#chant-du-guerrier"
-          class="sub-link"
-          onclick="toggleMobileNav()"
-          >Chant du Guerrier</a
-        >
-        <a href="#chant-du-refuge" class="sub-link" onclick="toggleMobileNav()"
-          >Chant du Refuge</a
-        >
-        <a href="#reverberation" class="sub-link" onclick="toggleMobileNav()"
-          >Réverbération</a
-        >
-        <a href="#tempo" class="sub-link" onclick="toggleMobileNav()">Tempo</a>
-        <a href="#ensemble" class="sub-link" onclick="toggleMobileNav()"
-          >Ensemble</a
-        >
-        <a
-          href="#chant-du-pied-leger"
-          class="sub-link"
-          onclick="toggleMobileNav()"
-          >Chant du Pied Léger</a
-        >
-        <a href="#prelude" class="sub-link" onclick="toggleMobileNav()"
-          >Prélude</a
-        >
-        <a href="#harmonisation" class="sub-link" onclick="toggleMobileNav()"
-          >Harmonisation</a
-        >
-        <a
-          href="#heurt-retentissant"
-          class="sub-link"
-          onclick="toggleMobileNav()"
-          >Heurt Retentissant</a
-        >
-        <a href="#requiem-de-sante" class="sub-link" onclick="toggleMobileNav()"
-          >Requiem de Santé</a
-        >
-        <a href="#final" class="sub-link" onclick="toggleMobileNav()">Final</a>
-        <a
-          href="#ensemble-de-la-vie"
-          class="sub-link"
-          onclick="toggleMobileNav()"
-          >Ensemble de la Vie</a
-        >
-        <a href="#don-sacre" class="sub-link" onclick="toggleMobileNav()"
-          >Don sacré</a
-        >
-        <a href="#fantasia" class="sub-link" onclick="toggleMobileNav()"
-          >Fantasia</a
-        >
-        <a
-          href="#chant-de-l-intuition"
-          class="sub-link"
-          onclick="toggleMobileNav()"
-          >Chant de l’Intuition</a
-        >
-        <a href="#croisade" class="sub-link" onclick="toggleMobileNav()"
-          >Croisade</a
-        >
-        <a
-          href="#specialisations"
-          class="section-link"
-          onclick="toggleMobileNav()"
-          >Spécialisations</a
-        >
-        <a href="#allegro" class="section-link" onclick="toggleMobileNav()"
-          >Allegro</a
-        >
-        <a href="#bridge" class="sub-link" onclick="toggleMobileNav()"
-          >Bridge</a
-        >
-        <a
-          href="#ensemble-de-l-energie"
-          class="sub-link"
-          onclick="toggleMobileNav()"
-          >Ensemble de l’Énergie</a
-        >
-        <a href="#chant-de-skanda" class="sub-link" onclick="toggleMobileNav()"
-          >Chant de Skanda</a
-        >
-        <a href="#moderato" class="section-link" onclick="toggleMobileNav()"
-          >Moderato</a
-        >
-        <a
-          href="#crescendo-frappant"
-          class="sub-link"
-          onclick="toggleMobileNav()"
-          >Crescendo Frappant</a
-        >
-        <a
-          href="#chant-de-l-eradication"
-          class="sub-link"
-          onclick="toggleMobileNav()"
-          >Chant de l’Éradication</a
-        >
-        <a href="#da-capo" class="sub-link" onclick="toggleMobileNav()"
-          >Da Capo</a
-        >
-        <a href="#adagio" class="section-link" onclick="toggleMobileNav()"
-          >Adagio</a
-        >
-        <a
-          href="#hurlement-effrayant"
-          class="sub-link"
-          onclick="toggleMobileNav()"
-          >Hurlement effrayant</a
-        >
-        <a href="#chant-barbare" class="sub-link" onclick="toggleMobileNav()"
-          >Chant Barbare</a
-        >
-        <a href="#ronde-tabou" class="sub-link" onclick="toggleMobileNav()"
-          >Ronde Tabou</a
-        >
-        <a href="#tab-general" class="section-link" onclick="toggleMobileNav()"
-          >Progression par niveau</a
-        >
-      </div>
+      <div class="mobile-nav-content">  <a href="#details" class="section-link" onclick="toggleMobileNav()">Détails</a>
+ <a href="#aptitudes" class="section-link" onclick="toggleMobileNav()">Aptitudes</a>
+ <a href="#maitrise-des-chants" class="sub-link" onclick="toggleMobileNav()">Maîtrise des chants</a>
+ <a href="#chant-du-guerrier" class="sub-link" onclick="toggleMobileNav()">Chant du Guerrier</a>
+ <a href="#chant-du-refuge" class="sub-link" onclick="toggleMobileNav()">Chant du Refuge</a>
+ <a href="#reverberation" class="sub-link" onclick="toggleMobileNav()">Réverbération</a>
+ <a href="#tempo" class="sub-link" onclick="toggleMobileNav()">Tempo</a>
+ <a href="#ensemble" class="sub-link" onclick="toggleMobileNav()">Ensemble</a>
+ <a href="#chant-du-pied-leger" class="sub-link" onclick="toggleMobileNav()">Chant du Pied Léger</a>
+ <a href="#prelude" class="sub-link" onclick="toggleMobileNav()">Prélude</a>
+ <a href="#harmonisation" class="sub-link" onclick="toggleMobileNav()">Harmonisation</a>
+ <a href="#heurt-retentissant" class="sub-link" onclick="toggleMobileNav()">Heurt Retentissant</a>
+ <a href="#requiem-de-sante" class="sub-link" onclick="toggleMobileNav()">Requiem de Santé</a>
+ <a href="#final" class="sub-link" onclick="toggleMobileNav()">Final</a>
+ <a href="#ensemble-de-la-vie" class="sub-link" onclick="toggleMobileNav()">Ensemble de la Vie</a>
+ <a href="#don-sacre" class="sub-link" onclick="toggleMobileNav()">Don sacré</a>
+ <a href="#fantasia" class="sub-link" onclick="toggleMobileNav()">Fantasia</a>
+ <a href="#chant-de-l-intuition" class="sub-link" onclick="toggleMobileNav()">Chant de l’Intuition</a>
+ <a href="#croisade" class="sub-link" onclick="toggleMobileNav()">Croisade</a>
+ <a href="#specialisations" class="section-link" onclick="toggleMobileNav()">Spécialisations</a>
+ <a href="#allegro" class="section-link" onclick="toggleMobileNav()">Allegro</a>
+ <a href="#bridge" class="sub-link" onclick="toggleMobileNav()">Bridge</a>
+ <a href="#ensemble-de-l-energie" class="sub-link" onclick="toggleMobileNav()">Ensemble de l’Énergie</a>
+ <a href="#chant-de-skanda" class="sub-link" onclick="toggleMobileNav()">Chant de Skanda</a>
+ <a href="#moderato" class="section-link" onclick="toggleMobileNav()">Moderato</a>
+ <a href="#crescendo-frappant" class="sub-link" onclick="toggleMobileNav()">Crescendo Frappant</a>
+ <a href="#chant-de-l-eradication" class="sub-link" onclick="toggleMobileNav()">Chant de l’Éradication</a>
+ <a href="#da-capo" class="sub-link" onclick="toggleMobileNav()">Da Capo</a>
+ <a href="#adagio" class="section-link" onclick="toggleMobileNav()">Adagio</a>
+ <a href="#hurlement-effrayant" class="sub-link" onclick="toggleMobileNav()">Hurlement effrayant</a>
+ <a href="#chant-barbare" class="sub-link" onclick="toggleMobileNav()">Chant Barbare</a>
+ <a href="#ronde-tabou" class="sub-link" onclick="toggleMobileNav()">Ronde Tabou</a>
+ <a href="#tab-general" class="section-link" onclick="toggleMobileNav()">Progression par niveau</a> </div>
     </div>
   </body>
 </html>
