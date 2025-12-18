@@ -213,7 +213,7 @@ a:hover {
 }
 
 .accueil {
-  max-width: 1000px;
+  max-width: 1125px;
   margin: 2rem auto;
   z-index: 2;
   position: relative;
@@ -380,9 +380,9 @@ footer {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem;
+  /*padding: 1rem;*/
   margin: 1rem auto;
-  max-width: 415px;
+  max-width: 300px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   transition: transform 0.3s ease, background 0.3s ease;
@@ -3118,5 +3118,5 @@ body.dark-green-bg::after {
 }
 
 #tab-pnj {
-  grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
 }
