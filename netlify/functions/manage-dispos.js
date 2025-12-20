@@ -77,7 +77,7 @@ exports.handler = async (event) => {
         await s3
           .putObject({
             Bucket: BUCKET_NAME,
-            Key: `data/dispos/archive/${archiveName}.json`,
+            Key: `data/dispos/archive/${archiveName}`,
             Body: JSON.stringify(parsed, null, 2),
             ContentType: "application/json",
           })
