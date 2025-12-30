@@ -163,7 +163,7 @@
   }
   .codex-msg.user{
     margin-left:auto;
-    background: rgba(40, 90, 140, 0.25);
+    background: rgba(40, 140, 126, 0.25);
     border-color: rgba(120, 180, 255, 0.22);
   }
   .codex-msg.bot{
