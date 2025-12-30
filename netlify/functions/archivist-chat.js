@@ -1,11 +1,13 @@
+// netlify/functions/archivist-chat.js
 const ARCHIVIST_CHAT_URL = "https://api.myarchivist.ai/v1/ask";
-const ARCHIVIST_API_KEY = process.env.ARCHIVIST_API_KEY;
-const ARCHIVIST_CAMPAIGN_ID = process.env.ARCHIVIST_CAMPAIGN_ID;
 
-export async function handler(event) {
+exports.handler = async function (event) {
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
   }
+
+  const ARCHIVIST_API_KEY = process.env.ARCHIVIST_API_KEY;
+  const ARCHIVIST_CAMPAIGN_ID = process.env.ARCHIVIST_CAMPAIGN_ID;
 
   if (!ARCHIVIST_API_KEY || !ARCHIVIST_CAMPAIGN_ID) {
     return {
@@ -21,7 +23,7 @@ export async function handler(event) {
     return { statusCode: 400, body: "Invalid JSON" };
   }
 
-  // 🔑 Injection automatique de la campagne
+  // Injection campagne côté serveur
   payload.campaign_id = ARCHIVIST_CAMPAIGN_ID;
 
   try {
@@ -30,6 +32,7 @@ export async function handler(event) {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${ARCHIVIST_API_KEY}`,
+        "x-api-key": ARCHIVIST_API_KEY,
       },
       body: JSON.stringify(payload),
     });
@@ -37,42 +40,20 @@ export async function handler(event) {
     const contentType =
       upstream.headers.get("content-type") || "text/plain; charset=utf-8";
 
-    if (!upstream.body) {
-      const txt = await upstream.text();
-      return {
-        statusCode: upstream.status,
-        headers: { "Content-Type": contentType, "Cache-Control": "no-store" },
-        body: txt,
-      };
-    }
+    const text = await upstream.text(); // bufferise (robuste)
 
-    const streamify = globalThis?.awslambda?.streamifyResponse;
-    if (!streamify) {
-      const txt = await upstream.text();
-      return {
-        statusCode: upstream.status,
-        headers: { "Content-Type": contentType, "Cache-Control": "no-store" },
-        body: txt,
-      };
-    }
-
-    return streamify(async (responseStream) => {
-      responseStream.setStatusCode(upstream.status);
-      responseStream.setHeader("Content-Type", contentType);
-      responseStream.setHeader("Cache-Control", "no-store");
-
-      const reader = upstream.body.getReader();
-      while (true) {
-        const { value, done } = await reader.read();
-        if (done) break;
-        responseStream.write(value);
-      }
-      responseStream.end();
-    });
+    return {
+      statusCode: upstream.status,
+      headers: {
+        "Content-Type": contentType,
+        "Cache-Control": "no-store",
+      },
+      body: text,
+    };
   } catch (err) {
     return {
       statusCode: 500,
       body: `Proxy error: ${err?.message || err}`,
     };
   }
-}
+};

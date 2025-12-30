@@ -24,6 +24,12 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --codex-chat-fab-size: 54px;
+  --codex-chat-fab-offset: 32px;
+  --codex-chat-gap: 14px;
+}
+
 body {
   font-family: 'GoudyStM', Georgia, 'Times New Roman', serif;
   background: #0e1a23;
@@ -685,11 +691,15 @@ footer {
 #backToTop {
   display: none;
   position: fixed;
-  bottom: 3.5rem;
-  right: 1rem;
+
+  /* Alignement par rapport au bouton de chat */
+  bottom: calc(var(--codex-chat-fab-offset) + (var(--codex-chat-fab-size) / 2));
+  transform: translateY(50%);
+
+  right: calc(var(--codex-chat-fab-offset) + var(--codex-chat-fab-size) + var(--codex-chat-gap));
+
   text-decoration: none;
   color: #88c0a9;
-  overflow: hidden;
   font-family: 'Cinzel-Regular', 'Trajan Pro', 'Copperplate', 'Georgia', serif;
   font-size: 18px;
   background: rgba(20, 20, 30, 0.65);
@@ -698,11 +708,11 @@ footer {
   padding: 0.7rem 1rem;
   transition: transform 0.3s ease, background 0.3s ease;
   min-width: 221.917px;
-  /* ajustable pour matcher la largeur du bouton Codex */
+  z-index: 999998;
 }
 
 #backToTop:hover {
-  transform: scale(1.03);
+  transform: translateY(50%) scale(1.03);
   background: rgba(40, 40, 60, 0.95);
   box-shadow: 0 0 12px rgba(136, 192, 169, 0.1);
   text-shadow: 0 0 4px #8bd1e3;

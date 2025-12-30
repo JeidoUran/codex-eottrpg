@@ -7,60 +7,111 @@
   // ----------------------------
   const style = document.createElement("style");
   style.textContent = `
-  :root{
-    --codex-chat-bg: rgba(12, 16, 24, 0.92);
-    --codex-chat-panel: rgba(22, 30, 46, 0.96);
-    --codex-chat-border: rgba(120, 180, 255, 0.25);
-    --codex-chat-glow: rgba(60, 180, 255, 0.25);
-    --codex-chat-text: rgba(235, 245, 255, 0.92);
-    --codex-chat-muted: rgba(235, 245, 255, 0.65);
+  :root {
+    --codex-chat-bg: rgba(14, 26, 35, 0.94);
+    --codex-chat-panel: rgba(22, 36, 48, 0.97);
+    --codex-chat-border: rgba(120, 155, 185, 0.22);
+    --codex-chat-glow: rgba(90, 140, 190, 0.22);
+    --codex-chat-text: rgba(232, 240, 248, 0.94);
+    --codex-chat-muted: rgba(190, 205, 220, 0.65);
   }
 
-  #codex-archivist-fab{
+
+  #codex-archivist-fab {
     position: fixed;
-    left: 18px;
-    bottom: 18px;
-    width: 54px;
-    height: 54px;
+    right: var(--codex-chat-fab-offset);
+    bottom: var(--codex-chat-fab-offset);
+    width: var(--codex-chat-fab-size);
+    height: var(--codex-chat-fab-size);
     border-radius: 999px;
     border: 1px solid var(--codex-chat-border);
-    background: radial-gradient(circle at 30% 30%, rgba(80,170,255,.35), rgba(20,30,50,.9));
+    background: radial-gradient(circle at 30% 30%, rgba(110, 150, 185, 0.5), rgba(20, 20, 30, 0.65));
     color: var(--codex-chat-text);
     cursor: pointer;
     z-index: 999999;
-    box-shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 10px 30px rgba(0,0,0,0.45), 0 0 24px var(--codex-chat-glow);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    transition: transform .12s ease, filter .12s ease;
-    user-select:none;
+    box-shadow:
+      0 0 0 1px rgba(255,255,255,0.06),
+      0 10px 30px rgba(0,0,0,0.45),
+      0 0 22px rgba(110,150,185,0.28);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background 0.3s ease;
   }
-  #codex-archivist-fab:hover{ transform: translateY(-1px); filter: brightness(1.08); }
+  #codex-archivist-fab:hover{ transform: scale(1.03); filter: brightness(1.25); }
   #codex-archivist-fab:active{ transform: translateY(0px) scale(0.98); }
   #codex-archivist-fab svg{ width: 24px; height: 24px; opacity: 0.95; }
 
   #codex-archivist-overlay{
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.45);
+
+    /* 👇 MANQUANT */
+    background: rgba(0, 0, 0, 0.45);
     backdrop-filter: blur(3px);
+
     z-index: 999998;
-    display:none;
+
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+      opacity 0.25s ease,
+      visibility 0s linear 0.25s;
+  }
+
+  #codex-archivist-overlay.is-open{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transition:
+      opacity 0.25s ease,
+      visibility 0s linear 0s;
   }
 
   #codex-archivist-modal{
     position: fixed;
-    left: 18px;
-    bottom: 86px;
-    width: min(520px, calc(100vw - 36px));
-    height: min(640px, calc(100vh - 140px));
+    right: 18px;
+    bottom: 118px;
+    width: min(820px, calc(100vw - 36px));
+    height: min(740px, calc(100vh - 140px));
     z-index: 999999;
-    display:none;
+
+    /* Toujours "présent" */
+    display: block;
+
+    /* Etat fermé */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(10px) scale(0.98);
+
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      visibility 0s linear 0.25s;
+
     border-radius: 16px;
     border: 1px solid var(--codex-chat-border);
     background: var(--codex-chat-panel);
     box-shadow: 0 20px 60px rgba(0,0,0,0.55), 0 0 28px var(--codex-chat-glow);
     overflow:hidden;
+  }
+
+  #codex-archivist-modal.is-open{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+
+    /* visibilité immédiate à l'ouverture */
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      visibility 0s linear 0s;
   }
 
   .codex-chat-head{
@@ -149,11 +200,22 @@
     padding: 0 14px;
     border-radius: 12px;
     border: 1px solid rgba(120, 180, 255, 0.25);
-    background: rgba(60, 160, 255, 0.22);
+    background: rgba(20, 20, 30, 0.65);
+    transition: transform 0.3s ease, background 0.3s ease;
     color: var(--codex-chat-text);
     cursor:pointer;
     font-weight: 700;
   }
+
+  .codex-chat-send:hover {
+    transform: scale(1.03);
+    background: rgba(40, 40, 60, 0.95);
+    box-shadow: 0 0 12px rgba(136, 192, 169, 0.1);
+    text-shadow: 0 0 4px #8bd1e3;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
   .codex-chat-send:disabled{ opacity: 0.55; cursor:not-allowed; }
 
   @media (max-width: 560px){
@@ -195,7 +257,7 @@
       <div class="codex-chat-title">
         <div>
           Archivist
-          <small>Questionne la mémoire de campagne</small>
+          <small>Questionnez la mémoire de la campagne</small>
         </div>
       </div>
       <button class="codex-chat-close" type="button" aria-label="Fermer">✕</button>
@@ -204,7 +266,7 @@
     <div class="codex-chat-body" id="codex-chat-body"></div>
 
     <footer class="codex-chat-foot">
-      <input class="codex-chat-input" id="codex-chat-input" placeholder="Écris ta question..." />
+      <input class="codex-chat-input" id="codex-chat-input" placeholder="Écrivez votre question..." />
       <button class="codex-chat-send" id="codex-chat-send" type="button">Envoyer</button>
     </footer>
   `;
@@ -239,8 +301,9 @@
   }
 
   function openChat() {
-    overlay.style.display = "block";
-    modal.style.display = "block";
+    overlay.classList.add("is-open");
+    modal.classList.add("is-open");
+    setTimeout(() => input.focus(), 0);
 
     // hydrate initial message once
     if (!body.dataset.init) {
@@ -254,15 +317,24 @@
   }
 
   function closeChat() {
-    overlay.style.display = "none";
-    modal.style.display = "none";
+    overlay.classList.remove("is-open");
+    modal.classList.remove("is-open");
   }
 
-  overlay.addEventListener("click", closeChat);
+  overlay.addEventListener("click", () => {
+    if (modal.classList.contains("is-open")) {
+      closeChat();
+    } else {
+      openChat();
+    }
+  });
   closeBtn.addEventListener("click", closeChat);
   fab.addEventListener("click", () => {
-    if (modal.style.display === "block") closeChat();
-    else openChat();
+    if (modal.classList.contains("is-open")) {
+      closeChat();
+    } else {
+      openChat();
+    }
   });
 
   document.addEventListener("keydown", (e) => {
