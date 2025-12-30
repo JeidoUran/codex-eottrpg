@@ -2090,6 +2090,11 @@ select option {
   gap: 0.3rem;
 }
 
+.image-list.news .character-stats {
+  margin-bottom: 1.25rem;
+  gap: 0.3rem;
+}
+
 .fiche-skills .inventory {
   margin-top: 0.5rem;
 }
