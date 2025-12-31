@@ -1,6 +1,6 @@
 // assets/js/codex-archivist-chat.js
 (() => {
-  const ENDPOINT = "/.netlify/functions/archivist-chat";
+  const ENDPOINT = "/api/archivist-chat";
 
   // ----------------------------
   // CSS
@@ -78,7 +78,8 @@
     z-index: 999999;
 
     /* Toujours "présent" */
-    display: block;
+    display: flex;
+    flex-direction: column;
 
     /* Etat fermé */
     opacity: 0;
@@ -143,9 +144,10 @@
   }
 
   .codex-chat-body{
-    height: calc(100% - 58px - 60px);
+    flex: 1 1 auto;
+    min-height: 0;     /* IMPORTANT: autorise le scroll dans un flex child */
     padding: 14px;
-    overflow:auto;
+    overflow: auto;
     background: var(--codex-chat-bg);
   }
   .codex-msg{
@@ -174,11 +176,11 @@
   }
 
   .codex-chat-foot{
-    height: 60px;
-    display:flex;
-    gap: 10px;
-    align-items:center;
+    flex: 0 0 auto;
     padding: 10px 12px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
     border-top: 1px solid rgba(255,255,255,0.06);
     background: rgba(0,0,0,0.18);
   }
@@ -205,7 +207,6 @@
   }
 
   .codex-chat-send:hover {
-    transform: scale(1.03);
     background: rgba(40, 40, 60, 0.95);
     box-shadow: 0 0 12px rgba(136, 192, 169, 0.1);
     text-shadow: 0 0 4px #8bd1e3;
@@ -250,15 +251,15 @@
   modal.setAttribute("role", "dialog");
   modal.setAttribute("aria-modal", "true");
   modal.innerHTML = `
-    <header class="codex-chat-head">
+    <div class="codex-chat-head">
       <div class="codex-chat-title">
         <div>
-          Archivist
+          Archivist AI
           <small>Questionnez la mémoire de la campagne</small>
         </div>
       </div>
       <button class="codex-chat-close" type="button" aria-label="Fermer">✕</button>
-    </header>
+    </div>
 
     <div class="codex-chat-body" id="codex-chat-body"></div>
 
@@ -282,7 +283,7 @@
       {
         role: "assistant",
         content:
-          "Besoin d’un rappel, d’un résumé, ou d’un détail de lore ? Demandez à Archivist !",
+          "Besoin d’un rappel, d’un résumé, ou d’un détail de lore ? Demandez à Archivist AI !",
       },
     ],
     busy: false,
@@ -335,7 +336,7 @@
   });
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal.style.display === "block") closeChat();
+    if (e.key === "Escape" && modal.classList.contains("is-open")) closeChat();
   });
 
   // ----------------------------
