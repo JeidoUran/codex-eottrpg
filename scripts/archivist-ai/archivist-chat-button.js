@@ -233,7 +233,7 @@
   const fab = document.createElement("button");
   fab.id = "codex-archivist-fab";
   fab.type = "button";
-  fab.title = "Archivist – Poser une question";
+  fab.title = "Archivist AI – Poser une question";
   fab.innerHTML = `
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path d="M12 22c5.523 0 10-4.03 10-9s-4.477-9-10-9S2 8.03 2 13c0 2.04.77 3.92 2.06 5.37L3 22l3.9-1.3A11.5 11.5 0 0 0 12 22Z" stroke="currentColor" stroke-width="1.6" opacity="0.9"/>
