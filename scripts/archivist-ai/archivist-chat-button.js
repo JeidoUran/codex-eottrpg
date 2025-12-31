@@ -33,9 +33,6 @@
       0 0 0 1px rgba(255,255,255,0.06),
       0 10px 30px rgba(0,0,0,0.45),
       0 0 22px rgba(110,150,185,0.28);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transition: transform 0.3s ease, background 0.3s ease;
   }
   #codex-archivist-fab:hover{ transform: scale(1.03); filter: brightness(1.25); }
