@@ -35,7 +35,7 @@
       0 0 22px rgba(110,150,185,0.28);
     transition: transform 0.3s ease, background 0.3s ease;
   }
-  #codex-archivist-fab:hover{ transform: scale(1.03); filter: brightness(1.25); }
+  #codex-archivist-fab:hover{ transform: scale(1.075); filter: brightness(1.25); }
   #codex-archivist-fab:active{ transform: translateY(0px) scale(0.98); }
   #codex-archivist-fab svg{ width: 24px; height: 24px; opacity: 0.95; }
 
