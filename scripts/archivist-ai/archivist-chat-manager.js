@@ -298,6 +298,26 @@
     return div;
   }
 
+  function startThinkingDots(el) {
+    // évite double timers
+    stopThinkingDots(el);
+
+    let i = 0;
+    el.dataset.thinking = "1";
+    el.__thinkingTimer = setInterval(() => {
+      i = (i + 1) % 3; // 0,1,2
+      el.textContent = ".".repeat(i + 1); // ".", "..", "..."
+    }, 350);
+  }
+
+  function stopThinkingDots(el) {
+    if (el && el.__thinkingTimer) {
+      clearInterval(el.__thinkingTimer);
+      el.__thinkingTimer = null;
+    }
+    if (el) delete el.dataset.thinking;
+  }
+
   function openChat() {
     overlay.classList.add("is-open");
     modal.classList.add("is-open");
@@ -371,7 +391,15 @@
 
     botDiv.textContent = "";
 
+    let firstChunk = true;
+
     while (true) {
+      if (firstChunk) {
+        stopThinkingDots(botDiv);
+        botDiv.classList.remove("meta");
+        firstChunk = false;
+      }
+
       const { value, done } = await reader.read();
       if (done) break;
 
@@ -398,7 +426,8 @@
     sendBtn.disabled = true;
 
     // placeholder bot
-    const botDiv = appendMsg("bot", "…", "meta");
+    const botDiv = appendMsg("bot", ".", "meta");
+    startThinkingDots(botDiv);
 
     try {
       const res = await fetch(ENDPOINT, {
@@ -417,9 +446,13 @@
 
       botDiv.classList.remove("meta");
 
+      stopThinkingDots(botDiv);
+      botDiv.classList.remove("meta");
+
       const finalText = await readArchivistResponse(res, botDiv);
       state.messages.push({ role: "assistant", content: finalText });
     } catch (err) {
+      stopThinkingDots(botDiv);
       botDiv.classList.add("meta");
       botDiv.textContent = `Erreur: ${err?.message || err}`;
     } finally {

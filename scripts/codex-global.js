@@ -6,7 +6,7 @@
 
   // injecte le chat Archivist
   const s = document.createElement("script");
-  s.src = "/scripts/archivist-ai/archivist-chat-button.js";
+  s.src = "/scripts/archivist-ai/archivist-chat-manager.js";
   s.defer = true;
   document.head.appendChild(s);
 })();
