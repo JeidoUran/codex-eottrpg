@@ -1,26 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Patchs | Codex - Etrian Odyssey TTRPG</title>
-    <link rel="icon" href="../favicon.png" type="image/png" />
-    <link rel="stylesheet" href="../style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <canvas id="particles"></canvas>
     <header class="codex-header">
-      <a href="/" class="banniere-link"
-        ><img
-          src="../assets/images/banniere.png"
-          alt="Bannière"
-          class="banniere"
-      /></a>
+      <a href="/" class="banniere-link"><img src="../assets/images/banniere.png" alt="Bannière" class="banniere"></a>
       <h1>Historique des Patch Notes</h1>
       <p class="sous-titre">L’archive vivante des Égarés</p>
     </header>
@@ -37,411 +27,139 @@
       <a href="../credits">Crédits</a>
     </nav>
 
-    <main class="accueil">
-      <div id="top-bar">
-        <button class="btn-lu" id="tout-lu">
-          <img
-            src="../assets/images/icon_checkbox.png"
-            class="image mark-as-read-btn"
-          />
-          Tout marquer comme lu
-        </button>
-      </div>
-      <a
-        href="patch-22.html"
-        class="carte-lien large patch"
-        data-patch="patch-22.html"
-      >
-        <h2>
-          <img
-            src="../assets/images/silver-scroll.png"
-            class="image codex-silver-scroll-patch"
-          />
-          Patch 3.4 – Session 24
-        </h2>
-        <p>Publié le 17 Décembre 2025</p>
-        <span class="patch-nouveau" hidden
-          ><img src="../assets/images/exclam_mark.png" class="image new-patch"
-        /></span>
-      </a>
-      <a
-        href="patch-21.html"
-        class="carte-lien large patch"
-        data-patch="patch-21.html"
-      >
-        <h2>
-          <img
-            src="../assets/images/silver-scroll.png"
-            class="image codex-silver-scroll-patch"
-          />
-          Patch 3.3 – Session 23
-        </h2>
-        <p>Publié le 10 Décembre 2025</p>
-        <span class="patch-nouveau" hidden
-          ><img src="../assets/images/exclam_mark.png" class="image new-patch"
-        /></span>
-      </a>
-      <a
-        href="patch-20.html"
-        class="carte-lien large patch"
-        data-patch="patch-20.html"
-      >
-        <h2>
-          <img
-            src="../assets/images/silver-scroll.png"
-            class="image codex-silver-scroll-patch"
-          />
-          Patch 3.2 – Session 22
-        </h2>
-        <p>Publié le 12 Novembre 2025</p>
-        <span class="patch-nouveau" hidden
-          ><img src="../assets/images/exclam_mark.png" class="image new-patch"
-        /></span>
-      </a>
-      <a
-        href="patch-19.html"
-        class="carte-lien large patch"
-        data-patch="patch-19.html"
-      >
-        <h2>
-          <img
-            src="../assets/images/silver-scroll.png"
-            class="image codex-silver-scroll-patch"
-          />
-          Patch 3.1 – Session 21
-        </h2>
-        <p>Publié le 15 Octobre 2025</p>
-        <span class="patch-nouveau" hidden
-          ><img src="../assets/images/exclam_mark.png" class="image new-patch"
-        /></span>
-      </a>
-      <a
-        href="patch-18.html"
-        class="carte-lien large patch"
-        data-patch="patch-18.html"
-      >
-        <h2>
-          <img
-            src="../assets/images/silver-scroll.png"
-            class="image codex-silver-scroll-patch"
-          />
-          Patch 3.0 – Session 20
-        </h2>
-        <p>Publié le 24 Septembre 2025</p>
-        <span class="patch-nouveau" hidden
-          ><img src="../assets/images/exclam_mark.png" class="image new-patch"
-        /></span>
-      </a>
-      <a
-        href="patch-17.html"
-        class="carte-lien large patch"
-        data-patch="patch-17.html"
-      >
-        <h2>
-          <img
-            src="../assets/images/silver-scroll.png"
-            class="image codex-silver-scroll-patch"
-          />
-          Patch 2.10 – Session 19
-        </h2>
-        <p>Publié le 18 Juin 2025</p>
-        <span class="patch-nouveau" hidden
-          ><img src="../assets/images/exclam_mark.png" class="image new-patch"
-        /></span>
-      </a>
-      <a
-        href="patch-16.html"
-        class="carte-lien large patch"
-        data-patch="patch-16.html"
-      >
-        <h2>
-          <img
-            src="../assets/images/silver-scroll.png"
-            class="image codex-silver-scroll-patch"
-          />
-          Patch 2.9 – Session 18
-        </h2>
-        <p>Publié le 11 Juin 2025</p>
-        <span class="patch-nouveau" hidden
-          ><img src="../assets/images/exclam_mark.png" class="image new-patch"
-        /></span>
-      </a>
-      <a
-        href="patch-15.html"
-        class="carte-lien large patch"
-        data-patch="patch-15.html"
-      >
-        <h2>
-          <img
-            src="../assets/images/silver-scroll.png"
-            class="image codex-silver-scroll-patch"
-          />
-          Patch 2.8 – Session 17
-        </h2>
-        <p>Publié le 4 Juin 2025</p>
-        <span class="patch-nouveau" hidden
-          ><img src="../assets/images/exclam_mark.png" class="image new-patch"
-        /></span>
-      </a>
-      <a
-        href="patch-14.html"
-        class="carte-lien large patch"
-        data-patch="patch-14.html"
-      >
-        <h2>
-          <img
-            src="../assets/images/silver-scroll.png"
-            class="image codex-silver-scroll-patch"
-          />
-          Patch 2.7 – Session 16
-        </h2>
-        <p>Publié le 28 Mai 2025</p>
-        <span class="patch-nouveau" hidden
-          ><img src="../assets/images/exclam_mark.png" class="image new-patch"
-        /></span>
-      </a>
-      <a
-        href="patch-13.html"
-        class="carte-lien large patch"
-        data-patch="patch-13.html"
-      >
-        <h2>
-          <img
-            src="../assets/images/silver-scroll.png"
-            class="image codex-silver-scroll-patch"
-          />
-          Patch 2.6 – Session 15
-        </h2>
-        <p>Publié le 30 Avril 2025</p>
-        <span class="patch-nouveau" hidden
-          ><img src="../assets/images/exclam_mark.png" class="image new-patch"
-        /></span>
-      </a>
-      <a
-        href="patch-12.html"
-        class="carte-lien large patch"
-        data-patch="patch-12.html"
-      >
-        <h2>
-          <img
-            src="../assets/images/silver-scroll.png"
-            class="image codex-silver-scroll-patch"
-          />
-          Patch 2.5 – Session 14
-        </h2>
-        <p>Publié le 23 Avril 2025</p>
-        <span class="patch-nouveau" hidden
-          ><img src="../assets/images/exclam_mark.png" class="image new-patch"
-        /></span>
-      </a>
-      <a
-        href="patch-11.html"
-        class="carte-lien large patch"
-        data-patch="patch-11.html"
-      >
-        <h2>
-          <img
-            src="../assets/images/silver-scroll.png"
-            class="image codex-silver-scroll-patch"
-          />
-          Patch 2.4 – Session 13
-        </h2>
-        <p>Publié le 28 Mars 2025</p>
-        <span class="patch-nouveau" hidden
-          ><img src="../assets/images/exclam_mark.png" class="image new-patch"
-        /></span>
-      </a>
-      <a
-        href="patch-10.html"
-        class="carte-lien large patch"
-        data-patch="patch-10.html"
-      >
-        <h2>
-          <img
-            src="../assets/images/silver-scroll.png"
-            class="image codex-silver-scroll-patch"
-          />
-          Patch 2.3 – Session 12
-        </h2>
-        <p>Publié le 18 Février 2025</p>
-        <span class="patch-nouveau" hidden
-          ><img src="../assets/images/exclam_mark.png" class="image new-patch"
-        /></span>
-      </a>
-      <a
-        href="patch-9.html"
-        class="carte-lien large patch"
-        data-patch="patch-9.html"
-      >
-        <h2>
-          <img
-            src="../assets/images/silver-scroll.png"
-            class="image codex-silver-scroll-patch"
-          />
-          Patch 2.2 – Session 11
-        </h2>
-        <p>Publié le 07 Février 2025</p>
-        <span class="patch-nouveau" hidden
-          ><img src="../assets/images/exclam_mark.png" class="image new-patch"
-        /></span>
-      </a>
-      <a
-        href="patch-8.html"
-        class="carte-lien large patch"
-        data-patch="patch-8.html"
-      >
-        <h2>
-          <img
-            src="../assets/images/silver-scroll.png"
-            class="image codex-silver-scroll-patch"
-          />
-          Patch 2.1 – Session 10
-        </h2>
-        <p>Publié le 29 Janvier 2025</p>
-        <span class="patch-nouveau" hidden
-          ><img src="../assets/images/exclam_mark.png" class="image new-patch"
-        /></span>
-      </a>
-      <a
-        href="patch-7.html"
-        class="carte-lien large patch"
-        data-patch="patch-7.html"
-      >
-        <h2>
-          <img
-            src="../assets/images/silver-scroll.png"
-            class="image codex-silver-scroll-patch"
-          />
-          Patch 2.0 – Session 9
-        </h2>
-        <p>Publié le 22 Janvier 2025</p>
-        <span class="patch-nouveau" hidden
-          ><img src="../assets/images/exclam_mark.png" class="image new-patch"
-        /></span>
-      </a>
-      <a
-        href="patch-6.html"
-        class="carte-lien large patch"
-        data-patch="patch-6.html"
-      >
-        <h2>
-          <img
-            src="../assets/images/silver-scroll.png"
-            class="image codex-silver-scroll-patch"
-          />
-          Patch 1.5 – Session 8
-        </h2>
-        <p>Publié le 15 Janvier 2025</p>
-        <span class="patch-nouveau" hidden
-          ><img src="../assets/images/exclam_mark.png" class="image new-patch"
-        /></span>
-      </a>
-      <a
-        href="patch-5.html"
-        class="carte-lien large patch"
-        data-patch="patch-5.html"
-      >
-        <h2>
-          <img
-            src="../assets/images/silver-scroll.png"
-            class="image codex-silver-scroll-patch"
-          />
-          Patch 1.4 – Session 7
-        </h2>
-        <p>Publié le 10 Décembre 2024</p>
-        <span class="patch-nouveau" hidden
-          ><img src="../assets/images/exclam_mark.png" class="image new-patch"
-        /></span>
-      </a>
-      <a
-        href="patch-4.html"
-        class="carte-lien large patch"
-        data-patch="patch-4.html"
-      >
-        <h2>
-          <img
-            src="../assets/images/silver-scroll.png"
-            class="image codex-silver-scroll-patch"
-          />
-          Patch 1.3 – Session 6
-        </h2>
-        <p>Publié le 26 Novembre 2024</p>
-        <span class="patch-nouveau" hidden
-          ><img src="../assets/images/exclam_mark.png" class="image new-patch"
-        /></span>
-      </a>
-      <a
-        href="patch-3.html"
-        class="carte-lien large patch"
-        data-patch="patch-3.html"
-      >
-        <h2>
-          <img
-            src="../assets/images/silver-scroll.png"
-            class="image codex-silver-scroll-patch"
-          />
-          Patch 1.2 – Session 5
-        </h2>
-        <p>Publié le 19 Novembre 2024</p>
-        <span class="patch-nouveau" hidden
-          ><img src="../assets/images/exclam_mark.png" class="image new-patch"
-        /></span>
-      </a>
-      <a
-        href="patch-2.html"
-        class="carte-lien large patch"
-        data-patch="patch-2.html"
-      >
-        <h2>
-          <img
-            src="../assets/images/silver-scroll.png"
-            class="image codex-silver-scroll-patch"
-          />
-          Patch 1.1 – Session 4
-        </h2>
-        <p>Publié le 12 Novembre 2024</p>
-        <span class="patch-nouveau" hidden
-          ><img src="../assets/images/exclam_mark.png" class="image new-patch"
-        /></span>
-      </a>
-      <a
-        href="patch-1.html"
-        class="carte-lien large patch"
-        data-patch="patch-1.html"
-      >
-        <h2>
-          <img
-            src="../assets/images/silver-scroll.png"
-            class="image codex-silver-scroll-patch"
-          />
-          Patch 1.0 – Session 3
-        </h2>
-        <p>Publié le 15 Octobre 2024</p>
-        <span class="patch-nouveau" hidden
-          ><img src="../assets/images/exclam_mark.png" class="image new-patch"
-        /></span>
-      </a>
-      <div style="text-align: center; margin-top: 3rem"></div>
+  <main class="accueil">
+    <div id="top-bar">
+      <button class="btn-lu" id="tout-lu">
+        <img src="../assets/images/icon_checkbox.png" class="image mark-as-read-btn"> Tout marquer comme lu
+      </button>
+    </div> 
+  <a href="patch-23.html" class="carte-lien large patch" data-patch="patch-23.html">
+    <h2><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-patch"> Patch 3.5 – Session 25</h2>
+    <p>Publié le 14 Janvier 2026</p>
+    <span class="patch-nouveau" hidden><img src="../assets/images/exclam_mark.png" class="image new-patch"></span>
+  </a>
+  <a href="patch-22.html" class="carte-lien large patch" data-patch="patch-22.html">
+    <h2><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-patch"> Patch 3.4 – Session 24</h2>
+    <p>Publié le 17 Décembre 2025</p>
+    <span class="patch-nouveau" hidden><img src="../assets/images/exclam_mark.png" class="image new-patch"></span>
+  </a>
+  <a href="patch-21.html" class="carte-lien large patch" data-patch="patch-21.html">
+    <h2><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-patch"> Patch 3.3 – Session 23</h2>
+    <p>Publié le 10 Décembre 2025</p>
+    <span class="patch-nouveau" hidden><img src="../assets/images/exclam_mark.png" class="image new-patch"></span>
+  </a>
+  <a href="patch-20.html" class="carte-lien large patch" data-patch="patch-20.html">
+    <h2><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-patch"> Patch 3.2 – Session 22</h2>
+    <p>Publié le 12 Novembre 2025</p>
+    <span class="patch-nouveau" hidden><img src="../assets/images/exclam_mark.png" class="image new-patch"></span>
+  </a>
+  <a href="patch-19.html" class="carte-lien large patch" data-patch="patch-19.html">
+    <h2><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-patch"> Patch 3.1 – Session 21</h2>
+    <p>Publié le 15 Octobre 2025</p>
+    <span class="patch-nouveau" hidden><img src="../assets/images/exclam_mark.png" class="image new-patch"></span>
+  </a>
+  <a href="patch-18.html" class="carte-lien large patch" data-patch="patch-18.html">
+    <h2><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-patch"> Patch 3.0 – Session 20</h2>
+    <p>Publié le 24 Septembre 2025</p>
+    <span class="patch-nouveau" hidden><img src="../assets/images/exclam_mark.png" class="image new-patch"></span>
+  </a>
+  <a href="patch-17.html" class="carte-lien large patch" data-patch="patch-17.html">
+    <h2><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-patch"> Patch 2.10 – Session 19</h2>
+    <p>Publié le 18 Juin 2025</p>
+    <span class="patch-nouveau" hidden><img src="../assets/images/exclam_mark.png" class="image new-patch"></span>
+  </a>
+  <a href="patch-16.html" class="carte-lien large patch" data-patch="patch-16.html">
+    <h2><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-patch"> Patch 2.9 – Session 18</h2>
+    <p>Publié le 11 Juin 2025</p>
+    <span class="patch-nouveau" hidden><img src="../assets/images/exclam_mark.png" class="image new-patch"></span>
+  </a>
+  <a href="patch-15.html" class="carte-lien large patch" data-patch="patch-15.html">
+    <h2><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-patch"> Patch 2.8 – Session 17</h2>
+    <p>Publié le 4 Juin 2025</p>
+    <span class="patch-nouveau" hidden><img src="../assets/images/exclam_mark.png" class="image new-patch"></span>
+  </a>
+  <a href="patch-14.html" class="carte-lien large patch" data-patch="patch-14.html">
+    <h2><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-patch"> Patch 2.7 – Session 16</h2>
+    <p>Publié le 28 Mai 2025</p>
+    <span class="patch-nouveau" hidden><img src="../assets/images/exclam_mark.png" class="image new-patch"></span>
+  </a>
+  <a href="patch-13.html" class="carte-lien large patch" data-patch="patch-13.html">
+    <h2><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-patch"> Patch 2.6 – Session 15</h2>
+    <p>Publié le 30 Avril 2025</p>
+    <span class="patch-nouveau" hidden><img src="../assets/images/exclam_mark.png" class="image new-patch"></span>
+  </a>
+  <a href="patch-12.html" class="carte-lien large patch" data-patch="patch-12.html">
+    <h2><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-patch"> Patch 2.5 – Session 14</h2>
+    <p>Publié le 23 Avril 2025</p>
+    <span class="patch-nouveau" hidden><img src="../assets/images/exclam_mark.png" class="image new-patch"></span>
+  </a>
+  <a href="patch-11.html" class="carte-lien large patch" data-patch="patch-11.html">
+    <h2><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-patch"> Patch 2.4 – Session 13</h2>
+    <p>Publié le 28 Mars 2025</p>
+    <span class="patch-nouveau" hidden><img src="../assets/images/exclam_mark.png" class="image new-patch"></span>
+  </a>
+  <a href="patch-10.html" class="carte-lien large patch" data-patch="patch-10.html">
+    <h2><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-patch"> Patch 2.3 – Session 12</h2>
+    <p>Publié le 18 Février 2025</p>
+    <span class="patch-nouveau" hidden><img src="../assets/images/exclam_mark.png" class="image new-patch"></span>
+  </a>
+  <a href="patch-9.html" class="carte-lien large patch" data-patch="patch-9.html">
+    <h2><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-patch"> Patch 2.2 – Session 11</h2>
+    <p>Publié le 07 Février 2025</p>
+    <span class="patch-nouveau" hidden><img src="../assets/images/exclam_mark.png" class="image new-patch"></span>
+  </a>
+  <a href="patch-8.html" class="carte-lien large patch" data-patch="patch-8.html">
+    <h2><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-patch"> Patch 2.1 – Session 10</h2>
+    <p>Publié le 29 Janvier 2025</p>
+    <span class="patch-nouveau" hidden><img src="../assets/images/exclam_mark.png" class="image new-patch"></span>
+  </a>
+  <a href="patch-7.html" class="carte-lien large patch" data-patch="patch-7.html">
+    <h2><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-patch"> Patch 2.0 – Session 9</h2>
+    <p>Publié le 22 Janvier 2025</p>
+    <span class="patch-nouveau" hidden><img src="../assets/images/exclam_mark.png" class="image new-patch"></span>
+  </a>
+  <a href="patch-6.html" class="carte-lien large patch" data-patch="patch-6.html">
+    <h2><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-patch"> Patch 1.5 – Session 8</h2>
+    <p>Publié le 15 Janvier 2025</p>
+    <span class="patch-nouveau" hidden><img src="../assets/images/exclam_mark.png" class="image new-patch"></span>
+  </a>
+  <a href="patch-5.html" class="carte-lien large patch" data-patch="patch-5.html">
+    <h2><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-patch"> Patch 1.4 – Session 7</h2>
+    <p>Publié le 10 Décembre 2024</p>
+    <span class="patch-nouveau" hidden><img src="../assets/images/exclam_mark.png" class="image new-patch"></span>
+  </a>
+  <a href="patch-4.html" class="carte-lien large patch" data-patch="patch-4.html">
+    <h2><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-patch"> Patch 1.3 – Session 6</h2>
+    <p>Publié le 26 Novembre 2024</p>
+    <span class="patch-nouveau" hidden><img src="../assets/images/exclam_mark.png" class="image new-patch"></span>
+  </a>
+  <a href="patch-3.html" class="carte-lien large patch" data-patch="patch-3.html">
+    <h2><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-patch"> Patch 1.2 – Session 5</h2>
+    <p>Publié le 19 Novembre 2024</p>
+    <span class="patch-nouveau" hidden><img src="../assets/images/exclam_mark.png" class="image new-patch"></span>
+  </a>
+  <a href="patch-2.html" class="carte-lien large patch" data-patch="patch-2.html">
+    <h2><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-patch"> Patch 1.1 – Session 4</h2>
+    <p>Publié le 12 Novembre 2024</p>
+    <span class="patch-nouveau" hidden><img src="../assets/images/exclam_mark.png" class="image new-patch"></span>
+  </a>
+  <a href="patch-1.html" class="carte-lien large patch" data-patch="patch-1.html">
+    <h2><img src="../assets/images/silver-scroll.png" class="image codex-silver-scroll-patch"> Patch 1.0 – Session 3</h2>
+    <p>Publié le 15 Octobre 2024</p>
+    <span class="patch-nouveau" hidden><img src="../assets/images/exclam_mark.png" class="image new-patch"></span>
+  </a> <div style="text-align: center; margin-top: 3rem;"></div>
     </main>
-    <button
-      id="backToTop"
-      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-      aria-label="Retour en haut"
-    >
-      <i class="fa-solid fa-arrow-up"></i> Retour en haut
-    </button>
-
+    <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i> Retour en haut</button>
+    
     <footer>
-      <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
-    </footer>
+    <p>© 2025 • Wizardofaz, Rashaza, Jeido, ChatGPT</p>
+</footer>
 
     <script>
       const vues = JSON.parse(localStorage.getItem("patchesVus") || "[]");
-      const patches = Array.from(
-        document.querySelectorAll(".carte-lien[data-patch]")
-      );
+      const patches = Array.from(document.querySelectorAll(".carte-lien[data-patch]"));
       let tousLus = true;
-      patches.forEach((carte) => {
+      patches.forEach(carte => {
         const patch = carte.getAttribute("data-patch");
         const badge = carte.querySelector(".patch-nouveau");
         if (!vues.includes(patch)) {
@@ -461,11 +179,9 @@
         boutonLu.style.display = "none";
       }
       boutonLu.addEventListener("click", () => {
-        const tous = patches.map((c) => c.getAttribute("data-patch"));
+        const tous = patches.map(c => c.getAttribute("data-patch"));
         localStorage.setItem("patchesVus", JSON.stringify(tous));
-        document
-          .querySelectorAll(".patch-nouveau")
-          .forEach((badge) => (badge.hidden = true));
+        document.querySelectorAll(".patch-nouveau").forEach(badge => badge.hidden = true);
         boutonLu.style.display = "none";
       });
     </script>
