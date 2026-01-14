@@ -612,12 +612,12 @@ footer {
 
 .note-expliquee {
   font-size: 1rem;
-  color: #aac7b5;
+  color: #c6ebd5;
   margin-top: 0.25rem;
   opacity: 0.9;
   padding-left: 1.5rem;
   position: relative;
-  font-style: italic;
+  /* font-style: italic; */
 }
 
 .note-expliquee::before {
