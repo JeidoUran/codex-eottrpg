@@ -1,41 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Session 17 | Codex - Etrian Odyssey TTRPG</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../favicon.png" type="image/png">
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <canvas id="particles"></canvas>
 
     <header class="codex-header" id="top">
-      <a href="/" class="banniere-link"><img src="../assets/images/banniere.png"
-          alt="Bannière" class="banniere"></a>
-      <h1><img src="../assets/images/gold-scroll.png"
-          class="image codex-image-header"> Session 17 -
-        ?̷̡͍̙͚͈̲̻͇̖̿̆?̸̫͈̦͈̹̄̋̉̏?̶̢̢̧͕̘̠̆̾̈́̍̀͂̑?̴̠̺̝̈́͆͗͆̂̍̽́͘?̷͕̤̭́͛͘?̴̢͇̻̫̺́̒̓͂͑͠
-        ̷̘͍̝̖̉́̔̈́̌͗͘̚͝?̴̛͓͕̰̝͖̔̓̃͊̂̈́'̴͇̩̗̞̙̙̫̃?̸̞͖̏̂̊̀?̶̧̮͓͍̩͕̞̔̏͂̒̍͊͒͝͝͝
-        ̴̟́̇̂?̴̱̝̐̀̏̈̓͗̒͑̕?̵̡͖͓̣̙̄̈́̏?̷̧̻̞̾̈́?̷̠̘̆̈́̽̈́̿ͅ?̴̢̍̓̇͐͌̍?̵̧̞̬̄̍́͐̔͘͝?̷̡̢͈͙̲̞̩͇̟̲͊͑̍?̵̢̞̘̽̔̈́̽̍̊̇
-        ̴̨̧̛̰͔̌?̴̡͕̜͈̝̗̲͖̗̽̋̒͌̔͂̽̏̇̈́͜ͅ?̴̘͈̏̇̊͒̄͑̈́̎̊͆̚?̴̗͙̺̝̮̓͊̿̏͑͐̃̌̏͛?̶͚̪̜̫̱͓͖̞̣̐̐́̈́͜ͅ?̶̡̢̨̧̺̣̼͇͔̙̹́</h1>
+      <a href="/" class="banniere-link"
+        ><img
+          src="../assets/images/banniere.png"
+          alt="Bannière"
+          class="banniere"
+      /></a>
+      <h1>
+        <img
+          src="../assets/images/gold-scroll.png"
+          class="image codex-image-header"
+        />
+        Session 17 - ?̷̡͍̙͚͈̲̻͇̖̿̆?̸̫͈̦͈̹̄̋̉̏?̶̢̢̧͕̘̠̆̾̈́̍̀͂̑?̴̠̺̝̈́͆͗͆̂̍̽́͘?̷͕̤̭́͛͘?̴̢͇̻̫̺́̒̓͂͑͠ ̷̘͍̝̖̉́̔̈́̌͗͘̚͝?̴̛͓͕̰̝͖̔̓̃͊̂̈́'̴͇̩̗̞̙̙̫̃?̸̞͖̏̂̊̀?̶̧̮͓͍̩͕̞̔̏͂̒̍͊͒͝͝͝ ̴̟́̇̂?̴̱̝̐̀̏̈̓͗̒͑̕?̵̡͖͓̣̙̄̈́̏?̷̧̻̞̾̈́?̷̠̘̆̈́̽̈́̿ͅ?̴̢̍̓̇͐͌̍?̵̧̞̬̄̍́͐̔͘͝?̷̡̢͈͙̲̞̩͇̟̲͊͑̍?̵̢̞̘̽̔̈́̽̍̊̇ ̴̨̧̛̰͔̌?̴̡͕̜͈̝̗̲͖̗̽̋̒͌̔͂̽̏̇̈́͜ͅ?̴̘͈̏̇̊͒̄͑̈́̎̊͆̚?̴̗͙̺̝̮̓͊̿̏͑͐̃̌̏͛?̶͚̪̜̫̱͓͖̞̣̐̐́̈́͜ͅ?̶̡̢̨̧̺̣̼͇͔̙̹́
+      </h1>
       <p class="sous-titre">Publiée le 4 Juin 2025</p>
     </header>
 
     <nav class="nav-bar">
-  <a href="/">Accueil</a>
-  <a href="/notes/">Patch Notes</a>
-  <a href="/resumes/">Résumés</a>
-  <a href="/moments.html">Moments</a>
-  <a href="/univers/">Univers</a>
-  <a href="/regles/">Règles</a>
-  <a href="/musique.html">Musiques</a>
-  <a href="/ressources/">Ressources</a>
-  <a href="/credits.html">Crédits</a>
-</nav>
+      <a href="/">Accueil</a>
+      <a href="/notes/">Patch Notes</a>
+      <a href="/resumes/">Résumés</a>
+      <a href="/moments.html">Moments</a>
+      <a href="/univers/">Univers</a>
+      <a href="/regles/">Règles</a>
+      <a href="/musique.html">Musiques</a>
+      <a href="/ressources/">Ressources</a>
+      <a href="/credits.html">Crédits</a>
+    </nav>
 
     <div class="fiche-pnj">
       <div class="fiche-centrale">
@@ -44,28 +52,33 @@
             <h2><i class="fa-solid fa-scroll"></i> Résumé de la session</h2>
             <ul class="image-list">
               <div class="image-texte">
-                <div id="session17-summary"
+                <div
+                  id="session17-summary"
                   data-session="cmiyfcslo000204l9xvoc0k7l-session-17"
-                  class="image-texte">
+                  class="image-texte"
+                >
                   Chargement du résumé...
                 </div>
-              </li>
+              </div>
             </ul>
             <ul class="image-list">
               <div class="image-texte">
-                <div id="session17-follow-up-summary"
+                <div
+                  id="session17-follow-up-summary"
                   data-session="j8tq926hrgw6rm4qb4elt10d-session-17-mysteres-dans-l-abysse"
-                  class="image-texte">
-                </div>
-              </li>
+                  class="image-texte"
+                ></div>
+              </div>
             </ul>
           </article>
         </main>
 
         <div class="backToTop-static-button">
-          <button id="backToTop-static"
+          <button
+            id="backToTop-static"
             onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-            aria-label="Retour en haut">
+            aria-label="Retour en haut"
+          >
             <i class="fa-solid fa-arrow-up"></i> Retour en haut
           </button>
         </div>
@@ -82,8 +95,7 @@
 
     <script src="../../scripts/lightbox.js"></script>
     <script src="../../scripts/particles.js"></script>
-    <script
-      src="../../scripts/archivist-ai/archivist-session-loader.js"></script>
+    <script src="../../scripts/archivist-ai/archivist-session-loader.js"></script>
     <script src="/scripts/codex-global.js" defer></script>
-</body>
+  </body>
 </html>
