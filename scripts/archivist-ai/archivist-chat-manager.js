@@ -43,7 +43,6 @@
     position: fixed;
     inset: 0;
 
-    /* 👇 MANQUANT */
     background: rgba(0, 0, 0, 0.45);
     backdrop-filter: blur(3px);
 
